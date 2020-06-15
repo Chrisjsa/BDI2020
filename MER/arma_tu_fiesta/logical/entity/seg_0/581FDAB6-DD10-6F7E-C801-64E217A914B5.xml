@@ -92,10 +92,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>78C78274-06A8-84F6-14AD-E2E6AC93B7AB</attributeRef>
-<attributeRef>41FFEAC0-91D8-6BB2-374E-F5F20DFEE1D6</attributeRef>
 <attributeRef>C657C44F-BE3E-B018-7C68-1D03C64E3E08</attributeRef>
-<attributeRef>8A9E1AFA-8B04-6899-09E5-AB56AF584DDB</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

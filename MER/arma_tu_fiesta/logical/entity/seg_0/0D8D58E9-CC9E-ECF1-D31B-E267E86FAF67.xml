@@ -15,6 +15,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_detalle" id="0DB92C6F-615E-5526-6D96-137794A45924">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-15 14:57:42 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="id_presupuesto" id="49DA3E7B-6A55-FF02-A410-EB86D4F59B74">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-13 23:31:51 UTC</createdTime>
@@ -204,11 +216,6 @@
 <usedAttributes>
 <attributeRef>49DA3E7B-6A55-FF02-A410-EB86D4F59B74</attributeRef>
 <attributeRef>BDCA2D75-A3AE-26E8-FB7C-9841624096AC</attributeRef>
-<attributeRef>5E3075FD-DFF5-3813-170D-EFB762EAA376</attributeRef>
-<attributeRef>A46C5450-ED17-0443-0341-01CC4BC64E79</attributeRef>
-<attributeRef>B7445377-350B-FE4A-C834-A9E6CAAF7304</attributeRef>
-<attributeRef>52EF5956-D7D9-B928-C01D-B46C15CC95EF</attributeRef>
-<attributeRef>DDA6B69B-C29E-0859-E5BD-176CB85E08F9</attributeRef>
 <attributeRef>C57C9985-1DB8-3CF7-ECF7-1B872C8F8E69</attributeRef>
 <attributeRef>15B17A28-51EB-06B1-F89F-771C7613E558</attributeRef>
 <attributeRef>C22A32A3-F1EC-0C28-EDCF-3C33D6C45229</attributeRef>
