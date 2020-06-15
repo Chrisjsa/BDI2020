@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EC5C3BD2-1D62-F291-C82F-D638F674E5A6" name="proveedor_salon">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 03:14:06 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_proveedor" id="AE46DFB0-6CAE-235B-AC6D-A19E42E045E3">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 03:14:31 UTC</createdTime>
+<generatorID>8A2AF1E5-3521-F7AF-486F-76FC166648E8</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>2EEDA93B-D7FB-CF32-7999-85314587CD66</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio" id="8B10F1BD-2972-A6BC-8D52-3FAC79DAA0F1">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 03:16:43 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<domain>DOM10005</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_reserva" id="8DB7814A-316D-BEEF-730F-5FDED61415C0">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-13 01:50:56 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>DOM3000001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_inicio" id="A0CC9704-B1EA-D1B4-1BCF-F53F71DDE568">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 03:57:58 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>DOM3000001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_fin" id="4703B32D-798D-576F-A43F-40129CB8797C">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 03:58:09 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>DOM3000001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_locacion" id="A09D07D8-8FBA-7BBE-81BA-F5AEB9909FE2">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 22:56:21 UTC</createdTime>
+<generatorID>90CC6587-B06D-72A2-EBAB-3C2A0070AF5E</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>9F7F4416-9B17-59D6-604C-BF513D3A951E</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="31668ACD-CAEE-FDF3-18D3-4D50B48C2FF0" name="proveedor_locacion PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 03:14:31 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AE46DFB0-6CAE-235B-AC6D-A19E42E045E3</attributeRef>
+<attributeRef>A09D07D8-8FBA-7BBE-81BA-F5AEB9909FE2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9F0D5AF4-6A78-1E40-54EF-4B6C253EB99E" name="presupuesto_pago">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 00:46:35 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="monto" id="D8B6FB97-2376-E055-A7E0-80DD8AB17DAA">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 00:47:04 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<domain>DOM10005</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_presupuesto" id="9A9A8136-3634-C36A-BB89-A09CC2FDA7A7">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 00:48:32 UTC</createdTime>
+<generatorID>02483147-CDFD-C305-52BE-5215F23B0DD2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>5621FEB7-9FC1-0399-B6EF-5A7D66F93BD9</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_metodo_pago" id="7455DADD-A1EF-9097-DA47-E086592431C2">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 00:48:41 UTC</createdTime>
+<generatorID>7F7A1156-F341-E4C5-D3E5-C9E8AB6F1722</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>D88C5405-74DF-041E-70C8-2800A08DFA54</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario1" id="73B60BD9-6BEB-EE8D-F002-0051331FD41F">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 23:31:20 UTC</createdTime>
+<generatorID>02483147-CDFD-C305-52BE-5215F23B0DD2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>8DB04107-CDD7-C1D8-7456-D63E7DDAE615</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_evento" id="55491F61-9CB8-B27F-2FB2-CEFC7CB0F899">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 23:31:20 UTC</createdTime>
+<generatorID>02483147-CDFD-C305-52BE-5215F23B0DD2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>56324412-89D8-F045-3F9D-8D05B0FC829C</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E4CDEB81-5D4C-1277-BDCA-18F276EB8971" name="presupuesto_pago PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 00:48:32 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9A9A8136-3634-C36A-BB89-A09CC2FDA7A7</attributeRef>
+<attributeRef>7455DADD-A1EF-9097-DA47-E086592431C2</attributeRef>
+<attributeRef>73B60BD9-6BEB-EE8D-F002-0051331FD41F</attributeRef>
+<attributeRef>55491F61-9CB8-B27F-2FB2-CEFC7CB0F899</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

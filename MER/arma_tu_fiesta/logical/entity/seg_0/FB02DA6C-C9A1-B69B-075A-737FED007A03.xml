@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FB02DA6C-C9A1-B69B-075A-737FED007A03" name="telefono">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 01:30:53 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_telefono" id="1CF6CE49-E2D2-815B-75C8-5FDB4B527958">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 01:30:58 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefonica" id="9B07D8C6-B326-4049-1297-C17810F59CE7">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 01:31:09 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero" id="AE1AE11D-3EA0-D0FF-D024-4C7C62B77250">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 01:31:18 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_proveedor" id="1BF17EED-150A-C99D-AE99-7D2BF1FE08C0">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-15 00:05:27 UTC</createdTime>
+<generatorID>7C19DACF-240D-258A-274A-1CD00E46D07D</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>2EEDA93B-D7FB-CF32-7999-85314587CD66</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_persona" id="F0F52D23-B15A-04D1-1F93-1C75FBE0C581">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-15 00:06:22 UTC</createdTime>
+<generatorID>6D2EAF21-657C-CC1A-E6AE-DB437940854B</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>5940C768-FB4E-65D4-074F-56FA9CBEBB5D</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_locacion" id="F692D0A2-1A48-9541-6D1F-95ED9AD50FE4">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-15 00:13:07 UTC</createdTime>
+<generatorID>ADF0AD6D-9F1D-9535-D753-7D46144DC8E1</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>9F7F4416-9B17-59D6-604C-BF513D3A951E</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="82B04F60-24E3-2C0E-5587-4F96249E82E7" name="telefono PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 01:31:08 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1CF6CE49-E2D2-815B-75C8-5FDB4B527958</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

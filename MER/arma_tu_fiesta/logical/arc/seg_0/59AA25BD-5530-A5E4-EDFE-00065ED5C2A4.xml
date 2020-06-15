@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Arc class="oracle.dbtools.crest.model.design.logical.Arc" directorySegmentName="seg_0" id="59AA25BD-5530-A5E4-EDFE-00065ED5C2A4" name="Arc_1">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-13 23:45:34 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<entity>0D8D58E9-CC9E-ECF1-D31B-E267E86FAF67</entity>
+<relations>
+<relationID>6996A3E7-6659-E4F3-5831-C4B8A993EA87</relationID>
+<relationID>F49DD9EE-2A0B-993D-CB27-528C2A6BE3C5</relationID>
+<relationID>D59A6CCF-DC7B-026D-3CE5-3298F93CD831</relationID>
+</relations>
+</Arc>

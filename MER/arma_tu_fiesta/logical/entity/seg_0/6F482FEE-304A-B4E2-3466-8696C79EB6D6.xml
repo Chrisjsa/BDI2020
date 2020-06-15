@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6F482FEE-304A-B4E2-3466-8696C79EB6D6" name="uso_de_locacion">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 23:19:17 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_locacion" id="98D28D7E-7318-24B4-2E03-53D3FC94EF95">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 23:19:35 UTC</createdTime>
+<generatorID>BFCE5702-FB73-A416-15CE-6E02E7176274</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>9F7F4416-9B17-59D6-604C-BF513D3A951E</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="880364A5-7DCA-14DF-F640-D95C302DF6F8">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 23:30:24 UTC</createdTime>
+<generatorID>FE151EFB-7370-067B-1E36-536DAD5844E0</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>78195502-EA50-2BF0-4A81-6D6F258ABAD8</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_evento" id="447F7B33-9EF1-3E54-AF8D-8DAC3337E383">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 23:30:24 UTC</createdTime>
+<generatorID>FE151EFB-7370-067B-1E36-536DAD5844E0</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>42539ED7-9974-3E77-102A-414C1751FF15</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6B300919-69C6-1ABC-689A-0929F2A51D52" name="locacion_evento PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 23:19:35 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>98D28D7E-7318-24B4-2E03-53D3FC94EF95</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

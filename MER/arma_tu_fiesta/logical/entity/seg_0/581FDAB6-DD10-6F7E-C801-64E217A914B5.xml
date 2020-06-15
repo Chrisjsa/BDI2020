@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="581FDAB6-DD10-6F7E-C801-64E217A914B5" name="imagen">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 21:57:39 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_imagen" id="C657C44F-BE3E-B018-7C68-1D03C64E3E08">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 22:04:37 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fuente" id="FCED3A75-C52B-FC78-411B-0B500D343DA6">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 22:04:47 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+<domain>DOM2005275</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_producto" id="78C78274-06A8-84F6-14AD-E2E6AC93B7AB">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 21:59:25 UTC</createdTime>
+<generatorID>05E2689F-C71F-7F30-4793-82EAC1EC5C70</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>52B8C67C-A4C7-4CEF-0EC9-14A27E7DAC92</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_servicio" id="41FFEAC0-91D8-6BB2-374E-F5F20DFEE1D6">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 21:59:39 UTC</createdTime>
+<generatorID>6A3A1B91-C4AA-F63D-B20F-2B729B651595</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>0E597C58-C540-7FF5-764A-0AD6C586400C</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_locacion" id="8A9E1AFA-8B04-6899-09E5-AB56AF584DDB">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 23:13:01 UTC</createdTime>
+<generatorID>91AA3EDA-C86A-9A9D-B19A-99A6B3CA6187</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>9F7F4416-9B17-59D6-604C-BF513D3A951E</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D08051C1-34E0-5BDC-3CDE-1A6760E2C764" name="imagen PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-14 21:57:50 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>78C78274-06A8-84F6-14AD-E2E6AC93B7AB</attributeRef>
+<attributeRef>41FFEAC0-91D8-6BB2-374E-F5F20DFEE1D6</attributeRef>
+<attributeRef>C657C44F-BE3E-B018-7C68-1D03C64E3E08</attributeRef>
+<attributeRef>8A9E1AFA-8B04-6899-09E5-AB56AF584DDB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

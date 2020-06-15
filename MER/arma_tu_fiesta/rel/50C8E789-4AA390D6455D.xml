@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="50C8E789-07A5-328A-3ADF-4AA390D6455D" mainViewID="50474872-8CA6-E3FE-97F0-B8CE6F0E7685">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-12 01:26:25 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

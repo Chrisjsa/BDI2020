@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="arma_tu_fiesta" id="DEFADA2D-B4D5-8576-CA8F-8B74EB19FFB5" version="3.5">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-11 21:59:22 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>DEFADA2D-B4D5-8576-CA8F-8B74EB19FFB5</designId>
+</OSDM_Design>
