@@ -79,10 +79,10 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_usuario" id="2D485F68-B8EC-F7EB-E319-05A6234730DC">
+<Attribute name="id_usuario" id="D8922681-53BD-F4CB-4814-7BC8D9EF966E">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 14:44:44 UTC</createdTime>
-<generatorID>BEA41469-6912-CCA5-5ECB-2E5C1E30ECA6</generatorID>
+<createdTime>2020-06-15 15:53:37 UTC</createdTime>
+<generatorID>95BD95AD-E1B9-405A-31FD-7A4DAA0FC93E</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
@@ -93,10 +93,10 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_rol" id="F4348ADE-56F6-AADC-9E43-E9640499EF58">
+<Attribute name="id_rol" id="6D188B36-CE96-E584-C798-F71F8AA63A11">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 14:44:44 UTC</createdTime>
-<generatorID>BEA41469-6912-CCA5-5ECB-2E5C1E30ECA6</generatorID>
+<createdTime>2020-06-15 15:53:37 UTC</createdTime>
+<generatorID>95BD95AD-E1B9-405A-31FD-7A4DAA0FC93E</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
@@ -107,10 +107,10 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_permiso" id="343A8A1F-356F-E527-DD07-7700C8F36770">
+<Attribute name="id_permiso" id="A324C73E-B266-7231-8420-FE1D5EFF57EC">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 14:44:44 UTC</createdTime>
-<generatorID>BEA41469-6912-CCA5-5ECB-2E5C1E30ECA6</generatorID>
+<createdTime>2020-06-15 15:53:37 UTC</createdTime>
+<generatorID>95BD95AD-E1B9-405A-31FD-7A4DAA0FC93E</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
@@ -133,9 +133,9 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>42539ED7-9974-3E77-102A-414C1751FF15</attributeRef>
-<attributeRef>2D485F68-B8EC-F7EB-E319-05A6234730DC</attributeRef>
-<attributeRef>F4348ADE-56F6-AADC-9E43-E9640499EF58</attributeRef>
-<attributeRef>343A8A1F-356F-E527-DD07-7700C8F36770</attributeRef>
+<attributeRef>D8922681-53BD-F4CB-4814-7BC8D9EF966E</attributeRef>
+<attributeRef>6D188B36-CE96-E584-C798-F71F8AA63A11</attributeRef>
+<attributeRef>A324C73E-B266-7231-8420-FE1D5EFF57EC</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

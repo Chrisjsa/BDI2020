@@ -67,10 +67,10 @@
 <domain>DOM2025100</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_usuario" id="E240DBE4-7A26-9785-626F-3F94498AC048">
+<Attribute name="id_usuario" id="7462593F-C994-F1DB-51EE-F50D72473EC5">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 14:45:12 UTC</createdTime>
-<generatorID>E0919A90-8E20-36D7-737F-E5A3F4CB4179</generatorID>
+<createdTime>2020-06-15 15:54:21 UTC</createdTime>
+<generatorID>8C47A66D-C7CB-8546-D480-3CB7CC2B419A</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
@@ -81,10 +81,10 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_rol" id="5C7419A5-F202-0B8C-F2DF-8C4A488C28EC">
+<Attribute name="id_rol" id="FDACBE56-871A-675B-59BB-84EA172419FC">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 14:45:12 UTC</createdTime>
-<generatorID>E0919A90-8E20-36D7-737F-E5A3F4CB4179</generatorID>
+<createdTime>2020-06-15 15:54:21 UTC</createdTime>
+<generatorID>8C47A66D-C7CB-8546-D480-3CB7CC2B419A</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
@@ -95,10 +95,10 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_permiso" id="9D19B863-CFCC-4281-299D-8947E9F2ECFD">
+<Attribute name="id_permiso" id="AED17976-CF3E-8A09-FEFA-69A0319C0092">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 14:45:12 UTC</createdTime>
-<generatorID>E0919A90-8E20-36D7-737F-E5A3F4CB4179</generatorID>
+<createdTime>2020-06-15 15:54:21 UTC</createdTime>
+<generatorID>8C47A66D-C7CB-8546-D480-3CB7CC2B419A</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
@@ -122,9 +122,9 @@
 <usedAttributes>
 <attributeRef>88B85560-5697-944E-5F77-531B12C21B0C</attributeRef>
 <attributeRef>3DDE1248-1AC7-47D0-77D8-2123D4994513</attributeRef>
-<attributeRef>E240DBE4-7A26-9785-626F-3F94498AC048</attributeRef>
-<attributeRef>5C7419A5-F202-0B8C-F2DF-8C4A488C28EC</attributeRef>
-<attributeRef>9D19B863-CFCC-4281-299D-8947E9F2ECFD</attributeRef>
+<attributeRef>7462593F-C994-F1DB-51EE-F50D72473EC5</attributeRef>
+<attributeRef>FDACBE56-871A-675B-59BB-84EA172419FC</attributeRef>
+<attributeRef>AED17976-CF3E-8A09-FEFA-69A0319C0092</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

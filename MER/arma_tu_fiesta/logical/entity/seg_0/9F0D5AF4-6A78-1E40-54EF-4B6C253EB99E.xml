@@ -69,43 +69,43 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_usuario" id="51F43040-9613-466F-61CC-61FDD0C53657">
+<Attribute name="id_usuario" id="B00B714A-9B3E-E9D7-0E51-F7DB6183565E">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 14:44:44 UTC</createdTime>
+<createdTime>2020-06-15 15:53:37 UTC</createdTime>
 <generatorID>02483147-CDFD-C305-52BE-5215F23B0DD2</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<referedAttribute>8BD5AAA1-B897-40ED-250B-FF5DFE3A741A</referedAttribute>
+<referedAttribute>93F27305-56C4-47A4-117E-BE83D52024F2</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_rol" id="F894212A-5D87-C705-A486-34A77139CB7D">
+<Attribute name="id_rol" id="4C38AA3C-B013-49A2-9E17-ADBD1A330C3A">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 14:44:44 UTC</createdTime>
+<createdTime>2020-06-15 15:53:37 UTC</createdTime>
 <generatorID>02483147-CDFD-C305-52BE-5215F23B0DD2</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<referedAttribute>BDE1B7DC-A7DF-43C0-A635-A88F70496890</referedAttribute>
+<referedAttribute>4F50DF62-BFB1-0C24-AE14-9A017D1F3334</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_permiso" id="C6A2BA98-D217-4709-C462-40F82BFFCE2E">
+<Attribute name="id_permiso" id="FB12AAF6-F6FF-3B56-22BE-A377F6446310">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 14:44:44 UTC</createdTime>
+<createdTime>2020-06-15 15:53:37 UTC</createdTime>
 <generatorID>02483147-CDFD-C305-52BE-5215F23B0DD2</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<referedAttribute>99C2FB52-13F3-CC2D-3031-161B1698117A</referedAttribute>
+<referedAttribute>7E649428-5EF4-E861-9445-F07E0C777F4E</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
@@ -125,9 +125,9 @@
 <attributeRef>9A9A8136-3634-C36A-BB89-A09CC2FDA7A7</attributeRef>
 <attributeRef>55491F61-9CB8-B27F-2FB2-CEFC7CB0F899</attributeRef>
 <attributeRef>7455DADD-A1EF-9097-DA47-E086592431C2</attributeRef>
-<attributeRef>51F43040-9613-466F-61CC-61FDD0C53657</attributeRef>
-<attributeRef>F894212A-5D87-C705-A486-34A77139CB7D</attributeRef>
-<attributeRef>C6A2BA98-D217-4709-C462-40F82BFFCE2E</attributeRef>
+<attributeRef>B00B714A-9B3E-E9D7-0E51-F7DB6183565E</attributeRef>
+<attributeRef>4C38AA3C-B013-49A2-9E17-ADBD1A330C3A</attributeRef>
+<attributeRef>FB12AAF6-F6FF-3B56-22BE-A377F6446310</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
