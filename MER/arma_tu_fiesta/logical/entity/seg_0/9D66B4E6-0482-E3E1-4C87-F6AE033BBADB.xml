@@ -63,6 +63,20 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_rol" id="6F8E76AC-DDB7-1380-5B61-FE79128E6F3E">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-15 15:35:33 UTC</createdTime>
+<generatorID>08D3BCFC-862E-A154-B7F6-C757C2A8FAE1</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>33D83666-AC03-7308-6FA9-C347CE7E1878</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="E634CF27-45FD-2998-6DC5-E9CC9397B148" name="servicio PK">
