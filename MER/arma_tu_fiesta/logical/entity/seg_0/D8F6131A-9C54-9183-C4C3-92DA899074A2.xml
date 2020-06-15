@@ -15,20 +15,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_usuario" id="78195502-EA50-2BF0-4A81-6D6F258ABAD8">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-14 23:23:40 UTC</createdTime>
-<generatorID>A8B8FC10-3619-604B-9BAF-68BFBC195279</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>6C3E90A4-0479-DC4D-AF8A-9D797ECA65A1</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_evento" id="42539ED7-9974-3E77-102A-414C1751FF15">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-14 23:23:50 UTC</createdTime>
@@ -93,6 +79,48 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_usuario" id="2D485F68-B8EC-F7EB-E319-05A6234730DC">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-15 14:44:44 UTC</createdTime>
+<generatorID>BEA41469-6912-CCA5-5ECB-2E5C1E30ECA6</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>DFF05B42-6495-675D-AEA4-7434A761C232</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_rol" id="F4348ADE-56F6-AADC-9E43-E9640499EF58">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-15 14:44:44 UTC</createdTime>
+<generatorID>BEA41469-6912-CCA5-5ECB-2E5C1E30ECA6</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>5EABE28A-4925-E74B-1D30-C0FE1348529B</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_permiso" id="343A8A1F-356F-E527-DD07-7700C8F36770">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-15 14:44:44 UTC</createdTime>
+<generatorID>BEA41469-6912-CCA5-5ECB-2E5C1E30ECA6</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>DA10825D-1402-6167-16EC-BE3745952EC2</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="1E705EFB-397A-923B-08E9-82ABB154F8E0" name="usuario_evento PK">
@@ -104,8 +132,10 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>78195502-EA50-2BF0-4A81-6D6F258ABAD8</attributeRef>
 <attributeRef>42539ED7-9974-3E77-102A-414C1751FF15</attributeRef>
+<attributeRef>2D485F68-B8EC-F7EB-E319-05A6234730DC</attributeRef>
+<attributeRef>F4348ADE-56F6-AADC-9E43-E9640499EF58</attributeRef>
+<attributeRef>343A8A1F-356F-E527-DD07-7700C8F36770</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
