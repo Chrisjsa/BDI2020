@@ -23,6 +23,8 @@
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
 <use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="descripcion" id="9B181EBE-035F-77EF-FD68-62C0A61A5AB1">
@@ -33,6 +35,8 @@
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
 <use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="id_locacion" id="324585A8-CBB2-1025-D2EA-0690DA6CAF44">
