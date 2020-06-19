@@ -39,6 +39,18 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="dominio" id="49BD475C-6C0F-A912-0D2B-AA281D7307A3">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-19 21:17:39 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="id_persona" id="AAE29443-0594-1FAB-74EC-965696378F0E">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-12 02:01:19 UTC</createdTime>

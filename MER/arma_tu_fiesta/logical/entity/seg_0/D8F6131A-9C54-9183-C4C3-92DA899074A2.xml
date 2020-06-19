@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D8F6131A-9C54-9183-C4C3-92DA899074A2" name="usuario_evento">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D8F6131A-9C54-9183-C4C3-92DA899074A2" name="orden_evento">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-14 23:22:24 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
