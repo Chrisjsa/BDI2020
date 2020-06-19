@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1DCC586-AAFE-0D67-B052-D7106B71426A" name="caracteristica_salon">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>8811EBBB-A0B3-0282-913A-7649CB113DB2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="caracteristica_id_caracteristica" id="A3C7B750-6ACC-7520-CE9F-81940A390901">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>51A7FC50-92E9-C1D5-A591-11C52E3977E2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C4CD671F-21B8-974D-CB93-B0D8FFE780D8" referredColumn="7D398BF1-71AA-4894-655B-194A9197F8C0"/>
+</associations>
+</Column>
+<Column name="cantidad" id="49054E6B-A011-94A6-D748-EDC398EACCBF">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>BFCDB9FE-0494-DDBD-F025-F96CF62768B2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salon_de_fiesta_id_locacion" id="C17ED0C2-47FA-A4AA-0925-7F5298E1A720">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>8B30261F-432A-8696-F0ED-EA9895814F7D</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="09004927-0095-3F01-855F-5AC300125AD3" referredColumn="A870CA7A-B351-499E-D81B-DA501042B395"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C52853DF-493E-395F-E60F-230B2519C76F" name="caracteristica_salon_PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>DEE9182A-F694-48CD-6DF1-E18CEE64C8C4</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3C7B750-6ACC-7520-CE9F-81940A390901"/>
+<colUsage columnID="C17ED0C2-47FA-A4AA-0925-7F5298E1A720"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="57705AF8-06AB-F276-BD44-48879063D103" name="caracteristica_salon_caracteristica_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>7996FA88-6407-A912-3502-0BAF1CD6AF1C</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3C7B750-6ACC-7520-CE9F-81940A390901"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D9F90692-DC3E-3D0E-6B89-24E3C288562A" name="caracteristica_salon_salon_de_fiesta_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>36986CED-AA49-A88B-7259-AFB6706A2781</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C17ED0C2-47FA-A4AA-0925-7F5298E1A720"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="96E385AF-A8B2-6F60-183E-11690A6351D4" name="tarjeta">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>4D4C6578-D611-4A41-92B8-61F5918487A5</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_metodo_pago" id="4D7C2CD0-6F39-4F03-446E-53F1EBD89AE4">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>D88C5405-74DF-041E-70C8-2800A08DFA54</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="40930F56-5893-7E6D-D79D-316CF0FD96EB" referredColumn="0E87ADC8-A2D1-8ED4-365D-3427837F0D07"/>
+</associations>
+</Column>
+<Column name="tipo" id="6FC24B4E-FC79-C751-E42B-49B00B6C12F6">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>9A48A23C-D6C9-73FA-3BDA-A02E2C655E6A</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numero_cuenta" id="F6555CAA-8B5D-D6D0-EA34-C7F3F43DF98D">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>29C6258E-1B78-F382-7ED7-4FBDBC734BBD</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_titular" id="05F80927-57D1-88D8-8080-B2EDE7FEDBA8">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>2A336F59-F048-3330-31EE-B39DABA3EF24</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_caducidad" id="BE6E1222-8693-15D1-3F5E-204924BFE691">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>A6246640-AFE2-F0A2-245F-7197F3A116AF</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>DOM3000001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="marca" id="390282BB-040D-732C-429C-010E39976A13">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>5C085649-23DB-8B8F-826B-24A8E4102D4E</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="codigo_reverso" id="727183B9-46FA-6A4E-794C-F9F527382F91">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>74C6953A-0C83-BFFC-D295-C8B45F773AD2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0DE40991-3C14-977C-2F34-76B0E8002AB4" name="tarjeta_PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>61668D2F-0D76-F8A5-1E2A-96CDE154B6C0</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D7C2CD0-6F39-4F03-446E-53F1EBD89AE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D785D29C-7CBB-327E-5CB9-126EE61C4892" name="tarjeta_metodo_pago_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>E69339C4-06C0-E5B5-66B0-78684FAFC44C</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D7C2CD0-6F39-4F03-446E-53F1EBD89AE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

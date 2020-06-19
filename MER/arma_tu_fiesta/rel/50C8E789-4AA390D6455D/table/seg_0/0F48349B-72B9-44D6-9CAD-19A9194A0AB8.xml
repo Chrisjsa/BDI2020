@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0F48349B-72B9-44D6-9CAD-19A9194A0AB8" name="presupuesto_pago">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>9F0D5AF4-6A78-1E40-54EF-4B6C253EB99E</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="monto" id="B2A80ACA-02E0-796A-9C39-5BCFDDC40725">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>D8B6FB97-2376-E055-A7E0-80DD8AB17DAA</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<domain>DOM10005</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="presupuesto_id_presupuesto" id="AF32B97F-268B-CB9C-4B23-B1459453C43B">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>9A9A8136-3634-C36A-BB89-A09CC2FDA7A7</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AFBE9179-CCB0-0F1C-96D1-59684903F283" referredColumn="F752F811-B34D-C486-017A-DF3259AFC49A"/>
+</associations>
+</Column>
+<Column name="metodo_pago_id_metodo_pago" id="287ABFDA-E7A0-A666-907C-DD33852CEBDA">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>7455DADD-A1EF-9097-DA47-E086592431C2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5C9D8097-D99E-B664-C758-A6CE0233692B" referredColumn="0E87ADC8-A2D1-8ED4-365D-3427837F0D07"/>
+</associations>
+</Column>
+<Column name="presupuesto_id_evento" id="2EF2B72D-A99D-577C-5E1D-108A4537DA09">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>55491F61-9CB8-B27F-2FB2-CEFC7CB0F899</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AFBE9179-CCB0-0F1C-96D1-59684903F283" referredColumn="B0144A10-2282-8BC0-752F-99E16AE46565"/>
+</associations>
+</Column>
+<Column name="presupuesto_id_usuario" id="0EEBF46A-C415-9D36-505A-26FC93EC4CBE">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>B00B714A-9B3E-E9D7-0E51-F7DB6183565E</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AFBE9179-CCB0-0F1C-96D1-59684903F283" referredColumn="4A8936F4-0F6D-8A58-D0A4-20E309F66AFE"/>
+</associations>
+</Column>
+<Column name="presupuesto_id_rol" id="F0A6F750-4B59-50D2-8189-698D3006B99D">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>4C38AA3C-B013-49A2-9E17-ADBD1A330C3A</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AFBE9179-CCB0-0F1C-96D1-59684903F283" referredColumn="4E49759D-6E25-A3DE-930D-431D4ABBA5D2"/>
+</associations>
+</Column>
+<Column name="presupuesto_id_permiso" id="30DE9002-973B-24E8-CE33-4B108EF17EF8">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>FB12AAF6-F6FF-3B56-22BE-A377F6446310</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AFBE9179-CCB0-0F1C-96D1-59684903F283" referredColumn="DA3E2CAE-008A-8BAC-BA9F-F561733D4947"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DA1C66C0-494A-4918-5251-DEC2D45328AE" name="presupuesto_pago_PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>E4CDEB81-5D4C-1277-BDCA-18F276EB8971</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF32B97F-268B-CB9C-4B23-B1459453C43B"/>
+<colUsage columnID="2EF2B72D-A99D-577C-5E1D-108A4537DA09"/>
+<colUsage columnID="0EEBF46A-C415-9D36-505A-26FC93EC4CBE"/>
+<colUsage columnID="F0A6F750-4B59-50D2-8189-698D3006B99D"/>
+<colUsage columnID="30DE9002-973B-24E8-CE33-4B108EF17EF8"/>
+<colUsage columnID="287ABFDA-E7A0-A666-907C-DD33852CEBDA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B598D59-A7E7-1C41-001D-E26F802A3F31" name="presupuesto_pago_presupuesto_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>02483147-CDFD-C305-52BE-5215F23B0DD2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF32B97F-268B-CB9C-4B23-B1459453C43B"/>
+<colUsage columnID="2EF2B72D-A99D-577C-5E1D-108A4537DA09"/>
+<colUsage columnID="0EEBF46A-C415-9D36-505A-26FC93EC4CBE"/>
+<colUsage columnID="F0A6F750-4B59-50D2-8189-698D3006B99D"/>
+<colUsage columnID="30DE9002-973B-24E8-CE33-4B108EF17EF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4879E629-FDA2-839E-BFEE-73FDA1C33569" name="presupuesto_pago_metodo_pago_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>7F7A1156-F341-E4C5-D3E5-C9E8AB6F1722</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="287ABFDA-E7A0-A666-907C-DD33852CEBDA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

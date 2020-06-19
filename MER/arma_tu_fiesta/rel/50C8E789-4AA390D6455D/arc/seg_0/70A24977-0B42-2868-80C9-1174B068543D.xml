@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKArc class="oracle.dbtools.crest.model.design.relational.FKArc" directorySegmentName="seg_0" id="70A24977-0B42-2868-80C9-1174B068543D" name="Arc_2">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<mandatory>true</mandatory>
+<table>217D3ABD-91D1-E5AB-6507-3D124B1C3737</table>
+<fkeys>
+<fkeyID>944467B0-28E1-D4BC-9DF0-DA08982136E9</fkeyID>
+<fkeyID>A70DC221-AB10-1C3D-D87F-6DFDFC6D51CF</fkeyID>
+<fkeyID>7926CFAC-EB89-5BB0-4422-929C36C90EDA</fkeyID>
+</fkeys>
+</FKArc>

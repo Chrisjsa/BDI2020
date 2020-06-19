@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3A8B3002-6B30-036F-B6EA-B84B5F6D104E" name="producto_producto">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>4EE91CA9-4C0A-7813-80F8-1F1CF456AD99</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="producto_id_producto" id="756397DF-53E1-B6F9-E722-B8BBFE18603B">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>9DB9858A-2C0C-76FB-E660-4D427992D348</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="58C53AEC-EDEC-BDBE-82DC-A19DBCC5B38B" referredColumn="94E8AF77-79B9-C512-F870-5DC36147C2E0"/>
+</associations>
+</Column>
+<Column name="producto_id_producto1" id="8F5679CD-C9FB-D041-9FD4-CC7E40809FCD">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>8E8EEC62-AAD8-5AB5-9567-8D9829C26284</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="702399D2-73AC-3221-AEE2-2825995BF92B" referredColumn="94E8AF77-79B9-C512-F870-5DC36147C2E0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9638F872-A555-6652-4B11-51AAA8CEA998" name="producto_producto_PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>F1FA0AFC-B790-172A-16D7-95184E46E04D</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="756397DF-53E1-B6F9-E722-B8BBFE18603B"/>
+<colUsage columnID="8F5679CD-C9FB-D041-9FD4-CC7E40809FCD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84F97967-1DF3-F03A-5312-B37FC5E0919A" name="producto_producto_producto_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>4B814711-56C9-830C-953F-A3B3988BC073</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="756397DF-53E1-B6F9-E722-B8BBFE18603B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7468CB71-4119-A460-7C79-BC226F41B36F" name="producto_producto_producto_FKv1">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>271E5D0F-01D2-FEB9-A8B1-0E41E674C813</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F5679CD-C9FB-D041-9FD4-CC7E40809FCD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

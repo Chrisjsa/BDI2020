@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FFBEE1E2-0E07-0AAC-0ECE-C1BA2AE49DCB" name="locacion">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>D94CB641-4B1D-2212-2DEF-23C04964E4EA</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_locacion" id="7C2F5CF8-EA1B-BE20-5AE7-4352EC2C2E51">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>9F7F4416-9B17-59D6-604C-BF513D3A951E</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="E8AA9856-3C85-30DC-9B25-1C153F08CDFE">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>478DE78C-BA47-8111-1C4F-61D673BECE89</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lugar_id_lugar" id="D55C5529-E6BA-336E-FFD0-4CF3C81DE9FA">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>CE3898B2-D500-046C-B40D-EEA43D434204</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3269FA5-E034-7658-B5EE-43AF036D402B" referredColumn="70B71789-0B98-A79B-EDA1-1E9D6FBC7F4B"/>
+</associations>
+</Column>
+<Column name="rol_id_rol" id="873A5ED0-FE83-0B2A-72FE-CD1BA886918D">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>6B5FB8A9-ED80-980F-ED16-4D6E53FE1D16</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B23A519-6A84-0EC3-8FD7-411F139A203C" referredColumn="0D2C05CC-5827-1886-014F-4791315E2B01"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6364EA1E-967F-1DD2-60AF-EDBB4588F3BC" name="locacion_PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>A6BB4D83-875D-7753-0061-01BCFE24636B</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C2F5CF8-EA1B-BE20-5AE7-4352EC2C2E51"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43C3713A-5BD2-A70D-D29A-6BA2B4399C96" name="locacion_lugar_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>3DF6CF3C-1AC1-CB40-43EF-F1BE8EE2BCE7</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D55C5529-E6BA-336E-FFD0-4CF3C81DE9FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B955AEE-5043-F01E-96B2-3629DC53585B" name="locacion_rol_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>0C8A6A28-32ED-432B-F4B8-C1AD11351AF1</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="873A5ED0-FE83-0B2A-72FE-CD1BA886918D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

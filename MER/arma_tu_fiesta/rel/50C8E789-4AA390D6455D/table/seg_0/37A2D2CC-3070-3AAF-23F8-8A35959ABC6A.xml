@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="37A2D2CC-3070-3AAF-23F8-8A35959ABC6A" name="proveedor_producto">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>38B55806-829D-E177-70D2-FDC7896F8CCE</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="proveedor_id_proveedor" id="68DA3531-4E64-9F25-2ACD-6DBB776E6A2F">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>2B23DB6B-824E-8D95-1932-0274C7C4F1C5</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9BDD646A-185E-7B79-2178-830150721B47" referredColumn="F394F63A-252C-81B7-B6DD-55BFC96B8F8C"/>
+</associations>
+</Column>
+<Column name="producto_id_producto" id="20E2E8EF-E810-FA55-1C34-E2CCF3653F6D">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>AFDAEE9B-2571-13D5-787A-2797A79CF2D7</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2DDD8715-ACFB-DE28-13D9-F59F476D452A" referredColumn="94E8AF77-79B9-C512-F870-5DC36147C2E0"/>
+</associations>
+</Column>
+<Column name="precio" id="023EA1C5-1434-5DA3-BBD5-F0814B7E4119">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>50F8AA61-628A-5384-4B2C-ECB4D12DA19B</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<domain>DOM10005</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cantidad" id="6969537C-F57A-A0DA-65A0-520C604B6DB5">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>6D88D921-6800-35CE-4DEB-C5C16E200EAA</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_entrega" id="05E6579C-2BD3-EA4D-2B59-1DFC857F2B78">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>9E6B86E4-E473-A287-D4B1-0A44104A2770</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>DOM3000001</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DFF9C659-B924-B17D-C007-A486C114F4ED" name="proveedor_producto_PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>B16E9BAD-7702-C097-187A-65F6AB9A4511</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="68DA3531-4E64-9F25-2ACD-6DBB776E6A2F"/>
+<colUsage columnID="20E2E8EF-E810-FA55-1C34-E2CCF3653F6D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="91918245-B8CE-199B-26D0-D0621D31EA06" name="proveedor_producto_proveedor_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>50FB1192-63D1-3C65-424D-8155091ABF8D</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="68DA3531-4E64-9F25-2ACD-6DBB776E6A2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA17E9EB-65FA-9B85-2BEE-FA43F070279B" name="proveedor_producto_producto_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>4EC5F95A-5A7A-8BBB-7ADA-9EB721043368</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20E2E8EF-E810-FA55-1C34-E2CCF3653F6D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

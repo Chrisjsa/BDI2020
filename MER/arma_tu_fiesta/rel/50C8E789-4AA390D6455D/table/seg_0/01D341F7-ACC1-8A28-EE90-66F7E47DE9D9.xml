@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="01D341F7-ACC1-8A28-EE90-66F7E47DE9D9" name="telefono">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>FB02DA6C-C9A1-B69B-075A-737FED007A03</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_telefono" id="EEA9A275-D436-5737-8C69-BE54AD6DF023">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>1CF6CE49-E2D2-815B-75C8-5FDB4B527958</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefonica" id="4A7A18FA-CD2D-3F84-05F6-DA9341EE029E">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>9B07D8C6-B326-4049-1297-C17810F59CE7</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numero" id="A06745E4-515A-CD4C-ACB3-757C32D183C8">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>AE1AE11D-3EA0-D0FF-D024-4C7C62B77250</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="proveedor_id_proveedor" id="9404B9D2-4B67-BFFD-F2C8-3EEC3A0E9EAC">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>1BF17EED-150A-C99D-AE99-7D2BF1FE08C0</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="711AE30F-95BD-BBD4-9230-1EF47ED7D6F4" referredColumn="F394F63A-252C-81B7-B6DD-55BFC96B8F8C"/>
+</associations>
+</Column>
+<Column name="persona_id_persona" id="BF19D566-4B45-8162-774D-598093540859">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>F0F52D23-B15A-04D1-1F93-1C75FBE0C581</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7F96D89-C0A6-6162-E048-C970A9D3B647" referredColumn="8DE9583E-25A6-8031-E7F4-774459BAB515"/>
+</associations>
+</Column>
+<Column name="locacion_id_locacion" id="0DE3846D-7DD9-D90C-F0AB-62D5C49E3B01">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>F692D0A2-1A48-9541-6D1F-95ED9AD50FE4</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="470A9CA4-D45A-A1C1-360B-8B23C6A75442" referredColumn="7C2F5CF8-EA1B-BE20-5AE7-4352EC2C2E51"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F790D548-17F4-C04A-8BEB-8A802062D477" name="telefono_PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>82B04F60-24E3-2C0E-5587-4F96249E82E7</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEA9A275-D436-5737-8C69-BE54AD6DF023"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="132908D0-9B97-A331-F76E-173BAB71BF04" name="telefono_proveedor_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>7C19DACF-240D-258A-274A-1CD00E46D07D</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9404B9D2-4B67-BFFD-F2C8-3EEC3A0E9EAC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23DC7A64-2602-56B4-1B4C-43479331C5AA" name="telefono_persona_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>6D2EAF21-657C-CC1A-E6AE-DB437940854B</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF19D566-4B45-8162-774D-598093540859"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E0497FE-BFD6-C092-4918-410203F35ED8" name="telefono_locacion_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>ADF0AD6D-9F1D-9535-D753-7D46144DC8E1</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DE3846D-7DD9-D90C-F0AB-62D5C49E3B01"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

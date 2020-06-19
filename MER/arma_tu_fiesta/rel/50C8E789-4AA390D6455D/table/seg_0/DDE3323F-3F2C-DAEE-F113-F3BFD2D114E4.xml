@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DDE3323F-3F2C-DAEE-F113-F3BFD2D114E4" name="jefatura">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>7BF981D8-7A4F-3EBF-38F1-FD3D8B8F6666</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_locacion" id="974CF6CF-50CC-FEBD-EA96-ADF954C5BC8D">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>9F7F4416-9B17-59D6-604C-BF513D3A951E</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="820ADD93-E4A0-F7D7-2E7C-56097F697BC9" referredColumn="7C2F5CF8-EA1B-BE20-5AE7-4352EC2C2E51"/>
+</associations>
+</Column>
+<Column name="jefe_civil" id="C5FC18E1-7FE2-0F7E-E159-D7FA457BFCB3">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>309160F1-F65D-222D-31F5-1780E9A7CDD1</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FB85173B-D622-8F81-ED2A-3FE4CDCC1C86" name="jefatura_PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>A6BB4D83-875D-7753-0061-01BCFE24636B</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="974CF6CF-50CC-FEBD-EA96-ADF954C5BC8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A622219E-2B33-9E45-2CAA-544DC0374248" name="jefatura_locacion_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>FAF2D4AB-25B6-8821-551F-ADB43427E592</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="974CF6CF-50CC-FEBD-EA96-ADF954C5BC8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

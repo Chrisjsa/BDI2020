@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F2F0908A-C47A-D98B-CACF-99B2B8A0901D" name="uso_de_locacion">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>6F482FEE-304A-B4E2-3466-8696C79EB6D6</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="locacion_id_locacion" id="C11F883C-66F2-A6FA-CA81-44F02B1DBB5A">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>98D28D7E-7318-24B4-2E03-53D3FC94EF95</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="90D42E16-F61A-D034-AAE6-426DD6C3D152" referredColumn="7C2F5CF8-EA1B-BE20-5AE7-4352EC2C2E51"/>
+</associations>
+</Column>
+<Column name="usuario_evento_evento_id_evento" id="9165236D-DE58-8931-5D55-88BC067EA07B">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>447F7B33-9EF1-3E54-AF8D-8DAC3337E383</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="207FA8DB-4665-5B65-303B-3FB86060EF38" referredColumn="BC47EBDB-A058-8876-054F-A39BD624BF44"/>
+</associations>
+</Column>
+<Column name="usuario_evento_id_usuario" id="C80967F1-9F7B-E4D5-6C5B-997B8BD1D291">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>5ACD9857-F8E3-24AB-4907-E98ED32734FF</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="207FA8DB-4665-5B65-303B-3FB86060EF38" referredColumn="4516F39B-274B-4B6E-368F-DB91839084D3"/>
+</associations>
+</Column>
+<Column name="usuario_evento_id_rol" id="1F830469-51F1-75A9-4973-B9AFF2E3835A">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>8BD0CEAB-7DE1-FBEE-31AC-020C7E09E93A</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="207FA8DB-4665-5B65-303B-3FB86060EF38" referredColumn="9DF74578-DBAA-D6DF-1EDE-DD54704DC877"/>
+</associations>
+</Column>
+<Column name="usuario_evento_id_permiso" id="8E06F9DF-1414-1635-5427-F39284F1406D">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>E0A232B4-7942-9F1F-2E20-0ED732C98F21</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="207FA8DB-4665-5B65-303B-3FB86060EF38" referredColumn="15AEEEAB-8156-4020-072D-34349BE2B4D7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="79C74DEA-5A08-FFEA-F856-0C80B35ED28E" name="uso_de_locacion_PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>6B300919-69C6-1ABC-689A-0929F2A51D52</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C11F883C-66F2-A6FA-CA81-44F02B1DBB5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2824F92C-5E75-3D4A-46E6-2C396B2E0410" name="uso_de_locacion__IDX">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>FE151EFB-7370-067B-1E36-536DAD5844E0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="9165236D-DE58-8931-5D55-88BC067EA07B"/>
+<colUsage columnID="C80967F1-9F7B-E4D5-6C5B-997B8BD1D291"/>
+<colUsage columnID="1F830469-51F1-75A9-4973-B9AFF2E3835A"/>
+<colUsage columnID="8E06F9DF-1414-1635-5427-F39284F1406D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A476C91-384C-8E8F-9643-0A3F25F9CDC5" name="uso_de_locacion_locacion_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>BFCE5702-FB73-A416-15CE-6E02E7176274</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C11F883C-66F2-A6FA-CA81-44F02B1DBB5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9AF9B5B9-80C5-D7EA-DB83-747A2CE2F51B" name="uso_de_locacion_usuario_evento_FK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 23:12:55 UTC</createdTime>
+<generatorID>FE151EFB-7370-067B-1E36-536DAD5844E0</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9165236D-DE58-8931-5D55-88BC067EA07B"/>
+<colUsage columnID="C80967F1-9F7B-E4D5-6C5B-997B8BD1D291"/>
+<colUsage columnID="1F830469-51F1-75A9-4973-B9AFF2E3835A"/>
+<colUsage columnID="8E06F9DF-1414-1635-5427-F39284F1406D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
