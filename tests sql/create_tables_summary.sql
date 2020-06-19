@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`caracteristica_salon` (
     `fk_salon_de_fiesta` INT NOT NULL,
     `fk_caracteristica` INT NOT NULL,
     `cantidad` INT NOT NULL,
-    PRIMARY KEY (`id_caraceteristica_salon`),
+    PRIMARY KEY (`id_caracteristica_salon`),
     FOREIGN KEY (`fk_salon_de_fiesta`) REFERENCES `arma_tu_fiesta`.`locacion` (`id_locacion`),
     FOREIGN KEY (`fk_caracteristica`) REFERENCES `arma_tu_fiesta`.`caracteristica` (`id_caracteristica`)
 );
