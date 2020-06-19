@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`entidad` (
+  `clave_primaria` INT NOT NULL,
+  `atributo` VARCHAR(45) NOT NULL,
+  `clave_foranea` INT NOT NULL,
+  CONSTRAINT `fk_entidad_entidad`
+  PRIMARY KEY (`clave_primaria`),
+    FOREIGN KEY (`clave_foranea`)
+    REFERENCES `arma_tu_fiesta`.`entidad` (`id_entidad`))
