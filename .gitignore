@@ -1,3 +1,2 @@
 clases/*
-queries/create_model.sql
-queries/delete_model.sql
+queries/*_model.sql
