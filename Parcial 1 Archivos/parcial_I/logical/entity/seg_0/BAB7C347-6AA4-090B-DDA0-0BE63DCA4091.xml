@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BAB7C347-6AA4-090B-DDA0-0BE63DCA4091" name="email">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:46:34 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_email" id="88FB88F0-E710-C894-FD36-88B47C01ED10">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:46:39 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="correo" id="1BD9E34B-B5AE-3428-D9D7-D7C880FD52EF">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:46:43 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dominio" id="995358A3-667E-67AB-5629-0B29A9E9D738">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:46:47 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_autor" id="00A9EB9D-E4C4-55B7-77BE-23E57865ADF1">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:48:36 UTC</createdTime>
+<generatorID>6441684C-AB0B-F813-6003-25C8D9E35B63</generatorID>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<referedAttribute>89307CD1-51B4-A464-EC31-2D80ED8DE534</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_revisor" id="25A5CE4C-B7C6-533F-66E2-BAE990DF2358">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:54:25 UTC</createdTime>
+<generatorID>1AFAF350-1509-DF1D-4961-3C94848FF707</generatorID>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<referedAttribute>C5ADC6FA-2908-F915-0FBF-43D1DFF464AC</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5289B65D-A32D-A9D8-407B-3B3CDFC65B2A" name="email PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:46:52 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>88FB88F0-E710-C894-FD36-88B47C01ED10</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

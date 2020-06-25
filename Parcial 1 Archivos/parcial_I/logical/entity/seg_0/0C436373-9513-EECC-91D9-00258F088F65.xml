@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0C436373-9513-EECC-91D9-00258F088F65" name="lugar">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:34:03 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_lugar" id="9115739B-C28B-7F0D-74F5-8F700CA3485E">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:34:09 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="44350BF6-D156-D8C6-A13B-CD15B7765378">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:34:12 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="2DEDE0EA-9D79-2748-228F-9DCDB0E0974F">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:34:13 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_lugar1" id="98D36729-A930-6044-AFD5-9E8C930C5C90">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:34:24 UTC</createdTime>
+<generatorID>17B4044C-F5E1-0F30-F1D5-F0F07D43C1E4</generatorID>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9115739B-C28B-7F0D-74F5-8F700CA3485E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FB428020-2274-F64A-F4BC-884826190F0E" name="lugar PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:34:19 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9115739B-C28B-7F0D-74F5-8F700CA3485E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

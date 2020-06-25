@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_19" directorySegmentName="seg_0" id="F8FF64DF-FFA2-338B-F6CB-5663CBD41B93">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 13:18:51 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<sourcePk>FB428020-2274-F64A-F4BC-884826190F0E</sourcePk>
+<identifying>false</identifying>
+<nameOnTarget>ubicada</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0C436373-9513-EECC-91D9-00258F088F65</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>29DE32FA-2116-235F-C188-F3246339EC15</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

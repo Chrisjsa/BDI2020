@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D6E7CB6B-99F6-699E-CA16-AFC82B362CC0" name="autor">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:35:14 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_autor" id="89307CD1-51B4-A464-EC31-2D80ED8DE534">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:35:20 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="F2FA4C59-466D-63A5-21D2-6F3ABF1FE05B">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:37:56 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="A7004070-6116-2AE5-529F-DC8E69AA67DF">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:35:25 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido" id="29D8369C-A15D-8607-F615-E7CD7358C982">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:37:48 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_lugar" id="751FC7FB-505D-C572-E451-4812346C7F7C">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:38:26 UTC</createdTime>
+<generatorID>946E61F5-6239-877D-C5CC-9A9560DF96A4</generatorID>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<referedAttribute>9115739B-C28B-7F0D-74F5-8F700CA3485E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_email" id="84255E96-C09D-00FB-2D1A-628F4AFC7882">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:48:05 UTC</createdTime>
+<generatorID>6441684C-AB0B-F813-6003-25C8D9E35B63</generatorID>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<referedAttribute>88FB88F0-E710-C894-FD36-88B47C01ED10</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_compañia" id="04D74F51-03F3-9970-1F00-869A463FE20C">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:51:03 UTC</createdTime>
+<generatorID>D358ECE2-A081-CC5A-8C1F-6F407E2225E8</generatorID>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<referedAttribute>E507985A-0A78-609E-6008-BEE367BA273E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="84F54E39-EEBE-1E91-6E04-4052A2C46198" name="autor PK">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-18 12:35:24 UTC</createdTime>
+<ownerDesignName>parcial_I</ownerDesignName>
+<engineerTo>
+<item key="B1557047-E970-EBEB-D8DD-DBF42DFE81F0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>89307CD1-51B4-A464-EC31-2D80ED8DE534</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

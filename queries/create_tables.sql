@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`lugar` (
     `nombre`                VARCHAR(45) NOT NULL,
     `tipo`                  VARCHAR(45) NOT NULL,
     `fk_pertenece`          INT NULL,
-    PRIMARY KEY (`id_lugar`),
+    CONSTRAINT `pk_lugar` CONSTRAINT `pk_` PRIMARY KEY (`id_lugar`),
         FOREIGN KEY (`fk_pertenece`) REFERENCES `arma_tu_fiesta`.`lugar` (`id_lugar`)
 );
 
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`persona` (
     `sexo`                  VARCHAR(45) NOT NULL,
     `estado_civil`          VARCHAR(45) NOT NULL,
     `fk_residencia`         INT NOT NULL,
-    PRIMARY KEY (`id_persona`),
+    CONSTRAINT `pk_persona` CONSTRAINT `pk_` PRIMARY KEY (`id_persona`),
         FOREIGN KEY (`fk_residencia`) REFERENCES `arma_tu_fiesta`.`lugar` (`id_lugar`)
 );
 
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`usuario` (
     `username`              VARCHAR(45) NOT NULL,
     `password`              VARCHAR(45) NOT NULL,
     `fk_persona`            INT NOT NULL,
-    PRIMARY KEY (`id_usuario`),
+    CONSTRAINT `pk_usuario` CONSTRAINT `pk_` PRIMARY KEY (`id_usuario`),
         FOREIGN KEY (`fk_persona`) REFERENCES `arma_tu_fiesta`.`persona` (`id_persona`)
 );
 
@@ -35,13 +35,13 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`rol` (
     `id_rol`                INT NOT NULL AUTO_INCREMENT,
     `nombre`                VARCHAR(45) NOT NULL,
     `descripcion`           VARCHAR(45) NOT NULL,
-    PRIMARY KEY (`id_rol`)
+    CONSTRAINT `pk_rol` CONSTRAINT `pk_` PRIMARY KEY (`id_rol`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`permiso` (
     `id_permiso`            INT NOT NULL AUTO_INCREMENT,
     `nombre`                VARCHAR(45) NOT NULL,
-    PRIMARY KEY (`id_permiso`)
+    CONSTRAINT `pk_permiso` CONSTRAINT `pk_` PRIMARY KEY (`id_permiso`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`usuario_rol` (
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`usuario_rol` (
     `fk_usuario`            INT NOT NULL,
     `fk_rol`                INT NOT NULL,
     `fk_permiso`            INT NOT NULL,
-    PRIMARY KEY (`id_usuario_rol`),
+    CONSTRAINT `pk_usuario_rol` CONSTRAINT `pk_` PRIMARY KEY (`id_usuario_rol`),
         FOREIGN KEY (`fk_usuario`) REFERENCES `arma_tu_fiesta`.`usuario` (`id_usuario`),
         FOREIGN KEY (`fk_rol`) REFERENCES `arma_tu_fiesta`.`rol` (`id_rol`),
         FOREIGN KEY (`fk_permiso`) REFERENCES `arma_tu_fiesta`.`permiso` (`id_permiso`)
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`proveedor` (
     `razon_social`          VARCHAR(45) NOT NULL,
     `tipo`                  VARCHAR(45) NOT NULL,
     `fk_ubicado`            INT NOT NULL,
-    PRIMARY KEY (`id_proveedor`),
+    CONSTRAINT `pk_proveedor` CONSTRAINT `pk_` PRIMARY KEY (`id_proveedor`),
         FOREIGN KEY (`fk_ubicado`) REFERENCES `arma_tu_fiesta`.`lugar` (`id_lugar`)
 );
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`empleado` (
     `cargo`                 VARCHAR(45) NOT NULL,
     `fk_persona`            INT NOT NULL,
     `fk_proveedor`          INT NOT NULL,
-    PRIMARY KEY (`id_empleado`),
+    CONSTRAINT `pk_empleado` CONSTRAINT `pk_` PRIMARY KEY (`id_empleado`),
         FOREIGN KEY (`fk_persona`) REFERENCES `arma_tu_fiesta`.`persona` (`id_persona`),
         FOREIGN KEY (`fk_proveedor`) REFERENCES `arma_tu_fiesta`.`proveedor` (`id_proveedor`)
 );
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`coordenada` (
     `id_coordenada`         INT NOT NULL AUTO_INCREMENT,
     `posicion_x`            VARCHAR(45) NOT NULL,
     `posicion_y`            VARCHAR(45) NOT NULL,
-    PRIMARY KEY (`id_coordenada`)
+    CONSTRAINT `pk_coordenada` PRIMARY KEY (`id_coordenada`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`horario` (
@@ -87,20 +87,20 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`horario` (
     `turno`                 VARCHAR(45) NOT NULL,
     `hora_inicio`           TIME NOT NULL,
     `hora_termina`          TIME NOT NULL,
-    PRIMARY KEY (`id_horario`)
+    CONSTRAINT `pk_horario` PRIMARY KEY (`id_horario`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`religion` (
     `id_religion`           INT NOT NULL AUTO_INCREMENT,
     `nombre`                VARCHAR(45) NOT NULL,
-    PRIMARY KEY (`id_religion`)
+    CONSTRAINT `pk_religion` PRIMARY KEY (`id_religion`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`locacion` (
     `id_locacion`           INT NOT NULL AUTO_INCREMENT,
     `nombre`                VARCHAR(45) NOT NULL,
     `fk_localizacion`       INT NOT NULL,
-    PRIMARY KEY (`id_locacion`),
+    CONSTRAINT `pk_locacion` PRIMARY KEY (`id_locacion`),
         FOREIGN KEY (`fk_localizacion`) REFERENCES `arma_tu_fiesta`.`lugar` (`id_lugar`)
 );
 
@@ -135,14 +135,14 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`punto_de_referencia` (
     `id_punto`              INT NOT NULL AUTO_INCREMENT,
     `descripcion`           VARCHAR(45) NOT NULL,
     `fk_salon_de_fiesta`    INT NOT NULL,
-    PRIMARY KEY (`id_punto`),
+    CONSTRAINT `pk_punto` PRIMARY KEY (`id_punto`),
         FOREIGN KEY (`fk_salon_de_fiesta`) REFERENCES `arma_tu_fiesta`.`locacion` (`id_locacion`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`caracteristica` (
     `id_caracteristica`     INT NOT NULL AUTO_INCREMENT,
     `nombre`                VARCHAR(45) NOT NULL,
-    PRIMARY KEY (`id_caracteristica`)
+    CONSTRAINT `pk_caracteristica` PRIMARY KEY (`id_caracteristica`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`caracteristica_salon` (
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`caracteristica_salon` (
     `fk_salon_de_fiesta`    INT NOT NULL,
     `fk_caracteristica`     INT NOT NULL,
     `cantidad`              INT NOT NULL,
-    PRIMARY KEY (`id_caract_salon`),
+    CONSTRAINT `pk_caract_salon` PRIMARY KEY (`id_caract_salon`),
         FOREIGN KEY (`fk_salon_de_fiesta`) REFERENCES `arma_tu_fiesta`.`locacion` (`id_locacion`),
         FOREIGN KEY (`fk_caracteristica`) REFERENCES `arma_tu_fiesta`.`caracteristica` (`id_caracteristica`)
 );
@@ -162,7 +162,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`telefono` (
     `fk_persona`            INT NULL,
     `fk_proveedor`          INT NULL,
     `fk_locacion`           INT NULL,
-    PRIMARY KEY (`id_telefono`),
+    CONSTRAINT `pk_telefono` PRIMARY KEY (`id_telefono`),
         FOREIGN KEY (`fk_persona`) REFERENCES `arma_tu_fiesta`.`persona` (`id_persona`),
         FOREIGN KEY (`fk_proveedor`) REFERENCES `arma_tu_fiesta`.`proveedor` (`id_proveedor`),
         FOREIGN KEY (`fk_locacion`) REFERENCES `arma_tu_fiesta`.`locacion` (`id_locacion`)
@@ -175,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`email` (
     `fk_persona`            INT NULL,
     `fk_proveedor`          INT NULL,
     `fk_locacion`           INT NULL,
-    PRIMARY KEY (`id_email`),
+    CONSTRAINT `pk_email` PRIMARY KEY (`id_email`),
         FOREIGN KEY (`fk_persona`) REFERENCES `arma_tu_fiesta`.`persona` (`id_persona`),
         FOREIGN KEY (`fk_proveedor`) REFERENCES `arma_tu_fiesta`.`proveedor` (`id_proveedor`),
         FOREIGN KEY (`fk_locacion`) REFERENCES `arma_tu_fiesta`.`locacion` (`id_locacion`)
@@ -185,7 +185,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`tramite_carta` (
     `id_tramite_carta`      INT NOT NULL AUTO_INCREMENT,
     `estatus`               VARCHAR(45) NOT NULL,
     `fk_jefatura`           INT NOT NULL,
-    PRIMARY KEY (`id_tramite_carta`),
+    CONSTRAINT `pk_tramite_carta` PRIMARY KEY (`id_tramite_carta`),
         FOREIGN KEY (`fk_jefatura`) REFERENCES `arma_tu_fiesta`.`locacion` (`id_locacion`)
 );
 
@@ -204,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`producto` (
     `descripcion`           VARCHAR(45) NOT NULL,
     `precio`                NUMERIC NOT NULL,
     `fk_agregado_por`       INT NOT NULL,
-    PRIMARY KEY (`id_producto`),
+    CONSTRAINT `pk_producto` PRIMARY KEY (`id_producto`),
         FOREIGN KEY (`fk_agregado_por`) REFERENCES `arma_tu_fiesta`.`rol` (`id_rol`)
 );
 
@@ -212,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`producto_producto` (
     `id_producto_producto`  INT NOT NULL AUTO_INCREMENT,
     `fk_compuesto`          INT NOT NULL,
     `fk_compone`            INT NOT NULL,
-    PRIMARY KEY (`id_producto_producto`),
+    CONSTRAINT `pk_producto_producto` PRIMARY KEY (`id_producto_producto`),
         FOREIGN KEY (`fk_compuesto`) REFERENCES `arma_tu_fiesta`.`producto` (`id_producto`),
         FOREIGN KEY (`fk_compone`) REFERENCES `arma_tu_fiesta`.`producto` (`id_producto`)
 );
@@ -223,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`servicio_tercerizado` (
     `nombre`                VARCHAR(45) NOT NULL,
     `descripcion`           VARCHAR(45) NOT NULL,
     `fk_agregado_por`       INT NOT NULL,
-    PRIMARY KEY (`id_servicio`),
+    CONSTRAINT `pk_servicio` PRIMARY KEY (`id_servicio`),
         FOREIGN KEY (`fk_agregado_por`) REFERENCES `arma_tu_fiesta`.`rol` (`id_rol`)
 );
 
@@ -233,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`imagen` (
     `fk_salon`              INT NULL,
     `fk_producto`           INT NULL,
     `fk_servicio`           INT NULL,
-    PRIMARY KEY (`id_imagen`),
+    CONSTRAINT `pk_imagen` PRIMARY KEY (`id_imagen`),
         FOREIGN KEY (`fk_salon`) REFERENCES `arma_tu_fiesta`.`locacion` (`id_locacion`),
         FOREIGN KEY (`fk_producto`) REFERENCES `arma_tu_fiesta`.`producto` (`id_producto`),
         FOREIGN KEY (`fk_servicio`) REFERENCES `arma_tu_fiesta`.`servicio_tercerizado` (`id_servicio`)
@@ -247,7 +247,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`proveedor_salon` (
     `fecha_reserva`         DATE NOT NULL,
     `fecha_inicio`          DATE NOT NULL,
     `fecha_fin`             DATE NOT NULL,
-    PRIMARY KEY (`id_proveedor_salon`),
+    CONSTRAINT `pk_proveedor_salon` PRIMARY KEY (`id_proveedor_salon`),
         FOREIGN KEY (`fk_proveedor`) REFERENCES `arma_tu_fiesta`.`proveedor` (`id_proveedor`),
         FOREIGN KEY (`fk_salon`) REFERENCES `arma_tu_fiesta`.`locacion` (`id_locacion`)
 );
@@ -259,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`proveedor_producto` (
     `cantidad`              INT NOT NULL,
     `precio`                NUMERIC NOT NULL,
     `fecha_entrega`         DATE NOT NULL,
-    PRIMARY KEY (`id_proveedor_producto`),
+    CONSTRAINT `pk_proveedor_producto` PRIMARY KEY (`id_proveedor_producto`),
         FOREIGN KEY (`fk_proveedor`) REFERENCES `arma_tu_fiesta`.`proveedor` (`id_proveedor`),
         FOREIGN KEY (`fk_producto`) REFERENCES `arma_tu_fiesta`.`producto` (`id_producto`)
 );
@@ -272,7 +272,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`proveedor_servicio` (
     `fecha_reserva`         DATE NOT NULL,
     `fecha_inicio`          DATE NOT NULL,
     `fecha_fin`             DATE NOT NULL,
-    PRIMARY KEY (`id_proveedor_servicio`),
+    CONSTRAINT `pk_proveedor_servicio` PRIMARY KEY (`id_proveedor_servicio`),
         FOREIGN KEY (`fk_proveedor`) REFERENCES `arma_tu_fiesta`.`proveedor` (`id_proveedor`),
         FOREIGN KEY (`fk_servicio`) REFERENCES `arma_tu_fiesta`.`servicio_tercerizado` (`id_servicio`)
 );
@@ -291,7 +291,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`evento` (
     `tipo`                  VARCHAR(45) NOT NULL,
     `tema`                  VARCHAR(45) NOT NULL,
     `cortejo`               VARCHAR(45) NULL,
-    PRIMARY KEY (`id_evento`)
+    CONSTRAINT `pk_evento` PRIMARY KEY (`id_evento`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`orden_evento` (
@@ -301,7 +301,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`orden_evento` (
     `fecha_realizacion`     DATE NOT NULL,
     `fk_usuario_rol`        INT NOT NULL,
     `fk_evento`             INT NOT NULL,
-    PRIMARY KEY (`id_orden_evento`),
+    CONSTRAINT `pk_orden_evento` PRIMARY KEY (`id_orden_evento`),
         FOREIGN KEY (`fk_usuario_rol`) REFERENCES `arma_tu_fiesta`.`usuario_rol` (`id_usuario_rol`),
         FOREIGN KEY (`fk_evento`) REFERENCES `arma_tu_fiesta`.`evento` (`id_evento`)
 );
@@ -312,7 +312,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`presupuesto` (
     `estatus`               VARCHAR(45) NOT NULL,
     `total`                 NUMERIC NOT NULL,
     `fk_orden_evento`       INT NOT NULL,
-    PRIMARY KEY (`id_presupuesto`),
+    CONSTRAINT `pk_presupuesto` PRIMARY KEY (`id_presupuesto`),
         FOREIGN KEY (`fk_orden_evento`) REFERENCES `arma_tu_fiesta`.`orden_evento` (`id_orden_evento`)
 );
 
@@ -325,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`detalle` (
     `fk_producto`           INT NULL,
     `fk_proveedor_salon`    INT NULL,
     `fk_proveedor_servicio` INT NULL,
-    PRIMARY KEY (`id_detalle`),
+    CONSTRAINT `pk_detalle` PRIMARY KEY (`id_detalle`),
         FOREIGN KEY (`fk_presupuesto`) REFERENCES `arma_tu_fiesta`.`presupuesto` (`id_presupuesto`),
         FOREIGN KEY (`fk_producto`) REFERENCES `arma_tu_fiesta`.`producto` (`id_producto`),
         FOREIGN KEY (`fk_proveedor_salon`) REFERENCES `arma_tu_fiesta`.`proveedor_salon` (`id_proveedor_salon`),
@@ -335,7 +335,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`detalle` (
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`metodo_de_pago` (
     `id_metodo`             INT NOT NULL AUTO_INCREMENT,
     `banco`                 VARCHAR(45) NOT NULL,
-    PRIMARY KEY (`id_metodo`)
+    CONSTRAINT `pk_metodo_de_pago` PRIMARY KEY (`id_metodo`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`tarjeta` (
