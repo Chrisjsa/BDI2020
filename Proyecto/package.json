@@ -1,0 +1,30 @@
+{
+  "name": "arma_tu_fiesta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "node build/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p .",
+    "lint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "@types/supertest": "^2.0.8",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  }
+}
