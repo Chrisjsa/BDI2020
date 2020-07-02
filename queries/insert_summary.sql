@@ -245,7 +245,6 @@ INSERT INTO `arma_tu_fiesta`.`permiso` (`nombre`)
 
 -- ++++++++++++++++++++++++++++++++++ USUARIO_ROL +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
 INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'huguito') as tablaUsuario),
@@ -320,4 +319,44 @@ INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Realizar Pago') as tablaPermiso))
+;
+
+-- ++++++++++++++++++++++++++++++++++ PROVEEDOR +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+INSERT INTO `arma_tu_fiesta`.`proveedor` (`rif`,`razon_social`,`rubro`,`fk_ubicado`)
+    VALUES
+    ('J-20202706','Kami Productions','Fotografia y video',
+        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'El Recreo') as tablaLugar)),
+    ('J-20201309','Ambrosia','Catering ',
+        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'El Cafetal') as tablaLugar)),
+    ('J-7456987','Fondo Blanco','Bebidas',
+        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Petare') as tablaLugar)),
+    ('J-9378192','Contigo','Mobiliario',
+        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'La Dolorita') as tablaLugar)),
+    ('J-8741963','Yutu','Entretenimiento',
+        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'San Pedro') as tablaLugar))
+;
+
+-- ++++++++++++++++++++++++++++++++++ EMPLEADO +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+INSERT INTO `arma_tu_fiesta`.`empleado` (`cargo`, `fk_persona`, `fk_proveedor`)
+    VALUES
+    ('Fotografa',
+    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'E-88296365') as tablapersona),
+    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-20202706') as tablaProveedor)),
+    ('Fotografo',
+    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-31102965') as tablapersona),
+    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-20202706') as tablaProveedor)),
+    ('Organizador',
+    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'E-81997002') as tablapersona),
+    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-20201309') as tablaProveedor)),
+    ('Organizadora',
+    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-26805693') as tablapersona),
+    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-7456987') as tablaProveedor)),
+    ('Personal',
+    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-30365214') as tablapersona),
+    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-8741963') as tablaProveedor)),
+    ('Personal',
+    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-29820142') as tablapersona),
+    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-8741963') as tablaProveedor))
 ;

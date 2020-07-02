@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`proveedor` (
     `id_proveedor`          INT NOT NULL AUTO_INCREMENT,
     `rif`                   VARCHAR(45) NOT NULL UNIQUE,
     `razon_social`          VARCHAR(45) NOT NULL,
-    `tipo`                  VARCHAR(45) NOT NULL,
+    `rubro`                  VARCHAR(45) NOT NULL,
     `fk_ubicado`            INT NOT NULL,
     CONSTRAINT `pk_proveedor` PRIMARY KEY (`id_proveedor`),
         CONSTRAINT `fk_proveedor_lugar` FOREIGN KEY (`fk_ubicado`) REFERENCES `arma_tu_fiesta`.`lugar` (`id_lugar`)
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`empleado` (
     `cargo`                 VARCHAR(45) NOT NULL,
     `fk_persona`            INT NOT NULL,
     `fk_proveedor`          INT NOT NULL,
-    CONSTRAINT `pk_empleado` CONSTRAINT `pk_` PRIMARY KEY (`id_empleado`),
+    CONSTRAINT `pk_empleado` PRIMARY KEY (`id_empleado`),
         CONSTRAINT `fk_empleado_persona` FOREIGN KEY (`fk_persona`) REFERENCES `arma_tu_fiesta`.`persona` (`id_persona`),
         CONSTRAINT `fk_empleado_proveedor` FOREIGN KEY (`fk_proveedor`) REFERENCES `arma_tu_fiesta`.`proveedor` (`id_proveedor`)
 );
