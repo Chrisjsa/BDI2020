@@ -360,3 +360,22 @@ INSERT INTO `arma_tu_fiesta`.`empleado` (`cargo`, `fk_persona`, `fk_proveedor`)
     (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-29820142') as tablapersona),
     (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-8741963') as tablaProveedor))
 ;
+
+-- ++++++++++++++++++++++++++++++++++ HORARIO +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+INSERT INTO `arma_tu_fiesta`.`horario` (`turno`, `hora_inicio`, `hora_termina`)
+    VALUES
+    ('Mañana','07:00:00','12:00:00'),
+    ('Tarde','13:00:00','18:00:00')
+;
+
+-- ++++++++++++++++++++++++++++++++++ RELIGION +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+INSERT INTO `arma_tu_fiesta`.`religion` (`nombre`)
+    VALUES
+    ('Cristianismo'),
+    ('Judaismo'),
+    ('Islamismo'),
+    ('Hinduismo'),
+    ('Sintoismo')
+;

@@ -75,13 +75,6 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`empleado` (
         CONSTRAINT `fk_empleado_proveedor` FOREIGN KEY (`fk_proveedor`) REFERENCES `arma_tu_fiesta`.`proveedor` (`id_proveedor`)
 );
 
-CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`coordenada` (
-    `id_coordenada`         INT NOT NULL AUTO_INCREMENT,
-    `posicion_x`            VARCHAR(45) NOT NULL,
-    `posicion_y`            VARCHAR(45) NOT NULL,
-    CONSTRAINT `pk_coordenada` PRIMARY KEY (`id_coordenada`)
-);
-
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`horario` (
     `id_horario`            INT NOT NULL AUTO_INCREMENT,
     `turno`                 VARCHAR(45) NOT NULL,
@@ -94,6 +87,13 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`religion` (
     `id_religion`           INT NOT NULL AUTO_INCREMENT,
     `nombre`                VARCHAR(45) NOT NULL,
     CONSTRAINT `pk_religion` PRIMARY KEY (`id_religion`)
+);
+
+CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`coordenada` (
+    `id_coordenada`         INT NOT NULL AUTO_INCREMENT,
+    `posicion_x`            VARCHAR(45) NOT NULL,
+    `posicion_y`            VARCHAR(45) NOT NULL,
+    CONSTRAINT `pk_coordenada` PRIMARY KEY (`id_coordenada`)
 );
 
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`locacion` (
