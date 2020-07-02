@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`usuario` (
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`rol` (
     `id_rol`                INT NOT NULL AUTO_INCREMENT,
     `nombre`                VARCHAR(45) NOT NULL,
-    `descripcion`           VARCHAR(45) NOT NULL,
+    `descripcion`           VARCHAR(200) NOT NULL,
     CONSTRAINT `pk_rol` PRIMARY KEY (`id_rol`)
 );
 

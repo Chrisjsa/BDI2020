@@ -24,7 +24,7 @@ INSERT INTO `arma_tu_fiesta`.`persona` (`cedula`,`p_nombre`,`s_nombre`,`p_apelli
         (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'San Juan') as tablaLugar)),
     ('V-28745123','Aura','Maria','Fuentes','','2000-11-12','Femenino','Soltera',
         (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Santa Teresa') as tablaLugar)),
-    ('V-21997002','Michell','','Doinel','','1992-12-11','Masculino','Soltero',
+    ('E-81997002','Michell','','Doinel','','1992-12-11','Masculino','Soltero',
         (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = '23 de Enero') as tablaLugar)),
     ('V-21008702','Maria','','Calderon','','1992-01-06','Masculino','Soltero',
         (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'La Pastora') as tablaLugar)),
