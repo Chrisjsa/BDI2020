@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`lugar` (
     `id_lugar`              INT NOT NULL AUTO_INCREMENT,
-    `nombre`                VARCHAR(45) NOT NULL,
+    `nombre`                VARCHAR(100) NOT NULL,
     `tipo`                  VARCHAR(45) NOT NULL,
     `fk_pertenece`          INT NULL,
     CONSTRAINT `pk_lugar` PRIMARY KEY (`id_lugar`),
