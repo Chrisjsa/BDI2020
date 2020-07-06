@@ -46,6 +46,7 @@ INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
         ('Distrito Capital', @tipo, @pertenece),
         ('Falcon', @tipo, @pertenece),
         ('Guarico', @tipo, @pertenece),
+        ('La Guaira', @tipo, @pertenece),
         ('Lara', @tipo, @pertenece),
         ('Merida', @tipo, @pertenece),
         ('Miranda', @tipo, @pertenece),
@@ -55,7 +56,6 @@ INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
         ('Sucre', @tipo, @pertenece),
         ('Tachira', @tipo, @pertenece),
         ('Trujillo', @tipo, @pertenece),
-        ('Vargas', @tipo, @pertenece),
         ('Yaracuy', @tipo, @pertenece),
         ('Zulia', @tipo, @pertenece)
 ;
@@ -69,13 +69,13 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Alto Orinoco (La Esmeralda)', @tipo, @pertenece),
-        ('Atabapo (San Fernando de Atabapo)', @tipo, @pertenece),
-        ('Atures (Puerto Ayacucho)', @tipo, @pertenece),
-        ('Autana (Isla Ratón)', @tipo, @pertenece),
-        ('Manapiare (San Juan de Manapiare)', @tipo, @pertenece),
-        ('Maroa (Maroa)', @tipo, @pertenece),
-        ('Río Negro (San Carlos de Río Negro)', @tipo, @pertenece)
+        ('Alto Orinoco', @tipo, @pertenece),
+        ('Atabapo', @tipo, @pertenece),
+        ('Atures', @tipo, @pertenece),
+        ('Autana', @tipo, @pertenece),
+        ('Manapiare', @tipo, @pertenece),
+        ('Maroa', @tipo, @pertenece),
+        ('Río Negro', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -83,27 +83,27 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Anaco (Anaco)', @tipo, @pertenece),
-        ('Aragua (Aragua de Barcelona)', @tipo, @pertenece),
-        ('Bolívar (Barcelona)', @tipo, @pertenece),
-        ('Bruzual (Clarines)', @tipo, @pertenece),
-        ('Cajigal (Onoto)', @tipo, @pertenece),
-        ('Carvajal (Valle de Guanape)', @tipo, @pertenece),
-        ('Freites (Cantaura)', @tipo, @pertenece),
-        ('Guanipa (San José de Guanipa)', @tipo, @pertenece),
-        ('Guanta (Guanta)', @tipo, @pertenece),
-        ('Independencia (Soledad)', @tipo, @pertenece),
-        ('Libertad (San Mateo)', @tipo, @pertenece),
-        ('McGregor (El Chaparro)', @tipo, @pertenece),
-        ('Miranda (Pariaguán)', @tipo, @pertenece),
-        ('Monagas (Mapire)', @tipo, @pertenece),
-        ('Peñalver (Puerto Píritu)', @tipo, @pertenece),
-        ('Píritu (Píritu)', @tipo, @pertenece),
-        ('San Juan de Capistrano (Boca de Uchire)', @tipo, @pertenece),
-        ('Santa Ana (Santa Ana)', @tipo, @pertenece),
-        ('Simón Rodríguez (El Tigre)', @tipo, @pertenece),
-        ('Sotillo (Puerto La Cruz)', @tipo, @pertenece),
-        ('Urbaneja (Lechería)', @tipo, @pertenece)
+        ('Anaco', @tipo, @pertenece),
+        ('Aragua', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Bruzual', @tipo, @pertenece),
+        ('Cajigal', @tipo, @pertenece),
+        ('Carvajal', @tipo, @pertenece),
+        ('Freites', @tipo, @pertenece),
+        ('Guanipa', @tipo, @pertenece),
+        ('Guanta', @tipo, @pertenece),
+        ('Independencia', @tipo, @pertenece),
+        ('Libertad', @tipo, @pertenece),
+        ('McGregor', @tipo, @pertenece),
+        ('Miranda', @tipo, @pertenece),
+        ('Monagas', @tipo, @pertenece),
+        ('Peñalver', @tipo, @pertenece),
+        ('Píritu', @tipo, @pertenece),
+        ('San Juan de Capistrano', @tipo, @pertenece),
+        ('Santa Ana', @tipo, @pertenece),
+        ('Simón Rodríguez', @tipo, @pertenece),
+        ('Sotillo', @tipo, @pertenece),
+        ('Urbaneja', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -111,13 +111,13 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Achaguas (Achaguas)', @tipo, @pertenece),
-        ('Biruaca (Biruaca)', @tipo, @pertenece),
-        ('Camejo (San Juan de Payara)', @tipo, @pertenece),
-        ('Muñoz (Bruzual)', @tipo, @pertenece),
-        ('Páez (Guasdualito)', @tipo, @pertenece),
-        ('Rómulo Gallegos (Elorza)', @tipo, @pertenece),
-        ('San Fernando (San Fernando de Apure)', @tipo, @pertenece)
+        ('Achaguas', @tipo, @pertenece),
+        ('Biruaca', @tipo, @pertenece),
+        ('Camejo', @tipo, @pertenece),
+        ('Muñoz', @tipo, @pertenece),
+        ('Páez', @tipo, @pertenece),
+        ('Rómulo Gallegos', @tipo, @pertenece),
+        ('San Fernando', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -125,24 +125,24 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Alcántara (Santa Rita)', @tipo, @pertenece),
-        ('Bolívar (San Mateo)', @tipo, @pertenece),
-        ('Camatagua (Camatagua)', @tipo, @pertenece),
-        ('Girardot (Maracay)', @tipo, @pertenece),
-        ('Iragorry (El Limón)', @tipo, @pertenece),
-        ('Lamas (Santa Cruz de Aragua)', @tipo, @pertenece),
-        ('Libertador (Palo Negro)', @tipo, @pertenece),
-        ('Mariño (Turmero)', @tipo, @pertenece),
-        ('Michelena (Las Tejerías)', @tipo, @pertenece),
-        ('Ocumare de la Costa de Oro (Ocumare de la Costa)', @tipo, @pertenece),
-        ('Revenga (El Consejo)', @tipo, @pertenece),
-        ('Ribas (La Victoria)', @tipo, @pertenece),
-        ('San Casimiro (San Casimiro)', @tipo, @pertenece),
-        ('San Sebastián (San Sebastián de Los Reyes)', @tipo, @pertenece),
-        ('Sucre (Cagua)', @tipo, @pertenece),
-        ('Tovar (Colonia Tovar)', @tipo, @pertenece),
-        ('Urdaneta (Barbacoas)', @tipo, @pertenece),
-        ('Zamora (Villa de Cura)', @tipo, @pertenece)
+        ('Alcántara', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Camatagua', @tipo, @pertenece),
+        ('Girardot', @tipo, @pertenece),
+        ('Iragorry', @tipo, @pertenece),
+        ('Lamas', @tipo, @pertenece),
+        ('Libertador', @tipo, @pertenece),
+        ('Mariño', @tipo, @pertenece),
+        ('Michelena', @tipo, @pertenece),
+        ('Ocumare de la Costa de Oro', @tipo, @pertenece),
+        ('Revenga', @tipo, @pertenece),
+        ('Ribas', @tipo, @pertenece),
+        ('San Casimiro ', @tipo, @pertenece),
+        ('San Sebastián', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Tovar', @tipo, @pertenece),
+        ('Urdaneta', @tipo, @pertenece),
+        ('Zamora', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -150,18 +150,18 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Alberto Arvelo Torrealba (Sabaneta)', @tipo, @pertenece),
-        ('Andrés Eloy Blanco (El Cantón)', @tipo, @pertenece),
-        ('Antonio José de Sucre (Socopó)', @tipo, @pertenece),
-        ('Arismendi (Arismendi)', @tipo, @pertenece),
-        ('Barinas (Barinas)', @tipo, @pertenece),
-        ('Bolívar (Barinitas)', @tipo, @pertenece),
-        ('Cruz Paredes (Barrancas)', @tipo, @pertenece),
-        ('Ezequiel Zamora (Santa Bárbara)', @tipo, @pertenece),
-        ('Obispos (Obispos)', @tipo, @pertenece),
-        ('Pedraza (Ciudad Bolivia)', @tipo, @pertenece),
-        ('Rojas (Libertad)', @tipo, @pertenece),
-        ('Sosa (Ciudad de Nutrias)', @tipo, @pertenece)
+        ('Alberto Arvelo Torrealba', @tipo, @pertenece),
+        ('Andrés Eloy Blanco', @tipo, @pertenece),
+        ('Antonio José de Sucre', @tipo, @pertenece),
+        ('Arismendi', @tipo, @pertenece),
+        ('Barinas', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Cruz Paredes', @tipo, @pertenece),
+        ('Ezequiel Zamora', @tipo, @pertenece),
+        ('Obispos', @tipo, @pertenece),
+        ('Pedraza', @tipo, @pertenece),
+        ('Rojas', @tipo, @pertenece),
+        ('Sosa', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -169,17 +169,17 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Angostura (Ciudad Piar)', @tipo, @pertenece),
-        ('Angostura del Orinoco (Ciudad Bolívar)', @tipo, @pertenece),
-        ('Caroní (Ciudad Guayana)', @tipo, @pertenece),
-        ('Cedeño (Caicara del Orinoco)', @tipo, @pertenece),
-        ('Chien (El Palmar)', @tipo, @pertenece),
-        ('El Callao (El Callao)', @tipo, @pertenece),
-        ('Gran Sabana (Santa Elena de Uairén)', @tipo, @pertenece),
-        ('Piar (Upata)', @tipo, @pertenece),
-        ('Roscio (Guasipati)', @tipo, @pertenece),
-        ('Sifontes (El Dorado)', @tipo, @pertenece),
-        ('Sucre (Maripa)', @tipo, @pertenece)
+        ('Angostura', @tipo, @pertenece),
+        ('Angostura del Orinoco', @tipo, @pertenece),
+        ('Caroní', @tipo, @pertenece),
+        ('Cedeño', @tipo, @pertenece),
+        ('Chien', @tipo, @pertenece),
+        ('El Callao', @tipo, @pertenece),
+        ('Gran Sabana', @tipo, @pertenece),
+        ('Piar', @tipo, @pertenece),
+        ('Roscio', @tipo, @pertenece),
+        ('Sifontes', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -187,20 +187,20 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Bejuma (Bejuma)', @tipo, @pertenece),
-        ('Carlos Arvelo (Güigüe)', @tipo, @pertenece),
-        ('Diego Ibarra (Mariara)', @tipo, @pertenece),
-        ('Guacara (Guacara)', @tipo, @pertenece),
-        ('Libertador (Tocuyito)', @tipo, @pertenece),
-        ('Los Guayos (Los Guayos)', @tipo, @pertenece),
-        ('Miranda (Miranda)', @tipo, @pertenece),
-        ('Mora (Morón)', @tipo, @pertenece),
-        ('Montalbán (Montalbán)', @tipo, @pertenece),
-        ('Naguanagua ( Naguanagua)', @tipo, @pertenece),
-        ('Puerto Cabello (Puerto Cabello)', @tipo, @pertenece),
-        ('San Diego (San Diego)', @tipo, @pertenece),
-        ('San Joaquín (San Joaquín)', @tipo, @pertenece),
-        ('Valencia (Valencia)', @tipo, @pertenece)
+        ('Bejuma', @tipo, @pertenece),
+        ('Carlos Arvelo', @tipo, @pertenece),
+        ('Diego Ibarra', @tipo, @pertenece),
+        ('Guacara', @tipo, @pertenece),
+        ('Libertador', @tipo, @pertenece),
+        ('Los Guayos', @tipo, @pertenece),
+        ('Miranda', @tipo, @pertenece),
+        ('Mora', @tipo, @pertenece),
+        ('Montalbán', @tipo, @pertenece),
+        ('Naguanagua', @tipo, @pertenece),
+        ('Puerto Cabello', @tipo, @pertenece),
+        ('San Diego', @tipo, @pertenece),
+        ('San Joaquín', @tipo, @pertenece),
+        ('Valencia', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -208,15 +208,15 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Anzoátegui (Cojedes)', @tipo, @pertenece),
-        ('Tinaquillo (Tinaquillo)', @tipo, @pertenece),
-        ('Girardot (El Baúl)', @tipo, @pertenece),
-        ('Lima Blanco (Macapo)', @tipo, @pertenece),
-        ('Pao de San Juan Bautista (El Pao)', @tipo, @pertenece),
-        ('Ricaurte (Libertad)', @tipo, @pertenece),
-        ('Rómulo Gallegos (Las Vegas)', @tipo, @pertenece),
-        ('Ezequiel Zamora (San Carlos)', @tipo, @pertenece),
-        ('Tinaco (Tinaco)', @tipo, @pertenece)
+        ('Anzoátegui', @tipo, @pertenece),
+        ('Tinaquillo', @tipo, @pertenece),
+        ('Girardot', @tipo, @pertenece),
+        ('Lima Blanco', @tipo, @pertenece),
+        ('Pao de San Juan Bautista', @tipo, @pertenece),
+        ('Ricaurte', @tipo, @pertenece),
+        ('Rómulo Gallegos', @tipo, @pertenece),
+        ('Ezequiel Zamora', @tipo, @pertenece),
+        ('Tinaco', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -224,10 +224,10 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Antonio Díaz (Curiapo)', @tipo, @pertenece),
-        ('Casacoima (Sierra Imataca)', @tipo, @pertenece),
-        ('Pedernales (Pedernales)', @tipo, @pertenece),
-        ('Tucupita (Tucupita)', @tipo, @pertenece)
+        ('Antonio Díaz', @tipo, @pertenece),
+        ('Casacoima', @tipo, @pertenece),
+        ('Pedernales', @tipo, @pertenece),
+        ('Tucupita', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -243,31 +243,31 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Acosta (San Juan de los Cayos)', @tipo, @pertenece),
-        ('Bolívar (San Luis)', @tipo, @pertenece),
-        ('Buchivacoa (Capatárida)', @tipo, @pertenece),
-        ('Carirubana (Punto Fijo)', @tipo, @pertenece),
-        ('Colina (La Vela de Coro)', @tipo, @pertenece),
-        ('Dabajuro (Dabajuro)', @tipo, @pertenece),
-        ('Democracia (Pedregal)', @tipo, @pertenece),
-        ('Falcón (Pueblo Nuevo)', @tipo, @pertenece),
-        ('Federación (Churuguara)', @tipo, @pertenece),
-        ('Iturriza (Chichiriviche)', @tipo, @pertenece),
-        ('Jacura (Jacura)', @tipo, @pertenece),
-        ('Los Taques (Santa Cruz de Los Taques)', @tipo, @pertenece),
-        ('Manaure (Yaracal)', @tipo, @pertenece),
-        ('Mauroa (Mene de Mauroa)', @tipo, @pertenece),
-        ('Miranda (Santa Ana de Coro)', @tipo, @pertenece),
-        ('Palmasola (Palmasola)', @tipo, @pertenece),
-        ('Petit (Cabure)', @tipo, @pertenece),
-        ('Píritu (Píritu)', @tipo, @pertenece),
-        ('San Francisco (Mirimire)', @tipo, @pertenece),
-        ('Sucre (La Cruz de Taratara)', @tipo, @pertenece),
-        ('Silva (Tucacas)', @tipo, @pertenece),
-        ('Tocópero (Tocópero)', @tipo, @pertenece),
-        ('Unión (Santa Cruz de Bucaral)', @tipo, @pertenece),
-        ('Urumaco (Urumaco)', @tipo, @pertenece),
-        ('Zamora (Puerto Cumarebo)', @tipo, @pertenece)
+        ('Acosta', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Buchivacoa', @tipo, @pertenece),
+        ('Carirubana', @tipo, @pertenece),
+        ('Colina', @tipo, @pertenece),
+        ('Dabajuro', @tipo, @pertenece),
+        ('Democracia', @tipo, @pertenece),
+        ('Falcón', @tipo, @pertenece),
+        ('Federación', @tipo, @pertenece),
+        ('Iturriza', @tipo, @pertenece),
+        ('Jacura', @tipo, @pertenece),
+        ('Los Taques', @tipo, @pertenece),
+        ('Manaure', @tipo, @pertenece),
+        ('Mauroa', @tipo, @pertenece),
+        ('Miranda', @tipo, @pertenece),
+        ('Palmasola', @tipo, @pertenece),
+        ('Petit', @tipo, @pertenece),
+        ('Píritu', @tipo, @pertenece),
+        ('San Francisco', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Silva', @tipo, @pertenece),
+        ('Tocópero', @tipo, @pertenece),
+        ('Unión', @tipo, @pertenece),
+        ('Urumaco', @tipo, @pertenece),
+        ('Zamora', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -275,21 +275,21 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Camaguán (Camaguán)', @tipo, @pertenece),
-        ('Chaguaramas (Chaguaramas)', @tipo, @pertenece),
-        ('El Socorro (El Socorro)', @tipo, @pertenece),
-        ('Las Mercedes (Las Mercedes)', @tipo, @pertenece),
-        ('Leonardo Infante (Valle de La Pascua)', @tipo, @pertenece),
-        ('Julián Mellado (El Sombrero)', @tipo, @pertenece),
-        ('Francisco de Miranda (Calabozo)', @tipo, @pertenece),
-        ('Monagas (Altagracia de Orituco)', @tipo, @pertenece),
-        ('Ortiz (Ortiz)', @tipo, @pertenece),
-        ('Ribas (Tucupido)', @tipo, @pertenece),
-        ('Roscio (San Juan de Los Morros)', @tipo, @pertenece),
-        ('San Gerónimo de Guayabal (Guayabal)', @tipo, @pertenece),
-        ('San José de Guaribe (San José de Guaribe)', @tipo, @pertenece),
-        ('Santa María de Ipire (Santa María de Ipire)', @tipo, @pertenece),
-        ('Zaraza (Zaraza)', @tipo, @pertenece)
+        ('Camaguán', @tipo, @pertenece),
+        ('Chaguaramas', @tipo, @pertenece),
+        ('El Socorro', @tipo, @pertenece),
+        ('Las Mercedes', @tipo, @pertenece),
+        ('Leonardo Infante', @tipo, @pertenece),
+        ('Julián Mellado', @tipo, @pertenece),
+        ('Francisco de Miranda', @tipo, @pertenece),
+        ('Monagas', @tipo, @pertenece),
+        ('Ortiz', @tipo, @pertenece),
+        ('Ribas', @tipo, @pertenece),
+        ('Roscio', @tipo, @pertenece),
+        ('San Gerónimo de Guayabal', @tipo, @pertenece),
+        ('San José de Guaribe', @tipo, @pertenece),
+        ('Santa María de Ipire', @tipo, @pertenece),
+        ('Zaraza', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -297,7 +297,7 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Vargas (La Guaira)', @tipo, @pertenece)
+        ('Vargas', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -305,15 +305,15 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Blanco (Sanare)', @tipo, @pertenece),
-        ('Crespo (Duaca)', @tipo, @pertenece),
-        ('Iribarren (Barquisimeto)', @tipo, @pertenece),
-        ('Jiménez (Quibor)', @tipo, @pertenece),
-        ('Morán (El Tocuyo)', @tipo, @pertenece),
-        ('Palavecino (Cabudare)', @tipo, @pertenece),
-        ('Planas (Sarare)', @tipo, @pertenece),
-        ('Torres (Carora)', @tipo, @pertenece),
-        ('Urdaneta (Siquisique)', @tipo, @pertenece)
+        ('Blanco', @tipo, @pertenece),
+        ('Crespo', @tipo, @pertenece),
+        ('Iribarren', @tipo, @pertenece),
+        ('Jiménez', @tipo, @pertenece),
+        ('Morán', @tipo, @pertenece),
+        ('Palavecino', @tipo, @pertenece),
+        ('Planas', @tipo, @pertenece),
+        ('Torres', @tipo, @pertenece),
+        ('Urdaneta', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -321,29 +321,29 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Adriani (El Vigía)', @tipo, @pertenece),
-        ('Andrés Bello (La Azulita)', @tipo, @pertenece),
-        ('Aricagua (Aricagua)', @tipo, @pertenece),
-        ('Briceño (Torondoy)', @tipo, @pertenece),
-        ('Chacón (Canaguá)', @tipo, @pertenece),
-        ('Campo Elías (Ejido)', @tipo, @pertenece),
-        ('Dávila (Bailadores)', @tipo, @pertenece),
-        ('Febres Cordero (Nueva Bolivia)', @tipo, @pertenece),
-        ('Guaraque (Guaraque)', @tipo, @pertenece),
-        ('Libertador (Mérida)', @tipo, @pertenece),
-        ('Miranda (Timotes)', @tipo, @pertenece),
-        ('Noguera (Santa María de Caparo)', @tipo, @pertenece),
-        ('Parra Olmedo (Tucaní)', @tipo, @pertenece),
-        ('Pinto Salinas (Santa Cruz de Mora)', @tipo, @pertenece),
-        ('Pueblo Llano (Pueblo Llano)', @tipo, @pertenece),
-        ('Quintero (Santo Domingo)', @tipo, @pertenece),
-        ('Rangel (Mucuchíes)', @tipo, @pertenece),
-        ('Ramos de Lora (Santa Elena de Arenales)', @tipo, @pertenece),
-        ('Salas (Arapuey)', @tipo, @pertenece),
-        ('Marquina (Tabay)', @tipo, @pertenece),
-        ('Sucre (Lagunillas)', @tipo, @pertenece),
-        ('Tovar (Tovar)', @tipo, @pertenece),
-        ('Zea (Zea)', @tipo, @pertenece)
+        ('Adriani', @tipo, @pertenece),
+        ('Andrés Bello', @tipo, @pertenece),
+        ('Aricagua', @tipo, @pertenece),
+        ('Briceño', @tipo, @pertenece),
+        ('Chacón', @tipo, @pertenece),
+        ('Campo Elías', @tipo, @pertenece),
+        ('Dávila', @tipo, @pertenece),
+        ('Febres Cordero', @tipo, @pertenece),
+        ('Guaraque', @tipo, @pertenece),
+        ('Libertador', @tipo, @pertenece),
+        ('Miranda', @tipo, @pertenece),
+        ('Noguera', @tipo, @pertenece),
+        ('Parra Olmedo', @tipo, @pertenece),
+        ('Pinto Salinas', @tipo, @pertenece),
+        ('Pueblo Llano', @tipo, @pertenece),
+        ('Quintero', @tipo, @pertenece),
+        ('Rangel', @tipo, @pertenece),
+        ('Ramos de Lora', @tipo, @pertenece),
+        ('Salas', @tipo, @pertenece),
+        ('Marquina', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Tovar', @tipo, @pertenece),
+        ('Zea', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -352,27 +352,27 @@ SET @pertenece = (SELECT pkLugar FROM
 
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Acevedo (Caucagua)', @tipo, @pertenece),
-        ('Andrés Bello (San José de Barlovento)', @tipo, @pertenece),
-        ('Baruta (Baruta)', @tipo, @pertenece),
-        ('Brión (Higuerote)', @tipo, @pertenece),
-        ('Bolívar (San Francisco de Yare)', @tipo, @pertenece),
-        ('Buroz (Mamporal)', @tipo, @pertenece),
-        ('Carrizal (Carrizal)', @tipo, @pertenece),
-        ('Chacao (Chacao)', @tipo, @pertenece),
-        ('Cristóbal Rojas (Charallave)', @tipo, @pertenece),
-        ('El Hatillo (El Hatillo)', @tipo, @pertenece),
-        ('Guaicaipuro (Los Teques)', @tipo, @pertenece),
-        ('Gual (Cúpira)', @tipo, @pertenece),
-        ('Independencia (Santa Teresa del Tuy)', @tipo, @pertenece),
-        ('Lander (Ocumare del Tuy)', @tipo, @pertenece),
-        ('Los Salias (San Antonio de los Altos)', @tipo, @pertenece),
-        ('Páez (Río Chico)', @tipo, @pertenece),
-        ('Paz Castillo (Santa Lucía)', @tipo, @pertenece),
-        ('Plaza (Guarenas)', @tipo, @pertenece),
-        ('Sucre (Petare)', @tipo, @pertenece),
-        ('Urdaneta (Cúa)', @tipo, @pertenece),
-        ('Zamora (Guatire)', @tipo, @pertenece)
+        ('Acevedo', @tipo, @pertenece),
+        ('Andrés Bello', @tipo, @pertenece),
+        ('Baruta', @tipo, @pertenece),
+        ('Brión', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Buroz', @tipo, @pertenece),
+        ('Carrizal', @tipo, @pertenece),
+        ('Chacao', @tipo, @pertenece),
+        ('Cristóbal Rojas', @tipo, @pertenece),
+        ('El Hatillo', @tipo, @pertenece),
+        ('Guaicaipuro', @tipo, @pertenece),
+        ('Gual', @tipo, @pertenece),
+        ('Independencia', @tipo, @pertenece),
+        ('Lander', @tipo, @pertenece),
+        ('Los Salias', @tipo, @pertenece),
+        ('Páez', @tipo, @pertenece),
+        ('Paz Castillo', @tipo, @pertenece),
+        ('Plaza', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Urdaneta', @tipo, @pertenece),
+        ('Zamora', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -380,19 +380,19 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Acosta (San Antonio de Capayacuar)', @tipo, @pertenece),
-        ('Aguasay (Aguasay)', @tipo, @pertenece),
-        ('Bolívar (Caripito)', @tipo, @pertenece),
-        ('Caripe (Caripe)', @tipo, @pertenece),
-        ('Cedeño (Caicara de Maturín)', @tipo, @pertenece),
-        ('Libertador (Temblador)', @tipo, @pertenece),
-        ('Maturín (Maturín)', @tipo, @pertenece),
-        ('Piar (Aragua de Maturín)', @tipo, @pertenece),
-        ('Punceres (Quiriquire)', @tipo, @pertenece),
-        ('Santa Bárbara (Santa Bárbara)', @tipo, @pertenece),
-        ('Sotillo (Barrancas del Orinoco)', @tipo, @pertenece),
-        ('Uracoa (Uracoa)', @tipo, @pertenece),
-        ('Zamora (Punta de Mata)', @tipo, @pertenece)
+        ('Acosta', @tipo, @pertenece),
+        ('Aguasay', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Caripe', @tipo, @pertenece),
+        ('Cedeño', @tipo, @pertenece),
+        ('Libertador', @tipo, @pertenece),
+        ('Maturín', @tipo, @pertenece),
+        ('Piar', @tipo, @pertenece),
+        ('Punceres', @tipo, @pertenece),
+        ('Santa Bárbara', @tipo, @pertenece),
+        ('Sotillo', @tipo, @pertenece),
+        ('Uracoa', @tipo, @pertenece),
+        ('Zamora', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -400,17 +400,17 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Antolín del Campo (Paraguachí)', @tipo, @pertenece),
-        ('Arismendi (La Asunción)', @tipo, @pertenece),
-        ('Díaz (San Juan Bautista)', @tipo, @pertenece),
-        ('García (El Valle)', @tipo, @pertenece),
-        ('Gómez (Santa Ana)', @tipo, @pertenece),
-        ('Macanao (Boca de Río)', @tipo, @pertenece),
-        ('Maneiro (Pampatar)', @tipo, @pertenece),
-        ('Marcano (Juan Griego)', @tipo, @pertenece),
-        ('Mariño (Porlamar)', @tipo, @pertenece),
-        ('Tubores (Punta de Piedras)', @tipo, @pertenece),
-        ('Villalba (San Pedro de Coche)', @tipo, @pertenece)
+        ('Antolín del Campo', @tipo, @pertenece),
+        ('Arismendi', @tipo, @pertenece),
+        ('Díaz', @tipo, @pertenece),
+        ('García', @tipo, @pertenece),
+        ('Gómez', @tipo, @pertenece),
+        ('Macanao', @tipo, @pertenece),
+        ('Maneiro', @tipo, @pertenece),
+        ('Marcano', @tipo, @pertenece),
+        ('Mariño', @tipo, @pertenece),
+        ('Tubores', @tipo, @pertenece),
+        ('Villalba', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -419,19 +419,19 @@ SET @pertenece = (SELECT pkLugar FROM
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
         ('Agua Blanca (Agua Blanca)', @tipo, @pertenece),
-        ('Araure (Araure)', @tipo, @pertenece),
-        ('Esteller (Píritu)', @tipo, @pertenece),
-        ('Guanare (Guanare)', @tipo, @pertenece),
-        ('Guanarito (Guanarito)', @tipo, @pertenece),
-        ('Ospino (Ospino)', @tipo, @pertenece),
-        ('Páez (Acarigua)', @tipo, @pertenece),
-        ('Papelón (Papelón)', @tipo, @pertenece),
-        ('San Genaro de Boconoíto (Boconoíto)', @tipo, @pertenece),
-        ('San Rafael de Onoto (San Rafael de Onoto)', @tipo, @pertenece),
-        ('Santa Rosalía (El Playón)', @tipo, @pertenece),
-        ('Sucre (Biscucuy)', @tipo, @pertenece),
-        ('Turén (Villa Bruzual)', @tipo, @pertenece),
-        ('Unda (Chabasquén)', @tipo, @pertenece)
+        ('Araure', @tipo, @pertenece),
+        ('Esteller', @tipo, @pertenece),
+        ('Guanare', @tipo, @pertenece),
+        ('Guanarito', @tipo, @pertenece),
+        ('Ospino', @tipo, @pertenece),
+        ('Páez', @tipo, @pertenece),
+        ('Papelón', @tipo, @pertenece),
+        ('San Genaro de Boconoíto', @tipo, @pertenece),
+        ('San Rafael de Onoto', @tipo, @pertenece),
+        ('Santa Rosalía', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Turén', @tipo, @pertenece),
+        ('Unda', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -439,21 +439,21 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Arismendi (Río Caribe)', @tipo, @pertenece),
-        ('Benítez (El Pilar)', @tipo, @pertenece),
-        ('Bermúdez (Carúpano)', @tipo, @pertenece),
-        ('Blanco (Casanay)', @tipo, @pertenece),
-        ('Bolívar (Marigüitar)', @tipo, @pertenece),
-        ('Cajigal (Yaguaraparo)', @tipo, @pertenece),
-        ('Cruz Salmerón Acosta (Araya)', @tipo, @pertenece),
-        ('Libertador (Tunapuy)', @tipo, @pertenece),
-        ('Mariño (Irapa)', @tipo, @pertenece),
-        ('Mata (San José de Aerocuar)', @tipo, @pertenece),
-        ('Mejía (San Antonio del Golfo)', @tipo, @pertenece),
-        ('Montes (Cumanacoa)', @tipo, @pertenece),
-        ('Ribero (Cariaco)', @tipo, @pertenece),
-        ('Sucre (Cumaná)', @tipo, @pertenece),
-        ('Valdez (Güiria)', @tipo, @pertenece)
+        ('Arismendi', @tipo, @pertenece),
+        ('Benítez', @tipo, @pertenece),
+        ('Bermúdez', @tipo, @pertenece),
+        ('Blanco', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Cajigal', @tipo, @pertenece),
+        ('Cruz Salmerón Acosta', @tipo, @pertenece),
+        ('Libertador', @tipo, @pertenece),
+        ('Mariño', @tipo, @pertenece),
+        ('Mata', @tipo, @pertenece),
+        ('Mejía', @tipo, @pertenece),
+        ('Montes', @tipo, @pertenece),
+        ('Ribero', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Valdez', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -461,35 +461,35 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Andrés Bello (Cordero)', @tipo, @pertenece),
-        ('Ayacucho (Colón)', @tipo, @pertenece),
-        ('Bolívar (San Antonio del Táchira)', @tipo, @pertenece),
-        ('Cárdenas (Táriba)', @tipo, @pertenece),
-        ('Córdoba (Santa Ana de Táchira)', @tipo, @pertenece),
-        ('Fernández (San Rafael del Piñal)', @tipo, @pertenece),
-        ('Guásimos (Palmira)', @tipo, @pertenece),
-        ('Hevia (La Fría)', @tipo, @pertenece),
-        ('Independencia (Capacho Nuevo)', @tipo, @pertenece),
-        ('Jáuregui (La Grita)', @tipo, @pertenece),
-        ('Junín (Rubio)', @tipo, @pertenece),
-        ('Libertad (Capacho Viejo)', @tipo, @pertenece),
-        ('Libertador (Abejales)', @tipo, @pertenece),
-        ('Lobatera (Lobatera)', @tipo, @pertenece),
-        ('Maldonado (La Tendida)', @tipo, @pertenece),
-        ('Michelena (Michelena)', @tipo, @pertenece),
-        ('Miranda (San José de Bolívar)', @tipo, @pertenece),
-        ('Panamericano (Coloncito)', @tipo, @pertenece),
-        ('Rómulo Costa (Las Mesas)', @tipo, @pertenece),
-        ('San Cristóbal (San Cristóbal)', @tipo, @pertenece),
-        ('San Judas Tadeo (Umuquena)', @tipo, @pertenece),
-        ('Seboruco (Seboruco)', @tipo, @pertenece),
-        ('Simón Rodríguez (San Simón)', @tipo, @pertenece),
-        ('Sucre (Queniquea)', @tipo, @pertenece),
-        ('Torbes (San Josecito)', @tipo, @pertenece),
-        ('Urdaneta (Delicias)', @tipo, @pertenece),
-        ('Ureña (Ureña)', @tipo, @pertenece),
-        ('Uribante (Pregonero)', @tipo, @pertenece),
-        ('Vargas (El Cobre)', @tipo, @pertenece)
+        ('Andrés Bello', @tipo, @pertenece),
+        ('Ayacucho', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Cárdenas', @tipo, @pertenece),
+        ('Córdoba', @tipo, @pertenece),
+        ('Fernández', @tipo, @pertenece),
+        ('Guásimos', @tipo, @pertenece),
+        ('Hevia', @tipo, @pertenece),
+        ('Independencia', @tipo, @pertenece),
+        ('Jáuregui', @tipo, @pertenece),
+        ('Junín', @tipo, @pertenece),
+        ('Libertad', @tipo, @pertenece),
+        ('Libertador', @tipo, @pertenece),
+        ('Lobatera', @tipo, @pertenece),
+        ('Maldonado', @tipo, @pertenece),
+        ('Michelena', @tipo, @pertenece),
+        ('Miranda', @tipo, @pertenece),
+        ('Panamericano', @tipo, @pertenece),
+        ('Rómulo Costa', @tipo, @pertenece),
+        ('San Cristóbal', @tipo, @pertenece),
+        ('San Judas Tadeo', @tipo, @pertenece),
+        ('Seboruco', @tipo, @pertenece),
+        ('Simón Rodríguez', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Torbes', @tipo, @pertenece),
+        ('Urdaneta', @tipo, @pertenece),
+        ('Ureña', @tipo, @pertenece),
+        ('Uribante', @tipo, @pertenece),
+        ('Vargas', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -497,26 +497,26 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Andrés Bello (Santa Isabel)', @tipo, @pertenece),
-        ('Boconó (Boconó)', @tipo, @pertenece),
-        ('Bolívar (Sabana Grande)', @tipo, @pertenece),
-        ('Candelaria (Chejendé)', @tipo, @pertenece),
-        ('Carache (Carache)', @tipo, @pertenece),
-        ('Campos Elías (Campo Elías)', @tipo, @pertenece),
-        ('Carvajal (Carvajal)', @tipo, @pertenece),
-        ('Escuque (Escuque)', @tipo, @pertenece),
-        ('La Ceiba (Santa Apolonia)', @tipo, @pertenece),
-        ('Márquez Cañizales (El Paradero)', @tipo, @pertenece),
-        ('Miranda (El Dividive)', @tipo, @pertenece),
-        ('Monte Carmelo (Monte Carmelo)', @tipo, @pertenece),
-        ('Motatán (Motatán)', @tipo, @pertenece),
-        ('Pampán (Pampán)', @tipo, @pertenece),
-        ('Pampanito (Pampanito)', @tipo, @pertenece),
-        ('Rangel (Betijoque)', @tipo, @pertenece),
-        ('Sucre (Sabana de Mendoza)', @tipo, @pertenece),
-        ('Trujillo (Trujillo)', @tipo, @pertenece),
-        ('Urdaneta (La Quebrada)', @tipo, @pertenece),
-        ('Valera (Valera)', @tipo, @pertenece)
+        ('Andrés Bello', @tipo, @pertenece),
+        ('Boconó', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Candelaria', @tipo, @pertenece),
+        ('Carache', @tipo, @pertenece),
+        ('Campos Elías', @tipo, @pertenece),
+        ('Carvajal', @tipo, @pertenece),
+        ('Escuque', @tipo, @pertenece),
+        ('La Ceiba', @tipo, @pertenece),
+        ('Márquez Cañizales', @tipo, @pertenece),
+        ('Miranda', @tipo, @pertenece),
+        ('Monte Carmelo', @tipo, @pertenece),
+        ('Motatán', @tipo, @pertenece),
+        ('Pampán', @tipo, @pertenece),
+        ('Pampanito', @tipo, @pertenece),
+        ('Rangel', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Trujillo', @tipo, @pertenece),
+        ('Urdaneta', @tipo, @pertenece),
+        ('Valera', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -524,20 +524,20 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Arístides Bastidas (San Pablo)', @tipo, @pertenece),
-        ('Bolívar (Aroa)', @tipo, @pertenece),
-        ('Bruzual (Chivacoa)', @tipo, @pertenece),
-        ('Cocorote (Cocorote)', @tipo, @pertenece),
-        ('Independencia (Independencia)', @tipo, @pertenece),
-        ('La Trinidad (Boraure)', @tipo, @pertenece),
-        ('Monge (Yumare)', @tipo, @pertenece),
-        ('Nirgua (Nirgua)', @tipo, @pertenece),
-        ('Páez (Sabana de Parra)', @tipo, @pertenece),
-        ('Peña (Yaritagua)', @tipo, @pertenece),
-        ('San Felipe (San Felipe)', @tipo, @pertenece),
-        ('Sucre (Guama)', @tipo, @pertenece),
-        ('Urachiche (Urachiche)', @tipo, @pertenece),
-        ('Veroes (Farriar)', @tipo, @pertenece)
+        ('Arístides Bastidas', @tipo, @pertenece),
+        ('Bolívar', @tipo, @pertenece),
+        ('Bruzual', @tipo, @pertenece),
+        ('Cocorote', @tipo, @pertenece),
+        ('Independencia', @tipo, @pertenece),
+        ('La Trinidad', @tipo, @pertenece),
+        ('Monge', @tipo, @pertenece),
+        ('Nirgua', @tipo, @pertenece),
+        ('Páez', @tipo, @pertenece),
+        ('Peña', @tipo, @pertenece),
+        ('San Felipe', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Urachiche', @tipo, @pertenece),
+        ('Veroes', @tipo, @pertenece)
 ;
 
 SET @pertenece = (SELECT pkLugar FROM
@@ -545,27 +545,27 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Bolívar (Tía Juana)', @tipo, @pertenece),
-        ('Baralt (San Timoteo)', @tipo, @pertenece),
-        ('Cabimas (Cabimas)', @tipo, @pertenece),
-        ('Catatumbo (Encontrados)', @tipo, @pertenece),
-        ('Colón (San Carlos del Zulia)', @tipo, @pertenece),
-        ('Guajira (Sinamaica)', @tipo, @pertenece),
-        ('Padilla (El Toro)', @tipo, @pertenece),
-        ('Pulgar (Pueblo Nuevo-El Chivo)', @tipo, @pertenece),
-        ('Lossada (La Concepción)', @tipo, @pertenece),
-        ('Semprún (Casigua El Cubo)', @tipo, @pertenece),
-        ('La Cañada de Urdaneta (Concepción)', @tipo, @pertenece),
-        ('Lagunillas (Ciudad Ojeda)', @tipo, @pertenece),
-        ('Machiques (Machiques)', @tipo, @pertenece),
-        ('Mara (San Rafael del Moján)', @tipo, @pertenece),
-        ('Maracaibo (Maracaibo)', @tipo, @pertenece),
-        ('Miranda (Los Puertos de Altagracia)', @tipo, @pertenece),
-        ('Rosario (La Villa del Rosario)', @tipo, @pertenece),
-        ('San Francisco (San Francisco)', @tipo, @pertenece),
-        ('Santa Rita (Santa Rita)', @tipo, @pertenece),
-        ('Sucre (Bobures)', @tipo, @pertenece),
-        ('Valmore Rodríguez (Bachaquero)', @tipo, @pertenece)
+        ('Bolívar', @tipo, @pertenece),
+        ('Baralt', @tipo, @pertenece),
+        ('Cabimas', @tipo, @pertenece),
+        ('Catatumbo', @tipo, @pertenece),
+        ('Colón', @tipo, @pertenece),
+        ('Guajira', @tipo, @pertenece),
+        ('Padilla', @tipo, @pertenece),
+        ('Pulgar', @tipo, @pertenece),
+        ('Lossada', @tipo, @pertenece),
+        ('Semprún', @tipo, @pertenece),
+        ('La Cañada de Urdaneta', @tipo, @pertenece),
+        ('Lagunillas', @tipo, @pertenece),
+        ('Machiques', @tipo, @pertenece),
+        ('Mara', @tipo, @pertenece),
+        ('Maracaibo', @tipo, @pertenece),
+        ('Miranda', @tipo, @pertenece),
+        ('Rosario', @tipo, @pertenece),
+        ('San Francisco', @tipo, @pertenece),
+        ('Santa Rita', @tipo, @pertenece),
+        ('Sucre', @tipo, @pertenece),
+        ('Valmore Rodríguez', @tipo, @pertenece)
 ;
 
 -- Parroquias
@@ -578,66 +578,7 @@ SET @pertenece = (SELECT pkLugar FROM
     as tablaLugar);
 INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
     VALUES
-        ('Santa Rosalia', @tipo, @pertenece),
-        ('El Valle', @tipo, @pertenece),
-        ('Coche', @tipo, @pertenece),
-        ('Caricuao', @tipo, @pertenece),
-        ('Macarao', @tipo, @pertenece),
-        ('Antimano', @tipo, @pertenece),
-        ('La Vega', @tipo, @pertenece),
-        ('El Paraiso', @tipo, @pertenece),
-        ('El Junquito', @tipo, @pertenece),
-        ('Sucre', @tipo, @pertenece),
-        ('San Juan', @tipo, @pertenece),
-        ('Santa Teresa', @tipo, @pertenece),
-        ('23 de Enero', @tipo, @pertenece),
-        ('La Pastora', @tipo, @pertenece),
-        ('Altagracia', @tipo, @pertenece),
-        ('San Jose', @tipo, @pertenece),
-        ('San Bernandino', @tipo, @pertenece),
-        ('Catedral', @tipo, @pertenece),
-        ('Candelaria', @tipo, @pertenece),
-        ('San Agustin', @tipo, @pertenece),
-        ('El Recreo', @tipo, @pertenece),
-        ('San Pedro', @tipo, @pertenece)
-;
 
-SET @pertenece = (SELECT pkLugar FROM
-    (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo= 'Municipio' AND nombre = 'Baruta')
-    as tablaLugar);
-INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
-    VALUES
-        ('El Cafetal', @tipo, @pertenece),
-        ('Las Minas', @tipo, @pertenece),
-        ('Nuestra Señora del Rosario', @tipo, @pertenece)
-;
-
-SET @pertenece = (SELECT pkLugar FROM
-    (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo= 'Municipio' AND nombre = 'Chacao')
-    as tablaLugar);
-INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
-    VALUES
-        ('Chacao', @tipo, @pertenece)
-;
-
-SET @pertenece = (SELECT pkLugar FROM
-    (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo= 'Municipio' AND nombre = 'El Hatillo')
-    as tablaLugar);
-INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
-    VALUES
-        ('Santa Rosalía de Palermo', @tipo, @pertenece)
-;
-
-SET @pertenece = (SELECT pkLugar FROM
-    (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo= 'Municipio' AND nombre = 'Sucre')
-    as tablaLugar);
-INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
-    VALUES
-        ('Leoncio Martinez', @tipo, @pertenece),
-        ('Petare', @tipo, @pertenece),
-        ('Caucagüita', @tipo, @pertenece),
-        ('Fila de Mariches', @tipo, @pertenece),
-        ('La Dolorita', @tipo, @pertenece)
 ;
 
 */
