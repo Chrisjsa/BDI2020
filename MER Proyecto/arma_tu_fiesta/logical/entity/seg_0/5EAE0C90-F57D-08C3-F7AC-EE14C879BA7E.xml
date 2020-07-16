@@ -25,6 +25,50 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="nombre" id="45F3C418-C946-F1D1-EEBF-53930E162B15">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 11:54:31 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido" id="C8712546-E3C7-52B1-54E3-158BA922BF89">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 11:54:43 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula" id="CF9A29AC-725F-F309-4FB9-D48C21598689">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 11:54:57 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sexo" id="FE79942E-D385-AAB0-32F0-CA57CCB77846">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 11:55:24 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="cargo" id="3C8C0B11-1110-1977-D5BD-EF7751CCA900">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-12 02:36:48 UTC</createdTime>
@@ -44,20 +88,6 @@
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
 <referedAttribute>2EEDA93B-D7FB-CF32-7999-85314587CD66</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_persona" id="06363D66-64CB-A2A1-C57D-B65776739027">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-12 02:41:33 UTC</createdTime>
-<generatorID>A537F572-0587-57DE-43F9-517B7D6EC3D4</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>5940C768-FB4E-65D4-074F-56FA9CBEBB5D</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>

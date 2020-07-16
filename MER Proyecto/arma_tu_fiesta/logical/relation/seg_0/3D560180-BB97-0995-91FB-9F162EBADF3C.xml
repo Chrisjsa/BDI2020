@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_98" directorySegmentName="seg_0" id="3D560180-BB97-0995-91FB-9F162EBADF3C">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 12:27:31 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<sourcePk>F0662FED-FE21-68AD-DBDB-E43DAA839FD7</sourcePk>
+<identifying>false</identifying>
+<nameOnTarget>concierta</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B2B2F2BB-AEF9-2B50-4C9B-43AD58FC3458</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5421285E-14F3-11A8-7062-76ABB734C08D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

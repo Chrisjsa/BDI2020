@@ -64,6 +64,20 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_usuario" id="B605A714-1BA5-6356-450A-084CAD823B12">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 12:30:49 UTC</createdTime>
+<generatorID>E34EED60-409B-AE40-C1E8-87A5E2F97BFE</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>084219DF-0CD2-EE85-C012-836B9A8006E5</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="2F43B298-8461-BCCE-7A04-2F047CAAC849" name="evento PK">

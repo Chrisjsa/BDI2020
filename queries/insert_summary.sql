@@ -2,7 +2,7 @@
 
 SET @tipo = 'Continente';
 
-INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`)
+INSERT INTO arma_tu_fiesta.lugar (nombre, tipo)
     VALUES
         ('America', @tipo),
         ('Africa', @tipo),
@@ -18,7 +18,7 @@ SET @pertenece = (SELECT pkLugar FROM
     (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo= 'Continente' AND nombre = 'America')
     as tablaLugar);
 
-INSERT INTO `arma_tu_fiesta`.`lugar` (`nombre`, `tipo`, `fk_pertenece`)
+INSERT INTO arma_tu_fiesta.lugar (nombre, tipo, fk_pertenece)
     VALUES
         ('Venezuela', @tipo, @pertenece),
         ('Colombia', @tipo, @pertenece),
@@ -9061,7 +9061,7 @@ INSERT INTO arma_tu_fiesta.lugar (nombre, tipo, fk_pertenece) VALUES ('Raúl Cue
 
 -- ++++++++++++++++++++++++++++++++++ PERSONA +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO `arma_tu_fiesta`.`persona` (`cedula`,`p_nombre`,`s_nombre`,`p_apellido`,`s_apellido`,`fecha_nacimiento`,`sexo`,`estado_civil`,`fk_residencia`)
+INSERT INTO arma_tu_fiesta.persona (cedula,p_nombre,s_nombre,p_apellido,s_apellido,fecha_nacimiento,sexo,estado_civil,fk_residencia)
     VALUES
     ('V-20202706','Beatriz','Aurora','Pinzon','Solano','1995-12-20','Femenino','Soltera',
         (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'El Valle') as tablaLugar)),
@@ -9103,7 +9103,7 @@ INSERT INTO `arma_tu_fiesta`.`persona` (`cedula`,`p_nombre`,`s_nombre`,`p_apelli
 
 -- ++++++++++++++++++++++++++++++++++ USUARIO +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO `arma_tu_fiesta`.`usuario` (`username`,`password`,`fk_persona`)
+INSERT INTO arma_tu_fiesta.usuario (username,password,fk_persona)
     VALUES
     ('betty','clave0001',
         (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-20202706') as tablapersona)),
@@ -9119,7 +9119,7 @@ INSERT INTO `arma_tu_fiesta`.`usuario` (`username`,`password`,`fk_persona`)
 
 -- ++++++++++++++++++++++++++++++++++ ROL +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO `arma_tu_fiesta`.`rol` (`nombre`,`descripcion`)
+INSERT INTO arma_tu_fiesta.rol (nombre,descripcion)
     VALUES
     ('Administrador','Acceso total del sistema, revisa estados y reportes'),
     ('Empleado','Acceso parcial del sistema, registra locaciones, productos y servicios'),
@@ -9128,7 +9128,7 @@ INSERT INTO `arma_tu_fiesta`.`rol` (`nombre`,`descripcion`)
 
 -- ++++++++++++++++++++++++++++++++++ PERMISO +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO `arma_tu_fiesta`.`permiso` (`nombre`)
+INSERT INTO arma_tu_fiesta.permiso (nombre)
     VALUES
     ('Acceso Total'),
     ('Registrar Locacion'),
@@ -9146,76 +9146,76 @@ INSERT INTO `arma_tu_fiesta`.`permiso` (`nombre`)
 
 -- ++++++++++++++++++++++++++++++++++ USUARIO_ROL +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'huguito') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Administrador') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Acceso Total') as tablaPermiso))
 ;
 
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'marce') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Administrador') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Generar Reporte') as tablaPermiso))
 ;
 
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'auramaria') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Empleado') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Registrar Locacion') as tablaPermiso))
 ;
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'auramaria') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Empleado') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Registrar Producto') as tablaPermiso))
 ;
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'auramaria') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Empleado') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Registrar Servicio') as tablaPermiso))
 ;
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'auramaria') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Empleado') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Registrar Proveedor') as tablaPermiso))
 ;
 
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Solicitar Servicio') as tablaPermiso))
 ;
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Solicitar Tramite') as tablaPermiso))
 ;
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Seleccionar Producto') as tablaPermiso))
 ;
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Seleccionar Servicio') as tablaPermiso))
 ;
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
     (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Aprobar Presupuesto') as tablaPermiso))
 ;
-INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
+INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
     VALUES
     ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
     (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
@@ -9224,7 +9224,7 @@ INSERT INTO `arma_tu_fiesta`.`usuario_rol` (`fk_usuario`,`fk_rol`,`fk_permiso`)
 
 -- ++++++++++++++++++++++++++++++++++ PROVEEDOR +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO `arma_tu_fiesta`.`proveedor` (`rif`,`razon_social`,`rubro`,`fk_ubicado`)
+INSERT INTO arma_tu_fiesta.proveedor (rif,razon_social,rubro,fk_ubicado)
     VALUES
     ('J-20202706','Kami Productions','Fotografia y video',
         (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'El Recreo') as tablaLugar)),
@@ -9240,7 +9240,7 @@ INSERT INTO `arma_tu_fiesta`.`proveedor` (`rif`,`razon_social`,`rubro`,`fk_ubica
 
 -- ++++++++++++++++++++++++++++++++++ EMPLEADO +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO `arma_tu_fiesta`.`empleado` (`cargo`, `fk_persona`, `fk_proveedor`)
+INSERT INTO arma_tu_fiesta.empleado (cargo, fk_persona, fk_proveedor)
     VALUES
     ('Fotografa',
     (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'E-88296365') as tablapersona),
@@ -9264,15 +9264,18 @@ INSERT INTO `arma_tu_fiesta`.`empleado` (`cargo`, `fk_persona`, `fk_proveedor`)
 
 -- ++++++++++++++++++++++++++++++++++ HORARIO +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO `arma_tu_fiesta`.`horario` (`turno`, `hora_inicio`, `hora_termina`)
+INSERT INTO arma_tu_fiesta.horario (turno, hora_inicio, hora_termina)
     VALUES
-    ('Mañana','07:00:00','12:00:00'),
-    ('Tarde','13:00:00','18:00:00')
+    ('1er Turno (Matutino)','07:00:00','10:00:00'),
+	('2do Turno (Matutino)','10:00:00','13:00:00'),
+	('1er Turno (Vespertino)','13:00:00','16:00:00'),
+    ('2do Turno (Vespertino)','16:00:00','19:00:00'),
+	('Unico Turno (Nocturno','19:00:00','22:00:00')
 ;
 
 -- ++++++++++++++++++++++++++++++++++ RELIGION +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO `arma_tu_fiesta`.`religion` (`nombre`)
+INSERT INTO arma_tu_fiesta.religion (nombre)
     VALUES
     ('Cristianismo'),
     ('Judaismo'),

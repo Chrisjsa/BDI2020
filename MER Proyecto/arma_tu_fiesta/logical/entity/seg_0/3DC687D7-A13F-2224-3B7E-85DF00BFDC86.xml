@@ -16,6 +16,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="tipo" id="D87B5B32-8084-C2CB-E77A-456621C45982">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 12:08:48 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="descripcion" id="DBB8DA17-2F19-998B-2FC1-3ECBD1C40A4F">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-14 22:50:01 UTC</createdTime>

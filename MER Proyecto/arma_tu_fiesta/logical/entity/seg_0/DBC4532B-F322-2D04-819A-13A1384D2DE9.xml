@@ -58,6 +58,7 @@
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
 <domain>DOM2025000</domain>
@@ -82,6 +83,7 @@
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <use>0</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
 <domain>DOM2025000</domain>
@@ -132,20 +134,6 @@
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
 <referedAttribute>DC355D2B-BE68-3B1C-2D75-3F3C0FB8B8D7</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_email" id="879470CC-0B2A-CCFA-FEB2-23073DC4473F">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-12 02:00:59 UTC</createdTime>
-<generatorID>C2CC65BC-19AA-2A35-1A4A-A4F65F0E47E3</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>C5C14F0B-5774-E63B-697D-2612906BF01C</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>

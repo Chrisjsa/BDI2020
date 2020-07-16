@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D94CB641-4B1D-2212-2DEF-23C04964E4EA" name="locacion">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FD423ACF-B188-1854-DBB8-AC4A8AA95307" name="templo_horario">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-12 22:16:52 UTC</createdTime>
+<createdTime>2020-07-16 12:01:21 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
@@ -15,39 +15,29 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_locacion" id="9F7F4416-9B17-59D6-604C-BF513D3A951E">
+<Attribute name="id_horario" id="899E8356-8FE6-D3D6-C6BE-413B7318B299">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-12 22:17:01 UTC</createdTime>
+<createdTime>2020-07-16 12:02:18 UTC</createdTime>
+<generatorID>DA5FB524-C395-0AF2-BD26-6181B0AFBCFF</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
+<referedAttribute>C3B86969-0C8D-5C8A-D9F1-4216D8609EAD</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre" id="478DE78C-BA47-8111-1C4F-61D673BECE89">
+<Attribute name="id_locacion" id="8444FFEA-1CB5-F540-E738-55D8E673404A">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 00:08:00 UTC</createdTime>
+<createdTime>2020-07-16 12:03:50 UTC</createdTime>
+<generatorID>E561A82A-B697-6F31-7E43-EFB09983E544</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>DOM2025000</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_lugar" id="CE3898B2-D500-046C-B40D-EEA43D434204">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-12 22:38:51 UTC</createdTime>
-<generatorID>3DF6CF3C-1AC1-CB40-43EF-F1BE8EE2BCE7</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>DC355D2B-BE68-3B1C-2D75-3F3C0FB8B8D7</referedAttribute>
+<referedAttribute>9F7F4416-9B17-59D6-604C-BF513D3A951E</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
@@ -55,16 +45,17 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="A6BB4D83-875D-7753-0061-01BCFE24636B" name="locacion PK">
+<identifier id="3D919FBA-4066-3331-8D10-6BCA77AAD01A" name="templo_horario PK">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-12 22:17:08 UTC</createdTime>
+<createdTime>2020-07-16 12:02:18 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>9F7F4416-9B17-59D6-604C-BF513D3A951E</attributeRef>
+<attributeRef>899E8356-8FE6-D3D6-C6BE-413B7318B299</attributeRef>
+<attributeRef>8444FFEA-1CB5-F540-E738-55D8E673404A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

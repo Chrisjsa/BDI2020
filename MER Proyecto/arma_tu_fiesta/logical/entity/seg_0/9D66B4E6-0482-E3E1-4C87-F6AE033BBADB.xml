@@ -39,18 +39,6 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="categoria" id="DB1AFD9F-FE52-B1E0-EA5E-667FB240366D">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-12 03:02:16 UTC</createdTime>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>DOM2025000</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="descripcion" id="F369FEC4-7569-B787-A3DA-11CE49B72798">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-12 03:02:23 UTC</createdTime>
@@ -63,15 +51,29 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_rol" id="6F8E76AC-DDB7-1380-5B61-FE79128E6F3E">
+<Attribute name="id_categoria" id="A77851DE-B0B8-B3C1-5954-0A8D70A0C3C3">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 15:35:33 UTC</createdTime>
-<generatorID>08D3BCFC-862E-A154-B7F6-C757C2A8FAE1</generatorID>
+<createdTime>2020-07-16 12:42:09 UTC</createdTime>
+<generatorID>D05E648A-3146-5CCD-1635-356C69391BE9</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<referedAttribute>33D83666-AC03-7308-6FA9-C347CE7E1878</referedAttribute>
+<referedAttribute>1957BA2F-5E33-5C65-C921-AE003546AA16</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_descuento" id="844B2C82-97D8-B0E9-651D-D8EA68DC9C86">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 12:48:05 UTC</createdTime>
+<generatorID>44E2136D-E3BF-C19D-21D2-8D29A1A81CDB</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>9940830F-EDD2-6714-47F8-A3EE86806E1D</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>

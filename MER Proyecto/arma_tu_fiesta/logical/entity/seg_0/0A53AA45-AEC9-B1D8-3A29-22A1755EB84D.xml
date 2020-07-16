@@ -40,20 +40,6 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_horario" id="DD93A2DD-AC0A-3DEC-F1BF-0645CB0954FE">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-12 23:51:25 UTC</createdTime>
-<generatorID>D2E824BE-973C-32C9-A75D-9E34234095ED</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>C3B86969-0C8D-5C8A-D9F1-4216D8609EAD</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_religion" id="4534BA09-01A4-6EFA-952E-2841CAD4EF57">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-19 20:36:24 UTC</createdTime>

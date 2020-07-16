@@ -13,7 +13,7 @@
 <nameOnSource>usa</nameOnSource>
 <optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
-<sourceCardinality>1</sourceCardinality>
+<sourceCardinality>*</sourceCardinality>
 <sourceEntity>146CCC6B-5BF3-80B7-F1D9-33381AA93F22</sourceEntity>
 <targetCardinalityString>1</targetCardinalityString>
 <targetEntity>DBC4532B-F322-2D04-819A-13A1384D2DE9</targetEntity>

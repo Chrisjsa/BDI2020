@@ -65,57 +65,29 @@
 <domain>DOM3000001</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_locacion" id="314EB679-22C2-2F26-8EEB-9AC8FB09A40F">
+<Attribute name="id_usuario" id="084219DF-0CD2-EE85-C012-836B9A8006E5">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-14 23:30:32 UTC</createdTime>
-<generatorID>FE151EFB-7370-067B-1E36-536DAD5844E0</generatorID>
+<createdTime>2020-07-16 12:28:01 UTC</createdTime>
+<generatorID>F1888532-25B8-AC32-6865-8303E9C81062</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<referedAttribute>98D28D7E-7318-24B4-2E03-53D3FC94EF95</referedAttribute>
+<referedAttribute>6C3E90A4-0479-DC4D-AF8A-9D797ECA65A1</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_usuario" id="D8922681-53BD-F4CB-4814-7BC8D9EF966E">
+<Attribute name="id_locacion" id="D4C32D77-656E-CB8B-A13B-B9749AC3ACE6">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 15:53:37 UTC</createdTime>
-<generatorID>95BD95AD-E1B9-405A-31FD-7A4DAA0FC93E</generatorID>
+<createdTime>2020-07-16 12:44:24 UTC</createdTime>
+<generatorID>B831187B-AFC0-1B31-F0B4-6F6E8CDCC8FF</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<referedAttribute>DFF05B42-6495-675D-AEA4-7434A761C232</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_rol" id="6D188B36-CE96-E584-C798-F71F8AA63A11">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-15 15:53:37 UTC</createdTime>
-<generatorID>95BD95AD-E1B9-405A-31FD-7A4DAA0FC93E</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>5EABE28A-4925-E74B-1D30-C0FE1348529B</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_permiso" id="A324C73E-B266-7231-8420-FE1D5EFF57EC">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-15 15:53:37 UTC</createdTime>
-<generatorID>95BD95AD-E1B9-405A-31FD-7A4DAA0FC93E</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>DA10825D-1402-6167-16EC-BE3745952EC2</referedAttribute>
+<referedAttribute>9F7F4416-9B17-59D6-604C-BF513D3A951E</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
@@ -132,10 +104,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>42539ED7-9974-3E77-102A-414C1751FF15</attributeRef>
-<attributeRef>D8922681-53BD-F4CB-4814-7BC8D9EF966E</attributeRef>
-<attributeRef>6D188B36-CE96-E584-C798-F71F8AA63A11</attributeRef>
-<attributeRef>A324C73E-B266-7231-8420-FE1D5EFF57EC</attributeRef>
+<attributeRef>084219DF-0CD2-EE85-C012-836B9A8006E5</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -27,18 +27,6 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="categoria" id="66B115B6-A31D-2D91-E59F-D7255EFBCD5A">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-12 02:51:55 UTC</createdTime>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>DOM2025000</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="nombre" id="527F649F-3161-E79E-A734-58119133E03F">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-14 20:21:59 UTC</createdTime>
@@ -75,15 +63,29 @@
 <domain>DOM10005</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_rol" id="92917DA1-FD13-44C4-5327-CE4B89682A30">
+<Attribute name="id_categoria" id="5C247EA2-7299-8C15-09E7-599480253A6F">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 15:34:42 UTC</createdTime>
-<generatorID>94D555E0-5E57-23FF-BB40-25E3E9F40659</generatorID>
+<createdTime>2020-07-16 12:20:55 UTC</createdTime>
+<generatorID>5B87AFD0-B6E1-AB04-507B-655A6304FA38</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<referedAttribute>33D83666-AC03-7308-6FA9-C347CE7E1878</referedAttribute>
+<referedAttribute>1957BA2F-5E33-5C65-C921-AE003546AA16</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_descuento" id="7BC9BC9A-9BDD-FDDD-21E1-DA76B5C3AC55">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 12:48:12 UTC</createdTime>
+<generatorID>6F23EA89-1EEE-3F42-D391-043A21D4F938</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>9940830F-EDD2-6714-47F8-A3EE86806E1D</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>

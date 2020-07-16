@@ -1,20 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_87" directorySegmentName="seg_0" id="95BD95AD-E1B9-405A-31FD-7A4DAA0FC93E">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_104" directorySegmentName="seg_0" id="C216368F-27BB-FFCB-3059-7C8E3DBF4F60">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-15 15:53:37 UTC</createdTime>
+<createdTime>2020-07-16 12:39:50 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<sourcePk>9A9C4CF2-7AAC-EBB1-F804-67E191BCD2B7</sourcePk>
+<sourcePk>28A9BD1B-617B-9173-37B5-7EDF9B8C8C3B</sourcePk>
 <identifying>true</identifying>
-<nameOnTarget>ordena</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>1AFA72A6-CC1E-1CFB-A2D8-A8CF3188BA6E</sourceEntity>
+<sourceEntity>740B8126-D09F-2D1A-86BA-7D29C327A541</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>D8F6131A-9C54-9183-C4C3-92DA899074A2</targetEntity>
+<targetEntity>515F5FE0-9E04-02F7-7AE8-8072608EF7D9</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

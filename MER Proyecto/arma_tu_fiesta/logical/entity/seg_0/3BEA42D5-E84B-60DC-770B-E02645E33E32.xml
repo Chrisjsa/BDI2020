@@ -27,6 +27,18 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="dia" id="9F1F6301-06DF-7A57-0CFF-DFFCE8C9A147">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-16 12:46:19 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="turno" id="7D1777F8-ECE6-F55A-37F3-042AF5B259E3">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-12 23:50:33 UTC</createdTime>

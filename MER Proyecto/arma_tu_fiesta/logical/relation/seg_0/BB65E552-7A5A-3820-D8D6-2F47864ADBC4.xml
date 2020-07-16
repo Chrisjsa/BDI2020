@@ -13,7 +13,7 @@
 <nameOnSource>coloca</nameOnSource>
 <optionalSource>false</optionalSource>
 <optionalTarget>true</optionalTarget>
-<sourceCardinality>1</sourceCardinality>
+<sourceCardinality>*</sourceCardinality>
 <sourceEntity>146CCC6B-5BF3-80B7-F1D9-33381AA93F22</sourceEntity>
 <targetCardinalityString>1</targetCardinalityString>
 <targetEntity>A9234C4E-8F06-E976-5147-0E50F974EB31</targetEntity>
