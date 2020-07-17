@@ -1,4 +1,4 @@
-INSERT INTO `arma_tu_fiesta`.`permiso` (`nombre`)
+INSERT INTO arma_tu_fiesta.permiso (nombre)
     VALUES
     ('Acceso Total'),
     ('Registrar Locacion'),
