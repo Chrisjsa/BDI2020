@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `categoria`            CASCADE;
 DROP TABLE IF EXISTS `cita`                 CASCADE;
 DROP TABLE IF EXISTS `coordenada`           CASCADE;
 DROP TABLE IF EXISTS `curso`                CASCADE;
-DROP TABLE IF EXISTS `descuento`           CASCADE;
+DROP TABLE IF EXISTS `descuento`            CASCADE;
 DROP TABLE IF EXISTS `detalle`              CASCADE;
 DROP TABLE IF EXISTS `email`                CASCADE;
 DROP TABLE IF EXISTS `empleado`             CASCADE;

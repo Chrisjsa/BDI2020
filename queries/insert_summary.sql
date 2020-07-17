@@ -9061,61 +9061,7 @@ INSERT INTO arma_tu_fiesta.lugar (nombre, tipo, fk_pertenece) VALUES ('Raúl Cue
 
 -- ++++++++++++++++++++++++++++++++++ PERSONA +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO arma_tu_fiesta.persona (cedula,p_nombre,s_nombre,p_apellido,s_apellido,fecha_nacimiento,sexo,estado_civil,fk_residencia)
-    VALUES
-    ('V-20202706','Beatriz','Aurora','Pinzon','Solano','1995-12-20','Femenino','Soltera',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'El Valle') as tablaLugar)),
-    ('V-20201309','Armando','Enrique ','Mendoza','Saenz','1991-04-04','Masculino','Soltero',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Santa Rosalia') as tablaLugar)),
-    ('V-7456987','Hermes','','Pinzon','Galarza','1965-01-01','Masculino','Casado',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Coche') as tablaLugar)),
-    ('V-9378192','Julia','','Solano','','1970-02-02','Femenino','Casada',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Coche') as tablaLugar)),
-    ('V-8741963','Roberto','','Mendoza','','1968-03-03','Masculino','Casado',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Antimano') as tablaLugar)),
-    ('E-84659785','Margarita','','Saenz','','1966-05-05','Femenino','Casada',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Antimano') as tablaLugar)),
-    ('E-86265784','Nicolas','','Mora','','1996-06-06','Masculino','Soltero',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'La Vega') as tablaLugar)),
-    ('V-26805693','Marcela','','Valencia','','1993-07-07','Femenino','Soltera',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'El Paraiso') as tablaLugar)),
-    ('V-22142357','Daniel','','Valencia','','1990-08-08','Masculino','Soltero',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'El Junquito') as tablaLugar)),
-    ('V-27005921','Patricia','','Fernandez','','1993-09-09','Femenino','Divorciada',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Las Minas') as tablaLugar)),
-    ('V-19654963','Hugo','','Lombardi','','1989-10-10','Masculino','Soltero',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'San Juan') as tablaLugar)),
-    ('V-28745123','Aura','Maria','Fuentes','','2000-11-12','Femenino','Soltera',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Santa Teresa') as tablaLugar)),
-    ('E-81997002','Michell','','Doinel','','1992-12-11','Masculino','Soltero',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = '23 de Enero') as tablaLugar)),
-    ('V-21008702','Maria','','Calderon','','1992-01-06','Masculino','Soltero',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'La Pastora') as tablaLugar)),
-    ('V-30365214','Jenny','','Garcia','','2001-07-20','Femenino','Soltera',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Altagracia') as tablaLugar)),
-    ('V-29820142','Mariana','','Valdez','','1999-09-01','Femenino','Soltera',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'San Jose') as tablaLugar)),
-    ('V-31102965','Freddy','Stewart','Contreras','','2002-01-09','Masculino','Soltero',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'San Bernandino') as tablaLugar)),
-    ('E-88296365','Catalina','','Angel','','1998-01-28','Femenino','Soltera',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Candelaria') as tablaLugar))
-;
-
 -- ++++++++++++++++++++++++++++++++++ USUARIO +++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-INSERT INTO arma_tu_fiesta.usuario (username,password,fk_persona)
-    VALUES
-    ('betty','clave0001',
-        (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-20202706') as tablapersona)),
-    ('marce','clave0002',
-        (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-26805693') as tablapersona)),
-    ('huguito','clave0003',
-        (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-19654963') as tablapersona)),
-    ('frances','clave0004',
-        (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'E-81997002') as tablapersona)),
-    ('auramaria','clave0005',
-        (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-28745123') as tablapersona))
-;
 
 -- ++++++++++++++++++++++++++++++++++ ROL +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -9144,134 +9090,249 @@ INSERT INTO arma_tu_fiesta.permiso (nombre)
     ('Realizar Pago')
 ;
 
--- ++++++++++++++++++++++++++++++++++ USUARIO_ROL +++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- ++++++++++++++++++++++++++++++++++ ROL_PERMISO ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'huguito') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Administrador') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Acceso Total') as tablaPermiso))
-;
+-- ++++++++++++++++++++++++++++++++++ JEFATURA +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'marce') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Administrador') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Generar Reporte') as tablaPermiso))
-;
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Amazonas', @pertenece);
 
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'auramaria') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Empleado') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Registrar Locacion') as tablaPermiso))
-;
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'auramaria') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Empleado') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Registrar Producto') as tablaPermiso))
-;
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'auramaria') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Empleado') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Registrar Servicio') as tablaPermiso))
-;
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'auramaria') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Empleado') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Registrar Proveedor') as tablaPermiso))
-;
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Amazonas')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Donald Trump');
 
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Solicitar Servicio') as tablaPermiso))
-;
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Solicitar Tramite') as tablaPermiso))
-;
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Seleccionar Producto') as tablaPermiso))
-;
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Seleccionar Servicio') as tablaPermiso))
-;
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Aprobar Presupuesto') as tablaPermiso))
-;
-INSERT INTO arma_tu_fiesta.usuario_rol (fk_usuario,fk_rol,fk_permiso)
-    VALUES
-    ((SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'betty') as tablaUsuario),
-    (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol),
-    (SELECT pkPermiso FROM (SELECT id_Permiso as pkPermiso FROM arma_tu_fiesta.permiso WHERE nombre = 'Realizar Pago') as tablaPermiso))
-;
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Anzoátegui', @pertenece);
 
--- ++++++++++++++++++++++++++++++++++ PROVEEDOR +++++++++++++++++++++++++++++++++++++++++++++++++++++
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Anzoátegui')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Damian Taboada');
 
-INSERT INTO arma_tu_fiesta.proveedor (rif,razon_social,rubro,fk_ubicado)
-    VALUES
-    ('J-20202706','Kami Productions','Fotografia y video',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'El Recreo') as tablaLugar)),
-    ('J-20201309','Ambrosia','Catering ',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'El Cafetal') as tablaLugar)),
-    ('J-7456987','Fondo Blanco','Bebidas',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'Petare') as tablaLugar)),
-    ('J-9378192','Contigo','Mobiliario',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'La Dolorita') as tablaLugar)),
-    ('J-8741963','Yutu','Entretenimiento',
-        (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE nombre = 'San Pedro') as tablaLugar))
-;
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Apure', @pertenece);
 
--- ++++++++++++++++++++++++++++++++++ EMPLEADO +++++++++++++++++++++++++++++++++++++++++++++++++++++
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Apure')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Alejandro Morales');
 
-INSERT INTO arma_tu_fiesta.empleado (cargo, fk_persona, fk_proveedor)
-    VALUES
-    ('Fotografa',
-    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'E-88296365') as tablapersona),
-    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-20202706') as tablaProveedor)),
-    ('Fotografo',
-    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-31102965') as tablapersona),
-    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-20202706') as tablaProveedor)),
-    ('Organizador',
-    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'E-81997002') as tablapersona),
-    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-20201309') as tablaProveedor)),
-    ('Organizadora',
-    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-26805693') as tablapersona),
-    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-7456987') as tablaProveedor)),
-    ('Personal',
-    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-30365214') as tablapersona),
-    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-8741963') as tablaProveedor)),
-    ('Personal',
-    (SELECT pkPersona FROM (SELECT id_persona as pkPersona FROM arma_tu_fiesta.persona WHERE cedula = 'V-29820142') as tablapersona),
-    (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-8741963') as tablaProveedor))
-;
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Aragua', @pertenece);
 
--- ++++++++++++++++++++++++++++++++++ HORARIO +++++++++++++++++++++++++++++++++++++++++++++++++++++
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Aragua')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Nuria Vallejo');
 
-INSERT INTO arma_tu_fiesta.horario (turno, hora_inicio, hora_termina)
-    VALUES
-    ('1er Turno (Matutino)','07:00:00','10:00:00'),
-	('2do Turno (Matutino)','10:00:00','13:00:00'),
-	('1er Turno (Vespertino)','13:00:00','16:00:00'),
-    ('2do Turno (Vespertino)','16:00:00','19:00:00'),
-	('Unico Turno (Nocturno','19:00:00','22:00:00')
-;
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Barinas', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Barinas')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Paula Llorens');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Bolívar', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Bolívar')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Malak Berenguer');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Carabobo', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Carabobo')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Rafaela del Olmo');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Cojedes', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Cojedes')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Pere Quero');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Delta Amacuro', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Delta Amacuro')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Raimundo Calero');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Distrito Capital', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Distrito Capital')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Unai Rivera');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Falcón', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Falcón')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Nelson Ramiro');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Guárico', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Guárico')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Carla Jorge');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado La Guaira', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%La Guaira')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Júlia Aguado');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Lara', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Lara')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Aday Vidal');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Mérida', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Mérida')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Martin Saldaña');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Miranda', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Miranda')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Anna Ares');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Monagas', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Monagas')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Concepcion Camacho');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Nueva Esparta', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Nueva Esparta')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Anton Machado');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Portuguesa', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Portuguesa')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Natividad Guerra');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Sucre', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Sucre')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Minerva Calvo');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Táchira', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Táchira')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Ona Poveda');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Trujillo', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Trujillo')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Victor Ferreira');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Yaracuy', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Yaracuy')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Balbina Viñas');
+
+SET @pertenece = (SELECT pkLugar FROM
+	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia')
+	as tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Zulia', @pertenece);
+
+SET @fk_jefatura = (SELECT pkLocacion FROM
+	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Zulia')
+	as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Nekane Ali');
 
 -- ++++++++++++++++++++++++++++++++++ RELIGION +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -9281,5 +9342,662 @@ INSERT INTO arma_tu_fiesta.religion (nombre)
     ('Judaismo'),
     ('Islamismo'),
     ('Hinduismo'),
-    ('Sintoismo')
+    ('Shintoismo')
 ;
+
+-- ++++++++++++++++++++++++++++++++++ TEMPLO +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Amazonas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Amazonas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Idoia Carrion', 'temploCatolicoAmazonas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Amazonas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Amazonas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Roberto Carlos Calleja', 'temploJudioAmazonas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Amazonas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Amazonas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alexander Hervas', 'temploIslamicoAmazonas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Amazonas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Amazonas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Diego Herreros', 'temploHinduAmazonas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Amazonas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Amazonas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ibai Morillas', 'temploShintoAmazonas@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Anzoátegui', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Anzoátegui') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Fulgencio Solano', 'temploCatolicoAnzoátegui@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Anzoátegui', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Anzoátegui') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Simon Grau', 'temploJudioAnzoátegui@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Anzoátegui', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Anzoátegui') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Guillem Boix', 'temploIslamicoAnzoátegui@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Anzoátegui', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Anzoátegui') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felix Valencia', 'temploHinduAnzoátegui@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Anzoátegui', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Anzoátegui') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Antonio Zhu', 'temploShintoAnzoátegui@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Apure', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Apure') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Valentin Giraldo', 'temploCatolicoApure@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Apure', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Apure') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Francisco Manuel Rus', 'temploJudioApure@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Apure', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Apure') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Gheorghe Ortega', 'temploIslamicoApure@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Apure', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Apure') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Martin Revilla', 'temploHinduApure@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Apure', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Apure') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Lluis Li', 'temploShintoApure@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Aragua', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Aragua') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Juan Amoros', 'temploCatolicoAragua@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Aragua', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Aragua') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Pablo Calle', 'temploJudioAragua@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Aragua', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Aragua') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ezequiel Fajardo', 'temploIslamicoAragua@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Aragua', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Aragua') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Adan Guerrero', 'temploHinduAragua@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Aragua', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Aragua') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Mustapha López', 'temploShintoAragua@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Barinas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Barinas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Noe Castellanos', 'temploCatolicoBarinas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Barinas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Barinas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Gustavo Adolfo Saez', 'temploJudioBarinas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Barinas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Barinas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Teofilo de Haro', 'temploIslamicoBarinas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Barinas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Barinas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Julio Cesar Saavedra', 'temploHinduBarinas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Barinas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Barinas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Carlos Manuel Zheng', 'temploShintoBarinas@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Bolívar', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Bolívar') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Thiago Serrano', 'temploCatolicoBolívar@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Bolívar', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Bolívar') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Paulino Garzon', 'temploJudioBolívar@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Bolívar', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Bolívar') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ferran Rosa', 'temploIslamicoBolívar@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Bolívar', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Bolívar') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Oriol Estrada', 'temploHinduBolívar@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Bolívar', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Bolívar') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Robert Ros', 'temploShintoBolívar@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Carabobo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Carabobo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Francisco Jose Guirao', 'temploCatolicoCarabobo@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Carabobo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Carabobo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Antonio Javier Criado', 'temploJudioCarabobo@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Carabobo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Carabobo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Arturo Domingo', 'temploIslamicoCarabobo@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Carabobo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Carabobo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Victorino Parra', 'temploHinduCarabobo@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Carabobo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Carabobo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Nil Ribera', 'temploShintoCarabobo@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Cojedes', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Cojedes') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felix Almagro', 'temploCatolicoCojedes@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Cojedes', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Cojedes') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Elias Padron', 'temploJudioCojedes@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Cojedes', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Cojedes') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Javier Castillo', 'temploIslamicoCojedes@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Cojedes', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Cojedes') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Maria Peralta', 'temploHinduCojedes@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Cojedes', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Cojedes') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Roger da Silva', 'temploShintoCojedes@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Delta Amacuro', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Delta Amacuro') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Marcos Antonio de Dios', 'temploCatolicoDelta Amacuro@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Delta Amacuro', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Delta Amacuro') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Aritz Rosales', 'temploJudioDelta Amacuro@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Delta Amacuro', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Delta Amacuro') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Gustavo Adolfo Mejias', 'temploIslamicoDelta Amacuro@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Delta Amacuro', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Delta Amacuro') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Arnau Mejias', 'temploHinduDelta Amacuro@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Delta Amacuro', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Delta Amacuro') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Arnau Wu', 'temploShintoDelta Amacuro@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Distrito Capital', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Distrito Capital') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alex Hernando', 'temploCatolicoDistrito Capital@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Distrito Capital', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Distrito Capital') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Carlos Tudela', 'temploJudioDistrito Capital@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Distrito Capital', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Distrito Capital') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Avelino Aranda', 'temploIslamicoDistrito Capital@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Distrito Capital', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Distrito Capital') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Iñaki Parejo', 'temploHinduDistrito Capital@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Distrito Capital', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Distrito Capital') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Ignacio Santos', 'temploShintoDistrito Capital@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Falcón', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Falcón') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Yeray Cruz', 'temploCatolicoFalcón@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Falcón', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Falcón') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Youssef Serna', 'temploJudioFalcón@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Falcón', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Falcón') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Pablo Orozco', 'temploIslamicoFalcón@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Falcón', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Falcón') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Mario Jaen', 'temploHinduFalcón@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Falcón', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Falcón') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Fabian Fuster', 'temploShintoFalcón@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Guárico', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Guárico') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Sebastian Cañizares', 'temploCatolicoGuárico@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Guárico', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Guárico') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Rufino Piqueras', 'temploJudioGuárico@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Guárico', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Guárico') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Moises Arellano', 'temploIslamicoGuárico@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Guárico', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Guárico') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alejandro Casado', 'temploHinduGuárico@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Guárico', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Guárico') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Miquel Postigo', 'temploShintoGuárico@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado La Guaira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%La Guaira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Luis Maria Maza', 'temploCatolicoLa Guaira@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado La Guaira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%La Guaira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Moises Casado', 'temploJudioLa Guaira@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado La Guaira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%La Guaira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Rufino Sevilla', 'temploIslamicoLa Guaira@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado La Guaira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%La Guaira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Sebastian Serrano', 'temploHinduLa Guaira@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado La Guaira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%La Guaira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Elias Wu', 'temploShintoLa Guaira@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Lara', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Lara') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Raul Calleja', 'temploCatolicoLara@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Lara', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Lara') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Tudela', 'temploJudioLara@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Lara', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Lara') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Melchor Garriga', 'temploIslamicoLara@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Lara', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Lara') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Segundo Juarez', 'temploHinduLara@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Lara', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Lara') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Victor Manuel Arnaiz', 'temploShintoLara@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Mérida', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Mérida') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Florentino Alcazar', 'temploCatolicoMérida@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Mérida', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Mérida') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Noe Ordoñez', 'temploJudioMérida@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Mérida', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Mérida') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alexandru Herreros', 'temploIslamicoMérida@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Mérida', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Mérida') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ramon Amado', 'temploHinduMérida@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Mérida', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Mérida') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Pablo Amado', 'temploShintoMérida@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Miranda', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Miranda') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Santos', 'temploCatolicoMiranda@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Miranda', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Miranda') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ignacio Gomez', 'temploJudioMiranda@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Miranda', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Miranda') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Victor Dardo', 'temploIslamicoMiranda@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Miranda', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Miranda') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ricardo Aralla', 'temploHinduMiranda@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Miranda', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Miranda') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Antonio Morales', 'temploShintoMiranda@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Monagas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Monagas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Sebastian Andrade', 'temploCatolicoMonagas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Monagas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Monagas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ricardo Seguro', 'temploJudioMonagas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Monagas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Monagas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Luis Uribe', 'temploIslamicoMonagas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Monagas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Monagas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'David Mendoza', 'temploHinduMonagas@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Monagas', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Monagas') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Armando Valencia', 'temploShintoMonagas@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Nueva Esparta', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Nueva Esparta') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Eduard Contreras', 'temploCatolicoNueva Esparta@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Nueva Esparta', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Nueva Esparta') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Carlos Valdez', 'temploJudioNueva Esparta@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Nueva Esparta', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Nueva Esparta') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ramon Barrios', 'temploIslamicoNueva Esparta@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Nueva Esparta', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Nueva Esparta') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Simon Ital', 'temploHinduNueva Esparta@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Nueva Esparta', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Nueva Esparta') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Oscar Burguillos', 'temploShintoNueva Esparta@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Portuguesa', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Portuguesa') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felix Pietro', 'temploCatolicoPortuguesa@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Portuguesa', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Portuguesa') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Marcano', 'temploJudioPortuguesa@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Portuguesa', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Portuguesa') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Julio Verne', 'temploIslamicoPortuguesa@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Portuguesa', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Portuguesa') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Octavio Marval', 'temploHinduPortuguesa@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Portuguesa', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Portuguesa') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Joseph Baldillo', 'temploShintoPortuguesa@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Sucre', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Sucre') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Pierino Navarro', 'temploCatolicoSucre@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Sucre', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Sucre') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Josue Navaez', 'temploJudioSucre@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Sucre', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Sucre') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felipe Russi', 'temploIslamicoSucre@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Sucre', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Sucre') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alexis Ramos', 'temploHinduSucre@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Sucre', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Sucre') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Daniel Leon', 'temploShintoSucre@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Táchira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Táchira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Edgar Casco', 'temploCatolicoTáchira@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Táchira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Táchira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Joy Ruiz', 'temploJudioTáchira@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Táchira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Táchira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Carlos Velez', 'temploIslamicoTáchira@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Táchira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Táchira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'David Rodriguez', 'temploHinduTáchira@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Táchira', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Táchira') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ernesto Roman', 'temploShintoTáchira@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Trujillo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Trujillo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Luis Tapia', 'temploCatolicoTrujillo@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Trujillo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Trujillo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Leonardo Saldivar', 'temploJudioTrujillo@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Trujillo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Trujillo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Nestor Zuniga', 'temploIslamicoTrujillo@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Trujillo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Trujillo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ruben Aguilar', 'temploHinduTrujillo@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Trujillo', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Trujillo') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alfredo Vierya', 'temploShintoTrujillo@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Yaracuy', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Yaracuy') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Brandon Bahuer', 'temploCatolicoYaracuy@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Yaracuy', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Yaracuy') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Miguel Quintana', 'temploJudioYaracuy@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Yaracuy', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Yaracuy') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Roy Tortua', 'temploIslamicoYaracuy@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Yaracuy', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Yaracuy') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Noe Abduzcan', 'temploHinduYaracuy@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Yaracuy', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Yaracuy') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Chimal Gaeta', 'temploShintoYaracuy@gmail.com', @religion);
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia') as tablaLugar);
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Zulia', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Zulia') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Mario Cartagena', 'temploCatolicoZulia@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Judio del Estado Zulia', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Zulia') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Montes', 'temploJudioZulia@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Zulia', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Zulia') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Steve Arguello', 'temploIslamicoZulia@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Zulia', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Zulia') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Joel Fener', 'temploHinduZulia@gmail.com', @religion);
+
+SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
+INSERT INTO arma_tu_fiesta.locacion (nombre, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Zulia', @pertenece);
+SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Zulia') as tablaTemplo);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'David Ruiz', 'temploShintoZulia@gmail.com', @religion);
+
+-- ++++++++++++++++++++++++++++++++++ HORARIO +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+INSERT INTO arma_tu_fiesta.horario (dia, turno, hora_inicio, hora_termina)
+    VALUES
+    ('Lunes','Matutino','07:00:00','12:00:00'),
+	('Lunes','Vespertino','13:00:00','18:00:00'),
+	('Lunes','Nocturno','18:00:00','22:00:00'),
+    ('Martes','Matutino','07:00:00','12:00:00'),
+	('Martes','Vespertino','13:00:00','18:00:00'),
+	('Martes','Nocturno','18:00:00','22:00:00'),
+    ('Miercoles','Matutino','07:00:00','12:00:00'),
+	('Miercoles','Vespertino','13:00:00','18:00:00'),
+	('Miercoles','Nocturno','18:00:00','22:00:00'),
+    ('Jueves','Matutino','07:00:00','12:00:00'),
+	('Jueves','Vespertino','13:00:00','18:00:00'),
+	('Jueves','Nocturno','18:00:00','22:00:00'),
+    ('Viernes','Matutino','07:00:00','12:00:00'),
+	('Viernes','Vespertino','13:00:00','18:00:00'),
+	('Viernes','Nocturno','18:00:00','22:00:00'),
+    ('Sabado','Matutino','07:00:00','12:00:00'),
+	('Sabado','Vespertino','13:00:00','18:00:00'),
+	('Sabado','Nocturno','18:00:00','22:00:00'),
+    ('Domingo','Matutino','07:00:00','12:00:00'),
+	('Domingo','Vespertino','13:00:00','18:00:00'),
+	('Domingo','Nocturno','18:00:00','22:00:00')
+;
+
+-- ++++++++++++++++++++++++++++++++++ RELIGION +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
