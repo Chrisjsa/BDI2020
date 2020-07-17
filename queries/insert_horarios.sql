@@ -1,0 +1,24 @@
+INSERT INTO arma_tu_fiesta.horario (dia, turno, hora_inicio, hora_termina)
+    VALUES
+    ('Lunes','Matutino','07:00:00','12:00:00'),
+	('Lunes','Vespertino','13:00:00','18:00:00'),
+	('Lunes','Nocturno','18:00:00','22:00:00'),
+    ('Martes','Matutino','07:00:00','12:00:00'),
+	('Martes','Vespertino','13:00:00','18:00:00'),
+	('Martes','Nocturno','18:00:00','22:00:00'),
+    ('Miercoles','Matutino','07:00:00','12:00:00'),
+	('Miercoles','Vespertino','13:00:00','18:00:00'),
+	('Miercoles','Nocturno','18:00:00','22:00:00'),
+    ('Jueves','Matutino','07:00:00','12:00:00'),
+	('Jueves','Vespertino','13:00:00','18:00:00'),
+	('Jueves','Nocturno','18:00:00','22:00:00'),
+    ('Viernes','Matutino','07:00:00','12:00:00'),
+	('Viernes','Vespertino','13:00:00','18:00:00'),
+	('Viernes','Nocturno','18:00:00','22:00:00'),
+    ('Sabado','Matutino','07:00:00','12:00:00'),
+	('Sabado','Vespertino','13:00:00','18:00:00'),
+	('Sabado','Nocturno','18:00:00','22:00:00'),
+    ('Domingo','Matutino','07:00:00','12:00:00'),
+	('Domingo','Vespertino','13:00:00','18:00:00'),
+	('Domingo','Nocturno','18:00:00','22:00:00')
+;

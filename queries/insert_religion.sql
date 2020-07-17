@@ -10,5 +10,5 @@ INSERT INTO `arma_tu_fiesta`.`religion` (`nombre`)
     ('Judaismo'),
     ('Islamismo'),
     ('Hinduismo'),
-    ('Sintoismo')
+    ('Shintoismo')
 ;
