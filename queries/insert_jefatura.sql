@@ -92,7 +92,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Distrito Capital', 'Jefatura', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Distrito Capital', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Distrito Capital')

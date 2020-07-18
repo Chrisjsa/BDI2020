@@ -234,27 +234,27 @@ INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES 
 
 SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Distrito Capital') as tablaTemplo);
 INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alex Hernando', 'temploCatolicoDistrito Capital@gmail.com', @religion);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Distrito Capital') as tablaTemplo);
 INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Carlos Tudela', 'temploJudioDistrito Capital@gmail.com', @religion);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Distrito Capital') as tablaTemplo);
 INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Avelino Aranda', 'temploIslamicoDistrito Capital@gmail.com', @religion);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Distrito Capital') as tablaTemplo);
 INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Iñaki Parejo', 'temploHinduDistrito Capital@gmail.com', @religion);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Distrito Capital') as tablaTemplo);
 INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Ignacio Santos', 'temploShintoDistrito Capital@gmail.com', @religion);
 

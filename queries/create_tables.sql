@@ -115,6 +115,12 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.jefatura (
         CONSTRAINT fk_jefatura_locacion FOREIGN KEY (fk_jefatura) REFERENCES arma_tu_fiesta.locacion (id_locacion)
 );
 
+CREATE TABLE IF NOT EXISTS arma_tu_fiesta.notaria (
+    fk_notaria            INT  NOT NULL,
+    nombre_notario                VARCHAR(80) NOT NULL,
+        CONSTRAINT fk_notaria_locacion FOREIGN KEY (fk_notaria) REFERENCES arma_tu_fiesta.locacion (id_locacion)
+);
+
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.templo (
     fk_templo              INT  NOT NULL,
     parroco                VARCHAR(80) NOT NULL,
