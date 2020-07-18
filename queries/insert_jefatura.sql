@@ -1,21 +1,8 @@
-CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`locacion` (
-    `id_locacion`           INT NOT NULL AUTO_INCREMENT,
-    `nombre`                VARCHAR(80) NOT NULL,
-    `fk_localizacion`       INT NOT NULL,
-    CONSTRAINT `pk_locacion` PRIMARY KEY (`id_locacion`),
-        CONSTRAINT `fk_locacion_lugar` FOREIGN KEY (`fk_localizacion`) REFERENCES `arma_tu_fiesta`.`lugar` (`id_lugar`)
-);
-
-CREATE TABLE IF NOT EXISTS `arma_tu_fiesta`.`jefatura` (
-    `fk_jefatura`           INT NOT NULL,
-    `jefe_civil`            VARCHAR(80) NOT NULL,
-        CONSTRAINT `fk_jefatura_locacion` FOREIGN KEY (`fk_jefatura`) REFERENCES `arma_tu_fiesta`.`locacion` (`id_locacion`)
-);
 
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Amazonas', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Amazonas', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Amazonas')
@@ -25,7 +12,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Anzoátegui', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Anzoátegui', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Anzoátegui')
@@ -35,7 +22,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Apure', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Apure', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Apure')
@@ -45,7 +32,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Aragua', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Aragua', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Aragua')
@@ -55,7 +42,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Barinas', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Barinas', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Barinas')
@@ -65,7 +52,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Bolívar', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Bolívar', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Bolívar')
@@ -75,7 +62,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Carabobo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Carabobo', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Carabobo')
@@ -85,7 +72,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Cojedes', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Cojedes', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Cojedes')
@@ -95,7 +82,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Delta Amacuro', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Delta Amacuro', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Delta Amacuro')
@@ -105,7 +92,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Distrito Capital', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Distrito Capital', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Distrito Capital')
@@ -115,7 +102,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Falcón', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Falcón', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Falcón')
@@ -125,7 +112,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Guárico', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Guárico', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Guárico')
@@ -135,7 +122,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado La Guaira', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado La Guaira', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%La Guaira')
@@ -145,7 +132,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Lara', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Lara', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Lara')
@@ -155,7 +142,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Mérida', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Mérida', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Mérida')
@@ -165,7 +152,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Miranda', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Miranda', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Miranda')
@@ -175,7 +162,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Monagas', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Monagas', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Monagas')
@@ -185,7 +172,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Nueva Esparta', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Nueva Esparta', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Nueva Esparta')
@@ -195,7 +182,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Portuguesa', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Portuguesa', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Portuguesa')
@@ -205,7 +192,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Sucre', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Sucre', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Sucre')
@@ -215,7 +202,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Táchira', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Táchira', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Táchira')
@@ -225,7 +212,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Trujillo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Trujillo', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Trujillo')
@@ -235,7 +222,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Yaracuy', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Yaracuy', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Yaracuy')
@@ -245,7 +232,7 @@ INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatu
 SET @pertenece = (SELECT pkLugar FROM
 	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia')
 	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre,fk_localizacion) VALUES ('Jefatura del Estado Zulia', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Zulia', 'Jefatura', @pertenece);
 
 SET @fk_jefatura = (SELECT pkLocacion FROM
 	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Zulia')

@@ -103,6 +103,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.coordenada (
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.locacion (
     id_locacion            INT  NOT NULL AUTO_INCREMENT,
     nombre                 VARCHAR(80) NOT NULL,
+    tipo                   VARCHAR(80) NOT NULL,
     fk_localizacion        INT  NOT NULL,
     CONSTRAINT pk_locacion PRIMARY KEY (id_locacion),
         CONSTRAINT fk_locacion_lugar FOREIGN KEY (fk_localizacion) REFERENCES arma_tu_fiesta.lugar (id_lugar)

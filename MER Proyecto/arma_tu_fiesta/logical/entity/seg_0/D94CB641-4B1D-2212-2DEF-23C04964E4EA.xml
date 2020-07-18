@@ -39,6 +39,18 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="tipo" id="7C49C200-8318-2EDF-4511-A68FE3796A58">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-18 14:58:28 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<domain>DOM2025000</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="id_lugar" id="CE3898B2-D500-046C-B40D-EEA43D434204">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-12 22:38:51 UTC</createdTime>
