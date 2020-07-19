@@ -55,14 +55,21 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.rol_permiso (
         CONSTRAINT fk_permiso_rol FOREIGN KEY (fk_permiso) REFERENCES arma_tu_fiesta.permiso (id_permiso)
 );
 
+CREATE TABLE IF NOT EXISTS arma_tu_fiesta.categoria (
+    id_categoria           INT NOT NULL AUTO_INCREMENT,
+    nombre                 INT NOT NULL,
+    CONSTRAINT pk_categoria PRIMARY KEY (id_categoria)
+);
+
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.proveedor (
     id_proveedor           INT NOT NULL AUTO_INCREMENT,
     rif                    VARCHAR(80) NOT NULL UNIQUE,
     razon_social           VARCHAR(80) NOT NULL,
     denominacion_comercial VARCHAR(80) NOT NULL,
-    tipo                   VARCHAR(80) NOT NULL,
+    fk_categoria           INT NOT NULL,
     fk_ubicado             INT NOT NULL,
     CONSTRAINT pk_proveedor PRIMARY KEY (id_proveedor),
+        CONSTRAINT fk_proveedor_categoria FOREIGN KEY (fk_categoria) REFERENCES arma_tu_fiesta.categoria (id_categoria),
         CONSTRAINT fk_proveedor_lugar FOREIGN KEY (fk_ubicado) REFERENCES arma_tu_fiesta.lugar (id_lugar)
 );
 
@@ -184,7 +191,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.curso (
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.telefono (
     id_telefono            INT  NOT NULL AUTO_INCREMENT,
-    numero                 VARCHAR(80) NOT NULL,
+    numero                 VARCHAR(80) NOT NULL UNIQUE,
     fk_persona             INT NULL,
     fk_proveedor           INT NULL,
     fk_locacion            INT NULL,
@@ -220,12 +227,6 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.persona_tramite (
     relacion               VARCHAR(80) NOT NULL,
         CONSTRAINT fk_persona_tramite FOREIGN KEY (fk_persona) REFERENCES arma_tu_fiesta.persona (id_persona),
         CONSTRAINT fk_tramite_persona FOREIGN KEY (fk_tramite_carta) REFERENCES arma_tu_fiesta.tramite_carta (id_tramite_carta)
-);
-
-CREATE TABLE IF NOT EXISTS arma_tu_fiesta.categoria (
-    id_categoria           INT NOT NULL AUTO_INCREMENT,
-    nombre                 INT NOT NULL,
-    CONSTRAINT pk_categoria PRIMARY KEY (id_categoria)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.descuento (

@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS `jefatura`             CASCADE;
 DROP TABLE IF EXISTS `locacion`             CASCADE;
 DROP TABLE IF EXISTS `lugar`                CASCADE;
 DROP TABLE IF EXISTS `metodo_de_pago`       CASCADE;
-DROP TABLE IF EXISTS `notaria`       CASCADE;
+DROP TABLE IF EXISTS `notaria`              CASCADE;
 DROP TABLE IF EXISTS `orden_evento`         CASCADE;
 DROP TABLE IF EXISTS `orden_evento_estatus` CASCADE;
 DROP TABLE IF EXISTS `permiso`              CASCADE;
