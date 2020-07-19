@@ -9094,245 +9094,149 @@ INSERT INTO arma_tu_fiesta.permiso (nombre)
 
 -- ++++++++++++++++++++++++++++++++++ JEFATURA +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Amazonas', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Amazonas', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Amazonas' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Donald Trump');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414962460', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Amazonas')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Donald Trump');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Anzoátegui', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Anzoátegui' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Damian Taboada');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426849451', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Anzoátegui', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Apure', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Apure' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Alejandro Morales');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416890491', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Anzoátegui')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Damian Taboada');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Aragua', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Aragua' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Nuria Vallejo');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426135013', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Apure', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Barinas', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Barinas' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Paula Llorens');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414573995', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Apure')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Alejandro Morales');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Bolívar', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Bolívar' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Malak Berenguer');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412334160', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Aragua', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Carabobo', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Carabobo' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Rafaela del Olmo');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426416799', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Aragua')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Nuria Vallejo');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Cojedes', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Cojedes' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Pere Quero');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212706285', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Barinas', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Delta Amacuro', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Delta Amacuro' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Raimundo Calero');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414929274', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Barinas')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Paula Llorens');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Distrito Capital', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Distrito Capital' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Unai Rivera');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426730305', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Bolívar', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Falcón', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Falcón' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Nelson Ramiro');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416112853', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Bolívar')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Malak Berenguer');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Guárico', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Guárico' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Carla Jorge');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212614518', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Carabobo', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado La Guaira', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%La Guaira' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Júlia Aguado');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416865401', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Carabobo')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Rafaela del Olmo');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Lara', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Lara' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Aday Vidal');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414104269', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Cojedes', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Mérida', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Mérida' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Martin Saldaña');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424398403', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Cojedes')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Pere Quero');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Miranda', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Miranda' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Anna Ares');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212364942', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Delta Amacuro', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Monagas', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Monagas' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Concepcion Camacho');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424442018', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Delta Amacuro')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Raimundo Calero');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Nueva Esparta', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Nueva Esparta' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Anton Machado');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414982823', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Distrito Capital', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Portuguesa', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Portuguesa' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Natividad Guerra');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424961218', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Distrito Capital')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Unai Rivera');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Sucre', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Sucre' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Minerva Calvo');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416331079', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Falcón', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Táchira', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Táchira' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Ona Poveda');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212409446', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Falcón')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Nelson Ramiro');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Trujillo', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Trujillo' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Victor Ferreira');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426842830', @jefatura);
 
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Guárico', 'Jefatura', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Yaracuy', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Yaracuy' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Balbina Viñas');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426677534', @jefatura);
 
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Guárico')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Carla Jorge');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado La Guaira', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%La Guaira')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Júlia Aguado');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Lara', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Lara')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Aday Vidal');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Mérida', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Mérida')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Martin Saldaña');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Miranda', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Miranda')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Anna Ares');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Monagas', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Monagas')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Concepcion Camacho');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Nueva Esparta', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Nueva Esparta')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Anton Machado');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Portuguesa', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Portuguesa')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Natividad Guerra');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Sucre', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Sucre')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Minerva Calvo');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Táchira', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Táchira')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Ona Poveda');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Trujillo', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Trujillo')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Victor Ferreira');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Yaracuy', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Yaracuy')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Balbina Viñas');
-
-SET @pertenece = (SELECT pkLugar FROM
-	(SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia')
-	as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,fk_localizacion) VALUES ('Jefatura del Estado Zulia', 'Jefatura', @pertenece);
-
-SET @fk_jefatura = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Zulia')
-	as tablaJefatura);
-INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@fk_jefatura, 'Nekane Ali');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Jefatura del Estado Zulia', 'Jefatura', @pertenece);
+SET @jefatura = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Zulia' AND tipo = 'Jefatura') as tablaJefatura);
+INSERT INTO arma_tu_fiesta.jefatura (fk_jefatura, jefe_civil) VALUES (@jefatura, 'Nekane Ali');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412442416', @jefatura);
 
 -- ++++++++++++++++++++++++++++++++++ RELIGION +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -9345,630 +9249,871 @@ INSERT INTO arma_tu_fiesta.religion (nombre)
     ('Shintoismo')
 ;
 
--- ++++++++++++++++++++++++++++++++++ TEMPLO +++++++++++++++++++++++++++++++++++++++++++++++++++++
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas') as tablaLugar);
+-- ++++++++++++++++++++++++++++++++++ TEMPLOS +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Amazonas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Amazonas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Amazonas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Idoia Carrion', 'temploCatolicoAmazonas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Idoia Carrion', 'temploCatolicoAmazonas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416262204', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoAmazonas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Amazonas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Amazonas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Amazonas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Roberto Carlos Calleja', 'temploJudioAmazonas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Roberto Carlos Calleja', 'temploJudioAmazonas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412726055', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioAmazonas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Amazonas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Amazonas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Amazonas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alexander Hervas', 'temploIslamicoAmazonas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alexander Hervas', 'temploIslamicoAmazonas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212831278', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoAmazonas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Amazonas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Amazonas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Amazonas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Diego Herreros', 'temploHinduAmazonas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Diego Herreros', 'temploHinduAmazonas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414660329', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduAmazonas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Amazonas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Amazonas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Amazonas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ibai Morillas', 'temploShintoAmazonas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ibai Morillas', 'temploShintoAmazonas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426829717', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoAmazonas@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Anzoátegui', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Anzoátegui', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Anzoátegui') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Fulgencio Solano', 'temploCatolicoAnzoátegui@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Fulgencio Solano', 'temploCatolicoAnzoátegui.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412870622', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoAnzoátegui@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Anzoátegui', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Anzoátegui', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Anzoátegui') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Simon Grau', 'temploJudioAnzoátegui@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Simon Grau', 'temploJudioAnzoátegui.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416672157', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioAnzoátegui@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Anzoátegui', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Anzoátegui', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Anzoátegui') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Guillem Boix', 'temploIslamicoAnzoátegui@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Guillem Boix', 'temploIslamicoAnzoátegui.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416893640', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoAnzoátegui@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Anzoátegui', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Anzoátegui', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Anzoátegui') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felix Valencia', 'temploHinduAnzoátegui@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felix Valencia', 'temploHinduAnzoátegui.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412651106', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduAnzoátegui@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Anzoátegui', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Anzoátegui', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Anzoátegui') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Antonio Zhu', 'temploShintoAnzoátegui@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Antonio Zhu', 'temploShintoAnzoátegui.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416192766', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoAnzoátegui@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Apure', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Apure', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Apure') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Valentin Giraldo', 'temploCatolicoApure@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Valentin Giraldo', 'temploCatolicoApure.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424949792', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoApure@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Apure', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Apure', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Apure') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Francisco Manuel Rus', 'temploJudioApure@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Francisco Manuel Rus', 'temploJudioApure.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416432344', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioApure@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Apure', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Apure', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Apure') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Gheorghe Ortega', 'temploIslamicoApure@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Gheorghe Ortega', 'temploIslamicoApure.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212497495', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoApure@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Apure', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Apure', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Apure') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Martin Revilla', 'temploHinduApure@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Martin Revilla', 'temploHinduApure.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414114450', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduApure@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Apure', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Apure', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Apure') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Lluis Li', 'temploShintoApure@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Lluis Li', 'temploShintoApure.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414338686', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoApure@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Aragua', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Aragua', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Aragua') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Juan Amoros', 'temploCatolicoAragua@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Juan Amoros', 'temploCatolicoAragua.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412648512', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoAragua@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Aragua', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Aragua', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Aragua') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Pablo Calle', 'temploJudioAragua@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Pablo Calle', 'temploJudioAragua.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212932207', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioAragua@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Aragua', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Aragua', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Aragua') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ezequiel Fajardo', 'temploIslamicoAragua@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ezequiel Fajardo', 'temploIslamicoAragua.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426872930', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoAragua@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Aragua', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Aragua', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Aragua') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Adan Guerrero', 'temploHinduAragua@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Adan Guerrero', 'temploHinduAragua.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212478660', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduAragua@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Aragua', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Aragua', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Aragua') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Mustapha López', 'temploShintoAragua@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Mustapha López', 'temploShintoAragua.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416232656', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoAragua@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Barinas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Barinas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Barinas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Noe Castellanos', 'temploCatolicoBarinas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Noe Castellanos', 'temploCatolicoBarinas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414904853', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoBarinas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Barinas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Barinas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Barinas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Gustavo Adolfo Saez', 'temploJudioBarinas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Gustavo Adolfo Saez', 'temploJudioBarinas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412478579', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioBarinas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Barinas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Barinas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Barinas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Teofilo de Haro', 'temploIslamicoBarinas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Teofilo de Haro', 'temploIslamicoBarinas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426227561', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoBarinas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Barinas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Barinas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Barinas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Julio Cesar Saavedra', 'temploHinduBarinas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Julio Cesar Saavedra', 'temploHinduBarinas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424371278', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduBarinas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Barinas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Barinas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Barinas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Carlos Manuel Zheng', 'temploShintoBarinas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Carlos Manuel Zheng', 'temploShintoBarinas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426101675', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoBarinas@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Bolívar', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Bolívar', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Bolívar') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Thiago Serrano', 'temploCatolicoBolívar@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Thiago Serrano', 'temploCatolicoBolívar.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426762046', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoBolívar@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Bolívar', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Bolívar', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Bolívar') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Paulino Garzon', 'temploJudioBolívar@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Paulino Garzon', 'temploJudioBolívar.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426344314', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioBolívar@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Bolívar', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Bolívar', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Bolívar') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ferran Rosa', 'temploIslamicoBolívar@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ferran Rosa', 'temploIslamicoBolívar.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414440847', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoBolívar@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Bolívar', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Bolívar', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Bolívar') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Oriol Estrada', 'temploHinduBolívar@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Oriol Estrada', 'temploHinduBolívar.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414602927', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduBolívar@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Bolívar', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Bolívar', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Bolívar') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Robert Ros', 'temploShintoBolívar@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Robert Ros', 'temploShintoBolívar.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414415370', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoBolívar@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Carabobo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Carabobo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Carabobo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Francisco Jose Guirao', 'temploCatolicoCarabobo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Francisco Jose Guirao', 'temploCatolicoCarabobo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416564716', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoCarabobo@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Carabobo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Carabobo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Carabobo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Antonio Javier Criado', 'temploJudioCarabobo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Antonio Javier Criado', 'temploJudioCarabobo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426943730', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioCarabobo@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Carabobo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Carabobo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Carabobo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Arturo Domingo', 'temploIslamicoCarabobo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Arturo Domingo', 'temploIslamicoCarabobo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416522424', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoCarabobo@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Carabobo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Carabobo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Carabobo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Victorino Parra', 'temploHinduCarabobo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Victorino Parra', 'temploHinduCarabobo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424802468', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduCarabobo@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Carabobo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Carabobo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Carabobo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Nil Ribera', 'temploShintoCarabobo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Nil Ribera', 'temploShintoCarabobo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426544393', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoCarabobo@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Cojedes', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Cojedes', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Cojedes') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felix Almagro', 'temploCatolicoCojedes@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felix Almagro', 'temploCatolicoCojedes.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426548803', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoCojedes@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Cojedes', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Cojedes', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Cojedes') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Elias Padron', 'temploJudioCojedes@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Elias Padron', 'temploJudioCojedes.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412303164', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioCojedes@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Cojedes', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Cojedes', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Cojedes') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Javier Castillo', 'temploIslamicoCojedes@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Javier Castillo', 'temploIslamicoCojedes.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414218230', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoCojedes@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Cojedes', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Cojedes', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Cojedes') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Maria Peralta', 'temploHinduCojedes@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Maria Peralta', 'temploHinduCojedes.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212676434', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduCojedes@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Cojedes', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Cojedes', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Cojedes') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Roger da Silva', 'temploShintoCojedes@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Roger da Silva', 'temploShintoCojedes.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212684720', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoCojedes@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Delta Amacuro', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Delta Amacuro', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Delta Amacuro') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Marcos Antonio de Dios', 'temploCatolicoDelta Amacuro@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Marcos Antonio de Dios', 'temploCatolicoDeltaAmacuro.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426285182', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoDeltaAmacuro@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Delta Amacuro', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Delta Amacuro', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Delta Amacuro') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Aritz Rosales', 'temploJudioDelta Amacuro@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Aritz Rosales', 'temploJudioDeltaAmacuro.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416819257', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioDeltaAmacuro@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Delta Amacuro', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Delta Amacuro', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Delta Amacuro') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Gustavo Adolfo Mejias', 'temploIslamicoDelta Amacuro@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Gustavo Adolfo Mejias', 'temploIslamicoDeltaAmacuro.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414228253', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoDeltaAmacuro@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Delta Amacuro', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Delta Amacuro', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Delta Amacuro') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Arnau Mejias', 'temploHinduDelta Amacuro@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Arnau Mejias', 'temploHinduDeltaAmacuro.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424851909', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduDeltaAmacuro@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Delta Amacuro', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Delta Amacuro', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Delta Amacuro') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Arnau Wu', 'temploShintoDelta Amacuro@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Arnau Wu', 'temploShintoDeltaAmacuro.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412383937', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoDeltaAmacuro@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Distrito Capital') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alex Hernando', 'temploCatolicoDistrito Capital@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alex Hernando', 'temploCatolicoDistritoCapital.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414841517', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoDistritoCapital@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Distrito Capital') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Carlos Tudela', 'temploJudioDistrito Capital@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Carlos Tudela', 'temploJudioDistritoCapital.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426305421', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioDistritoCapital@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Distrito Capital') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Avelino Aranda', 'temploIslamicoDistrito Capital@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Avelino Aranda', 'temploIslamicoDistritoCapital.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414438642', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoDistritoCapital@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Distrito Capital') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Iñaki Parejo', 'temploHinduDistrito Capital@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Iñaki Parejo', 'temploHinduDistritoCapital.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414240452', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduDistritoCapital@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Distrito Capital', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Distrito Capital', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Distrito Capital') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Ignacio Santos', 'temploShintoDistrito Capital@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Ignacio Santos', 'temploShintoDistritoCapital.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414931586', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoDistritoCapital@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Falcón', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Falcón', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Falcón') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Yeray Cruz', 'temploCatolicoFalcón@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Yeray Cruz', 'temploCatolicoFalcón.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424922749', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoFalcón@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Falcón', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Falcón', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Falcón') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Youssef Serna', 'temploJudioFalcón@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Youssef Serna', 'temploJudioFalcón.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416817031', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioFalcón@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Falcón', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Falcón', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Falcón') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Pablo Orozco', 'temploIslamicoFalcón@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Pablo Orozco', 'temploIslamicoFalcón.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212882225', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoFalcón@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Falcón', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Falcón', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Falcón') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Mario Jaen', 'temploHinduFalcón@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Mario Jaen', 'temploHinduFalcón.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426813605', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduFalcón@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Falcón', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Falcón', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Falcón') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Fabian Fuster', 'temploShintoFalcón@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Fabian Fuster', 'temploShintoFalcón.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412696428', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoFalcón@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Guárico', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Guárico', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Guárico') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Sebastian Cañizares', 'temploCatolicoGuárico@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Sebastian Cañizares', 'temploCatolicoGuárico.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412423634', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoGuárico@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Guárico', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Guárico', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Guárico') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Rufino Piqueras', 'temploJudioGuárico@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Rufino Piqueras', 'temploJudioGuárico.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424958325', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioGuárico@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Guárico', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Guárico', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Guárico') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Moises Arellano', 'temploIslamicoGuárico@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Moises Arellano', 'temploIslamicoGuárico.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212924911', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoGuárico@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Guárico', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Guárico', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Guárico') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alejandro Casado', 'temploHinduGuárico@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alejandro Casado', 'temploHinduGuárico.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426280174', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduGuárico@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Guárico', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Guárico', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Guárico') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Miquel Postigo', 'temploShintoGuárico@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Miquel Postigo', 'temploShintoGuárico.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212909038', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoGuárico@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado La Guaira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado La Guaira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%La Guaira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Luis Maria Maza', 'temploCatolicoLa Guaira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Luis Maria Maza', 'temploCatolicoLaGuaira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412143217', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoLaGuaira@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado La Guaira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado La Guaira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%La Guaira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Moises Casado', 'temploJudioLa Guaira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Moises Casado', 'temploJudioLaGuaira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424379966', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioLaGuaira@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado La Guaira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado La Guaira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%La Guaira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Rufino Sevilla', 'temploIslamicoLa Guaira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Rufino Sevilla', 'temploIslamicoLaGuaira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426659222', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoLaGuaira@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado La Guaira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado La Guaira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%La Guaira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Sebastian Serrano', 'temploHinduLa Guaira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Sebastian Serrano', 'temploHinduLaGuaira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212325264', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduLaGuaira@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado La Guaira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado La Guaira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%La Guaira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Elias Wu', 'temploShintoLa Guaira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Elias Wu', 'temploShintoLaGuaira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212816312', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoLaGuaira@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Lara', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Lara', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Lara') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Raul Calleja', 'temploCatolicoLara@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Raul Calleja', 'temploCatolicoLara.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212499876', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoLara@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Lara', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Lara', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Lara') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Tudela', 'temploJudioLara@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Tudela', 'temploJudioLara.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424523735', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioLara@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Lara', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Lara', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Lara') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Melchor Garriga', 'temploIslamicoLara@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Melchor Garriga', 'temploIslamicoLara.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412197851', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoLara@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Lara', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Lara', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Lara') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Segundo Juarez', 'temploHinduLara@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Segundo Juarez', 'temploHinduLara.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426253717', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduLara@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Lara', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Lara', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Lara') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Victor Manuel Arnaiz', 'temploShintoLara@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Victor Manuel Arnaiz', 'temploShintoLara.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212314678', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoLara@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Mérida', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Mérida', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Mérida') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Florentino Alcazar', 'temploCatolicoMérida@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Florentino Alcazar', 'temploCatolicoMérida.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426166274', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoMérida@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Mérida', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Mérida', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Mérida') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Noe Ordoñez', 'temploJudioMérida@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Noe Ordoñez', 'temploJudioMérida.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412195874', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioMérida@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Mérida', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Mérida', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Mérida') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alexandru Herreros', 'temploIslamicoMérida@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alexandru Herreros', 'temploIslamicoMérida.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424646880', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoMérida@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Mérida', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Mérida', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Mérida') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ramon Amado', 'temploHinduMérida@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ramon Amado', 'temploHinduMérida.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414932763', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduMérida@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Mérida', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Mérida', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Mérida') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Pablo Amado', 'temploShintoMérida@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Pablo Amado', 'temploShintoMérida.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414584010', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoMérida@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Miranda', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Miranda', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Miranda') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Santos', 'temploCatolicoMiranda@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Santos', 'temploCatolicoMiranda.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414962029', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoMiranda@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Miranda', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Miranda', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Miranda') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ignacio Gomez', 'temploJudioMiranda@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ignacio Gomez', 'temploJudioMiranda.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412869588', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioMiranda@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Miranda', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Miranda', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Miranda') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Victor Dardo', 'temploIslamicoMiranda@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Victor Dardo', 'temploIslamicoMiranda.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212192862', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoMiranda@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Miranda', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Miranda', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Miranda') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ricardo Aralla', 'temploHinduMiranda@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ricardo Aralla', 'temploHinduMiranda.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414926623', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduMiranda@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Miranda', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Miranda', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Miranda') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Antonio Morales', 'temploShintoMiranda@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Antonio Morales', 'temploShintoMiranda.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414422634', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoMiranda@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Monagas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Monagas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Monagas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Sebastian Andrade', 'temploCatolicoMonagas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Sebastian Andrade', 'temploCatolicoMonagas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212723150', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoMonagas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Monagas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Monagas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Monagas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ricardo Seguro', 'temploJudioMonagas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ricardo Seguro', 'temploJudioMonagas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412448807', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioMonagas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Monagas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Monagas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Monagas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Luis Uribe', 'temploIslamicoMonagas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Luis Uribe', 'temploIslamicoMonagas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412801428', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoMonagas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Monagas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Monagas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Monagas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'David Mendoza', 'temploHinduMonagas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'David Mendoza', 'temploHinduMonagas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426336689', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduMonagas@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Monagas', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Monagas', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Monagas') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Armando Valencia', 'temploShintoMonagas@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Armando Valencia', 'temploShintoMonagas.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426177649', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoMonagas@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Nueva Esparta', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Nueva Esparta', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Nueva Esparta') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Eduard Contreras', 'temploCatolicoNueva Esparta@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Eduard Contreras', 'temploCatolicoNuevaEsparta.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212183521', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoNuevaEsparta@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Nueva Esparta', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Nueva Esparta', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Nueva Esparta') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Carlos Valdez', 'temploJudioNueva Esparta@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Juan Carlos Valdez', 'temploJudioNuevaEsparta.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426555473', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioNuevaEsparta@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Nueva Esparta', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Nueva Esparta', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Nueva Esparta') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ramon Barrios', 'temploIslamicoNueva Esparta@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ramon Barrios', 'temploIslamicoNuevaEsparta.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426110828', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoNuevaEsparta@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Nueva Esparta', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Nueva Esparta', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Nueva Esparta') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Simon Ital', 'temploHinduNueva Esparta@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Simon Ital', 'temploHinduNuevaEsparta.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424159505', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduNuevaEsparta@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Nueva Esparta', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Nueva Esparta', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Nueva Esparta') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Oscar Burguillos', 'temploShintoNueva Esparta@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Oscar Burguillos', 'temploShintoNuevaEsparta.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212790938', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoNuevaEsparta@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Portuguesa', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Portuguesa', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Portuguesa') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felix Pietro', 'temploCatolicoPortuguesa@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felix Pietro', 'temploCatolicoPortuguesa.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426450051', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoPortuguesa@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Portuguesa', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Portuguesa', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Portuguesa') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Marcano', 'temploJudioPortuguesa@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jesus Marcano', 'temploJudioPortuguesa.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426932930', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioPortuguesa@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Portuguesa', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Portuguesa', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Portuguesa') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Julio Verne', 'temploIslamicoPortuguesa@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Julio Verne', 'temploIslamicoPortuguesa.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426113180', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoPortuguesa@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Portuguesa', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Portuguesa', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Portuguesa') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Octavio Marval', 'temploHinduPortuguesa@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Octavio Marval', 'temploHinduPortuguesa.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426382735', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduPortuguesa@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Portuguesa', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Portuguesa', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Portuguesa') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Joseph Baldillo', 'temploShintoPortuguesa@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Joseph Baldillo', 'temploShintoPortuguesa.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414587193', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoPortuguesa@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Sucre', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Sucre', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Sucre') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Pierino Navarro', 'temploCatolicoSucre@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Pierino Navarro', 'temploCatolicoSucre.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416563075', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoSucre@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Sucre', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Sucre', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Sucre') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Josue Navaez', 'temploJudioSucre@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Josue Navaez', 'temploJudioSucre.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414451494', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioSucre@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Sucre', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Sucre', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Sucre') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felipe Russi', 'temploIslamicoSucre@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Felipe Russi', 'temploIslamicoSucre.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426146324', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoSucre@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Sucre', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Sucre', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Sucre') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alexis Ramos', 'temploHinduSucre@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alexis Ramos', 'temploHinduSucre.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426967384', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduSucre@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Sucre', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Sucre', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Sucre') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Daniel Leon', 'temploShintoSucre@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Daniel Leon', 'temploShintoSucre.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414957692', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoSucre@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Táchira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Táchira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Táchira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Edgar Casco', 'temploCatolicoTáchira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Edgar Casco', 'temploCatolicoTáchira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424448575', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoTáchira@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Táchira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Táchira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Táchira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Joy Ruiz', 'temploJudioTáchira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Joy Ruiz', 'temploJudioTáchira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424987453', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioTáchira@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Táchira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Táchira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Táchira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Carlos Velez', 'temploIslamicoTáchira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Carlos Velez', 'temploIslamicoTáchira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212875144', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoTáchira@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Táchira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Táchira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Táchira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'David Rodriguez', 'temploHinduTáchira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'David Rodriguez', 'temploHinduTáchira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424431192', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduTáchira@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Táchira', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Táchira', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Táchira') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ernesto Roman', 'temploShintoTáchira@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ernesto Roman', 'temploShintoTáchira.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414165525', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoTáchira@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Trujillo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Trujillo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Trujillo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Luis Tapia', 'temploCatolicoTrujillo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Luis Tapia', 'temploCatolicoTrujillo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424222055', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoTrujillo@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Trujillo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Trujillo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Trujillo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Leonardo Saldivar', 'temploJudioTrujillo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Leonardo Saldivar', 'temploJudioTrujillo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412966177', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioTrujillo@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Trujillo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Trujillo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Trujillo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Nestor Zuniga', 'temploIslamicoTrujillo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Nestor Zuniga', 'temploIslamicoTrujillo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212765713', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoTrujillo@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Trujillo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Trujillo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Trujillo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ruben Aguilar', 'temploHinduTrujillo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Ruben Aguilar', 'temploHinduTrujillo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424416535', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduTrujillo@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Trujillo', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Trujillo', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Trujillo') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alfredo Vierya', 'temploShintoTrujillo@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Alfredo Vierya', 'temploShintoTrujillo.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414629382', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoTrujillo@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Yaracuy', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Yaracuy', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Yaracuy') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Brandon Bahuer', 'temploCatolicoYaracuy@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Brandon Bahuer', 'temploCatolicoYaracuy.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212428783', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoYaracuy@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Yaracuy', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Yaracuy', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Yaracuy') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Miguel Quintana', 'temploJudioYaracuy@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Miguel Quintana', 'temploJudioYaracuy.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414149392', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioYaracuy@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Yaracuy', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Yaracuy', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Yaracuy') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Roy Tortua', 'temploIslamicoYaracuy@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Roy Tortua', 'temploIslamicoYaracuy.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416818661', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoYaracuy@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Yaracuy', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Yaracuy', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Yaracuy') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Noe Abduzcan', 'temploHinduYaracuy@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Noe Abduzcan', 'temploHinduYaracuy.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412641926', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduYaracuy@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Yaracuy', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Yaracuy', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Yaracuy') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Chimal Gaeta', 'temploShintoYaracuy@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Chimal Gaeta', 'temploShintoYaracuy.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426947441', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoYaracuy@gmail.com', @templo);
 
-SET @pertenece  = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia') as tablaLugar);
+SET @estado = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia') as tablaLugar);
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Cristianismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Catolico del Estado Zulia', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Catolico del Estado Zulia', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Catolico%Zulia') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Mario Cartagena', 'temploCatolicoZulia@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Mario Cartagena', 'temploCatolicoZulia.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416753182', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('CatolicoZulia@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Judaismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Judio del Estado Zulia', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Judio del Estado Zulia', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Judio%Zulia') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Montes', 'temploJudioZulia@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Jose Montes', 'temploJudioZulia.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414103351', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('JudioZulia@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Islamismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Islamico del Estado Zulia', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Islamico del Estado Zulia', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Islamico%Zulia') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Steve Arguello', 'temploIslamicoZulia@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Steve Arguello', 'temploIslamicoZulia.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416111597', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('IslamicoZulia@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Hinduismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Hindu del Estado Zulia', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Hindu del Estado Zulia', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Hindu%Zulia') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Joel Fener', 'temploHinduZulia@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'Joel Fener', 'temploHinduZulia.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426968866', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('HinduZulia@gmail.com', @templo);
 
 SET @religion = (SELECT pkReligion FROM (SELECT id_religion as pkReligion FROM arma_tu_fiesta.religion WHERE nombre = 'Shintoismo') as tablaReligion);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo,  fk_localizacion) VALUES ('Principal Templo Shinto del Estado Zulia', 'Templo', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Principal Templo Shinto del Estado Zulia', 'Templo', @pertenece);
 SET @templo = (SELECT pkTemplo FROM (SELECT id_locacion as pkTemplo FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Shinto%Zulia') as tablaTemplo);
-INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'David Ruiz', 'temploShintoZulia@gmail.com', @religion);
+INSERT INTO arma_tu_fiesta.templo (fk_templo, parroco, web, fk_religion) VALUES (@templo, 'David Ruiz', 'temploShintoZulia.com.ve', @religion);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416659591', @templo);
+INSERT INTO arma_tu_fiesta.email (correo, fk_locacion) VALUES ('ShintoZulia@gmail.com', @templo);
 
 -- ++++++++++++++++++++++++++++++++++ HORARIO +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -17800,1204 +17945,1492 @@ SET @turno = (SELECT pkTurno FROM (SELECT id_horario as pkTurno FROM arma_tu_fie
 INSERT INTO arma_tu_fiesta.templo_horario (fk_templo,fk_horario) VALUES (@templo, @turno);
 
 -- +++++++++++++++++++++++++++++++++++  NOTARIAS  +++++++++++++++++++++++++++++++++++++++++++++++++++++
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Amazonas', 'Notaria', @pertenece);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Amazonas')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Idoia Carrion');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Amazonas', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Amazonas' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Idoia Carrion');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426570688', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Anzoátegui', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Anzoátegui', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Anzoátegui' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Jesus Antonio Zhu');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412307320', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Anzoátegui')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Jesus Antonio Zhu');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Apure', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Apure' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Martin Revilla');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424811253', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Apure', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Aragua', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Aragua' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Juan Pablo Calle');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412209079', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Apure')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Martin Revilla');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Barinas', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Barinas' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Teofilo de Haro');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412610686', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Aragua', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Bolívar', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Bolívar' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Oriol Estrada');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416473732', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Aragua')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Juan Pablo Calle');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Carabobo', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Carabobo' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Francisco Jose Guirao');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426258641', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Barinas', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Cojedes', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Cojedes' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Elias Padron');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414943604', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Barinas')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Teofilo de Haro');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Delta Amacuro', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Delta Amacuro' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Arnau Mejias');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424514729', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Bolívar', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Distrito Capital', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Distrito Capital' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Avelino Aranda');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212421457', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Bolívar')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Oriol Estrada');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Falcón', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Falcón' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Yeray Cruz');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414209107', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Carabobo', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Guárico', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Guárico' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Alejandro Casado');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212877586', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Carabobo')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Francisco Jose Guirao');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de La Guaira', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%La Guaira' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Luis Maria Maza');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414676743', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Cojedes', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Lara', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Lara' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Victor Manuel Arnaiz');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416701341', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Cojedes')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Elias Padron');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Mérida', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Mérida' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Pablo Amado');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424908809', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Delta Amacuro', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Miranda', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Miranda' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Jose Santos');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0414215179', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Delta Amacuro')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Arnau Mejias');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Monagas', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Monagas' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Sebastian Andrade');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412628472', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Distrito Capital', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Nueva Esparta', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Nueva Esparta' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Oscar Burguillos');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424524471', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Distrito Capital')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Avelino Aranda');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Portuguesa', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Portuguesa' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Octavio Marval');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0426550376', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Falcón', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Sucre', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Sucre' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Daniel Leon');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212254311', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Falcón')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Yeray Cruz');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Táchira', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Táchira' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Ernesto Roman');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0424393777', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Guárico', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Trujillo', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Trujillo' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Leonardo Saldivar');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0412518268', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Guárico')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Alejandro Casado');
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Yaracuy', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Yaracuy' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Brandon Bahuer');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0212671128', @Notaria);
 
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado La Guaira', 'Notaria', @pertenece);
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia') tablaLugar);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria de Zulia', 'Notaria', @pertenece);
+SET @Notaria = (SELECT pkLocacion FROM (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE '%Zulia' AND tipo = 'Notaria') as tablaNotaria);
+INSERT INTO arma_tu_fiesta.notaria (fk_Notaria, nombre_notario) VALUES (@Notaria, 'Mario Cartagena');
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_locacion) VALUES ('0416653731', @Notaria);
 
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%La Guaira')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Luis Maria Maza');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Lara', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Lara')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Victor Manuel Arnaiz');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Mérida', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Mérida')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Pablo Amado');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Miranda', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Miranda')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Jose Santos');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Monagas', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Monagas')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Sebastian Andrade');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Nueva Esparta', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Nueva Esparta')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Oscar Burguillos');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Portuguesa', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Portuguesa')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Octavio Marval');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Sucre', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Sucre')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Daniel Leon');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Táchira', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Táchira')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Ernesto Roman');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Trujillo', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Trujillo')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Leonardo Saldivar');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Yaracuy', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Yaracuy')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Brandon Bahuer');
-
-SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Primera Notaria del Estado Zulia', 'Notaria', @pertenece);
-
-SET @fk_notaria = (SELECT pkLocacion FROM
-	 (SELECT id_locacion as pkLocacion FROM arma_tu_fiesta.locacion WHERE nombre LIKE 'Primera%Zulia')
-	as tablanotaria);
-INSERT INTO arma_tu_fiesta.notaria (fk_notaria, nombre_notario) VALUES (@fk_notaria, 'Mario Cartagena');
-
--- ++++++++++++++++++++++++++++++++++ RESTAURANTE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- ++++++++++++++++++++++++++++++++++ RESTAURANTES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Alto Orinoco (La Esmeralda)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Alto', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Alto', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414891519', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Atabapo (San Fernando de Atabapo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Atabapo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Atabapo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426233147', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Atures (Puerto Ayacucho)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Atures', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Atures', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412238859', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Autana (Isla Ratón)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Autana', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Autana', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414413812', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Manapiare (San Juan de Manapiare)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Manapiare', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Manapiare', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426773674', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Maroa (Maroa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Maroa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Maroa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212465535', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Río Negro (San Carlos de Río Negro)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Río', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Río', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416691975', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Anaco (Anaco)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Anaco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424526134', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Aragua (Aragua de Barcelona)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Aragua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Aragua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212571837', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (Barcelona)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426164328', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bruzual (Clarines)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Bruzual', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Bruzual', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424519718', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cajigal (Onoto)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Cajigal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Cajigal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212942178', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Carvajal (Valle de Guanape)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Carvajal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Carvajal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416798388', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Freites (Cantaura)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Freites', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Freites', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212801007', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Guanipa (San José de Guanipa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Guanipa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Guanipa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424654834', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Guanta (Guanta)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Guanta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Guanta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412241108', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Independencia (Soledad)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Independencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Independencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414192826', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertad (San Mateo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Libertad', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Libertad', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414114865', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'McGregor (El Chaparro)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de McGregor', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera McGregor', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212872457', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Miranda (Pariaguán)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424710982', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Monagas (Mapire)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Monagas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416383736', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Peñalver (Puerto Píritu)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Peñalver', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Peñalver', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412776142', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Píritu (Píritu)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Píritu', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Píritu', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426926215', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Juan de Capistrano (Boca de Uchire)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416797849', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Santa Ana (Santa Ana)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426735911', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Simón Rodríguez (El Tigre)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Simón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Simón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212912701', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sotillo (Puerto La Cruz)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Sotillo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Sotillo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416207075', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Urbaneja (Lechería)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Urbaneja', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Urbaneja', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414665402', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Achaguas (Achaguas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Achaguas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Achaguas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414408407', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Biruaca (Biruaca)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Biruaca', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Biruaca', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412266826', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Camejo (San Juan de Payara)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Camejo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Camejo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412878112', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Muñoz (Bruzual)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Muñoz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Muñoz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416946289', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Páez (Guasdualito)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Páez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Páez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416316508', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Rómulo Gallegos (Elorza)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Rómulo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Rómulo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212977920', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Fernando (San Fernando de Apure)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212688547', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Alcántara (Santa Rita)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Alcántara', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Alcántara', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416538477', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (San Mateo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414125047', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Camatagua (Camatagua)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Camatagua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Camatagua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414469668', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Girardot (Maracay)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Girardot', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Girardot', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424115080', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Iragorry (El Limón)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Iragorry', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Iragorry', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412439695', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Lamas (Santa Cruz de Aragua)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Lamas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Lamas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416306124', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Palo Negro)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212645635', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Mariño (Turmero)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Mariño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Mariño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426342480', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Michelena (Las Tejerías)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Michelena', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Michelena', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212850014', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ocumare de la Costa de Oro (Ocumare de la Costa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Ocumare', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Ocumare', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426763978', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Revenga (El Consejo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Revenga', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Revenga', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426745384', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ribas (La Victoria)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Ribas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Ribas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412690572', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Casimiro (San Casimiro)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212524991', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Sebastián (San Sebastián de Los Reyes)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424550152', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Cagua)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416600283', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Tovar (Colonia Tovar)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Tovar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212950798', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Urdaneta (Barbacoas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212930042', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Zamora (Villa de Cura)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Zamora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Zamora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416673679', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Alberto Arvelo Torrealba (Sabaneta)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Alberto', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Alberto', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414942436', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Andrés Eloy Blanco (El Cantón)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426942789', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Antonio José de Sucre (Socopó)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Antonio', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426330386', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Arismendi (Arismendi)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Arismendi', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Arismendi', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416685238', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Barinas (Barinas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Barinas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Barinas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426843803', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (Barinitas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414516370', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cruz Paredes (Barrancas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Cruz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Cruz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416721252', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ezequiel Zamora (Santa Bárbara)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Ezequiel', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Ezequiel', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414501527', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Obispos (Obispos)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Obispos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Obispos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414808210', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Pedraza (Ciudad Bolivia)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Pedraza', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Pedraza', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212730809', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Rojas (Libertad)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Rojas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Rojas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424799039', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sosa (Ciudad de Nutrias)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Sosa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Sosa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212257633', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Angostura (Ciudad Piar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Angostura', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Angostura', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424219397', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Angostura del Orinoco (Ciudad Bolívar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Angostura', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Angostura', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414760225', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Caroní (Ciudad Guayana)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Caroní', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Caroní', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416755388', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cedeño (Caicara del Orinoco)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Cedeño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Cedeño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426873152', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Chien (El Palmar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Chien', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Chien', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426692911', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'El Callao (El Callao)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera El', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de El', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424915483', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Gran Sabana (Santa Elena de Uairén)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Gran', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Gran', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412987209', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Piar (Upata)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Piar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Piar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426368913', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Roscio (Guasipati)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Roscio', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Roscio', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424123440', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sifontes (El Dorado)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Sifontes', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412563370', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Maripa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212237553', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bejuma (Bejuma)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Bejuma', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Bejuma', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412143700', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Carlos Arvelo (Güigüe)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Carlos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Carlos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212364250', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Diego Ibarra (Mariara)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Diego', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Diego', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212289044', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Guacara (Guacara)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Guacara', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Guacara', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416687195', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Tocuyito)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414256231', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Los Guayos (Los Guayos)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Los', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Los', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212539266', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Miranda (Miranda)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426590810', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Mora (Morón)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Mora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Mora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416104150', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Montalbán (Montalbán)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Montalbán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Montalbán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426960214', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Naguanagua ( Naguanagua)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Naguanagua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Naguanagua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412803910', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Puerto Cabello (Puerto Cabello)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Puerto', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Puerto', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414641576', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Diego (San Diego)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412994004', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Joaquín (San Joaquín)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412739370', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Valencia (Valencia)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Valencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Valencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414526551', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Anzoátegui (Cojedes)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Anzoátegui', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Anzoátegui', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426933865', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Tinaquillo (Tinaquillo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Tinaquillo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Tinaquillo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412275665', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Girardot (El Baúl)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Girardot', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Girardot', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414535736', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Lima Blanco (Macapo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Lima', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Lima', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426687162', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Pao de San Juan Bautista (El Pao)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Pao', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Pao', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416379956', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ricaurte (Libertad)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Ricaurte', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Ricaurte', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212328579', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Rómulo Gallegos (Las Vegas)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Rómulo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414473305', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ezequiel Zamora (San Carlos)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Ezequiel', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Ezequiel', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412310652', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Tinaco (Tinaco)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Tinaco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Tinaco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416748969', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Antonio Díaz') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Antonio', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Antonio', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424963305', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Casacoima (Sierra Imataca)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Casacoima', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Casacoima', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414668635', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Pedernales (Pedernales)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Pedernales', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Pedernales', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212717680', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Tucupita (Tucupita)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Tucupita', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Tucupita', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212300966', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Caracas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426739845', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Acosta (San Juan de los Cayos)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Acosta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Acosta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212664627', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (San Luis)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414572621', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Buchivacoa (Capatárida)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Buchivacoa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414677959', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Carirubana (Punto Fijo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Carirubana', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Carirubana', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212963592', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Colina (La Vela de Coro)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Colina', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412129859', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Dabajuro (Dabajuro)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Dabajuro', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Dabajuro', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212119698', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Democracia (Pedregal)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Democracia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Democracia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416318342', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Falcón (Pueblo Nuevo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Falcón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Falcón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412373397', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Federación (Churuguara)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Federación', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Federación', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414852775', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Iturriza (Chichiriviche)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Iturriza', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Iturriza', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416105857', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Jacura (Jacura)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Jacura', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212589072', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Los Taques (Santa Cruz de Los Taques)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Los', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Los', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412896580', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Manaure (Yaracal)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Manaure', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Manaure', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424221680', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Mauroa (Mene de Mauroa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Mauroa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Mauroa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414400509', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Miranda (Santa Ana de Coro)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416841954', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Palmasola (Palmasola)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Palmasola', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Palmasola', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412884648', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Petit (Cabure)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Petit', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Petit', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424480659', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Píritu (Píritu)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Píritu', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Píritu', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212994910', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Francisco (Mirimire)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212547239', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (La Cruz de Taratara)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212593555', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Silva (Tucacas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Silva', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Silva', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416237198', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Tocópero (Tocópero)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Tocópero', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Tocópero', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426242782', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Unión (Santa Cruz de Bucaral)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Unión', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Unión', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426460468', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Urumaco (Urumaco)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Urumaco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Urumaco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412232660', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Zamora (Puerto Cumarebo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Zamora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Zamora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416666749', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Camaguán (Camaguán)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Camaguán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Camaguán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412688504', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Chaguaramas (Chaguaramas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Chaguaramas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Chaguaramas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424514112', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'El Socorro (El Socorro)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de El', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de El', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414559308', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Las Mercedes (Las Mercedes)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Las', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Las', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212274109', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Leonardo Infante (Valle de La Pascua)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Leonardo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Leonardo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424390667', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Julián Mellado (El Sombrero)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Julián', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Julián', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424130881', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Francisco de Miranda (Calabozo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Francisco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Francisco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424468618', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Monagas (Altagracia de Orituco)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Monagas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Monagas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426165108', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ortiz (Ortiz)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Ortiz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Ortiz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424919276', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ribas (Tucupido)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Ribas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Ribas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412386127', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Roscio (San Juan de Los Morros)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Roscio', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Roscio', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412438492', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Gerónimo de Guayabal (Guayabal)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424385552', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San José de Guaribe (San José de Guaribe)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416508180', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Santa María de Ipire (Santa María de Ipire)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412706108', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Zaraza (Zaraza)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Zaraza', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Zaraza', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414736771', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Vargas (La Guaira)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Vargas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Vargas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426301267', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Blanco (Sanare)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Blanco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Blanco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424695183', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Crespo (Duaca)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Crespo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Crespo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426368854', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Iribarren (Barquisimeto)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Iribarren', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Iribarren', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426950114', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Jiménez (Quibor)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Jiménez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Jiménez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416541085', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Morán (El Tocuyo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Morán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Morán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416970440', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Palavecino (Cabudare)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Palavecino', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Palavecino', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212729719', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Planas (Sarare)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Planas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Planas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412897566', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Torres (Carora)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Torres', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Torres', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412439586', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Urdaneta (Siquisique)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426452409', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Adriani (El Vigía)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Adriani', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Adriani', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426840537', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Andrés Bello (La Azulita)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424891842', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Aricagua (Aricagua)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Aricagua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Aricagua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416632167', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Briceño (Torondoy)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Briceño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Briceño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414503231', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Chacón (Canaguá)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Chacón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Chacón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426490743', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Campo Elías (Ejido)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Campo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Campo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412968547', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Dávila (Bailadores)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Dávila', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Dávila', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426780168', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Febres Cordero (Nueva Bolivia)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Febres', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Febres', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414850044', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Guaraque (Guaraque)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Guaraque', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Guaraque', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426818381', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Mérida)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416128968', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Miranda (Timotes)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414214603', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Noguera (Santa María de Caparo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Noguera', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Noguera', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212367564', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Parra Olmedo (Tucaní)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Parra', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Parra', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426814153', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Pinto Salinas (Santa Cruz de Mora)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Pinto', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Pinto', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414109860', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Pueblo Llano (Pueblo Llano)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Pueblo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Pueblo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414248501', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Quintero (Santo Domingo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Quintero', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Quintero', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426729378', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Rangel (Mucuchíes)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Rangel', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Rangel', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412367897', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ramos de Lora (Santa Elena de Arenales)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Ramos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Ramos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414920396', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Salas (Arapuey)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Salas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Salas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212912567', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Marquina (Tabay)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Marquina', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Marquina', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416287863', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Lagunillas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212998918', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Tovar (Tovar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Tovar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Tovar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426854279', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Zea (Zea)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Zea', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Zea', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212394168', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Acevedo (Caucagua)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Acevedo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Acevedo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412530735', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Andrés Bello (San José de Barlovento)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412309758', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Baruta (Baruta)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Baruta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Baruta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416606139', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Brión (Higuerote)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Brión', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Brión', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414290564', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (San Francisco de Yare)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426650081', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Buroz (Mamporal)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Buroz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Buroz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426543568', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Carrizal (Carrizal)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Carrizal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Carrizal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416689306', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Chacao (Chacao)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Chacao', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Chacao', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416137140', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cristóbal Rojas (Charallave)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Cristóbal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Cristóbal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212320657', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'El Hatillo (El Hatillo)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de El', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426950237', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Guaicaipuro (Los Teques)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Guaicaipuro', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Guaicaipuro', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412232821', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Gual (Cúpira)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Gual', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412852801', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Independencia (Santa Teresa del Tuy)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Independencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Independencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416821896', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Lander (Ocumare del Tuy)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Lander', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Lander', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412157835', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Los Salias (San Antonio de los Altos)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Los', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Los', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426322557', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Páez (Río Chico)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Páez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Páez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414107789', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Paz Castillo (Santa Lucía)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Paz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Paz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416445830', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Plaza (Guarenas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Plaza', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Plaza', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414550765', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Petare)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424874483', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Urdaneta (Cúa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424541667', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Zamora (Guatire)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Zamora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Zamora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212966416', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Acosta (San Antonio de Capayacuar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Acosta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Acosta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424571888', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Aguasay (Aguasay)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Aguasay', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Aguasay', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416366844', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (Caripito)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426710384', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Caripe (Caripe)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Caripe', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Caripe', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412676281', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cedeño (Caicara de Maturín)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Cedeño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414493180', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Temblador)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426301962', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Maturín (Maturín)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Maturín', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Maturín', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416779635', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Piar (Aragua de Maturín)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Piar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Piar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424423799', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Punceres (Quiriquire)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Punceres', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Punceres', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426537536', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Santa Bárbara (Santa Bárbara)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424147667', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sotillo (Barrancas del Orinoco)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Sotillo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Sotillo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426883481', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Uracoa (Uracoa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Uracoa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Uracoa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212487864', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Zamora (Punta de Mata)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Zamora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Zamora', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412672418', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Antolín del Campo (Paraguachí)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Antolín', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416293855', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Arismendi (La Asunción)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Arismendi', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Arismendi', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416550074', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Díaz (San Juan Bautista)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Díaz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Díaz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424958798', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'García (El Valle)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de García', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416799855', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Gómez (Santa Ana)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Gómez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Gómez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424619233', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Macanao (Boca de Río)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Macanao', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Macanao', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414955700', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Maneiro (Pampatar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Maneiro', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Maneiro', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424509957', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Marcano (Juan Griego)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Marcano', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Marcano', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426708534', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Mariño (Porlamar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Mariño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Mariño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212101982', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Tubores (Punta de Piedras)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Tubores', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212908000', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Villalba (San Pedro de Coche)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Villalba', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Villalba', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414238606', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Agua Blanca (Agua Blanca)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Agua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Agua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426584281', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Araure (Araure)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Araure', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Araure', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212690706', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Esteller (Píritu)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Esteller', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Esteller', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414643639', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Guanare (Guanare)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Guanare', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Guanare', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416359969', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Guanarito (Guanarito)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Guanarito', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Guanarito', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212359324', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ospino (Ospino)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Ospino', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Ospino', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416707712', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Páez (Acarigua)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Páez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Páez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212576155', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Papelón (Papelón)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Papelón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Papelón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424105331', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Genaro de Boconoíto (Boconoíto)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426813365', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Rafael de Onoto (San Rafael de Onoto)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414260240', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Santa Rosalía (El Playón)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414537719', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Biscucuy)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416511794', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Turén (Villa Bruzual)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Turén', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Turén', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426629022', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Unda (Chabasquén)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Unda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Unda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424890813', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Arismendi (Río Caribe)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Arismendi', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Arismendi', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414390989', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Benítez (El Pilar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Benítez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Benítez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426421506', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bermúdez (Carúpano)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Bermúdez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Bermúdez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212355415', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Blanco (Casanay)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Blanco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Blanco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416690031', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (Marigüitar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416657938', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cajigal (Yaguaraparo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Cajigal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Cajigal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416684702', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cruz Salmerón Acosta (Araya)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Cruz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Cruz', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414792670', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Tunapuy)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426566452', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Mariño (Irapa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Mariño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Mariño', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412570430', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Mata (San José de Aerocuar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Mata', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Mata', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424379310', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Mejía (San Antonio del Golfo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Mejía', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Mejía', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416548977', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Montes (Cumanacoa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Montes', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Montes', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414173462', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ribero (Cariaco)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Ribero', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Ribero', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426851509', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Cumaná)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424114503', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Valdez (Güiria)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Valdez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Valdez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426206382', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Andrés Bello (Cordero)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212947250', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ayacucho (Colón)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Ayacucho', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Ayacucho', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426622889', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (San Antonio del Táchira)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412741612', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cárdenas (Táriba)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Cárdenas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Cárdenas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426253658', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Córdoba (Santa Ana de Táchira)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Córdoba', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Córdoba', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426852856', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Fernández (San Rafael del Piñal)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Fernández', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Fernández', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426649476', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Guásimos (Palmira)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Guásimos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Guásimos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414977020', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Hevia (La Fría)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Hevia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Hevia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426214067', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Independencia (Capacho Nuevo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Independencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Independencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412295720', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Jáuregui (La Grita)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Jáuregui', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Jáuregui', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426253311', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Junín (Rubio)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Junín', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Junín', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426167253', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertad (Capacho Viejo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Libertad', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Libertad', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414407480', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Abejales)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Libertador', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426354855', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Lobatera (Lobatera)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Lobatera', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Lobatera', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416216204', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Maldonado (La Tendida)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Maldonado', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Maldonado', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412810878', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Michelena (Michelena)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Michelena', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Michelena', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412258373', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Miranda (San José de Bolívar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212555235', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Panamericano (Coloncito)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Panamericano', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Panamericano', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212488144', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Rómulo Costa (Las Mesas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Rómulo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Rómulo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414975037', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Cristóbal (San Cristóbal)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426944957', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Judas Tadeo (Umuquena)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416490387', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Seboruco (Seboruco)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Seboruco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Seboruco', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414392633', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Simón Rodríguez (San Simón)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Simón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Simón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416896075', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Queniquea)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424467657', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Torbes (San Josecito)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Torbes', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Torbes', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414395220', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Urdaneta (Delicias)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412448979', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Ureña (Ureña)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Ureña', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Ureña', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414820158', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Uribante (Pregonero)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Uribante', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Uribante', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414762884', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Vargas (El Cobre)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Vargas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Vargas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424610991', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Andrés Bello (Santa Isabel)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Andrés', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212322858', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Boconó (Boconó)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Boconó', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Boconó', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424710768', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (Sabana Grande)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212512122', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Candelaria (Chejendé)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Candelaria', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Candelaria', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212994065', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Carache (Carache)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Carache', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426803663', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Campos Elías (Campo Elías)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Campos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Campos', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424830441', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Carvajal (Carvajal)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Carvajal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Carvajal', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212812184', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Escuque (Escuque)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Escuque', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Escuque', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426529015', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'La Ceiba (Santa Apolonia)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de La', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414725040', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Márquez Cañizales (El Paradero)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Márquez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Márquez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424716926', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Miranda (El Dividive)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414406148', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Monte Carmelo (Monte Carmelo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Monte', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Monte', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212837922', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Motatán (Motatán)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Motatán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Motatán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426623865', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Pampán (Pampán)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Pampán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Pampán', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412324025', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Pampanito (Pampanito)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Pampanito', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Pampanito', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426439198', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Rangel (Betijoque)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Rangel', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Rangel', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426250191', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Sabana de Mendoza)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414174478', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Trujillo (Trujillo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Trujillo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Trujillo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424808027', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Urdaneta (La Quebrada)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Urdaneta', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424287707', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Valera (Valera)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Valera', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Valera', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426232359', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Arístides Bastidas (San Pablo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Arístides', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Arístides', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416558047', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (Aroa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212491051', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bruzual (Chivacoa)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Bruzual', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Bruzual', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414448347', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cocorote (Cocorote)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Cocorote', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Cocorote', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412990582', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Independencia (Independencia)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Independencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Independencia', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424955679', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'La Trinidad (Boraure)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de La', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de La', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424525531', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Monge (Yumare)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Brisas de Monge', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Monge', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414984275', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Nirgua (Nirgua)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Nirgua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Nirgua', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416664469', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Páez (Sabana de Parra)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Páez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Páez', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212807518', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Peña (Yaritagua)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Peña', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424778172', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Felipe (San Felipe)') as tablaLugar);
 INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416801799', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Guama)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426488620', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Urachiche (Urachiche)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Urachiche', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Urachiche', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212874932', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Veroes (Farriar)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Veroes', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Veroes', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414270226', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Bolívar (Tía Juana)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Bolívar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412485946', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Baralt (San Timoteo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Baralt', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Baralt', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212212940', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Cabimas (Cabimas)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Cabimas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Cabimas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424359953', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Catatumbo (Encontrados)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Catatumbo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Catatumbo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414129761', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Colón (San Carlos del Zulia)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Colón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Colón', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426787848', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Guajira (Sinamaica)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Guajira', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Guajira', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416150634', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Padilla (El Toro)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Padilla', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Padilla', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416214105', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Pulgar (Pueblo Nuevo-El Chivo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Fusion Asiatica de Pulgar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Pulgar', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416557092', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Lossada (La Concepción)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Lossada', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Lossada', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212647381', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Semprún (Casigua El Cubo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Semprún', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bolognesa de Semprún', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212299125', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'La Cañada de Urdaneta (Concepción)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de La', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet La', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212520774', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Lagunillas (Ciudad Ojeda)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Lagunillas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Lagunillas', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412386572', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Machiques (Machiques)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Mar y Tierra de Machiques', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Hornos de Machiques', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426692432', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Mara (San Rafael del Moján)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Mara', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Mara', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412552540', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Maracaibo (Maracaibo)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Maracaibo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Maracaibo', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412664365', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Miranda (Los Puertos de Altagracia)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Gourtmet Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Churrasqueria de Miranda', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414724471', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Rosario (La Villa del Rosario)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Tacos de Rosario', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Grill de Rosario', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424506175', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'San Francisco (San Francisco)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de San', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426910416', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Santa Rita (Santa Rita)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Pizzeria de Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Bistro de Santa', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412408464', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Sucre (Bobures)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Los Costillas de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Burritos de Sucre', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414178948', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Valmore Rodríguez (Bachaquero)') as tablaLugar);
-INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Arepera Valmore', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.locacion (nombre, tipo, fk_localizacion) VALUES ('Parrillera de Valmore', 'Restaurante', @pertenece);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416974632', @proveedor);
 
 -- ++++++++++++++++++++++++++++++++++ CURSOS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -19075,7 +19508,149 @@ INSERT INTO arma_tu_fiesta.curso (nombre, fk_templo) VALUES ('Matrimonial Basico
 
 -- ++++++++++++++++++++++++++++++++++ FLORISTERIAS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-84003841\-0', 'Licania', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-84003841\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412358736', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Licania.com.ve', @proveedor);
 
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-10029403\-0', 'Zamia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-10029403\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412318886', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Zamia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-73580992\-0', 'Magnolia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-73580992\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426786131', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Magnolia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Aragua') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-81560816\-0', 'Xylosma', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-81560816\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412318393', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Xylosma.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Barinas') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-84993095\-0', 'Oenocarpus', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-84993095\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424544802', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Oenocarpus.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Bolívar') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-94885566\-0', 'Xylosma', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-94885566\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212449164', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Xylosma.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Carabobo') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-66390335\-0', 'Zamia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-66390335\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412775859', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Zamia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Cojedes') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-16031039\-0', 'Oenocarpus', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-16031039\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416628328', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Oenocarpus.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Delta Amacuro') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-97161813\-0', 'Zamia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-97161813\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0416361453', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Zamia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Distrito Capital') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-88948301\-0', 'Rollinia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-88948301\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212382909', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Rollinia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Falcón') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-86893008\-0', 'Romeroa', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-86893008\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414183949', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Romeroa.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Guárico') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-55276228\-0', 'Grias', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-55276228\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414430647', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Grias.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'La Guaira') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-98337681\-0', 'Prunus', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-98337681\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212966470', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Prunus.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Lara') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-94824130\-0', 'Zamia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-94824130\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426616737', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Zamia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Mérida') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-37390349\-0', 'Brunellia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-37390349\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212553304', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Brunellia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Miranda') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-42596543\-0', 'Guarea', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-42596543\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412932843', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Guarea.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Monagas') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-58742158\-0', 'Miconea', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-58742158\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414564774', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Miconea.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Nueva Esparta') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-91951047\-0', 'Espeletia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-91951047\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414983302', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Espeletia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Portuguesa') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-36261388\-0', 'Espeletia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-36261388\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212359692', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Espeletia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Sucre') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-98892436\-0', 'Brunellia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-98892436\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212198967', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Brunellia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Táchira') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-35705669\-0', 'Zamia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-35705669\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212529248', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Zamia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Trujillo') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-92757916\-0', 'Wettinia', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-92757916\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424520250', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Wettinia.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Yaracuy') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-21074443\-0', 'Calatola', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-21074443\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212591595', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Calatola.com.ve', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Zulia') as tablaLugar);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, tipo, fk_ubicado) VALUES ('J\-49246678\-0', 'Guarea', 'Jardines de Babilonia C.A.', 'Floristeria', @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-49246678\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426652325', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Guarea.com.ve', @proveedor);
 
 -- ++++++++++++++++++++++++++++++++++   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- ++++++++++++++++++++++++++++++++++   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
