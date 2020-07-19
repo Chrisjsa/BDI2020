@@ -155,7 +155,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.punto_de_referencia (
     descripcion            VARCHAR(80) NOT NULL,
     fk_salon_de_fiesta     INT  NOT NULL,
     CONSTRAINT pk_punto PRIMARY KEY (id_punto),
-        CONSTRAINT fk_punto_locacion FOREIGN KEY (fk_salon_de_fiesta) REFERENCES arma_tu_fiesta.locacion (id_locacion)
+        CONSTRAINT fk_punto_locacion FOREIGN KEY (fk_salon_de_fiesta) REFERENCES arma_tu_fiesta.salon_de_fiesta (fk_salon)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.caracteristica (
@@ -170,7 +170,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.caracteristica_salon (
     fk_caracteristica      INT  NOT NULL,
     cantidad               INT  NOT NULL,
     CONSTRAINT pk_caract_salon PRIMARY KEY (id_caract_salon),
-        CONSTRAINT fk_caract_salon_locacion FOREIGN KEY (fk_salon_de_fiesta) REFERENCES arma_tu_fiesta.locacion (id_locacion),
+        CONSTRAINT fk_caract_salon_locacion FOREIGN KEY (fk_salon_de_fiesta) REFERENCES arma_tu_fiesta.salon_de_fiesta (fk_salon),
         CONSTRAINT fk_caract_salon_caracteristica FOREIGN KEY (fk_caracteristica) REFERENCES arma_tu_fiesta.caracteristica (id_caracteristica)
 );
 
@@ -179,16 +179,15 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.curso (
     nombre                 VARCHAR(80) NOT NULL,
     fk_templo              INT  NOT NULL,
     CONSTRAINT pk_curso PRIMARY KEY (id_curso),
-        CONSTRAINT fk_curso_templo FOREIGN KEY (fk_templo) REFERENCES arma_tu_fiesta.locacion (id_locacion)
+        CONSTRAINT fk_curso_templo FOREIGN KEY (fk_templo) REFERENCES arma_tu_fiesta.templo (fk_templo)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.telefono (
     id_telefono            INT  NOT NULL AUTO_INCREMENT,
-    telefonica             VARCHAR(80) NOT NULL,
     numero                 VARCHAR(80) NOT NULL,
-    fk_persona             INT  NULL,
-    fk_proveedor           INT  NULL,
-    fk_locacion            INT  NULL,
+    fk_persona             INT NULL,
+    fk_proveedor           INT NULL,
+    fk_locacion            INT NULL,
     CONSTRAINT pk_telefono PRIMARY KEY (id_telefono),
         CONSTRAINT fk_telefono_persona FOREIGN KEY (fk_persona) REFERENCES arma_tu_fiesta.persona (id_persona),
         CONSTRAINT fk_telefono_proveedor FOREIGN KEY (fk_proveedor) REFERENCES arma_tu_fiesta.proveedor (id_proveedor),
@@ -198,10 +197,9 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.telefono (
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.email (
     id_email               INT  NOT NULL AUTO_INCREMENT,
     correo                 VARCHAR(80) NOT NULL,
-    dominio                VARCHAR(80) NOT NULL,
-    fk_persona             INT  NULL,
-    fk_proveedor           INT  NULL,
-    fk_locacion            INT  NULL,
+    fk_persona             INT NULL,
+    fk_proveedor           INT NULL,
+    fk_locacion            INT NULL,
     CONSTRAINT pk_email PRIMARY KEY (id_email),
         CONSTRAINT fk_email_persona FOREIGN KEY (fk_persona) REFERENCES arma_tu_fiesta.persona (id_persona),
         CONSTRAINT fk_email_proveedor FOREIGN KEY (fk_proveedor) REFERENCES arma_tu_fiesta.proveedor (id_proveedor),
@@ -227,7 +225,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.persona_tramite (
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.categoria (
     id_categoria           INT NOT NULL AUTO_INCREMENT,
     nombre                 INT NOT NULL,
-    CONSTRAINT pk_producto_producto PRIMARY KEY (id_categoria)
+    CONSTRAINT pk_categoria PRIMARY KEY (id_categoria)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.descuento (
@@ -243,8 +241,8 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.producto (
     nombre                 VARCHAR(80) NOT NULL,
     descripcion            VARCHAR(80) NOT NULL,
     precio                 NUMERIC NOT NULL,
-    fk_descuento           INT  NOT NULL,
-    fk_categoria           INT  NOT NULL,
+    fk_descuento           INT NULL,
+    fk_categoria           INT NOT NULL,
     CONSTRAINT pk_producto PRIMARY KEY (id_producto),
         CONSTRAINT fk_producto_categoria FOREIGN KEY (fk_categoria) REFERENCES arma_tu_fiesta.categoria (id_categoria),
         CONSTRAINT fk_producto_descuento FOREIGN KEY (fk_descuento) REFERENCES arma_tu_fiesta.descuento (id_descuento)
@@ -309,6 +307,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.cita (
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.evento (
     id_evento              INT  NOT NULL AUTO_INCREMENT,
+    nombre                 VARCHAR(80) NOT NULL,
     tipo                   VARCHAR(80) NOT NULL,
     tema                   VARCHAR(80) NOT NULL,
     cortejo                VARCHAR(80) NULL,
