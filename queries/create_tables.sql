@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.rol_permiso (
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.categoria (
     id_categoria           INT NOT NULL AUTO_INCREMENT,
-    nombre                 INT NOT NULL,
+    nombre                 VARCHAR(80) NOT NULL,
     CONSTRAINT pk_categoria PRIMARY KEY (id_categoria)
 );
 
