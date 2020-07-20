@@ -28,18 +28,6 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="tamaño" id="244E347D-F3D7-BEB5-97DD-E86AD8ACC19E">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-14 22:50:05 UTC</createdTime>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>DOM2025000</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="capacidad_personas" id="2589A6D8-BC25-1F2D-CC63-4D3CB3984835">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-14 22:50:33 UTC</createdTime>

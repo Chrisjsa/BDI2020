@@ -102,8 +102,8 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.religion (
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.coordenada (
     id_coordenada          INT  NOT NULL AUTO_INCREMENT,
-    posicion_x             VARCHAR(80) NOT NULL,
-    posicion_y             VARCHAR(80) NOT NULL,
+    latitud                VARCHAR(80) NOT NULL,
+    longitud               VARCHAR(80) NOT NULL,
     CONSTRAINT pk_coordenada PRIMARY KEY (id_coordenada)
 );
 
@@ -148,9 +148,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.templo_horario (
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.salon_de_fiesta (
     fk_salon               INT  NOT NULL,
-    tipo                   VARCHAR(80) NOT NULL,
     descripcion            VARCHAR(80) NOT NULL,
-    tamaño                 VARCHAR(80) NOT NULL,
     capacidad_personas     INT  NOT NULL,
     fk_coordenada          INT  NOT NULL,
         CONSTRAINT fk_salon_locacion FOREIGN KEY (fk_salon) REFERENCES arma_tu_fiesta.locacion (id_locacion),
