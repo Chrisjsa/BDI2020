@@ -51,6 +51,20 @@
 <domain>DOM2024980</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_locacion" id="E2B8F218-3A26-7D5C-E0C7-C607C7B4322C">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-20 22:01:46 UTC</createdTime>
+<generatorID>4D7C5D33-69F8-4ECC-34CF-5CB0ABFF57DB</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>9F7F4416-9B17-59D6-604C-BF513D3A951E</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="B612CB89-E420-BF23-4222-CDC8AB05E268" name="coordenada PK">

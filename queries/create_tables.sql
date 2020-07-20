@@ -389,7 +389,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.presupuesto_pago (
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.tip (
     id_tip                 INT NOT NULL AUTO_INCREMENT,
     tipo                   VARCHAR(80) NOT NULL,
-    descripcion            VARCHAR(80) NOT NULL,
+    descripcion            VARCHAR(500) NOT NULL,
     CONSTRAINT pk_tip PRIMARY KEY (id_tip)
 );
 
