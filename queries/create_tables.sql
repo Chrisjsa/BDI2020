@@ -100,10 +100,12 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.religion (
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.coordenada (
-    id_coordenada          INT  NOT NULL AUTO_INCREMENT,
+    id_coordenada          INT NOT NULL AUTO_INCREMENT,
     latitud                VARCHAR(80) NOT NULL,
     longitud               VARCHAR(80) NOT NULL,
-    CONSTRAINT pk_coordenada PRIMARY KEY (id_coordenada)
+    fk_locacion            INT NOT NULL,
+    CONSTRAINT pk_coordenada PRIMARY KEY (id_coordenada),
+    CONSTRAINT fk_coordenada_locacion FOREIGN KEY (fk_locacion) REFERENCES arma_tu_fiesta.locacion (id_locacion)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.locacion (
@@ -149,9 +151,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.salon_de_fiesta (
     fk_salon               INT  NOT NULL,
     descripcion            VARCHAR(80) NOT NULL,
     capacidad_personas     INT  NOT NULL,
-    fk_coordenada          INT  NOT NULL,
-        CONSTRAINT fk_salon_locacion FOREIGN KEY (fk_salon) REFERENCES arma_tu_fiesta.locacion (id_locacion),
-        CONSTRAINT fk_salon_coordenada FOREIGN KEY (fk_coordenada) REFERENCES arma_tu_fiesta.coordenada (id_coordenada)
+        CONSTRAINT fk_salon_locacion FOREIGN KEY (fk_salon) REFERENCES arma_tu_fiesta.locacion (id_locacion)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.punto_de_referencia (
