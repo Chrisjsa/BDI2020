@@ -51,18 +51,6 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="rol" id="64AD1213-FF25-9562-D7FB-E0637E3FF077">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-12 01:37:17 UTC</createdTime>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>DOM2025000</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_persona" id="98B3D188-B89B-E4BF-9F09-8BB6CED6EF2C">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-12 02:06:23 UTC</createdTime>

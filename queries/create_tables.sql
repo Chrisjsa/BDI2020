@@ -25,13 +25,12 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.persona (
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.rol (
     id_rol                 INT NOT NULL AUTO_INCREMENT,
     nombre                 VARCHAR(80) NOT NULL,
-    descripcion            VARCHAR(200) NOT NULL,
     CONSTRAINT pk_rol PRIMARY KEY (id_rol)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.permiso (
     id_permiso             INT NOT NULL AUTO_INCREMENT,
-    nombre                 VARCHAR(80) NOT NULL,
+    descripcion                 VARCHAR(80) NOT NULL,
     CONSTRAINT pk_permiso PRIMARY KEY (id_permiso)
 );
 

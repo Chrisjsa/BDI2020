@@ -27,7 +27,7 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre" id="514DF592-C714-4EFF-738C-63988C5ED089">
+<Attribute name="descriipcion" id="514DF592-C714-4EFF-738C-63988C5ED089">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-15 13:58:50 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
