@@ -1,0 +1,117 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+#showcase {
+  background: url("https://source.unsplash.com/1920x1080/?party,celebration")
+    no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 580px;
+}
+
+#showcase .showcase-content {
+  color: #fff;
+  text-align: center;
+  padding-top: 170px;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature img {
+  width: 96px;
+}
+
+.feature h4 {
+  margin: 1.2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: flex-start;
+}
+
+.brand img {
+  width: 32px;
+}
+
+.brand h4 {
+  margin: 0;
+}
+
+.text-icon {
+  &-sm {
+    width: 1.25em;
+  }
+
+  &-md {
+    width: 2.5em;
+  }
+
+  &-lg {
+    width: 5em;
+  }
+}
+
+.sidebar {
+  padding: 2.5rem;
+  min-height: 95vh;
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.error {
+  font-weight: bold;
+  background-color: crimson;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.banner {
+  position: relative;
+  height: 30vh;
+  overflow: hidden;
+  color: #eee;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner-details {
+  position: absolute;
+  top: 30%;
+  margin: 2rem;
+}
+
+.no-margin {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.service-container {
+  padding: 2rem;
+}
