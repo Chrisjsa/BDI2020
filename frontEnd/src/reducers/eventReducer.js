@@ -44,35 +44,35 @@ const initialState = {
   services: [
     {
       id_servicio: 1,
-      categoria: "musica",
+      categoria: "Música",
       nombre: "Daddy Yankee",
       descripcion: "Daddy Yankee es un muh reggaetonero bro",
       id_evento: 1,
     },
     {
       id_servicio: 2,
-      categoria: "musica",
+      categoria: "Música",
       nombre: "Tambor Urbano",
       descripcion: "La banda que no falta en tu hora loca",
       id_evento: 1,
     },
     {
       id_servicio: 3,
-      categoria: "fotografia",
+      categoria: "Fotografía",
       nombre: "Luis Pérez",
       descripcion: "Fotos de este pana xd",
       id_evento: 1,
     },
     {
       id_servicio: 4,
-      categoria: "protocolo",
+      categoria: "Protocolo",
       nombre: "Ultra Seguridad",
       descripcion: "Tu marca más confiable de seguridad",
       id_evento: 3,
     },
     {
       id_servicio: 5,
-      categoria: "catering",
+      categoria: "Catering",
       nombre: "Sushi",
       descripcion: "Barcos y bandejas de sushi",
       id_evento: 2,
@@ -90,7 +90,9 @@ export default (state = initialState, action) => {
       return {
         ...state,
         status: "service",
-        currentService: action.payload,
+        currentService: state.services.find(
+          service => service.id_servicio === action.payload
+        ),
       }
 
     case UPDATE_STATUS:

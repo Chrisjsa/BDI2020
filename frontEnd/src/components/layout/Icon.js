@@ -8,7 +8,7 @@ import { GiFlowerPot, GiSandwich } from "react-icons/gi"
 const Icon = ({ type, size }) => {
   const ThisIcon = () => {
     switch (type) {
-      case "home":
+      case "Home":
         return <BsHouse size={size} />
       case "Música":
         return <BsMic size={size} />
@@ -34,11 +34,7 @@ const Icon = ({ type, size }) => {
         return <div className="error">no icon: {type}</div>
     }
   }
-  return (
-    <div>
-      <ThisIcon />
-    </div>
-  )
+  return <ThisIcon />
 }
 
 export default Icon

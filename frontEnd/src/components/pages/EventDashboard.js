@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 
 import { Row, Col, Container } from "react-bootstrap"
 
-import SideBar from "../layout/SideBar"
 import EventDetail from "../events/EventDetails"
 import ServiceDetail from "../services/ServiceDetail"
 
@@ -25,10 +24,7 @@ const EventDashboard = ({
 
   return (
     <Row className="justify-content-md-center">
-      <Col xs={2} className="no-margin">
-        <SideBar services={services} event={thisEvent} />
-      </Col>
-      <Col className="no-margin">
+      <Col>
         {status === "home" && <EventDetail event={thisEvent} />}
         {status === "service" && <ServiceDetail />}
       </Col>
