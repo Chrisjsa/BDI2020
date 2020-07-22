@@ -2,7 +2,14 @@
 
 Aplicación construida en Node.js, Express, MySQL y React
 
-## Istalación
+## Requisitos
+
+- MySQL
+- Node.js
+
+Se deben realizar los inserts ubicados en queries para poder inicializar la base de datos
+
+## Instalación
 
 Descargar este repositorio en tu computadora
 
@@ -11,6 +18,8 @@ git clone
 ```
 
 Desde la carpeta backEnd se puede ejecutar el servidor
+
+## Ejecución
 
 ```bash
 npm run start
