@@ -12,7 +12,7 @@ VALUES
     ('Minidulces'),
     ('Música'),
     ('Protocolo'),
-    ('Utileria'),
+    ('Utilería'),
     ('Toldos'),
     ('Luces'),
     -- Aqui se incluye el producto velas artesanales

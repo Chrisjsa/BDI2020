@@ -6,8 +6,6 @@ import Icon from "../layout/Icon"
 
 import { connect } from "react-redux"
 
-import { elegant } from "../../utils"
-
 import ServiceItem from "./ServiceItem"
 
 const Category = ({ category, services }) => {
@@ -21,7 +19,7 @@ const Category = ({ category, services }) => {
         <Col xs={1}>
           <Icon type={category} size={"1.5rem"} />
         </Col>
-        <Col>{elegant(category)}</Col>
+        <Col>{category}</Col>
       </Row>
       <ListGroup variant="flush">
         {thisCategoryServices.map(service => (

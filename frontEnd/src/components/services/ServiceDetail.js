@@ -2,8 +2,6 @@ import React from "react"
 
 import { connect } from "react-redux"
 
-import { elegant } from "../../utils"
-
 import { Row, Col, ListGroup } from "react-bootstrap"
 
 const ServicesDetail = ({ service }) => {
