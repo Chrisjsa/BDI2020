@@ -10,8 +10,7 @@ import { login, logout } from "../../actions/authActions"
 
 const Navigation = ({ user, login, logout, history }) => {
   const handleLogin = () => {
-    login()
-    history.push("/dashboard")
+    history.push("/login")
   }
 
   const handleLogout = () => {
@@ -35,7 +34,9 @@ const Navigation = ({ user, login, logout, history }) => {
         <Nav.Link className="mr-3" onClick={handleLogin}>
           Inicia sesión o
         </Nav.Link>
-        <Button>Regístrate</Button>
+        <Button as={Link} to="/register">
+          Regístrate
+        </Button>
       </Nav>
     </>
   )

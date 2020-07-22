@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 import { Button, Row, Col, Card, Container } from "react-bootstrap"
 
@@ -26,7 +27,7 @@ const LandingPage = () => {
               <div className="h1">
                 La fiesta de tus sueños, en la palma de tus manos
               </div>
-              <Button size="lg" className="mt-5">
+              <Button size="lg" className="mt-5" as={Link} to="/login">
                 ¡Comenzar ya!
               </Button>
             </div>

@@ -10,6 +10,9 @@ import AboutPage from "./components/pages/AboutPage"
 import DashboardPage from "./components/pages/DashboardPage"
 import EventDashboard from "./components/pages/EventDashboard"
 
+import LoginPage from "./components/auth/Login"
+import Register from "./components/auth/Register"
+
 import Navigation from "./components/layout/Navigation"
 
 const App = () => {
@@ -21,6 +24,10 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/about" component={AboutPage} />
+
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/register" component={Register} />
+
             <Route exact path="/dashboard" component={DashboardPage} />
             <Route exact path="/events/:id" component={EventDashboard} />
           </Switch>

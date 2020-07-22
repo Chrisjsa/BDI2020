@@ -3,3 +3,4 @@ queries/*_model.sql
 backEnd/node_modules
 backEnd/package-lock.json
 trials
+client.bat
