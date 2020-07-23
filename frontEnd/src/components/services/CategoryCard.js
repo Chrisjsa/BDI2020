@@ -11,7 +11,7 @@ const CategoryCard = ({ category, services }) => {
   )
 
   return (
-    <Card>
+    <Card style={{ maxWidth: "30%" }}>
       <Card.Header>
         <h5>
           <Icon type={category} /> {category}

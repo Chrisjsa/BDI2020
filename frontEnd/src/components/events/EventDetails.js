@@ -1,8 +1,8 @@
 import React from "react"
-
+import { Link } from "react-router-dom"
 import Moment from "react-moment"
 
-import { Container, CardDeck } from "react-bootstrap"
+import { Button, Container, CardDeck } from "react-bootstrap"
 
 import { connect } from "react-redux"
 
@@ -60,6 +60,12 @@ const EventDetails = ({ event, services }) => {
         </ul>
 
         <h3>Servicios contratados</h3>
+
+        <div className="text-center">
+          <Button as={Link} to="/newService" size="lg" className="mb-3">
+            Agregar servicio
+          </Button>
+        </div>
 
         <CardDeck>
           {thisEventCategories.map(category => (

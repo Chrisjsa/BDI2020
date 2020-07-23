@@ -15,6 +15,7 @@ import Register from "./components/auth/Register"
 
 import Navigation from "./components/layout/Navigation"
 import ServiceDetail from "./components/services/ServiceDetail"
+import NewService from "./components/services/NewService"
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
             <Route exact path="/events/:id" component={EventDashboard} />
 
             <Route exact path="/services/:id" component={ServiceDetail} />
+            <Route exact path="/newService" component={NewService} />
           </Switch>
         </>
       </Router>

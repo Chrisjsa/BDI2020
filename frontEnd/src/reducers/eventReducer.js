@@ -5,7 +5,6 @@ import {
 } from "../types/eventTypes"
 
 const initialState = {
-  // events = join evento, usuario_evento as orden_evento, imagen
   events: [
     {
       id_evento: 1,
@@ -44,7 +43,6 @@ const initialState = {
     },
   ],
 
-  // services = join servicio_tercerizado, proveedor, proveedor_servicio, detalle, presupuesto, usuario evento
   services: [
     {
       id_servicio: 1,
@@ -86,6 +84,32 @@ const initialState = {
   currentService: null,
 
   currentEvent: null,
+
+  categories: [
+    "Floristería",
+    "Mobiliario de Festejo",
+    "Mobiliario Lounge",
+    "Mobiliario de Acrílico y Cristal",
+    "Catering",
+    "Bebidas",
+    "Pasapalos",
+    "Minidulces",
+    "Música",
+    "Protocolo",
+    "Utilería",
+    "Toldos",
+    "Luces",
+    "Tarimas",
+    "Personal de Festejo",
+    "Transporte",
+    "Audiovisual",
+    "Decoración",
+    "Centro de Mesa",
+    "Diseñador",
+    "Costura",
+    "Modista",
+    "Fotografía",
+  ],
 }
 
 export default (state = initialState, action) => {
