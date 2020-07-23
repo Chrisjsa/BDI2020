@@ -1,23 +1,34 @@
 import React from "react"
 
+import { Redirect, withRouter } from "react-router-dom"
+
 import { connect } from "react-redux"
 
 import { Container, Breadcrumb } from "react-bootstrap"
 
-const ServicesDetail = ({ service }) => {
-  if (!service) return <div>???</div>
+import { setCurrentService } from "../../actions/eventActions"
 
+const ServicesDetail = ({
+  currentService,
+  currentEvent,
+  setCurrentService,
+  match: { params },
+  history,
+}) => {
   return (
     <Container>
-      <h1 className="my-5">{service.nombre}</h1>
-      <h5>{service.descripcion}</h5>
+      <h1 className="my-5">{currentService.nombre}</h1>
+      <h5>{currentService.descripcion}</h5>
     </Container>
   )
 }
 
 const mapStateToProps = state => ({
-  service: state.events.currentService,
+  currentService: state.events.currentService,
+  currentEvent: state.events.currentEvent,
   services: state.events.services,
 })
 
-export default connect(mapStateToProps)(ServicesDetail)
+export default withRouter(
+  connect(mapStateToProps, { setCurrentService })(ServicesDetail)
+)

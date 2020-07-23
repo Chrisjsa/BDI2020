@@ -1,6 +1,6 @@
-import React, { useEffect } from "react"
+import React from "react"
 
-import { Row, Col, Container } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 
 import EventDetail from "../events/EventDetails"
 import ServiceDetail from "../services/ServiceDetail"
@@ -8,34 +8,19 @@ import ServiceDetail from "../services/ServiceDetail"
 import { connect } from "react-redux"
 import { updateStatus } from "../../actions/eventActions"
 
-const EventDashboard = ({
-  match: { params },
-  events,
-  services,
-  status,
-  updateStatus,
-}) => {
-  console.log(params.id)
-  const thisEvent = events[params.id - 1]
-
-  useEffect(() => {
-    updateStatus("home")
-  }, [])
-
+const EventDashboard = ({ currentEvent }) => {
+  if (!currentEvent) return <div className="error">currentEvent es nulo</div>
   return (
     <Row className="justify-content-md-center">
       <Col>
-        {status === "home" && <EventDetail event={thisEvent} />}
-        {status === "service" && <ServiceDetail />}
+        <EventDetail event={currentEvent} />
       </Col>
     </Row>
   )
 }
 
 const mapStateToProps = state => ({
-  events: state.events.events,
-  services: state.events.services,
-  status: state.events.status,
+  currentEvent: state.events.currentEvent,
 })
 
 export default connect(mapStateToProps, { updateStatus })(EventDashboard)

@@ -14,6 +14,7 @@ import LoginPage from "./components/auth/Login"
 import Register from "./components/auth/Register"
 
 import Navigation from "./components/layout/Navigation"
+import ServiceDetail from "./components/services/ServiceDetail"
 
 const App = () => {
   return (
@@ -30,6 +31,8 @@ const App = () => {
 
             <Route exact path="/dashboard" component={DashboardPage} />
             <Route exact path="/events/:id" component={EventDashboard} />
+
+            <Route exact path="/services/:id" component={ServiceDetail} />
           </Switch>
         </>
       </Router>

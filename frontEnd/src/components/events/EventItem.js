@@ -10,7 +10,14 @@ import { BsPersonFill } from "react-icons/bs"
 
 import { filterById, arrayOfValues } from "../../utils"
 
-const EventItem = ({ event, services }) => {
+import { connect } from "react-redux"
+import { setCurrentEvent } from "../../actions/eventActions"
+
+const EventItem = ({ event, services, setCurrentEvent }) => {
+  const onClick = () => {
+    setCurrentEvent(event.id_evento)
+  }
+
   const {
     id_evento,
     nombre,
@@ -27,7 +34,7 @@ const EventItem = ({ event, services }) => {
     <Card>
       <Card.Img variant="top" src={fuente} />
       <Card.Body>
-        <Card.Title as={Link} to={`/events/${id_evento}`}>
+        <Card.Title onClick={onClick} as={Link} to={`/events/${id_evento}`}>
           {nombre}
         </Card.Title>
         <Card.Text>
@@ -50,4 +57,4 @@ const EventItem = ({ event, services }) => {
   )
 }
 
-export default EventItem
+export default connect(state => ({}), { setCurrentEvent })(EventItem)

@@ -1,5 +1,7 @@
 import React from "react"
 
+import { Link } from "react-router-dom"
+
 import { ListGroup } from "react-bootstrap"
 
 import { connect } from "react-redux"
@@ -9,8 +11,13 @@ const ServiceItem = ({ service, setCurrentService }) => {
   const onClick = () => {
     setCurrentService(service.id_servicio)
   }
+
   return (
-    <ListGroup.Item className="clickable" onClick={onClick}>
+    <ListGroup.Item
+      onClick={onClick}
+      as={Link}
+      to={`/services/${service.id_servicio}`}
+    >
       {service.nombre}
     </ListGroup.Item>
   )

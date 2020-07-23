@@ -1,6 +1,7 @@
 import { LOGIN, LOGOUT } from "../types/authTypes"
 
-export const login = () => {
+export const login = credentials => {
+  console.log("authActions.login:", credentials)
   return {
     type: LOGIN,
   }

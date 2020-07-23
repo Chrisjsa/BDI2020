@@ -16,7 +16,7 @@ const Login = ({ history, login }) => {
 
   const onSubmit = e => {
     e.preventDefault()
-    login()
+    login(fields)
     history.push("/dashboard")
   }
 

@@ -1,4 +1,8 @@
-import { SET_CURRENT_SERVICE, UPDATE_STATUS } from "../types/eventTypes"
+import {
+  SET_CURRENT_SERVICE,
+  SET_CURRENT_EVENT,
+  UPDATE_STATUS,
+} from "../types/eventTypes"
 
 const initialState = {
   // events = join evento, usuario_evento as orden_evento, imagen
@@ -81,15 +85,22 @@ const initialState = {
 
   currentService: null,
 
-  status: "home",
+  currentEvent: null,
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case SET_CURRENT_EVENT:
+      return {
+        ...state,
+        currentEvent: state.events.find(
+          event => event.id_evento === action.payload
+        ),
+      }
+
     case SET_CURRENT_SERVICE:
       return {
         ...state,
-        status: "service",
         currentService: state.services.find(
           service => service.id_servicio === action.payload
         ),
