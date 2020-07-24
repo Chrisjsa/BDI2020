@@ -81,6 +81,20 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_orden" id="06CC7463-2E8A-3920-6945-117C7F47393A">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-23 23:38:15 UTC</createdTime>
+<generatorID>02483147-CDFD-C305-52BE-5215F23B0DD2</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>29271E5B-687E-7640-D36F-9F4967C41D8E</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="E4CDEB81-5D4C-1277-BDCA-18F276EB8971" name="presupuesto_pago PK">
@@ -93,8 +107,9 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>9A9A8136-3634-C36A-BB89-A09CC2FDA7A7</attributeRef>
-<attributeRef>7455DADD-A1EF-9097-DA47-E086592431C2</attributeRef>
 <attributeRef>AF40714A-0BF2-C800-CE7A-8FCBD5287764</attributeRef>
+<attributeRef>7455DADD-A1EF-9097-DA47-E086592431C2</attributeRef>
+<attributeRef>06CC7463-2E8A-3920-6945-117C7F47393A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

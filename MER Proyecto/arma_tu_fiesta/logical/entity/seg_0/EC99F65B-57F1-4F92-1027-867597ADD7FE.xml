@@ -91,6 +91,20 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_proveedor" id="EC8725C4-A353-DB76-A97B-B9449BCB3EB4">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-23 23:29:15 UTC</createdTime>
+<generatorID>82212472-ECCB-92F3-6CE4-ACF9DCA9439D</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>2EEDA93B-D7FB-CF32-7999-85314587CD66</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="2A67E897-CAF8-8810-6CAC-1CB18816EAAF" name="producto PK">

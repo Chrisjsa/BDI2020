@@ -27,20 +27,6 @@
 <domain>DOM3000001</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_tramite_carta" id="178D4D02-FC96-FCDB-22CC-610FB696643C">
-<createdBy>ccross</createdBy>
-<createdTime>2020-07-16 12:34:17 UTC</createdTime>
-<generatorID>65AEA6ED-86FA-5E88-5BBC-13201E2DFEC5</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>E81E371A-666A-F652-63C5-4461EF442FCC</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_estatus" id="F7B9A623-7D63-14F6-A2A2-6E789E917586">
 <createdBy>ccross</createdBy>
 <createdTime>2020-07-16 12:34:54 UTC</createdTime>
@@ -66,7 +52,6 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>178D4D02-FC96-FCDB-22CC-610FB696643C</attributeRef>
 <attributeRef>F7B9A623-7D63-14F6-A2A2-6E789E917586</attributeRef>
 </usedAttributes>
 </identifier>

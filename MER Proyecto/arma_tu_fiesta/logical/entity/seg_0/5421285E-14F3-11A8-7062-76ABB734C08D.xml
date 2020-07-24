@@ -15,34 +15,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_proveedor" id="88B85560-5697-944E-5F77-531B12C21B0C">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-13 01:57:16 UTC</createdTime>
-<generatorID>56E5D1A9-5AD9-8E33-565F-F1C328EE60D8</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>D46627EE-6B85-0525-702B-F2982D4B3C9E</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_servicio" id="3DDE1248-1AC7-47D0-77D8-2123D4994513">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-13 01:57:16 UTC</createdTime>
-<generatorID>56E5D1A9-5AD9-8E33-565F-F1C328EE60D8</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>59346784-50ED-AE3D-42F3-B16FC7EC19BA</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="fecha" id="E7E87543-7EEC-98C5-8A5A-BAB9091C0A72">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-13 02:01:21 UTC</createdTime>
@@ -69,6 +41,20 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_servicio1" id="9B415BD9-513D-4519-CDD1-05B3203FAFA5">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-23 23:02:30 UTC</createdTime>
+<generatorID>1DE6E6E8-5422-88F3-BC5D-4C942C49EC82</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>0E597C58-C540-7FF5-764A-0AD6C586400C</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="93D70DC6-6B37-FCAA-5C2A-8E58C8E59688" name="cita PK">
@@ -80,8 +66,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>88B85560-5697-944E-5F77-531B12C21B0C</attributeRef>
-<attributeRef>3DDE1248-1AC7-47D0-77D8-2123D4994513</attributeRef>
+<attributeRef>9B415BD9-513D-4519-CDD1-05B3203FAFA5</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

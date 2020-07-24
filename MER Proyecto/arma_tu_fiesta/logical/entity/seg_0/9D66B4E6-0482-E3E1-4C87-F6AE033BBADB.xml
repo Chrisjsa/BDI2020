@@ -51,6 +51,18 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="precio" id="56898BD9-C0BC-ED1F-4BC9-ED7E91469E9C">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-23 23:16:55 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="id_categoria" id="A77851DE-B0B8-B3C1-5954-0A8D70A0C3C3">
 <createdBy>ccross</createdBy>
 <createdTime>2020-07-16 12:42:09 UTC</createdTime>
@@ -74,6 +86,20 @@
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
 <referedAttribute>9940830F-EDD2-6714-47F8-A3EE86806E1D</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_proveedor" id="5CADB295-A478-C7FD-02E9-2FCC44FFD5D7">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-23 23:26:15 UTC</createdTime>
+<generatorID>675E9BC2-342B-2E7A-E6CA-1A7ED5EA7425</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>2EEDA93B-D7FB-CF32-7999-85314587CD66</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>

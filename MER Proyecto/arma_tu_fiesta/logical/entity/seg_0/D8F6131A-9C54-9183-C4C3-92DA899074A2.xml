@@ -15,6 +15,18 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_orden" id="180B578B-5F6D-C6DA-4992-98B438D5343B">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-23 23:38:05 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="id_evento" id="42539ED7-9974-3E77-102A-414C1751FF15">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-14 23:23:50 UTC</createdTime>
@@ -105,6 +117,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>084219DF-0CD2-EE85-C012-836B9A8006E5</attributeRef>
+<attributeRef>180B578B-5F6D-C6DA-4992-98B438D5343B</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
