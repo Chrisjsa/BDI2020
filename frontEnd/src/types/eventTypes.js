@@ -1,4 +1,0 @@
-export const SET_CURRENT_SERVICE = "SET_CURRENT_SERVICE"
-export const SET_CURRENT_EVENT = "SET_CURRENT_EVENT"
-export const UPDATE_STATUS = "UPDATE_STATUS"
-export const ERROR = "ERROR"
