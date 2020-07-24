@@ -17,9 +17,9 @@ Descargar este repositorio en tu computadora
 git clone
 ```
 
-Desde la carpeta backEnd se puede ejecutar el servidor
-
 ## Ejecución
+
+Desde la carpeta armaTuFiesta se puede ejecutar el servidor
 
 ```bash
 npm run start
