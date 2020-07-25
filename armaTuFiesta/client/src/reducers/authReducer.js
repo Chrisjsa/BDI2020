@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT } from "../types/authTypes"
+import { LOGIN, LOGOUT, ERROR } from "../types/authTypes"
 
 const user = {
   p_nombre: "Tomás",
@@ -25,6 +25,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         isAuthorized: false,
+      }
+
+    case ERROR:
+      return {
+        ...state,
+        error: action.payload,
       }
 
     default:

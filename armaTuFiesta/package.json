@@ -1,0 +1,36 @@
+{
+  "name": "bases",
+  "version": "1.0.0",
+  "description": "REST API server for \"Bases de datos I\"",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tomasg92/bases.git"
+  },
+  "author": "Tomás Guzmán <tomasg92@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomasg92/bases/issues"
+  },
+  "homepage": "https://github.com/tomasg92/bases#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "npx": "^10.2.2",
+    "pg": "^7.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
+}

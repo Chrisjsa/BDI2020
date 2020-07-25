@@ -10,14 +10,13 @@ import useForm from "../../hooks/useForm"
 
 const Login = ({ history, login }) => {
   const [fields, bindFields] = useForm({
-    username: "",
-    password: "",
+    email: "tomasg92@gmail.com",
+    password: "perros",
   })
 
   const onSubmit = e => {
     e.preventDefault()
     login(fields)
-    history.push("/dashboard")
   }
 
   return (
@@ -27,11 +26,11 @@ const Login = ({ history, login }) => {
         <Card.Body>
           <Form onSubmit={onSubmit}>
             <Form.Group>
-              <Form.Label>Usuario</Form.Label>
+              <Form.Label>Email </Form.Label>
               <Form.Control
-                name="username"
+                name="email"
                 type="text"
-                placeholder="Tu nombre de usuario"
+                placeholder="Tu email"
                 {...bindFields}
               />
               <Form.Text className="text-muted">
