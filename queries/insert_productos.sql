@@ -882,3 +882,49 @@ SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FR
 SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-64589958-0') as tablaProveedor);
 INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Estacion de sandwiches (Precio por sandwich)', '(Requiere un minimo de 70 personas, 2 mesones vestidos, 1 punto de luz, 1 operador, transporte, area techada) 1.5 sandwiches por persona, queso gouda amarillo, jamon de pierna y de pavo, salchichon, pollo al grill, atun, tomate en aceite de oliva, tomate confitados, pimentones asados, champinones, cebolla caramelizada, pepinillos y aceitunas, mesclum de lechugas, alfalfa, 3 salsas clasicas, plancha, utensilios', '90.0', @categoria, @proveedor);
 
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Diseñador') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-87409407-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseñador Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Diseñador') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-89220756-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseñador VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Decoración') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-55813389-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Decoradores Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Decoración') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-42142560-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Decoradores VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Centro de Mesa') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-99970982-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Centro de Mesa Matrimonial', 'Estilos Orientados a Bodas', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Centro de Mesa') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-71421822-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Centro de Mesa Quinceañero', 'Diseños que ningun familiar podra olvidar', '1500.0', @categoria, @proveedor);
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Costura') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-44655836-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseñados Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Costura') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-60268398-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseñados VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Modista') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-16500973-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Modista Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Modista') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-34839074-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Modista VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
+

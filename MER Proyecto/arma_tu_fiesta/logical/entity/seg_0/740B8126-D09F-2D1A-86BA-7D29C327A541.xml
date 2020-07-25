@@ -39,18 +39,6 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="estatus" id="A8245FE5-8693-5CD2-CAF3-F9A54B0A1298">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-13 23:32:28 UTC</createdTime>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>DOM2025000</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="total" id="4D8500B3-EB0F-7415-6C1C-BD70276CEDB4">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-13 22:45:21 UTC</createdTime>

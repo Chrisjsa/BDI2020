@@ -1,0 +1,1 @@
+INSERT INTO arma_tu_fiesta.estatus (nombre) VALUES ('Recibido'),('Revision'), ('Aprobado'), ('Enlistado'), ('Confirmado'), ('Pagado');

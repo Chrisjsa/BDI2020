@@ -210,20 +210,31 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.email (
         CONSTRAINT fk_email_locacion FOREIGN KEY (fk_locacion) REFERENCES arma_tu_fiesta.locacion (id_locacion)
 );
 
-CREATE TABLE IF NOT EXISTS arma_tu_fiesta.tramite_carta (
-    id_tramite_carta       INT NOT NULL AUTO_INCREMENT,
-    estatus                VARCHAR(80) NOT NULL,
-    fk_jefatura            INT NOT NULL,
-    CONSTRAINT pk_tramite_carta PRIMARY KEY (id_tramite_carta),
-        CONSTRAINT fk_tramite_carta_locacion FOREIGN KEY (fk_jefatura) REFERENCES arma_tu_fiesta.locacion (id_locacion)
+CREATE TABLE IF NOT EXISTS arma_tu_fiesta.tramite (
+    id_tramite       INT NOT NULL AUTO_INCREMENT,
+    nombre                 VARCHAR(80) NOT NULL,
+    CONSTRAINT pk_tramite PRIMARY KEY (id_tramite)
 );
 
-CREATE TABLE IF NOT EXISTS arma_tu_fiesta.persona_tramite (
+CREATE TABLE IF NOT EXISTS arma_tu_fiesta.solicitud (
+    id_solicitud           INT NOT NULL AUTO_INCREMENT,
+    fk_tramite             INT NOT NULL,
+    fk_usuario             INT NOT NULL,
+    fk_locacion            INT NOT NULL,
+    CONSTRAINT pk_solicitud PRIMARY KEY (id_solicitud),
+        CONSTRAINT fk_solicitud_tramite FOREIGN KEY (fk_tramite) REFERENCES arma_tu_fiesta.tramite (id_tramite),
+        CONSTRAINT fk_solicitud_usuario FOREIGN KEY (fk_usuario) REFERENCES arma_tu_fiesta.usuario (id_usuario),
+        CONSTRAINT fk_solicitud_locacion FOREIGN KEY (fk_locacion) REFERENCES arma_tu_fiesta.locacion (id_locacion)
+);
+
+CREATE TABLE IF NOT EXISTS arma_tu_fiesta.tramite_persona (
+    id_tramite_persona     INT NOT NULL AUTO_INCREMENT,
+    fk_solicitud           INT NOT NULL,
     fk_persona             INT NOT NULL,
-    fk_tramite_carta       INT NOT NULL,
     relacion               VARCHAR(80) NOT NULL,
-        CONSTRAINT fk_persona_tramite FOREIGN KEY (fk_persona) REFERENCES arma_tu_fiesta.persona (id_persona),
-        CONSTRAINT fk_tramite_persona FOREIGN KEY (fk_tramite_carta) REFERENCES arma_tu_fiesta.tramite_carta (id_tramite_carta)
+    CONSTRAINT pk_tramite_persona PRIMARY KEY (id_tramite_persona),
+        CONSTRAINT fk_tramite_solicitud FOREIGN KEY (fk_solicitud) REFERENCES arma_tu_fiesta.solicitud (id_solicitud),
+        CONSTRAINT fk_tramite_persona FOREIGN KEY (fk_persona) REFERENCES arma_tu_fiesta.persona (id_persona)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.descuento (
@@ -294,7 +305,6 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.orden_evento (
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.presupuesto (
     id_presupuesto         INT NOT NULL AUTO_INCREMENT,
     fecha                  DATE NOT NULL,
-    estatus                VARCHAR(80) NOT NULL,
     total                  REAL NOT NULL,
     fk_orden_evento        INT NOT NULL,
     fk_usuario             INT NOT NULL,
@@ -382,25 +392,25 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.estatus (
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.tramite_estatus (
-    fecha                  DATE NOT NULL,
-    fk_tramite             INT NOT NULL,
+    fk_solicitud             INT NOT NULL,
     fk_estatus             INT NOT NULL,
-    CONSTRAINT fk_tramite_estatus FOREIGN KEY (fk_tramite) REFERENCES arma_tu_fiesta.tramite_carta (id_tramite_carta),
-    CONSTRAINT fk_estatus_tramite FOREIGN KEY (fk_estatus) REFERENCES arma_tu_fiesta.estatus (id_estatus)
+    fecha                  DATE NOT NULL,
+    CONSTRAINT fk_estatus_solicitud FOREIGN KEY (fk_solicitud) REFERENCES arma_tu_fiesta.solicitud (id_solicitud),
+    CONSTRAINT fk_estatus_estatus FOREIGN KEY (fk_estatus) REFERENCES arma_tu_fiesta.estatus (id_estatus)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.orden_evento_estatus (
-    fecha                  DATE NOT NULL,
     fk_orden_evento        INT NOT NULL,
     fk_estatus             INT NOT NULL,
+    fecha                  DATE NOT NULL,
     CONSTRAINT fk_orden_estatus FOREIGN KEY (fk_orden_evento) REFERENCES arma_tu_fiesta.orden_evento (id_orden_evento),
     CONSTRAINT fk_estatus_orden FOREIGN KEY (fk_estatus) REFERENCES arma_tu_fiesta.estatus (id_estatus)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.presupuesto_estatus (
-    fecha                  DATE NOT NULL,
     fk_presupuesto         INT NOT NULL,
     fk_estatus             INT NOT NULL,
+    fecha                  DATE NOT NULL,
     CONSTRAINT fk_presupuesto_estatus FOREIGN KEY (fk_presupuesto) REFERENCES arma_tu_fiesta.presupuesto (id_presupuesto),
     CONSTRAINT fk_estatus_presupuesto FOREIGN KEY (fk_estatus) REFERENCES arma_tu_fiesta.estatus (id_estatus)
 );

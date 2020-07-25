@@ -39,20 +39,6 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_locacion" id="87FA9486-E488-0888-E765-D478344C9C4D">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-13 01:27:34 UTC</createdTime>
-<generatorID>0EB92CBB-48E5-3C65-F4B4-AFC023253347</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>9F7F4416-9B17-59D6-604C-BF513D3A951E</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="944E9449-4BFA-DEF6-08ED-F4C79BBCAC19" name="tramite_carta PK">
