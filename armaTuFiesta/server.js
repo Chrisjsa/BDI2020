@@ -12,10 +12,10 @@ connection.connect()
 // Middleware
 app.use(express.json({ extended: false }))
 
-routes = ["users", "auth"]
+routes = ["users", "auth", "notarias"]
 routes.forEach(route => useRoute(route))
 
-app.get("/", res => {
+app.get("/", (req, res) => {
   res.send("Welcome to Bases API")
 })
 
