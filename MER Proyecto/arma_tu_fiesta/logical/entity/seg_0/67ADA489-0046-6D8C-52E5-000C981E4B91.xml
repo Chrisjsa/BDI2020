@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EC99F65B-57F1-4F92-1027-867597ADD7FE" name="producto">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="67ADA489-0046-6D8C-52E5-000C981E4B91" name="orden_producto_pago">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-12 02:51:40 UTC</createdTime>
+<createdTime>2020-07-27 02:48:06 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_producto" id="52B8C67C-A4C7-4CEF-0EC9-14A27E7DAC92">
+<Attribute name="monto" id="FEAD4A9D-3606-05F5-7E81-E66D9606D83B">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-12 02:51:49 UTC</createdTime>
+<createdTime>2020-07-27 02:48:19 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
@@ -27,77 +27,55 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre" id="527F649F-3161-E79E-A734-58119133E03F">
+<Attribute name="fecha" id="DE0CF415-AAEF-546E-F6E1-33FEFC5A7718">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-14 20:21:59 UTC</createdTime>
+<createdTime>2020-07-27 02:48:15 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>DOM2025000</domain>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>DOM3000001</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="descripcion" id="11DD2BDA-F710-1354-2735-A53BD6CFC68B">
+<Attribute name="id_proveedor" id="5AF74AA9-8328-0C54-11F6-B5ECB0E1CEDA">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-12 02:54:03 UTC</createdTime>
+<createdTime>2020-07-27 02:49:00 UTC</createdTime>
+<generatorID>CCEBE7C4-4F2B-1612-7809-FA78902F969A</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>DOM2025000</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cantidad" id="7E5A8700-AE26-0C79-F037-0DF7A71FB948">
-<createdBy>ccross</createdBy>
-<createdTime>2020-07-27 02:39:08 UTC</createdTime>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
+<referedAttribute>A7C93825-F9E8-431F-12F1-D72B3AA3A5EC</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="precio" id="480904E6-7A5C-CE8B-1F8D-F80F805A36D6">
+<Attribute name="id_producto" id="C47103EF-43F8-B904-A77E-175D9CBF8AD5">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-13 23:20:51 UTC</createdTime>
+<createdTime>2020-07-27 02:49:00 UTC</createdTime>
+<generatorID>CCEBE7C4-4F2B-1612-7809-FA78902F969A</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<use>0</use>
-<logicalDatatype>LOGDT021</logicalDatatype>
-<domain>DOM10005</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_categoria" id="5C247EA2-7299-8C15-09E7-599480253A6F">
-<createdBy>ccross</createdBy>
-<createdTime>2020-07-16 12:20:55 UTC</createdTime>
-<generatorID>5B87AFD0-B6E1-AB04-507B-655A6304FA38</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>1957BA2F-5E33-5C65-C921-AE003546AA16</referedAttribute>
+<referedAttribute>A57E6E3A-6C40-5A8D-3449-83EB75565F14</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_descuento" id="7BC9BC9A-9BDD-FDDD-21E1-DA76B5C3AC55">
+<Attribute name="id_metodo_pago" id="2CE4FE52-3979-D304-A11F-CF38002359F0">
 <createdBy>ccross</createdBy>
-<createdTime>2020-07-16 12:48:12 UTC</createdTime>
-<generatorID>6F23EA89-1EEE-3F42-D391-043A21D4F938</generatorID>
+<createdTime>2020-07-27 02:49:36 UTC</createdTime>
+<generatorID>72CEA920-BE23-6620-C4F6-204897D89602</generatorID>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
-<referedAttribute>9940830F-EDD2-6714-47F8-A3EE86806E1D</referedAttribute>
+<referedAttribute>D88C5405-74DF-041E-70C8-2800A08DFA54</referedAttribute>
 <use>0</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <domain>DOM10006</domain>
@@ -105,16 +83,18 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="2A67E897-CAF8-8810-6CAC-1CB18816EAAF" name="producto PK">
+<identifier id="E5CC19DC-4DD4-59B2-0695-41FCCB8718D7" name="orden_producto_pago PK">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-12 02:54:27 UTC</createdTime>
+<createdTime>2020-07-27 02:49:00 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>52B8C67C-A4C7-4CEF-0EC9-14A27E7DAC92</attributeRef>
+<attributeRef>5AF74AA9-8328-0C54-11F6-B5ECB0E1CEDA</attributeRef>
+<attributeRef>C47103EF-43F8-B904-A77E-175D9CBF8AD5</attributeRef>
+<attributeRef>2CE4FE52-3979-D304-A11F-CF38002359F0</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

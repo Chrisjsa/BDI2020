@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.lugar (
     id_lugar               INT NOT NULL AUTO_INCREMENT,
     nombre                 VARCHAR(100) NOT NULL,
