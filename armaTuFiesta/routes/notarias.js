@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 
 const { auth } = require("../middleware/auth")
-const { leerNotarias, crearNotaria } = require("../controllers/notarias")
+const { leerNotarias, crearNotaria, actualizarNotaria, eliminarNotaria } = require("../controllers/notarias")
 
 // Read
 router.get("/", auth, leerNotarias)
@@ -11,10 +11,10 @@ router.get("/", auth, leerNotarias)
 router.post("/nueva", auth, crearNotaria)
 
 // // Update
-// router.update()
+router.put("/actualiza", auth, actualizarNotaria)
 
 // // Delete
-// router.delete()
+router.delete("/elimina", auth, eliminarNotaria)
 
 module.exports = router
 

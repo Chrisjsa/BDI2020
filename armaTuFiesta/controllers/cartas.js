@@ -1,7 +1,7 @@
 const { connection } = require("../database")
-const { LEER_NOTARIAS } = require("../sql/notariasQueries")
+const {  } = require("../sql/cartasQueries")
 
-exports.leerNotarias = (req, res) => {
+exports.leerCarta = (req, res) => {
   connection.query("", (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
@@ -10,7 +10,7 @@ exports.leerNotarias = (req, res) => {
   })
 }
 
-exports.crearNotaria = (req, res) => {
+exports.crearCarta = (req, res) => {
   connection.query("", (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
@@ -20,7 +20,7 @@ exports.crearNotaria = (req, res) => {
 }
 
 
-exports.actualizarNotaria = (req, res) => {
+exports.actualizarCarta = (req, res) => {
   connection.query("", (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
@@ -29,7 +29,7 @@ exports.actualizarNotaria = (req, res) => {
   })
 }
 
-exports.eliminarNotaria = (req, res) => {
+exports.eliminarCarta = (req, res) => {
   connection.query("", (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
@@ -37,4 +37,3 @@ exports.eliminarNotaria = (req, res) => {
     return res.json({ rows })
   })
 }
-// routes -> queries -> controllers
