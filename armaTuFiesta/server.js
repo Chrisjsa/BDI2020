@@ -12,7 +12,7 @@ connection.connect()
 // Middleware
 app.use(express.json({ extended: false }))
 
-routes = ["users", "auth", "notarias", "caracteristicas", "categorias", "clientes", "cursos", "floristerias", "horarios", "jefaturas", "lugares", "productos", "religiones", "restaurantes", "templos", "tips", "cartas"]
+routes = ["users", "auth", "notarias", "caracteristicas", "categorias", "clientes", "cursos", "floristerias", "horarios", "jefaturas", "lugares", "productos", "religiones", "restaurantes", "templos", "tips", "cartas", "roles", "status"]
 routes.forEach(route => useRoute(route))
 
 app.get("/", (req, res) => {
