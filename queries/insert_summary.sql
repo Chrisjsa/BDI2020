@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 -- ++++++++++++++++++++++++++++++++++ LUGAR +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 SET @tipo = 'Continente';
@@ -15580,7 +15582,7 @@ SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FR
 INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0412962957', @proveedor);
 INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Guarea@gmail.com', @proveedor);
 
--- ++++++++++++++++++++++++++++++++++ ROLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- ++++++++++++++++++++++++++++++++++ ROLES - PERMISOS - PERMISO_ROL +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 INSERT INTO `arma_tu_fiesta`.`rol` (`nombre`)
     VALUES
@@ -15591,7 +15593,25 @@ INSERT INTO `arma_tu_fiesta`.`rol` (`nombre`)
     ('Cliente')
 ;
 
--- ++++++++++++++++++++++++++++++++++ PERMISOS - PERMISO_ROL  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INSERT INTO arma_tu_fiesta.permiso (descripcion)
+    VALUES
+    ('Acceso Total'),
+    ('Registrar Empleado'), -- Roles de administrador, supervisor y empleado
+    ('Registrar Locacion'),
+    ('Registrar Producto'),
+    ('Registrar Servicio'),
+    ('Registrar Proveedor'),
+    ('Generar Reporte'),
+    ('Solicitar Servicio'),
+    ('Solicitar Tramite'), -- Carta de Solteria
+    ('Solicitar Evento'),
+    ('Seleccionar Producto'),
+    ('Seleccionar Servicio'),
+    ('Aprobar Presupuesto'),
+    ('Eliminar Presupuesto'),
+    ('Realizar Pago')
+;
+
 -- ++++++++++++++++++++++++++++++++++ PERSONAS - USUARIOS - CLIENTES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol);
@@ -18743,11 +18763,11 @@ INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk
 
 SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Costura') as tablaCategoria);
 SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-44655836-0') as tablaProveedor);
-INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseñados Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseños de Costura Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
 
 SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Costura') as tablaCategoria);
 SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-60268398-0') as tablaProveedor);
-INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseñados VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseños de Costura VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
 
 
 SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Modista') as tablaCategoria);
@@ -18821,7 +18841,129 @@ INSERT INTO arma_tu_fiesta.tramite_estatus (fk_solicitud, fk_estatus, fecha) VAL
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Aprobado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.tramite_estatus (fk_solicitud, fk_estatus, fecha) VALUE (@solicitud, @estatus, '2020-07-29');
 
--- ++++++++++++++++++++++++++++++++++   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- ++++++++++++++++++++++++++++++++++ CITAS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'alibatista@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseñador Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-10');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'josefasabater@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseñador VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-12');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'zairadiaz@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Decoradores Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-14');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'monicaagullo@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Decoradores VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-16');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'dianarosado@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Centro de Mesa Matrimonial') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-18');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'noacapdevila@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Centro de Mesa Quinceañero') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-10');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'brucewayne@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños  de Costura Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-12');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'sergiogaspar@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños de Costura VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-14');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'luisvillarreal@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Modista Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-16');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'manuelquevedo@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Modista VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-18');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'victorarroyo@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseñador Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-10');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'luisacarrillo@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseñador VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-12');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'estherbarranco@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Decoradores Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-14');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'andreinatorrealba@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Decoradores VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-16');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'andreacruz@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Centro de Mesa Matrimonial') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-18');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'zairecuadrado@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Centro de Mesa Quinceañero') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-10');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'jorgesanchez@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños  de Costura Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-12');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'yefersonlugo@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños de Costura VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-14');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'luispirona@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Modista Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-16');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'josegimenez@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Modista VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-18');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'isidroroyo@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseñador Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-10');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'anasanchez@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseñador VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-12');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'angelazambrano@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Decoradores Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-14');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'luisasantos@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Decoradores VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-16');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'amandasuarez@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Centro de Mesa Matrimonial') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-18');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'clotildegalan@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Centro de Mesa Quinceañero') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-10');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'victornaranjo@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños  de Costura Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-12');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'osmelmiranda@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños de Costura VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-14');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'luisperez@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Modista Platinum') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-16');
+
+SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'juancaldera@gmail.com') as tablaUsuario);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Modista VIP') as tablaServicio);
+INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-18');
+
+
 -- ++++++++++++++++++++++++++++++++++   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- ++++++++++++++++++++++++++++++++++   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- ++++++++++++++++++++++++++++++++++   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

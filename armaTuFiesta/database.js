@@ -4,5 +4,5 @@ exports.connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   database: "arma_tu_fiesta",
-  password: "4225741",
+  password: "olakase", // gh1290yu - olakase - 4225741
 })
