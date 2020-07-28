@@ -5,7 +5,7 @@ exports.auth = (req, res, next) => {
 
   if (!token) {
     return res.status(401).json({
-      msg: "No token, authorization denied",
+      msg: "Acceso negado: no se recibió un token.",
     })
   }
 
@@ -14,7 +14,7 @@ exports.auth = (req, res, next) => {
     req.userId = decoded.id
     console.log("req.userId", req.userId)
   } catch (error) {
-    return res.status(401).json({ msg: "Token is not valid" })
+    return res.status(401).json({ msg: "Acceso negado: token inválido." })
   }
 
   next()
