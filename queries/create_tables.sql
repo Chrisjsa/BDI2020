@@ -251,14 +251,13 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.producto (
     id_producto            INT NOT NULL AUTO_INCREMENT,
     nombre                 VARCHAR(80) NOT NULL,
     descripcion            VARCHAR(500) NOT NULL,
+    cantidad               INT NOT NULL,
     precio                 REAL NOT NULL,
     fk_descuento           INT NULL,
     fk_categoria           INT NOT NULL,
-    fk_proveedor           INT NOT NULL,
     CONSTRAINT pk_producto PRIMARY KEY (id_producto),
         CONSTRAINT fk_producto_categoria FOREIGN KEY (fk_categoria) REFERENCES arma_tu_fiesta.categoria (id_categoria),
-        CONSTRAINT fk_producto_descuento FOREIGN KEY (fk_descuento) REFERENCES arma_tu_fiesta.descuento (id_descuento),
-        CONSTRAINT fk_producto_proveedor FOREIGN KEY (fk_proveedor) REFERENCES arma_tu_fiesta.proveedor (id_proveedor)
+        CONSTRAINT fk_producto_descuento FOREIGN KEY (fk_descuento) REFERENCES arma_tu_fiesta.descuento (id_descuento)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.servicio_tercerizado (
@@ -273,6 +272,18 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.servicio_tercerizado (
         CONSTRAINT fk_servicio_categoria FOREIGN KEY (fk_categoria) REFERENCES arma_tu_fiesta.categoria (id_categoria),
         CONSTRAINT fk_servicio_descuento FOREIGN KEY (fk_descuento) REFERENCES arma_tu_fiesta.descuento (id_descuento),
         CONSTRAINT fk_servicio_proveedor FOREIGN KEY (fk_proveedor) REFERENCES arma_tu_fiesta.proveedor (id_proveedor)
+);
+
+CREATE TABLE IF NOT EXISTS arma_tu_fiesta.orden_producto (
+    id_orden_producto      INT NOT NULL AUTO_INCREMENT,
+    cantidad               INT NOT NULL,
+    total                  REAL NOT NULL,
+    fecha                  DATE NOT NULL,
+    fk_proveedor           INT NOT NULL,
+    fk_producto            INT NOT NULL,
+    CONSTRAINT pk_orden_producto PRIMARY KEY (id_orden_producto),
+        CONSTRAINT fk_orden_producto_proveedor FOREIGN KEY (fk_proveedor) REFERENCES arma_tu_fiesta.proveedor (id_proveedor),
+        CONSTRAINT fk_orden_producto_producto FOREIGN KEY (fk_producto) REFERENCES arma_tu_fiesta.producto (id_producto)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.cita (
@@ -312,7 +323,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.presupuesto (
     fk_usuario             INT NOT NULL,
     CONSTRAINT pk_presupuesto PRIMARY KEY (id_presupuesto),
         CONSTRAINT fk_presupueto_orden_evento FOREIGN KEY (fk_orden_evento) REFERENCES arma_tu_fiesta.orden_evento (id_orden_evento),
-        CONSTRAINT fk_presupuesto_usuario FOREIGN KEY (fl_usuario) REFERENCES arma_tu_fiesta.usuario (id_usuario)
+        CONSTRAINT fk_presupuesto_usuario FOREIGN KEY (fk_usuario) REFERENCES arma_tu_fiesta.usuario (id_usuario)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.detalle (
@@ -327,8 +338,8 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.detalle (
     CONSTRAINT pk_detalle PRIMARY KEY (id_detalle),
         CONSTRAINT fk_detalle_presupuesto FOREIGN KEY (fk_presupuesto) REFERENCES arma_tu_fiesta.presupuesto (id_presupuesto),
         CONSTRAINT fk_detalle_producto FOREIGN KEY (fk_producto) REFERENCES arma_tu_fiesta.producto (id_producto),
-        CONSTRAINT fk_detalle_locacion FOREIGN KEY (fk_proveedor_salon) REFERENCES arma_tu_fiesta.salon_de_fiesta (fk_salon),
-        CONSTRAINT fk_detalle_servicio FOREIGN KEY (fk_proveedor_servicio) REFERENCES arma_tu_fiesta.servicio_tercerizado (id_servicio)
+        CONSTRAINT fk_detalle_locacion FOREIGN KEY (fk_salon) REFERENCES arma_tu_fiesta.salon_de_fiesta (fk_salon),
+        CONSTRAINT fk_detalle_servicio FOREIGN KEY (fk_servicio) REFERENCES arma_tu_fiesta.servicio_tercerizado (id_servicio)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.metodo_de_pago (
@@ -366,6 +377,17 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.presupuesto_pago (
         CONSTRAINT fk_presupuesto_pago FOREIGN KEY (fk_pago) REFERENCES arma_tu_fiesta.metodo_de_pago (id_metodo)
 );
 
+CREATE TABLE IF NOT EXISTS arma_tu_fiesta.orden_producto_pago (
+    id_orden_pago          INT NOT NULL AUTO_INCREMENT,
+    fecha                  DATE NOT NULL,
+    monto                  REAL NOT NULL,
+    fk_orden_producto      INT NOT NULL,
+    fk_pago                INT NOT NULL,
+    CONSTRAINT pk_orden_producto_pago PRIMARY KEY (id_orden_pago),
+        CONSTRAINT fk_orden_producto_pago FOREIGN KEY (fk_orden_producto) REFERENCES arma_tu_fiesta.orden_producto (id_orden_producto),
+        CONSTRAINT fk_pago_orden_producto FOREIGN KEY (fk_pago) REFERENCES arma_tu_fiesta.metodo_de_pago (id_metodo)
+);
+
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.tip (
     id_tip                 INT NOT NULL AUTO_INCREMENT,
     tipo                   VARCHAR(80) NOT NULL,
@@ -381,7 +403,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.imagen (
     fk_servicio            INT  NULL,
     fk_evento              INT  NULL,
     CONSTRAINT pk_imagen PRIMARY KEY (id_imagen),
-        CONSTRAINT fk_imagen_salon FOREIGN KEY (fk_salon) REFERENCES arma_tu_fiesta.locacion (fk_salon),
+        CONSTRAINT fk_imagen_salon FOREIGN KEY (fk_salon) REFERENCES arma_tu_fiesta.locacion (id_locacion),
         CONSTRAINT fk_imagen_producto FOREIGN KEY (fk_producto) REFERENCES arma_tu_fiesta.producto (id_producto),
         CONSTRAINT fk_imagen_servicio FOREIGN KEY (fk_servicio) REFERENCES arma_tu_fiesta.servicio_tercerizado (id_servicio),
         CONSTRAINT fk_imagen_evento FOREIGN KEY (fk_evento) REFERENCES arma_tu_fiesta.evento (id_evento)
@@ -391,6 +413,14 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.estatus (
     id_estatus             INT NOT NULL AUTO_INCREMENT,
     nombre                 VARCHAR(80) NOT NULL,
     CONSTRAINT pk_estatus PRIMARY KEY (id_estatus)
+);
+
+CREATE TABLE IF NOT EXISTS arma_tu_fiesta.orden_producto_estatus (
+    fk_orden_producto      INT NOT NULL,
+    fk_estatus             INT NOT NULL,
+    fecha                  DATE NOT NULL,
+        CONSTRAINT fk_orden_producto_estatus FOREIGN KEY (fk_orden_producto) REFERENCES arma_tu_fiesta.orden_producto (id_orden_producto),
+        CONSTRAINT fk_estatus_orden_producto FOREIGN KEY (fk_estatus) REFERENCES arma_tu_fiesta.estatus (id_estatus)
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.tramite_estatus (
