@@ -15441,6 +15441,39 @@ INSERT INTO arma_tu_fiesta.curso (nombre, fk_templo) VALUES ('Matrimonial Basico
 
 
 
+-- +++++++++++++++++++++++++++++++++ CATEGORIAS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+INSERT INTO arma_tu_fiesta.categoria
+    (nombre)
+VALUES
+    ('Floristería'),
+    ('Mobiliario de Festejo'),
+    ('Mobiliario Lounge'),
+    ('Mobiliario de Acrílico y Cristal'),
+    ('Catering'),
+    ('Bebidas'),
+    ('Pasapalos'),
+    ('Minidulces'),
+    ('Música'),
+    ('Protocolo'),
+    ('Utilería'),
+    ('Toldos'),
+    ('Luces'),
+    ('Tarimas'),
+    ('Personal de Festejo'),
+    ('Transporte'),
+    ('Decoración'),
+    ('Centro de Mesa'),
+    ('Diseñador'),
+    ('Costura'),
+    ('Modista'),
+    ('Fotografía')
+;
+
+
+
 -- ++++++++++++++++++++++++++++++++++ FLORISTERIAS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -15695,6 +15728,34 @@ INSERT INTO arma_tu_fiesta.rol_permiso (fk_rol, fk_permiso) VALUES (@rol, @permi
 
 -- ++++++++++++++++++++++++++++++++++ PERSONAS - USUARIOS - CLIENTES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+
+SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Superuser') as tablaRol);
+SET @reside = (SELECT pkParroquia FROM (SELECT id_lugar as pkParroquia FROM arma_tu_fiesta.lugar WHERE nombre = 'El Valle' AND fk_pertenece = (SELECT pkMuni FROM (SELECT id_lugar as pkMuni FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Caracas)') as tablaMuni)) as tablaParroquia);
+INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia) VALUES ('V20613324','Christian','Jose','Suarez','Alvarado','1991-04-04','Masculino','Soltero',@reside);
+
+SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'V20613324') as tablaPersona);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('04141815372', @usuario);
+INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('chris.jsa01@gmail.com', @usuario);
+INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('chris.jsa01@gmail.com', 'V20613324' , @usuario, @rol);
+
+SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Superuser') as tablaRol);
+SET @reside = (SELECT pkParroquia FROM (SELECT id_lugar as pkParroquia FROM arma_tu_fiesta.lugar WHERE nombre = 'Candelaria' AND fk_pertenece = (SELECT pkMuni FROM (SELECT id_lugar as pkMuni FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Caracas)') as tablaMuni)) as tablaParroquia);
+INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia) VALUES ('V26150008','Tomás','Eduardo','Guzmán','Irsay','1992-05-23','Masculino','Soltero',@reside);
+
+SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'V26150008') as tablaPersona);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('04241181872', @usuario);
+INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('tguzmani@gmail.com', @usuario);
+INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('tguzmani@gmail.com', 'V26150008' , @usuario, @rol);
+
+SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Superuser') as tablaRol);
+SET @reside = (SELECT pkParroquia FROM (SELECT id_lugar as pkParroquia FROM arma_tu_fiesta.lugar WHERE nombre = 'La Pastora' AND fk_pertenece = (SELECT pkMuni FROM (SELECT id_lugar as pkMuni FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Caracas)') as tablaMuni)) as tablaParroquia);
+INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia) VALUES ('V25253807','Winkler','Jhonday','Suarez','Caldera','1994-03-07','Masculino','Soltero', @reside);
+
+SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'V25253807') as tablaPersona);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('04127167168', @usuario);
+INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('winkler07@gmail.com', @usuario);
+INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('winkler07@gmail.com', 'V25253807' , @usuario, @rol);
 
 
 SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol);
@@ -17622,7 +17683,33 @@ INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALU
 
 -- ++++++++++++++++++++++++++++++++++  PROVEEDORES  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas') as tablaLugar);
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Floristeria') as tablaCategoria);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, fk_categoria, fk_ubicado) VALUES ('J\-28531680\-0', 'Glastonbury', 'Life is a Festival C.A.', @categoria, @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-28531680\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0426548310', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Glastonbury@gmail.com', @proveedor);
 
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Amazonas') as tablaLugar);
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Floristeria') as tablaCategoria);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, fk_categoria, fk_ubicado) VALUES ('J\-29617345\-0', 'Tomorrowland', 'Life is a Festival C.A.', @categoria, @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-29617345\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424552503', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Tomorrowland@gmail.com', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui') as tablaLugar);
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Mobiliario de Festejo') as tablaCategoria);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, fk_categoria, fk_ubicado) VALUES ('J\-46911798\-0', 'Roskilde', 'Life is a Festival C.A.', @categoria, @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-46911798\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0414293829', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Roskilde@gmail.com', @proveedor);
+
+SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Anzoátegui') as tablaLugar);
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Mobiliario de Festejo') as tablaCategoria);
+INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial, fk_categoria, fk_ubicado) VALUES ('J\-81007875\-0', 'Lowlands', 'Life is a Festival C.A.', @categoria, @pertenece);
+SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-81007875\-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0212918639', @proveedor);
+INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Lowlands@gmail.com', @proveedor);
 
 SET @pertenece = (SELECT pkLugar FROM (SELECT id_lugar as pkLugar FROM arma_tu_fiesta.lugar WHERE tipo = 'Estado' AND nombre = 'Apure') as tablaLugar);
 SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Mobiliario Lounge') as tablaCategoria);
@@ -17931,6 +18018,12 @@ INSERT INTO arma_tu_fiesta.proveedor (rif, razon_social, denominacion_comercial,
 SET @proveedor = (SELECT pkProveedor FROM (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J\-73093642\-0') as tablaProveedor);
 INSERT INTO arma_tu_fiesta.telefono (numero, fk_proveedor) VALUES ('0424128859', @proveedor);
 INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Airbeat@gmail.com', @proveedor);
+
+-- ++++++++++++++++++++++++++++++++++ ESTATUS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+INSERT INTO arma_tu_fiesta.estatus (nombre) VALUES ('Recibido'),('Revision'), ('Aprobado'), ('Enlistado'), ('Confirmado'), ('Pagado');
 
 
 
@@ -24060,15 +24153,9 @@ UPDATE arma_tu_fiesta.producto SET cantidad = @cantidad WHERE id_producto = @pro
 
 
 
--- ++++++++++++++++++++++++++++++++++ ESTATUS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
-INSERT INTO arma_tu_fiesta.estatus (nombre) VALUES ('Recibido'),('Revision'), ('Aprobado'), ('Enlistado'), ('Confirmado'), ('Pagado'), ('Pedido');
-
-
-
 -- ++++++++++++++++++++++++++++++++++ CARTA SOLTERIA +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 
 INSERT INTO arma_tu_fiesta.tramite (nombre) VALUES ('Carta de Solteria'), ('Constancia de Residencia'), ('Acta de Matrimonio');
 
@@ -24128,6 +24215,58 @@ INSERT INTO arma_tu_fiesta.tramite_estatus (fk_solicitud, fk_estatus, fecha) VAL
 
 
 
+
+-- ++++++++++++++++++++++++++++++++++++ SERVICIOS DE DISEñADORES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Diseñador') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-87409407-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseñador Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Diseñador') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-89220756-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseñador VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Decoración') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-55813389-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Decoradores Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Decoración') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-42142560-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Decoradores VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Centro de Mesa') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-99970982-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Centro de Mesa Matrimonial', 'Estilos Orientados a Bodas', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Centro de Mesa') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-71421822-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Centro de Mesa Quinceañero', 'Diseños que ningun familiar podra olvidar', '1500.0', @categoria, @proveedor);
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Costura') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-44655836-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseños de Costura Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Costura') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-60268398-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Diseños de Costura VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
+
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Modista') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-16500973-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Modista Platinum', 'Servicio excelso para los clientes mas exigentes', '2000.0', @categoria, @proveedor);
+
+SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FROM arma_tu_fiesta.categoria WHERE nombre = 'Modista') as tablaCategoria);
+SET @proveedor = (SELECT pkProveedor from (SELECT id_proveedor as pkProveedor FROM arma_tu_fiesta.proveedor WHERE rif = 'J-34839074-0') as tablaProveedor);
+INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Modista VIP', 'Nuestro mas elegante y sobrio de los diseñados', '1500.0', @categoria, @proveedor);
+
+
+
 -- ++++++++++++++++++++++++++++++++++ CITAS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -24157,7 +24296,7 @@ SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_t
 INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-10');
 
 SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'brucewayne@gmail.com') as tablaUsuario);
-SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños  de Costura Platinum') as tablaServicio);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños de Costura Platinum') as tablaServicio);
 INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-12');
 
 SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'sergiogaspar@gmail.com') as tablaUsuario);
@@ -24197,7 +24336,7 @@ SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_t
 INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-10');
 
 SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'jorgesanchez@gmail.com') as tablaUsuario);
-SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños  de Costura Platinum') as tablaServicio);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños de Costura Platinum') as tablaServicio);
 INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-12');
 
 SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'yefersonlugo@gmail.com') as tablaUsuario);
@@ -24237,7 +24376,7 @@ SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_t
 INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-10');
 
 SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'victornaranjo@gmail.com') as tablaUsuario);
-SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños  de Costura Platinum') as tablaServicio);
+SET @ser = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Diseños de Costura Platinum') as tablaServicio);
 INSERT INTO arma_tu_fiesta.cita (fk_usuario, fk_servicio, fecha) VALUES (@usr, @ser, '2020-10-12');
 
 SET @usr = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'osmelmiranda@gmail.com') as tablaUsuario);

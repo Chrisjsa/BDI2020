@@ -1,3 +1,41 @@
+SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Superuser') as tablaRol);
+SET @reside = (SELECT pkParroquia FROM (SELECT id_lugar as pkParroquia FROM arma_tu_fiesta.lugar WHERE nombre = 'El Valle' AND fk_pertenece = (SELECT pkMuni FROM (SELECT id_lugar as pkMuni FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Caracas)') as tablaMuni)) as tablaParroquia);
+INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia) VALUES ('V20613324','Christian','Jose','Suarez','Alvarado','1991-04-04','Masculino','Soltero',@reside);
+
+SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'V20613324') as tablaPersona);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('04141815372', @usuario);
+INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('chris.jsa01@gmail.com', @usuario);
+INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('chris.jsa01@gmail.com', 'V20613324' , @usuario, @rol);
+
+SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Superuser') as tablaRol);
+SET @reside = (SELECT pkParroquia FROM (SELECT id_lugar as pkParroquia FROM arma_tu_fiesta.lugar WHERE nombre = 'Candelaria' AND fk_pertenece = (SELECT pkMuni FROM (SELECT id_lugar as pkMuni FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Caracas)') as tablaMuni)) as tablaParroquia);
+INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia) VALUES ('V26150008','Tomás','Eduardo','Guzmán','Irsay','1992-05-23','Masculino','Soltero',@reside);
+
+SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'V26150008') as tablaPersona);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('04241181872', @usuario);
+INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('tguzmani@gmail.com', @usuario);
+INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('tguzmani@gmail.com', 'V26150008' , @usuario, @rol);
+
+SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Superuser') as tablaRol);
+SET @reside = (SELECT pkParroquia FROM (SELECT id_lugar as pkParroquia FROM arma_tu_fiesta.lugar WHERE nombre = 'La Pastora' AND fk_pertenece = (SELECT pkMuni FROM (SELECT id_lugar as pkMuni FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Caracas)') as tablaMuni)) as tablaParroquia);
+INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia) VALUES ('V25253807','Winkler','Jhonday','Suarez','Caldera','1994-03-07','Masculino','Soltero', @reside);
+
+SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'V25253807') as tablaPersona);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('04127167168', @usuario);
+INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('winkler07@gmail.com', @usuario);
+INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('winkler07@gmail.com', 'V25253807' , @usuario, @rol);
+
+
+
+
+
+
+
+
+
+
+
+
 SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol);
 SET @reside = (SELECT pkParroquia FROM (SELECT id_lugar as pkParroquia FROM arma_tu_fiesta.lugar WHERE nombre = 'Fernando Girón Tovar' AND fk_pertenece = (SELECT pkMuni FROM (SELECT id_lugar as pkMuni FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Atures (Puerto Ayacucho)') as tablaMuni)) as tablaParroquia);
 INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia) VALUES ('V20000001','Ali','Francisco','Batista','Zaragoza','1980-02-07','Masculino','Soltero',@reside);
