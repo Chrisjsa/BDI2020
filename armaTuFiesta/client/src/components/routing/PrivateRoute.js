@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 
 import { loadUser } from "../../actions/authActions"
 
-const PrivateRoute = ({ auth, component: Component, ...rest }) => {
+const PrivateRoute = ({ loadUser, auth, component: Component, ...rest }) => {
   const { isAuthenticated, loading } = auth
 
   useEffect(() => {

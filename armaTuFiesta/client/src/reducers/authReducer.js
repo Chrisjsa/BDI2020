@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, ERROR, LOAD_USER } from "../types/authTypes"
+import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING } from "../types/authTypes"
 
 const initialState = {
   loading: false,
@@ -10,6 +10,12 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case LOADING:
+      return {
+        ...state,
+        loading: true,
+      }
+
     case LOGIN:
       localStorage.setItem("token", action.payload.token)
       return {

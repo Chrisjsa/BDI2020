@@ -16,6 +16,7 @@ import Register from "./components/auth/Register"
 import Navigation from "./components/layout/Navigation"
 import ServiceDetail from "./components/services/ServiceDetail"
 import NewService from "./components/services/NewService"
+import CartaSolteria from "./components/events/CartaSolteria"
 
 import PrivateRoute from "./components/routing/PrivateRoute"
 
@@ -39,6 +40,11 @@ const App = () => {
             <Route exact path="/register" component={Register} />
 
             <PrivateRoute exact path="/dashboard" component={DashboardPage} />
+            <PrivateRoute
+              exact
+              path="/carta_solteria"
+              component={CartaSolteria}
+            />
             <Route exact path="/events/:id" component={EventDashboard} />
 
             <Route exact path="/services/:id" component={ServiceDetail} />

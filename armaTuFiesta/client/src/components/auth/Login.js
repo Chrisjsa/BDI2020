@@ -10,7 +10,7 @@ import useForm from "../../hooks/useForm"
 
 const Login = ({ history, login, isAuthenticated }) => {
   useEffect(() => {
-    if (isAuthenticated) history.push("/")
+    if (isAuthenticated) history.push("/dashboard")
   }, [isAuthenticated, history])
 
   const [fields, bindFields] = useForm({
