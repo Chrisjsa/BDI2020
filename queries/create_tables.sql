@@ -344,6 +344,8 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.detalle (
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.metodo_de_pago (
     id_metodo              INT NOT NULL AUTO_INCREMENT,
+    numero_factura         INT NOT NULL UNIQUE,
+    razon                  VARCHAR(80) NOT NULL,
     banco                  VARCHAR(80) NOT NULL,
     CONSTRAINT pk_metodo_de_pago PRIMARY KEY (id_metodo)
 );

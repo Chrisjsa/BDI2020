@@ -27,6 +27,28 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="numero_factura" id="FCA758F3-28C4-E96F-7243-B43FDE40D3ED">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-28 23:33:56 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="razon" id="AE7B0342-68EA-DEEA-2675-E122AE3B1080">
+<createdBy>ccross</createdBy>
+<createdTime>2020-07-28 23:34:45 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="banco" id="C8F1AB71-4991-D300-232A-CDE292FEAAD6">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-14 00:41:23 UTC</createdTime>
