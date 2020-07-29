@@ -8,7 +8,7 @@
 </engineerTo>
 <sourcePk>A16252CC-DE05-5339-2BE0-E3D9F25C2371</sourcePk>
 <identifying>false</identifying>
-<nameOnTarget>tener</nameOnTarget>
+<nameOnTarget>ejerce</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

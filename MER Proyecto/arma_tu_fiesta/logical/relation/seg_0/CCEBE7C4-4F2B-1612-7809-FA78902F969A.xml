@@ -8,6 +8,7 @@
 </engineerTo>
 <sourcePk>924F387C-32E5-7A1E-DBA5-02794520F411</sourcePk>
 <identifying>true</identifying>
+<nameOnTarget>facturado</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

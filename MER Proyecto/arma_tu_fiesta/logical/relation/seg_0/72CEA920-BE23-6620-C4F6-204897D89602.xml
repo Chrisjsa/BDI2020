@@ -8,6 +8,7 @@
 </engineerTo>
 <sourcePk>61668D2F-0D76-F8A5-1E2A-96CDE154B6C0</sourcePk>
 <identifying>true</identifying>
+<nameOnTarget>factura</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

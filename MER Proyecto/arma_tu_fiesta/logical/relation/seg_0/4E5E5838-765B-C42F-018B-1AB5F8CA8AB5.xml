@@ -8,7 +8,7 @@
 </engineerTo>
 <sourcePk>4F7D0F9B-5C47-2B51-6F8E-E38EACBAE2C7</sourcePk>
 <identifying>true</identifying>
-<nameOnTarget>requerido</nameOnTarget>
+<nameOnTarget>requerida</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

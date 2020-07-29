@@ -8,6 +8,7 @@
 </engineerTo>
 <sourcePk>28A9BD1B-617B-9173-37B5-7EDF9B8C8C3B</sourcePk>
 <identifying>true</identifying>
+<nameOnTarget>altera</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

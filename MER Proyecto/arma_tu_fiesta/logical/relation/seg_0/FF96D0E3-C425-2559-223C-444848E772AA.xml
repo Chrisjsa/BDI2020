@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_106" directorySegmentName="seg_0" id="FF96D0E3-C425-2559-223C-444848E772AA">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="variado" directorySegmentName="seg_0" id="FF96D0E3-C425-2559-223C-444848E772AA">
 <createdBy>ccross</createdBy>
 <createdTime>2020-07-16 12:40:07 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
@@ -8,6 +8,7 @@
 </engineerTo>
 <sourcePk>BF607810-D761-E099-CB21-39CB1500F0F2</sourcePk>
 <identifying>true</identifying>
+<nameOnTarget>variado</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
