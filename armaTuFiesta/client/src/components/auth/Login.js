@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link, withRouter } from "react-router-dom"
 
 import { Form, Button, Card } from "react-bootstrap"
@@ -8,10 +8,14 @@ import { login } from "../../actions/authActions"
 import { connect } from "react-redux"
 import useForm from "../../hooks/useForm"
 
-const Login = ({ history, login }) => {
+const Login = ({ history, login, isAuthenticated }) => {
+  useEffect(() => {
+    if (isAuthenticated) history.push("/")
+  }, [isAuthenticated, history])
+
   const [fields, bindFields] = useForm({
-    email: "tomasg92@gmail.com",
-    password: "perros",
+    username: "tguzmani@gmail.com",
+    password: "V26150008",
   })
 
   const onSubmit = e => {
@@ -28,7 +32,7 @@ const Login = ({ history, login }) => {
             <Form.Group>
               <Form.Label>Email </Form.Label>
               <Form.Control
-                name="email"
+                name="username"
                 type="text"
                 placeholder="Tu email"
                 {...bindFields}
@@ -63,6 +67,8 @@ const Login = ({ history, login }) => {
   )
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated,
+})
 
 export default withRouter(connect(mapStateToProps, { login })(Login))

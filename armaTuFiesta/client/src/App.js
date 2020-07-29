@@ -17,6 +17,14 @@ import Navigation from "./components/layout/Navigation"
 import ServiceDetail from "./components/services/ServiceDetail"
 import NewService from "./components/services/NewService"
 
+import PrivateRoute from "./components/routing/PrivateRoute"
+
+import setAuthToken from "./utils/setAuthToken"
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token)
+}
+
 const App = () => {
   return (
     <Provider store={store}>
@@ -30,7 +38,7 @@ const App = () => {
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/register" component={Register} />
 
-            <Route exact path="/dashboard" component={DashboardPage} />
+            <PrivateRoute exact path="/dashboard" component={DashboardPage} />
             <Route exact path="/events/:id" component={EventDashboard} />
 
             <Route exact path="/services/:id" component={ServiceDetail} />

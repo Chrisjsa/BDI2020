@@ -6,9 +6,9 @@ import { Navbar, Nav, Button } from "react-bootstrap"
 import logo from "../../img/logo.png"
 
 import { connect } from "react-redux"
-import { login, logout } from "../../actions/authActions"
+import { logout } from "../../actions/authActions"
 
-const Navigation = ({ user, login, logout, history }) => {
+const Navigation = ({ user, logout, history }) => {
   const handleLogin = () => {
     history.push("/login")
   }
@@ -57,7 +57,7 @@ const Navigation = ({ user, login, logout, history }) => {
           <img src={logo} className="mr-2" alt="Arma Tu Fiesta" />
           <h4>ArmaTuFiesta</h4>
         </Navbar.Brand>
-        {user.isAuthorized ? <AuthLinks /> : <GuestLinks />}
+        {user.isAuthenticated ? <AuthLinks /> : <GuestLinks />}
       </Navbar>
     </div>
   )
@@ -67,6 +67,4 @@ const mapStateToProps = state => ({
   user: state.auth,
 })
 
-export default withRouter(
-  connect(mapStateToProps, { login, logout })(Navigation)
-)
+export default withRouter(connect(mapStateToProps, { logout })(Navigation))

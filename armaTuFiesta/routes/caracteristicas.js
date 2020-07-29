@@ -2,7 +2,12 @@ const express = require("express")
 const router = express.Router()
 
 const { auth } = require("../middleware/auth")
-const { leerCaracteristica, crearCaracteristica, actualizarCaracteristica, eliminarCaracteristica } = require("../controllers/caracteristicas")
+const {
+  leerCaracteristica,
+  crearCaracteristica,
+  actualizarCaracteristica,
+  eliminarCaracteristica,
+} = require("../controllers/caracteristicas")
 
 // Read
 router.get("/", auth, leerCaracteristica)

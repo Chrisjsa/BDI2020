@@ -9,6 +9,7 @@ import { Container, Button } from "react-bootstrap"
 import ballons from "../../img/ballons.png"
 
 const DashboardPage = ({ user, events, history }) => {
+  console.log(user)
   const NoEvents = () => (
     <div className="text-center mt-5">
       <div>

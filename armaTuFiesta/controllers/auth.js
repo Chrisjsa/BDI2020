@@ -1,5 +1,5 @@
 const { connection } = require("../database")
-const { SIGN_UP, SIGN_IN } = require("../sql/authQueries")
+const { SIGN_UP, SIGN_IN, LOAD_USER } = require("../sql/authQueries")
 const jwt = require("jsonwebtoken")
 
 exports.signUp = async (req, res) => {
@@ -18,12 +18,12 @@ exports.signUp = async (req, res) => {
 }
 
 exports.signIn = (req, res) => {
-  const { email, password } = req.body
+  const { username, password } = req.body
 
-  if (!email || !password)
+  if (!username || !password)
     return res.status(500).send({ msg: "Credentials are required" })
 
-  connection.query(SIGN_IN, [email], async (error, rows, results) => {
+  connection.query(SIGN_IN, [username, password], async (error, rows) => {
     if (error) {
       return res.status(400).send(error)
     }
@@ -33,7 +33,7 @@ exports.signIn = (req, res) => {
     // Check if user exists
     if (!user) {
       return res.status(400).json({
-        msg: "There is no user with that email. Please sign up",
+        msg: "There is no user with that username. Please sign up",
       })
     }
 
@@ -45,7 +45,7 @@ exports.signIn = (req, res) => {
       user.password = undefined
 
       // Generate sign token with secret
-      const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET)
+      const token = jwt.sign({ id: user.id_usuario }, process.env.JWT_SECRET)
       res.cookie("t", token, { expire: new Date() + 9999 })
       return res.json({ token, user })
       //
@@ -58,4 +58,22 @@ exports.signIn = (req, res) => {
 exports.signOut = (req, res) => {
   res.clearCookie("t")
   res.json({ mgs: "Signout success" })
+}
+
+exports.loadUser = (req, res) => {
+  connection.query(LOAD_USER, [req.userId], async (error, rows) => {
+    if (error) {
+      return res.status(400).send(error)
+    }
+
+    const user = rows.pop()
+    user.password = undefined
+
+    try {
+      return res.json(user)
+      //
+    } catch (error) {
+      return res.status(400).json({ error: "Server error" })
+    }
+  })
 }
