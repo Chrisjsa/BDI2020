@@ -171,7 +171,9 @@ const NotariaForm = ({ currentNotaria, setCurrentNotaria, updateNotaria }) => {
               <Button className="mr-3" onClick={handleUpdate}>
                 Actualizar notaria
               </Button>
-              <Button variant="outline-danger">Eliminar notaria</Button>
+              <Button onClick={handleUpdate} variant="outline-danger">
+                Eliminar notaria
+              </Button>
             </>
           ) : (
             <Button disabled={isNotariaEmpty}>Agregar notaria</Button>
