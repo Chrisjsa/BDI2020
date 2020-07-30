@@ -47,6 +47,10 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
+        notarias: {
+          ...state.notarias,
+          rows: [...state.notarias.rows, action.payload],
+        },
       }
 
     case DELETE_NOTARIA:
@@ -56,7 +60,10 @@ export default (state = initialState, action) => {
       }
 
     case ERROR_NOTARIA:
-      return state
+      return {
+        ...state,
+        error: action.payload,
+      }
 
     default:
       return state

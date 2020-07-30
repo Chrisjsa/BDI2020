@@ -32,12 +32,18 @@ exports.crearNotaria = (req, res) => {
 }
 
 exports.actualizarNotaria = (req, res) => {
-  connection.query(ACTUALIZAR_NOTARIAS, (error, rows) => {
-    if (error) {
-      return res.status(400).send(error.message)
+  const { id_locacion, nombre, notario } = req.body
+
+  connection.query(
+    ACTUALIZAR_NOTARIAS,
+    [id_locacion, nombre, notario],
+    (error, rows) => {
+      if (error) {
+        return res.status(400).send(error.message)
+      }
+      return res.json(rows)
     }
-    return res.json(rows)
-  })
+  )
 }
 
 exports.eliminarNotaria = (req, res) => {

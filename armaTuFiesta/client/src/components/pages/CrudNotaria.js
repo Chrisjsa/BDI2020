@@ -47,12 +47,16 @@ const CrudNotaria = ({
           headCheckboxID="id2"
           bodyCheckboxID="checkboxes2"
           getValueCheckBox={notaria => {
-            setCurrentNotaria(notaria)
+            setCurrentNotaria({
+              ...notaria,
+              checked: undefined,
+              checkbox: undefined,
+            })
           }}
         />
       )}
 
-      {currentNotaria && (
+      {/* {currentNotaria && (
         <div className="google-map">
           <h2>Mapa</h2>
           <GoogleMapReact
@@ -63,7 +67,7 @@ const CrudNotaria = ({
             }}
           ></GoogleMapReact>
         </div>
-      )}
+      )} */}
     </Container>
   )
 }

@@ -44,18 +44,19 @@ export const createNotaria = notaria => async dispatch => {
   }
 }
 
-export const updateNotaria = () => async dispatch => {
+export const updateNotaria = notaria => async dispatch => {
   setLoading()(dispatch)
   try {
-    const res = await axios.put("api/notarias/actualiza")
+    // const res = await axios.put("api/notarias/actualizar", notaria, config)
     dispatch({
       type: UPDATE_NOTARIA,
-      payload: res.data,
+      payload: notaria,
     })
   } catch (error) {
     dispatch({
       type: ERROR_NOTARIA,
-      payload: error.response.msg,
+      payload: error.message,
+      // payload: error.response.msg,
     })
   }
 }
