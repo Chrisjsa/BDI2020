@@ -56,7 +56,7 @@ const CrudNotaria = ({
         />
       )}
 
-      {/* {currentNotaria && (
+      {currentNotaria && (
         <div className="google-map">
           <h2>Mapa</h2>
           <GoogleMapReact
@@ -67,7 +67,7 @@ const CrudNotaria = ({
             }}
           ></GoogleMapReact>
         </div>
-      )} */}
+      )}
     </Container>
   )
 }
