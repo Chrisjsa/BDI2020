@@ -6,7 +6,7 @@ exports.leerProducto = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -15,7 +15,7 @@ exports.crearProducto = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -25,7 +25,7 @@ exports.actualizarProducto = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -34,6 +34,6 @@ exports.eliminarProducto = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }

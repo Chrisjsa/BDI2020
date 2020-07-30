@@ -6,7 +6,7 @@ exports.leerStatu = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -15,7 +15,7 @@ exports.crearStatu = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -25,7 +25,7 @@ exports.actualizarStatu = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -34,6 +34,6 @@ exports.eliminarStatu = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }

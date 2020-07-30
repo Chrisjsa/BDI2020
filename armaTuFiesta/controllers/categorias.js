@@ -6,7 +6,7 @@ exports.leerCategoria = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -15,7 +15,7 @@ exports.crearCategoria = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -25,7 +25,7 @@ exports.actualizarCategoria = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -34,6 +34,6 @@ exports.eliminarCategoria = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }

@@ -6,7 +6,7 @@ exports.leerTemplo = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -15,7 +15,7 @@ exports.crearTemplo = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -25,7 +25,7 @@ exports.actualizarTemplo = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
 
@@ -34,6 +34,6 @@ exports.eliminarTemplo = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json( rows )
   })
 }
