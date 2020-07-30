@@ -68,7 +68,7 @@ const NotariaForm = ({ currentNotaria, setCurrentNotaria, updateNotaria }) => {
               disabled={currentNotaria}
             >
               <option>Seleccionar...</option>
-              <option value="Soltero">Soltero</option>
+              <option value="Estado">Soltero</option>
             </Form.Control>
           </Form.Group>
 
@@ -83,7 +83,7 @@ const NotariaForm = ({ currentNotaria, setCurrentNotaria, updateNotaria }) => {
               disabled={currentNotaria}
             >
               <option>Seleccionar...</option>
-              <option value="Soltero">Soltero</option>
+              <option value="Municipio">Soltero</option>
             </Form.Control>
           </Form.Group>
 
@@ -98,7 +98,7 @@ const NotariaForm = ({ currentNotaria, setCurrentNotaria, updateNotaria }) => {
               disabled={currentNotaria}
             >
               <option>Seleccionar...</option>
-              <option value="Soltero">Soltero</option>
+              <option value="Parroquia">Soltero</option>
             </Form.Control>
           </Form.Group>
         </Form.Row>
