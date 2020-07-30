@@ -6,7 +6,7 @@ exports.leerNotarias = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json({ rows })
+    return res.json(rows)
   })
 }
 
@@ -18,7 +18,6 @@ exports.crearNotaria = (req, res) => {
     return res.json({ rows })
   })
 }
-
 
 exports.actualizarNotaria = (req, res) => {
   connection.query("", (error, rows) => {

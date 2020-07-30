@@ -9,6 +9,7 @@ import LandingPage from "./components/pages/LandingPage"
 import AboutPage from "./components/pages/AboutPage"
 import DashboardPage from "./components/pages/DashboardPage"
 import EventDashboard from "./components/pages/EventDashboard"
+import CrudNotaria from "./components/pages/CrudNotaria"
 
 import LoginPage from "./components/auth/Login"
 import Register from "./components/auth/Register"
@@ -40,6 +41,7 @@ const App = () => {
             <Route exact path="/register" component={Register} />
 
             <PrivateRoute exact path="/dashboard" component={DashboardPage} />
+            <PrivateRoute exact path="/crud_notaria" component={CrudNotaria} />
             <PrivateRoute
               exact
               path="/carta_solteria"

@@ -44,6 +44,7 @@ const Navigation = ({ user, logout, history }) => {
   const AuthLinks = () => (
     <>
       <Nav className="mr-auto">{link("/dashboard", "Dashboard")}</Nav>
+      <Nav className="mr-auto">{link("/crud_notaria", "Notarias")}</Nav>
       <Nav>
         <Nav.Link onClick={handleLogout}>Cerrar sesión</Nav.Link>
       </Nav>
