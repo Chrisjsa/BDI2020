@@ -8,6 +8,7 @@ import { connect } from "react-redux"
 import { readNotarias } from "../../actions/notariaActions"
 
 import Loading from "../layout/Loading"
+import NotariaForm from "../notarias/NotariaForm"
 
 import GoogleMapReact from "google-map-react"
 import "../../css/map.css"
@@ -31,14 +32,15 @@ const CrudNotaria = ({ notarias, loading, readNotarias }) => {
 
   return (
     <Container>
-      Crud notaria
+      <NotariaForm />
+      <h2>Notarias</h2>
       {loading ? (
         <Loading />
       ) : (
         <MDBDataTableV5
           hover
           checkbox
-          entriesOptions={[5, 20, 25]}
+          // entriesOptions={[5, 20, 25]}
           entries={5}
           pagesAmount={4}
           data={notarias}
@@ -50,7 +52,9 @@ const CrudNotaria = ({ notarias, loading, readNotarias }) => {
           }}
         />
       )}
+
       <div className="google-map">
+        <h2>Mapa</h2>
         <GoogleMapReact
           defaultZoom={10}
           center={{

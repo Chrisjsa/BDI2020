@@ -5,12 +5,14 @@ import {
   DELETE_NOTARIA,
   ERROR_NOTARIA,
   LOADING_NOTARIA,
+  SET_CURRENT_NOTARIA,
 } from "../types/notariaTypes"
 
 const initialState = {
   notarias: [],
   error: undefined,
   loading: false,
+  currentNotaria: undefined,
 }
 
 export default (state = initialState, action) => {

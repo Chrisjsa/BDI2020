@@ -5,6 +5,7 @@ import {
   DELETE_NOTARIA,
   ERROR_NOTARIA,
   LOADING_NOTARIA,
+  SET_CURRENT_NOTARIA,
 } from "../types/notariaTypes"
 
 import axios from "axios"
