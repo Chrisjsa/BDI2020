@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 
+import moment from "moment"
+
 import { Form, Button, Col, Row, Container } from "react-bootstrap"
 
 const CartaSolteria = () => {
@@ -11,45 +13,117 @@ const CartaSolteria = () => {
   const onSubmit = e => {
     e.preventDefault()
 
+    const dataPpc = {
+      p_nombre: pNombrePpc,
+      s_nombre: sNombrePpc,
+      p_apellido: pApellidoPpc,
+      s_apellido: sApellidoPpc,
+      estado_civil: estadoCivilPpc,
+      cedula: cedulaPpc,
+      sexo: sexoPpc,
+      fecha_nacimiento: moment(fechaNacimientoPpc).format("YYYY-MM-DD"),
+    }
+
+    const dataMpc = {
+      p_nombre: pNombreMpc,
+      s_nombre: sNombreMpc,
+      p_apellido: pApellidoMpc,
+      s_apellido: sApellidoMpc,
+      estado_civil: estadoCivilMpc,
+      cedula: cedulaMpc,
+      sexo: sexoMpc,
+      fecha_nacimiento: moment(fechaNacimientoMpc).format("YYYY-MM-DD"),
+    }
+
+    const dataT1pc = {
+      p_nombre: pNombreT1pc,
+      s_nombre: sNombreT1pc,
+      p_apellido: pApellidoT1pc,
+      s_apellido: sApellidoT1pc,
+      estado_civil: estadoCivilT1pc,
+      cedula: cedulaT1pc,
+      sexo: sexoT1pc,
+      fecha_nacimiento: moment(fechaNacimientoT1pc).format("YYYY-MM-DD"),
+    }
+
+    const dataT2pc = {
+      p_nombre: pNombreT2pc,
+      s_nombre: sNombreT2pc,
+      p_apellido: pApellidoT2pc,
+      s_apellido: sApellidoT2pc,
+      estado_civil: estadoCivilT2pc,
+      cedula: cedulaT2pc,
+      sexo: sexoT2pc,
+      fecha_nacimiento: moment(fechaNacimientoT2pc).format("YYYY-MM-DD"),
+    }
+
+    const dataPsc = {
+      p_nombre: pNombrePsc,
+      s_nombre: sNombrePsc,
+      p_apellido: pApellidoPsc,
+      s_apellido: sApellidoPsc,
+      estado_civil: estadoCivilPsc,
+      cedula: cedulaPsc,
+      sexo: sexoPsc,
+      fecha_nacimiento: moment(fechaNacimientoPsc).format("YYYY-MM-DD"),
+    }
+
+    const dataMsc = {
+      p_nombre: pNombreMsc,
+      s_nombre: sNombreMsc,
+      p_apellido: pApellidoMsc,
+      s_apellido: sApellidoMsc,
+      estado_civil: estadoCivilMsc,
+      cedula: cedulaMsc,
+      sexo: sexoMsc,
+      fecha_nacimiento: moment(fechaNacimientoMsc).format("YYYY-MM-DD"),
+    }
+
+    const dataT1sc = {
+      p_nombre: pNombreT1sc,
+      s_nombre: sNombreT1sc,
+      p_apellido: pApellidoT1sc,
+      s_apellido: sApellidoT1sc,
+      estado_civil: estadoCivilT1sc,
+      cedula: cedulaT1sc,
+      sexo: sexoT1sc,
+      fecha_nacimiento: moment(fechaNacimientoT1sc).format("YYYY-MM-DD"),
+    }
+
+    const dataT2sc = {
+      p_nombre: pNombreT2sc,
+      s_nombre: sNombreT2sc,
+      p_apellido: pApellidoT2sc,
+      s_apellido: sApellidoT2sc,
+      estado_civil: estadoCivilT2sc,
+      cedula: cedulaT2sc,
+      sexo: sexoT2sc,
+      fecha_nacimiento: moment(fechaNacimientoT2sc).format("YYYY-MM-DD"),
+    }
+
     bigConsole("Padre Primer Conyugue")
-    console.log(ppc)
-    console.log(sexoPpc)
-    console.log(fechaNacimientoPpc)
+    console.table(dataPpc)
 
     bigConsole("Madre Primer Conyugue")
-    console.log(mpc)
-    console.log(sexoMpc)
-    console.log(fechaNacimientoMpc)
+    console.table(dataMpc)
 
     bigConsole("Testigo #1 Primer Conyugue")
-    console.log(t1pc)
-    console.log(sexoT1pc)
-    console.log(fechaNacimientoT1pc)
+    console.table(dataT1pc)
 
     bigConsole("Testigo #2 Primer Conyugue")
-    console.log(t2pc)
-    console.log(sexoT2pc)
-    console.log(fechaNacimientoT2pc)
+    console.table(dataT2pc)
 
     bigConsole("Padre Segundo Conyugue")
-    console.log(psc)
-    console.log(sexoPsc)
-    console.log(fechaNacimientoPsc)
+    console.table(dataPsc)
 
     bigConsole("Madre Segundo Conyugue")
-    console.log(msc)
-    console.log(sexoMsc)
-    console.log(fechaNacimientoMsc)
+    console.table(dataMsc)
 
     bigConsole("Testigo #1 Segundo Conyugue")
-    console.log(t1sc)
-    console.log(sexoT1sc)
-    console.log(fechaNacimientoT1sc)
+    console.table(dataT1sc)
 
     bigConsole("Testigo #2 Segundo Conyugue")
-    console.log(t2sc)
-    console.log(sexoT2sc)
-    console.log(fechaNacimientoT2sc)
+    console.table(dataT2sc)
   }
 
   // Padre Primer Conyugue (ppc)
@@ -60,7 +134,7 @@ const CartaSolteria = () => {
     sApellidoPpc: "",
     estadoCivilPpc: "",
     cedulaPpc: "",
-    sexo: "",
+    sexoPpc: "",
   })
 
   const onChangePpc = event => {
