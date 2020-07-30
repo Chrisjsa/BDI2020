@@ -57,6 +57,17 @@ const CartaSolteria = () => {
       fecha_nacimiento: moment(fechaNacimientoT2pc).format("YYYY-MM-DD"),
     }
 
+    const dataSc = {
+      p_nombre: pNombreSc,
+      s_nombre: sNombreSc,
+      p_apellido: pApellidoSc,
+      s_apellido: sApellidoSc,
+      estado_civil: estadoCivilSc,
+      cedula: cedulaSc,
+      sexo: sexoSc,
+      fecha_nacimiento: moment(fechaNacimientoSc).format("YYYY-MM-DD"),
+    }
+
     const dataPsc = {
       p_nombre: pNombrePsc,
       s_nombre: sNombrePsc,
@@ -113,6 +124,9 @@ const CartaSolteria = () => {
     bigConsole("Testigo #2 Primer Conyugue")
     console.table(dataT2pc)
 
+    bigConsole("Segundo Conyugue")
+    console.table(dataSc)
+
     bigConsole("Padre Segundo Conyugue")
     console.table(dataPsc)
 
@@ -130,6 +144,7 @@ const CartaSolteria = () => {
       dataMpc,
       dataT1pc,
       dataT2pc,
+      dataSc,
       dataPsc,
       dataMsc,
       dataT1sc,
@@ -1493,6 +1508,8 @@ const CartaSolteria = () => {
         {t2pcForm()}
 
         <h2>Acerca de tu conyugue</h2>
+        {scForm()}
+
         <h3>Su padre</h3>
         {pscForm()}
 
