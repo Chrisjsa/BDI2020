@@ -1,0 +1,3 @@
+export const CREATE_CARTA = "CREATE_CARTA"
+export const ERROR_CARTA = "ERROR_CARTA"
+export const LOADING_CARTA = "LOADING_CARTA"

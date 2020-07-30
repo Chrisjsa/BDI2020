@@ -12,8 +12,6 @@ exports.auth = (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET)
     req.userId = decoded.id
-    console.log("req.userId", req.userId)
-    console.log("token", token)
   } catch (error) {
     return res.status(401).json({ msg: "Acceso negado: token inválido." })
   }

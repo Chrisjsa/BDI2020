@@ -4,9 +4,13 @@ import "react-datepicker/dist/react-datepicker.css"
 
 import moment from "moment"
 
+import { connect } from "react-redux"
+
+import { createCarta } from "../../actions/cartaAction"
+
 import { Form, Button, Col, Row, Container } from "react-bootstrap"
 
-const CartaSolteria = () => {
+const CartaSolteria = ({ createCarta }) => {
   const bigConsole = text => {
     console.log(`%c ${text}`, "font-size: 24px")
   }
@@ -14,102 +18,102 @@ const CartaSolteria = () => {
     e.preventDefault()
 
     const dataPpc = {
+      cedula: cedulaPpc,
       p_nombre: pNombrePpc,
       s_nombre: sNombrePpc,
       p_apellido: pApellidoPpc,
       s_apellido: sApellidoPpc,
-      estado_civil: estadoCivilPpc,
-      cedula: cedulaPpc,
-      sexo: sexoPpc,
       fecha_nacimiento: moment(fechaNacimientoPpc).format("YYYY-MM-DD"),
+      sexo: sexoPpc,
+      estado_civil: estadoCivilPpc,
     }
 
     const dataMpc = {
+      cedula: cedulaMpc,
       p_nombre: pNombreMpc,
       s_nombre: sNombreMpc,
       p_apellido: pApellidoMpc,
       s_apellido: sApellidoMpc,
-      estado_civil: estadoCivilMpc,
-      cedula: cedulaMpc,
-      sexo: sexoMpc,
       fecha_nacimiento: moment(fechaNacimientoMpc).format("YYYY-MM-DD"),
+      sexo: sexoMpc,
+      estado_civil: estadoCivilMpc,
     }
 
     const dataT1pc = {
+      cedula: cedulaT1pc,
       p_nombre: pNombreT1pc,
       s_nombre: sNombreT1pc,
       p_apellido: pApellidoT1pc,
       s_apellido: sApellidoT1pc,
-      estado_civil: estadoCivilT1pc,
-      cedula: cedulaT1pc,
-      sexo: sexoT1pc,
       fecha_nacimiento: moment(fechaNacimientoT1pc).format("YYYY-MM-DD"),
+      sexo: sexoT1pc,
+      estado_civil: estadoCivilT1pc,
     }
 
     const dataT2pc = {
+      cedula: cedulaT2pc,
       p_nombre: pNombreT2pc,
       s_nombre: sNombreT2pc,
       p_apellido: pApellidoT2pc,
       s_apellido: sApellidoT2pc,
-      estado_civil: estadoCivilT2pc,
-      cedula: cedulaT2pc,
-      sexo: sexoT2pc,
       fecha_nacimiento: moment(fechaNacimientoT2pc).format("YYYY-MM-DD"),
+      sexo: sexoT2pc,
+      estado_civil: estadoCivilT2pc,
     }
 
     const dataSc = {
+      cedula: cedulaSc,
       p_nombre: pNombreSc,
       s_nombre: sNombreSc,
       p_apellido: pApellidoSc,
       s_apellido: sApellidoSc,
-      estado_civil: estadoCivilSc,
-      cedula: cedulaSc,
-      sexo: sexoSc,
       fecha_nacimiento: moment(fechaNacimientoSc).format("YYYY-MM-DD"),
+      sexo: sexoSc,
+      estado_civil: estadoCivilSc,
     }
 
     const dataPsc = {
+      cedula: cedulaPsc,
       p_nombre: pNombrePsc,
       s_nombre: sNombrePsc,
       p_apellido: pApellidoPsc,
       s_apellido: sApellidoPsc,
-      estado_civil: estadoCivilPsc,
-      cedula: cedulaPsc,
-      sexo: sexoPsc,
       fecha_nacimiento: moment(fechaNacimientoPsc).format("YYYY-MM-DD"),
+      sexo: sexoPsc,
+      estado_civil: estadoCivilPsc,
     }
 
     const dataMsc = {
+      cedula: cedulaMsc,
       p_nombre: pNombreMsc,
       s_nombre: sNombreMsc,
       p_apellido: pApellidoMsc,
       s_apellido: sApellidoMsc,
-      estado_civil: estadoCivilMsc,
-      cedula: cedulaMsc,
-      sexo: sexoMsc,
       fecha_nacimiento: moment(fechaNacimientoMsc).format("YYYY-MM-DD"),
+      sexo: sexoMsc,
+      estado_civil: estadoCivilMsc,
     }
 
     const dataT1sc = {
+      cedula: cedulaT1sc,
       p_nombre: pNombreT1sc,
       s_nombre: sNombreT1sc,
       p_apellido: pApellidoT1sc,
       s_apellido: sApellidoT1sc,
-      estado_civil: estadoCivilT1sc,
-      cedula: cedulaT1sc,
-      sexo: sexoT1sc,
       fecha_nacimiento: moment(fechaNacimientoT1sc).format("YYYY-MM-DD"),
+      sexo: sexoT1sc,
+      estado_civil: estadoCivilT1sc,
     }
 
     const dataT2sc = {
+      cedula: cedulaT2sc,
       p_nombre: pNombreT2sc,
       s_nombre: sNombreT2sc,
       p_apellido: pApellidoT2sc,
       s_apellido: sApellidoT2sc,
-      estado_civil: estadoCivilT2sc,
-      cedula: cedulaT2sc,
-      sexo: sexoT2sc,
       fecha_nacimiento: moment(fechaNacimientoT2sc).format("YYYY-MM-DD"),
+      sexo: sexoT2sc,
+      estado_civil: estadoCivilT2sc,
     }
 
     bigConsole("Padre Primer Conyugue")
@@ -139,7 +143,7 @@ const CartaSolteria = () => {
     bigConsole("Testigo #2 Segundo Conyugue")
     console.table(dataT2sc)
 
-    console.log({
+    createCarta({
       dataPpc,
       dataMpc,
       dataT1pc,
@@ -1529,4 +1533,4 @@ const CartaSolteria = () => {
   )
 }
 
-export default CartaSolteria
+export default connect(null, { createCarta })(CartaSolteria)
