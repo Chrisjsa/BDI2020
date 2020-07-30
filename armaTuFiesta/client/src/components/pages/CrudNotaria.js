@@ -5,7 +5,7 @@ import { MDBDataTableV5 } from "mdbreact"
 
 import { connect } from "react-redux"
 
-import { readNotarias } from "../../actions/notariaActions"
+import { readNotarias, setCurrentNotaria } from "../../actions/notariaActions"
 
 import Loading from "../layout/Loading"
 import NotariaForm from "../notarias/NotariaForm"
@@ -13,7 +13,13 @@ import NotariaForm from "../notarias/NotariaForm"
 import GoogleMapReact from "google-map-react"
 import "../../css/map.css"
 
-const CrudNotaria = ({ notarias, loading, readNotarias }) => {
+const CrudNotaria = ({
+  notarias,
+  loading,
+  readNotarias,
+  setCurrentNotaria,
+  currentNotaria,
+}) => {
   useEffect(() => {
     readNotarias()
   }, [])
@@ -21,13 +27,6 @@ const CrudNotaria = ({ notarias, loading, readNotarias }) => {
   const data = {
     rows: notarias.rows,
     columns: notarias.columns,
-  }
-
-  const [checkbox1, setCheckbox1] = useState("")
-
-  const showLogs2 = e => {
-    setCheckbox1(e)
-    console.log(checkbox1)
   }
 
   return (
@@ -47,22 +46,24 @@ const CrudNotaria = ({ notarias, loading, readNotarias }) => {
           fullPagination
           headCheckboxID="id2"
           bodyCheckboxID="checkboxes2"
-          getValueCheckBox={e => {
-            showLogs2(e)
+          getValueCheckBox={notaria => {
+            setCurrentNotaria(notaria)
           }}
         />
       )}
 
-      <div className="google-map">
-        <h2>Mapa</h2>
-        <GoogleMapReact
-          defaultZoom={10}
-          center={{
-            lat: parseFloat(checkbox1.Latitud) || 10.48,
-            lng: parseFloat(checkbox1.Longitud) || 66.9,
-          }}
-        ></GoogleMapReact>
-      </div>
+      {currentNotaria && (
+        <div className="google-map">
+          <h2>Mapa</h2>
+          <GoogleMapReact
+            defaultZoom={10}
+            center={{
+              lat: parseFloat(currentNotaria.latitud) || 10.48,
+              lng: parseFloat(currentNotaria.longitud) || 66.9,
+            }}
+          ></GoogleMapReact>
+        </div>
+      )}
     </Container>
   )
 }
@@ -70,6 +71,9 @@ const CrudNotaria = ({ notarias, loading, readNotarias }) => {
 const mapStateToProps = state => ({
   notarias: state.notarias.notarias,
   loading: state.notarias.loading,
+  currentNotaria: state.notarias.currentNotaria,
 })
 
-export default connect(mapStateToProps, { readNotarias })(CrudNotaria)
+export default connect(mapStateToProps, { readNotarias, setCurrentNotaria })(
+  CrudNotaria
+)

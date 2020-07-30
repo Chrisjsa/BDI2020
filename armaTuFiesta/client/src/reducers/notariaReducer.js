@@ -30,6 +30,13 @@ export default (state = initialState, action) => {
         notarias: action.payload,
       }
 
+    case SET_CURRENT_NOTARIA:
+      return {
+        ...state,
+        loading: false,
+        currentNotaria: action.payload,
+      }
+
     case CREATE_NOTARIA:
       return {
         ...state,

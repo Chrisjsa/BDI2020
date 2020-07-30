@@ -1,26 +1,39 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 import { Form, Col, Button } from "react-bootstrap"
+
 import { READ_NOTARIAS } from "../../types/notariaTypes"
 
-const NotariaForm = () => {
-  const [notaria, setNotaria] = useState({
+import { connect } from "react-redux"
+import { setCurrentNotaria } from "../../actions/notariaActions"
+
+const NotariaForm = ({ currentNotaria, setCurrentNotaria }) => {
+  const initialState = {
     estado: "",
     municipio: "",
     parroquia: "",
     nombre: "",
-    encargado: "",
+    notario: "",
     telefono: "",
     latitud: "",
     longitud: "",
-  })
+  }
+
+  const [notaria, setNotaria] = useState(initialState)
+
+  const isNotariaEmpty = Object.values(notaria).some(value => value === "")
+
+  useEffect(() => {
+    if (!currentNotaria) setNotaria(initialState)
+    else setNotaria({ ...notaria, ...currentNotaria })
+  }, [currentNotaria])
 
   const {
     estado,
     municipio,
     parroquia,
     nombre,
-    encargado,
+    notario,
     telefono,
     latitud,
     longitud,
@@ -33,24 +46,26 @@ const NotariaForm = () => {
     })
   }
 
-  const onSubmit = e => {
-    e.preventDefault()
+  const onClick = () => {
     console.table(notaria)
+    setCurrentNotaria(undefined)
+    setNotaria(initialState)
   }
 
   return (
     <>
       <h2>Insertar notaria</h2>
-      <Form onSubmit={onSubmit}>
+      <Form>
         <Form.Row>
           <Form.Group as={Col}>
-            <Form.Label>Estado civil</Form.Label>
+            <Form.Label>Estado</Form.Label>
             <Form.Control
               as="select"
               defaultValue="Seleccionar..."
               name="estado"
               value={estado}
               onChange={onChange}
+              disabled={currentNotaria}
             >
               <option>Seleccionar...</option>
               <option value="Soltero">Soltero</option>
@@ -58,13 +73,14 @@ const NotariaForm = () => {
           </Form.Group>
 
           <Form.Group as={Col}>
-            <Form.Label>Estado civil</Form.Label>
+            <Form.Label>Municipio</Form.Label>
             <Form.Control
               as="select"
               defaultValue="Seleccionar..."
               name="municipio"
               value={municipio}
               onChange={onChange}
+              disabled={currentNotaria}
             >
               <option>Seleccionar...</option>
               <option value="Soltero">Soltero</option>
@@ -72,13 +88,14 @@ const NotariaForm = () => {
           </Form.Group>
 
           <Form.Group as={Col}>
-            <Form.Label>Estado civil</Form.Label>
+            <Form.Label>Parroquia</Form.Label>
             <Form.Control
               as="select"
               defaultValue="Seleccionar..."
               name="parroquia"
               value={parroquia}
               onChange={onChange}
+              disabled={currentNotaria}
             >
               <option>Seleccionar...</option>
               <option value="Soltero">Soltero</option>
@@ -99,12 +116,12 @@ const NotariaForm = () => {
           </Form.Group>
 
           <Form.Group as={Col}>
-            <Form.Label>Nombre encargado</Form.Label>
+            <Form.Label>Nombre notario</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Nombre encargado"
-              name="encargado"
-              value={encargado}
+              placeholder="Nombre notario"
+              name="notario"
+              value={notario}
               onChange={onChange}
             />
           </Form.Group>
@@ -117,6 +134,7 @@ const NotariaForm = () => {
               name="telefono"
               value={telefono}
               onChange={onChange}
+              disabled={currentNotaria}
             />
           </Form.Group>
         </Form.Row>
@@ -130,6 +148,7 @@ const NotariaForm = () => {
               name="latitud"
               value={latitud}
               onChange={onChange}
+              disabled={currentNotaria}
             />
           </Form.Group>
 
@@ -141,16 +160,30 @@ const NotariaForm = () => {
               name="longitud"
               value={longitud}
               onChange={onChange}
+              disabled={currentNotaria}
             />
           </Form.Group>
         </Form.Row>
 
         <div className="text-center">
-          <Button>Agregar notaria</Button>
+          {currentNotaria ? (
+            <>
+              <Button className="mr-3" onClick={onClick}>
+                Actualizar notaria
+              </Button>
+              <Button variant="outline-danger">Eliminar notaria</Button>
+            </>
+          ) : (
+            <Button disabled={isNotariaEmpty}>Agregar notaria</Button>
+          )}
         </div>
       </Form>
     </>
   )
 }
 
-export default NotariaForm
+const mapStateToProps = state => ({
+  currentNotaria: state.notarias.currentNotaria,
+})
+
+export default connect(mapStateToProps, { setCurrentNotaria })(NotariaForm)

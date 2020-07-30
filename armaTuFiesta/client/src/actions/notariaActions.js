@@ -76,6 +76,13 @@ export const deleteNotaria = () => async dispatch => {
   }
 }
 
+export const setCurrentNotaria = notaria => dispatch => {
+  dispatch({
+    type: SET_CURRENT_NOTARIA,
+    payload: notaria,
+  })
+}
+
 export const setLoading = () => dispatch => {
   return dispatch({
     type: LOADING_NOTARIA,
