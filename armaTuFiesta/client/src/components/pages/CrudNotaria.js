@@ -10,12 +10,15 @@ import { readNotarias } from "../../actions/notariaActions"
 import Loading from "../layout/Loading"
 
 const CrudNotaria = ({ notarias, loading, readNotarias }) => {
-  let data = {}
-
   useEffect(() => {
     readNotarias()
     console.log("leidas notarias")
   }, [])
+
+  const data = {
+    rows: notarias.rows,
+    columns: notarias.fields,
+  }
 
   return (
     <Container>
