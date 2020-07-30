@@ -124,6 +124,17 @@ const CartaSolteria = () => {
 
     bigConsole("Testigo #2 Segundo Conyugue")
     console.table(dataT2sc)
+
+    console.log({
+      dataPpc,
+      dataMpc,
+      dataT1pc,
+      dataT2pc,
+      dataPsc,
+      dataMsc,
+      dataT1sc,
+      dataT2sc,
+    })
   }
 
   // Padre Primer Conyugue (ppc)
@@ -1489,7 +1500,7 @@ const CartaSolteria = () => {
         {mscForm()}
 
         <h3>Su primer testigo</h3>
-        {t2scForm()}
+        {t1scForm()}
 
         <h3>Su segundo testigo</h3>
         {t2scForm()}
