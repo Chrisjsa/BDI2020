@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 import { Container } from "react-bootstrap"
 import { MDBDataTableV5 } from "mdbreact"
@@ -9,15 +9,24 @@ import { readNotarias } from "../../actions/notariaActions"
 
 import Loading from "../layout/Loading"
 
+import GoogleMapReact from "google-map-react"
+import "../../css/map.css"
+
 const CrudNotaria = ({ notarias, loading, readNotarias }) => {
   useEffect(() => {
     readNotarias()
-    console.log("leidas notarias")
   }, [])
 
   const data = {
     rows: notarias.rows,
-    columns: notarias.fields,
+    columns: notarias.columns,
+  }
+
+  const [checkbox1, setCheckbox1] = useState("")
+
+  const showLogs2 = e => {
+    setCheckbox1(e)
+    console.log(checkbox1)
   }
 
   return (
@@ -28,13 +37,28 @@ const CrudNotaria = ({ notarias, loading, readNotarias }) => {
       ) : (
         <MDBDataTableV5
           hover
+          checkbox
           entriesOptions={[5, 20, 25]}
           entries={5}
           pagesAmount={4}
           data={notarias}
           fullPagination
+          headCheckboxID="id2"
+          bodyCheckboxID="checkboxes2"
+          getValueCheckBox={e => {
+            showLogs2(e)
+          }}
         />
       )}
+      <div className="google-map">
+        <GoogleMapReact
+          defaultZoom={10}
+          center={{
+            lat: parseFloat(checkbox1.Latitud) || 10.48,
+            lng: parseFloat(checkbox1.Longitud) || 66.9,
+          }}
+        ></GoogleMapReact>
+      </div>
     </Container>
   )
 }
