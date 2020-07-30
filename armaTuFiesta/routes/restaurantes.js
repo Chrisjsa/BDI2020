@@ -5,15 +5,15 @@ const { auth } = require("../middleware/auth")
 const { leerRestaurante, crearRestaurante, actualizarRestaurante, eliminarRestaurante } = require("../controllers/restaurantes")
 
 // Read
-router.get("/", auth, leerRestaurante)
+router.get("/leer", auth, leerRestaurante)
 
 // // Create
 router.post("/nueva", auth, crearRestaurante)
 
 // // Update
-router.put("/actualiza", auth, actualizarRestaurante)
+router.put("/actualizar", auth, actualizarRestaurante)
 
 // // Delete
-router.delete("/elimina", auth, eliminarRestaurante)
+router.delete("/eliminar", auth, eliminarRestaurante)
 
 module.exports = router

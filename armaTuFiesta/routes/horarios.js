@@ -5,15 +5,15 @@ const { auth } = require("../middleware/auth")
 const { leerHorario, crearHorario, actualizarHorario, eliminarHorario } = require("../controllers/horarios")
 
 // Read
-router.get("/", auth, leerHorario)
+router.get("/leer", auth, leerHorario)
 
 // // Create
 router.post("/nueva", auth, crearHorario)
 
 // // Update
-router.put("/actualiza", auth, actualizarHorario)
+router.put("/actualizar", auth, actualizarHorario)
 
 // // Delete
-router.delete("/elimina", auth, eliminarHorario)
+router.delete("/eliminar", auth, eliminarHorario)
 
 module.exports = router

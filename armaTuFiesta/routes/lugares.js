@@ -5,7 +5,7 @@ const { auth } = require("../middleware/auth")
 const { leerLugar } = require("../controllers/lugares")
 
 // Read
-router.get("/", auth, leerLugar)
+router.get("/leer", auth, leerLugar)
 
 
 module.exports = router

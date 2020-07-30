@@ -5,16 +5,16 @@ const { auth } = require("../middleware/auth")
 const { leerNotarias, crearNotaria, actualizarNotaria, eliminarNotaria } = require("../controllers/notarias")
 
 // Read
-router.get("/", auth, leerNotarias)
+router.get("/leer", auth, leerNotarias)
 
 // // Create
 router.post("/nueva", auth, crearNotaria)
 
 // // Update
-router.put("/actualiza", auth, actualizarNotaria)
+router.put("/actualizar", auth, actualizarNotaria)
 
 // // Delete
-router.delete("/elimina", auth, eliminarNotaria)
+router.delete("/eliminar", auth, eliminarNotaria)
 
 module.exports = router
 

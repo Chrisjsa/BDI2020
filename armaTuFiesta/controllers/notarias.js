@@ -2,7 +2,7 @@ const { connection } = require("../database")
 const { LEER_NOTARIAS } = require("../sql/notariasQueries")
 
 exports.leerNotarias = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(LEER_NOTARIAS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }

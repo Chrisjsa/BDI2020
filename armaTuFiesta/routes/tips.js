@@ -5,15 +5,15 @@ const { auth } = require("../middleware/auth")
 const { leerTip, crearTip, actualizarTip, eliminarTip } = require("../controllers/tips")
 
 // Read
-router.get("/", auth, leerTip)
+router.get("/leer", auth, leerTip)
 
 // // Create
 router.post("/nueva", auth, crearTip)
 
 // // Update
-router.put("/actualiza", auth, actualizarTip)
+router.put("/actualizar", auth, actualizarTip)
 
 // // Delete
-router.delete("/elimina", auth, eliminarTip)
+router.delete("/eliminar", auth, eliminarTip)
 
 module.exports = router

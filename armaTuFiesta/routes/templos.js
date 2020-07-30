@@ -5,15 +5,15 @@ const { auth } = require("../middleware/auth")
 const { leerTemplo, crearTemplo, actualizarTemplo, eliminarTemplo } = require("../controllers/templos")
 
 // Read
-router.get("/", auth, leerTemplo)
+router.get("/leer", auth, leerTemplo)
 
 // // Create
 router.post("/nueva", auth, crearTemplo)
 
 // // Update
-router.put("/actualiza", auth, actualizarTemplo)
+router.put("/actualizar", auth, actualizarTemplo)
 
 // // Delete
-router.delete("/elimina", auth, eliminarTemplo)
+router.delete("/eliminar", auth, eliminarTemplo)
 
 module.exports = router

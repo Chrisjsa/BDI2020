@@ -10,15 +10,15 @@ const {
 } = require("../controllers/caracteristicas")
 
 // Read
-router.get("/", auth, leerCaracteristica)
+router.get("/leer", auth, leerCaracteristica)
 
 // // Create
 router.post("/nueva", auth, crearCaracteristica)
 
 // // Update
-router.put("/actualiza", auth, actualizarCaracteristica)
+router.put("/actualizar", auth, actualizarCaracteristica)
 
 // // Delete
-router.delete("/elimina", auth, eliminarCaracteristica)
+router.delete("/eliminar", auth, eliminarCaracteristica)
 
 module.exports = router

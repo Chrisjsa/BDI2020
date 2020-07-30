@@ -5,15 +5,15 @@ const { auth } = require("../middleware/auth")
 const { leerCategoria, crearCategoria, actualizarCategoria, eliminarCategoria } = require("../controllers/categorias")
 
 // Read
-router.get("/", auth, leerCategoria)
+router.get("/leer", auth, leerCategoria)
 
 // // Create
 router.post("/nueva", auth, crearCategoria)
 
 // // Update
-router.put("/actualiza", auth, actualizarCategoria)
+router.put("/actualizar", auth, actualizarCategoria)
 
 // // Delete
-router.delete("/elimina", auth, eliminarCategoria)
+router.delete("/eliminar", auth, eliminarCategoria)
 
 module.exports = router
