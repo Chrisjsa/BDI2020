@@ -1,8 +1,8 @@
 const { connection } = require("../database")
-const {} = require("../sql/cartasQueries")
+const {LEER_CARTAS, CREAR_CARTAS} = require("../sql/cartasQueries")
 
 exports.leerCarta = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(LEER_CARTAS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -52,7 +52,7 @@ exports.crearCarta = (req, res) => {
   // } solo require id_persona
 
   // datos del usuario, esto sera un select
-  connection.query("", [], (error, rows) => {
+  connection.query("SELECT per.cedula, per.p_nombre, per.s_nombre, per.p_apellido, per.s_apellido, per.fecha_nacimiento, per.sexo, per.estado_civil FROM arma_tu_fiesta.solicitud as sol, arma_tu_fiesta.usuario as usu, arma_tu_fiesta.persona as per WHERE sol.fk_usuario = usu.id_usuario AND usu.fk_persona = per.id_persona;", [], (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
