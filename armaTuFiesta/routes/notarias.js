@@ -5,7 +5,7 @@ const { auth } = require("../middleware/auth")
 const { leerNotarias, crearNotaria, actualizarNotaria, eliminarNotaria } = require("../controllers/notarias")
 
 // Read
-router.get("/leer", auth, leerNotarias)
+router.get("/leer", leerNotarias)
 
 // // Create
 router.post("/nueva", auth, crearNotaria)

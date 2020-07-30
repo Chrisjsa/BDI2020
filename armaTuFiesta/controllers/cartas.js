@@ -63,7 +63,7 @@ exports.crearCarta = (req, res) => {
   const success = { msg: "Carta agregada satisfactoriamente" }
 
   // el primer insert es del usuario
-  connection.query("", Object.values(dataPpc), error => {
+  connection.query(CREAR_CARTAS, Object.values(dataPpc), error => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -72,7 +72,7 @@ exports.crearCarta = (req, res) => {
 
   // luego es de todos los demas
   personas.forEach(persona => {
-    connection.query("", Object.values(persona), error => {
+    connection.query(CREAR_CARTAS, Object.values(persona), error => {
       if (error) {
         return res.status(400).send(error.message)
       }

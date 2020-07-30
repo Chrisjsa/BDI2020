@@ -8,7 +8,7 @@ const { leerCarta, crearCarta, actualizarCarta, eliminarCarta } = require("../co
 router.get("/leer", auth, leerCarta)
 
 // // Create
-router.post("/nueva", auth, crearCarta)
+router.post("/nueva", crearCarta)
 
 // // Update
 router.put("/actualizar", auth, actualizarCarta)
