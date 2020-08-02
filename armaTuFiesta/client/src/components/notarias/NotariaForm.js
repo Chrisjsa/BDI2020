@@ -5,9 +5,18 @@ import { Form, Col, Button } from "react-bootstrap"
 import { READ_NOTARIAS } from "../../types/notariaTypes"
 
 import { connect } from "react-redux"
-import { setCurrentNotaria, updateNotaria } from "../../actions/notariaActions"
+import {
+  setCurrentNotaria,
+  updateNotaria,
+  readNotarias,
+} from "../../actions/notariaActions"
 
-const NotariaForm = ({ currentNotaria, setCurrentNotaria, updateNotaria }) => {
+const NotariaForm = ({
+  currentNotaria,
+  setCurrentNotaria,
+  updateNotaria,
+  readNotarias,
+}) => {
   const initialState = {
     estado: "",
     municipio: "",
@@ -47,9 +56,13 @@ const NotariaForm = ({ currentNotaria, setCurrentNotaria, updateNotaria }) => {
   }
 
   const handleUpdate = () => {
+    const { id_locacion, nombre, tipo, notario, latitud, longitud } = notaria
+    const data = { id_locacion, nombre, tipo, notario, latitud, longitud }
     console.table(notaria)
+    updateNotaria(data)
     setCurrentNotaria(undefined)
     setNotaria(initialState)
+    readNotarias()
   }
 
   return (
@@ -188,6 +201,8 @@ const mapStateToProps = state => ({
   currentNotaria: state.notarias.currentNotaria,
 })
 
-export default connect(mapStateToProps, { setCurrentNotaria, updateNotaria })(
-  NotariaForm
-)
+export default connect(mapStateToProps, {
+  setCurrentNotaria,
+  updateNotaria,
+  readNotarias,
+})(NotariaForm)

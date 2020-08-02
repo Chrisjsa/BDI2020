@@ -10,6 +10,7 @@ import {
 
 const initialState = {
   notarias: [],
+  notariasCols: [],
   error: undefined,
   loading: false,
   currentNotaria: undefined,
@@ -24,10 +25,12 @@ export default (state = initialState, action) => {
       }
 
     case READ_NOTARIAS:
+      console.log(action.payload)
       return {
         ...state,
         loading: false,
-        notarias: action.payload,
+        notarias: action.payload.rows,
+        notariasCols: action.payload.columns,
       }
 
     case SET_CURRENT_NOTARIA:
@@ -44,13 +47,11 @@ export default (state = initialState, action) => {
       }
 
     case UPDATE_NOTARIA:
+      console.log(action.payload)
       return {
         ...state,
         loading: false,
-        notarias: {
-          ...state.notarias,
-          rows: [...state.notarias.rows, action.payload],
-        },
+        notarias: [...state.notarias, action.payload],
       }
 
     case DELETE_NOTARIA:

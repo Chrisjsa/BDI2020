@@ -47,7 +47,7 @@ export const createNotaria = notaria => async dispatch => {
 export const updateNotaria = notaria => async dispatch => {
   setLoading()(dispatch)
   try {
-    // const res = await axios.put("api/notarias/actualizar", notaria, config)
+    const res = await axios.put("api/notarias/actualizar", notaria, config)
     dispatch({
       type: UPDATE_NOTARIA,
       payload: notaria,

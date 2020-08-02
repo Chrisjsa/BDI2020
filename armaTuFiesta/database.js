@@ -21,6 +21,7 @@ if (!password) {
 }
 
 exports.connection = mysql.createConnection({
+  multipleStatements: true,
   host: "localhost",
   user: "root",
   database: "arma_tu_fiesta",

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react"
 
 import { Container } from "react-bootstrap"
-import { MDBDataTableV5 } from "mdbreact"
+// import { MDBDataTableV5 } from "mdbreact"
+import DataTable from "react-data-table-component"
 
 import { connect } from "react-redux"
 
@@ -15,6 +16,7 @@ import "../../css/map.css"
 
 const CrudNotaria = ({
   notarias,
+  notariasCols,
   loading,
   readNotarias,
   setCurrentNotaria,
@@ -25,8 +27,8 @@ const CrudNotaria = ({
   }, [])
 
   const data = {
-    rows: notarias.rows,
-    columns: notarias.columns,
+    rows: notarias,
+    columns: notariasCols,
   }
 
   return (
@@ -36,23 +38,14 @@ const CrudNotaria = ({
       {loading ? (
         <Loading />
       ) : (
-        <MDBDataTableV5
-          hover
-          checkbox
-          // entriesOptions={[5, 20, 25]}
-          entries={5}
-          pagesAmount={4}
+        <DataTable
+          columns={notariasCols}
           data={notarias}
-          fullPagination
-          headCheckboxID="id2"
-          bodyCheckboxID="checkboxes2"
-          getValueCheckBox={notaria => {
-            setCurrentNotaria({
-              ...notaria,
-              checked: undefined,
-              checkbox: undefined,
-            })
-          }}
+          pagination
+          paginationPerPage={5}
+          pointerOnHover
+          highlightOnHover
+          onRowClicked={row => setCurrentNotaria(row)}
         />
       )}
 
@@ -74,6 +67,7 @@ const CrudNotaria = ({
 
 const mapStateToProps = state => ({
   notarias: state.notarias.notarias,
+  notariasCols: state.notarias.notariasCols,
   loading: state.notarias.loading,
   currentNotaria: state.notarias.currentNotaria,
 })

@@ -13,9 +13,8 @@ exports.leerNotarias = (req, res) => {
     }
 
     columns = fields.map(field => ({
-      label: field.name,
-      field: field.name,
-      width: 100,
+      name: field.name,
+      selector: field.name,
     }))
 
     return res.json({ rows, columns })
