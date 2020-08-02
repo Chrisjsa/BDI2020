@@ -6,7 +6,7 @@ import { Navbar, Nav, Button } from "react-bootstrap"
 import logo from "../../img/logo.png"
 
 import { connect } from "react-redux"
-import { logout } from "../../actions/authActions"
+import { logout } from "../../state/auth/authActions"
 
 const Navigation = ({ user, logout, history }) => {
   const handleLogin = () => {

@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react"
 
 import { Form, Col, Button } from "react-bootstrap"
 
-import { READ_NOTARIAS } from "../../types/notariaTypes"
-
 import { connect } from "react-redux"
 import {
   setCurrentNotaria,
   updateNotaria,
   readNotarias,
-} from "../../actions/notariaActions"
+} from "../../state/notarias/notariaActions"
 
 const NotariaForm = ({
   currentNotaria,
@@ -35,6 +33,8 @@ const NotariaForm = ({
   useEffect(() => {
     if (!currentNotaria) setNotaria(initialState)
     else setNotaria({ ...notaria, ...currentNotaria })
+
+    // eslint-disable-next-line
   }, [currentNotaria])
 
   const {

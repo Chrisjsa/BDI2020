@@ -6,9 +6,9 @@ import moment from "moment"
 
 import { connect } from "react-redux"
 
-import { createCarta } from "../../actions/cartaAction"
+import { createCarta } from "../../state/cartas/cartaActions"
 
-import { Form, Button, Col, Row, Container } from "react-bootstrap"
+import { Form, Button, Col, Container } from "react-bootstrap"
 
 const CartaSolteria = ({ createCarta }) => {
   const bigConsole = text => {

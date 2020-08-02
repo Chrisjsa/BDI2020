@@ -1,4 +1,4 @@
-import { CREATE_CARTA, ERROR_CARTA, LOADING_CARTA } from "../types/cartaTypes"
+import { CREATE_CARTA, ERROR_CARTA, LOADING_CARTA } from "./cartaTypes"
 
 import axios from "axios"
 

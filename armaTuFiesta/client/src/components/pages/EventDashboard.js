@@ -3,10 +3,9 @@ import React from "react"
 import { Row, Col } from "react-bootstrap"
 
 import EventDetail from "../events/EventDetails"
-import ServiceDetail from "../services/ServiceDetail"
 
 import { connect } from "react-redux"
-import { updateStatus } from "../../actions/eventActions"
+import { updateStatus } from "../../state/eventos/eventoActions"
 
 const EventDashboard = ({ currentEvent }) => {
   if (!currentEvent) return <div className="error">currentEvent es nulo</div>

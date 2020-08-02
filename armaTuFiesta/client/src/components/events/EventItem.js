@@ -11,9 +11,9 @@ import { BsPersonFill } from "react-icons/bs"
 import { filterById, arrayOfValues } from "../../utils"
 
 import { connect } from "react-redux"
-import { setCurrentEvent } from "../../actions/eventActions"
+import { setCurrentEvent } from "../../state/eventos/eventoActions"
 
-const EventItem = ({ event, services, setCurrentEvent }) => {
+const EventItem = ({ key, event, services, setCurrentEvent }) => {
   const onClick = () => {
     setCurrentEvent(event.id_evento)
   }
@@ -31,7 +31,7 @@ const EventItem = ({ event, services, setCurrentEvent }) => {
   )
 
   return (
-    <Card>
+    <Card key={key}>
       <Card.Img variant="top" src={fuente} />
       <Card.Body>
         <Card.Title onClick={onClick} as={Link} to={`/events/${id_evento}`}>

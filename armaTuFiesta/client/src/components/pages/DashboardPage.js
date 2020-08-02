@@ -15,7 +15,7 @@ const DashboardPage = ({ user, events, history, loading }) => {
     <div className="text-center mt-5">
       <div>
         <h4>Agrega una nueva fiesta</h4>
-        <img src={ballons} className="text-icon-md mb-3" />
+        <img src={ballons} className="text-icon-md mb-3" alt="ballons" />
       </div>
       <Button>Comenzar</Button>
     </div>

@@ -2,7 +2,7 @@ import {
   SET_CURRENT_SERVICE,
   SET_CURRENT_EVENT,
   UPDATE_STATUS,
-} from "../types/eventTypes"
+} from "./eventoTypes"
 
 export const setCurrentService = serviceId => dispatch => {
   console.log("eventAct, serviceId =", serviceId)

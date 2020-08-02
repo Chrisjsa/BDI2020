@@ -3,7 +3,7 @@ import { Link, withRouter } from "react-router-dom"
 
 import { Form, Button, Card } from "react-bootstrap"
 
-import { login } from "../../actions/authActions"
+import { login } from "../../state/auth/authActions"
 
 import { connect } from "react-redux"
 import useForm from "../../hooks/useForm"

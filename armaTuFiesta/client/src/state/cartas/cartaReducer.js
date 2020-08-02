@@ -1,4 +1,4 @@
-import { CREATE_CARTA, ERROR_CARTA, LOADING_CARTA } from "../types/cartaTypes"
+import { CREATE_CARTA, ERROR_CARTA, LOADING_CARTA } from "./cartaTypes"
 
 const initialState = {
   loading: false,
@@ -17,6 +17,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
+      }
+
+    case ERROR_CARTA:
+      return {
+        ...state,
+        error: action.payload,
       }
 
     default:

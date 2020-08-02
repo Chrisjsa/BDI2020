@@ -1,12 +1,12 @@
 import React from "react"
 
-import { Redirect, withRouter } from "react-router-dom"
+import { withRouter } from "react-router-dom"
 
 import { connect } from "react-redux"
 
-import { Container, Breadcrumb } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 
-import { setCurrentService } from "../../actions/eventActions"
+import { setCurrentService } from "../../state/eventos/eventoActions"
 
 const ServicesDetail = ({
   currentService,

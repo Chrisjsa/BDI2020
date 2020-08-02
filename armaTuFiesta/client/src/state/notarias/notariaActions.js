@@ -6,7 +6,7 @@ import {
   ERROR_NOTARIA,
   LOADING_NOTARIA,
   SET_CURRENT_NOTARIA,
-} from "../types/notariaTypes"
+} from "./notariaTypes"
 
 import axios from "axios"
 
@@ -47,7 +47,7 @@ export const createNotaria = notaria => async dispatch => {
 export const updateNotaria = notaria => async dispatch => {
   setLoading()(dispatch)
   try {
-    const res = await axios.put("api/notarias/actualizar", notaria, config)
+    await axios.put("api/notarias/actualizar", notaria, config)
     dispatch({
       type: UPDATE_NOTARIA,
       payload: notaria,

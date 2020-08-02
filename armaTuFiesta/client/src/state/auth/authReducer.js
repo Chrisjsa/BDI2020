@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING } from "../types/authTypes"
+import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING } from "./authTypes"
 
 const initialState = {
   loading: false,

@@ -6,7 +6,7 @@ import {
   ERROR_NOTARIA,
   LOADING_NOTARIA,
   SET_CURRENT_NOTARIA,
-} from "../types/notariaTypes"
+} from "./notariaTypes"
 
 const initialState = {
   notarias: [],

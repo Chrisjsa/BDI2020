@@ -1,7 +1,7 @@
-import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING } from "../types/authTypes"
+import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING } from "./authTypes"
 import axios from "axios"
 
-import setAuthToken from "../utils/setAuthToken"
+import setAuthToken from "../../utils/setAuthToken"
 
 const config = { headers: { "Content-Type": "application/json" } }
 

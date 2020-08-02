@@ -22,7 +22,7 @@ const LandingPage = () => {
       <div id="showcase" className="mb-4">
         <div className="dark-overlay">
           <Container>
-            <div class="showcase-content">
+            <div className="showcase-content">
               <div className="display-1">Arma Tu Fiesta</div>
               <div className="h1">
                 La fiesta de tus sueños, en la palma de tus manos

@@ -3,13 +3,14 @@ import { Route, Redirect } from "react-router-dom"
 
 import { connect } from "react-redux"
 
-import { loadUser } from "../../actions/authActions"
+import { loadUser } from "../../state/auth/authActions"
 
 const PrivateRoute = ({ loadUser, auth, component: Component, ...rest }) => {
   const { isAuthenticated, loading } = auth
 
   useEffect(() => {
     loadUser()
+    //eslint-disable-next-line
   }, [])
 
   return (

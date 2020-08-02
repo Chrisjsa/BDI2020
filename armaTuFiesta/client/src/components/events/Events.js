@@ -10,7 +10,7 @@ const Events = ({ events, services }) => {
   return (
     <CardDeck>
       {events.map(event => (
-        <EventItem event={event} services={services} />
+        <EventItem key={event.id_evento} event={event} services={services} />
       ))}
     </CardDeck>
   )
