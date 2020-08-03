@@ -3,6 +3,8 @@ const router = express.Router()
 const { monitor } = require("../middleware/monitor") 
 
 const { auth } = require("../middleware/auth")
+const middleware = [auth, monitor] 
+
 const { leerCategoria, crearCategoria, actualizarCategoria, eliminarCategoria } = require("../controllers/categorias")
 
 // Read

@@ -1,8 +1,9 @@
 const express = require("express")
 const router = express.Router()
 const { monitor } = require("../middleware/monitor") 
-const middleware = [auth, monitor] 
 const { auth } = require("../middleware/auth")
+const middleware = [auth, monitor] 
+
 const { leerProducto, crearProducto, actualizarProducto, eliminarProducto } = require("../controllers/productos")
 
 // Read
