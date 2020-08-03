@@ -52,10 +52,15 @@ exports.actualizarNotaria = (req, res) => {
 }
 
 exports.eliminarNotaria = (req, res) => {
-  connection.query(ELIMINAR_NOTARIAS, (error, rows) => {
-    if (error) {
-      return res.status(400).send(error.message)
+  console.table(req.params)
+  connection.query(
+    ELIMINAR_NOTARIAS,
+    [req.params.id_notaria],
+    (error, rows) => {
+      if (error) {
+        return res.status(400).send(error.message)
+      }
+      return res.json(rows)
     }
-    return res.json(rows)
-  })
+  )
 }
