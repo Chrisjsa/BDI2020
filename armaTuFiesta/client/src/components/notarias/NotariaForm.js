@@ -29,9 +29,6 @@ const NotariaForm = ({
   leerMunicipio,
   leerParroquia,
   eleminarNotaria,
-  estados,
-  municipios,
-  parroquias,
 }) => {
   const initialState = {
     estado: "",
@@ -43,6 +40,8 @@ const NotariaForm = ({
     latitud: "",
     longitud: "",
   }
+
+  const { estados, municipios, parroquias } = lugares
 
   const [notaria, setNotaria] = useState(initialState)
 
@@ -263,9 +262,7 @@ const NotariaForm = ({
 
 const mapStateToProps = state => ({
   currentNotaria: state.notarias.currentNotaria,
-  estados: state.lugares.estados,
-  municipios: state.lugares.municipios,
-  parroquias: state.lugares.parroquias,
+  lugares: state.lugares,
 })
 
 export default connect(mapStateToProps, {
