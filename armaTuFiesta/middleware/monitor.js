@@ -12,7 +12,7 @@ exports.monitor = (req, res, next) => {
   console.table(params)
 
   console.log("query is:")
-  console.table(params)
+  console.table(query)
 
   next()
 }
