@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const { connection } = require("./database")
+const { monitor } = require("./middleware/monitor")
 
 const useRoute = route => {
   app.use(`/api/${route}`, require(`./routes/${route}`))

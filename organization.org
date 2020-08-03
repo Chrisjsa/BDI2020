@@ -10,8 +10,8 @@
 ** Notaria
 *** DONE Leer notarias [2020-8-2 Sun]
 *** DONE Actualizar notaria [2020-8-2 Sun]
-*** TODO Crear notaria
-*** TODO Eliminar notaria
+*** DONE Crear notaria [2020-8-2 Sun]
+*** DONE Eliminar notaria [2020-8-2 Sun]
 
 ** Carta
 *** TODO Crear carta
