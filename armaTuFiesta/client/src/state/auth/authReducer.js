@@ -33,8 +33,14 @@ export default (state = initialState, action) => {
         loading: false,
       }
 
-    case LOGOUT:
     case ERROR:
+      return {
+        ...state,
+        loading: false,
+        error: action.paylaod,
+      }
+
+    case LOGOUT:
       localStorage.removeItem("token")
       return {
         ...state,

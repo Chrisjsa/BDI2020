@@ -1,0 +1,149 @@
+2020-08-03T08:07:04.821Z - error: uncaughtException: connect ETIMEDOUT date=Mon Aug 03 2020 04:07:04 GMT-0400 (Venezuela Time), pid=11948, uid=null, gid=null, cwd=C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta, execPath=C:\Program Files\nodejs\node.exe, version=v12.16.3, argv=[C:\Program Files\nodejs\node.exe, C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\server.js, tomas], rss=75247616, heapTotal=51130368, heapUsed=20558512, external=1611006, loadavg=[0, 0, 0], uptime=9739
+Error: connect ETIMEDOUT
+    at Connection._handleConnectTimeout (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (events.js:416:28)
+    at Socket.emit (events.js:310:20)
+    at Socket._onTimeout (net.js:479:8)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+    --------------------
+    at Protocol._enqueue (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at Connection.connect (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\mysql\lib\Connection.js:116:18)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\server.js:12:12)
+    at Module._compile (internal/modules/cjs/loader.js:1133:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)
+    at Module.load (internal/modules/cjs/loader.js:977:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:877:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+2020-08-03T08:17:34.593Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:17:34.597Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:19:21.249Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:19:21.252Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:19:49.295Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:19:49.298Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:20:42.863Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:20:42.866Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:39:24.505Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:39:24.508Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)

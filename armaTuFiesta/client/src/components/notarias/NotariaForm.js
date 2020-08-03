@@ -25,6 +25,7 @@ const NotariaForm = ({
   updateNotaria,
   readNotarias,
   crearNotaria,
+  lugares,
   leerEstado,
   leerMunicipio,
   leerParroquia,

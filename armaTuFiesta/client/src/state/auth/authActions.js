@@ -17,7 +17,7 @@ export const login = credentials => async dispatch => {
   } catch (error) {
     dispatch({
       type: ERROR,
-      payload: error.response.msg,
+      payload: error.message,
     })
   }
 }
@@ -29,10 +29,10 @@ export const loadUser = () => async dispatch => {
   }
 
   try {
-    const res = await axios.get(`/api/auth/`)
+    const res = await axios.get("/api/auth/")
     dispatch({ type: LOAD_USER, payload: res.data })
   } catch (error) {
-    dispatch({ type: ERROR, payload: error.response.msg })
+    dispatch({ type: ERROR, payload: error.message })
   }
 }
 

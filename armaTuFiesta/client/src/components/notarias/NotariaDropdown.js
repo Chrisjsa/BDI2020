@@ -10,7 +10,7 @@ const NotariaDropdown = ({ label, name }) => {
         as="select"
         defaultValue="Seleccionar..."
         name={`${name}`} // string
-        value={estado}
+        value={name}
         onChange={onChange}
         disabled={currentNotaria}
       >

@@ -28,10 +28,10 @@ const DashboardPage = ({ user, events, history, loading }) => {
       ) : (
         <>
           <div className="display-2 mb-4">Hola, {user.p_nombre}</div>
-          <h1>Tus eventos</h1>
+          <h1 className="mt-4">Tus eventos</h1>
           {events.events.length > 0 ? <Events /> : <NoEvents />}
 
-          <h1>Tus trámites</h1>
+          <h1 className="mt-4 mb-3">Tus trámites</h1>
           <Button as={Link} to="/carta_solteria">
             Carta de soltería
           </Button>

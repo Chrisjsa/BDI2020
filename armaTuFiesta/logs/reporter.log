@@ -1,0 +1,1908 @@
+2020-08-03T08:06:48.991Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:06:48.993Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:06:49.001Z - info: Extensions location cache not found, crawling directories
+2020-08-03T08:07:42.497Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:07:42.502Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:07:42.528Z - info: Extensions location cache doesn't contain entry yet, crawling
+2020-08-03T08:07:54.085Z - info: Found 35 extensions
+2020-08-03T08:07:54.301Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:07:54.304Z - debug: Discovered 35 extensions
+2020-08-03T08:07:54.401Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:07:54.409Z - info: Using extension authentication@2.5.0
+2020-08-03T08:07:54.461Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:07:54.463Z - info: Using extension cli@2.2.4
+2020-08-03T08:07:54.467Z - info: Using extension debug@2.1.3
+2020-08-03T08:07:54.469Z - info: Using extension express@2.7.0
+2020-08-03T08:07:54.533Z - info: Using extension freeze@2.0.0
+2020-08-03T08:07:54.536Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:07:54.539Z - info: Using extension import-export@2.0.0
+2020-08-03T08:07:54.619Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:07:54.620Z - info: Using extension tags@2.4.0
+2020-08-03T08:07:54.626Z - info: Using extension templates@2.4.0
+2020-08-03T08:07:54.630Z - info: Using extension authorization@2.4.0
+2020-08-03T08:07:54.636Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:07:54.637Z - info: Using extension base@2.0.2
+2020-08-03T08:07:54.640Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:07:54.644Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:07:54.651Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:07:54.756Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:07:54.758Z - info: Using extension data@2.3.0
+2020-08-03T08:07:54.759Z - info: Using extension docx@2.7.0
+2020-08-03T08:07:54.765Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:07:54.964Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:07:54.965Z - info: Using extension licensing@2.2.2
+2020-08-03T08:07:54.970Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:07:55.073Z - info: Using extension pptx@0.7.0
+2020-08-03T08:07:55.079Z - info: Using extension reports@2.4.0
+2020-08-03T08:07:55.084Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:07:55.089Z - info: Using extension studio@2.9.0
+2020-08-03T08:07:55.216Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:07:55.219Z - info: Using extension text@2.0.0
+2020-08-03T08:07:55.220Z - info: Using extension version-control@1.5.0
+2020-08-03T08:07:55.342Z - info: Using extension assets@1.6.0
+2020-08-03T08:07:55.363Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:07:55.776Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:07:55.778Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:07:55.822Z - info: Using extension scripts@2.5.0
+2020-08-03T08:07:55.827Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:07:55.828Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:07:56.035Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:07:56.037Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:07:56.038Z - info: Using extension resources@2.1.0
+2020-08-03T08:07:56.039Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:07:56.042Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:07:56.060Z - debug: studio default theme is: light
+2020-08-03T08:07:56.082Z - info: Creating default express app.
+2020-08-03T08:07:56.112Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:07:56.114Z - info: Verifying license key free
+2020-08-03T08:07:56.115Z - info: Using free license
+2020-08-03T08:07:56.123Z - debug: Creating samples is disabled
+2020-08-03T08:07:56.125Z - info: reporter initialized
+2020-08-03T08:08:03.064Z - debug: OData query on templates
+2020-08-03T08:08:03.069Z - debug: OData query on folders
+2020-08-03T08:08:03.078Z - debug: OData query on tags
+2020-08-03T08:08:03.081Z - debug: OData query on data
+2020-08-03T08:08:03.083Z - debug: OData query on assets
+2020-08-03T08:08:03.086Z - debug: OData query on scripts
+2020-08-03T08:08:03.089Z - debug: OData query on xlsxTemplates
+2020-08-03T08:08:03.092Z - debug: OData query on schedules
+2020-08-03T08:08:03.100Z - debug: OData query on settings
+2020-08-03T08:08:03.256Z - debug: OData query on templates
+2020-08-03T08:08:03.361Z - debug: OData query on settings
+2020-08-03T08:08:13.721Z - debug: Inserting samples
+2020-08-03T08:08:13.726Z - debug: Creating folder "samples" for sample entities
+2020-08-03T08:08:13.736Z - debug: Inserting sample entity Orders (entitySet: folders)
+2020-08-03T08:08:13.739Z - debug: Inserting sample entity Sales (entitySet: folders)
+2020-08-03T08:08:13.743Z - debug: Inserting sample entity Invoice (entitySet: folders)
+2020-08-03T08:08:13.746Z - debug: Inserting sample entity shared (entitySet: folders)
+2020-08-03T08:08:13.751Z - debug: Inserting sample entity sales-data (entitySet: data)
+2020-08-03T08:08:13.756Z - debug: Inserting sample entity invoice-data (entitySet: data)
+2020-08-03T08:08:13.760Z - debug: Inserting sample entity sales-main (entitySet: templates)
+2020-08-03T08:08:13.784Z - debug: Inserting sample entity orders-main (entitySet: templates)
+2020-08-03T08:08:13.787Z - debug: Inserting sample entity orders-header (entitySet: templates)
+2020-08-03T08:08:13.791Z - debug: Inserting sample entity invoice-main (entitySet: templates)
+2020-08-03T08:08:13.795Z - debug: Inserting sample entity orders-styles.css (entitySet: assets)
+2020-08-03T08:08:13.803Z - debug: Inserting sample entity sales-styles.css (entitySet: assets)
+2020-08-03T08:08:13.807Z - debug: Inserting sample entity invoice-styles.css (entitySet: assets)
+2020-08-03T08:08:13.810Z - debug: Inserting sample entity global helpers.js (entitySet: assets)
+2020-08-03T08:08:13.813Z - debug: Inserting sample entity invoice-logo.png (entitySet: assets)
+2020-08-03T08:08:13.816Z - debug: Inserting sample entity orders-script (entitySet: scripts)
+2020-08-03T08:08:13.852Z - debug: OData query on settings
+2020-08-03T08:08:13.867Z - debug: OData query on templates
+2020-08-03T08:08:13.872Z - debug: OData query on folders
+2020-08-03T08:08:13.874Z - debug: OData query on tags
+2020-08-03T08:08:13.877Z - debug: OData query on data
+2020-08-03T08:08:13.878Z - debug: OData query on assets
+2020-08-03T08:08:13.880Z - debug: OData query on xlsxTemplates
+2020-08-03T08:08:13.885Z - debug: OData query on scripts
+2020-08-03T08:08:13.888Z - debug: OData query on schedules
+2020-08-03T08:08:19.245Z - debug: OData query on data
+2020-08-03T08:08:25.558Z - debug: OData query on assets
+2020-08-03T08:08:43.627Z - debug: OData query on templates
+2020-08-03T08:08:43.651Z - debug: OData query on settings
+2020-08-03T08:08:48.584Z - debug: Version control commit: local changes
+2020-08-03T08:08:48.806Z - debug: Version control diff for local changes
+2020-08-03T08:08:55.840Z - debug: OData query on templates
+2020-08-03T08:08:55.849Z - debug: OData query on settings
+2020-08-03T08:08:58.079Z - debug: OData query on assets
+2020-08-03T08:08:58.773Z - debug: OData query on templates
+2020-08-03T08:09:04.335Z - debug: OData query on assets
+2020-08-03T08:09:09.721Z - info: Starting rendering request 1 (user: null)
+2020-08-03T08:09:09.724Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T08:09:09.725Z - debug: Inline data specified.
+2020-08-03T08:09:09.726Z - debug: Resources not defined for this template.
+2020-08-03T08:09:09.729Z - debug: Base url not specified, skipping its injection.
+2020-08-03T08:09:09.738Z - debug: Replaced assets ["invoice-styles.css","invoice-logo.png"]
+2020-08-03T08:09:09.739Z - debug: Rendering engine handlebars using dedicated-process strategy
+2020-08-03T08:09:10.005Z - debug: Compiled template not found in the cache, compiling
+2020-08-03T08:09:10.007Z - debug: Calculating item Website design; you should see this message in debug run
+2020-08-03T08:09:10.009Z - debug: Executing recipe chrome-pdf
+2020-08-03T08:09:10.279Z - debug: Converting with chrome HeadlessChrome/79.0.3945.0 using dedicated-process strategy
+2020-08-03T08:09:10.508Z - debug: Page request: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/1990c3be-9b8b-4af0-8278-042e10e9536b-chrome-pdf.html
+2020-08-03T08:09:10.521Z - debug: Page request finished: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/1990c3be-9b8b-4af0-8278-042e10e9536b-chrome-pdf.html
+2020-08-03T08:09:10.535Z - debug: Page request: GET (image) data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnYAAABoCAYAAAB8F707AAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2...
+2020-08-03T08:09:10.537Z - debug: Page request finished: GET (image) 200 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnYAAABoCAYAAAB8F707AAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2...
+2020-08-03T08:09:10.583Z - debug: Running chrome with params {"printBackground":true,"marginTop":"1cm","marginRight":"1cm","marginBottom":"1cm","marginLeft":"1cm","margin":{"top":"1cm","right":"1cm","bottom":"1cm","left":"1cm"}}
+2020-08-03T08:09:11.003Z - debug: Skipping storing report.
+2020-08-03T08:09:11.005Z - info: Rendering request 1 finished in 1282 ms
+2020-08-03T08:10:15.728Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:10:15.731Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:10:15.749Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:10:20.470Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:10:20.472Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:10:20.493Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:10:28.749Z - info: Found 35 extensions
+2020-08-03T08:10:28.955Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:10:28.958Z - debug: Discovered 35 extensions
+2020-08-03T08:10:29.045Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:10:29.053Z - info: Using extension authentication@2.5.0
+2020-08-03T08:10:29.102Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:10:29.104Z - info: Using extension cli@2.2.4
+2020-08-03T08:10:29.108Z - info: Using extension debug@2.1.3
+2020-08-03T08:10:29.111Z - info: Using extension express@2.7.0
+2020-08-03T08:10:29.171Z - info: Using extension freeze@2.0.0
+2020-08-03T08:10:29.174Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:10:29.180Z - info: Using extension import-export@2.0.0
+2020-08-03T08:10:29.254Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:10:29.256Z - info: Using extension tags@2.4.0
+2020-08-03T08:10:29.261Z - info: Using extension templates@2.4.0
+2020-08-03T08:10:29.265Z - info: Using extension authorization@2.4.0
+2020-08-03T08:10:29.270Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:10:29.271Z - info: Using extension base@2.0.2
+2020-08-03T08:10:29.273Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:10:29.276Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:10:29.283Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:10:29.384Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:10:29.386Z - info: Using extension data@2.3.0
+2020-08-03T08:10:29.388Z - info: Using extension docx@2.7.0
+2020-08-03T08:10:29.393Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:10:29.591Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:10:29.593Z - info: Using extension licensing@2.2.2
+2020-08-03T08:10:29.598Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:10:29.708Z - info: Using extension pptx@0.7.0
+2020-08-03T08:10:29.715Z - info: Using extension reports@2.4.0
+2020-08-03T08:10:29.720Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:10:29.725Z - info: Using extension studio@2.9.0
+2020-08-03T08:10:29.849Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:10:29.852Z - info: Using extension text@2.0.0
+2020-08-03T08:10:29.854Z - info: Using extension version-control@1.5.0
+2020-08-03T08:10:29.960Z - info: Using extension assets@1.6.0
+2020-08-03T08:10:29.982Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:10:30.398Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:10:30.400Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:10:30.443Z - info: Using extension scripts@2.5.0
+2020-08-03T08:10:30.447Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:10:30.449Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:10:30.654Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:10:30.656Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:10:30.657Z - info: Using extension resources@2.1.0
+2020-08-03T08:10:30.658Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:10:30.661Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:10:30.680Z - debug: studio default theme is: light
+2020-08-03T08:10:30.710Z - info: Creating default express app.
+2020-08-03T08:10:30.734Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:10:30.736Z - info: Verifying license key free
+2020-08-03T08:10:30.737Z - info: Using free license
+2020-08-03T08:10:30.744Z - debug: Creating samples is disabled
+2020-08-03T08:10:30.747Z - info: reporter initialized
+2020-08-03T08:10:34.768Z - debug: OData query on templates
+2020-08-03T08:10:34.773Z - debug: OData query on folders
+2020-08-03T08:10:34.781Z - debug: OData query on tags
+2020-08-03T08:10:34.783Z - debug: OData query on data
+2020-08-03T08:10:34.785Z - debug: OData query on assets
+2020-08-03T08:10:34.787Z - debug: OData query on scripts
+2020-08-03T08:10:34.791Z - debug: OData query on xlsxTemplates
+2020-08-03T08:10:34.796Z - debug: OData query on schedules
+2020-08-03T08:10:34.805Z - debug: OData query on settings
+2020-08-03T08:10:34.996Z - debug: OData query on templates
+2020-08-03T08:10:35.095Z - debug: OData query on settings
+2020-08-03T08:10:42.285Z - debug: OData query on templates
+2020-08-03T08:10:42.288Z - debug: OData query on folders
+2020-08-03T08:10:42.291Z - debug: OData query on tags
+2020-08-03T08:10:42.294Z - debug: OData query on data
+2020-08-03T08:10:42.297Z - debug: OData query on assets
+2020-08-03T08:10:42.299Z - debug: OData query on scripts
+2020-08-03T08:10:42.301Z - debug: OData query on xlsxTemplates
+2020-08-03T08:10:42.303Z - debug: OData query on schedules
+2020-08-03T08:10:42.326Z - debug: OData query on settings
+2020-08-03T08:10:42.406Z - debug: OData query on templates
+2020-08-03T08:10:42.461Z - debug: OData query on settings
+2020-08-03T08:11:02.792Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:11:02.794Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:11:02.810Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:11:10.890Z - info: Found 35 extensions
+2020-08-03T08:11:11.154Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:11:11.158Z - debug: Discovered 35 extensions
+2020-08-03T08:11:11.275Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:11:11.286Z - info: Using extension authentication@2.5.0
+2020-08-03T08:11:11.346Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:11:11.348Z - info: Using extension cli@2.2.4
+2020-08-03T08:11:11.353Z - info: Using extension debug@2.1.3
+2020-08-03T08:11:11.356Z - info: Using extension express@2.7.0
+2020-08-03T08:11:11.437Z - info: Using extension freeze@2.0.0
+2020-08-03T08:11:11.440Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:11:11.444Z - info: Using extension import-export@2.0.0
+2020-08-03T08:11:11.540Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:11:11.544Z - info: Using extension tags@2.4.0
+2020-08-03T08:11:11.551Z - info: Using extension templates@2.4.0
+2020-08-03T08:11:11.558Z - info: Using extension authorization@2.4.0
+2020-08-03T08:11:11.566Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:11:11.567Z - info: Using extension base@2.0.2
+2020-08-03T08:11:11.570Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:11:11.575Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:11:11.582Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:11:11.704Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:11:11.706Z - info: Using extension data@2.3.0
+2020-08-03T08:11:11.709Z - info: Using extension docx@2.7.0
+2020-08-03T08:11:11.718Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:11:11.960Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:11:11.965Z - info: Using extension licensing@2.2.2
+2020-08-03T08:11:11.971Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:11:12.109Z - info: Using extension pptx@0.7.0
+2020-08-03T08:11:12.117Z - info: Using extension reports@2.4.0
+2020-08-03T08:11:12.125Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:11:12.133Z - info: Using extension studio@2.9.0
+2020-08-03T08:11:12.286Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:11:12.291Z - info: Using extension text@2.0.0
+2020-08-03T08:11:12.293Z - info: Using extension version-control@1.5.0
+2020-08-03T08:11:12.440Z - info: Using extension assets@1.6.0
+2020-08-03T08:11:12.467Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:11:12.901Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:11:12.903Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:11:12.947Z - info: Using extension scripts@2.5.0
+2020-08-03T08:11:12.951Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:11:12.952Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:11:13.157Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:11:13.164Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:11:13.165Z - info: Using extension resources@2.1.0
+2020-08-03T08:11:13.167Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:11:13.170Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:11:13.189Z - debug: studio default theme is: light
+2020-08-03T08:11:13.222Z - info: Creating default express app.
+2020-08-03T08:11:13.245Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:11:13.248Z - info: Verifying license key free
+2020-08-03T08:11:13.249Z - info: Using free license
+2020-08-03T08:11:13.257Z - debug: Creating samples is disabled
+2020-08-03T08:11:13.259Z - info: reporter initialized
+2020-08-03T08:11:25.870Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:11:25.873Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:11:25.896Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:11:33.995Z - info: Found 35 extensions
+2020-08-03T08:11:34.213Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:11:34.215Z - debug: Discovered 35 extensions
+2020-08-03T08:11:34.303Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:11:34.311Z - info: Using extension authentication@2.5.0
+2020-08-03T08:11:34.361Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:11:34.363Z - info: Using extension cli@2.2.4
+2020-08-03T08:11:34.367Z - info: Using extension debug@2.1.3
+2020-08-03T08:11:34.369Z - info: Using extension express@2.7.0
+2020-08-03T08:11:34.433Z - info: Using extension freeze@2.0.0
+2020-08-03T08:11:34.436Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:11:34.439Z - info: Using extension import-export@2.0.0
+2020-08-03T08:11:34.516Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:11:34.518Z - info: Using extension tags@2.4.0
+2020-08-03T08:11:34.521Z - info: Using extension templates@2.4.0
+2020-08-03T08:11:34.527Z - info: Using extension authorization@2.4.0
+2020-08-03T08:11:34.533Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:11:34.533Z - info: Using extension base@2.0.2
+2020-08-03T08:11:34.537Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:11:34.540Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:11:34.547Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:11:34.647Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:11:34.649Z - info: Using extension data@2.3.0
+2020-08-03T08:11:34.651Z - info: Using extension docx@2.7.0
+2020-08-03T08:11:34.656Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:11:34.845Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:11:34.847Z - info: Using extension licensing@2.2.2
+2020-08-03T08:11:34.852Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:11:34.958Z - info: Using extension pptx@0.7.0
+2020-08-03T08:11:34.963Z - info: Using extension reports@2.4.0
+2020-08-03T08:11:34.969Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:11:34.973Z - info: Using extension studio@2.9.0
+2020-08-03T08:11:35.097Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:11:35.100Z - info: Using extension text@2.0.0
+2020-08-03T08:11:35.102Z - info: Using extension version-control@1.5.0
+2020-08-03T08:11:35.214Z - info: Using extension assets@1.6.0
+2020-08-03T08:11:35.235Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:11:35.648Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:11:35.650Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:11:35.694Z - info: Using extension scripts@2.5.0
+2020-08-03T08:11:35.698Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:11:35.700Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:11:35.951Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:11:35.954Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:11:35.955Z - info: Using extension resources@2.1.0
+2020-08-03T08:11:35.957Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:11:35.960Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:11:35.987Z - debug: studio default theme is: light
+2020-08-03T08:11:36.029Z - info: Creating default express app.
+2020-08-03T08:11:36.057Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:11:36.062Z - info: Verifying license key free
+2020-08-03T08:11:36.063Z - info: Using free license
+2020-08-03T08:11:36.071Z - debug: Creating samples is disabled
+2020-08-03T08:11:36.073Z - info: reporter initialized
+2020-08-03T08:11:50.838Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:11:50.840Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:11:50.856Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:11:59.181Z - info: Found 35 extensions
+2020-08-03T08:11:59.407Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:11:59.410Z - debug: Discovered 35 extensions
+2020-08-03T08:11:59.503Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:11:59.511Z - info: Using extension authentication@2.5.0
+2020-08-03T08:11:59.561Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:11:59.563Z - info: Using extension cli@2.2.4
+2020-08-03T08:11:59.567Z - info: Using extension debug@2.1.3
+2020-08-03T08:11:59.570Z - info: Using extension express@2.7.0
+2020-08-03T08:11:59.632Z - info: Using extension freeze@2.0.0
+2020-08-03T08:11:59.635Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:11:59.639Z - info: Using extension import-export@2.0.0
+2020-08-03T08:11:59.714Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:11:59.716Z - info: Using extension tags@2.4.0
+2020-08-03T08:11:59.722Z - info: Using extension templates@2.4.0
+2020-08-03T08:11:59.726Z - info: Using extension authorization@2.4.0
+2020-08-03T08:11:59.732Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:11:59.733Z - info: Using extension base@2.0.2
+2020-08-03T08:11:59.736Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:11:59.739Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:11:59.746Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:11:59.852Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:11:59.854Z - info: Using extension data@2.3.0
+2020-08-03T08:11:59.856Z - info: Using extension docx@2.7.0
+2020-08-03T08:11:59.861Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:12:00.064Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:12:00.066Z - info: Using extension licensing@2.2.2
+2020-08-03T08:12:00.071Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:12:00.180Z - info: Using extension pptx@0.7.0
+2020-08-03T08:12:00.185Z - info: Using extension reports@2.4.0
+2020-08-03T08:12:00.191Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:12:00.195Z - info: Using extension studio@2.9.0
+2020-08-03T08:12:00.322Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:12:00.326Z - info: Using extension text@2.0.0
+2020-08-03T08:12:00.327Z - info: Using extension version-control@1.5.0
+2020-08-03T08:12:00.434Z - info: Using extension assets@1.6.0
+2020-08-03T08:12:00.456Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:12:00.867Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:12:00.869Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:12:00.918Z - info: Using extension scripts@2.5.0
+2020-08-03T08:12:00.923Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:12:00.924Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:12:01.125Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:12:01.127Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:12:01.128Z - info: Using extension resources@2.1.0
+2020-08-03T08:12:01.130Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:12:01.133Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:12:01.154Z - debug: studio default theme is: light
+2020-08-03T08:12:01.176Z - info: Creating default express app.
+2020-08-03T08:12:01.209Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:12:01.211Z - info: Verifying license key free
+2020-08-03T08:12:01.212Z - info: Using free license
+2020-08-03T08:12:01.220Z - debug: Creating samples is disabled
+2020-08-03T08:12:01.223Z - info: reporter initialized
+2020-08-03T08:12:41.602Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:12:41.606Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:12:41.641Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:12:49.875Z - info: Found 35 extensions
+2020-08-03T08:12:50.094Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:12:50.097Z - debug: Discovered 35 extensions
+2020-08-03T08:12:50.190Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:12:50.198Z - info: Using extension authentication@2.5.0
+2020-08-03T08:12:50.249Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:12:50.252Z - info: Using extension cli@2.2.4
+2020-08-03T08:12:50.261Z - info: Using extension debug@2.1.3
+2020-08-03T08:12:50.266Z - info: Using extension express@2.7.0
+2020-08-03T08:12:50.337Z - info: Using extension freeze@2.0.0
+2020-08-03T08:12:50.339Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:12:50.343Z - info: Using extension import-export@2.0.0
+2020-08-03T08:12:50.421Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:12:50.424Z - info: Using extension tags@2.4.0
+2020-08-03T08:12:50.427Z - info: Using extension templates@2.4.0
+2020-08-03T08:12:50.432Z - info: Using extension authorization@2.4.0
+2020-08-03T08:12:50.439Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:12:50.439Z - info: Using extension base@2.0.2
+2020-08-03T08:12:50.445Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:12:50.449Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:12:50.456Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:12:50.560Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:12:50.561Z - info: Using extension data@2.3.0
+2020-08-03T08:12:50.563Z - info: Using extension docx@2.7.0
+2020-08-03T08:12:50.570Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:12:50.766Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:12:50.768Z - info: Using extension licensing@2.2.2
+2020-08-03T08:12:50.773Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:12:50.892Z - info: Using extension pptx@0.7.0
+2020-08-03T08:12:50.898Z - info: Using extension reports@2.4.0
+2020-08-03T08:12:50.904Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:12:50.909Z - info: Using extension studio@2.9.0
+2020-08-03T08:12:51.034Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:12:51.037Z - info: Using extension text@2.0.0
+2020-08-03T08:12:51.039Z - info: Using extension version-control@1.5.0
+2020-08-03T08:12:51.150Z - info: Using extension assets@1.6.0
+2020-08-03T08:12:51.172Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:12:51.588Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:12:51.590Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:12:51.636Z - info: Using extension scripts@2.5.0
+2020-08-03T08:12:51.641Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:12:51.642Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:12:51.851Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:12:51.853Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:12:51.853Z - info: Using extension resources@2.1.0
+2020-08-03T08:12:51.855Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:12:51.859Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:12:51.878Z - debug: studio default theme is: light
+2020-08-03T08:12:51.902Z - info: Creating default express app.
+2020-08-03T08:12:51.933Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:12:51.935Z - info: Verifying license key free
+2020-08-03T08:12:51.936Z - info: Using free license
+2020-08-03T08:12:51.943Z - debug: Creating samples is disabled
+2020-08-03T08:12:51.945Z - info: reporter initialized
+2020-08-03T08:17:24.327Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:17:24.330Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:17:24.347Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:17:32.502Z - info: Found 35 extensions
+2020-08-03T08:17:32.731Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:17:32.733Z - debug: Discovered 35 extensions
+2020-08-03T08:17:32.845Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:17:32.852Z - info: Using extension authentication@2.5.0
+2020-08-03T08:17:32.907Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:17:32.909Z - info: Using extension cli@2.2.4
+2020-08-03T08:17:32.914Z - info: Using extension debug@2.1.3
+2020-08-03T08:17:32.917Z - info: Using extension express@2.7.0
+2020-08-03T08:17:32.998Z - info: Using extension freeze@2.0.0
+2020-08-03T08:17:33.004Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:17:33.008Z - info: Using extension import-export@2.0.0
+2020-08-03T08:17:33.093Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:17:33.095Z - info: Using extension tags@2.4.0
+2020-08-03T08:17:33.100Z - info: Using extension templates@2.4.0
+2020-08-03T08:17:33.106Z - info: Using extension authorization@2.4.0
+2020-08-03T08:17:33.113Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:17:33.113Z - info: Using extension base@2.0.2
+2020-08-03T08:17:33.116Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:17:33.120Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:17:33.127Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:17:33.231Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:17:33.233Z - info: Using extension data@2.3.0
+2020-08-03T08:17:33.235Z - info: Using extension docx@2.7.0
+2020-08-03T08:17:33.241Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:17:33.440Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:17:33.442Z - info: Using extension licensing@2.2.2
+2020-08-03T08:17:33.447Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:17:33.558Z - info: Using extension pptx@0.7.0
+2020-08-03T08:17:33.564Z - info: Using extension reports@2.4.0
+2020-08-03T08:17:33.570Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:17:33.575Z - info: Using extension studio@2.9.0
+2020-08-03T08:17:33.700Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:17:33.703Z - info: Using extension text@2.0.0
+2020-08-03T08:17:33.705Z - info: Using extension version-control@1.5.0
+2020-08-03T08:17:33.817Z - info: Using extension assets@1.6.0
+2020-08-03T08:17:33.839Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:17:34.258Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:17:34.260Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:17:34.305Z - info: Using extension scripts@2.5.0
+2020-08-03T08:17:34.309Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:17:34.311Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:17:34.511Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:17:34.513Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:17:34.514Z - info: Using extension resources@2.1.0
+2020-08-03T08:17:34.519Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:17:34.523Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:17:34.541Z - debug: studio default theme is: light
+2020-08-03T08:17:34.564Z - info: Creating default express app.
+2020-08-03T08:17:34.593Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:17:34.597Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:19:10.883Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:19:10.885Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:19:10.903Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:19:19.194Z - info: Found 35 extensions
+2020-08-03T08:19:19.416Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:19:19.418Z - debug: Discovered 35 extensions
+2020-08-03T08:19:19.530Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:19:19.540Z - info: Using extension authentication@2.5.0
+2020-08-03T08:19:19.597Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:19:19.598Z - info: Using extension cli@2.2.4
+2020-08-03T08:19:19.602Z - info: Using extension debug@2.1.3
+2020-08-03T08:19:19.606Z - info: Using extension express@2.7.0
+2020-08-03T08:19:19.673Z - info: Using extension freeze@2.0.0
+2020-08-03T08:19:19.676Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:19:19.679Z - info: Using extension import-export@2.0.0
+2020-08-03T08:19:19.755Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:19:19.756Z - info: Using extension tags@2.4.0
+2020-08-03T08:19:19.759Z - info: Using extension templates@2.4.0
+2020-08-03T08:19:19.764Z - info: Using extension authorization@2.4.0
+2020-08-03T08:19:19.771Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:19:19.771Z - info: Using extension base@2.0.2
+2020-08-03T08:19:19.773Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:19:19.776Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:19:19.783Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:19:19.889Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:19:19.890Z - info: Using extension data@2.3.0
+2020-08-03T08:19:19.892Z - info: Using extension docx@2.7.0
+2020-08-03T08:19:19.897Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:19:20.089Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:19:20.090Z - info: Using extension licensing@2.2.2
+2020-08-03T08:19:20.095Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:19:20.210Z - info: Using extension pptx@0.7.0
+2020-08-03T08:19:20.216Z - info: Using extension reports@2.4.0
+2020-08-03T08:19:20.222Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:19:20.226Z - info: Using extension studio@2.9.0
+2020-08-03T08:19:20.354Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:19:20.358Z - info: Using extension text@2.0.0
+2020-08-03T08:19:20.359Z - info: Using extension version-control@1.5.0
+2020-08-03T08:19:20.463Z - info: Using extension assets@1.6.0
+2020-08-03T08:19:20.485Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:19:20.904Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:19:20.906Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:19:20.953Z - info: Using extension scripts@2.5.0
+2020-08-03T08:19:20.958Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:19:20.959Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:19:21.165Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:19:21.167Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:19:21.167Z - info: Using extension resources@2.1.0
+2020-08-03T08:19:21.168Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:19:21.172Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:19:21.192Z - debug: studio default theme is: light
+2020-08-03T08:19:21.216Z - info: Creating default express app.
+2020-08-03T08:19:21.248Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:19:21.252Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:19:39.272Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:19:39.273Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:19:39.290Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:19:47.363Z - info: Found 35 extensions
+2020-08-03T08:19:47.569Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:19:47.570Z - debug: Discovered 35 extensions
+2020-08-03T08:19:47.658Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:19:47.665Z - info: Using extension authentication@2.5.0
+2020-08-03T08:19:47.715Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:19:47.716Z - info: Using extension cli@2.2.4
+2020-08-03T08:19:47.720Z - info: Using extension debug@2.1.3
+2020-08-03T08:19:47.722Z - info: Using extension express@2.7.0
+2020-08-03T08:19:47.784Z - info: Using extension freeze@2.0.0
+2020-08-03T08:19:47.786Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:19:47.790Z - info: Using extension import-export@2.0.0
+2020-08-03T08:19:47.864Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:19:47.865Z - info: Using extension tags@2.4.0
+2020-08-03T08:19:47.868Z - info: Using extension templates@2.4.0
+2020-08-03T08:19:47.874Z - info: Using extension authorization@2.4.0
+2020-08-03T08:19:47.879Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:19:47.879Z - info: Using extension base@2.0.2
+2020-08-03T08:19:47.882Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:19:47.885Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:19:47.891Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:19:47.991Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:19:47.992Z - info: Using extension data@2.3.0
+2020-08-03T08:19:47.993Z - info: Using extension docx@2.7.0
+2020-08-03T08:19:47.999Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:19:48.187Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:19:48.188Z - info: Using extension licensing@2.2.2
+2020-08-03T08:19:48.193Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:19:48.297Z - info: Using extension pptx@0.7.0
+2020-08-03T08:19:48.303Z - info: Using extension reports@2.4.0
+2020-08-03T08:19:48.308Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:19:48.312Z - info: Using extension studio@2.9.0
+2020-08-03T08:19:48.434Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:19:48.437Z - info: Using extension text@2.0.0
+2020-08-03T08:19:48.438Z - info: Using extension version-control@1.5.0
+2020-08-03T08:19:48.546Z - info: Using extension assets@1.6.0
+2020-08-03T08:19:48.567Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:19:48.968Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:19:48.970Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:19:49.012Z - info: Using extension scripts@2.5.0
+2020-08-03T08:19:49.016Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:19:49.017Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:19:49.212Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:19:49.214Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:19:49.215Z - info: Using extension resources@2.1.0
+2020-08-03T08:19:49.216Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:19:49.219Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:19:49.242Z - debug: studio default theme is: light
+2020-08-03T08:19:49.263Z - info: Creating default express app.
+2020-08-03T08:19:49.295Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:19:49.298Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:20:32.661Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:20:32.662Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:20:32.689Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:20:40.808Z - info: Found 35 extensions
+2020-08-03T08:20:41.028Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:20:41.030Z - debug: Discovered 35 extensions
+2020-08-03T08:20:41.144Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:20:41.154Z - info: Using extension authentication@2.5.0
+2020-08-03T08:20:41.219Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:20:41.220Z - info: Using extension cli@2.2.4
+2020-08-03T08:20:41.225Z - info: Using extension debug@2.1.3
+2020-08-03T08:20:41.227Z - info: Using extension express@2.7.0
+2020-08-03T08:20:41.294Z - info: Using extension freeze@2.0.0
+2020-08-03T08:20:41.296Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:20:41.300Z - info: Using extension import-export@2.0.0
+2020-08-03T08:20:41.388Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:20:41.389Z - info: Using extension tags@2.4.0
+2020-08-03T08:20:41.395Z - info: Using extension templates@2.4.0
+2020-08-03T08:20:41.398Z - info: Using extension authorization@2.4.0
+2020-08-03T08:20:41.404Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:20:41.405Z - info: Using extension base@2.0.2
+2020-08-03T08:20:41.407Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:20:41.411Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:20:41.418Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:20:41.527Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:20:41.529Z - info: Using extension data@2.3.0
+2020-08-03T08:20:41.530Z - info: Using extension docx@2.7.0
+2020-08-03T08:20:41.535Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:20:41.730Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:20:41.731Z - info: Using extension licensing@2.2.2
+2020-08-03T08:20:41.736Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:20:41.840Z - info: Using extension pptx@0.7.0
+2020-08-03T08:20:41.846Z - info: Using extension reports@2.4.0
+2020-08-03T08:20:41.851Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:20:41.856Z - info: Using extension studio@2.9.0
+2020-08-03T08:20:41.983Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:20:41.986Z - info: Using extension text@2.0.0
+2020-08-03T08:20:41.987Z - info: Using extension version-control@1.5.0
+2020-08-03T08:20:42.094Z - info: Using extension assets@1.6.0
+2020-08-03T08:20:42.115Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:20:42.527Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:20:42.528Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:20:42.575Z - info: Using extension scripts@2.5.0
+2020-08-03T08:20:42.580Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:20:42.581Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:20:42.784Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:20:42.786Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:20:42.786Z - info: Using extension resources@2.1.0
+2020-08-03T08:20:42.788Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:20:42.791Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:20:42.810Z - debug: studio default theme is: light
+2020-08-03T08:20:42.832Z - info: Creating default express app.
+2020-08-03T08:20:42.862Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:20:42.866Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:21:19.078Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:21:19.080Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:21:19.107Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:21:27.255Z - info: Found 35 extensions
+2020-08-03T08:21:27.490Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:21:27.492Z - debug: Discovered 35 extensions
+2020-08-03T08:21:27.598Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:21:27.609Z - info: Using extension authentication@2.5.0
+2020-08-03T08:21:27.672Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:21:27.675Z - info: Using extension cli@2.2.4
+2020-08-03T08:21:27.679Z - info: Using extension debug@2.1.3
+2020-08-03T08:21:27.682Z - info: Using extension express@2.7.0
+2020-08-03T08:21:27.753Z - info: Using extension freeze@2.0.0
+2020-08-03T08:21:27.756Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:21:27.761Z - info: Using extension import-export@2.0.0
+2020-08-03T08:21:27.848Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:21:27.851Z - info: Using extension tags@2.4.0
+2020-08-03T08:21:27.856Z - info: Using extension templates@2.4.0
+2020-08-03T08:21:27.860Z - info: Using extension authorization@2.4.0
+2020-08-03T08:21:27.866Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:21:27.867Z - info: Using extension base@2.0.2
+2020-08-03T08:21:27.870Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:21:27.874Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:21:27.881Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:21:27.983Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:21:27.985Z - info: Using extension data@2.3.0
+2020-08-03T08:21:27.987Z - info: Using extension docx@2.7.0
+2020-08-03T08:21:27.994Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:21:28.187Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:21:28.190Z - info: Using extension licensing@2.2.2
+2020-08-03T08:21:28.195Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:21:28.304Z - info: Using extension pptx@0.7.0
+2020-08-03T08:21:28.310Z - info: Using extension reports@2.4.0
+2020-08-03T08:21:28.316Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:21:28.320Z - info: Using extension studio@2.9.0
+2020-08-03T08:21:28.446Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:21:28.449Z - info: Using extension text@2.0.0
+2020-08-03T08:21:28.451Z - info: Using extension version-control@1.5.0
+2020-08-03T08:21:28.562Z - info: Using extension assets@1.6.0
+2020-08-03T08:21:28.583Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:21:28.999Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:21:29.002Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:21:29.047Z - info: Using extension scripts@2.5.0
+2020-08-03T08:21:29.051Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:21:29.053Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:21:29.262Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:21:29.265Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:21:29.265Z - info: Using extension resources@2.1.0
+2020-08-03T08:21:29.267Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:21:29.269Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:21:29.289Z - debug: studio default theme is: light
+2020-08-03T08:21:29.320Z - info: Creating default express app.
+2020-08-03T08:21:29.344Z - info: jsreport server successfully started on http port: 3000
+2020-08-03T08:21:29.346Z - info: Verifying license key free
+2020-08-03T08:21:29.347Z - info: Using free license
+2020-08-03T08:21:29.355Z - debug: Creating samples is disabled
+2020-08-03T08:21:29.357Z - info: reporter initialized
+2020-08-03T08:21:50.713Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:21:50.715Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:21:50.732Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:21:58.750Z - info: Found 35 extensions
+2020-08-03T08:21:58.956Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:21:58.958Z - debug: Discovered 35 extensions
+2020-08-03T08:21:59.075Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:21:59.083Z - info: Using extension authentication@2.5.0
+2020-08-03T08:21:59.136Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:21:59.138Z - info: Using extension cli@2.2.4
+2020-08-03T08:21:59.143Z - info: Using extension debug@2.1.3
+2020-08-03T08:21:59.146Z - info: Using extension express@2.7.0
+2020-08-03T08:21:59.209Z - info: Using extension freeze@2.0.0
+2020-08-03T08:21:59.212Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:21:59.215Z - info: Using extension import-export@2.0.0
+2020-08-03T08:21:59.290Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:21:59.292Z - info: Using extension tags@2.4.0
+2020-08-03T08:21:59.298Z - info: Using extension templates@2.4.0
+2020-08-03T08:21:59.302Z - info: Using extension authorization@2.4.0
+2020-08-03T08:21:59.309Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:21:59.309Z - info: Using extension base@2.0.2
+2020-08-03T08:21:59.312Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:21:59.316Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:21:59.322Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:21:59.423Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:21:59.425Z - info: Using extension data@2.3.0
+2020-08-03T08:21:59.426Z - info: Using extension docx@2.7.0
+2020-08-03T08:21:59.432Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:21:59.621Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:21:59.623Z - info: Using extension licensing@2.2.2
+2020-08-03T08:21:59.628Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:21:59.732Z - info: Using extension pptx@0.7.0
+2020-08-03T08:21:59.738Z - info: Using extension reports@2.4.0
+2020-08-03T08:21:59.743Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:21:59.748Z - info: Using extension studio@2.9.0
+2020-08-03T08:21:59.872Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:21:59.875Z - info: Using extension text@2.0.0
+2020-08-03T08:21:59.877Z - info: Using extension version-control@1.5.0
+2020-08-03T08:21:59.986Z - info: Using extension assets@1.6.0
+2020-08-03T08:22:00.010Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:22:00.417Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:22:00.418Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:22:00.461Z - info: Using extension scripts@2.5.0
+2020-08-03T08:22:00.465Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:22:00.466Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:22:00.661Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:22:00.663Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:22:00.663Z - info: Using extension resources@2.1.0
+2020-08-03T08:22:00.665Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:22:00.673Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:22:00.692Z - debug: studio default theme is: light
+2020-08-03T08:22:00.713Z - info: Creating default express app.
+2020-08-03T08:22:00.743Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:22:00.745Z - info: Verifying license key free
+2020-08-03T08:22:00.746Z - info: Using free license
+2020-08-03T08:22:00.752Z - debug: Creating samples is disabled
+2020-08-03T08:22:00.754Z - info: reporter initialized
+2020-08-03T08:22:07.858Z - debug: OData query on templates
+2020-08-03T08:22:07.862Z - debug: OData query on folders
+2020-08-03T08:22:07.871Z - debug: OData query on tags
+2020-08-03T08:22:07.873Z - debug: OData query on data
+2020-08-03T08:22:07.876Z - debug: OData query on assets
+2020-08-03T08:22:07.877Z - debug: OData query on scripts
+2020-08-03T08:22:07.881Z - debug: OData query on xlsxTemplates
+2020-08-03T08:22:07.885Z - debug: OData query on schedules
+2020-08-03T08:22:07.901Z - debug: OData query on settings
+2020-08-03T08:22:08.136Z - debug: OData query on templates
+2020-08-03T08:22:08.270Z - debug: OData query on settings
+2020-08-03T08:25:20.135Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:25:20.137Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:25:20.154Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:39:14.443Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:39:14.444Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:39:14.461Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:39:22.551Z - info: Found 35 extensions
+2020-08-03T08:39:22.752Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:39:22.753Z - debug: Discovered 35 extensions
+2020-08-03T08:39:22.846Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:39:22.853Z - info: Using extension authentication@2.5.0
+2020-08-03T08:39:22.904Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:39:22.904Z - info: Using extension cli@2.2.4
+2020-08-03T08:39:22.908Z - info: Using extension debug@2.1.3
+2020-08-03T08:39:22.910Z - info: Using extension express@2.7.0
+2020-08-03T08:39:22.970Z - info: Using extension freeze@2.0.0
+2020-08-03T08:39:22.972Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:39:22.975Z - info: Using extension import-export@2.0.0
+2020-08-03T08:39:23.049Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:39:23.050Z - info: Using extension tags@2.4.0
+2020-08-03T08:39:23.055Z - info: Using extension templates@2.4.0
+2020-08-03T08:39:23.058Z - info: Using extension authorization@2.4.0
+2020-08-03T08:39:23.063Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:39:23.064Z - info: Using extension base@2.0.2
+2020-08-03T08:39:23.066Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:39:23.069Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:39:23.075Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:39:23.177Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:39:23.178Z - info: Using extension data@2.3.0
+2020-08-03T08:39:23.179Z - info: Using extension docx@2.7.0
+2020-08-03T08:39:23.184Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:39:23.378Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:39:23.378Z - info: Using extension licensing@2.2.2
+2020-08-03T08:39:23.383Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:39:23.484Z - info: Using extension pptx@0.7.0
+2020-08-03T08:39:23.491Z - info: Using extension reports@2.4.0
+2020-08-03T08:39:23.498Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:39:23.503Z - info: Using extension studio@2.9.0
+2020-08-03T08:39:23.632Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:39:23.635Z - info: Using extension text@2.0.0
+2020-08-03T08:39:23.636Z - info: Using extension version-control@1.5.0
+2020-08-03T08:39:23.742Z - info: Using extension assets@1.6.0
+2020-08-03T08:39:23.763Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:39:24.175Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:39:24.175Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:39:24.218Z - info: Using extension scripts@2.5.0
+2020-08-03T08:39:24.221Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:39:24.223Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:39:24.427Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:39:24.428Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:39:24.429Z - info: Using extension resources@2.1.0
+2020-08-03T08:39:24.430Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:39:24.433Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:39:24.452Z - debug: studio default theme is: light
+2020-08-03T08:39:24.482Z - info: Creating default express app.
+2020-08-03T08:39:24.505Z - error: Error when starting http server on port 5000 Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:39:24.508Z - error: Error occured during reporter init Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1313:16)
+    at listenInCluster (net.js:1361:12)
+    at Server.listen (net.js:1449:7)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:23:12
+    at Promise._execute (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\debuggability.js:313:9)
+    at Promise._resolveFromExecutor (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\bluebird\js\release\promise.js:79:10)
+    at startAsync (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:17:10)
+    at C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:51:14
+    at Object.start (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:125:13)
+    at Object.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:317:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2020-08-03T08:44:18.329Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:44:18.331Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:44:18.350Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:44:26.909Z - info: Found 35 extensions
+2020-08-03T08:44:27.134Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:44:27.136Z - debug: Discovered 35 extensions
+2020-08-03T08:44:27.240Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:44:27.248Z - info: Using extension authentication@2.5.0
+2020-08-03T08:44:27.302Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:44:27.302Z - info: Using extension cli@2.2.4
+2020-08-03T08:44:27.306Z - info: Using extension debug@2.1.3
+2020-08-03T08:44:27.308Z - info: Using extension express@2.7.0
+2020-08-03T08:44:27.374Z - info: Using extension freeze@2.0.0
+2020-08-03T08:44:27.376Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:44:27.380Z - info: Using extension import-export@2.0.0
+2020-08-03T08:44:27.467Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:44:27.469Z - info: Using extension tags@2.4.0
+2020-08-03T08:44:27.475Z - info: Using extension templates@2.4.0
+2020-08-03T08:44:27.479Z - info: Using extension authorization@2.4.0
+2020-08-03T08:44:27.486Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:44:27.486Z - info: Using extension base@2.0.2
+2020-08-03T08:44:27.488Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:44:27.491Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:44:27.498Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:44:27.615Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:44:27.616Z - info: Using extension data@2.3.0
+2020-08-03T08:44:27.617Z - info: Using extension docx@2.7.0
+2020-08-03T08:44:27.623Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:44:27.837Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:44:27.838Z - info: Using extension licensing@2.2.2
+2020-08-03T08:44:27.842Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:44:27.955Z - info: Using extension pptx@0.7.0
+2020-08-03T08:44:27.960Z - info: Using extension reports@2.4.0
+2020-08-03T08:44:27.967Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:44:27.971Z - info: Using extension studio@2.9.0
+2020-08-03T08:44:28.104Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:44:28.107Z - info: Using extension text@2.0.0
+2020-08-03T08:44:28.108Z - info: Using extension version-control@1.5.0
+2020-08-03T08:44:28.220Z - info: Using extension assets@1.6.0
+2020-08-03T08:44:28.242Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:44:28.685Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:44:28.686Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:44:28.736Z - info: Using extension scripts@2.5.0
+2020-08-03T08:44:28.740Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:44:28.742Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:44:28.969Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:44:28.971Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:44:28.971Z - info: Using extension resources@2.1.0
+2020-08-03T08:44:28.973Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:44:28.976Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:44:28.996Z - debug: studio default theme is: light
+2020-08-03T08:44:29.022Z - info: Creating default express app.
+2020-08-03T08:44:29.058Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:44:29.060Z - info: Verifying license key free
+2020-08-03T08:44:29.061Z - info: Using free license
+2020-08-03T08:44:29.071Z - debug: Creating samples is disabled
+2020-08-03T08:44:29.072Z - info: reporter initialized
+2020-08-03T08:44:29.092Z - info: Starting rendering request 1 (user: null)
+2020-08-03T08:44:29.094Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars }
+2020-08-03T08:44:29.095Z - debug: Inline data specified.
+2020-08-03T08:44:29.096Z - debug: Resources not defined for this template.
+2020-08-03T08:44:29.100Z - debug: Base url not specified, skipping its injection.
+2020-08-03T08:44:29.103Z - debug: Rendering engine handlebars using dedicated-process strategy
+2020-08-03T08:44:29.378Z - debug: Compiled template not found in the cache, compiling
+2020-08-03T08:44:29.380Z - debug: Executing recipe chrome-pdf
+2020-08-03T08:44:29.506Z - debug: Converting with chrome HeadlessChrome/79.0.3945.0 using dedicated-process strategy
+2020-08-03T08:44:29.635Z - debug: Page request: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/7e579594-eb18-49b7-b7bf-233dddd7e6f8-chrome-pdf.html
+2020-08-03T08:44:29.649Z - debug: Page request finished: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/7e579594-eb18-49b7-b7bf-233dddd7e6f8-chrome-pdf.html
+2020-08-03T08:44:29.672Z - debug: Running chrome with params {"margin":{},"printBackground":true}
+2020-08-03T08:44:29.863Z - debug: Skipping storing report.
+2020-08-03T08:44:29.866Z - info: Rendering request 1 finished in 771 ms
+2020-08-03T08:45:30.964Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:45:30.966Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:45:30.987Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:45:35.289Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:45:35.291Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:45:35.313Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:45:43.577Z - info: Found 35 extensions
+2020-08-03T08:45:43.787Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:45:43.789Z - debug: Discovered 35 extensions
+2020-08-03T08:45:43.879Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:45:45.827Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:45:45.829Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:45:45.846Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:45:53.983Z - info: Found 35 extensions
+2020-08-03T08:45:54.193Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:45:54.195Z - debug: Discovered 35 extensions
+2020-08-03T08:45:54.284Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:45:54.292Z - info: Using extension authentication@2.5.0
+2020-08-03T08:45:54.343Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:45:54.343Z - info: Using extension cli@2.2.4
+2020-08-03T08:45:54.347Z - info: Using extension debug@2.1.3
+2020-08-03T08:45:54.349Z - info: Using extension express@2.7.0
+2020-08-03T08:45:54.412Z - info: Using extension freeze@2.0.0
+2020-08-03T08:45:54.414Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:45:54.418Z - info: Using extension import-export@2.0.0
+2020-08-03T08:45:54.494Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:45:54.496Z - info: Using extension tags@2.4.0
+2020-08-03T08:45:54.501Z - info: Using extension templates@2.4.0
+2020-08-03T08:45:54.504Z - info: Using extension authorization@2.4.0
+2020-08-03T08:45:54.510Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:45:54.510Z - info: Using extension base@2.0.2
+2020-08-03T08:45:54.512Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:45:54.515Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:45:54.522Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:45:54.625Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:45:54.626Z - info: Using extension data@2.3.0
+2020-08-03T08:45:54.627Z - info: Using extension docx@2.7.0
+2020-08-03T08:45:54.633Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:45:54.830Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:45:54.831Z - info: Using extension licensing@2.2.2
+2020-08-03T08:45:54.835Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:45:54.944Z - info: Using extension pptx@0.7.0
+2020-08-03T08:45:54.949Z - info: Using extension reports@2.4.0
+2020-08-03T08:45:54.956Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:45:54.960Z - info: Using extension studio@2.9.0
+2020-08-03T08:45:55.093Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:45:55.096Z - info: Using extension text@2.0.0
+2020-08-03T08:45:55.097Z - info: Using extension version-control@1.5.0
+2020-08-03T08:45:55.221Z - info: Using extension assets@1.6.0
+2020-08-03T08:45:55.246Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:45:55.697Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:45:55.698Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:45:55.743Z - info: Using extension scripts@2.5.0
+2020-08-03T08:45:55.748Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:45:55.749Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:45:55.965Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:45:55.967Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:45:55.967Z - info: Using extension resources@2.1.0
+2020-08-03T08:45:55.969Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:45:55.976Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:45:55.995Z - debug: studio default theme is: light
+2020-08-03T08:45:56.018Z - info: Creating default express app.
+2020-08-03T08:45:56.052Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:45:56.054Z - info: Verifying license key free
+2020-08-03T08:45:56.055Z - info: Using free license
+2020-08-03T08:45:56.062Z - debug: Creating samples is disabled
+2020-08-03T08:45:56.064Z - info: reporter initialized
+2020-08-03T08:46:02.213Z - debug: OData query on templates
+2020-08-03T08:46:02.217Z - debug: OData query on folders
+2020-08-03T08:46:02.225Z - debug: OData query on tags
+2020-08-03T08:46:02.226Z - debug: OData query on data
+2020-08-03T08:46:02.228Z - debug: OData query on assets
+2020-08-03T08:46:02.229Z - debug: OData query on scripts
+2020-08-03T08:46:02.232Z - debug: OData query on xlsxTemplates
+2020-08-03T08:46:02.236Z - debug: OData query on schedules
+2020-08-03T08:46:02.243Z - debug: OData query on settings
+2020-08-03T08:46:02.400Z - debug: OData query on templates
+2020-08-03T08:46:02.496Z - debug: OData query on settings
+2020-08-03T08:46:36.006Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:46:36.007Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:46:36.024Z - info: Extensions location cache C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2020-08-03T08:46:48.967Z - info: Found 35 extensions
+2020-08-03T08:46:49.219Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:46:49.222Z - debug: Discovered 35 extensions
+2020-08-03T08:46:49.325Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:46:49.334Z - info: Using extension authentication@2.5.0
+2020-08-03T08:46:49.391Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:46:49.393Z - info: Using extension cli@2.2.4
+2020-08-03T08:46:49.397Z - info: Using extension debug@2.1.3
+2020-08-03T08:46:49.400Z - info: Using extension express@2.7.0
+2020-08-03T08:46:49.470Z - info: Using extension freeze@2.0.0
+2020-08-03T08:46:49.473Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:46:49.477Z - info: Using extension import-export@2.0.0
+2020-08-03T08:46:49.564Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:46:49.568Z - info: Using extension tags@2.4.0
+2020-08-03T08:46:49.574Z - info: Using extension templates@2.4.0
+2020-08-03T08:46:49.578Z - info: Using extension authorization@2.4.0
+2020-08-03T08:46:49.586Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:46:49.586Z - info: Using extension base@2.0.2
+2020-08-03T08:46:49.589Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:46:49.593Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:46:49.601Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:46:49.718Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:46:49.720Z - info: Using extension data@2.3.0
+2020-08-03T08:46:49.722Z - info: Using extension docx@2.7.0
+2020-08-03T08:46:49.727Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:46:49.955Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:46:49.957Z - info: Using extension licensing@2.2.2
+2020-08-03T08:46:49.962Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:46:50.095Z - info: Using extension pptx@0.7.0
+2020-08-03T08:46:50.104Z - info: Using extension reports@2.4.0
+2020-08-03T08:46:50.111Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:46:50.120Z - info: Using extension studio@2.9.0
+2020-08-03T08:46:50.277Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:46:50.280Z - info: Using extension text@2.0.0
+2020-08-03T08:46:50.282Z - info: Using extension version-control@1.5.0
+2020-08-03T08:46:50.409Z - info: Using extension assets@1.6.0
+2020-08-03T08:46:50.441Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:46:50.975Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:46:50.977Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:46:51.027Z - info: Using extension scripts@2.5.0
+2020-08-03T08:46:51.032Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:46:51.034Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:46:51.274Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:46:51.276Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:46:51.277Z - info: Using extension resources@2.1.0
+2020-08-03T08:46:51.278Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:46:51.281Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:46:51.305Z - debug: studio default theme is: light
+2020-08-03T08:46:51.329Z - info: Creating default express app.
+2020-08-03T08:46:51.371Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:46:51.374Z - info: Verifying license key free
+2020-08-03T08:46:51.375Z - info: Using free license
+2020-08-03T08:46:51.381Z - debug: Creating samples is disabled
+2020-08-03T08:46:51.387Z - info: reporter initialized
+2020-08-03T08:46:55.366Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:46:55.369Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:46:55.389Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:47:03.674Z - info: Found 35 extensions
+2020-08-03T08:47:03.877Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:47:03.880Z - debug: Discovered 35 extensions
+2020-08-03T08:47:03.977Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:47:03.986Z - info: Using extension authentication@2.5.0
+2020-08-03T08:47:04.037Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:47:04.038Z - info: Using extension cli@2.2.4
+2020-08-03T08:47:04.043Z - info: Using extension debug@2.1.3
+2020-08-03T08:47:04.045Z - info: Using extension express@2.7.0
+2020-08-03T08:47:04.109Z - info: Using extension freeze@2.0.0
+2020-08-03T08:47:04.111Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:47:04.115Z - info: Using extension import-export@2.0.0
+2020-08-03T08:47:04.191Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:47:04.193Z - info: Using extension tags@2.4.0
+2020-08-03T08:47:04.196Z - info: Using extension templates@2.4.0
+2020-08-03T08:47:04.203Z - info: Using extension authorization@2.4.0
+2020-08-03T08:47:04.209Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:47:04.209Z - info: Using extension base@2.0.2
+2020-08-03T08:47:04.213Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:47:04.217Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:47:04.224Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:47:04.330Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:47:04.331Z - info: Using extension data@2.3.0
+2020-08-03T08:47:04.333Z - info: Using extension docx@2.7.0
+2020-08-03T08:47:04.339Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:47:04.568Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:47:04.570Z - info: Using extension licensing@2.2.2
+2020-08-03T08:47:04.581Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:47:04.695Z - info: Using extension pptx@0.7.0
+2020-08-03T08:47:04.701Z - info: Using extension reports@2.4.0
+2020-08-03T08:47:04.708Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:47:04.713Z - info: Using extension studio@2.9.0
+2020-08-03T08:47:04.847Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:47:04.851Z - info: Using extension text@2.0.0
+2020-08-03T08:47:04.852Z - info: Using extension version-control@1.5.0
+2020-08-03T08:47:04.961Z - info: Using extension assets@1.6.0
+2020-08-03T08:47:04.983Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:47:05.410Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:47:05.413Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:47:05.463Z - info: Using extension scripts@2.5.0
+2020-08-03T08:47:05.468Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:47:05.469Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:47:05.687Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:47:05.689Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:47:05.690Z - info: Using extension resources@2.1.0
+2020-08-03T08:47:05.691Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:47:05.694Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:47:05.715Z - debug: studio default theme is: light
+2020-08-03T08:47:05.745Z - info: Creating default express app.
+2020-08-03T08:47:05.785Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:47:05.788Z - info: Verifying license key free
+2020-08-03T08:47:05.789Z - info: Using free license
+2020-08-03T08:47:05.800Z - debug: Creating samples is disabled
+2020-08-03T08:47:05.803Z - info: reporter initialized
+2020-08-03T08:48:03.478Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:48:03.480Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:48:03.504Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:48:13.613Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:48:13.616Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:48:13.645Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:48:22.528Z - info: Found 35 extensions
+2020-08-03T08:48:22.746Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:48:22.749Z - debug: Discovered 35 extensions
+2020-08-03T08:48:22.844Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:48:22.853Z - info: Using extension authentication@2.5.0
+2020-08-03T08:48:22.907Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:48:22.909Z - info: Using extension cli@2.2.4
+2020-08-03T08:48:22.913Z - info: Using extension debug@2.1.3
+2020-08-03T08:48:22.915Z - info: Using extension express@2.7.0
+2020-08-03T08:48:22.989Z - info: Using extension freeze@2.0.0
+2020-08-03T08:48:22.992Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:48:22.996Z - info: Using extension import-export@2.0.0
+2020-08-03T08:48:23.087Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:48:23.089Z - info: Using extension tags@2.4.0
+2020-08-03T08:48:23.093Z - info: Using extension templates@2.4.0
+2020-08-03T08:48:23.096Z - info: Using extension authorization@2.4.0
+2020-08-03T08:48:23.103Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:48:23.104Z - info: Using extension base@2.0.2
+2020-08-03T08:48:23.106Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:48:23.112Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:48:23.122Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:48:23.242Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:48:23.244Z - info: Using extension data@2.3.0
+2020-08-03T08:48:23.246Z - info: Using extension docx@2.7.0
+2020-08-03T08:48:23.252Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:48:23.464Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:48:23.466Z - info: Using extension licensing@2.2.2
+2020-08-03T08:48:23.472Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:48:23.583Z - info: Using extension pptx@0.7.0
+2020-08-03T08:48:23.592Z - info: Using extension reports@2.4.0
+2020-08-03T08:48:23.598Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:48:23.603Z - info: Using extension studio@2.9.0
+2020-08-03T08:48:23.741Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:48:23.744Z - info: Using extension text@2.0.0
+2020-08-03T08:48:23.745Z - info: Using extension version-control@1.5.0
+2020-08-03T08:48:23.858Z - info: Using extension assets@1.6.0
+2020-08-03T08:48:23.884Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:48:24.352Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:48:24.354Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:48:24.404Z - info: Using extension scripts@2.5.0
+2020-08-03T08:48:24.409Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:48:24.410Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:48:24.633Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:48:24.637Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:48:24.637Z - info: Using extension resources@2.1.0
+2020-08-03T08:48:24.638Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:48:24.642Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:48:24.662Z - debug: studio default theme is: light
+2020-08-03T08:48:24.687Z - info: Creating default express app.
+2020-08-03T08:48:24.720Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:48:24.722Z - info: Verifying license key free
+2020-08-03T08:48:24.723Z - info: Using free license
+2020-08-03T08:48:24.730Z - debug: Creating samples is disabled
+2020-08-03T08:48:24.733Z - info: reporter initialized
+2020-08-03T08:48:32.597Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:48:32.600Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:48:32.626Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:48:41.490Z - info: Found 35 extensions
+2020-08-03T08:48:41.686Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:48:41.688Z - debug: Discovered 35 extensions
+2020-08-03T08:48:41.776Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:48:41.784Z - info: Using extension authentication@2.5.0
+2020-08-03T08:48:41.836Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:48:41.838Z - info: Using extension cli@2.2.4
+2020-08-03T08:48:41.842Z - info: Using extension debug@2.1.3
+2020-08-03T08:48:41.844Z - info: Using extension express@2.7.0
+2020-08-03T08:48:41.908Z - info: Using extension freeze@2.0.0
+2020-08-03T08:48:41.910Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:48:41.914Z - info: Using extension import-export@2.0.0
+2020-08-03T08:48:41.993Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:48:41.995Z - info: Using extension tags@2.4.0
+2020-08-03T08:48:42.000Z - info: Using extension templates@2.4.0
+2020-08-03T08:48:42.006Z - info: Using extension authorization@2.4.0
+2020-08-03T08:48:42.012Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:48:42.012Z - info: Using extension base@2.0.2
+2020-08-03T08:48:42.014Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:48:42.018Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:48:42.025Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:48:42.139Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:48:42.141Z - info: Using extension data@2.3.0
+2020-08-03T08:48:42.143Z - info: Using extension docx@2.7.0
+2020-08-03T08:48:42.148Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:48:42.345Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:48:42.347Z - info: Using extension licensing@2.2.2
+2020-08-03T08:48:42.357Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:48:42.462Z - info: Using extension pptx@0.7.0
+2020-08-03T08:48:42.477Z - info: Using extension reports@2.4.0
+2020-08-03T08:48:42.487Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:48:42.492Z - info: Using extension studio@2.9.0
+2020-08-03T08:48:42.623Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:48:42.626Z - info: Using extension text@2.0.0
+2020-08-03T08:48:42.628Z - info: Using extension version-control@1.5.0
+2020-08-03T08:48:42.741Z - info: Using extension assets@1.6.0
+2020-08-03T08:48:42.764Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:48:43.214Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:48:43.216Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:48:43.263Z - info: Using extension scripts@2.5.0
+2020-08-03T08:48:43.267Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:48:43.270Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:48:43.490Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:48:43.492Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:48:43.493Z - info: Using extension resources@2.1.0
+2020-08-03T08:48:43.494Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:48:43.497Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:48:43.517Z - debug: studio default theme is: light
+2020-08-03T08:48:43.551Z - info: Creating default express app.
+2020-08-03T08:48:43.577Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:48:43.579Z - info: Verifying license key free
+2020-08-03T08:48:43.580Z - info: Using free license
+2020-08-03T08:48:43.590Z - debug: Creating samples is disabled
+2020-08-03T08:48:43.592Z - info: reporter initialized
+2020-08-03T08:50:09.983Z - debug: OData insert into templates
+2020-08-03T08:50:12.490Z - info: Starting rendering request 1 (user: null)
+2020-08-03T08:50:12.493Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T08:50:12.494Z - debug: Data item not defined for this template.
+2020-08-03T08:50:12.494Z - debug: Resources not defined for this template.
+2020-08-03T08:50:12.497Z - debug: Base url not specified, skipping its injection.
+2020-08-03T08:50:12.500Z - debug: Rendering engine handlebars using dedicated-process strategy
+2020-08-03T08:50:12.753Z - debug: Compiled template not found in the cache, compiling
+2020-08-03T08:50:12.756Z - debug: Executing recipe chrome-pdf
+2020-08-03T08:50:12.873Z - debug: Converting with chrome HeadlessChrome/79.0.3945.0 using dedicated-process strategy
+2020-08-03T08:50:12.981Z - debug: Page request: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/144f3295-e31c-4e42-909c-c625d0017b72-chrome-pdf.html
+2020-08-03T08:50:12.995Z - debug: Page request finished: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/144f3295-e31c-4e42-909c-c625d0017b72-chrome-pdf.html
+2020-08-03T08:50:13.016Z - debug: Running chrome with params {"printBackground":true,"margin":{}}
+2020-08-03T08:50:13.239Z - debug: Skipping storing report.
+2020-08-03T08:50:13.241Z - info: Rendering request 1 finished in 749 ms
+2020-08-03T08:50:37.566Z - info: Starting rendering request 2 (user: null)
+2020-08-03T08:50:37.569Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T08:50:37.570Z - debug: Data item not defined for this template.
+2020-08-03T08:50:37.571Z - debug: Resources not defined for this template.
+2020-08-03T08:50:37.572Z - debug: Base url not specified, skipping its injection.
+2020-08-03T08:50:37.574Z - debug: Rendering engine handlebars using dedicated-process strategy
+2020-08-03T08:50:37.825Z - debug: Compiled template not found in the cache, compiling
+2020-08-03T08:50:37.827Z - debug: Executing recipe chrome-pdf
+2020-08-03T08:50:37.942Z - debug: Converting with chrome HeadlessChrome/79.0.3945.0 using dedicated-process strategy
+2020-08-03T08:50:38.040Z - debug: Page request: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/239f95c8-6c39-41ee-8e13-e10c38e906e2-chrome-pdf.html
+2020-08-03T08:50:38.053Z - debug: Page request finished: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/239f95c8-6c39-41ee-8e13-e10c38e906e2-chrome-pdf.html
+2020-08-03T08:50:38.074Z - debug: Running chrome with params {"printBackground":true,"margin":{}}
+2020-08-03T08:50:38.245Z - debug: Skipping storing report.
+2020-08-03T08:50:38.247Z - info: Rendering request 2 finished in 681 ms
+2020-08-03T08:50:55.987Z - debug: OData query on templates
+2020-08-03T08:50:58.859Z - debug: OData remove from templates
+2020-08-03T08:54:33.038Z - debug: OData insert into templates
+2020-08-03T08:55:33.769Z - debug: OData insert into templates
+2020-08-03T08:56:25.947Z - info: Starting rendering request 3 (user: null)
+2020-08-03T08:56:25.949Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T08:56:25.949Z - debug: Data item not defined for this template.
+2020-08-03T08:56:25.949Z - debug: Resources not defined for this template.
+2020-08-03T08:56:25.950Z - debug: Base url not specified, skipping its injection.
+2020-08-03T08:56:25.951Z - debug: Rendering engine handlebars using dedicated-process strategy
+2020-08-03T08:56:26.204Z - debug: Compiled template not found in the cache, compiling
+2020-08-03T08:56:26.206Z - debug: Executing recipe chrome-pdf
+2020-08-03T08:56:26.308Z - debug: Converting with chrome HeadlessChrome/79.0.3945.0 using dedicated-process strategy
+2020-08-03T08:56:26.402Z - debug: Page request: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/0600f217-5f4b-4c00-9a04-e9b00b03c349-chrome-pdf.html
+2020-08-03T08:56:26.415Z - debug: Page request finished: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/0600f217-5f4b-4c00-9a04-e9b00b03c349-chrome-pdf.html
+2020-08-03T08:56:26.435Z - debug: Running chrome with params {"printBackground":true,"margin":{}}
+2020-08-03T08:56:26.598Z - debug: Skipping storing report.
+2020-08-03T08:56:26.598Z - info: Rendering request 3 finished in 651 ms
+2020-08-03T08:57:15.425Z - info: Starting rendering request 4 (user: null)
+2020-08-03T08:57:15.427Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T08:57:15.428Z - debug: Data item not defined for this template.
+2020-08-03T08:57:15.428Z - debug: Resources not defined for this template.
+2020-08-03T08:57:15.429Z - debug: Base url not specified, skipping its injection.
+2020-08-03T08:57:15.431Z - debug: Rendering engine handlebars using dedicated-process strategy
+2020-08-03T08:57:15.686Z - debug: Compiled template not found in the cache, compiling
+2020-08-03T08:57:15.687Z - debug: Executing recipe chrome-pdf
+2020-08-03T08:57:15.792Z - debug: Converting with chrome HeadlessChrome/79.0.3945.0 using dedicated-process strategy
+2020-08-03T08:57:15.886Z - debug: Page request: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/f97eabde-6a89-43bc-8606-07787c6bae3b-chrome-pdf.html
+2020-08-03T08:57:15.900Z - debug: Page request finished: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/f97eabde-6a89-43bc-8606-07787c6bae3b-chrome-pdf.html
+2020-08-03T08:57:15.921Z - debug: Running chrome with params {"printBackground":true,"margin":{}}
+2020-08-03T08:57:16.088Z - debug: Skipping storing report.
+2020-08-03T08:57:16.088Z - info: Rendering request 4 finished in 663 ms
+2020-08-03T08:57:50.995Z - debug: OData query on templates
+2020-08-03T08:57:55.251Z - debug: OData query on templates
+2020-08-03T08:58:37.186Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:58:37.188Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:58:37.214Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:58:45.450Z - info: Found 35 extensions
+2020-08-03T08:58:45.667Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:58:45.669Z - debug: Discovered 35 extensions
+2020-08-03T08:58:45.777Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:58:45.785Z - info: Using extension authentication@2.5.0
+2020-08-03T08:58:45.838Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:58:45.840Z - info: Using extension cli@2.2.4
+2020-08-03T08:58:45.844Z - info: Using extension debug@2.1.3
+2020-08-03T08:58:45.846Z - info: Using extension express@2.7.0
+2020-08-03T08:58:45.909Z - info: Using extension freeze@2.0.0
+2020-08-03T08:58:45.912Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:58:45.915Z - info: Using extension import-export@2.0.0
+2020-08-03T08:58:45.991Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:58:45.993Z - info: Using extension tags@2.4.0
+2020-08-03T08:58:45.999Z - info: Using extension templates@2.4.0
+2020-08-03T08:58:46.004Z - info: Using extension authorization@2.4.0
+2020-08-03T08:58:46.010Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:58:46.010Z - info: Using extension base@2.0.2
+2020-08-03T08:58:46.012Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:58:46.016Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:58:46.022Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:58:46.127Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:58:46.129Z - info: Using extension data@2.3.0
+2020-08-03T08:58:46.131Z - info: Using extension docx@2.7.0
+2020-08-03T08:58:46.137Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:58:46.329Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:58:46.331Z - info: Using extension licensing@2.2.2
+2020-08-03T08:58:46.335Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:58:46.439Z - info: Using extension pptx@0.7.0
+2020-08-03T08:58:46.445Z - info: Using extension reports@2.4.0
+2020-08-03T08:58:46.451Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:58:46.455Z - info: Using extension studio@2.9.0
+2020-08-03T08:58:46.576Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:58:46.579Z - info: Using extension text@2.0.0
+2020-08-03T08:58:46.581Z - info: Using extension version-control@1.5.0
+2020-08-03T08:58:46.688Z - info: Using extension assets@1.6.0
+2020-08-03T08:58:46.710Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:58:47.116Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:58:47.118Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:58:47.161Z - info: Using extension scripts@2.5.0
+2020-08-03T08:58:47.166Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:58:47.167Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:58:47.371Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:58:47.373Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:58:47.373Z - info: Using extension resources@2.1.0
+2020-08-03T08:58:47.374Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:58:47.377Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:58:47.395Z - debug: studio default theme is: light
+2020-08-03T08:58:47.416Z - info: Creating default express app.
+2020-08-03T08:58:47.447Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:58:47.449Z - info: Verifying license key free
+2020-08-03T08:58:47.450Z - info: Using free license
+2020-08-03T08:58:47.457Z - debug: Creating samples is disabled
+2020-08-03T08:58:47.458Z - info: reporter initialized
+2020-08-03T08:58:55.659Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:58:55.661Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:58:55.678Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:59:04.110Z - info: Found 35 extensions
+2020-08-03T08:59:04.344Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:59:04.348Z - debug: Discovered 35 extensions
+2020-08-03T08:59:04.452Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:59:04.459Z - info: Using extension authentication@2.5.0
+2020-08-03T08:59:04.514Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:59:04.516Z - info: Using extension cli@2.2.4
+2020-08-03T08:59:04.521Z - info: Using extension debug@2.1.3
+2020-08-03T08:59:04.523Z - info: Using extension express@2.7.0
+2020-08-03T08:59:04.591Z - info: Using extension freeze@2.0.0
+2020-08-03T08:59:04.593Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:59:04.598Z - info: Using extension import-export@2.0.0
+2020-08-03T08:59:04.678Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:59:04.681Z - info: Using extension tags@2.4.0
+2020-08-03T08:59:04.687Z - info: Using extension templates@2.4.0
+2020-08-03T08:59:04.691Z - info: Using extension authorization@2.4.0
+2020-08-03T08:59:04.698Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:59:04.698Z - info: Using extension base@2.0.2
+2020-08-03T08:59:04.702Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:59:04.706Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:59:04.715Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:59:04.827Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:59:04.829Z - info: Using extension data@2.3.0
+2020-08-03T08:59:04.831Z - info: Using extension docx@2.7.0
+2020-08-03T08:59:04.839Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:59:05.047Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:59:05.049Z - info: Using extension licensing@2.2.2
+2020-08-03T08:59:05.058Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:59:05.167Z - info: Using extension pptx@0.7.0
+2020-08-03T08:59:05.173Z - info: Using extension reports@2.4.0
+2020-08-03T08:59:05.181Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:59:05.186Z - info: Using extension studio@2.9.0
+2020-08-03T08:59:05.315Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:59:05.318Z - info: Using extension text@2.0.0
+2020-08-03T08:59:05.320Z - info: Using extension version-control@1.5.0
+2020-08-03T08:59:05.436Z - info: Using extension assets@1.6.0
+2020-08-03T08:59:05.458Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:59:05.901Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:59:05.903Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:59:05.951Z - info: Using extension scripts@2.5.0
+2020-08-03T08:59:05.955Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:59:05.957Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:59:06.177Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:59:06.181Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:59:06.181Z - info: Using extension resources@2.1.0
+2020-08-03T08:59:06.182Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:59:06.185Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:59:06.205Z - debug: studio default theme is: light
+2020-08-03T08:59:06.239Z - info: Creating default express app.
+2020-08-03T08:59:06.266Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:59:06.268Z - info: Verifying license key free
+2020-08-03T08:59:06.269Z - info: Using free license
+2020-08-03T08:59:06.276Z - debug: Creating samples is disabled
+2020-08-03T08:59:06.278Z - info: reporter initialized
+2020-08-03T08:59:49.535Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T08:59:49.537Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:59:49.553Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T08:59:57.871Z - info: Found 35 extensions
+2020-08-03T08:59:58.084Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T08:59:58.086Z - debug: Discovered 35 extensions
+2020-08-03T08:59:58.190Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T08:59:58.197Z - info: Using extension authentication@2.5.0
+2020-08-03T08:59:58.248Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T08:59:58.248Z - info: Using extension cli@2.2.4
+2020-08-03T08:59:58.252Z - info: Using extension debug@2.1.3
+2020-08-03T08:59:58.254Z - info: Using extension express@2.7.0
+2020-08-03T08:59:58.318Z - info: Using extension freeze@2.0.0
+2020-08-03T08:59:58.320Z - info: Using extension handlebars@2.1.0
+2020-08-03T08:59:58.323Z - info: Using extension import-export@2.0.0
+2020-08-03T08:59:58.400Z - info: Using extension jsrender@2.1.1
+2020-08-03T08:59:58.401Z - info: Using extension tags@2.4.0
+2020-08-03T08:59:58.404Z - info: Using extension templates@2.4.0
+2020-08-03T08:59:58.410Z - info: Using extension authorization@2.4.0
+2020-08-03T08:59:58.415Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T08:59:58.415Z - info: Using extension base@2.0.2
+2020-08-03T08:59:58.417Z - info: Using extension browser-client@2.2.2
+2020-08-03T08:59:58.421Z - info: Using extension child-templates@1.4.0
+2020-08-03T08:59:58.427Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T08:59:58.532Z - debug: Chrome strategy is dedicated-process
+2020-08-03T08:59:58.532Z - info: Using extension data@2.3.0
+2020-08-03T08:59:58.534Z - info: Using extension docx@2.7.0
+2020-08-03T08:59:58.539Z - info: Using extension fs-store@2.8.0
+2020-08-03T08:59:58.731Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T08:59:58.731Z - info: Using extension licensing@2.2.2
+2020-08-03T08:59:58.735Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T08:59:58.836Z - info: Using extension pptx@0.7.0
+2020-08-03T08:59:58.841Z - info: Using extension reports@2.4.0
+2020-08-03T08:59:58.846Z - info: Using extension static-pdf@0.4.0
+2020-08-03T08:59:58.850Z - info: Using extension studio@2.9.0
+2020-08-03T08:59:58.976Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T08:59:58.978Z - info: Using extension text@2.0.0
+2020-08-03T08:59:58.979Z - info: Using extension version-control@1.5.0
+2020-08-03T08:59:59.085Z - info: Using extension assets@1.6.0
+2020-08-03T08:59:59.107Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T08:59:59.530Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T08:59:59.531Z - info: Using extension scheduling@2.4.0
+2020-08-03T08:59:59.574Z - info: Using extension scripts@2.5.0
+2020-08-03T08:59:59.578Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T08:59:59.579Z - info: Using extension xlsx@2.4.0
+2020-08-03T08:59:59.784Z - info: Using extension public-templates@2.1.0
+2020-08-03T08:59:59.786Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T08:59:59.786Z - info: Using extension resources@2.1.0
+2020-08-03T08:59:59.787Z - info: Using extension sample-template@2.5.1
+2020-08-03T08:59:59.790Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T08:59:59.809Z - debug: studio default theme is: light
+2020-08-03T08:59:59.831Z - info: Creating default express app.
+2020-08-03T08:59:59.860Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T08:59:59.862Z - info: Verifying license key free
+2020-08-03T08:59:59.863Z - info: Using free license
+2020-08-03T08:59:59.869Z - debug: Creating samples is disabled
+2020-08-03T08:59:59.871Z - info: reporter initialized
+2020-08-03T09:00:00.132Z - info: Starting rendering request 1 (user: null)
+2020-08-03T09:00:00.137Z - warn: Rendering request 1 finished with error in 5 ms
+2020-08-03T09:00:00.138Z - warn: Error when processing render request 1 Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw Error: Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw
+    at module.exports (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at AsyncFunction.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-templates\lib\templates.js:134:20)
+2020-08-03T09:00:00.143Z - warn: Error during processing request at http://localhost:8000/api/report
+2020-08-03T09:02:36.865Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T09:02:36.868Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:02:36.888Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:02:45.229Z - info: Found 35 extensions
+2020-08-03T09:02:45.445Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T09:02:45.447Z - debug: Discovered 35 extensions
+2020-08-03T09:02:45.542Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T09:02:45.550Z - info: Using extension authentication@2.5.0
+2020-08-03T09:02:45.601Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T09:02:45.603Z - info: Using extension cli@2.2.4
+2020-08-03T09:02:45.608Z - info: Using extension debug@2.1.3
+2020-08-03T09:02:45.610Z - info: Using extension express@2.7.0
+2020-08-03T09:02:45.678Z - info: Using extension freeze@2.0.0
+2020-08-03T09:02:45.681Z - info: Using extension handlebars@2.1.0
+2020-08-03T09:02:45.686Z - info: Using extension import-export@2.0.0
+2020-08-03T09:02:45.777Z - info: Using extension jsrender@2.1.1
+2020-08-03T09:02:45.779Z - info: Using extension tags@2.4.0
+2020-08-03T09:02:45.785Z - info: Using extension templates@2.4.0
+2020-08-03T09:02:45.790Z - info: Using extension authorization@2.4.0
+2020-08-03T09:02:45.796Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T09:02:45.796Z - info: Using extension base@2.0.2
+2020-08-03T09:02:45.798Z - info: Using extension browser-client@2.2.2
+2020-08-03T09:02:45.802Z - info: Using extension child-templates@1.4.0
+2020-08-03T09:02:45.809Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T09:02:45.910Z - debug: Chrome strategy is dedicated-process
+2020-08-03T09:02:45.912Z - info: Using extension data@2.3.0
+2020-08-03T09:02:45.914Z - info: Using extension docx@2.7.0
+2020-08-03T09:02:45.924Z - info: Using extension fs-store@2.8.0
+2020-08-03T09:02:46.121Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T09:02:46.123Z - info: Using extension licensing@2.2.2
+2020-08-03T09:02:46.128Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T09:02:46.244Z - info: Using extension pptx@0.7.0
+2020-08-03T09:02:46.252Z - info: Using extension reports@2.4.0
+2020-08-03T09:02:46.259Z - info: Using extension static-pdf@0.4.0
+2020-08-03T09:02:46.263Z - info: Using extension studio@2.9.0
+2020-08-03T09:02:46.401Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T09:02:46.404Z - info: Using extension text@2.0.0
+2020-08-03T09:02:46.405Z - info: Using extension version-control@1.5.0
+2020-08-03T09:02:46.518Z - info: Using extension assets@1.6.0
+2020-08-03T09:02:46.540Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T09:02:46.973Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T09:02:46.975Z - info: Using extension scheduling@2.4.0
+2020-08-03T09:02:47.030Z - info: Using extension scripts@2.5.0
+2020-08-03T09:02:47.035Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T09:02:47.037Z - info: Using extension xlsx@2.4.0
+2020-08-03T09:02:47.244Z - info: Using extension public-templates@2.1.0
+2020-08-03T09:02:47.246Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T09:02:47.247Z - info: Using extension resources@2.1.0
+2020-08-03T09:02:47.248Z - info: Using extension sample-template@2.5.1
+2020-08-03T09:02:47.251Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T09:02:47.271Z - debug: studio default theme is: light
+2020-08-03T09:02:47.305Z - info: Creating default express app.
+2020-08-03T09:02:47.329Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T09:02:47.331Z - info: Verifying license key free
+2020-08-03T09:02:47.332Z - info: Using free license
+2020-08-03T09:02:47.339Z - debug: Creating samples is disabled
+2020-08-03T09:02:47.343Z - info: reporter initialized
+2020-08-03T09:02:55.320Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T09:02:55.322Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:02:55.337Z - info: Extensions location cache C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2020-08-03T09:03:07.060Z - info: Found 35 extensions
+2020-08-03T09:03:07.263Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T09:03:07.265Z - debug: Discovered 35 extensions
+2020-08-03T09:03:07.353Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T09:03:07.361Z - info: Using extension authentication@2.5.0
+2020-08-03T09:03:07.410Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T09:03:07.412Z - info: Using extension cli@2.2.4
+2020-08-03T09:03:07.416Z - info: Using extension debug@2.1.3
+2020-08-03T09:03:07.422Z - info: Using extension express@2.7.0
+2020-08-03T09:03:07.484Z - info: Using extension freeze@2.0.0
+2020-08-03T09:03:07.488Z - info: Using extension handlebars@2.1.0
+2020-08-03T09:03:07.492Z - info: Using extension import-export@2.0.0
+2020-08-03T09:03:07.569Z - info: Using extension jsrender@2.1.1
+2020-08-03T09:03:07.571Z - info: Using extension tags@2.4.0
+2020-08-03T09:03:07.575Z - info: Using extension templates@2.4.0
+2020-08-03T09:03:07.580Z - info: Using extension authorization@2.4.0
+2020-08-03T09:03:07.586Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T09:03:07.586Z - info: Using extension base@2.0.2
+2020-08-03T09:03:07.589Z - info: Using extension browser-client@2.2.2
+2020-08-03T09:03:07.594Z - info: Using extension child-templates@1.4.0
+2020-08-03T09:03:07.600Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T09:03:07.701Z - debug: Chrome strategy is dedicated-process
+2020-08-03T09:03:07.703Z - info: Using extension data@2.3.0
+2020-08-03T09:03:07.705Z - info: Using extension docx@2.7.0
+2020-08-03T09:03:07.710Z - info: Using extension fs-store@2.8.0
+2020-08-03T09:03:07.905Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T09:03:07.907Z - info: Using extension licensing@2.2.2
+2020-08-03T09:03:07.912Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T09:03:08.015Z - info: Using extension pptx@0.7.0
+2020-08-03T09:03:08.021Z - info: Using extension reports@2.4.0
+2020-08-03T09:03:08.028Z - info: Using extension static-pdf@0.4.0
+2020-08-03T09:03:08.033Z - info: Using extension studio@2.9.0
+2020-08-03T09:03:08.162Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T09:03:08.165Z - info: Using extension text@2.0.0
+2020-08-03T09:03:08.167Z - info: Using extension version-control@1.5.0
+2020-08-03T09:03:08.271Z - info: Using extension assets@1.6.0
+2020-08-03T09:03:08.293Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T09:03:08.707Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T09:03:08.709Z - info: Using extension scheduling@2.4.0
+2020-08-03T09:03:08.752Z - info: Using extension scripts@2.5.0
+2020-08-03T09:03:08.756Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T09:03:08.757Z - info: Using extension xlsx@2.4.0
+2020-08-03T09:03:08.961Z - info: Using extension public-templates@2.1.0
+2020-08-03T09:03:08.963Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T09:03:08.964Z - info: Using extension resources@2.1.0
+2020-08-03T09:03:08.965Z - info: Using extension sample-template@2.5.1
+2020-08-03T09:03:08.968Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T09:03:08.986Z - debug: studio default theme is: light
+2020-08-03T09:03:09.008Z - info: Creating default express app.
+2020-08-03T09:03:09.040Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T09:03:09.042Z - info: Verifying license key free
+2020-08-03T09:03:09.043Z - info: Using free license
+2020-08-03T09:03:09.050Z - debug: Creating samples is disabled
+2020-08-03T09:03:09.053Z - info: reporter initialized
+2020-08-03T09:07:11.480Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T09:07:11.482Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:07:11.499Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:07:19.633Z - info: Found 35 extensions
+2020-08-03T09:07:19.863Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T09:07:19.866Z - debug: Discovered 35 extensions
+2020-08-03T09:07:19.954Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T09:07:19.962Z - info: Using extension authentication@2.5.0
+2020-08-03T09:07:20.012Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T09:07:20.012Z - info: Using extension cli@2.2.4
+2020-08-03T09:07:20.016Z - info: Using extension debug@2.1.3
+2020-08-03T09:07:20.018Z - info: Using extension express@2.7.0
+2020-08-03T09:07:20.079Z - info: Using extension freeze@2.0.0
+2020-08-03T09:07:20.080Z - info: Using extension handlebars@2.1.0
+2020-08-03T09:07:20.087Z - info: Using extension import-export@2.0.0
+2020-08-03T09:07:20.161Z - info: Using extension jsrender@2.1.1
+2020-08-03T09:07:20.162Z - info: Using extension tags@2.4.0
+2020-08-03T09:07:20.167Z - info: Using extension templates@2.4.0
+2020-08-03T09:07:20.170Z - info: Using extension authorization@2.4.0
+2020-08-03T09:07:20.176Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T09:07:20.176Z - info: Using extension base@2.0.2
+2020-08-03T09:07:20.178Z - info: Using extension browser-client@2.2.2
+2020-08-03T09:07:20.181Z - info: Using extension child-templates@1.4.0
+2020-08-03T09:07:20.187Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T09:07:20.288Z - debug: Chrome strategy is dedicated-process
+2020-08-03T09:07:20.288Z - info: Using extension data@2.3.0
+2020-08-03T09:07:20.290Z - info: Using extension docx@2.7.0
+2020-08-03T09:07:20.295Z - info: Using extension fs-store@2.8.0
+2020-08-03T09:07:20.485Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T09:07:20.486Z - info: Using extension licensing@2.2.2
+2020-08-03T09:07:20.490Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T09:07:20.598Z - info: Using extension pptx@0.7.0
+2020-08-03T09:07:20.603Z - info: Using extension reports@2.4.0
+2020-08-03T09:07:20.608Z - info: Using extension static-pdf@0.4.0
+2020-08-03T09:07:20.613Z - info: Using extension studio@2.9.0
+2020-08-03T09:07:20.749Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T09:07:20.752Z - info: Using extension text@2.0.0
+2020-08-03T09:07:20.754Z - info: Using extension version-control@1.5.0
+2020-08-03T09:07:20.862Z - info: Using extension assets@1.6.0
+2020-08-03T09:07:20.883Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T09:07:21.294Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T09:07:21.296Z - info: Using extension scheduling@2.4.0
+2020-08-03T09:07:21.341Z - info: Using extension scripts@2.5.0
+2020-08-03T09:07:21.345Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T09:07:21.346Z - info: Using extension xlsx@2.4.0
+2020-08-03T09:07:21.545Z - info: Using extension public-templates@2.1.0
+2020-08-03T09:07:21.547Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T09:07:21.547Z - info: Using extension resources@2.1.0
+2020-08-03T09:07:21.549Z - info: Using extension sample-template@2.5.1
+2020-08-03T09:07:21.552Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T09:07:21.575Z - debug: studio default theme is: light
+2020-08-03T09:07:21.605Z - info: Creating default express app.
+2020-08-03T09:07:21.630Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T09:07:21.632Z - info: Verifying license key free
+2020-08-03T09:07:21.633Z - info: Using free license
+2020-08-03T09:07:21.640Z - debug: Creating samples is disabled
+2020-08-03T09:07:21.643Z - info: reporter initialized
+2020-08-03T09:09:16.803Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T09:09:16.805Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:09:16.822Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:09:25.288Z - info: Found 35 extensions
+2020-08-03T09:09:25.501Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T09:09:25.503Z - debug: Discovered 35 extensions
+2020-08-03T09:09:25.593Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T09:09:25.600Z - info: Using extension authentication@2.5.0
+2020-08-03T09:09:25.650Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T09:09:25.650Z - info: Using extension cli@2.2.4
+2020-08-03T09:09:25.655Z - info: Using extension debug@2.1.3
+2020-08-03T09:09:25.657Z - info: Using extension express@2.7.0
+2020-08-03T09:09:25.718Z - info: Using extension freeze@2.0.0
+2020-08-03T09:09:25.720Z - info: Using extension handlebars@2.1.0
+2020-08-03T09:09:25.724Z - info: Using extension import-export@2.0.0
+2020-08-03T09:09:25.805Z - info: Using extension jsrender@2.1.1
+2020-08-03T09:09:25.806Z - info: Using extension tags@2.4.0
+2020-08-03T09:09:25.809Z - info: Using extension templates@2.4.0
+2020-08-03T09:09:25.812Z - info: Using extension authorization@2.4.0
+2020-08-03T09:09:25.820Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T09:09:25.820Z - info: Using extension base@2.0.2
+2020-08-03T09:09:25.822Z - info: Using extension browser-client@2.2.2
+2020-08-03T09:09:25.827Z - info: Using extension child-templates@1.4.0
+2020-08-03T09:09:25.833Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T09:09:25.935Z - debug: Chrome strategy is dedicated-process
+2020-08-03T09:09:25.936Z - info: Using extension data@2.3.0
+2020-08-03T09:09:25.937Z - info: Using extension docx@2.7.0
+2020-08-03T09:09:25.946Z - info: Using extension fs-store@2.8.0
+2020-08-03T09:09:26.139Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T09:09:26.140Z - info: Using extension licensing@2.2.2
+2020-08-03T09:09:26.144Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T09:09:26.253Z - info: Using extension pptx@0.7.0
+2020-08-03T09:09:26.259Z - info: Using extension reports@2.4.0
+2020-08-03T09:09:26.264Z - info: Using extension static-pdf@0.4.0
+2020-08-03T09:09:26.268Z - info: Using extension studio@2.9.0
+2020-08-03T09:09:26.395Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T09:09:26.398Z - info: Using extension text@2.0.0
+2020-08-03T09:09:26.399Z - info: Using extension version-control@1.5.0
+2020-08-03T09:09:26.509Z - info: Using extension assets@1.6.0
+2020-08-03T09:09:26.530Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T09:09:26.943Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T09:09:26.943Z - info: Using extension scheduling@2.4.0
+2020-08-03T09:09:26.990Z - info: Using extension scripts@2.5.0
+2020-08-03T09:09:26.994Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T09:09:26.996Z - info: Using extension xlsx@2.4.0
+2020-08-03T09:09:27.211Z - info: Using extension public-templates@2.1.0
+2020-08-03T09:09:27.212Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T09:09:27.213Z - info: Using extension resources@2.1.0
+2020-08-03T09:09:27.214Z - info: Using extension sample-template@2.5.1
+2020-08-03T09:09:27.217Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T09:09:27.236Z - debug: studio default theme is: light
+2020-08-03T09:09:27.270Z - info: Creating default express app.
+2020-08-03T09:09:27.295Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T09:09:27.297Z - info: Verifying license key free
+2020-08-03T09:09:27.298Z - info: Using free license
+2020-08-03T09:09:27.304Z - debug: Creating samples is disabled
+2020-08-03T09:09:27.306Z - info: reporter initialized
+2020-08-03T09:09:35.116Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T09:09:35.117Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:09:35.139Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:09:43.448Z - info: Found 35 extensions
+2020-08-03T09:09:43.671Z - debug: Writing extension locations cache to C:\Users\Tomas\AppData\Local\Temp\jsreport\core\locations.json
+2020-08-03T09:09:43.673Z - debug: Discovered 35 extensions
+2020-08-03T09:09:43.765Z - info: Setting dedicated-process (process based) strategy for rendering. Please visit http://jsreport.net/learn/configuration for information how to get more performance.
+2020-08-03T09:09:43.772Z - info: Using extension authentication@2.5.0
+2020-08-03T09:09:43.822Z - debug: Extension authentication@2.5.0 was disabled
+2020-08-03T09:09:43.823Z - info: Using extension cli@2.2.4
+2020-08-03T09:09:43.827Z - info: Using extension debug@2.1.3
+2020-08-03T09:09:43.829Z - info: Using extension express@2.7.0
+2020-08-03T09:09:43.890Z - info: Using extension freeze@2.0.0
+2020-08-03T09:09:43.893Z - info: Using extension handlebars@2.1.0
+2020-08-03T09:09:43.896Z - info: Using extension import-export@2.0.0
+2020-08-03T09:09:43.971Z - info: Using extension jsrender@2.1.1
+2020-08-03T09:09:43.972Z - info: Using extension tags@2.4.0
+2020-08-03T09:09:43.976Z - info: Using extension templates@2.4.0
+2020-08-03T09:09:43.981Z - info: Using extension authorization@2.4.0
+2020-08-03T09:09:43.986Z - debug: Extension authorization@2.4.0 was disabled
+2020-08-03T09:09:43.987Z - info: Using extension base@2.0.2
+2020-08-03T09:09:43.989Z - info: Using extension browser-client@2.2.2
+2020-08-03T09:09:43.992Z - info: Using extension child-templates@1.4.0
+2020-08-03T09:09:43.998Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T09:09:44.101Z - debug: Chrome strategy is dedicated-process
+2020-08-03T09:09:44.102Z - info: Using extension data@2.3.0
+2020-08-03T09:09:44.103Z - info: Using extension docx@2.7.0
+2020-08-03T09:09:44.112Z - info: Using extension fs-store@2.8.0
+2020-08-03T09:09:44.306Z - debug: Extension fs-store@2.8.0 was disabled
+2020-08-03T09:09:44.306Z - info: Using extension licensing@2.2.2
+2020-08-03T09:09:44.312Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T09:09:44.419Z - info: Using extension pptx@0.7.0
+2020-08-03T09:09:44.425Z - info: Using extension reports@2.4.0
+2020-08-03T09:09:44.430Z - info: Using extension static-pdf@0.4.0
+2020-08-03T09:09:44.434Z - info: Using extension studio@2.9.0
+2020-08-03T09:09:44.561Z - debug: studio request logs are enabled (flush interval: 2000)
+2020-08-03T09:09:44.564Z - info: Using extension text@2.0.0
+2020-08-03T09:09:44.565Z - info: Using extension version-control@1.5.0
+2020-08-03T09:09:44.671Z - info: Using extension assets@1.6.0
+2020-08-03T09:09:44.692Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T09:09:45.103Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T09:09:45.103Z - info: Using extension scheduling@2.4.0
+2020-08-03T09:09:45.151Z - info: Using extension scripts@2.5.0
+2020-08-03T09:09:45.155Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T09:09:45.156Z - info: Using extension xlsx@2.4.0
+2020-08-03T09:09:45.360Z - info: Using extension public-templates@2.1.0
+2020-08-03T09:09:45.361Z - debug: Extension public-templates@2.1.0 was disabled
+2020-08-03T09:09:45.361Z - info: Using extension resources@2.1.0
+2020-08-03T09:09:45.363Z - info: Using extension sample-template@2.5.1
+2020-08-03T09:09:45.365Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2020-08-03T09:09:45.384Z - debug: studio default theme is: light
+2020-08-03T09:09:45.415Z - info: Creating default express app.
+2020-08-03T09:09:45.438Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T09:09:45.440Z - info: Verifying license key free
+2020-08-03T09:09:45.441Z - info: Using free license
+2020-08-03T09:09:45.448Z - debug: Creating samples is disabled
+2020-08-03T09:09:45.450Z - info: reporter initialized
+2020-08-03T09:09:55.624Z - info: Starting rendering request 1 (user: null)
+2020-08-03T09:09:55.629Z - warn: Rendering request 1 finished with error in 4 ms
+2020-08-03T09:09:55.629Z - warn: Error when processing render request 1 Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw Error: Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw
+    at module.exports (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at AsyncFunction.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-templates\lib\templates.js:134:20)
+2020-08-03T09:09:55.633Z - warn: Error during processing request at http://localhost:8000/templates/Syx9g-LSZw
+2020-08-03T09:10:04.032Z - info: Starting rendering request 2 (user: null)
+2020-08-03T09:10:04.034Z - warn: Rendering request 2 finished with error in 2 ms
+2020-08-03T09:10:04.035Z - warn: Error when processing render request 2 Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw Error: Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw
+    at module.exports (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at AsyncFunction.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-templates\lib\templates.js:134:20)
+2020-08-03T09:10:04.035Z - warn: Error during processing request at http://localhost:8000/templates/Syx9g-LSZw
+2020-08-03T09:10:22.090Z - debug: OData query on templates
+2020-08-03T09:10:22.109Z - debug: OData query on settings
+2020-08-03T09:10:29.237Z - info: Starting rendering request 3 (user: null)
+2020-08-03T09:10:29.239Z - warn: Rendering request 3 finished with error in 2 ms
+2020-08-03T09:10:29.240Z - warn: Error when processing render request 3 Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw Error: Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw
+    at module.exports (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at AsyncFunction.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-templates\lib\templates.js:134:20)
+2020-08-03T09:10:29.240Z - warn: Error during processing request at http://localhost:8000/templates/Syx9g-LSZw
+2020-08-03T09:11:29.932Z - info: Starting rendering request 4 (user: null)
+2020-08-03T09:11:29.933Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T09:11:29.934Z - debug: Data item not defined for this template.
+2020-08-03T09:11:29.934Z - debug: Resources not defined for this template.
+2020-08-03T09:11:29.938Z - debug: Base url not specified, skipping its injection.
+2020-08-03T09:11:29.941Z - debug: Rendering engine handlebars using dedicated-process strategy
+2020-08-03T09:11:30.195Z - debug: Compiled template not found in the cache, compiling
+2020-08-03T09:11:30.197Z - debug: Executing recipe chrome-pdf
+2020-08-03T09:11:30.327Z - debug: Converting with chrome HeadlessChrome/79.0.3945.0 using dedicated-process strategy
+2020-08-03T09:11:30.436Z - debug: Page request: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/0e5248d4-5d68-4de6-a300-e285dd90a15d-chrome-pdf.html
+2020-08-03T09:11:30.447Z - debug: Page request finished: GET (document) file:///C:/Users/Tomas/AppData/Local/Temp/jsreport/autocleanup/0e5248d4-5d68-4de6-a300-e285dd90a15d-chrome-pdf.html
+2020-08-03T09:11:30.465Z - debug: Running chrome with params {"printBackground":true,"margin":{}}
+2020-08-03T09:11:30.683Z - debug: Skipping storing report.
+2020-08-03T09:11:30.684Z - info: Rendering request 4 finished in 752 ms
+2020-08-03T09:11:34.514Z - info: Starting rendering request 5 (user: null)
+2020-08-03T09:11:34.516Z - warn: Rendering request 5 finished with error in 1 ms
+2020-08-03T09:11:34.516Z - warn: Error when processing render request 5 Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw Error: Unable to find specified template or user doesnt have permissions to read it: Syx9g-LSZw
+    at module.exports (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at Reporter.createError (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-core\lib\reporter.js:332:12)
+    at AsyncFunction.<anonymous> (C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\node_modules\jsreport-templates\lib\templates.js:134:20)
+2020-08-03T09:11:34.517Z - warn: Error during processing request at http://localhost:8000/templates/Syx9g-LSZw
+2020-08-03T09:12:31.470Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: none
+2020-08-03T09:12:31.472Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\
+2020-08-03T09:12:31.488Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\bases\armaTuFiesta\

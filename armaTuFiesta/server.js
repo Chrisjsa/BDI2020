@@ -3,6 +3,13 @@ const app = express()
 const { connection } = require("./database")
 const { monitor } = require("./middleware/monitor")
 
+const axios = require("axios")
+
+require("jsreport")({
+  httpPort: 8000,
+  httpsPort: 0,
+}).init()
+
 const useRoute = route => {
   app.use(`/api/${route}`, require(`./routes/${route}`))
 }
@@ -36,8 +43,8 @@ routes = [
 ]
 routes.forEach(route => useRoute(route))
 
-app.get("/", (req, res) => {
-  res.send("Welcome to Bases API")
+app.get("/", async (req, res) => {
+  return res.render("http://localhost:8000/templates/Syx9g-LSZw")
 })
 
 // App Initialization

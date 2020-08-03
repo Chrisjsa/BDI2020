@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import DataTable from "react-data-table-component"
 
 import { connect } from "react-redux"
@@ -15,6 +15,8 @@ import NotariaForm from "../notarias/NotariaForm"
 
 import GoogleMapReact from "google-map-react"
 import "../../css/map.css"
+
+import Hero from "../layout/Hero"
 
 const CrudNotaria = ({
   notarias,
@@ -32,7 +34,27 @@ const CrudNotaria = ({
 
   return (
     <Container>
-      <NotariaForm />
+      <Hero firstLine="Administración" secondLine="Notarias" />
+
+      <Row>
+        <Col>
+          <NotariaForm />
+        </Col>
+        <Col>
+          {currentNotaria && (
+            <div className="google-map">
+              <h2>Mapa</h2>
+              <GoogleMapReact
+                defaultZoom={10}
+                center={{
+                  lat: parseFloat(currentNotaria.latitud) || 10.48,
+                  lng: parseFloat(currentNotaria.longitud) || 66.9,
+                }}
+              ></GoogleMapReact>
+            </div>
+          )}
+        </Col>
+      </Row>
       <h2>Notarias</h2>
       {loading ? (
         <Loading />
@@ -46,19 +68,6 @@ const CrudNotaria = ({
           highlightOnHover
           onRowClicked={row => setCurrentNotaria(row)}
         />
-      )}
-
-      {currentNotaria && (
-        <div className="google-map">
-          <h2>Mapa</h2>
-          <GoogleMapReact
-            defaultZoom={10}
-            center={{
-              lat: parseFloat(currentNotaria.latitud) || 10.48,
-              lng: parseFloat(currentNotaria.longitud) || 66.9,
-            }}
-          ></GoogleMapReact>
-        </div>
       )}
     </Container>
   )

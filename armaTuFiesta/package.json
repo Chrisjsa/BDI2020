@@ -7,6 +7,7 @@
     "start": "node server.js",
     "server": "nodemon server",
     "client": "npm start --prefix client",
+    "reports": "node ",
     "dev-tomas": "concurrently \"npm run server tomas\" \"npm run client\"",
     "dev-winkler": "concurrently \"npm run server winkler\" \"npm run client\"",
     "dev-chris": "concurrently \"npm run server chris\" \"npm run client\""
@@ -22,14 +23,20 @@
   },
   "homepage": "https://github.com/tomasg92/bases#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "install": "^0.13.0",
     "jsonwebtoken": "^8.5.1",
+    "jsreport": "^2.9.0",
+    "jsreport-chrome-pdf": "^1.8.0",
     "mysql": "^2.18.1",
     "named-placeholders": "^1.1.2",
-    "npx": "^10.2.2"
+    "npx": "^10.2.2",
+    "redux-forms": "^1.0.0-3",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "concurrently": "^5.1.0"
