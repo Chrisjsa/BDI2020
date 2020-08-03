@@ -7,7 +7,7 @@
     "start": "node server.js",
     "server": "nodemon server",
     "client": "npm start --prefix client",
-    "reports": "node ",
+    "report": "jsreport start",
     "dev-tomas": "concurrently \"npm run server tomas\" \"npm run client\"",
     "dev-winkler": "concurrently \"npm run server winkler\" \"npm run client\"",
     "dev-chris": "concurrently \"npm run server chris\" \"npm run client\""
@@ -40,5 +40,6 @@
   },
   "devDependencies": {
     "concurrently": "^5.1.0"
-  }
+  },
+  "proxy": "http://localhost:8000"
 }

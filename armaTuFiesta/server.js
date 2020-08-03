@@ -3,12 +3,9 @@ const app = express()
 const { connection } = require("./database")
 const { monitor } = require("./middleware/monitor")
 
-const axios = require("axios")
+const request = require("request")
 
-require("jsreport")({
-  httpPort: 8000,
-  httpsPort: 0,
-}).init()
+const client = require("jsreport-client")("http://localhost:8000", "admin", "")
 
 const useRoute = route => {
   app.use(`/api/${route}`, require(`./routes/${route}`))
@@ -43,8 +40,19 @@ routes = [
 ]
 routes.forEach(route => useRoute(route))
 
-app.get("/", async (req, res) => {
-  return res.render("http://localhost:8000/templates/Syx9g-LSZw")
+app.get("/report", async (req, res) => {
+  const data = {
+    template: { shortid: "rJlkqWeLZw" },
+    data: { nombre: "Tomás" },
+  }
+
+  const options = {
+    url: "http://localhost:8000/api/report",
+    method: "POST",
+    json: data,
+  }
+
+  request(options).pipe(res)
 })
 
 // App Initialization
