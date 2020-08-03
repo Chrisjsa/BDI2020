@@ -2547,3 +2547,273 @@
 2020-08-03T20:10:53.926Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: jsreport.config.json
 2020-08-03T20:10:53.928Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\
 2020-08-03T20:10:53.941Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\
+2020-08-03T20:11:01.719Z - info: Found 35 extensions
+2020-08-03T20:11:02.046Z - info: Setting http-server strategy for rendering
+2020-08-03T20:11:02.304Z - info: Using extension cli@2.2.4
+2020-08-03T20:11:02.310Z - info: Using extension debug@2.1.3
+2020-08-03T20:11:02.312Z - info: Using extension express@2.7.0
+2020-08-03T20:11:02.508Z - info: Using extension freeze@2.0.0
+2020-08-03T20:11:02.511Z - info: Using extension handlebars@2.1.0
+2020-08-03T20:11:02.514Z - info: Using extension import-export@2.0.0
+2020-08-03T20:11:02.589Z - info: Using extension jsrender@2.1.1
+2020-08-03T20:11:02.591Z - info: Using extension tags@2.4.0
+2020-08-03T20:11:02.594Z - info: Using extension templates@2.4.0
+2020-08-03T20:11:02.599Z - info: Using extension authorization@2.4.0
+2020-08-03T20:11:02.605Z - info: Using extension base@2.0.2
+2020-08-03T20:11:02.607Z - info: Using extension browser-client@2.2.2
+2020-08-03T20:11:02.611Z - info: Using extension child-templates@1.4.0
+2020-08-03T20:11:02.617Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T20:11:02.718Z - info: Using extension data@2.3.0
+2020-08-03T20:11:02.719Z - info: Using extension docx@2.7.0
+2020-08-03T20:11:02.725Z - info: Using extension fs-store@2.8.0
+2020-08-03T20:11:02.897Z - info: Using extension licensing@2.2.2
+2020-08-03T20:11:02.902Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T20:11:03.004Z - info: Using extension pptx@0.7.0
+2020-08-03T20:11:03.011Z - info: Using extension reports@2.4.0
+2020-08-03T20:11:03.016Z - info: Using extension static-pdf@0.4.0
+2020-08-03T20:11:03.024Z - info: Using extension studio@2.9.0
+2020-08-03T20:11:03.130Z - info: Using extension text@2.0.0
+2020-08-03T20:11:03.132Z - info: Using extension version-control@1.5.0
+2020-08-03T20:11:03.235Z - info: Using extension assets@1.6.0
+2020-08-03T20:11:03.257Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T20:11:03.647Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T20:11:03.648Z - info: Using extension scheduling@2.4.0
+2020-08-03T20:11:03.695Z - info: Using extension scripts@2.5.0
+2020-08-03T20:11:03.699Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T20:11:03.700Z - info: Using extension xlsx@2.4.0
+2020-08-03T20:11:03.898Z - info: Using extension public-templates@2.1.0
+2020-08-03T20:11:03.901Z - info: Using extension resources@2.1.0
+2020-08-03T20:11:03.903Z - info: Using extension sample-template@2.5.1
+2020-08-03T20:11:03.906Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2020-08-03T20:11:03.906Z - info: Using fs provider for template store.
+2020-08-03T20:11:03.915Z - info: fs store is persisting using fs
+2020-08-03T20:11:03.917Z - info: fs store is synchronizing using fs
+2020-08-03T20:11:03.929Z - info: fs store is loading data
+2020-08-03T20:11:04.022Z - info: fs store is initialized successfully
+2020-08-03T20:11:04.048Z - info: Creating default express app.
+2020-08-03T20:11:04.074Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T20:11:04.075Z - info: fs store emits sockets to synchronize underlying changes with studio
+2020-08-03T20:11:04.098Z - info: Verifying license key free
+2020-08-03T20:11:04.099Z - info: Using free license
+2020-08-03T20:11:04.108Z - info: reporter initialized
+2020-08-03T20:18:50.892Z - info: Starting rendering request 1 (user: null)
+2020-08-03T20:18:50.894Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:18:52.684Z - info: Rendering request 1 finished in 1793 ms
+2020-08-03T20:20:03.067Z - info: Starting rendering request 2 (user: null)
+2020-08-03T20:20:03.068Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:20:03.540Z - info: Rendering request 2 finished in 472 ms
+2020-08-03T20:21:25.775Z - info: Starting rendering request 3 (user: null)
+2020-08-03T20:21:25.778Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:21:26.188Z - info: Rendering request 3 finished in 413 ms
+2020-08-03T20:21:31.648Z - info: Starting rendering request 4 (user: null)
+2020-08-03T20:21:31.650Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:21:32.039Z - info: Rendering request 4 finished in 391 ms
+2020-08-03T20:21:35.936Z - info: Starting rendering request 5 (user: null)
+2020-08-03T20:21:35.938Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:21:36.353Z - info: Rendering request 5 finished in 416 ms
+2020-08-03T20:21:38.543Z - info: Starting rendering request 6 (user: null)
+2020-08-03T20:21:38.544Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:21:38.957Z - info: Rendering request 6 finished in 415 ms
+2020-08-03T20:21:44.297Z - info: Starting rendering request 7 (user: null)
+2020-08-03T20:21:44.298Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:21:44.711Z - info: Rendering request 7 finished in 413 ms
+2020-08-03T20:22:17.681Z - info: Starting rendering request 8 (user: null)
+2020-08-03T20:22:17.683Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:22:18.086Z - info: Rendering request 8 finished in 406 ms
+2020-08-03T20:26:33.466Z - info: Starting rendering request 9 (user: null)
+2020-08-03T20:26:33.466Z - info: Rendering template { name: test, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:26:33.907Z - info: Rendering request 9 finished in 442 ms
+2020-08-03T20:30:11.761Z - error: Error when processing OData POST: /odata/assets Error: Entity name can not be empty
+    at module.exports (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\jsreport-core\lib\util\createError.js:11:13)
+    at module.exports (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\jsreport-core\lib\util\validateEntityName.js:26:11)
+    at Object.insert (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\jsreport-core\lib\store\collection.js:86:7)
+    at ODataServer.<anonymous> (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\jsreport-express\lib\odata.js:34:69)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\simple-odata-server\lib\odataServer.js:201:14
+    at ODataServer.<anonymous> (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\jsreport-express\lib\odata.js:29:7)
+    at ODataServer.executeInsert (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\simple-odata-server\lib\odataServer.js:196:12)
+    at processBody (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\simple-odata-server\lib\insert.js:29:9)
+    at module.exports (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\simple-odata-server\lib\insert.js:59:12)
+    at Object.fn (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\simple-odata-server\lib\odataServer.js:90:5)
+    at Router.router.dispatch (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\simple-odata-server\lib\router.js:63:12)
+    at ODataServer.handle (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\simple-odata-server\lib\odataServer.js:64:15)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\jsreport-express\lib\routes.js:24:47
+    at Layer.handle [as handle_request] (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\jsreport-express\lib\routes.js:17:5
+    at Layer.handle [as handle_request] (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:275:10)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\jsreport-express\lib\reporter.express.js:188:5
+    at Layer.handle [as handle_request] (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:275:10)
+    at cors (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\cors\lib\index.js:188:7)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\cors\lib\index.js:224:17
+    at originCallback (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\cors\lib\index.js:214:15)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\cors\lib\index.js:219:13
+    at optionsCallback (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\cors\lib\index.js:199:9)
+    at corsMiddleware (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\cors\lib\index.js:204:7)
+    at Layer.handle [as handle_request] (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:317:13)
+    at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:335:12)
+2020-08-03T20:37:19.731Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: jsreport.config.json
+2020-08-03T20:37:19.733Z - info: Searching for available extensions in C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\
+2020-08-03T20:37:19.746Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\
+2020-08-03T20:37:28.661Z - info: Found 35 extensions
+2020-08-03T20:37:29.029Z - info: Setting http-server strategy for rendering
+2020-08-03T20:37:29.358Z - info: Using extension cli@2.2.4
+2020-08-03T20:37:29.376Z - info: Using extension debug@2.1.3
+2020-08-03T20:37:29.379Z - info: Using extension express@2.7.0
+2020-08-03T20:37:29.589Z - info: Using extension freeze@2.0.0
+2020-08-03T20:37:29.609Z - info: Using extension handlebars@2.1.0
+2020-08-03T20:37:29.613Z - info: Using extension import-export@2.0.0
+2020-08-03T20:37:29.692Z - info: Using extension jsrender@2.1.1
+2020-08-03T20:37:29.694Z - info: Using extension tags@2.4.0
+2020-08-03T20:37:29.711Z - info: Using extension templates@2.4.0
+2020-08-03T20:37:29.717Z - info: Using extension authorization@2.4.0
+2020-08-03T20:37:29.740Z - info: Using extension base@2.0.2
+2020-08-03T20:37:29.756Z - info: Using extension browser-client@2.2.2
+2020-08-03T20:37:29.760Z - info: Using extension child-templates@1.4.0
+2020-08-03T20:37:29.768Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T20:37:29.878Z - info: Using extension data@2.3.0
+2020-08-03T20:37:29.880Z - info: Using extension docx@2.7.0
+2020-08-03T20:37:29.886Z - info: Using extension fs-store@2.8.0
+2020-08-03T20:37:30.082Z - info: Using extension licensing@2.2.2
+2020-08-03T20:37:30.102Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T20:37:30.220Z - info: Using extension pptx@0.7.0
+2020-08-03T20:37:30.242Z - info: Using extension reports@2.4.0
+2020-08-03T20:37:30.248Z - info: Using extension static-pdf@0.4.0
+2020-08-03T20:37:30.252Z - info: Using extension studio@2.9.0
+2020-08-03T20:37:30.367Z - info: Using extension text@2.0.0
+2020-08-03T20:37:30.369Z - info: Using extension version-control@1.5.0
+2020-08-03T20:37:30.483Z - info: Using extension assets@1.6.0
+2020-08-03T20:37:30.509Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T20:37:30.922Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T20:37:30.923Z - info: Using extension scheduling@2.4.0
+2020-08-03T20:37:30.978Z - info: Using extension scripts@2.5.0
+2020-08-03T20:37:30.983Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T20:37:30.984Z - info: Using extension xlsx@2.4.0
+2020-08-03T20:37:31.200Z - info: Using extension public-templates@2.1.0
+2020-08-03T20:37:31.217Z - info: Using extension resources@2.1.0
+2020-08-03T20:37:31.219Z - info: Using extension sample-template@2.5.1
+2020-08-03T20:37:31.237Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2020-08-03T20:37:31.238Z - info: Using fs provider for template store.
+2020-08-03T20:37:31.255Z - info: fs store is persisting using fs
+2020-08-03T20:37:31.273Z - info: fs store is synchronizing using fs
+2020-08-03T20:37:31.286Z - info: fs store is loading data
+2020-08-03T20:37:31.414Z - info: fs store is initialized successfully
+2020-08-03T20:37:31.454Z - info: Creating default express app.
+2020-08-03T20:37:31.489Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T20:37:31.505Z - info: fs store emits sockets to synchronize underlying changes with studio
+2020-08-03T20:37:31.531Z - info: Verifying license key free
+2020-08-03T20:37:31.534Z - info: Using free license
+2020-08-03T20:37:31.556Z - info: reporter initialized
+2020-08-03T20:39:29.170Z - info: fs store is loading data
+2020-08-03T20:44:57.035Z - info: Starting rendering request 1 (user: null)
+2020-08-03T20:44:57.049Z - info: Rendering template { name: invoice-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:44:58.212Z - info: Rendering request 1 finished in 1177 ms
+2020-08-03T20:47:08.323Z - info: fs store is loading data
+2020-08-03T20:47:08.779Z - info: Starting rendering request 2 (user: null)
+2020-08-03T20:47:08.781Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:47:09.386Z - info: Rendering request 2 finished in 608 ms
+2020-08-03T20:48:02.110Z - info: Starting rendering request 3 (user: null)
+2020-08-03T20:48:02.112Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:48:02.620Z - info: Rendering request 3 finished in 509 ms
+2020-08-03T20:48:24.742Z - info: Starting rendering request 4 (user: null)
+2020-08-03T20:48:24.743Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:48:25.228Z - info: Rendering request 4 finished in 486 ms
+2020-08-03T20:49:00.688Z - info: fs store is loading data
+2020-08-03T20:49:01.120Z - info: Starting rendering request 5 (user: null)
+2020-08-03T20:49:01.135Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:49:01.705Z - info: Rendering request 5 finished in 586 ms
+2020-08-03T20:49:08.945Z - info: fs store is loading data
+2020-08-03T20:49:09.374Z - info: Starting rendering request 6 (user: null)
+2020-08-03T20:49:09.376Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:49:09.933Z - info: Rendering request 6 finished in 559 ms
+2020-08-03T20:49:12.648Z - info: fs store is loading data
+2020-08-03T20:49:13.146Z - info: Starting rendering request 7 (user: null)
+2020-08-03T20:49:13.150Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:49:14.170Z - info: Rendering request 7 finished in 1023 ms
+2020-08-03T20:49:37.381Z - info: fs store is loading data
+2020-08-03T20:49:37.914Z - info: Starting rendering request 8 (user: null)
+2020-08-03T20:49:37.918Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:49:38.518Z - info: Rendering request 8 finished in 605 ms
+2020-08-03T20:49:45.745Z - info: fs store is loading data
+2020-08-03T20:49:46.253Z - info: Starting rendering request 9 (user: null)
+2020-08-03T20:49:46.254Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:49:46.947Z - info: Rendering request 9 finished in 695 ms
+2020-08-03T20:49:49.275Z - info: Starting rendering request 10 (user: null)
+2020-08-03T20:49:49.276Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:49:49.789Z - info: Rendering request 10 finished in 513 ms
+2020-08-03T20:50:04.643Z - info: fs store is loading data
+2020-08-03T20:50:05.347Z - info: Starting rendering request 11 (user: null)
+2020-08-03T20:50:05.352Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:50:05.982Z - info: Rendering request 11 finished in 673 ms
+2020-08-03T20:51:04.092Z - info: Starting rendering request 12 (user: null)
+2020-08-03T20:51:04.094Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:51:04.608Z - info: Rendering request 12 finished in 516 ms
+2020-08-03T20:51:16.849Z - info: Starting rendering request 13 (user: null)
+2020-08-03T20:51:16.851Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:51:17.322Z - info: Rendering request 13 finished in 473 ms
+2020-08-03T20:51:28.090Z - info: Starting rendering request 14 (user: null)
+2020-08-03T20:51:28.091Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:51:28.569Z - info: Rendering request 14 finished in 480 ms
+2020-08-03T20:51:35.018Z - info: Starting rendering request 15 (user: null)
+2020-08-03T20:51:35.019Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:51:35.590Z - info: Rendering request 15 finished in 573 ms
+2020-08-03T20:51:59.165Z - info: Starting rendering request 16 (user: null)
+2020-08-03T20:51:59.167Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: false }
+2020-08-03T20:51:59.645Z - info: Rendering request 16 finished in 480 ms
+2020-08-03T20:52:04.726Z - info: Starting rendering request 17 (user: null)
+2020-08-03T20:52:04.728Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:52:05.205Z - info: Rendering request 17 finished in 480 ms
+2020-08-03T20:52:40.844Z - info: Starting rendering request 18 (user: null)
+2020-08-03T20:52:40.845Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:52:41.277Z - info: Rendering request 18 finished in 433 ms
+2020-08-03T20:52:47.798Z - info: Starting rendering request 19 (user: null)
+2020-08-03T20:52:47.799Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:52:48.258Z - info: Rendering request 19 finished in 460 ms
+2020-08-03T20:53:05.254Z - info: Starting rendering request 20 (user: null)
+2020-08-03T20:53:05.256Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:53:05.771Z - info: Rendering request 20 finished in 517 ms
+2020-08-03T20:53:21.815Z - info: Starting rendering request 21 (user: null)
+2020-08-03T20:53:21.816Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:53:22.348Z - info: Rendering request 21 finished in 533 ms
+2020-08-03T20:53:26.920Z - info: Starting rendering request 22 (user: null)
+2020-08-03T20:53:26.921Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:53:27.446Z - info: Rendering request 22 finished in 527 ms
+2020-08-03T20:53:37.192Z - info: Starting rendering request 23 (user: null)
+2020-08-03T20:53:37.194Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:53:37.791Z - info: Rendering request 23 finished in 598 ms
+2020-08-03T20:55:35.991Z - info: Starting rendering request 24 (user: null)
+2020-08-03T20:55:35.993Z - info: Rendering template { name: sales-main, recipe: html-to-xlsx, engine: handlebars, preview: true }
+2020-08-03T20:55:36.059Z - info: html-to-xlsx generation is starting
+2020-08-03T20:55:37.778Z - info: html-to-xlsx generation was finished
+2020-08-03T20:55:38.628Z - info: Rendering request 24 finished in 2637 ms
+2020-08-03T20:55:40.263Z - info: Starting rendering request 25 (user: null)
+2020-08-03T20:55:40.265Z - info: Rendering template { name: sales-main, recipe: html-to-xlsx, engine: handlebars, preview: true }
+2020-08-03T20:55:40.288Z - info: html-to-xlsx generation is starting
+2020-08-03T20:55:40.964Z - info: html-to-xlsx generation was finished
+2020-08-03T20:55:41.824Z - info: Rendering request 25 finished in 1561 ms
+2020-08-03T20:55:57.086Z - info: Starting rendering request 26 (user: null)
+2020-08-03T20:55:57.088Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:56:04.512Z - info: pdf-utils is starting pdf processing
+2020-08-03T20:56:04.801Z - info: Starting rendering request 27 (user: null)
+2020-08-03T20:56:04.802Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:56:06.070Z - info: Rendering request 27 finished in 1270 ms
+2020-08-03T20:56:06.193Z - info: pdf-utils pdf processing was finished
+2020-08-03T20:56:06.195Z - info: Rendering request 26 finished in 9110 ms
+2020-08-03T20:57:01.929Z - info: Starting rendering request 28 (user: null)
+2020-08-03T20:57:01.930Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T20:57:02.437Z - info: Rendering request 28 finished in 509 ms
+2020-08-03T21:00:22.765Z - info: Starting rendering request 29 (user: null)
+2020-08-03T21:00:22.767Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-03T21:00:23.252Z - info: Rendering request 29 finished in 486 ms

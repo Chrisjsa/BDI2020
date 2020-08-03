@@ -1,6 +1,6 @@
 {
     "shortid": "rJlkqWeLZw",
-    "name": "test",
+    "name": "carta",
     "recipe": "chrome-pdf",
     "engine": "handlebars",
     "chrome": {
@@ -10,7 +10,7 @@
         "$$date": 1596486030070
     },
     "modificationDate": {
-        "$$date": 1596486655738
+        "$$date": 1596488474968
     },
     "_id": "dFhO5Pf1cNypATYc",
     "$entitySet": "templates"
