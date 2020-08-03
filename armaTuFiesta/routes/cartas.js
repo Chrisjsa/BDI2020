@@ -14,6 +14,6 @@ router.post("/nueva", crearCarta)
 router.put("/actualizar", auth, actualizarCarta)
 
 // // Delete
-router.delete("/eliminar", auth, eliminarCarta)
+router.delete("/eliminar/:id_carta", auth, eliminarCarta)
 
 module.exports = router

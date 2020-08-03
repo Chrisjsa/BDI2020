@@ -14,6 +14,6 @@ router.post("/nueva", auth, crearJefatura)
 router.put("/actualizar", auth, actualizarJefatura)
 
 // // Delete
-router.delete("/eliminar", auth, eliminarJefatura)
+router.delete("/eliminar/:id_jefatura", auth, eliminarJefatura)
 
 module.exports = router

@@ -13,7 +13,5 @@ router.post("/nueva", auth, crearCategoria)
 // // Update
 router.put("/actualizar", auth, actualizarCategoria)
 
-// // Delete
-router.delete("/eliminar", auth, eliminarCategoria)
 
 module.exports = router

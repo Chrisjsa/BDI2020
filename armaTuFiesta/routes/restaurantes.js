@@ -14,6 +14,6 @@ router.post("/nueva", auth, crearRestaurante)
 router.put("/actualizar", auth, actualizarRestaurante)
 
 // // Delete
-router.delete("/eliminar", auth, eliminarRestaurante)
+router.delete("/eliminar/:id_restaurante", auth, eliminarRestaurante)
 
 module.exports = router

@@ -14,6 +14,6 @@ router.post("/nueva", auth, crearProducto)
 router.put("/actualizar", auth, actualizarProducto)
 
 // // Delete
-router.delete("/eliminar", auth, eliminarProducto)
+router.delete("/eliminar/:id_producto", auth, eliminarProducto)
 
 module.exports = router

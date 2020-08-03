@@ -14,6 +14,6 @@ router.post("/nueva", auth, crearFloristeria)
 router.put("/actualizar", auth, actualizarFloristeria)
 
 // // Delete
-router.delete("/eliminar", auth, eliminarFloristeria)
+router.delete("/eliminar/:id_floristeria", auth, eliminarFloristeria)
 
 module.exports = router

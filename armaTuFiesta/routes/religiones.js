@@ -13,7 +13,6 @@ router.post("/nueva", auth, crearReligion)
 // // Update
 router.put("/actualizar", auth, actualizarReligion)
 
-// // Delete
-router.delete("/eliminar", auth, eliminarReligion)
+
 
 module.exports = router

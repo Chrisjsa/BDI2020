@@ -13,7 +13,5 @@ router.post("/nueva", auth, crearStatu)
 // // Update
 router.put("/actualizar", auth, actualizarStatu)
 
-// // Delete
-router.delete("/eliminar", auth, eliminarStatu)
 
 module.exports = router

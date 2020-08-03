@@ -13,7 +13,5 @@ router.post("/nueva", auth, crearTip)
 // // Update
 router.put("/actualizar", auth, actualizarTip)
 
-// // Delete
-router.delete("/eliminar", auth, eliminarTip)
 
 module.exports = router

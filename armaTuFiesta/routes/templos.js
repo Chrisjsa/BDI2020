@@ -14,6 +14,6 @@ router.post("/nueva", auth, crearTemplo)
 router.put("/actualizar", auth, actualizarTemplo)
 
 // // Delete
-router.delete("/eliminar", auth, eliminarTemplo)
+router.delete("/eliminar/:id_templo", auth, eliminarTemplo)
 
 module.exports = router

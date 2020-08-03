@@ -13,7 +13,5 @@ router.post("/nueva", auth, crearHorario)
 // // Update
 router.put("/actualizar", auth, actualizarHorario)
 
-// // Delete
-router.delete("/eliminar", auth, eliminarHorario)
 
 module.exports = router

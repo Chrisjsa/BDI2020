@@ -18,7 +18,6 @@ router.post("/nueva", auth, crearCaracteristica)
 // // Update
 router.put("/actualizar", auth, actualizarCaracteristica)
 
-// // Delete
-router.delete("/eliminar", auth, eliminarCaracteristica)
+
 
 module.exports = router
