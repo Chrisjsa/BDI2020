@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING } from "./authTypes"
+import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING_AUTH } from "./authTypes"
 import axios from "axios"
 
 import setAuthToken from "../../utils/setAuthToken"
@@ -44,6 +44,6 @@ export const logout = () => {
 
 export const setLoading = () => dispatch => {
   return dispatch({
-    type: LOADING,
+    type: LOADING_AUTH,
   })
 }

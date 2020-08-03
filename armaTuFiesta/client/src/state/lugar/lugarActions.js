@@ -1,6 +1,6 @@
 import {
   ERROR_LUGAR,
-  LOADING,
+  LOADING_LUGAR,
   READ_ESTADO,
   LEER_MUNICIPIO,
   LEER_PARROQUIA,
@@ -11,7 +11,7 @@ import setAuthToken from "../../utils/setAuthToken"
 const config = { headers: { "Content-Type": "application/json" } }
 
 export const setLoading = () => dispatch => {
-  return dispatch({ type: LOADING })
+  return dispatch({ type: LOADING_LUGAR })
 }
 
 export const leerEstado = () => async dispatch => {

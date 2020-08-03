@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, withRouter } from "react-router-dom"
 
-import { Navbar, Nav, Button } from "react-bootstrap"
+import { NavDropdown, Navbar, Nav, Button } from "react-bootstrap"
 
 import logo from "../../img/logo.png"
 
@@ -44,8 +44,12 @@ const Navigation = ({ user, logout, history }) => {
   const AuthLinks = () => (
     <>
       <Nav className="mr-auto">{link("/dashboard", "Dashboard")}</Nav>
-      <Nav className="mr-auto">{link("/crud_notaria", "Notarias")}</Nav>
       <Nav>
+        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+          <NavDropdown.Item>
+            {link("/crud_notaria", "Notarias")}
+          </NavDropdown.Item>
+        </NavDropdown>
         <Nav.Link onClick={handleLogout}>Cerrar sesión</Nav.Link>
       </Nav>
     </>

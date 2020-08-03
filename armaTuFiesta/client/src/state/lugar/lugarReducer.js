@@ -1,6 +1,6 @@
 import {
   ERROR_LUGAR,
-  LOADING,
+  LOADING_LUGAR,
   READ_ESTADO,
   LEER_MUNICIPIO,
   LEER_PARROQUIA,
@@ -25,7 +25,7 @@ export default (state = initialState, action) => {
     case LEER_PARROQUIA:
       return { ...state, loading: false, parroquias: action.payload }
 
-    case LOADING:
+    case LOADING_LUGAR:
       return { ...state, loading: true }
 
     case ERROR_LUGAR:

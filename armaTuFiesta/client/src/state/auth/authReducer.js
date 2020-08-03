@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING } from "./authTypes"
+import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING_AUTH } from "./authTypes"
 
 const initialState = {
   loading: false,
@@ -10,7 +10,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case LOADING:
+    case LOADING_AUTH:
       return {
         ...state,
         loading: true,
@@ -22,6 +22,7 @@ export default (state = initialState, action) => {
         ...state,
         token: action.payload.token,
         isAuthenticated: true,
+        loading: false,
       }
 
     case LOAD_USER:
@@ -39,9 +40,9 @@ export default (state = initialState, action) => {
         ...state,
         token: null,
         isAuthenticated: false,
-        loading: false,
         user: null,
         error: action.payload,
+        loading: false,
       }
 
     default:

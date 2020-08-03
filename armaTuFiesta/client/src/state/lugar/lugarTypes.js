@@ -1,5 +1,5 @@
 export const ERROR_LUGAR = "ERROR_LUGAR"
-export const LOADING = "LOADING"
+export const LOADING_LUGAR = "LOADING_LUGAR"
 export const READ_ESTADO = "READ_ESTADO"
 export const LEER_MUNICIPIO = "LEER_MUNICIPIO"
 export const LEER_PARROQUIA = "LEER_PARROQUIA"
