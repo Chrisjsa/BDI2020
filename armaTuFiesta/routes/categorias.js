@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const { monitor } = require("../middleware/monitor") 
-const middleware = [auth, monitor] 
+
 const { auth } = require("../middleware/auth")
 const { leerCategoria, crearCategoria, actualizarCategoria, eliminarCategoria } = require("../controllers/categorias")
 
@@ -9,10 +9,10 @@ const { leerCategoria, crearCategoria, actualizarCategoria, eliminarCategoria } 
 router.get("/leer", auth, leerCategoria)
 
 // // Create
-router.post("/nueva", middleware, crearCategoria)
+router.post("/nueva", auth, crearCategoria)
 
 // // Update
-router.put("/actualizar", middleware, actualizarCategoria)
+router.put("/actualizar", auth, actualizarCategoria)
 
 
 module.exports = router
