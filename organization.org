@@ -15,7 +15,7 @@
 
 ** Carta
 *** TODO Crear carta
-*** TODO Consultar carta (5)
+*** TODO Consultar carta
 
 ** Categoria
 *** TODO Crear categoria
