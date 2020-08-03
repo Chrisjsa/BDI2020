@@ -4,7 +4,7 @@ const { monitor } = require("../middleware/monitor")
 const { auth } = require("../middleware/auth")
 const middleware = [auth, monitor] 
 
-const { leerCliente, crearCliente, actualizarCliente } = require("../controllers/clientes")
+const { leerCliente, crearCliente, actualizarCliente, eliminarCliente } = require("../controllers/clientes")
 
 // Read
 router.get("/leer", auth, leerCliente)
@@ -15,6 +15,6 @@ router.post("/nueva", middleware, crearCliente)
 // // Update
 router.put("/actualizar", middleware, actualizarCliente)
 
-
+router.delete("/eliminar/:id_cliente", middleware, eliminarCliente)
 
 module.exports = router

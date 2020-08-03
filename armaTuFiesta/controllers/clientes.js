@@ -1,8 +1,8 @@
 const { connection } = require("../database")
-const {  } = require("../sql/clientesQueries")
+const { LEER_CLIENTES, ACTUALIZAR_CLIENTES, CREAR_CLIENTES, ELIMINAR_CLIENTES } = require("../sql/clientesQueries")
 
 exports.leerCliente = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(LEER_CLIENTES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -11,7 +11,7 @@ exports.leerCliente = (req, res) => {
 }
 
 exports.crearCliente = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(CREAR_CLIENTES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -21,7 +21,7 @@ exports.crearCliente = (req, res) => {
 
 
 exports.actualizarCliente = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(ACTUALIZAR_CLIENTES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -29,3 +29,12 @@ exports.actualizarCliente = (req, res) => {
   })
 }
 
+
+exports.eliminarCliente = (req, res) => {
+  connection.query(ELIMINAR_CLIENTES, (error, rows) => {
+    if (error) {
+      return res.status(400).send(error.message)
+    }
+    return res.json( rows )
+  })
+}
