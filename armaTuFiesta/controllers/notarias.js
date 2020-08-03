@@ -52,7 +52,6 @@ exports.actualizarNotaria = (req, res) => {
 }
 
 exports.eliminarNotaria = (req, res) => {
-  console.table(req.params)
   connection.query(
     ELIMINAR_NOTARIAS,
     [req.params.id_notaria],
