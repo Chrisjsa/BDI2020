@@ -8,7 +8,7 @@ import { connect } from "react-redux"
 import {
   readNotarias,
   setCurrentNotaria,
-} from "../../state/notarias/notariaActions"
+} from "../../state/notaria/notariaActions"
 
 import Loading from "../layout/Loading"
 import NotariaForm from "../notarias/NotariaForm"

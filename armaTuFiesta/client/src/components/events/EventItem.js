@@ -11,7 +11,7 @@ import { BsPersonFill } from "react-icons/bs"
 import { filterById, arrayOfValues } from "../../utils"
 
 import { connect } from "react-redux"
-import { setCurrentEvent } from "../../state/eventos/eventoActions"
+import { setCurrentEvent } from "../../state/evento/eventoActions"
 
 const EventItem = ({ key, event, services, setCurrentEvent }) => {
   const onClick = () => {

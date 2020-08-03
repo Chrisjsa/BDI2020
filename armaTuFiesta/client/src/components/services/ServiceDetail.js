@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 
 import { Container } from "react-bootstrap"
 
-import { setCurrentService } from "../../state/eventos/eventoActions"
+import { setCurrentService } from "../../state/evento/eventoActions"
 
 const ServicesDetail = ({
   currentService,

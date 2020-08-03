@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { ListGroup } from "react-bootstrap"
 
 import { connect } from "react-redux"
-import { setCurrentService } from "../../state/eventos/eventoActions"
+import { setCurrentService } from "../../state/evento/eventoActions"
 
 const ServiceItem = ({ service, setCurrentService }) => {
   const onClick = () => {

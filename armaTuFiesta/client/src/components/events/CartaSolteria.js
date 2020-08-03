@@ -6,7 +6,7 @@ import moment from "moment"
 
 import { connect } from "react-redux"
 
-import { createCarta } from "../../state/cartas/cartaActions"
+import { createCarta } from "../../state/carta/cartaActions"
 
 import { Form, Button, Col, Container } from "react-bootstrap"
 

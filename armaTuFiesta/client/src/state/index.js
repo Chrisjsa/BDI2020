@@ -1,13 +1,15 @@
 import { combineReducers } from "redux"
 
 import authReducer from "./auth/authReducer"
-import eventoReducer from "./eventos/eventoReducer"
-import notariaReducer from "./notarias/notariaReducer"
-import cartaReducer from "./cartas/cartaReducer"
+import eventoReducer from "./evento/eventoReducer"
+import notariaReducer from "./notaria/notariaReducer"
+import cartaReducer from "./carta/cartaReducer"
+import lugarReducer from "./lugar/lugarReducer"
 
 export default combineReducers({
   auth: authReducer,
   events: eventoReducer,
   notarias: notariaReducer,
-  carta: cartaReducer,
+  cartas: cartaReducer,
+  lugares: lugarReducer,
 })

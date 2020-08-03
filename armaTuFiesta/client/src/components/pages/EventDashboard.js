@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap"
 import EventDetail from "../events/EventDetails"
 
 import { connect } from "react-redux"
-import { updateStatus } from "../../state/eventos/eventoActions"
+import { updateStatus } from "../../state/evento/eventoActions"
 
 const EventDashboard = ({ currentEvent }) => {
   if (!currentEvent) return <div className="error">currentEvent es nulo</div>

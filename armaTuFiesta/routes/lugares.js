@@ -1,8 +1,11 @@
 const express = require("express")
 const router = express.Router()
 
-const { auth } = require("../middleware/auth")
-const { leerLugarMunicipio, leerLugarEstado, leerLugarParroquia } = require("../controllers/lugares")
+const {
+  leerLugarMunicipio,
+  leerLugarEstado,
+  leerLugarParroquia,
+} = require("../controllers/lugares")
 
 // Read
 router.get("/leerEstado", leerLugarEstado)

@@ -3,17 +3,30 @@ import React, { useState, useEffect } from "react"
 import { Form, Col, Button } from "react-bootstrap"
 
 import { connect } from "react-redux"
+
 import {
   setCurrentNotaria,
   updateNotaria,
   readNotarias,
-} from "../../state/notarias/notariaActions"
+} from "../../state/notaria/notariaActions"
+
+import {
+  leerEstado,
+  leerMunicipio,
+  leerParroquia,
+} from "../../state/lugar/lugarActions"
 
 const NotariaForm = ({
   currentNotaria,
   setCurrentNotaria,
   updateNotaria,
   readNotarias,
+  leerEstado,
+  leerMunicipio,
+  leerParroquia,
+  estados,
+  municipios,
+  parroquias,
 }) => {
   const initialState = {
     estado: "",
@@ -31,6 +44,8 @@ const NotariaForm = ({
   const isNotariaEmpty = Object.values(notaria).some(value => value === "")
 
   useEffect(() => {
+    leerEstado()
+
     if (!currentNotaria) setNotaria(initialState)
     else setNotaria({ ...notaria, ...currentNotaria })
 
@@ -47,6 +62,16 @@ const NotariaForm = ({
     latitud,
     longitud,
   } = notaria
+
+  useEffect(() => {
+    console.log(estado)
+    leerMunicipio(estado) // estado = id_estado
+  }, [estado])
+
+  useEffect(() => {
+    console.log(municipio)
+    leerParroquia(municipio) // municipio = id_municipio
+  }, [municipio])
 
   const onChange = event => {
     setNotaria({
@@ -81,7 +106,12 @@ const NotariaForm = ({
               disabled={currentNotaria}
             >
               <option>Seleccionar...</option>
-              <option value="Estado">Soltero</option>
+              {estados.length >= 0 &&
+                estados.map(estado => (
+                  <option key={estado.id_estado} value={estado.id_estado}>
+                    {estado.nombre}
+                  </option>
+                ))}
             </Form.Control>
           </Form.Group>
 
@@ -96,7 +126,15 @@ const NotariaForm = ({
               disabled={currentNotaria}
             >
               <option>Seleccionar...</option>
-              <option value="Municipio">Soltero</option>
+              {municipios.length >= 0 &&
+                municipios.map(municipio => (
+                  <option
+                    key={municipio.id_municipio}
+                    value={municipio.id_municipio}
+                  >
+                    {municipio.nombre}
+                  </option>
+                ))}
             </Form.Control>
           </Form.Group>
 
@@ -111,7 +149,15 @@ const NotariaForm = ({
               disabled={currentNotaria}
             >
               <option>Seleccionar...</option>
-              <option value="Parroquia">Soltero</option>
+              {parroquias.length >= 0 &&
+                parroquias.map(parroquia => (
+                  <option
+                    key={parroquia.id_parroquia}
+                    value={parroquia.id_parroquia}
+                  >
+                    {parroquia.nombre}
+                  </option>
+                ))}
             </Form.Control>
           </Form.Group>
         </Form.Row>
@@ -199,10 +245,16 @@ const NotariaForm = ({
 
 const mapStateToProps = state => ({
   currentNotaria: state.notarias.currentNotaria,
+  estados: state.lugares.estados,
+  municipios: state.lugares.municipios,
+  parroquias: state.lugares.parroquias,
 })
 
 export default connect(mapStateToProps, {
   setCurrentNotaria,
   updateNotaria,
   readNotarias,
+  leerEstado,
+  leerMunicipio,
+  leerParroquia,
 })(NotariaForm)
