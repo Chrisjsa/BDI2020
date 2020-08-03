@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
-
+const { monitor } = require("../middleware/monitor") 
+const middleware = [auth, monitor] 
 const { auth } = require("../middleware/auth")
 const { leerRol, crearRol, actualizarRol, eliminarRol } = require("../controllers/roles")
 
@@ -8,10 +9,10 @@ const { leerRol, crearRol, actualizarRol, eliminarRol } = require("../controller
 router.get("/leer", auth, leerRol)
 
 // // Create
-router.post("/nueva", auth, crearRol)
+router.post("/nueva", middleware, crearRol)
 
 // // Update
-router.put("/actualizar", auth, actualizarRol)
+router.put("/actualizar", middleware, actualizarRol)
 
 
 module.exports = router

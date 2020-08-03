@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
-
+const { monitor } = require("../middleware/monitor") 
+const middleware = [auth, monitor] 
 const { auth } = require("../middleware/auth")
 const { leerReligion, crearReligion, actualizarReligion, eliminarReligion } = require("../controllers/religiones")
 
@@ -8,10 +9,10 @@ const { leerReligion, crearReligion, actualizarReligion, eliminarReligion } = re
 router.get("/leer", auth, leerReligion)
 
 // // Create
-router.post("/nueva", auth, crearReligion)
+router.post("/nueva", middleware, crearReligion)
 
 // // Update
-router.put("/actualizar", auth, actualizarReligion)
+router.put("/actualizar", middleware, actualizarReligion)
 
 
 

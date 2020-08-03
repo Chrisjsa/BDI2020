@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
-
+const { monitor } = require("../middleware/monitor") 
+const middleware = [auth, monitor] 
 const { auth } = require("../middleware/auth")
 const { leerHorario, crearHorario, actualizarHorario, eliminarHorario } = require("../controllers/horarios")
 
@@ -8,10 +9,10 @@ const { leerHorario, crearHorario, actualizarHorario, eliminarHorario } = requir
 router.get("/leer", auth, leerHorario)
 
 // // Create
-router.post("/nueva", auth, crearHorario)
+router.post("/nueva", middleware, crearHorario)
 
 // // Update
-router.put("/actualizar", auth, actualizarHorario)
+router.put("/actualizar", middleware, actualizarHorario)
 
 
 module.exports = router

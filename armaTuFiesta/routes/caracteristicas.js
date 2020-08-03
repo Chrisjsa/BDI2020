@@ -2,6 +2,11 @@ const express = require("express")
 const router = express.Router()
 
 const { auth } = require("../middleware/auth")
+
+const { monitor } = require("../middleware/monitor") 
+const middleware = [auth, monitor] 
+
+
 const {
   leerCaracteristica,
   crearCaracteristica,
@@ -13,10 +18,10 @@ const {
 router.get("/leer", auth, leerCaracteristica)
 
 // // Create
-router.post("/nueva", auth, crearCaracteristica)
+router.post("/nueva", middleware, crearCaracteristica)
 
 // // Update
-router.put("/actualizar", auth, actualizarCaracteristica)
+router.put("/actualizar", middleware, actualizarCaracteristica)
 
 
 

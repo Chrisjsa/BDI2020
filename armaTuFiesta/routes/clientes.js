@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
-
+const { monitor } = require("../middleware/monitor") 
+const middleware = [auth, monitor] 
 const { auth } = require("../middleware/auth")
 const { leerCliente, crearCliente, actualizarCliente } = require("../controllers/clientes")
 
@@ -8,10 +9,10 @@ const { leerCliente, crearCliente, actualizarCliente } = require("../controllers
 router.get("/leer", auth, leerCliente)
 
 // // Create
-router.post("/nueva", auth, crearCliente)
+router.post("/nueva", middleware, crearCliente)
 
 // // Update
-router.put("/actualizar", auth, actualizarCliente)
+router.put("/actualizar", middleware, actualizarCliente)
 
 
 

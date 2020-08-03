@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
-
+const { monitor } = require("../middleware/monitor") 
+const middleware = [auth, monitor] 
 const { auth } = require("../middleware/auth")
 const { leerFloristeria, crearFloristeria, actualizarFloristeria, eliminarFloristeria } = require("../controllers/floristerias")
 
@@ -8,12 +9,12 @@ const { leerFloristeria, crearFloristeria, actualizarFloristeria, eliminarFloris
 router.get("/leer", auth, leerFloristeria)
 
 // // Create
-router.post("/nueva", auth, crearFloristeria)
+router.post("/nueva", middleware, crearFloristeria)
 
 // // Update
-router.put("/actualizar", auth, actualizarFloristeria)
+router.put("/actualizar", middleware, actualizarFloristeria)
 
 // // Delete
-router.delete("/eliminar/:id_floristeria", auth, eliminarFloristeria)
+router.delete("/eliminar/:id_floristeria", middleware, eliminarFloristeria)
 
 module.exports = router
