@@ -58,7 +58,11 @@ export const eleminarNotaria = notaria => async dispatch => {
   console.table(notaria)
   setLoading()(dispatch)
   try {
-    const res = await axios.delete(`api/notarias/eliminar`, notaria, config)
+    const res = await axios.delete(
+      `api/notarias/eliminar/${notaria.id_locacion}`,
+      notaria,
+      config
+    )
     dispatch({ type: ELIMINAR_NOTARIA, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_NOTARIA, payload: error.response.msg })
