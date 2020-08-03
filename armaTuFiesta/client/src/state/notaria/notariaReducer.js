@@ -1,8 +1,8 @@
 import {
   READ_NOTARIAS,
-  CREATE_NOTARIA,
+  CREAR_NOTARIA,
   UPDATE_NOTARIA,
-  DELETE_NOTARIA,
+  ELIMINAR_NOTARIA,
   ERROR_NOTARIA,
   LOADING_NOTARIA,
   SET_CURRENT_NOTARIA,
@@ -40,11 +40,8 @@ export default (state = initialState, action) => {
         currentNotaria: action.payload,
       }
 
-    case CREATE_NOTARIA:
-      return {
-        ...state,
-        loading: false,
-      }
+    case CREAR_NOTARIA:
+      return { ...state, loading: false }
 
     case UPDATE_NOTARIA:
       console.log(action.payload)
@@ -54,11 +51,8 @@ export default (state = initialState, action) => {
         notarias: [...state.notarias, action.payload],
       }
 
-    case DELETE_NOTARIA:
-      return {
-        ...state,
-        loading: false,
-      }
+    case ELIMINAR_NOTARIA:
+      return { ...state, loading: false }
 
     case ERROR_NOTARIA:
       return {

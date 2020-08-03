@@ -1,8 +1,8 @@
 import {
   READ_NOTARIAS,
-  CREATE_NOTARIA,
+  CREAR_NOTARIA,
   UPDATE_NOTARIA,
-  DELETE_NOTARIA,
+  ELIMINAR_NOTARIA,
   ERROR_NOTARIA,
   LOADING_NOTARIA,
   SET_CURRENT_NOTARIA,
@@ -28,19 +28,13 @@ export const readNotarias = () => async dispatch => {
   }
 }
 
-export const createNotaria = notaria => async dispatch => {
+export const crearNotaria = notaria => async dispatch => {
   setLoading()(dispatch)
   try {
-    const res = await axios.post("api/notarias/nueva", notaria, config)
-    dispatch({
-      type: CREATE_NOTARIA,
-      payload: res.data,
-    })
+    const res = await axios.post(`api/notarias/nueva`, notaria, config)
+    dispatch({ type: CREAR_NOTARIA, payload: res.data })
   } catch (error) {
-    dispatch({
-      type: ERROR_NOTARIA,
-      payload: error.response.msg,
-    })
+    dispatch({ type: ERROR_NOTARIA, payload: error.response.msg })
   }
 }
 
@@ -56,24 +50,18 @@ export const updateNotaria = notaria => async dispatch => {
     dispatch({
       type: ERROR_NOTARIA,
       payload: error.message,
-      // payload: error.response.msg,
     })
   }
 }
 
-export const deleteNotaria = () => async dispatch => {
+export const eleminarNotaria = notaria => async dispatch => {
+  console.table(notaria)
   setLoading()(dispatch)
   try {
-    const res = await axios.delete("api/notarias/elimina")
-    dispatch({
-      type: DELETE_NOTARIA,
-      payload: res.data,
-    })
+    const res = await axios.delete(`api/notarias/eliminar`, notaria, config)
+    dispatch({ type: ELIMINAR_NOTARIA, payload: res.data })
   } catch (error) {
-    dispatch({
-      type: ERROR_NOTARIA,
-      payload: error.response.msg,
-    })
+    dispatch({ type: ERROR_NOTARIA, payload: error.response.msg })
   }
 }
 

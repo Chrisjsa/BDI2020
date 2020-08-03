@@ -22,7 +22,13 @@ exports.leerNotarias = (req, res) => {
 }
 
 exports.crearNotaria = (req, res) => {
-  connection.query(CREAR_NOTARIAS, (error, rows) => {
+  console.table(req.body)
+
+  const { estado, nombre, notario, telefono, latitud, longitud } = req.body
+
+  const data = [estado, nombre, nombre, notario, telefono, latitud, longitud]
+
+  connection.query(CREAR_NOTARIAS, data, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -53,4 +59,3 @@ exports.eliminarNotaria = (req, res) => {
     return res.json(rows)
   })
 }
-// routes -> queries -> controllers

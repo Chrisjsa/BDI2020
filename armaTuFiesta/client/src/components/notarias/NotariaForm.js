@@ -8,6 +8,8 @@ import {
   setCurrentNotaria,
   updateNotaria,
   readNotarias,
+  crearNotaria,
+  eleminarNotaria,
 } from "../../state/notaria/notariaActions"
 
 import {
@@ -16,14 +18,17 @@ import {
   leerParroquia,
 } from "../../state/lugar/lugarActions"
 
+// Inicio del componente
 const NotariaForm = ({
   currentNotaria,
   setCurrentNotaria,
   updateNotaria,
   readNotarias,
+  crearNotaria,
   leerEstado,
   leerMunicipio,
   leerParroquia,
+  eleminarNotaria,
   estados,
   municipios,
   parroquias,
@@ -81,10 +86,21 @@ const NotariaForm = ({
   }
 
   const handleUpdate = () => {
-    const { id_locacion, nombre, tipo, notario, latitud, longitud } = notaria
-    const data = { id_locacion, nombre, tipo, notario, latitud, longitud }
-    console.table(notaria)
-    updateNotaria(data)
+    updateNotaria(notaria)
+    setCurrentNotaria(undefined)
+    setNotaria(initialState)
+    readNotarias()
+  }
+
+  const handleCreate = () => {
+    crearNotaria(notaria)
+    setCurrentNotaria(undefined)
+    setNotaria(initialState)
+    readNotarias()
+  }
+
+  const handleDelete = () => {
+    eleminarNotaria(notaria)
     setCurrentNotaria(undefined)
     setNotaria(initialState)
     readNotarias()
@@ -230,12 +246,14 @@ const NotariaForm = ({
               <Button className="mr-3" onClick={handleUpdate}>
                 Actualizar notaria
               </Button>
-              <Button onClick={handleUpdate} variant="outline-danger">
+              <Button onClick={handleDelete} variant="outline-danger">
                 Eliminar notaria
               </Button>
             </>
           ) : (
-            <Button disabled={isNotariaEmpty}>Agregar notaria</Button>
+            <Button disabled={isNotariaEmpty} onClick={handleCreate}>
+              Agregar notaria
+            </Button>
           )}
         </div>
       </Form>
@@ -257,4 +275,6 @@ export default connect(mapStateToProps, {
   leerEstado,
   leerMunicipio,
   leerParroquia,
+  crearNotaria,
+  eleminarNotaria,
 })(NotariaForm)
