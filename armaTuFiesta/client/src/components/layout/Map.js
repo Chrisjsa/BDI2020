@@ -5,9 +5,8 @@ import "../../css/map.css"
 
 const Map = ({ lat, lng }) => {
   return (
-    <div className="google-map">
+    <div className="google-map" style={{ maxHeight: "320px" }}>
       <GoogleMapReact
-        style={{ maxHeight: "320px" }}
         defaultZoom={8}
         center={{
           lat: parseFloat(lat) || 10.48,

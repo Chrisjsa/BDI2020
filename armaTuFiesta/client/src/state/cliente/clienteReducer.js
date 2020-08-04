@@ -1,6 +1,11 @@
 import { ERROR_CLIENTE, LOADING_CLIENTE, LEER_CLIENTES } from "./clienteTypes"
 
-const initialState = { loading: false, error: null }
+const initialState = {
+  loading: false,
+  error: null,
+  clientes: [],
+  currentCliente: undefined,
+}
 
 export default (state = initialState, action) => {
   switch (action.type) {
