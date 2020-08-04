@@ -6,29 +6,32 @@ import { leerClientes } from "../../state/cliente/clienteActions"
 
 import Crud from "../layout/Crud"
 
-const CrudNotaria = ({
+import ClienteForm from "./ClienteForm"
+
+const CrudCliente = ({
   clientes,
-  clientesCol,
+  clientesCols,
   loading,
   leerClientes,
   currentNotaria,
 }) => {
   return (
     <Crud
-      dataName="Notarías"
+      dataName="Clientes"
       data={clientes}
-      columns={clientesCol}
+      columns={clientesCols}
       loading={loading}
       readFn={leerClientes}
-      Form={() => <></>}
+      Form={ClienteForm}
     />
   )
 }
 
 const mapStateToProps = state => ({
   clientes: state.clientes.clientes,
+  clientesCols: state.clientes.clientesCols,
   loading: state.clientes.loading,
   currentCliente: state.clientes.currentCliente,
 })
 
-export default connect(mapStateToProps, { leerClientes })(CrudNotaria)
+export default connect(mapStateToProps, { leerClientes })(CrudCliente)

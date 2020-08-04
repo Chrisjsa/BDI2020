@@ -4,6 +4,7 @@ const initialState = {
   loading: false,
   error: null,
   clientes: [],
+  clientesCols: [],
   currentCliente: undefined,
 }
 
@@ -16,7 +17,12 @@ export default (state = initialState, action) => {
       return { ...state, loading: false, error: action.payload }
 
     case LEER_CLIENTES:
-      return { ...state, loading: false, clientes: action.payload }
+      return {
+        ...state,
+        loading: false,
+        clientes: action.payload.rows,
+        clientesCols: action.payload.columns,
+      }
 
     default:
       return state

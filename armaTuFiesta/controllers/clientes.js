@@ -13,16 +13,17 @@ exports.leerCliente = (req, res) => {
       return res.status(400).send(error.message)
     }
 
-      columns = fields.map(field => ({
+    columns = fields.map(field => ({
       name: field.name,
       selector: field.name,
     }))
-    return res.json(rows, columns)
+
+    return res.json({ rows, columns })
   })
 }
 
 exports.crearCliente = (req, res) => {
-  connection.query(CREAR_CLIENTES, (error, rows, fields) => {
+  connection.query(CREAR_CLIENTES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -32,42 +33,12 @@ exports.crearCliente = (req, res) => {
       selector: field.name,
     }))
 
-    return res.json(rows, columns)
+    return res.json({ rows, columns })
   })
 }
 
 exports.crearOtroUsuario = (req, res) => {
-  connection.query(CREAR_OTROS_USUARIOS, (error, rows, fields) => {
-    if (error) {
-      return res.status(400).send(error.message)
-    }
-
-      columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
-
-    return res.json(rows, columns)
-  })
-}
-
-exports.actualizarCliente = (req, res) => {
-  connection.query(ACTUALIZAR_CLIENTES, (error, rows, fields) => {
-    if (error) {
-      return res.status(400).send(error.message)
-    }
-
-      columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
-
-    return res.json(rows, columns)
-  })
-}
-
-exports.eliminarCliente = (req, res) => {
-  connection.query(ELIMINAR_CLIENTES, (error, rows, fields) => {
+  connection.query(CREAR_OTROS_USUARIOS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -77,6 +48,36 @@ exports.eliminarCliente = (req, res) => {
       selector: field.name,
     }))
 
-    return res.json( rows, columns )
+    return res.json({ rows, columns })
+  })
+}
+
+exports.actualizarCliente = (req, res) => {
+  connection.query(ACTUALIZAR_CLIENTES, (error, rows) => {
+    if (error) {
+      return res.status(400).send(error.message)
+    }
+
+    columns = fields.map(field => ({
+      name: field.name,
+      selector: field.name,
+    }))
+
+    return res.json({ rows, columns })
+  })
+}
+
+exports.eliminarCliente = (req, res) => {
+  connection.query(ELIMINAR_CLIENTES, (error, rows) => {
+    if (error) {
+      return res.status(400).send(error.message)
+    }
+
+    columns = fields.map(field => ({
+      name: field.name,
+      selector: field.name,
+    }))
+
+    return res.json({ rows, columns })
   })
 }

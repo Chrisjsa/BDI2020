@@ -4,7 +4,16 @@ import {
   READ_ESTADO,
   LEER_MUNICIPIO,
   LEER_PARROQUIA,
+  SET_CURRENT_ESTADO,
+  SET_CURRENT_MUNICIPIO,
+  SET_CURRENT_PARROQUIA,
 } from "./lugarTypes"
+
+const initialLugar = {
+  currentEstado: undefined,
+  currentMunicipio: undefined,
+  currentParroquia: undefined,
+}
 
 const initialState = {
   loading: false,
@@ -12,6 +21,7 @@ const initialState = {
   estados: [],
   municipios: [],
   parroquias: [],
+  lugar: initialLugar,
 }
 
 export default (state = initialState, action) => {
@@ -24,6 +34,29 @@ export default (state = initialState, action) => {
 
     case LEER_PARROQUIA:
       return { ...state, loading: false, parroquias: action.payload }
+
+    case SET_CURRENT_ESTADO:
+      return {
+        ...state,
+        loading: false,
+        currentEstado: action.payload === "none" ? undefined : action.payload,
+      }
+
+    case SET_CURRENT_MUNICIPIO:
+      return {
+        ...state,
+        loading: false,
+        currentMunicipio:
+          action.payload === "none" ? undefined : action.payload,
+      }
+
+    case SET_CURRENT_PARROQUIA:
+      return {
+        ...state,
+        loading: false,
+        currentParroquia:
+          action.payload === "none" ? undefined : action.payload,
+      }
 
     case LOADING_LUGAR:
       return { ...state, loading: true }

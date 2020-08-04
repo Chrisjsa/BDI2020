@@ -18,8 +18,6 @@ import {
   leerParroquia,
 } from "../../state/lugar/lugarActions"
 
-import LugarFields from "../lugares/LugarFields"
-
 // Inicio del componente
 const NotariaForm = ({
   currentNotaria,
@@ -34,9 +32,9 @@ const NotariaForm = ({
   eleminarNotaria,
 }) => {
   const initialState = {
-    // estado: "",
-    // municipio: "",
-    // parroquia: "",
+    estado: "",
+    municipio: "",
+    parroquia: "",
     nombre: "",
     notario: "",
     telefono: "",
@@ -44,7 +42,7 @@ const NotariaForm = ({
     longitud: "",
   }
 
-  // const { estados, municipios, parroquias } = lugares
+  const { estados, municipios, parroquias } = lugares
 
   const [notaria, setNotaria] = useState(initialState)
 
@@ -60,9 +58,9 @@ const NotariaForm = ({
   }, [currentNotaria])
 
   const {
-    // estado,
-    // municipio,
-    // parroquia,
+    estado,
+    municipio,
+    parroquia,
     nombre,
     notario,
     telefono,
@@ -70,53 +68,49 @@ const NotariaForm = ({
     longitud,
   } = notaria
 
-  // useEffect(() => {
-  //   console.log(estado)
-  //   leerMunicipio(estado) // estado = id_estado
-  // }, [estado])
+  useEffect(() => {
+    console.log(estado)
+    leerMunicipio(estado) // estado = id_estado
+  }, [estado])
 
-  // useEffect(() => {
-  //   console.log(municipio)
-  //   leerParroquia(municipio) // municipio = id_municipio
-  // }, [municipio])
+  useEffect(() => {
+    console.log(municipio)
+    leerParroquia(municipio) // municipio = id_municipio
+  }, [municipio])
 
   const onChange = event => {
     setNotaria({
       ...notaria,
-      estado: lugares.lugar.currentEstado,
-      municipio: lugares.lugar.currentMunicipio,
-      parroquia: lugares.lugar.currentParroquia,
       [event.target.name]: event.target.value,
     })
   }
 
-  const clearForm = () => {
+  const handleUpdate = () => {
+    updateNotaria(notaria)
     setCurrentNotaria(undefined)
     setNotaria(initialState)
     readNotarias()
   }
 
-  const handleUpdate = () => {
-    updateNotaria(notaria)
-    clearForm()
-  }
-
   const handleCreate = () => {
     crearNotaria(notaria)
-    clearForm()
+    setCurrentNotaria(undefined)
+    setNotaria(initialState)
+    readNotarias()
   }
 
   const handleDelete = () => {
     eleminarNotaria(notaria)
-    clearForm()
+    setCurrentNotaria(undefined)
+    setNotaria(initialState)
+    readNotarias()
   }
 
   return (
     <>
-      <h2>Insertar notaria</h2>
+      <h2>Insertar cliente</h2>
       <Form>
-        <LugarFields currentData={currentNotaria} />
-        {/* <Form.Row>
+        <Form.Row>
           <Form.Group as={Col}>
             <Form.Label>Estado</Form.Label>
             <Form.Control
@@ -136,6 +130,7 @@ const NotariaForm = ({
                 ))}
             </Form.Control>
           </Form.Group>
+
           <Form.Group as={Col}>
             <Form.Label>Municipio</Form.Label>
             <Form.Control
@@ -158,6 +153,7 @@ const NotariaForm = ({
                 ))}
             </Form.Control>
           </Form.Group>
+
           <Form.Group as={Col}>
             <Form.Label>Parroquia</Form.Label>
             <Form.Control
@@ -180,7 +176,7 @@ const NotariaForm = ({
                 ))}
             </Form.Control>
           </Form.Group>
-        </Form.Row> */}
+        </Form.Row>
 
         <Form.Row>
           <Form.Group as={Col}>

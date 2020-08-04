@@ -6,15 +6,12 @@ const {
 } = require("../sql/lugaresQueries")
 
 exports.leerLugarEstado = (req, res) => {
-  connection.query(LEER_LUGARES_ESTADOS, (error, rows, fields) => {
+  connection.query(LEER_LUGARES_ESTADOS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
-    return res.json(rows, columns)
+
+    return res.json(rows)
   })
 }
 
@@ -22,15 +19,11 @@ exports.leerLugarMunicipio = (req, res) => {
   connection.query(
     LEER_LUGARES_MUNICIPIOS,
     req.query.id_estado,
-    (error, rows, fields) => {
+    (error, rows) => {
       if (error) {
         return res.status(400).send(error.message)
       }
-      columns = fields.map(field => ({
-        name: field.name,
-        selector: field.name,
-      }))
-      return res.json(rows, columns)
+      return res.json(rows)
     }
   )
 }
@@ -39,15 +32,12 @@ exports.leerLugarParroquia = (req, res) => {
   connection.query(
     LEER_LUGARES_PARROQUIAS,
     req.query.id_municipio,
-    (error, rows, fields) => {
+    (error, rows) => {
       if (error) {
         return res.status(400).send(error.message)
       }
-      columns = fields.map(field => ({
-        name: field.name,
-        selector: field.name,
-      }))
-      return res.json(rows, columns)
+
+      return res.json(rows)
     }
   )
 }
