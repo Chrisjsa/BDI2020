@@ -11,7 +11,7 @@ export const setLoading = () => dispatch => {
 export const leerClientes = () => async dispatch => {
   setLoading()(dispatch)
   try {
-    const res = await axios.get(`api/api/clientes/`, config)
+    const res = await axios.get(`api/clientes/`, config)
     dispatch({ type: LEER_CLIENTES, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_CLIENTE, payload: error.response.msg })
