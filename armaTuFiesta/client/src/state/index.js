@@ -5,6 +5,7 @@ import eventoReducer from "./evento/eventoReducer"
 import notariaReducer from "./notaria/notariaReducer"
 import cartaReducer from "./carta/cartaReducer"
 import lugarReducer from "./lugar/lugarReducer"
+import clienteReducer from "./cliente/clienteReducer"
 
 export default combineReducers({
   auth: authReducer,
@@ -12,4 +13,5 @@ export default combineReducers({
   notarias: notariaReducer,
   cartas: cartaReducer,
   lugares: lugarReducer,
+  clientes: clienteReducer,
 })

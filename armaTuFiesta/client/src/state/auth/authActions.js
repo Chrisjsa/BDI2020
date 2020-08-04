@@ -8,9 +8,9 @@ const config = { headers: { "Content-Type": "application/json" } }
 export const login = credentials => async dispatch => {
   setLoading()
   try {
-    const res = await axios.post("api/auth/signin", credentials, config)
+    const res = await axios.post("api/auth/signin", credentials, config) // peticion al back
     dispatch({
-      type: LOGIN,
+      type: LOGIN, // como un símbolo que se envía al reductor
       payload: res.data,
     })
     loadUser()(dispatch)

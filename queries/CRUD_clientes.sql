@@ -1,17 +1,38 @@
 -- READ CLIENTE
 
-SELECT per.id_persona as id_persona, per.p_nombre as primer_nombre, per.p_apellido as primer_apellido, per.s_nombre as segundo_nombre, em.correo as correo, usu.password as password, tel.numero as telefono, per.s_apellido as segundo_apellido, per.fecha_nacimiento as fecha_de_nacimiento, per.sexo as sexo, per.estado_civil as estado_civil,  lug.nombre as reside FROM arma_tu_fiesta.persona as per, arma_tu_fiesta.usuario as usu, arma_tu_fiesta.email as em, arma_tu_fiesta.telefono as tel, arma_tu_fiesta.lugar as lug WHERE per.fk_residencia = lug.id_lugar and tel.fk_persona = per.id_persona and em.fk_persona = per.id_persona and usu.fk_persona = per.id_persona;
+SELECT per.id_persona as id_persona, per.p_nombre, per.p_apellido, per.s_nombre, em.correo as email, usu.password as password, tel.numero as telefono, per.s_apellido, per.fecha_nacimiento as fecha_de_nacimiento, per.sexo as sexo, per.estado_civil as estado_civil, lug.nombre as reside
+FROM arma_tu_fiesta.persona as per, arma_tu_fiesta.usuario as usu, arma_tu_fiesta.email as em, arma_tu_fiesta.telefono as tel, arma_tu_fiesta.lugar as lug
+WHERE per.fk_residencia = lug.id_lugar and tel.fk_persona = per.id_persona and em.fk_persona = per.id_persona and usu.fk_persona = per.id_persona;
 
 -- CREATE CLIENTE
 
-SET @reside = (ID_lugar); --MISMO PROCESO PARA SELECCIONAR LUGAR QUE EN NOTARIA
-SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol);
-INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia) VALUES ('CEDULA','PRIMER NOMBRE','SEGUNDO NOMBRE','PRIMER APELLIDO','SEGUNDO APELLIDO','FECHA NAC','SEXO','ESTADO CIVIL',@reside);
+SET @reside = (ID_lugar);
+--MISMO PROCESO PARA SELECCIONAR LUGAR QUE EN NOTARIA
+SET @rol = (SELECT pkRol
+FROM (SELECT id_rol as pkRol
+    FROM arma_tu_fiesta.rol
+    WHERE nombre = 'Cliente') as tablaRol);
+INSERT INTO arma_tu_fiesta.persona
+    (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia)
+VALUES
+    ('CEDULA', 'PRIMER NOMBRE', 'SEGUNDO NOMBRE', 'PRIMER APELLIDO', 'SEGUNDO APELLIDO', 'FECHA NAC', 'SEXO', 'ESTADO CIVIL', @reside);
 
-SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'CEDULA') as tablaPersona);
-INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('TELEFONO', @usuario);
-INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('EMAIL', @usuario);
-INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('EMAIL', 'PASSWORD' , @usuario, @rol);
+SET @usuario = (SELECT pkPersona
+FROM (SELECT id_persona as pkPersona
+    from arma_tu_fiesta.persona
+    WHERE cedula = 'CEDULA') as tablaPersona);
+INSERT INTO arma_tu_fiesta.telefono
+    (numero, fk_persona)
+VALUES
+    ('TELEFONO', @usuario);
+INSERT INTO arma_tu_fiesta.email
+    (correo, fk_persona)
+VALUES
+    ('EMAIL', @usuario);
+INSERT INTO arma_tu_fiesta.usuario
+    (username, password, fk_persona, fk_rol)
+VALUES
+    ('EMAIL', 'PASSWORD' , @usuario, @rol);
 
 -- DELETE CLIENTE
 

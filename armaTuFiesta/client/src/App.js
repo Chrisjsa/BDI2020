@@ -9,7 +9,7 @@ import LandingPage from "./components/pages/LandingPage"
 import AboutPage from "./components/pages/AboutPage"
 import DashboardPage from "./components/pages/DashboardPage"
 import EventDashboard from "./components/pages/EventDashboard"
-import CrudNotaria from "./components/pages/CrudNotaria"
+import CrudNotaria from "./components/notarias/CrudNotaria"
 
 import LoginPage from "./components/auth/Login"
 import Register from "./components/auth/Register"
