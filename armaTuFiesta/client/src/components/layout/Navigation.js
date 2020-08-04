@@ -48,6 +48,8 @@ const Navigation = ({ user, logout, history }) => {
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
           <NavDropdown.Item>
             {link("/crud_notaria", "Notarias")}
+          </NavDropdown.Item>
+          <NavDropdown.Item>
             {link("/crud_cliente", "Clientes")}
           </NavDropdown.Item>
         </NavDropdown>

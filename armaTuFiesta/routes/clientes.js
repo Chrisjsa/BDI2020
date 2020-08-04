@@ -5,7 +5,7 @@ const { auth } = require("../middleware/auth")
 const middleware = [auth, monitor]
 
 const {
-  leerClientes,
+  leerCliente,
   crearCliente,
   // crearOtroUsuario,
   actualizarCliente,
@@ -13,7 +13,7 @@ const {
 } = require("../controllers/clientes")
 
 // Read
-router.get("/", auth, leerClientes)
+router.get("/", auth, leerCliente)
 
 // // Create
 router.post("/nueva", middleware, crearCliente)

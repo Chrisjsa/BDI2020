@@ -31,7 +31,10 @@ const LugarFields = ({
   setCurrentMunicipio,
   setCurrentParroquia,
 }) => {
-  useEffect(() => {
+  React.useLayoutEffect(() => {
+    setCurrentEstado(undefined)
+    setCurrentMunicipio(undefined)
+    setCurrentParroquia(undefined)
     leerEstado()
   }, [])
 

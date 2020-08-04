@@ -16,7 +16,7 @@ const LugarDropdown = ({
     <Form.Control
       as="select"
       defaultValue="Seleccionar..."
-      value={value}
+      value={value ? value : "Seleccionar..."}
       onChange={e => handler(e.target.value)}
       disabled={disableIf || currentData}
     >
