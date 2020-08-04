@@ -1,7 +1,7 @@
-exports.LEER_CATEGORIAS = "query de leer"
+exports.LEER_CATEGORIAS = "SELECT * FROM arma_tu_fiesta.categoria;"
 
-exports.CREAR_CATEGORIAS = "query de crear"
+exports.CREAR_CATEGORIAS = "INSERT INTO arma_tu_fiesta.categoria (nombre) VALUES ('NOMBRE');"
 
-exports.ACTUALIZAR_CATEGORIAS = "query de actualizar"
+exports.ACTUALIZAR_CATEGORIAS = "SET @categoria = (ID_categoria); UPDATE arma_tu_fiesta.categoria SET nombre = 'NOMBRE' WHERE id_categoria = @categoria;"
 
-exports.ELIMINAR_CATEGORIAS = "query de eliminar"
+exports.ELIMINAR_CATEGORIAS = "SET @categoria = (ID_categoria); DELETE FROM arma_tu_fiesta.categoria WHERE id_categoria = @categoria;"

@@ -2817,6 +2817,7 @@
 2020-08-03T21:00:22.765Z - info: Starting rendering request 29 (user: null)
 2020-08-03T21:00:22.767Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
 2020-08-03T21:00:23.252Z - info: Rendering request 29 finished in 486 ms
+<<<<<<< HEAD
 2020-08-03T21:12:49.849Z - info: Starting rendering request 30 (user: null)
 2020-08-03T21:12:49.851Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
 2020-08-03T21:12:50.416Z - info: Rendering request 30 finished in 566 ms
@@ -2838,3 +2839,57 @@
 2020-08-03T21:16:27.351Z - info: Starting rendering request 36 (user: null)
 2020-08-03T21:16:27.353Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
 2020-08-03T21:16:27.879Z - info: Rendering request 36 finished in 528 ms
+=======
+2020-08-03T21:07:25.227Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: jsreport.config.json
+2020-08-03T21:07:25.230Z - info: Searching for available extensions in C:\Users\winkler\Desktop\Bases de datos\BDI2020\armaTuFiesta\
+2020-08-03T21:07:25.236Z - info: Extensions location cache not found, crawling directories
+2020-08-03T21:07:37.116Z - info: Found 35 extensions
+2020-08-03T21:07:37.508Z - info: Setting http-server strategy for rendering
+2020-08-03T21:07:37.881Z - info: Using extension cli@2.2.4
+2020-08-03T21:07:37.895Z - info: Using extension debug@2.1.3
+2020-08-03T21:07:37.904Z - info: Using extension express@2.7.0
+2020-08-03T21:07:38.140Z - info: Using extension freeze@2.0.0
+2020-08-03T21:07:38.153Z - info: Using extension handlebars@2.1.0
+2020-08-03T21:07:38.184Z - info: Using extension import-export@2.0.0
+2020-08-03T21:07:38.271Z - info: Using extension jsrender@2.1.1
+2020-08-03T21:07:38.274Z - info: Using extension tags@2.4.0
+2020-08-03T21:07:38.278Z - info: Using extension templates@2.4.0
+2020-08-03T21:07:38.303Z - info: Using extension authorization@2.4.0
+2020-08-03T21:07:38.327Z - info: Using extension base@2.0.2
+2020-08-03T21:07:38.329Z - info: Using extension browser-client@2.2.2
+2020-08-03T21:07:38.341Z - info: Using extension child-templates@1.4.0
+2020-08-03T21:07:38.363Z - info: Using extension chrome-pdf@1.8.0
+2020-08-03T21:07:38.559Z - info: Using extension data@2.3.0
+2020-08-03T21:07:38.576Z - info: Using extension docx@2.7.0
+2020-08-03T21:07:38.595Z - info: Using extension fs-store@2.8.0
+2020-08-03T21:07:38.864Z - info: Using extension licensing@2.2.2
+2020-08-03T21:07:38.877Z - info: Using extension pdf-utils@1.8.0
+2020-08-03T21:07:39.015Z - info: Using extension pptx@0.7.0
+2020-08-03T21:07:39.043Z - info: Using extension reports@2.4.0
+2020-08-03T21:07:39.110Z - info: Using extension static-pdf@0.4.0
+2020-08-03T21:07:39.132Z - info: Using extension studio@2.9.0
+2020-08-03T21:07:39.261Z - info: Using extension text@2.0.0
+2020-08-03T21:07:39.285Z - info: Using extension version-control@1.5.0
+2020-08-03T21:07:40.044Z - info: Using extension assets@1.6.0
+2020-08-03T21:07:40.082Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-03T21:07:40.659Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-03T21:07:40.665Z - info: Using extension scheduling@2.4.0
+2020-08-03T21:07:40.728Z - info: Using extension scripts@2.5.0
+2020-08-03T21:07:40.742Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-03T21:07:40.763Z - info: Using extension xlsx@2.4.0
+2020-08-03T21:07:41.066Z - info: Using extension public-templates@2.1.0
+2020-08-03T21:07:41.069Z - info: Using extension resources@2.1.0
+2020-08-03T21:07:41.071Z - info: Using extension sample-template@2.5.1
+2020-08-03T21:07:41.102Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2020-08-03T21:07:41.104Z - info: Using fs provider for template store.
+2020-08-03T21:07:41.131Z - info: fs store is persisting using fs
+2020-08-03T21:07:41.135Z - info: fs store is synchronizing using fs
+2020-08-03T21:07:41.162Z - info: fs store is loading data
+2020-08-03T21:07:41.286Z - info: fs store is initialized successfully
+2020-08-03T21:07:41.337Z - info: Creating default express app.
+2020-08-03T21:07:41.381Z - info: jsreport server successfully started on http port: 8000
+2020-08-03T21:07:41.385Z - info: fs store emits sockets to synchronize underlying changes with studio
+2020-08-03T21:07:41.429Z - info: Verifying license key free
+2020-08-03T21:07:41.436Z - info: Using free license
+2020-08-03T21:07:41.458Z - info: reporter initialized
+>>>>>>> 657ee0db447209566bb3e2194642f717b3052e4e
