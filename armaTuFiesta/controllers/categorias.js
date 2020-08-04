@@ -1,8 +1,8 @@
 const { connection } = require("../database")
-const {  } = require("../sql/categoriasQueries")
+const { LEER_CATEGORIAS, CREAR_CATEGORIAS, ELIMINAR_CATEGORIAS, ACTUALIZAR_CATEGORIAS } = require("../sql/categoriasQueries")
 
 exports.leerCategoria = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(LEER_CATEGORIAS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -11,7 +11,7 @@ exports.leerCategoria = (req, res) => {
 }
 
 exports.crearCategoria = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(CREAR_CATEGORIAS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -21,7 +21,7 @@ exports.crearCategoria = (req, res) => {
 
 
 exports.actualizarCategoria = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(ACTUALIZAR_CATEGORIAS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -30,7 +30,7 @@ exports.actualizarCategoria = (req, res) => {
 }
 
 exports.eliminarCategoria = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(ELIMINAR_CATEGORIAS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
