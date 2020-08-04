@@ -28,11 +28,17 @@ exports.crearNotaria = (req, res) => {
 
   const data = [estado, nombre, nombre, notario, telefono, latitud, longitud]
 
-  connection.query(CREAR_NOTARIAS, data, (error, rows) => {
+  connection.query(CREAR_NOTARIAS, data, (error, rows, fields) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json(rows)
+
+    columns = fields.map(field => ({
+      name: field.name,
+      selector: field.name,
+    }))
+
+    return res.json(rows, columns)
   })
 }
 
@@ -42,11 +48,17 @@ exports.actualizarNotaria = (req, res) => {
   connection.query(
     ACTUALIZAR_NOTARIAS,
     [id_locacion, nombre, notario],
-    (error, rows) => {
+    (error, rows, fields) => {
       if (error) {
         return res.status(400).send(error.message)
       }
-      return res.json(rows)
+
+      columns = fields.map(field => ({
+        name: field.name,
+        selector: field.name,
+      }))
+
+      return res.json(rows, columns)
     }
   )
 }
@@ -55,11 +67,17 @@ exports.eliminarNotaria = (req, res) => {
   connection.query(
     ELIMINAR_NOTARIAS,
     [req.params.id_notaria],
-    (error, rows) => {
+    (error, rows, fields) => {
       if (error) {
         return res.status(400).send(error.message)
       }
-      return res.json(rows)
+
+      columns = fields.map(field => ({
+        name: field.name,
+        selector: field.name,
+      }))
+
+      return res.json(rows, columns)
     }
   )
 }

@@ -2,38 +2,55 @@ const { connection } = require("../database")
 const {  } = require("../sql/caracteristicasQueries")
 
 exports.leerCaracteristica = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query("", (error, rows, fields) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+
+    columns = fields.map(field => ({
+      name: field.name,
+      selector: field.name,
+    }))
+    return res.json( rows, columns )
   })
 }
 
 exports.crearCaracteristica = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query("", (error, rows, fields) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    columns = fields.map(field => ({
+      name: field.name,
+      selector: field.name,
+    }))
+    return res.json( rows, columns )
   })
 }
 
 
 exports.actualizarCaracteristica = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query("", (error, rows, fields) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    columns = fields.map(field => ({
+      name: field.name,
+      selector: field.name,
+    }))
+    return res.json( rows, columns )
   })
 }
 
 exports.eliminarCaracteristica = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query("", (error, rows, fields) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    columns = fields.map(field => ({
+      name: field.name,
+      selector: field.name,
+    }))
+    return res.json( rows, columns )
   })
 }
