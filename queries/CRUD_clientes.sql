@@ -13,6 +13,18 @@ INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('TELEFONO', @us
 INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('EMAIL', @usuario);
 INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('EMAIL', 'PASSWORD' , @usuario, @rol);
 
+-- CREATE OTROS USUARIOS
+SELECT * FROM arma_tu_fiesta.rol; -- PRIMERO SE CARGA UNA LISTA CON LOS ROLES, SE SELECCIONA Y SE TOMA EL ID
+
+SET @reside = (ID_lugar); --MISMO PROCESO PARA SELECCIONAR LUGAR QUE EN NOTARIA
+SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'ROL') as tablaRol);
+INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, fk_residencia) VALUES ('CEDULA','PRIMER NOMBRE','SEGUNDO NOMBRE','PRIMER APELLIDO','SEGUNDO APELLIDO','FECHA NAC','SEXO','ESTADO CIVIL',@reside);
+
+SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'CEDULA') as tablaPersona);
+INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('TELEFONO', @usuario);
+INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('EMAIL', @usuario);
+INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('EMAIL', 'PASSWORD' , @usuario, @rol);
+
 -- DELETE CLIENTE
 
 SET @persona = (ID_persona);
