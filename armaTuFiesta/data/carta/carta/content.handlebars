@@ -13,9 +13,49 @@
     </section>
 
     <section id="body">
-        <p>A contraer matrimonio con {{dataSc.p_nombre}} {{dataSc.s_nombre}}, cédula de de identidad
-            {{dataSc.cedula}}
+        <p>
+         Ciudadano 
+        <p>
+        <p>
+         Notario Publico de (Nombre de la notaria)
+        <p>    
+        <p>
+         Su Despacho.    <br> <br>
+        <p>
+        
+        <p ALIGN=justify>
+            Yo, {{per.p_nombre}} {{per.s_nombre}} {{per.p_apellido}} {{per.s_apellido}}, 
+            venezolano(a), mayor de edad, titular de la cedula de identidad Nro. {{per.cedula}},  
+            civilmente hábil, domiciliada en la (datos de la ciudad). 
+            Comparezco ante su competente autoridad con la finalidad se sirva emitir y validar 
+            la presente Carta de Soltería. Pido se recurra interrogar a los testigos que 
+            oportunamente presentaré, sobre los siguientes particulares. 
+            <b>PRIMERO:</b> Si me conocen de vista, trato y comunicación derivado del conocimiento que de mi tienen. 
+            <b>SEGUNDO:</b> si por ese conocimiento que de mi tienen, saben y les consta que 
+            nací en la (datos de la ciudad), el día (datos del dia) de (datos del mes) del (datos del anio) 
+            y que soy hijo(a) de <b>{{dataMpc.p_nombre}} {{dataMpc.s_nombre}} {{dataMpc.p_apellido}} 
+            {{dataMpc.s_apellido}}</b> y de <b>{{dataPpc.p_nombre}} {{dataPpc.s_nombre}} 
+            {{dataPpc.p_apellido}} {{dataPpc.s_apellido}}</b>, venezolanos, mayores de edad, y 
+            titulares de la cedula de identidad Nros. <b>{{dataMpc.cedula}}</b>, y <b>{{dataPpc.cedula}}</b>. 
+            <b>TERCERO:</b> si por el conocimiento que tienen, saben y les consta que soy soltero(a) y 
+            que por lo tanto no tengo impedimento alguno para la solicitud de la misma. 
+            Por último solicito que una vez evacuadas las presentes actuaciones 
+            se sirva devolvérmelas en original con sus resultas. 
+            Es justicia que espero a la fecha de su presentación en la ciudad de (datos de la ciudad).
         </p>
+        <p ALIGN=justify>
+            Los testigos contestaron afirmativamente a las anteriores preguntas y en consecuencia 
+            estampas sus firmas ilegibles a continuación   <br><br>
+        <p>
+        <p ALIGN=left>
+            <b>{{dataT1pc.p_nombre}} {{dataT1pc.s_nombre}} {{dataT1pc.p_apellido}} {{dataT1pc.s_apellido}}</b> <br>
+            <b>{{dataT1pc.cedula}}</b>
+        <p>
+
+        <p ALIGN=left>
+            <b>{{dataT2pc.p_nombre}} {{dataT2pc.s_nombre}} {{dataT2pc.p_apellido}} {{dataT2pc.s_apellido}}</b> <br>
+            <b>{{dataT2pc.cedula}}</b>
+        <p>        
     </section>
 
 </body>

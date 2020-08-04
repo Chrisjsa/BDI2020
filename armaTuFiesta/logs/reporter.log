@@ -2896,3 +2896,154 @@
 2020-08-04T16:34:22.889Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: jsreport.config.json
 2020-08-04T16:34:22.901Z - info: Searching for available extensions in C:\Users\winkler\Desktop\Bases de datos\BDI2020\armaTuFiesta\
 2020-08-04T16:34:22.996Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\winkler\Desktop\Bases de datos\BDI2020\armaTuFiesta\
+2020-08-04T16:39:30.837Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: jsreport.config.json
+2020-08-04T16:39:30.846Z - info: Searching for available extensions in C:\Users\winkler\Desktop\Bases de datos\BDI2020\armaTuFiesta\
+2020-08-04T16:39:30.855Z - info: Extensions location cache C:\Users\winkler\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2020-08-04T16:40:09.418Z - info: Found 35 extensions
+2020-08-04T16:40:10.720Z - info: Setting http-server strategy for rendering
+2020-08-04T16:40:11.035Z - info: Using extension cli@2.2.4
+2020-08-04T16:40:11.060Z - info: Using extension debug@2.1.3
+2020-08-04T16:40:11.077Z - info: Using extension express@2.7.0
+2020-08-04T16:40:11.658Z - info: Using extension freeze@2.0.0
+2020-08-04T16:40:11.672Z - info: Using extension handlebars@2.1.0
+2020-08-04T16:40:11.682Z - info: Using extension import-export@2.0.0
+2020-08-04T16:40:12.076Z - info: Using extension jsrender@2.1.1
+2020-08-04T16:40:12.086Z - info: Using extension tags@2.4.0
+2020-08-04T16:40:12.210Z - info: Using extension templates@2.4.0
+2020-08-04T16:40:12.271Z - info: Using extension authorization@2.4.0
+2020-08-04T16:40:12.342Z - info: Using extension base@2.0.2
+2020-08-04T16:40:12.361Z - info: Using extension browser-client@2.2.2
+2020-08-04T16:40:12.377Z - info: Using extension child-templates@1.4.0
+2020-08-04T16:40:12.406Z - info: Using extension chrome-pdf@1.8.0
+2020-08-04T16:40:13.222Z - info: Using extension data@2.3.0
+2020-08-04T16:40:13.234Z - info: Using extension docx@2.7.0
+2020-08-04T16:40:13.265Z - info: Using extension fs-store@2.8.0
+2020-08-04T16:40:14.351Z - info: Using extension licensing@2.2.2
+2020-08-04T16:40:14.373Z - info: Using extension pdf-utils@1.8.0
+2020-08-04T16:40:15.076Z - info: Using extension pptx@0.7.0
+2020-08-04T16:40:15.103Z - info: Using extension reports@2.4.0
+2020-08-04T16:40:15.127Z - info: Using extension static-pdf@0.4.0
+2020-08-04T16:40:15.160Z - info: Using extension studio@2.9.0
+2020-08-04T16:40:15.567Z - info: Using extension text@2.0.0
+2020-08-04T16:40:15.595Z - info: Using extension version-control@1.5.0
+2020-08-04T16:40:16.436Z - info: Using extension assets@1.6.0
+2020-08-04T16:40:16.520Z - info: Using extension html-to-xlsx@2.7.0
+2020-08-04T16:40:19.909Z - info: html-to-xlsx detected chrome as available html engine
+2020-08-04T16:40:19.910Z - info: Using extension scheduling@2.4.0
+2020-08-04T16:40:20.071Z - info: Using extension scripts@2.5.0
+2020-08-04T16:40:20.084Z - info: Using extension studio-theme-dark@0.3.0
+2020-08-04T16:40:20.102Z - info: Using extension xlsx@2.4.0
+2020-08-04T16:40:21.660Z - info: Using extension public-templates@2.1.0
+2020-08-04T16:40:21.679Z - info: Using extension resources@2.1.0
+2020-08-04T16:40:21.690Z - info: Using extension sample-template@2.5.1
+2020-08-04T16:40:21.704Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2020-08-04T16:40:21.705Z - info: Using fs provider for template store.
+2020-08-04T16:40:21.718Z - info: fs store is persisting using fs
+2020-08-04T16:40:21.720Z - info: fs store is synchronizing using fs
+2020-08-04T16:40:21.744Z - info: fs store is loading data
+2020-08-04T16:40:21.920Z - info: fs store is initialized successfully
+2020-08-04T16:40:21.950Z - info: Creating default express app.
+2020-08-04T16:40:22.576Z - info: jsreport server successfully started on http port: 8000
+2020-08-04T16:40:22.595Z - info: fs store emits sockets to synchronize underlying changes with studio
+2020-08-04T16:40:22.828Z - info: Verifying license key free
+2020-08-04T16:40:22.838Z - info: Using free license
+2020-08-04T16:40:22.851Z - info: reporter initialized
+2020-08-04T16:40:54.998Z - info: Starting rendering request 1 (user: null)
+2020-08-04T16:40:55.011Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T16:41:05.250Z - info: Rendering request 1 finished in 10252 ms
+2020-08-04T16:48:12.756Z - info: Starting rendering request 2 (user: null)
+2020-08-04T16:48:12.771Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T16:48:13.400Z - info: Rendering request 2 finished in 644 ms
+2020-08-04T16:48:31.328Z - info: Starting rendering request 3 (user: null)
+2020-08-04T16:48:31.341Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T16:48:32.041Z - info: Rendering request 3 finished in 713 ms
+2020-08-04T16:56:13.941Z - info: Starting rendering request 4 (user: null)
+2020-08-04T16:56:13.961Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T16:56:14.649Z - info: Rendering request 4 finished in 709 ms
+2020-08-04T16:57:48.191Z - info: Starting rendering request 5 (user: null)
+2020-08-04T16:57:48.205Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T16:57:48.965Z - info: Rendering request 5 finished in 774 ms
+2020-08-04T16:58:35.674Z - info: Starting rendering request 6 (user: null)
+2020-08-04T16:58:35.686Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T16:58:36.378Z - info: Rendering request 6 finished in 704 ms
+2020-08-04T16:58:57.719Z - info: Starting rendering request 7 (user: null)
+2020-08-04T16:58:57.731Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T16:58:58.533Z - info: Rendering request 7 finished in 814 ms
+2020-08-04T16:59:15.806Z - info: Starting rendering request 8 (user: null)
+2020-08-04T16:59:15.821Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T16:59:16.440Z - info: Rendering request 8 finished in 635 ms
+2020-08-04T16:59:21.497Z - info: Starting rendering request 9 (user: null)
+2020-08-04T16:59:21.509Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T16:59:22.271Z - info: Rendering request 9 finished in 773 ms
+2020-08-04T17:16:28.750Z - info: Starting rendering request 10 (user: null)
+2020-08-04T17:16:28.752Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:16:29.477Z - info: Rendering request 10 finished in 728 ms
+2020-08-04T17:21:27.168Z - info: Starting rendering request 11 (user: null)
+2020-08-04T17:21:27.169Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:21:28.124Z - info: Rendering request 11 finished in 956 ms
+2020-08-04T17:22:33.045Z - info: Starting rendering request 12 (user: null)
+2020-08-04T17:22:33.058Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:22:33.781Z - info: Rendering request 12 finished in 737 ms
+2020-08-04T17:41:14.669Z - info: Starting rendering request 13 (user: null)
+2020-08-04T17:41:14.684Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:41:14.734Z - info: Starting rendering request 14 (user: null)
+2020-08-04T17:41:14.736Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:41:15.524Z - info: Rendering request 13 finished in 855 ms
+2020-08-04T17:41:15.693Z - info: Rendering request 14 finished in 961 ms
+2020-08-04T17:47:08.844Z - info: Starting rendering request 15 (user: null)
+2020-08-04T17:47:08.861Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:47:09.549Z - info: Rendering request 15 finished in 704 ms
+2020-08-04T17:47:23.643Z - info: Starting rendering request 16 (user: null)
+2020-08-04T17:47:23.655Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:47:24.412Z - info: Rendering request 16 finished in 770 ms
+2020-08-04T17:49:50.275Z - info: Starting rendering request 17 (user: null)
+2020-08-04T17:49:50.277Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:49:51.081Z - info: Rendering request 17 finished in 806 ms
+2020-08-04T17:50:04.955Z - info: Starting rendering request 18 (user: null)
+2020-08-04T17:50:04.969Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:50:05.676Z - info: Rendering request 18 finished in 720 ms
+2020-08-04T17:50:22.002Z - info: Starting rendering request 19 (user: null)
+2020-08-04T17:50:22.004Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:50:22.946Z - info: Rendering request 19 finished in 944 ms
+2020-08-04T17:50:35.773Z - info: Starting rendering request 20 (user: null)
+2020-08-04T17:50:35.785Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:50:36.591Z - info: Rendering request 20 finished in 818 ms
+2020-08-04T17:50:56.949Z - info: Starting rendering request 21 (user: null)
+2020-08-04T17:50:56.961Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:50:57.670Z - info: Rendering request 21 finished in 721 ms
+2020-08-04T17:51:26.699Z - info: Starting rendering request 22 (user: null)
+2020-08-04T17:51:26.714Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:51:27.401Z - info: Rendering request 22 finished in 703 ms
+2020-08-04T17:51:40.146Z - info: Starting rendering request 23 (user: null)
+2020-08-04T17:51:40.161Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:51:40.848Z - info: Rendering request 23 finished in 701 ms
+2020-08-04T17:53:39.280Z - info: Starting rendering request 24 (user: null)
+2020-08-04T17:53:39.295Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:53:40.071Z - info: Rendering request 24 finished in 791 ms
+2020-08-04T17:57:40.073Z - info: Starting rendering request 25 (user: null)
+2020-08-04T17:57:40.088Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:57:40.817Z - info: Rendering request 25 finished in 745 ms
+2020-08-04T17:57:47.934Z - info: Starting rendering request 26 (user: null)
+2020-08-04T17:57:47.946Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T17:57:48.615Z - info: Rendering request 26 finished in 682 ms
+2020-08-04T18:01:42.557Z - info: Starting rendering request 27 (user: null)
+2020-08-04T18:01:42.558Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T18:01:43.317Z - info: Rendering request 27 finished in 761 ms
+2020-08-04T18:04:11.744Z - info: Starting rendering request 28 (user: null)
+2020-08-04T18:04:11.745Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T18:04:12.508Z - info: Rendering request 28 finished in 765 ms
+2020-08-04T18:04:28.170Z - info: Starting rendering request 29 (user: null)
+2020-08-04T18:04:28.171Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T18:04:28.952Z - info: Rendering request 29 finished in 783 ms
+2020-08-04T18:04:44.494Z - info: Starting rendering request 30 (user: null)
+2020-08-04T18:04:44.496Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T18:04:45.251Z - info: Rendering request 30 finished in 756 ms
+2020-08-04T18:05:06.021Z - info: Starting rendering request 31 (user: null)
+2020-08-04T18:05:06.022Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T18:05:06.732Z - info: Rendering request 31 finished in 712 ms
+2020-08-04T18:08:39.517Z - info: Starting rendering request 32 (user: null)
+2020-08-04T18:08:39.518Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T18:08:40.215Z - info: Rendering request 32 finished in 698 ms
+2020-08-04T18:10:55.184Z - info: Starting rendering request 33 (user: null)
+2020-08-04T18:10:55.185Z - info: Rendering template { name: carta, recipe: chrome-pdf, engine: handlebars, preview: true }
+2020-08-04T18:10:55.966Z - info: Rendering request 33 finished in 782 ms
