@@ -16,5 +16,7 @@ router.post("/nueva", auth, crearCategoria)
 // // Update
 router.put("/actualizar", auth, actualizarCategoria)
 
+router.delete("/eliminar/:id_categoria", middleware, eliminarCategoria)
+
 
 module.exports = router
