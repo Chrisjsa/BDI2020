@@ -1,5 +1,10 @@
 const { connection } = require("../database")
-const { LEER_CATEGORIAS, CREAR_CATEGORIAS, ELIMINAR_CATEGORIAS, ACTUALIZAR_CATEGORIAS } = require("../sql/categoriasQueries")
+const {
+  LEER_CATEGORIAS,
+  CREAR_CATEGORIAS,
+  ELIMINAR_CATEGORIAS,
+  ACTUALIZAR_CATEGORIAS,
+} = require("../sql/categoriasQueries")
 
 exports.leerCategoria = (req, res) => {
   connection.query(LEER_CATEGORIAS, (error, rows, fields) => {
@@ -10,7 +15,7 @@ exports.leerCategoria = (req, res) => {
       name: field.name,
       selector: field.name,
     }))
-    return res.json( rows, columns )
+    return res.json({ rows, columns })
   })
 }
 
@@ -24,10 +29,9 @@ exports.crearCategoria = (req, res) => {
       name: field.name,
       selector: field.name,
     }))
-    return res.json( rows, columns )
+    return res.json(rows, columns)
   })
 }
-
 
 exports.actualizarCategoria = (req, res) => {
   connection.query(ACTUALIZAR_CATEGORIAS, (error, rows, fields) => {
@@ -38,7 +42,7 @@ exports.actualizarCategoria = (req, res) => {
       name: field.name,
       selector: field.name,
     }))
-    return res.json( rows, columns )
+    return res.json(rows, columns)
   })
 }
 
@@ -51,6 +55,6 @@ exports.eliminarCategoria = (req, res) => {
       name: field.name,
       selector: field.name,
     }))
-    return res.json( rows, columns )
+    return res.json(rows, columns)
   })
 }

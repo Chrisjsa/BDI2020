@@ -1,0 +1,4 @@
+export const CREATE_FORM = "CREATE_FORM"
+export const ON_CHANGE_FORM = "ON_CHANGE_FORM"
+export const CREATE_FIELD = "CREATE_FIELD"
+export const ON_SUBMIT_FORM = "ON_SUBMIT_FORM"

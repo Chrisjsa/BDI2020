@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { Provider } from "react-redux"
 import store from "./store"
 
+import { Container } from "react-bootstrap"
+
 import LandingPage from "./components/pages/LandingPage"
 import AboutPage from "./components/pages/AboutPage"
 import DashboardPage from "./components/pages/DashboardPage"
@@ -25,6 +27,10 @@ import PrivateRoute from "./components/routing/PrivateRoute"
 
 import setAuthToken from "./utils/setAuthToken"
 
+import Test from "./components/Test"
+
+import Alerts from "./components/alerts/Alerts"
+
 if (localStorage.token) {
   setAuthToken(localStorage.token)
 }
@@ -35,12 +41,17 @@ const App = () => {
       <Router>
         <>
           <Navigation />
+          <Container>
+            <Alerts />
+          </Container>
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/about" component={AboutPage} />
 
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/register" component={Register} />
+
+            <Route exact path="/test" component={Test} />
 
             <PrivateRoute exact path="/dashboard" component={DashboardPage} />
             <PrivateRoute exact path="/crud_notaria" component={CrudNotaria} />

@@ -18,6 +18,8 @@ import {
   leerParroquia,
 } from "../../state/lugar/lugarActions"
 
+import { setAlert } from "../../state/alert/alertActions"
+
 import LugarFields from "../lugares/LugarFields"
 
 // Inicio del componente
@@ -27,16 +29,11 @@ const NotariaForm = ({
   updateNotaria,
   readNotarias,
   crearNotaria,
-  lugares,
-  leerEstado,
-  leerMunicipio,
-  leerParroquia,
   eleminarNotaria,
+  lugares,
+  setAlert,
 }) => {
   const initialState = {
-    // estado: "",
-    // municipio: "",
-    // parroquia: "",
     nombre: "",
     notario: "",
     telefono: "",
@@ -44,41 +41,18 @@ const NotariaForm = ({
     longitud: "",
   }
 
-  // const { estados, municipios, parroquias } = lugares
-
   const [notaria, setNotaria] = useState(initialState)
 
   const isNotariaEmpty = Object.values(notaria).some(value => value === "")
 
   useEffect(() => {
-    leerEstado()
-
     if (!currentNotaria) setNotaria(initialState)
     else setNotaria({ ...notaria, ...currentNotaria })
 
     // eslint-disable-next-line
   }, [currentNotaria])
 
-  const {
-    // estado,
-    // municipio,
-    // parroquia,
-    nombre,
-    notario,
-    telefono,
-    latitud,
-    longitud,
-  } = notaria
-
-  // useEffect(() => {
-  //   console.log(estado)
-  //   leerMunicipio(estado) // estado = id_estado
-  // }, [estado])
-
-  // useEffect(() => {
-  //   console.log(municipio)
-  //   leerParroquia(municipio) // municipio = id_municipio
-  // }, [municipio])
+  const { nombre, notario, telefono, latitud, longitud } = notaria
 
   const onChange = event => {
     setNotaria({
@@ -97,6 +71,7 @@ const NotariaForm = ({
   }
 
   const handleUpdate = () => {
+    setAlert("Notaria actualizada", "success")
     updateNotaria(notaria)
     clearForm()
   }
@@ -116,71 +91,6 @@ const NotariaForm = ({
       <h2>Insertar notaria</h2>
       <Form>
         <LugarFields currentData={currentNotaria} />
-        {/* <Form.Row>
-          <Form.Group as={Col}>
-            <Form.Label>Estado</Form.Label>
-            <Form.Control
-              as="select"
-              defaultValue="Seleccionar..."
-              name="estado"
-              value={estado}
-              onChange={onChange}
-              disabled={currentNotaria}
-            >
-              <option>Seleccionar...</option>
-              {estados.length >= 0 &&
-                estados.map(estado => (
-                  <option key={estado.id_estado} value={estado.id_estado}>
-                    {estado.nombre}
-                  </option>
-                ))}
-            </Form.Control>
-          </Form.Group>
-          <Form.Group as={Col}>
-            <Form.Label>Municipio</Form.Label>
-            <Form.Control
-              as="select"
-              defaultValue="Seleccionar..."
-              name="municipio"
-              value={municipio}
-              onChange={onChange}
-              disabled={currentNotaria}
-            >
-              <option>Seleccionar...</option>
-              {municipios.length >= 0 &&
-                municipios.map(municipio => (
-                  <option
-                    key={municipio.id_municipio}
-                    value={municipio.id_municipio}
-                  >
-                    {municipio.nombre}
-                  </option>
-                ))}
-            </Form.Control>
-          </Form.Group>
-          <Form.Group as={Col}>
-            <Form.Label>Parroquia</Form.Label>
-            <Form.Control
-              as="select"
-              defaultValue="Seleccionar..."
-              name="parroquia"
-              value={parroquia}
-              onChange={onChange}
-              disabled={currentNotaria}
-            >
-              <option>Seleccionar...</option>
-              {parroquias.length >= 0 &&
-                parroquias.map(parroquia => (
-                  <option
-                    key={parroquia.id_parroquia}
-                    value={parroquia.id_parroquia}
-                  >
-                    {parroquia.nombre}
-                  </option>
-                ))}
-            </Form.Control>
-          </Form.Group>
-        </Form.Row> */}
 
         <Form.Row>
           <Form.Group as={Col}>
@@ -279,4 +189,5 @@ export default connect(mapStateToProps, {
   leerParroquia,
   crearNotaria,
   eleminarNotaria,
+  setAlert,
 })(NotariaForm)
