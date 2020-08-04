@@ -4,9 +4,11 @@ import {
   READ_ESTADO,
   LEER_MUNICIPIO,
   LEER_PARROQUIA,
+  SET_CURRENT_ESTADO,
+  SET_CURRENT_MUNICIPIO,
+  SET_CURRENT_PARROQUIA,
 } from "./lugarTypes"
 import axios from "axios"
-import setAuthToken from "../../utils/setAuthToken"
 
 const config = { headers: { "Content-Type": "application/json" } }
 
@@ -46,6 +48,33 @@ export const leerParroquia = idParroquia => async dispatch => {
       config
     )
     dispatch({ type: LEER_PARROQUIA, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_LUGAR, payload: error.response.msg })
+  }
+}
+
+export const setCurrentEstado = idEstado => dispatch => {
+  setLoading()(dispatch)
+  try {
+    dispatch({ type: SET_CURRENT_ESTADO, payload: idEstado })
+  } catch (error) {
+    dispatch({ type: ERROR_LUGAR, payload: error.response.msg })
+  }
+}
+
+export const setCurrentMunicipio = idMunicipio => dispatch => {
+  setLoading()(dispatch)
+  try {
+    dispatch({ type: SET_CURRENT_MUNICIPIO, payload: idMunicipio })
+  } catch (error) {
+    dispatch({ type: ERROR_LUGAR, payload: error.response.msg })
+  }
+}
+
+export const setCurrentParroquia = idParroquia => dispatch => {
+  setLoading()(dispatch)
+  try {
+    dispatch({ type: SET_CURRENT_PARROQUIA, payload: idParroquia })
   } catch (error) {
     dispatch({ type: ERROR_LUGAR, payload: error.response.msg })
   }

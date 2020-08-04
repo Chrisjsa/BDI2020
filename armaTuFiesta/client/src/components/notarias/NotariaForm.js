@@ -18,7 +18,7 @@ import {
   leerParroquia,
 } from "../../state/lugar/lugarActions"
 
-import LugarFields from "../layout/LugarFields"
+import LugarFields from "../lugares/LugarFields"
 
 // Inicio del componente
 const NotariaForm = ({
@@ -112,7 +112,8 @@ const NotariaForm = ({
     <>
       <h2>Insertar notaria</h2>
       <Form>
-        <Form.Row>
+        <LugarFields />
+        {/* <Form.Row>
           <Form.Group as={Col}>
             <Form.Label>Estado</Form.Label>
             <Form.Control
@@ -131,8 +132,7 @@ const NotariaForm = ({
                   </option>
                 ))}
             </Form.Control>
-          </Form.Group>{" "}
-          */
+          </Form.Group>
           <Form.Group as={Col}>
             <Form.Label>Municipio</Form.Label>
             <Form.Control
@@ -177,7 +177,7 @@ const NotariaForm = ({
                 ))}
             </Form.Control>
           </Form.Group>
-        </Form.Row>
+        </Form.Row> */}
 
         <Form.Row>
           <Form.Group as={Col}>
