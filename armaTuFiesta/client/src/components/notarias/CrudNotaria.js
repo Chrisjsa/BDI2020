@@ -7,6 +7,7 @@ import { readNotarias } from "../../state/notaria/notariaActions"
 import NotariaForm from "./NotariaForm"
 
 import Map from "../layout/Map"
+
 import Crud from "../layout/Crud"
 
 const CrudNotaria = ({
