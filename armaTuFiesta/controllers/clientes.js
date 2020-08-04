@@ -28,12 +28,8 @@ exports.crearCliente = (req, res) => {
       return res.status(400).send(error.message)
     }
 
-    columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
 
-    return res.json({ rows, columns })
+    return res.json( rows )
   })
 }
 
@@ -43,12 +39,9 @@ exports.crearOtroUsuario = (req, res) => {
       return res.status(400).send(error.message)
     }
 
-    columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
+    
 
-    return res.json({ rows, columns })
+    return res.json( rows )
   })
 }
 
@@ -58,12 +51,8 @@ exports.actualizarCliente = (req, res) => {
       return res.status(400).send(error.message)
     }
 
-    columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
 
-    return res.json({ rows, columns })
+    return res.json( rows )
   })
 }
 
@@ -73,11 +62,7 @@ exports.eliminarCliente = (req, res) => {
       return res.status(400).send(error.message)
     }
 
-    columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
-
-    return res.json({ rows, columns })
+    
+    return res.json( rows )
   })
 }
