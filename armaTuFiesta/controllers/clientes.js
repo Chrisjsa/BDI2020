@@ -1,5 +1,5 @@
 const { connection } = require("../database")
-const { LEER_CLIENTES, ACTUALIZAR_CLIENTES, CREAR_CLIENTES, ELIMINAR_CLIENTES } = require("../sql/clientesQueries")
+const { LEER_CLIENTES, ACTUALIZAR_CLIENTES, CREAR_CLIENTES, ELIMINAR_CLIENTES, CREAR_OTROS_USUARIOS } = require("../sql/clientesQueries")
 
 exports.leerCliente = (req, res) => {
   connection.query(LEER_CLIENTES, (error, rows) => {
@@ -19,6 +19,15 @@ exports.crearCliente = (req, res) => {
   })
 }
 
+
+exports.crearOtroUsuario = (req, res) => {
+  connection.query(CREAR_OTROS_USUARIOS, (error, rows) => {
+    if (error) {
+      return res.status(400).send(error.message)
+    }
+    return res.json( rows )
+  })
+}
 
 exports.actualizarCliente = (req, res) => {
   connection.query(ACTUALIZAR_CLIENTES, (error, rows) => {
