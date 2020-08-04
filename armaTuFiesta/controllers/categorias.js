@@ -20,41 +20,30 @@ exports.leerCategoria = (req, res) => {
 }
 
 exports.crearCategoria = (req, res) => {
-  connection.query(CREAR_CATEGORIAS, (error, rows, fields) => {
+  connection.query(CREAR_CATEGORIAS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
 
-    columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
-    return res.json(rows, columns)
+    return res.json(rows)
   })
 }
 
 exports.actualizarCategoria = (req, res) => {
-  connection.query(ACTUALIZAR_CATEGORIAS, (error, rows, fields) => {
+  connection.query(ACTUALIZAR_CATEGORIAS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
-    return res.json(rows, columns)
+
+    return res.json(rows)
   })
 }
 
 exports.eliminarCategoria = (req, res) => {
-  connection.query(ELIMINAR_CATEGORIAS, (error, rows, fields) => {
+  connection.query(ELIMINAR_CATEGORIAS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    columns = fields.map(field => ({
-      name: field.name,
-      selector: field.name,
-    }))
-    return res.json(rows, columns)
+    return res.json(rows)
   })
 }
