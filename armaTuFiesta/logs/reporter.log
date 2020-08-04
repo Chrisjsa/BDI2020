@@ -2893,3 +2893,6 @@
 2020-08-03T21:07:41.436Z - info: Using free license
 2020-08-03T21:07:41.458Z - info: reporter initialized
 >>>>>>> 657ee0db447209566bb3e2194642f717b3052e4e
+2020-08-04T16:34:22.889Z - info: Initializing jsreport@2.9.0 in development mode using configuration file: jsreport.config.json
+2020-08-04T16:34:22.901Z - info: Searching for available extensions in C:\Users\winkler\Desktop\Bases de datos\BDI2020\armaTuFiesta\
+2020-08-04T16:34:22.996Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\winkler\Desktop\Bases de datos\BDI2020\armaTuFiesta\
