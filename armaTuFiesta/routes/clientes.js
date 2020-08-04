@@ -13,7 +13,7 @@ const {
 } = require("../controllers/clientes")
 
 // Read
-router.get("/", auth, leerClientes)
+router.get("/", auth, leerCliente)
 
 // // Create
 router.post("/nueva", middleware, crearCliente)
