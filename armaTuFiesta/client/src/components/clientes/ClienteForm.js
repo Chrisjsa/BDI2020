@@ -119,6 +119,18 @@ let ClienteForm = ({
         </Form.Row>
 
         <Form.Row>
+
+        <Form.Group as={Col}>
+            <Form.Label>Cedula</Form.Label>
+            <Field
+              className="form-control"
+              name="cedula"
+              component="input"
+              type="text"
+            />
+          </Form.Group>
+
+
           <Form.Group as={Col}>
             <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
             <DatePicker
@@ -129,26 +141,6 @@ let ClienteForm = ({
               showYearDropdown
               className="form-control"
               dropdownMode="select"
-            />
-          </Form.Group>
-
-          <Form.Group as={Col}>
-            <Form.Label>Correo Electronico</Form.Label>
-            <Field
-              className="form-control"
-              name="correo"
-              component="input"
-              type="text"
-            />
-          </Form.Group>
-
-          <Form.Group as={Col}>
-            <Form.Label>Telefono</Form.Label>
-            <Field
-              className="form-control"
-              name="telefono"
-              component="input"
-              type="text"
             />
           </Form.Group>
 
@@ -170,7 +162,29 @@ let ClienteForm = ({
           </Form.Group>
         </Form.Row>
         <Form.Row>
-          <fieldset>
+
+        <Form.Group as={Col}>
+            <Form.Label>Correo Electronico</Form.Label>
+            <Field
+              className="form-control"
+              name="correo"
+              component="input"
+              type="text"
+            />
+          </Form.Group>
+
+          <Form.Group as={Col}>
+            <Form.Label>Telefono</Form.Label>
+            <Field
+              className="form-control"
+              name="telefono"
+              component="input"
+              type="text"
+            />
+          </Form.Group>
+        </Form.Row>
+        
+        <fieldset>
             <Form.Group>
               <Form.Label className="mr-3">Sex</Form.Label>
               <Form.Check
@@ -193,7 +207,6 @@ let ClienteForm = ({
               />
             </Form.Group>
           </fieldset>
-        </Form.Row>
 
         <div className="text-center">
           {currentCliente ? (
