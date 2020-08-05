@@ -7,8 +7,8 @@ import notariaReducer from "./notaria/notariaReducer"
 import cartaReducer from "./carta/cartaReducer"
 import lugarReducer from "./lugar/lugarReducer"
 import clienteReducer from "./cliente/clienteReducer"
-// import formReducer from "./form/formReducer"
 import alertReducer from "./alert/alertReducer"
+import tipReducer from "./tip/tipReducer"
 
 export default combineReducers({
   auth: authReducer,
@@ -19,4 +19,5 @@ export default combineReducers({
   clientes: clienteReducer,
   form: formReducer,
   alerts: alertReducer,
+  tips: tipReducer,
 })
