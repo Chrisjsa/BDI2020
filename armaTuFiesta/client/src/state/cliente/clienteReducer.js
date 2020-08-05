@@ -1,4 +1,11 @@
-import { ERROR_CLIENTE, LOADING_CLIENTE, LEER_CLIENTES } from "./clienteTypes"
+import {
+  ERROR_CLIENTE,
+  LOADING_CLIENTE,
+  LEER_CLIENTES,
+  INSERTAR_CLIENTE,
+  ELIMINAR_CLIENTE,
+  ACTUALIZAR_CLIENTE,
+} from "./clienteTypes"
 
 const initialState = {
   loading: false,
@@ -15,6 +22,15 @@ export default (state = initialState, action) => {
 
     case ERROR_CLIENTE:
       return { ...state, loading: false, error: action.payload }
+
+    case INSERTAR_CLIENTE:
+      return { ...state, loading: false }
+
+    case ACTUALIZAR_CLIENTE:
+      return { ...state, loading: false }
+
+    case ELIMINAR_CLIENTE:
+      return { ...state, loading: false }
 
     case LEER_CLIENTES:
       return {

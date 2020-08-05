@@ -9,19 +9,15 @@ import {
   SET_CURRENT_PARROQUIA,
 } from "./lugarTypes"
 
-const initialLugar = {
-  currentEstado: undefined,
-  currentMunicipio: undefined,
-  currentParroquia: undefined,
-}
-
 const initialState = {
   loading: false,
   error: null,
   estados: [],
   municipios: [],
   parroquias: [],
-  lugar: initialLugar,
+  currentEstado: undefined,
+  currentMunicipio: undefined,
+  currentParroquia: undefined,
 }
 
 export default (state = initialState, action) => {

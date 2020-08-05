@@ -16,7 +16,7 @@ const {
 router.get("/", auth, leerCliente)
 
 // // Create
-router.post("/nueva", middleware, crearCliente)
+router.post("/nuevo", middleware, crearCliente)
 
 //Create de otros usuarios
 // router.post("/agregarOtro", middleware, crearOtroUsuario)
