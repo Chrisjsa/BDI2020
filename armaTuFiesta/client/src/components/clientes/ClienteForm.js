@@ -6,10 +6,12 @@ import { connect } from "react-redux"
 
 import { onChangeForm } from "../../state/form/formActions"
 
+import LugarFields from "../lugares/LugarFields"
+
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 
-const ClienteForm = ({ form, onChangeForm }) => {
+const ClienteForm = ({ form, onChangeForm, currentCliente }) => {
   const field = (label, name, placeholder, type) => {
     return (
       <Form.Group as={Col}>
@@ -47,6 +49,9 @@ const ClienteForm = ({ form, onChangeForm }) => {
       <h1>Insert Cliente</h1>
       <Form>
         <Form.Row>
+          <LugarFields currentData={currentCliente} />
+        </Form.Row>
+        <Form.Row>
           {field("Nombre", "p_nombre", "Inserte nombre", "text")}
           {field("Segundo nombre", "s_nombre", "...", "text")}
           {datePicker("Fecha de nacimiento", "fecha_nacimiento")}
@@ -63,6 +68,7 @@ const ClienteForm = ({ form, onChangeForm }) => {
 
 const mapStateToProps = state => ({
   form: state.forms,
+  currentCliente: state.clientes.currentCliente,
 })
 
 export default connect(mapStateToProps, { onChangeForm })(ClienteForm)
