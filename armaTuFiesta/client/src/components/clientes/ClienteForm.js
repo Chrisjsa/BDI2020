@@ -138,6 +138,23 @@ let ClienteForm = ({
               type="text"
             />
           </Form.Group>
+
+          <Form.Group as={Col}>
+            <Form.Label>Estado civil</Form.Label>
+            <Form.Control
+              as="select"
+              defaultValue="Seleccionar..."
+              name="estadoCivil"
+              value={estadoCivil}
+              onChange={e => setEstadoCivil(e.target.value)}
+            >
+              <option>Seleccionar...</option>
+              <option value="Soltero">Soltero</option>
+              <option value="Casado">Casado</option>
+              <option value="Divorciado">Divorciado</option>
+              <option value="Viudo">Viudo</option>
+            </Form.Control>
+          </Form.Group>
         </Form.Row>
         <Form.Row>
           <fieldset>
@@ -163,23 +180,6 @@ let ClienteForm = ({
               />
             </Form.Group>
           </fieldset>
-
-          <Form.Group as={Col}>
-            <Form.Label>Estado civil</Form.Label>
-            <Form.Control
-              as="select"
-              defaultValue="Seleccionar..."
-              name="estadoCivil"
-              value={estadoCivil}
-              onChange={e => setEstadoCivil(e.target.value)}
-            >
-              <option>Seleccionar...</option>
-              <option value="Soltero">Soltero</option>
-              <option value="Casado">Casado</option>
-              <option value="Divorciado">Divorciado</option>
-              <option value="Viudo">Viudo</option>
-            </Form.Control>
-          </Form.Group>
         </Form.Row>
 
         <div className="text-center">
