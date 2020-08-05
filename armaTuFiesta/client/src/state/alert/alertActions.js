@@ -11,9 +11,12 @@ export const setLoading = () => dispatch => {
   return dispatch({ type: LOADING_ALERT })
 }
 
-export const setAlert = alert => dispatch => {
-  const payload = alert
-  payload.id = uuidv4()
+export const setAlert = (text, variant) => dispatch => {
+  const payload = {
+    id: uuidv4(),
+    text,
+    variant,
+  }
 
   dispatch({ type: SET_ALERT, payload })
 

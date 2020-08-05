@@ -2,7 +2,7 @@ import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING_AUTH } from "./authTypes"
 
 const initialState = {
   loading: false,
-  error: null,
+  error: undefined,
   isAuthenticated: false,
   token: localStorage.getItem("token"),
   user: null,
@@ -37,7 +37,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: action.paylaod,
+        error: action.payload,
       }
 
     case LOGOUT:

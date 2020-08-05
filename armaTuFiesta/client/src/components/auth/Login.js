@@ -8,7 +8,9 @@ import { login } from "../../state/auth/authActions"
 import { connect } from "react-redux"
 import useForm from "../../hooks/useForm"
 
-const Login = ({ history, login, isAuthenticated }) => {
+import { setAlert } from "../../state/alert/alertActions"
+
+const Login = ({ history, login, isAuthenticated, error }) => {
   useEffect(() => {
     if (isAuthenticated)
       setTimeout(() => {
@@ -72,6 +74,7 @@ const Login = ({ history, login, isAuthenticated }) => {
 
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated,
+  error: state.auth.error,
 })
 
-export default withRouter(connect(mapStateToProps, { login })(Login))
+export default withRouter(connect(mapStateToProps, { login, setAlert })(Login))

@@ -77,11 +77,13 @@ const NotariaForm = ({
   }
 
   const handleCreate = () => {
+    setAlert("Notaria agregada", "success")
     crearNotaria(notaria)
     clearForm()
   }
 
   const handleDelete = () => {
+    setAlert("Notaria eliminada", "warning")
     eleminarNotaria(notaria)
     clearForm()
   }
