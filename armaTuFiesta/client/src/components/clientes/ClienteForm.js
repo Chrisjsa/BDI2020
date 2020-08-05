@@ -40,7 +40,7 @@ const ClienteForm = ({ form, onChangeForm }) => {
     </Form.Group>
   )
 
-  const { p_nombre, s_nombre, a_apellido, s_apellido } = form
+  const { p_nombre, s_nombre, p_apellido, s_apellido, cedula, correo, sexo, estadoCivil } = form
 
   return (
     <>
@@ -48,14 +48,63 @@ const ClienteForm = ({ form, onChangeForm }) => {
       <Form>
         <Form.Row>
           {field("Nombre", "p_nombre", "Inserte nombre", "text")}
-          {field("Segundo nombre", "s_nombre", "...", "text")}
+          {field("Segundo nombre", "s_nombre", "Inserte segundo nombre", "text")}
           {datePicker("Fecha de nacimiento", "fecha_nacimiento")}
         </Form.Row>
 
         <Form.Row>
-          {field("Apellido", "a_apellido", "...", "text")}
-          {field("Segundo apellido", "s_apellido", "...", "text")}
+          {field("Apellido", "p_apellido", "Inserte apellido", "text")}
+          {field("Segundo apellido", "s_apellido", "Inserte segundo apellido", "text")}
+          {field("Correo electronico", "correo", "Inserte correo electronico", "text")}
         </Form.Row>
+
+        <Form.Row>
+          {field("Telefono", "telefono", "Inserte telefono", "text")}
+
+          <Form.Group as={Col}>
+          <Form.Label>Estado civil</Form.Label>
+          <Form.Control
+            as="select"
+            defaultValue="Seleccionar..."
+            name="estadoCivil"
+            value={estadoCivil}
+            onChange={onChangeForm}
+          >
+            <option>Seleccionar...</option>
+            <option value="Soltero">Soltero</option>
+            <option value="Casado">Casado</option>
+            <option value="Divorciado">Divorciado</option>
+            <option value="Viudo">Viudo</option>
+          </Form.Control>
+        </Form.Group>
+
+        </Form.Row>
+
+        <Form.Row>
+        <fieldset>
+          <Form.Group>
+            <Form.Label className="mr-3">Sex</Form.Label>
+            <Form.Check
+              inline
+              type="radio"
+              label="M"
+              name="sexo"
+              value="Masculino"
+              onChange={onChangeForm}
+              checked={sexo === "Masculino"}
+            />
+            <Form.Check
+              inline
+              type="radio"
+              label="F"
+              name="sexo"
+              value="Femenino"
+              onChange={onChangeForm}
+              checked={sexo === "Femenino"}
+            />
+          </Form.Group>
+        </fieldset>
+      </Form.Row>
       </Form>
     </>
   )
