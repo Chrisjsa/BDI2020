@@ -31,6 +31,8 @@ let ClienteForm = ({
   clientes,
   currentCliente,
   currentEstado,
+  currentMunicipio,
+  currentParroquia,
   formValues,
 }) => {
   const clearForm = () => {}
@@ -44,6 +46,8 @@ let ClienteForm = ({
       estadoCivil,
       fecha_nacimiento: fechaNacimiento,
       estado: currentEstado,
+      municipio: currentMunicipio,
+      parroquia: currentParroquia,
     })
   }
 
@@ -218,6 +222,8 @@ const mapStateToProps = state => ({
   clientes: state.clientes.clientes,
   currentCliente: state.clientes.currentCliente,
   currentEstado: state.lugares.currentEstado,
+  currentMunicipio: state.lugares.currentMunicipio,
+  currentParroquia: state.lugares.currentParroquia,
 })
 
 export default connect(mapStateToProps, mapActionsToProps)(ClienteForm)

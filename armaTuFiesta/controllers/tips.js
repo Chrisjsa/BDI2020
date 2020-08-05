@@ -1,8 +1,8 @@
 const { connection } = require("../database")
-const {  } = require("../sql/tipsQueries")
+const { LEER_TIPS, ACTUALIZAR_TIPS, ELIMINAR_TIPS, CREAR_TIPS } = require("../sql/tipsQueries")
 
 exports.leerTip = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(LEER_TIPS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -11,7 +11,7 @@ exports.leerTip = (req, res) => {
 }
 
 exports.crearTip = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(CREAR_TIPS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -21,7 +21,7 @@ exports.crearTip = (req, res) => {
 
 
 exports.actualizarTip = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(ACTUALIZAR_TIPS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -30,7 +30,7 @@ exports.actualizarTip = (req, res) => {
 }
 
 exports.eliminarTip = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(ELIMINAR_TIPS, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
