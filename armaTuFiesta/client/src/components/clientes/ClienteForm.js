@@ -1,34 +1,51 @@
-import React, { useState } from "react"
-
-import { Field, reduxForm, getFormValues } from "redux-form"
+import React, { useState, useEffect } from "react"
+import moment from "moment"
+import { connect } from "react-redux"
+import { Field, reduxForm, getFormValues, change, reset } from "redux-form"
 
 import { Form, Col, Button } from "react-bootstrap"
-
 import DatePicker from "react-datepicker"
-
 import "react-datepicker/dist/react-datepicker.css"
 
 import LugarFields from "../lugares/LugarFields"
 
-import { connect } from "react-redux"
-
+import { changeFormByObject, clearFormByObject } from "../../utils/index"
 import {
   insertarCliente,
   actualizarCliente,
   eliminarCliente,
+  setCurrentCliente,
 } from "../../state/cliente/clienteActions"
 
 let ClienteForm = ({
-  insertarCliente,
-  actualizarCliente,
-  eliminarCliente,
-  clientes,
+  setCurrentCliente,
   currentCliente,
   currentEstado,
   currentMunicipio,
   currentParroquia,
   formValues,
+  change,
+  reset,
 }) => {
+  const [fechaNacimiento, setFechaNacimiento] = useState(new Date())
+  const [sexo, setSexo] = useState("Masculino")
+  const [estadoCivil, setEstadoCivil] = useState("")
+
+  useEffect(() => {
+    console.log("use efffect:", currentCliente)
+    if (!currentCliente) {
+      reset("cliente")
+      setSexo("Masculino")
+      setFechaNacimiento(new Date())
+      setEstadoCivil("")
+    } else {
+      changeFormByObject(currentCliente, change)
+      setFechaNacimiento(new Date(currentCliente.fecha_nacimiento))
+      setSexo(currentCliente.sexo)
+      setEstadoCivil(currentCliente.estado_civil)
+    }
+  }, [currentCliente])
+
   const packData = () => ({
     ...formValues,
     sexo,
@@ -39,27 +56,23 @@ let ClienteForm = ({
     parroquia: currentParroquia,
   })
 
-  const clearForm = () => {}
-
-  const handleUpdate = () => {}
+  const handleUpdate = () => {
+    setCurrentCliente(undefined)
+  }
 
   const handleCreate = () => {
     console.log(packData())
+    insertarCliente(packData())
   }
 
-  const handleDelete = () => {}
-
-  const onChange = event => {}
-
-  const [fechaNacimiento, setFechaNacimiento] = useState(new Date())
-
-  const [sexo, setSexo] = useState("Masculino")
-  const [estadoCivil, setEstadoCivil] = useState("")
+  const handleDelete = () => {
+    setCurrentCliente(undefined)
+  }
 
   return (
     <Form>
       <Form className="Row">
-        <LugarFields currentData={false} />
+        <LugarFields currentData={currentCliente} />
 
         <Form.Row>
           <Form.Group as={Col}>
@@ -133,7 +146,7 @@ let ClienteForm = ({
             <Form.Label>Telefono</Form.Label>
             <Field
               className="form-control"
-              name="numero"
+              name="telefono"
               component="input"
               type="text"
             />
@@ -211,6 +224,9 @@ const mapActionsToProps = {
   insertarCliente,
   actualizarCliente,
   eliminarCliente,
+  setCurrentCliente,
+  change,
+  reset,
 }
 
 const mapStateToProps = state => ({
