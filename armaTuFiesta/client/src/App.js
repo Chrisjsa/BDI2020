@@ -14,6 +14,7 @@ import EventDashboard from "./components/pages/EventDashboard"
 
 import CrudNotaria from "./components/notarias/CrudNotaria"
 import CrudCliente from "./components/clientes/CrudCliente"
+import CrudTip from "./components/tips/CrudTip"
 
 import LoginPage from "./components/auth/Login"
 import Register from "./components/auth/Register"
@@ -56,6 +57,7 @@ const App = () => {
             <PrivateRoute exact path="/dashboard" component={DashboardPage} />
             <PrivateRoute exact path="/crud_notaria" component={CrudNotaria} />
             <PrivateRoute exact path="/crud_cliente" component={CrudCliente} />
+            <PrivateRoute exact path="/crud_tip" component={CrudTip} />
             <PrivateRoute
               exact
               path="/carta_solteria"
