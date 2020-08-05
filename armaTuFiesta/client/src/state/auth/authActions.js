@@ -17,7 +17,7 @@ export const login = credentials => async dispatch => {
   } catch (error) {
     dispatch({
       type: ERROR,
-      payload: error.message,
+      payload: error.response.data.msg,
     })
   }
 }
