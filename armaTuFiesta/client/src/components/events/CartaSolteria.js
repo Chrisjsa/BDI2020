@@ -264,7 +264,7 @@ const CartaSolteria = ({ createCarta }) => {
           </Form.Control>
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group as={Col}>
           <p style={{ marginBottom: "0.5rem" }}>From</p>
           <DatePicker
             selected={fechaNacimientoPpc}

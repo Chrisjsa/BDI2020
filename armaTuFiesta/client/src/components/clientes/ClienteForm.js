@@ -1,123 +1,72 @@
-import React from "react"
+import React, { useState } from "react"
+
+import { Field, reduxForm } from "redux-form"
 
 import { Form, Col } from "react-bootstrap"
 
-import { connect } from "react-redux"
-
-import { onChangeForm } from "../../state/form/formActions"
-
-import LugarFields from "../lugares/LugarFields"
-
 import DatePicker from "react-datepicker"
+
 import "react-datepicker/dist/react-datepicker.css"
 
-const ClienteForm = ({ form, onChangeForm, currentCliente }) => {
-  const field = (label, name, placeholder, type) => {
-    return (
-      <Form.Group as={Col}>
-        <Form.Label>{label}</Form.Label>
-        <Form.Control
-          type={type}
-          placeholder={placeholder}
-          name={name}
-          value={form[name]}
-          onChange={onChangeForm}
-        />
-      </Form.Group>
-    )
+// tomas
+// conectar con el estado cliente
+// conectar con acciones
+// agregar botones
+// conectar funcionalidad
+
+// winkler
+// hacer el form con todos sus campos
+// revisar en consola si se envián los valores
+// (presionar enter para enviar valores)
+// agregar el campo de Lugares (<LugarField />)
+
+let ClienteForm = props => {
+  const { handleSubmit } = props
+
+  const onSubmit = formValues => {
+    console.log(formValues) // la consola se abre con CTRL+SHIFT+I
   }
 
-  const datePicker = (label, name, date) => (
-    <Form.Group as={Col}>
-      <p style={{ marginBottom: "0.5rem" }}>{label}</p>
-      <DatePicker
-        selected={date ? date : new Date()}
-        onChange={date => onChangeForm({ target: { name, value: date } })}
-        peekNextMonth
-        showMonthDropdown
-        showYearDropdown
-        className="form-control"
-        dropdownMode="select"
-      />
-    </Form.Group>
-  )
-
-  const { p_nombre, s_nombre, p_apellido, s_apellido, cedula, correo, sexo, estadoCivil } = form
+  // (2) el componente guarda un estado, como una especie de memoria de qué pasa en si mismo
+  const [fechaNacimiento, setFechaNacimiento] = useState(new Date()) // la fecha de hoy
+  // fechaNacimiento y setFechaNacimiento son nombres arbitrarios
+  // la primera es el valor, la segunda es la función que la modifica
+  // useState() recibe un valor para el estado, en este caso la fecha
 
   return (
-    <>
-      <h1>Insert Cliente</h1>
-      <Form>
-        <Form.Row>
-          <LugarFields currentData={currentCliente} />
-        </Form.Row>
-        <Form.Row>
-          {field("Nombre", "p_nombre", "Inserte nombre", "text")}
-          {field("Segundo nombre", "s_nombre", "Inserte segundo nombre", "text")}
-          {datePicker("Fecha de nacimiento", "fecha_nacimiento")}
-        </Form.Row>
-
-        <Form.Row>
-          {field("Apellido", "p_apellido", "Inserte apellido", "text")}
-          {field("Segundo apellido", "s_apellido", "Inserte segundo apellido", "text")}
-          {field("Correo electronico", "correo", "Inserte correo electronico", "text")}
-        </Form.Row>
-
-        <Form.Row>
-          {field("Telefono", "telefono", "Inserte telefono", "text")}
-
-          <Form.Group as={Col}>
-          <Form.Label>Estado civil</Form.Label>
-          <Form.Control
-            as="select"
-            defaultValue="Seleccionar..."
-            name="estadoCivil"
-            value={estadoCivil}
-            onChange={onChangeForm}
-          >
-            <option>Seleccionar...</option>
-            <option value="Soltero">Soltero</option>
-            <option value="Casado">Casado</option>
-            <option value="Divorciado">Divorciado</option>
-            <option value="Viudo">Viudo</option>
-          </Form.Control>
+    <Form onSubmit={props.handleSubmit(onSubmit)}>
+      <Form className="Row">
+        {/* Cada campo es un Form.Group */}
+        <Form.Group as={Col}>
+          <Form.Label>Primer Nombre</Form.Label>
+          <Field
+            className="form-control"
+            name="p_nombre" // se escribe el atributo con convencio de base de datos (p_nombre, etc...)
+            component="input"
+            type="text" // creo que hay tipo number para campos numero
+          />
         </Form.Group>
 
-        </Form.Row>
-
-        <Form.Row>
-        <fieldset>
-          <Form.Group>
-            <Form.Label className="mr-3">Sex</Form.Label>
-            <Form.Check
-              inline
-              type="radio"
-              label="M"
-              name="sexo"
-              value="Masculino"
-              onChange={onChangeForm}
-              checked={sexo === "Masculino"}
-            />
-            <Form.Check
-              inline
-              type="radio"
-              label="F"
-              name="sexo"
-              value="Femenino"
-              onChange={onChangeForm}
-              checked={sexo === "Femenino"}
-            />
-          </Form.Group>
-        </fieldset>
-      </Form.Row>
+        {/* El date picker siempre es así */}
+        <Form.Group as={Col}>
+          <p style={{ marginBottom: "0.5rem" }}>From</p>
+          <DatePicker
+            selected={fechaNacimiento} // asi se llama la variable de estado que declaramos en la linea 27
+            onChange={date => setFechaNacimiento(date)} // onChange (en cada seleccion de fecha), la fecha "date" se asigna a fechaDeNacimiento
+            peekNextMonth
+            showMonthDropdown
+            showYearDropdown
+            className="form-control"
+            dropdownMode="select"
+          />
+        </Form.Group>
       </Form>
-    </>
+    </Form>
   )
 }
 
-const mapStateToProps = state => ({
-  form: state.forms,
-  currentCliente: state.clientes.currentCliente,
-})
+ClienteForm = reduxForm({
+  form: "contact",
+})(ClienteForm)
 
-export default connect(mapStateToProps, { onChangeForm })(ClienteForm)
+export default ClienteForm
