@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import { Field, reduxForm } from "redux-form"
 
-import { Form, Col } from "react-bootstrap"
+import { Form, Col, Button } from "react-bootstrap"
 
 import DatePicker from "react-datepicker"
 
@@ -22,29 +22,30 @@ import LugarFields from "../lugares/LugarFields"
 // agregar el campo de Lugares (<LugarField />)
 
 
-const clearForm = () => {
-  
-}
 
-const handleUpdate = () => {
-  
-}
-
-const handleCreate = () => {
-  
-}
-
-const handleDelete = () => {
-  
-}
-
-const onChange = event => {
-  
-}
 
 let ClienteForm = props => {
   const { handleSubmit } = props
-
+  
+  const clearForm = () => {
+  
+  }
+  
+  const handleUpdate = () => {
+    
+  }
+  
+  const handleCreate = () => {
+    
+  }
+  
+  const handleDelete = () => {
+    
+  }
+  
+  const onChange = event => {
+    
+  }
 
   
   const onSubmit = formValues => {
@@ -84,6 +85,24 @@ let ClienteForm = props => {
             type="text" 
           />
         </Form.Group>
+
+        <Form.Group as={Col}>
+          <Form.Label>Estado civil</Form.Label>
+          <Form.Control
+            as="select"
+            defaultValue="Seleccionar..."
+            name="estadoCivil"
+            value={estadoCivil}
+            onChange={e => setEstadoCivil(e.target.value)}
+          >
+            <option>Seleccionar...</option>
+            <option value="Soltero">Soltero</option>
+            <option value="Casado">Casado</option>
+            <option value="Divorciado">Divorciado</option>
+            <option value="Viudo">Viudo</option>
+          </Form.Control>
+        </Form.Group>
+
         </Form.Row>
 
         <Form.Row>
@@ -172,29 +191,12 @@ let ClienteForm = props => {
           </Form.Group>
         </fieldset>
 
-        <Form.Group as={Col}>
-          <Form.Label>Estado civil</Form.Label>
-          <Form.Control
-            as="select"
-            defaultValue="Seleccionar..."
-            name="estadoCivil"
-            value={estadoCivil}
-            onChange={e => setEstadoCivil(e.target.value)}
-          >
-            <option>Seleccionar...</option>
-            <option value="Soltero">Soltero</option>
-            <option value="Casado">Casado</option>
-            <option value="Divorciado">Divorciado</option>
-            <option value="Viudo">Viudo</option>
-          </Form.Control>
-        </Form.Group>
-
 
 
       </Form.Row>
 
-          {/* <div className="text-center">
-          {currentNotaria ? (
+          /* <div className="text-center">
+          {false ? (
             <>
               <Button className="mr-3" onClick={handleUpdate}>
                 Actualizar notaria
@@ -204,11 +206,11 @@ let ClienteForm = props => {
               </Button>
             </>
           ) : (
-            <Button disabled={isNotariaEmpty} onClick={handleCreate}>
+            <Button disabled={false} onClick={handleCreate}>
               Agregar notaria
             </Button>
           )}
-        </div> */}
+        </div> */
 
       </Form>
     </Form>
