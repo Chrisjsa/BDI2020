@@ -2,7 +2,10 @@ import React from "react"
 
 import { connect } from "react-redux"
 
-import { leerClientes } from "../../state/cliente/clienteActions"
+import {
+  leerClientes,
+  setCurrentCliente,
+} from "../../state/cliente/clienteActions"
 
 import Crud from "../layout/Crud"
 
@@ -13,13 +16,15 @@ const CrudCliente = ({
   clientesCols,
   loading,
   leerClientes,
-  currentNotaria,
+  currentCliente,
+  setCurrentCliente,
 }) => {
   return (
     <Crud
       dataName="Clientes"
       data={clientes}
       columns={clientesCols}
+      setCurrentData={setCurrentCliente}
       loading={loading}
       readFn={leerClientes}
       Form={ClienteForm}
@@ -34,4 +39,6 @@ const mapStateToProps = state => ({
   currentCliente: state.clientes.currentCliente,
 })
 
-export default connect(mapStateToProps, { leerClientes })(CrudCliente)
+export default connect(mapStateToProps, { leerClientes, setCurrentCliente })(
+  CrudCliente
+)

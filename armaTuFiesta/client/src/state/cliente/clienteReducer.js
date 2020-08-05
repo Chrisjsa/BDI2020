@@ -5,6 +5,7 @@ import {
   INSERTAR_CLIENTE,
   ELIMINAR_CLIENTE,
   ACTUALIZAR_CLIENTE,
+  SET_CURRENT_CLIENTE,
 } from "./clienteTypes"
 
 const initialState = {
@@ -22,6 +23,13 @@ export default (state = initialState, action) => {
 
     case ERROR_CLIENTE:
       return { ...state, loading: false, error: action.payload }
+
+    case SET_CURRENT_CLIENTE:
+      return {
+        ...state,
+        loading: false,
+        currentCliente: action.payload,
+      }
 
     case INSERTAR_CLIENTE:
       return { ...state, loading: false }

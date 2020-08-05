@@ -18,12 +18,6 @@ import {
   eliminarCliente,
 } from "../../state/cliente/clienteActions"
 
-// tomas
-// conectar con el estado cliente
-// conectar con acciones
-// agregar botones
-// conectar funcionalidad
-
 let ClienteForm = ({
   insertarCliente,
   actualizarCliente,
@@ -35,20 +29,22 @@ let ClienteForm = ({
   currentParroquia,
   formValues,
 }) => {
+  const packData = () => ({
+    ...formValues,
+    sexo,
+    estadoCivil,
+    fecha_nacimiento: fechaNacimiento,
+    estado: currentEstado,
+    municipio: currentMunicipio,
+    parroquia: currentParroquia,
+  })
+
   const clearForm = () => {}
 
   const handleUpdate = () => {}
 
   const handleCreate = () => {
-    console.log({
-      ...formValues,
-      sexo,
-      estadoCivil,
-      fecha_nacimiento: fechaNacimiento,
-      estado: currentEstado,
-      municipio: currentMunicipio,
-      parroquia: currentParroquia,
-    })
+    console.log(packData())
   }
 
   const handleDelete = () => {}
@@ -190,15 +186,15 @@ let ClienteForm = ({
           {currentCliente ? (
             <>
               <Button className="mr-3" onClick={handleUpdate}>
-                Actualizar notaria
+                Actualizar cliente
               </Button>
               <Button onClick={handleDelete} variant="outline-danger">
-                Eliminar notaria
+                Eliminar cliente
               </Button>
             </>
           ) : (
             <Button disabled={false} onClick={handleCreate}>
-              Agregar notaria
+              Agregar cliente
             </Button>
           )}
         </div>

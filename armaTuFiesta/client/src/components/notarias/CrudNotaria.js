@@ -2,7 +2,10 @@ import React from "react"
 
 import { connect } from "react-redux"
 
-import { readNotarias } from "../../state/notaria/notariaActions"
+import {
+  readNotarias,
+  setCurrentNotaria,
+} from "../../state/notaria/notariaActions"
 
 import NotariaForm from "./NotariaForm"
 
@@ -16,6 +19,7 @@ const CrudNotaria = ({
   loading,
   readNotarias,
   currentNotaria,
+  setCurrentNotaria,
 }) => {
   return (
     <Crud
@@ -23,6 +27,7 @@ const CrudNotaria = ({
       data={notarias}
       columns={notariasCols}
       loading={loading}
+      setCurrentData={setCurrentNotaria}
       readFn={readNotarias}
       Form={NotariaForm}
       Graphics={() => (
@@ -41,4 +46,6 @@ const mapStateToProps = state => ({
   currentNotaria: state.notarias.currentNotaria,
 })
 
-export default connect(mapStateToProps, { readNotarias })(CrudNotaria)
+export default connect(mapStateToProps, { readNotarias, setCurrentNotaria })(
+  CrudNotaria
+)

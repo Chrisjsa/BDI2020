@@ -5,14 +5,21 @@ import {
   INSERTAR_CLIENTE,
   ELIMINAR_CLIENTE,
   ACTUALIZAR_CLIENTE,
+  SET_CURRENT_CLIENTE,
 } from "./clienteTypes"
 import axios from "axios"
-import setAuthToken from "../../utils/setAuthToken"
 
 const config = { headers: { "Content-Type": "application/json" } }
 
 export const setLoading = () => dispatch => {
   return dispatch({ type: LOADING_CLIENTE })
+}
+
+export const setCurrentCliente = cliente => dispatch => {
+  dispatch({
+    type: SET_CURRENT_CLIENTE,
+    payload: cliente,
+  })
 }
 
 export const leerClientes = () => async dispatch => {

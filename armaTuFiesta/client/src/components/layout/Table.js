@@ -4,9 +4,16 @@ import { connect } from "react-redux"
 
 import DataTable from "react-data-table-component"
 
-import { setCurrentNotaria } from "../../state/notaria/notariaActions"
+import { change } from "redux-form"
 
-const Table = ({ columns, data, setCurrentNotaria }) => {
+const Table = ({ columns, data, setCurrentData, change }) => {
+  const handleRowClicked = row => {
+    change("cliente", "p_nombre", "culito")
+    // Object.keys(row).forEach(key => change("cliente", key, row[key]))
+    Object.keys(row).forEach(key => console.log("cliente", key, row[key]))
+    setCurrentData(row)
+  }
+
   return (
     <DataTable
       columns={columns}
@@ -15,9 +22,9 @@ const Table = ({ columns, data, setCurrentNotaria }) => {
       paginationPerPage={5}
       pointerOnHover
       highlightOnHover
-      onRowClicked={row => setCurrentNotaria(row)}
+      onRowClicked={row => handleRowClicked(row)}
     />
   )
 }
 
-export default connect(null, { setCurrentNotaria })(Table)
+export default connect(null, { change })(Table)

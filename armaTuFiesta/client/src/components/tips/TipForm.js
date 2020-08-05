@@ -1,17 +1,10 @@
-// Modificar este componente para que acepte ahora el estado de Tips
-// No olvides cambiar el nombre de form por "tip" (singular)
-
 import React, { useState } from "react"
 
 import { Field, reduxForm, getFormValues } from "redux-form"
 
 import { Form, Col, Button } from "react-bootstrap"
 
-
-
 import "react-datepicker/dist/react-datepicker.css"
-
-
 
 import { connect } from "react-redux"
 
@@ -27,7 +20,6 @@ let TipForm = ({
   eliminarTip,
   tips,
   currentTip,
-  
   formValues,
 }) => {
   const clearForm = () => {}
@@ -38,7 +30,6 @@ let TipForm = ({
     console.log({
       ...formValues,
       tipo,
-      
     })
   }
 
@@ -50,8 +41,8 @@ let TipForm = ({
   return (
     <Form>
       <Form className="Row">
-      <Form.Row>  
-      <Form.Group as={Col}>
+        <Form.Row>
+          <Form.Group as={Col} xs={3}>
             <Form.Label>Tipo</Form.Label>
             <Form.Control
               as="select"
@@ -64,10 +55,9 @@ let TipForm = ({
               <option value="Tip">Tip</option>
               <option value="Idea">Idea</option>
               <option value="Recomendacion">Recomendacion</option>
-              
             </Form.Control>
           </Form.Group>
-        
+
           <Form.Group as={Col}>
             <Form.Label>Descripcion</Form.Label>
             <Field
@@ -77,11 +67,7 @@ let TipForm = ({
               type="text"
             />
           </Form.Group>
-
-          
-
         </Form.Row>
-        
 
         <div className="text-center">
           {currentTip ? (
@@ -118,7 +104,6 @@ const mapStateToProps = state => ({
   formValues: getFormValues("tip")(state),
   tips: state.tips.tips,
   currentTip: state.tips.currentTip,
-  
 })
 
 export default connect(mapStateToProps, mapActionsToProps)(TipForm)

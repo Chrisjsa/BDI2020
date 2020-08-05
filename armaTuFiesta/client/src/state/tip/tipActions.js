@@ -1,4 +1,10 @@
-import { ERROR_TIP, LOADING_TIP } from "./tipTypes"
+import {
+  ERROR_TIP,
+  LOADING_TIP,
+  INSERTAR_TIP,
+  ACTUALIZAR_TIP,
+  ELIMINAR_TIP,
+} from "./tipTypes"
 import axios from "axios"
 import setAuthToken from "../../utils/setAuthToken"
 

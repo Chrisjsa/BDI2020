@@ -2,13 +2,8 @@ import React, { useEffect } from "react"
 
 import { Container, Row, Col } from "react-bootstrap"
 
-import { connect } from "react-redux"
-
-import { readNotarias } from "../../state/notaria/notariaActions"
-
 import Loading from "../layout/Loading"
 
-import Map from "../layout/Map"
 import Table from "../layout/Table"
 import Hero from "../layout/Hero"
 
@@ -16,6 +11,7 @@ const Crud = ({
   dataName,
   data,
   columns,
+  setCurrentData,
   loading,
   readFn,
   Form,
@@ -49,7 +45,11 @@ const Crud = ({
         )}
       </Row>
       <h2>{dataName}</h2>
-      {loading ? <Loading /> : <Table columns={columns} data={data} />}
+      {loading ? (
+        <Loading />
+      ) : (
+        <Table columns={columns} data={data} setCurrentData={setCurrentData} />
+      )}
     </Container>
   )
 }
