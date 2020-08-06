@@ -45,27 +45,30 @@ let TipForm = ({
     tipo,
   })
 
-  const cleanUp = () => {}
+  const cleanUp = () => {
+    leerTips()
+    setCurrentTip(undefined)
+  }
 
   const handleUpdate = () => {
-    console.log(packData())
+    actualizarTip(packData())
     cleanUp()
   }
 
   const handleCreate = () => {
-    console.log(packData())
+    insertarTip(packData())
     cleanUp()
   }
 
   const handleDelete = () => {
-    console.log(packData())
+    eliminarTip(currentTip.id_tip)
     cleanUp()
   }
 
   const [tipo, setTipo] = useState("")
 
   return (
-    <Form>
+    <Form onSubmit={e => e.preventDefault()}>
       <Form className="Row">
         <Form.Row>
           <Form.Group as={Col} xs={3}>
@@ -75,6 +78,7 @@ let TipForm = ({
               defaultValue="Seleccionar..."
               name="tipo"
               value={tipo}
+              disabled={currentTip}
               onChange={e => setTipo(e.target.value)}
             >
               <option>Seleccionar...</option>
