@@ -23,7 +23,23 @@ exports.leerCliente = (req, res) => {
 }
 
 exports.crearCliente = (req, res) => {
-  connection.query(CREAR_CLIENTES, (error, rows) => {
+  const {
+    p_nombre,
+    s_nombre,
+    p_apellido,
+    s_apellido,
+    correo,
+    telefono,
+    sexo,
+    estadoCivil: estado_civil,
+    fecha_nacimiento,
+    parroquia,
+  } = req.body
+
+  const data = [] // <-- aqui va la data
+  return res.json("hello from backned")
+
+  connection.query(CREAR_CLIENTES, data, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }

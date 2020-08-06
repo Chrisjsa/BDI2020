@@ -9,8 +9,9 @@ import "react-datepicker/dist/react-datepicker.css"
 
 import LugarFields from "../lugares/LugarFields"
 
-import { changeFormByObject, clearFormByObject } from "../../utils/index"
+import { changeFormByObject } from "../../utils/index"
 import {
+  leerClientes,
   insertarCliente,
   actualizarCliente,
   eliminarCliente,
@@ -18,6 +19,10 @@ import {
 } from "../../state/cliente/clienteActions"
 
 let ClienteForm = ({
+  leerClientes,
+  insertarCliente,
+  actualizarCliente,
+  eliminarCliente,
   setCurrentCliente,
   currentCliente,
   currentEstado,
@@ -61,8 +66,8 @@ let ClienteForm = ({
   }
 
   const handleCreate = () => {
-    console.log(packData())
     insertarCliente(packData())
+    leerClientes()
   }
 
   const handleDelete = () => {
@@ -225,6 +230,7 @@ const mapActionsToProps = {
   actualizarCliente,
   eliminarCliente,
   setCurrentCliente,
+  leerClientes,
   change,
   reset,
 }

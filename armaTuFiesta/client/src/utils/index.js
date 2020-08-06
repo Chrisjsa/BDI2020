@@ -8,7 +8,3 @@ export const arrayOfValues = (list, key) => list.map(element => element[key])
 export const changeFormByObject = (obj, fn) => {
   Object.keys(obj).forEach(field => fn(field, obj[field]))
 }
-
-export const clearFormByObject = (obj, fn) => {
-  Object.keys(obj).forEach(field => fn(field, ""))
-}
