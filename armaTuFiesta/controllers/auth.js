@@ -17,7 +17,7 @@ exports.signUp = async (req, res) => {
       if (error) {
         return res.status(400).send(error)
       }
-      return res.json({ message: "User successfully created" })
+      return res.json({ message: "Usuario creado exitosamente" })
     })
   } catch (error) {
     res.status(400).json({ error })
@@ -28,7 +28,7 @@ exports.signIn = (req, res) => {
   const { username, password } = req.body
 
   if (!username || !password)
-    return res.status(500).send({ message: "Credentials are required" })
+    return res.status(500).send({ message: "Todos los campos son requeridos" })
 
   connection.query(SIGN_IN, [username, password], async (error, rows) => {
     if (error) {
@@ -40,7 +40,7 @@ exports.signIn = (req, res) => {
     // Check if user exists
     if (!user) {
       return res.status(400).json({
-        msg: "There is no user with that username. Please sign up",
+        message: "No hay usuario con este correo. Regístratre",
       })
     }
 

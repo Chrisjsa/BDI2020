@@ -7,6 +7,7 @@ import {
   LEER_ROLES_PERMISOS,
   LOAD_USER,
   LOADING_AUTH,
+  CLEAR_ERROR_AUTH,
 } from "./authTypes"
 
 import _ from "underscore"
@@ -22,6 +23,12 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case CLEAR_ERROR_AUTH:
+      return {
+        ...state,
+        error: undefined,
+      }
+
     case LOADING_AUTH:
       return {
         ...state,

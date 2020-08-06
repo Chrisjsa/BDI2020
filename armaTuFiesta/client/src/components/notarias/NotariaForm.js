@@ -57,9 +57,9 @@ const NotariaForm = ({
   const onChange = event => {
     setNotaria({
       ...notaria,
-      estado: lugares.lugar.currentEstado,
-      municipio: lugares.lugar.currentMunicipio,
-      parroquia: lugares.lugar.currentParroquia,
+      estado: lugares.currentEstado,
+      municipio: lugares.currentMunicipio,
+      parroquia: lugares.currentParroquia,
       [event.target.name]: event.target.value,
     })
   }

@@ -8,11 +8,12 @@ import AlertItem from "./AlertItem"
 import { setAlert } from "../../state/alert/alertActions"
 
 const Alerts = props => {
-  const { errorCliente, alerts, setAlert } = props
+  const { errorCliente, errorAuth, alerts, setAlert } = props
 
   useEffect(() => {
     if (errorCliente) setAlert(errorCliente, "danger")
-  }, [errorCliente])
+    if (errorAuth) setAlert(errorAuth, "danger")
+  }, [errorCliente, errorAuth])
 
   // return <div>{alerts && alerts.map(alert => <AlertItem alert={alert} />)}</div>
   return (
@@ -33,6 +34,7 @@ const mapActionsToProps = { setAlert }
 const mapStateToProps = state => ({
   alerts: state.alerts.alerts,
   errorCliente: state.clientes.error,
+  errorAuth: state.auth.error,
 })
 
 export default connect(mapStateToProps, mapActionsToProps)(Alerts)
