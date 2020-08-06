@@ -95,12 +95,15 @@ exports.actualizarCliente = (req, res) => {
 }
 
 exports.eliminarCliente = (req, res) => {
-  connection.query(ELIMINAR_CLIENTES, [5], (error, rows) => {
-    if (error) {
-      return res.status(400).send({ message: error.message })
-    }
+  connection.query(
+    ELIMINAR_CLIENTES,
+    [req.params.id_cliente],
+    (error, rows) => {
+      if (error) {
+        return res.status(400).send({ message: error.message })
+      }
 
-    console.log(rows)
-    return res.json(rows)
-  })
+      return res.json(rows)
+    }
+  )
 }
