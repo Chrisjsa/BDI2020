@@ -6,9 +6,11 @@ import {
   ELIMINAR_CLIENTE,
   ACTUALIZAR_CLIENTE,
   SET_CURRENT_CLIENTE,
-  CLEAR_ERROR,
+  CLEAR_ERROR_CLIENTE,
 } from "./clienteTypes"
 import axios from "axios"
+
+import { errorTimeOut } from "../../utils/"
 
 const config = { headers: { "Content-Type": "application/json" } }
 
@@ -41,6 +43,8 @@ export const insertarCliente = cliente => async dispatch => {
   } catch (error) {
     console.log(error.response)
     dispatch({ type: ERROR_CLIENTE, payload: error.response.data.message })
+
+    errorTimeOut(dispatch, CLEAR_ERROR_CLIENTE)
   }
 }
 

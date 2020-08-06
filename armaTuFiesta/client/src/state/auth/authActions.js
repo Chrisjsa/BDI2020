@@ -7,19 +7,14 @@ import {
   LEER_ROLES_PERMISOS,
   CLEAR_ERROR_AUTH,
 } from "./authTypes"
+
+import { errorTimeOut } from "../../utils/"
+
 import axios from "axios"
 
 import setAuthToken from "../../utils/setAuthToken"
 
 const config = { headers: { "Content-Type": "application/json" } }
-
-const errorTimeOut = dispatch => {
-  setTimeout(() => {
-    dispatch({
-      type: CLEAR_ERROR_AUTH,
-    })
-  }, 3000)
-}
 
 export const login = credentials => async dispatch => {
   setLoading()
@@ -36,7 +31,7 @@ export const login = credentials => async dispatch => {
       payload: error.response.data.message,
     })
 
-    errorTimeOut(dispatch, error)
+    errorTimeOut(dispatch, CLEAR_ERROR_AUTH)
   }
 }
 

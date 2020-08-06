@@ -6,6 +6,7 @@ import {
   ELIMINAR_CLIENTE,
   ACTUALIZAR_CLIENTE,
   SET_CURRENT_CLIENTE,
+  CLEAR_ERROR_CLIENTE,
 } from "./clienteTypes"
 
 const initialState = {
@@ -30,6 +31,9 @@ export default (state = initialState, action) => {
         loading: false,
         currentCliente: action.payload,
       }
+
+    case CLEAR_ERROR_CLIENTE:
+      return { ...state, error: undefined }
 
     case INSERTAR_CLIENTE:
       return { ...state, loading: false }
