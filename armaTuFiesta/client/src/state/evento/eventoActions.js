@@ -2,6 +2,7 @@ import {
   SET_CURRENT_SERVICE,
   SET_CURRENT_EVENT,
   UPDATE_STATUS,
+  CLEAR_ERROR_EVENTO,
 } from "./eventoTypes"
 
 export const setCurrentService = serviceId => dispatch => {
@@ -10,6 +11,7 @@ export const setCurrentService = serviceId => dispatch => {
     type: SET_CURRENT_SERVICE,
     payload: serviceId,
   })
+  
 }
 
 export const setCurrentEvent = eventId => dispatch => {
@@ -18,6 +20,7 @@ export const setCurrentEvent = eventId => dispatch => {
     type: SET_CURRENT_EVENT,
     payload: eventId,
   })
+  
 }
 
 export const updateStatus = status => dispatch => {
@@ -25,4 +28,5 @@ export const updateStatus = status => dispatch => {
     type: UPDATE_STATUS,
     payload: status,
   })
+  errorTimeOut(dispatch, CLEAR_ERROR_EVENTO)
 }

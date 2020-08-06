@@ -1,4 +1,4 @@
-import { CREATE_CARTA, ERROR_CARTA, LOADING_CARTA } from "./cartaTypes"
+import { CREATE_CARTA, ERROR_CARTA, LOADING_CARTA, CLEAR_ERROR_CARTA } from "./cartaTypes"
 
 import axios from "axios"
 
@@ -17,6 +17,8 @@ export const createCarta = carta => async dispatch => {
       type: ERROR_CARTA,
       payload: error.response.msg,
     })
+
+    errorTimeOut(dispatch, CLEAR_ERROR_CARTA)
   }
 }
 
@@ -24,4 +26,6 @@ export const setLoading = () => dispatch => {
   return dispatch({
     type: LOADING_CARTA,
   })
+  
+  
 }

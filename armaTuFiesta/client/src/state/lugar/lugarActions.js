@@ -7,6 +7,7 @@ import {
   SET_CURRENT_ESTADO,
   SET_CURRENT_MUNICIPIO,
   SET_CURRENT_PARROQUIA,
+  CLEAR_ERROR_LUGAR,
 } from "./lugarTypes"
 import axios from "axios"
 
@@ -23,6 +24,7 @@ export const leerEstado = () => async dispatch => {
     dispatch({ type: READ_ESTADO, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_LUGAR, payload: error.response.msg })
+    errorTimeOut(dispatch, CLEAR_ERROR_LUGAR)
   }
 }
 
@@ -36,6 +38,7 @@ export const leerMunicipio = idEstado => async dispatch => {
     dispatch({ type: LEER_MUNICIPIO, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_LUGAR, payload: error.response.msg })
+    errorTimeOut(dispatch, CLEAR_ERROR_LUGAR)
   }
 }
 
@@ -50,6 +53,7 @@ export const leerParroquia = idParroquia => async dispatch => {
     dispatch({ type: LEER_PARROQUIA, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_LUGAR, payload: error.response.msg })
+    errorTimeOut(dispatch, CLEAR_ERROR_LUGAR)
   }
 }
 

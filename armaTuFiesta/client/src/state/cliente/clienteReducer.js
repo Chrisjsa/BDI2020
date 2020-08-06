@@ -8,7 +8,7 @@ import {
   SET_CURRENT_CLIENTE,
   CLEAR_ERROR_CLIENTE,
 } from "./clienteTypes"
-
+ 
 const initialState = {
   loading: false,
   error: null,

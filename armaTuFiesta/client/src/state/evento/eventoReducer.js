@@ -2,6 +2,7 @@ import {
   SET_CURRENT_SERVICE,
   SET_CURRENT_EVENT,
   UPDATE_STATUS,
+  CLEAR_ERROR_EVENTO,
 } from "./eventoTypes"
 
 const initialState = {
@@ -121,6 +122,9 @@ export default (state = initialState, action) => {
           event => event.id_evento === action.payload
         ),
       }
+
+      case CLEAR_ERROR_EVENTO:
+      return { ...state, error: undefined }
 
     case SET_CURRENT_SERVICE:
       return {

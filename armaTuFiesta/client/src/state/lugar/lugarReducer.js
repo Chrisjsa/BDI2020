@@ -7,6 +7,7 @@ import {
   SET_CURRENT_ESTADO,
   SET_CURRENT_MUNICIPIO,
   SET_CURRENT_PARROQUIA,
+  CLEAR_ERROR_LUGAR,
 } from "./lugarTypes"
 
 const initialState = {
@@ -24,6 +25,9 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case READ_ESTADO:
       return { ...state, loading: false, estados: action.payload }
+
+      case CLEAR_ERROR_LUGAR:
+        return { ...state, error: undefined }
 
     case LEER_MUNICIPIO:
       return { ...state, loading: false, municipios: action.payload }

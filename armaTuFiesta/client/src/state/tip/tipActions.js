@@ -6,6 +6,7 @@ import {
   ELIMINAR_TIP,
   SET_CURRENT_TIP,
   LEER_TIPS,
+  CLEAR_ERROR_TIP,
 } from "./tipTypes"
 import axios from "axios"
 
@@ -18,6 +19,7 @@ export const leerTips = () => async dispatch => {
     dispatch({ type: LEER_TIPS, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_TIP, payload: error.response.data.message })
+    errorTimeOut(dispatch, CLEAR_ERROR_TIP)
   }
 }
 
@@ -32,6 +34,7 @@ export const insertarTip = tip => async dispatch => {
     dispatch({ type: INSERTAR_TIP, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_TIP, payload: error.response.msg })
+    errorTimeOut(dispatch, CLEAR_ERROR_TIP)
   }
 }
 
@@ -42,6 +45,7 @@ export const actualizarTip = tip => async dispatch => {
     dispatch({ type: ACTUALIZAR_TIP, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_TIP, payload: error.response.msg })
+    errorTimeOut(dispatch, CLEAR_ERROR_TIP)
   }
 }
 
@@ -52,6 +56,7 @@ export const eliminarTip = idTip => async dispatch => {
     dispatch({ type: ELIMINAR_TIP, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_TIP, payload: error.response.msg })
+    errorTimeOut(dispatch, CLEAR_ERROR_TIP)
   }
 }
 

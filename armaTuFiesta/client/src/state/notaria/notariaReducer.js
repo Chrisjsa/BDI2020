@@ -6,6 +6,7 @@ import {
   ERROR_NOTARIA,
   LOADING_NOTARIA,
   SET_CURRENT_NOTARIA,
+  CLEAR_ERROR_NOTARIA,
 } from "./notariaTypes"
 
 const initialState = {
@@ -53,6 +54,9 @@ export default (state = initialState, action) => {
 
     case ELIMINAR_NOTARIA:
       return { ...state, loading: false }
+
+    case CLEAR_ERROR_NOTARIA:
+      return { ...state, error: undefined }
 
     case ERROR_NOTARIA:
       return {

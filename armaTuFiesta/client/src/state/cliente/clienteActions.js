@@ -9,7 +9,7 @@ import {
   CLEAR_ERROR_CLIENTE,
 } from "./clienteTypes"
 import axios from "axios"
-
+ 
 import { errorTimeOut } from "../../utils/"
 
 const config = { headers: { "Content-Type": "application/json" } }
@@ -32,6 +32,8 @@ export const leerClientes = () => async dispatch => {
     dispatch({ type: LEER_CLIENTES, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_CLIENTE, payload: error.response.data.message })
+
+    errorTimeOut(dispatch, CLEAR_ERROR_CLIENTE)
   }
 }
 
@@ -55,6 +57,8 @@ export const actualizarCliente = cliente => async dispatch => {
     dispatch({ type: ACTUALIZAR_CLIENTE, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_CLIENTE, payload: error.response.data.message })
+
+    errorTimeOut(dispatch, CLEAR_ERROR_CLIENTE)
   }
 }
 
@@ -65,5 +69,7 @@ export const eliminarCliente = idCliente => async dispatch => {
     dispatch({ type: ELIMINAR_CLIENTE, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_CLIENTE, payload: error.response.data.message })
+
+    errorTimeOut(dispatch, CLEAR_ERROR_CLIENTE)
   }
 }

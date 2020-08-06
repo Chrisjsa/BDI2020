@@ -1,4 +1,4 @@
-import { ERROR_TIP, LOADING_TIP, SET_CURRENT_TIP, LEER_TIPS } from "./tipTypes"
+import { ERROR_TIP, LOADING_TIP, SET_CURRENT_TIP, LEER_TIPS, CLEAR_ERROR_TIP } from "./tipTypes"
 
 const initialState = {
   loading: false,
@@ -25,6 +25,9 @@ export default (state = initialState, action) => {
 
     case LOADING_TIP:
       return { ...state, loading: true }
+
+    case CLEAR_ERROR_TIP:
+      return { ...state, error: undefined }
 
     case ERROR_TIP:
       return { ...state, loading: false, error: action.payload }

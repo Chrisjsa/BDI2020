@@ -1,4 +1,6 @@
 export const ERROR_LUGAR = "ERROR_LUGAR"
+export const CLEAR_ERROR_LUGAR = "CLEAR_ERROR_LUGAR"
+
 export const LOADING_LUGAR = "LOADING_LUGAR"
 export const READ_ESTADO = "READ_ESTADO"
 export const LEER_MUNICIPIO = "LEER_MUNICIPIO"
