@@ -69,10 +69,11 @@ VALUES
 
 -- DELETE CLIENTE
 
-SET @persona = (ID_persona);
+SET @persona = ID;
+DELETE FROM arma_tu_fiesta.cita WHERE fk_usuario = @persona;
 DELETE FROM arma_tu_fiesta.usuario WHERE fk_persona = @persona;
 DELETE FROM arma_tu_fiesta.telefono WHERE fk_persona = @persona;
-DELETE FROM arma_tu_fiesta.email WHERE fk_persona = @notaripersonaa;
+DELETE FROM arma_tu_fiesta.email WHERE fk_persona = @persona;
 DELETE FROM arma_tu_fiesta.persona WHERE id_persona = @persona;
 
 -- UPDATE CLIENTE (SOLO PUEDEN CAMBIARSE PASSWORD, EMAIL Y TELEFONO)

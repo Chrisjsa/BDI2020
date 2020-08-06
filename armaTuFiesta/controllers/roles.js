@@ -1,8 +1,8 @@
 const { connection } = require("../database")
-const {  } = require("../sql/rolesQueries")
+const { LEER_ROLES, ACTUALIZAR_ROLES, ELIMINAR_ROLES, CREAR_ROLES } = require("../sql/rolesQueries")
 
 exports.leerRol = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(LEER_ROLES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -11,7 +11,7 @@ exports.leerRol = (req, res) => {
 }
 
 exports.crearRol = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(CREAR_ROLES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -21,7 +21,7 @@ exports.crearRol = (req, res) => {
 
 
 exports.actualizarRol = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(ACTUALIZAR_ROLES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -30,7 +30,7 @@ exports.actualizarRol = (req, res) => {
 }
 
 exports.eliminarRol = (req, res) => {
-  connection.query("", (error, rows) => {
+  connection.query(ELIMINAR_ROLES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
