@@ -7,21 +7,23 @@ import store from "./store"
 
 import { Container } from "react-bootstrap"
 
+// Pages
 import LandingPage from "./components/pages/LandingPage"
 import AboutPage from "./components/pages/AboutPage"
 import DashboardPage from "./components/pages/DashboardPage"
 import EventDashboard from "./components/pages/EventDashboard"
+import Register from "./components/auth/Register"
+import LoginPage from "./components/auth/Login"
+import PermisosPage from "./components/pages/PermisosPage"
 
+// Cruds
 import CrudNotaria from "./components/notarias/CrudNotaria"
 import CrudCliente from "./components/clientes/CrudCliente"
 import CrudTip from "./components/tips/CrudTip"
 
-import LoginPage from "./components/auth/Login"
-import Register from "./components/auth/Register"
-
+import NewService from "./components/services/NewService"
 import Navigation from "./components/layout/Navigation"
 import ServiceDetail from "./components/services/ServiceDetail"
-import NewService from "./components/services/NewService"
 import CartaSolteria from "./components/events/CartaSolteria"
 
 import PrivateRoute from "./components/routing/PrivateRoute"
@@ -58,6 +60,7 @@ const App = () => {
             <PrivateRoute exact path="/crud_notaria" component={CrudNotaria} />
             <PrivateRoute exact path="/crud_cliente" component={CrudCliente} />
             <PrivateRoute exact path="/crud_tip" component={CrudTip} />
+            <PrivateRoute exact path="/permisos" component={PermisosPage} />
             <PrivateRoute
               exact
               path="/carta_solteria"

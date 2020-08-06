@@ -1,4 +1,15 @@
-import { LOGIN, LOGOUT, ERROR, LOAD_USER, LOADING_AUTH } from "./authTypes"
+import { arrayOfValues } from "../../utils"
+
+import {
+  LOGIN,
+  LOGOUT,
+  ERROR_AUTH,
+  LEER_ROLES_PERMISOS,
+  LOAD_USER,
+  LOADING_AUTH,
+} from "./authTypes"
+
+import _ from "underscore"
 
 const initialState = {
   loading: false,
@@ -6,6 +17,7 @@ const initialState = {
   isAuthenticated: false,
   token: localStorage.getItem("token"),
   user: null,
+  roles: [],
 }
 
 export default (state = initialState, action) => {
@@ -14,6 +26,14 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: true,
+      }
+
+    case LEER_ROLES_PERMISOS:
+      return {
+        ...state,
+        loading: false,
+        roles: _.uniq(arrayOfValues(action.payload, "rol")),
+        permisos: action.payload,
       }
 
     case LOGIN:
@@ -33,7 +53,7 @@ export default (state = initialState, action) => {
         loading: false,
       }
 
-    case ERROR:
+    case ERROR_AUTH:
       return {
         ...state,
         loading: false,

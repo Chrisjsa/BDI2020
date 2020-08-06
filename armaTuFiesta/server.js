@@ -43,6 +43,7 @@ routes.forEach(route => useRoute(route))
 app.get("/report", async (req, res) => {
   const data = {
     template: { shortid: "rJlkqWeLZw" },
+
     data: { nombre: "Tomás" },
   }
 

@@ -4,7 +4,7 @@ import { connect } from "react-redux"
 
 import Events from "../events/Events"
 
-import { Container, Button } from "react-bootstrap"
+import { Container, Button, Alert } from "react-bootstrap"
 
 import ballons from "../../img/ballons.png"
 
@@ -21,8 +21,28 @@ const DashboardPage = ({ user, events, history, loading }) => {
     </div>
   )
 
+  const done = ["Listo CRUD Tip", "Listo CRUD Cliente"]
+  const warning = ["Cliente delete falla"]
+
   return (
     <Container>
+      <Alert variant="success" className="mt-5">
+        <Alert.Heading>Novedades</Alert.Heading>
+        {done.map(item => (
+          <ul>
+            <li>{item}</li>
+          </ul>
+        ))}
+      </Alert>
+
+      {warning.map(item => (
+        <Alert variant="warning">
+          <ul>
+            <li>{item}</li>
+          </ul>
+        </Alert>
+      ))}
+
       {loading ? (
         <Loading />
       ) : (

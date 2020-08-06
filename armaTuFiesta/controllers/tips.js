@@ -22,7 +22,11 @@ exports.leerTip = (req, res) => {
 }
 
 exports.crearTip = (req, res) => {
-  connection.query(CREAR_TIPS, (error, rows) => {
+  const { tipo, descripcion } = req.body
+
+  const data = [tipo, descripcion]
+
+  connection.query(CREAR_TIPS, data, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -31,7 +35,11 @@ exports.crearTip = (req, res) => {
 }
 
 exports.actualizarTip = (req, res) => {
-  connection.query(ACTUALIZAR_TIPS, (error, rows) => {
+  const { id_tip, descripcion } = req.body
+
+  const data = [id_tip, descripcion]
+
+  connection.query(ACTUALIZAR_TIPS, data, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
@@ -40,7 +48,7 @@ exports.actualizarTip = (req, res) => {
 }
 
 exports.eliminarTip = (req, res) => {
-  connection.query(ELIMINAR_TIPS, (error, rows) => {
+  connection.query(ELIMINAR_TIPS, [req.params.id_tip], (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }

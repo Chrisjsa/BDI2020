@@ -1,5 +1,7 @@
 const { connection } = require("../database")
-const {LEER_CARTAS, CREAR_CARTAS} = require("../sql/cartasQueries")
+const { LEER_CARTAS, CREAR_CARTAS } = require("../sql/cartasQueries")
+
+const request = require("request")
 
 exports.leerCarta = (req, res) => {
   connection.query(LEER_CARTAS, (error, rows) => {
@@ -37,7 +39,18 @@ exports.crearCarta = (req, res) => {
 
   let usuario = undefined
 
-  //BORRAR
+  const data = {
+    template: { shortid: "rJlkqWeLZw" },
+    data: req.body,
+  }
+
+  const options = {
+    url: "http://localhost:8000/api/report",
+    method: "POST",
+    json: data,
+  }
+
+  request(options).pipe(res)
   return res.json("xd")
 
   // {
@@ -52,12 +65,16 @@ exports.crearCarta = (req, res) => {
   // } solo require id_persona
 
   // datos del usuario, esto sera un select
-  connection.query("SELECT per.cedula, per.p_nombre, per.s_nombre, per.p_apellido, per.s_apellido, per.fecha_nacimiento, per.sexo, per.estado_civil FROM arma_tu_fiesta.solicitud as sol, arma_tu_fiesta.usuario as usu, arma_tu_fiesta.persona as per WHERE sol.fk_usuario = usu.id_usuario AND usu.fk_persona = per.id_persona;", [], (error, rows) => {
-    if (error) {
-      return res.status(400).send(error.message)
+  connection.query(
+    "SELECT per.cedula, per.p_nombre, per.s_nombre, per.p_apellido, per.s_apellido, per.fecha_nacimiento, per.sexo, per.estado_civil FROM arma_tu_fiesta.solicitud as sol, arma_tu_fiesta.usuario as usu, arma_tu_fiesta.persona as per WHERE sol.fk_usuario = usu.id_usuario AND usu.fk_persona = per.id_persona;",
+    [],
+    (error, rows) => {
+      if (error) {
+        return res.status(400).send(error.message)
+      }
+      usuario = rows.pop()
     }
-    usuario = rows.pop()
-  })
+  )
 
   // todo lo que viene de aqui es un insert
   const success = { msg: "Carta agregada satisfactoriamente" }
@@ -80,5 +97,3 @@ exports.crearCarta = (req, res) => {
     })
   })
 }
-
-

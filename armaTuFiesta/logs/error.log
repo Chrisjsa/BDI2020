@@ -188,3 +188,5 @@ Error: connect ETIMEDOUT
     at trim_prefix (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:317:13)
     at C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:284:7
     at Function.process_params (C:\Users\Tomas\Desktop\Projects\BDI2020\armaTuFiesta\node_modules\express\lib\router\index.js:335:12)
+2020-08-06T04:02:42.264Z - error: Error during processing request at http://localhost:8000/api/report, details: Could not parse report template, aren't you missing content type?, stack: undefined
+2020-08-06T04:14:46.519Z - error: Error during processing request at http://localhost:8000/api/report, details: Could not parse report template, aren't you missing content type?, stack: undefined

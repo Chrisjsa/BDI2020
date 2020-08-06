@@ -1,12 +1,30 @@
 const { connection } = require("../database")
-const { LEER_ROLES, ACTUALIZAR_ROLES, ELIMINAR_ROLES, CREAR_ROLES } = require("../sql/rolesQueries")
+const {
+  LEER_ROLES,
+  ACTUALIZAR_ROLES,
+  ELIMINAR_ROLES,
+  CREAR_ROLES,
+} = require("../sql/rolesQueries")
 
-exports.leerRol = (req, res) => {
+const { LISTAR_ROL_PERMISO } = require("../sql/authQueries")
+
+exports.leerRoles = (req, res) => {
   connection.query(LEER_ROLES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+
+    return res.json(rows)
+  })
+}
+
+exports.leerRolesPermisos = (req, res) => {
+  connection.query(LISTAR_ROL_PERMISO, (error, rows) => {
+    if (error) {
+      return res.status(400).send(error.message)
+    }
+
+    return res.json(rows)
   })
 }
 
@@ -15,17 +33,16 @@ exports.crearRol = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    return res.json(rows)
   })
 }
-
 
 exports.actualizarRol = (req, res) => {
   connection.query(ACTUALIZAR_ROLES, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    return res.json(rows)
   })
 }
 
@@ -34,6 +51,6 @@ exports.eliminarRol = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    return res.json(rows)
   })
 }

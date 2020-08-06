@@ -1,5 +1,12 @@
 const { connection } = require("../database")
-const { SIGN_UP, SIGN_IN, LOAD_USER , LISTAR_ROL_PERMISO, OBTENER_ROL_USUARIO, OBTENER_PERMISO_USUARIO} = require("../sql/authQueries")
+const {
+  SIGN_UP,
+  SIGN_IN,
+  LOAD_USER,
+  LISTAR_ROL_PERMISO,
+  OBTENER_ROL_USUARIO,
+  OBTENER_PERMISO_USUARIO,
+} = require("../sql/authQueries")
 const jwt = require("jsonwebtoken")
 
 exports.signUp = async (req, res) => {
@@ -10,7 +17,7 @@ exports.signUp = async (req, res) => {
       if (error) {
         return res.status(400).send(error)
       }
-      return res.json({ mgs: "User successfully created" })
+      return res.json({ message: "User successfully created" })
     })
   } catch (error) {
     res.status(400).json({ error })
@@ -21,7 +28,7 @@ exports.signIn = (req, res) => {
   const { username, password } = req.body
 
   if (!username || !password)
-    return res.status(500).send({ msg: "Credentials are required" })
+    return res.status(500).send({ message: "Credentials are required" })
 
   connection.query(SIGN_IN, [username, password], async (error, rows) => {
     if (error) {

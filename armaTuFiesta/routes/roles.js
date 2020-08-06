@@ -1,13 +1,21 @@
 const express = require("express")
 const router = express.Router()
-const { monitor } = require("../middleware/monitor") 
+const { monitor } = require("../middleware/monitor")
 const { auth } = require("../middleware/auth")
-const middleware = [auth, monitor] 
+const middleware = [auth, monitor]
 
-const { leerRol, crearRol, actualizarRol, eliminarRol } = require("../controllers/roles")
+const {
+  leerRoles,
+  leerRolesPermisos,
+  crearRol,
+  actualizarRol,
+  eliminarRol,
+} = require("../controllers/roles")
 
 // Read
-router.get("/leer", auth, leerRol)
+router.get("/leer", auth, leerRoles)
+
+router.get("/leerRolesPermisos", auth, leerRolesPermisos)
 
 // // Create
 router.post("/nueva", middleware, crearRol)
