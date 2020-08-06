@@ -1,7 +1,13 @@
-exports.LEER_TIPS = "query de leer"
+exports.LEER_TIPS = "SELECT * FROM arma_tu_fiesta.tip;"
 
-exports.CREAR_TIPS = "query de crear"
+exports.CREAR_TIPS = "INSERT INTO arma_tu_fiesta.tip (tipo, descripcion) VALUES (?, ?);"
 
-exports.ACTUALIZAR_TIPS = "query de actualizar"
+//[tipo, descripcion]
 
-exports.ELIMINAR_TIPS = "query de eliminar"
+exports.ACTUALIZAR_TIPS = "SET @tip = ?; DELETE FROM arma_tu_fiesta.tip WHERE id_tip = @tip;"
+
+//[id_tip]
+
+exports.ELIMINAR_TIPS = "SET @tip = ?; UPDATE arma_tu_fiesta.tip SET descripcion = ? WHERE id_tip = @tip;"
+
+//[id_tip, descripcion]

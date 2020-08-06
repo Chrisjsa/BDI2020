@@ -12,7 +12,7 @@ const {
 } = require("../controllers/tips")
 
 // Read
-router.get("/leer", auth, leerTip)
+router.get("/", auth, leerTip)
 
 // // Create
 router.post("/nuevo", middleware, crearTip)
@@ -20,4 +20,5 @@ router.post("/nuevo", middleware, crearTip)
 // // Update
 router.put("/actualizar", middleware, actualizarTip)
 
+router.delete("/eliminar/:id_tip", middleware, eliminarTip)
 module.exports = router

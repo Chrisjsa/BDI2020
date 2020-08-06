@@ -4,11 +4,22 @@ import {
   INSERTAR_TIP,
   ACTUALIZAR_TIP,
   ELIMINAR_TIP,
+  SET_CURRENT_TIP,
+  LEER_TIPS,
 } from "./tipTypes"
 import axios from "axios"
-import setAuthToken from "../../utils/setAuthToken"
 
 const config = { headers: { "Content-Type": "application/json" } }
+
+export const leerTips = () => async dispatch => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.get(`api/tips/`, config)
+    dispatch({ type: LEER_TIPS, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_TIP, payload: error.response.data.message })
+  }
+}
 
 export const setLoading = () => dispatch => {
   return dispatch({ type: LOADING_TIP })
@@ -42,4 +53,11 @@ export const eliminarTip = idTip => async dispatch => {
   } catch (error) {
     dispatch({ type: ERROR_TIP, payload: error.response.msg })
   }
+}
+
+export const setCurrentTip = tip => dispatch => {
+  dispatch({
+    type: SET_CURRENT_TIP,
+    payload: tip,
+  })
 }

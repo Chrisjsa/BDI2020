@@ -2,28 +2,43 @@ import React from "react"
 
 import { connect } from "react-redux"
 
-import { leerClientes } from "../../state/cliente/clienteActions"
+import { leerTips, setCurrentTip } from "../../state/tip/tipActions"
 
 import Crud from "../layout/Crud"
 
 import TipForm from "./TipForm"
 
-const CrudTip = ({ tips, tipsCols, loading, leerClientes, currentNotaria }) => {
+const CrudTip = ({
+  tips,
+  tipsCols,
+  loading,
+  currentTip,
+  leerTips,
+  setCurrentTip,
+}) => {
   return (
     <Crud
       dataName="Tips"
-      data={[]}
-      columns={[]}
+      data={tips}
+      columns={tipsCols}
+      setCurrentData={setCurrentTip}
       loading={loading}
-      readFn={() => {}}
+      readFn={leerTips}
       Form={TipForm}
     />
   )
 }
 
+const mapActionsToProps = {
+  leerTips,
+  setCurrentTip,
+}
+
 const mapStateToProps = state => ({
-  tips: undefined,
-  tipCols: undefined,
+  tips: state.tips.tips,
+  tipsCols: state.tips.tipsCols,
+  currentTip: state.tips.currentTip,
+  loading: state.tips.loading,
 })
 
-export default connect(mapStateToProps, {})(CrudTip)
+export default connect(mapStateToProps, mapActionsToProps)(CrudTip)

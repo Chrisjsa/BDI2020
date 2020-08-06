@@ -1,41 +1,67 @@
-import React, { useState } from "react"
-
-import { Field, reduxForm, getFormValues } from "redux-form"
+import React, { useState, useEffect } from "react"
 
 import { Form, Col, Button } from "react-bootstrap"
+
+import { Field, reduxForm, getFormValues, change, reset } from "redux-form"
 
 import "react-datepicker/dist/react-datepicker.css"
 
 import { connect } from "react-redux"
 
+import { changeFormByObject } from "../../utils"
+
 import {
+  setCurrentTip,
   insertarTip,
   actualizarTip,
   eliminarTip,
+  leerTips,
 } from "../../state/tip/tipActions"
 
 let TipForm = ({
+  leerTips,
   insertarTip,
   actualizarTip,
   eliminarTip,
   tips,
+  setCurrentTip,
   currentTip,
   formValues,
+  change,
+  reset,
 }) => {
-  const clearForm = () => {}
+  useEffect(() => {
+    if (!currentTip) {
+      reset("tip")
+      setTipo("")
+    } else {
+      changeFormByObject(currentTip, change)
+      setTipo(currentTip.tipo)
+    }
+  }, [currentTip])
 
-  const handleUpdate = () => {}
+  const packData = () => ({
+    ...formValues,
+    tipo,
+  })
 
-  const handleCreate = () => {
-    console.log({
-      ...formValues,
-      tipo,
-    })
+  const cleanUp = () => {}
+
+  const handleUpdate = () => {
+    console.log(packData())
+    cleanUp()
   }
 
-  const handleDelete = () => {}
+  const handleCreate = () => {
+    console.log(packData())
+    cleanUp()
+  }
 
-  const onChange = event => {}
+  const handleDelete = () => {
+    console.log(packData())
+    cleanUp()
+  }
+
   const [tipo, setTipo] = useState("")
 
   return (
@@ -98,6 +124,10 @@ const mapActionsToProps = {
   insertarTip,
   actualizarTip,
   eliminarTip,
+  setCurrentTip,
+  leerTips,
+  change,
+  reset,
 }
 
 const mapStateToProps = state => ({

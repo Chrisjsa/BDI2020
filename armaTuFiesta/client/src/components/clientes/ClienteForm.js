@@ -61,17 +61,24 @@ let ClienteForm = ({
     parroquia: currentParroquia,
   })
 
-  const handleUpdate = () => {
+  const cleanUp = () => {
     setCurrentCliente(undefined)
+    leerClientes()
+  }
+
+  const handleUpdate = () => {
+    actualizarCliente(packData())
+    cleanUp()
   }
 
   const handleCreate = () => {
     insertarCliente(packData())
-    leerClientes()
+    cleanUp()
   }
 
   const handleDelete = () => {
-    setCurrentCliente(undefined)
+    eliminarCliente(currentCliente.id_persona)
+    cleanUp()
   }
 
   return (
@@ -87,6 +94,7 @@ let ClienteForm = ({
               name="p_nombre"
               component="input"
               type="text"
+              disabled={currentCliente}
             />
           </Form.Group>
 
@@ -97,6 +105,7 @@ let ClienteForm = ({
               name="s_nombre"
               component="input"
               type="text"
+              disabled={currentCliente}
             />
           </Form.Group>
         </Form.Row>
@@ -109,6 +118,7 @@ let ClienteForm = ({
               name="p_apellido"
               component="input"
               type="text"
+              disabled={currentCliente}
             />
           </Form.Group>
 
@@ -118,23 +128,23 @@ let ClienteForm = ({
               className="form-control"
               name="s_apellido"
               component="input"
+              disabled={currentCliente}
               type="text"
             />
           </Form.Group>
         </Form.Row>
 
         <Form.Row>
-
-        <Form.Group as={Col}>
+          <Form.Group as={Col}>
             <Form.Label>Cedula</Form.Label>
             <Field
               className="form-control"
               name="cedula"
               component="input"
+              disabled={currentCliente}
               type="text"
             />
           </Form.Group>
-
 
           <Form.Group as={Col}>
             <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
@@ -145,6 +155,7 @@ let ClienteForm = ({
               showMonthDropdown
               showYearDropdown
               className="form-control"
+              disabled={currentCliente}
               dropdownMode="select"
             />
           </Form.Group>
@@ -156,6 +167,7 @@ let ClienteForm = ({
               defaultValue="Seleccionar..."
               name="estadoCivil"
               value={estadoCivil}
+              disabled={currentCliente}
               onChange={e => setEstadoCivil(e.target.value)}
             >
               <option>Seleccionar...</option>
@@ -167,8 +179,7 @@ let ClienteForm = ({
           </Form.Group>
         </Form.Row>
         <Form.Row>
-
-        <Form.Group as={Col}>
+          <Form.Group as={Col}>
             <Form.Label>Correo Electronico</Form.Label>
             <Field
               className="form-control"
@@ -188,30 +199,32 @@ let ClienteForm = ({
             />
           </Form.Group>
         </Form.Row>
-        
+
         <fieldset>
-            <Form.Group>
-              <Form.Label className="mr-3">Sex</Form.Label>
-              <Form.Check
-                inline
-                type="radio"
-                label="M"
-                name="sexo"
-                value="Masculino"
-                onChange={e => setSexo(e.target.value)}
-                checked={sexo === "Masculino"}
-              />
-              <Form.Check
-                inline
-                type="radio"
-                label="F"
-                name="sexo"
-                value="Femenino"
-                onChange={e => setSexo(e.target.value)}
-                checked={sexo === "Femenino"}
-              />
-            </Form.Group>
-          </fieldset>
+          <Form.Group>
+            <Form.Label className="mr-3">Sex</Form.Label>
+            <Form.Check
+              inline
+              type="radio"
+              label="M"
+              name="sexo"
+              disabled={currentCliente}
+              value="Masculino"
+              onChange={e => setSexo(e.target.value)}
+              checked={sexo === "Masculino"}
+            />
+            <Form.Check
+              inline
+              type="radio"
+              disabled={currentCliente}
+              label="F"
+              name="sexo"
+              value="Femenino"
+              onChange={e => setSexo(e.target.value)}
+              checked={sexo === "Femenino"}
+            />
+          </Form.Group>
+        </fieldset>
 
         <div className="text-center">
           {currentCliente ? (
@@ -224,7 +237,7 @@ let ClienteForm = ({
               </Button>
             </>
           ) : (
-            <Button disabled={false} onClick={handleCreate}>
+            <Button disabledd={false} onClick={handleCreate}>
               Agregar cliente
             </Button>
           )}

@@ -19,7 +19,7 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case LOADING_CLIENTE:
-      return { ...state, loading: true }
+      return { ...state, loading: true, error: undefined }
 
     case ERROR_CLIENTE:
       return { ...state, loading: false, error: action.payload }

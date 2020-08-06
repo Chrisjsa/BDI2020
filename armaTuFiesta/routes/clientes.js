@@ -9,7 +9,7 @@ const {
   crearCliente,
   // crearOtroUsuario,
   actualizarCliente,
-  // eliminarCliente,
+  eliminarCliente,
 } = require("../controllers/clientes")
 
 // Read
@@ -24,6 +24,6 @@ router.post("/nuevo", middleware, crearCliente)
 // // Update
 router.put("/actualizar", middleware, actualizarCliente)
 
-// router.delete("/eliminar/:id_cliente", middleware, eliminarCliente)
+router.delete("/eliminar/:id_cliente", middleware, eliminarCliente)
 
 module.exports = router

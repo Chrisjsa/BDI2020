@@ -37,7 +37,8 @@
     "npx": "^10.2.2",
     "redux-form": "^8.3.6",
     "redux-forms": "^1.0.0-3",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
     "concurrently": "^5.1.0"
