@@ -20,4 +20,5 @@ router.post("/nuevo", middleware, crearTip)
 // // Update
 router.put("/actualizar", middleware, actualizarTip)
 
+router.delete("/eliminar/:id_tip", middleware, eliminarTip)
 module.exports = router
