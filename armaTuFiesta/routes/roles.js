@@ -15,5 +15,6 @@ router.post("/nueva", middleware, crearRol)
 // // Update
 router.put("/actualizar", middleware, actualizarRol)
 
+router.delete("/eliminar/:id_rol", middleware, eliminarRol)
 
 module.exports = router
