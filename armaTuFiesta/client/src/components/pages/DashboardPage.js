@@ -10,6 +10,8 @@ import ballons from "../../img/ballons.png"
 
 import Loading from "../layout/Loading"
 
+import Test from "../Test"
+
 const DashboardPage = ({ user, events, history, loading }) => {
   const NoEvents = () => (
     <div className="text-center mt-5">
@@ -26,23 +28,7 @@ const DashboardPage = ({ user, events, history, loading }) => {
 
   return (
     <Container>
-      <Alert variant="success" className="mt-5">
-        <Alert.Heading>Novedades</Alert.Heading>
-        {done.map(item => (
-          <ul>
-            <li>{item}</li>
-          </ul>
-        ))}
-      </Alert>
-
-      {warning.map(item => (
-        <Alert variant="warning">
-          <ul>
-            <li>{item}</li>
-          </ul>
-        </Alert>
-      ))}
-
+      <Test />
       {loading ? (
         <Loading />
       ) : (

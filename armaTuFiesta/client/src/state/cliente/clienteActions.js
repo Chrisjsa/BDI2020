@@ -9,7 +9,7 @@ import {
   CLEAR_ERROR_CLIENTE,
 } from "./clienteTypes"
 import axios from "axios"
- 
+
 import { errorTimeOut } from "../../utils/"
 
 const config = { headers: { "Content-Type": "application/json" } }
