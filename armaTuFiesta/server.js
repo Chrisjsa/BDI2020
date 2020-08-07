@@ -18,6 +18,7 @@ connection.connect()
 app.use(express.json({ extended: false }))
 
 routes = [
+  "testing",
   "users",
   "auth",
   "notarias",
