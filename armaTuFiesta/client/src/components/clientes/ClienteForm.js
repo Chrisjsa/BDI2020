@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import moment from "moment"
 import { connect } from "react-redux"
 import { Field, reduxForm, getFormValues, change, reset } from "redux-form"
 
@@ -49,6 +48,7 @@ let ClienteForm = ({
       setSexo(currentCliente.sexo)
       setEstadoCivil(currentCliente.estado_civil)
     }
+    // eslint-disable-next-line
   }, [currentCliente])
 
   const packData = () => ({

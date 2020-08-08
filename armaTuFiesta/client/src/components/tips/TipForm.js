@@ -38,7 +38,7 @@ let TipForm = ({
       changeFormByObject(currentTip, change)
       setTipo(currentTip.tipo)
     }
-  }, [currentTip])
+  }, [currentTip, reset, change])
 
   const packData = () => ({
     ...formValues,

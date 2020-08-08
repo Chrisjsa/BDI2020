@@ -36,6 +36,7 @@ const LugarFields = ({
     setCurrentMunicipio(undefined)
     setCurrentParroquia(undefined)
     leerEstado()
+    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
