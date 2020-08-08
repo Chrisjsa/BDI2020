@@ -17960,7 +17960,7 @@ INSERT INTO arma_tu_fiesta.email (correo, fk_proveedor) VALUES ('Airbeat@gmail.c
 
 
 
-INSERT INTO arma_tu_fiesta.estatus (nombre) VALUES ('Recibido'),('Revision'), ('Aprobado'), ('Enlistado'), ('Confirmado'), ('Pagado'), ('Pedido'), ('Reservado'), ('Realizado'), ('Solicitado'), ('Modificado');
+INSERT INTO arma_tu_fiesta.estatus (nombre) VALUES ('Recibido'),('Revision'), ('Aprobado'), ('Enlistado'), ('Confirmado'), ('Pagado'), ('Pedido'), ('Reservado'), ('Realizado'), ('Solicitado'), ('Modificado'), ('Cancelado');
 
 
 
