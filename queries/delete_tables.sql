@@ -45,6 +45,7 @@ DROP TABLE IF EXISTS `tarjeta`               CASCADE;
 DROP TABLE IF EXISTS `tramite`               CASCADE;
 DROP TABLE IF EXISTS `tramite_persona`       CASCADE;
 DROP TABLE IF EXISTS `telefono`              CASCADE;
+DROP TABLE IF EXISTS `tema`                  CASCADE;
 DROP TABLE IF EXISTS `templo`                CASCADE;
 DROP TABLE IF EXISTS `templo_horario`        CASCADE;
 DROP TABLE IF EXISTS `tip`                   CASCADE;

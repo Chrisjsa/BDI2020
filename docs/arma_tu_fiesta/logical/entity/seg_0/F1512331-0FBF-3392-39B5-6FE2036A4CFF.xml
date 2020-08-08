@@ -27,21 +27,9 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="tipo" id="E9808A3B-A45B-EC39-103B-D7864860DA35">
+<Attribute name="nombre" id="CE0CAE8A-66E0-F2FF-2DC1-0F9F0BFBA2C4">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-13 00:48:16 UTC</createdTime>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<use>0</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<domain>DOM2025000</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="tema" id="AD982DBF-37AF-9908-9AA0-E060C146D390">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-14 22:12:29 UTC</createdTime>
+<createdTime>2020-08-07 23:34:20 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>

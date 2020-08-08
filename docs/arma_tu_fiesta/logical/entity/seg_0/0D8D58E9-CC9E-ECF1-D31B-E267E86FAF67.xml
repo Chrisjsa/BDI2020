@@ -41,20 +41,6 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_producto" id="B7445377-350B-FE4A-C834-A9E6CAAF7304">
-<createdBy>ccross</createdBy>
-<createdTime>2020-06-13 23:34:44 UTC</createdTime>
-<generatorID>6996A3E7-6659-E4F3-5831-C4B8A993EA87</generatorID>
-<ownerDesignName>arma_tu_fiesta</ownerDesignName>
-<engineerTo>
-<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
-</engineerTo>
-<referedAttribute>52B8C67C-A4C7-4CEF-0EC9-14A27E7DAC92</referedAttribute>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>DOM10006</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="cantidad" id="206A2339-B892-3816-5BF2-58DB226D2B5A">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-13 23:40:24 UTC</createdTime>
