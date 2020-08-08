@@ -18,10 +18,11 @@ var options = {
 
 // aquí va la dirección de tu archivo, con todo y extensión
 // si el archivo es de word es NOMBRE.docx
-carbone.render("./reports/docs.docx", data, (err, result) => {
+carbone.render("./reports/simple.txt", data, options, (err, result) => {
   if (err) {
     return console.log(err)
   }
   // va a guardar la salida en esta carpeta, así la puedes revisar
-  fs.writeFileSync("./reports/rendered/result.docx", result)
+  fs.writeFileSync("./reports/rendered/result.pdf", result)
+  return
 })
