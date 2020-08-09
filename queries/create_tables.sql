@@ -336,8 +336,9 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.presupuesto (
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.detalle (
     id_detalle             INT NOT NULL AUTO_INCREMENT,
-    precio_unitario        REAL NOT NULL,
+    costo_unitario         REAL NOT NULL,
     cantidad               INT NOT NULL,
+    costo                  REAL NOT NULL,
     precio                 REAL NOT NULL,
     fk_presupuesto         INT NOT NULL,
     fk_producto            INT NULL,
