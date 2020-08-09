@@ -46,6 +46,7 @@ export const loadUser = () => async dispatch => {
     dispatch({ type: LOAD_USER, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_AUTH, payload: error.response.data.message })
+    errorTimeOut(dispatch, CLEAR_ERROR_AUTH)
   }
 }
 
@@ -68,5 +69,6 @@ export const leerRolesPermisos = () => async dispatch => {
     dispatch({ type: LEER_ROLES_PERMISOS, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_AUTH, payload: error.response.data.message })
+    errorTimeOut(dispatch, CLEAR_ERROR_AUTH)
   }
 }

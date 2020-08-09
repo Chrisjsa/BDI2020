@@ -11,7 +11,7 @@ const { LISTAR_ROL_PERMISO } = require("../sql/authQueries")
 exports.leerRoles = (req, res) => {
   connection.query(LEER_ROLES, (error, rows) => {
     if (error) {
-      return res.status(400).send(error.message)
+      return res.status(400).send({ message: error.message })
     }
 
     return res.json(rows)
@@ -21,7 +21,7 @@ exports.leerRoles = (req, res) => {
 exports.leerRolesPermisos = (req, res) => {
   connection.query(LISTAR_ROL_PERMISO, (error, rows) => {
     if (error) {
-      return res.status(400).send(error.message)
+      return res.status(400).send({ message: error.message })
     }
 
     return res.json(rows)
@@ -31,7 +31,7 @@ exports.leerRolesPermisos = (req, res) => {
 exports.crearRol = (req, res) => {
   connection.query(CREAR_ROLES, (error, rows) => {
     if (error) {
-      return res.status(400).send(error.message)
+      return res.status(400).send({ message: error.message })
     }
     return res.json(rows)
   })
@@ -40,7 +40,7 @@ exports.crearRol = (req, res) => {
 exports.actualizarRol = (req, res) => {
   connection.query(ACTUALIZAR_ROLES, (error, rows) => {
     if (error) {
-      return res.status(400).send(error.message)
+      return res.status(400).send({ message: error.message })
     }
     return res.json(rows)
   })
@@ -49,7 +49,7 @@ exports.actualizarRol = (req, res) => {
 exports.eliminarRol = (req, res) => {
   connection.query(ELIMINAR_ROLES, (error, rows) => {
     if (error) {
-      return res.status(400).send(error.message)
+      return res.status(400).send({ message: error.message })
     }
     return res.json(rows)
   })
