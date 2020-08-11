@@ -38,7 +38,7 @@ export const obtenerReporte2 = (fechas) => async (dispatch) => {
   setLoading()(dispatch);
   try {
     const res = await axios.get(
-      `api/reportes/1?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`
+      `api/reportes/2?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`
     );
     dispatch({ type: OBTENER_REPORTE_2, payload: res.data });
   } catch (error) {
@@ -52,7 +52,7 @@ export const obtenerReporte3 = (fechas) => async (dispatch) => {
   setLoading()(dispatch);
   try {
     const res = await axios.get(
-      `api/reportes/1?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`
+      `api/reportes/3?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`
     );
     dispatch({ type: OBTENER_REPORTE_3, payload: res.data });
   } catch (error) {
@@ -66,7 +66,7 @@ export const obtenerReporte4 = (fechas) => async (dispatch) => {
   setLoading()(dispatch);
   try {
     const res = await axios.get(
-      `api/reportes/1?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`
+      `api/reportes/4?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`
     );
     dispatch({ type: OBTENER_REPORTE_4, payload: res.data });
   } catch (error) {
