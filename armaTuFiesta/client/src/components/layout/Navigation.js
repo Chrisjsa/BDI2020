@@ -45,6 +45,7 @@ const Navigation = ({ user, logout, history }) => {
     <>
       <Nav className="mr-auto">{link("/dashboard", "Dashboard")}</Nav>
       <Nav>
+        {link("/reportes", "Reportes")}
         <NavDropdown title="Administrar" id="basic-nav-dropdown">
           <NavDropdown.Item>
             {link("/crud_notaria", "Notarias")}

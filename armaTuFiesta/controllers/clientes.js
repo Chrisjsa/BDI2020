@@ -9,8 +9,6 @@ const {
 
 const moment = require("moment")
 
-const { v4: uuidv4 } = require("uuid")
-
 exports.leerCliente = (req, res) => {
   connection.query(LEER_CLIENTES, (error, rows, fields) => {
     if (error) {

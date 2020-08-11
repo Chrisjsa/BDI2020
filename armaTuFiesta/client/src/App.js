@@ -15,6 +15,7 @@ import EventDashboard from "./components/pages/EventDashboard"
 import Register from "./components/auth/Register"
 import LoginPage from "./components/auth/Login"
 import PermisosPage from "./components/pages/PermisosPage"
+import ReportesPage from "./components/pages/ReportesPage"
 
 // Cruds
 import CrudNotaria from "./components/notarias/CrudNotaria"
@@ -33,6 +34,7 @@ import setAuthToken from "./utils/setAuthToken"
 import Test from "./components/Test"
 
 import Alerts from "./components/alerts/Alerts"
+import Reportes from "./components/reportes/Reportes"
 
 if (localStorage.token) {
   setAuthToken(localStorage.token)
@@ -57,6 +59,7 @@ const App = () => {
             <Route exact path="/test" component={Test} />
 
             <PrivateRoute exact path="/dashboard" component={DashboardPage} />
+            <PrivateRoute exact path="/reportes" component={ReportesPage} />
             <PrivateRoute exact path="/crud_notaria" component={CrudNotaria} />
             <PrivateRoute exact path="/crud_cliente" component={CrudCliente} />
             <PrivateRoute exact path="/crud_tip" component={CrudTip} />

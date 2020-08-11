@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
     case REMOVE_ALERT:
       return {
         ...state,
-        alerts: state.alerts.filter(alert => alert.id != action.payload),
+        alerts: state.alerts.filter(alert => alert.id !== action.payload),
       }
 
     case LOADING_ALERT:

@@ -5,8 +5,6 @@ const { monitor } = require("./middleware/monitor")
 
 const request = require("request")
 
-const client = require("jsreport-client")("http://localhost:8000", "admin", "")
-
 const useRoute = route => {
   app.use(`/api/${route}`, require(`./routes/${route}`))
 }
