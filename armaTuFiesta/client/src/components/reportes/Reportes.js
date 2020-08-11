@@ -9,28 +9,21 @@ import { connect } from "react-redux"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 
-// import { obtenterReporte1 } from "../../state/reporte/reporteActions"
+import {
+  obtenerReporte1,
+  obtenerReporte2,
+  obtenerReporte3,
+  obtenerReporte4,
+} from "../../state/reporte/reporteActions"
 
-const Reportes = () => {
+const Reportes = ({
+  obtenerReporte1,
+  obtenerReporte2,
+  obtenerReporte3,
+  obtenerReporte4,
+}) => {
   const [fechaInicial, setFechaInicial] = useState(new Date())
   const [fechaFinal, setFechaFinal] = useState(new Date())
-
-  // eliminar luego del trabajo de winkler
-
-  const obtenerReporte1 = fechas => {
-    console.log("reporte 1", fechas)
-  }
-  const obtenerReporte2 = fechas => {
-    console.log("reporte 2", fechas)
-  }
-  const obtenerReporte3 = fechas => {
-    console.log("reporte 3", fechas)
-  }
-  const obtenerReporte4 = fechas => {
-    console.log("reporte 4", fechas)
-  }
-
-  // eliminar hasta aca
 
   return (
     <>
@@ -101,6 +94,11 @@ const Reportes = () => {
 
 const mapStateToProps = state => ({})
 
-const mapStateToActions = {}
+const mapStateToActions = {
+  obtenerReporte1,
+  obtenerReporte2,
+  obtenerReporte3,
+  obtenerReporte4,
+}
 
 export default connect(mapStateToProps, mapStateToActions)(Reportes)
