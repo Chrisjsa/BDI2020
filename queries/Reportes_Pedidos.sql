@@ -1,6 +1,7 @@
 -- REPORTE 1 TOTAL DE FIESTAS POR MES
 
-SET lc_time_names = 'es_ES';
+SET lc_time_names
+= 'es_ES';
 
 SET @fecha_a = '2020-07-01';
 SET @fecha_b = '2020-08-01';
