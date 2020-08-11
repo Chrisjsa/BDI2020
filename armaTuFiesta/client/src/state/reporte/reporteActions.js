@@ -15,8 +15,8 @@ export const setLoading = () => dispatch => {
 }
 
 export const obtenerReporte1 = fechas => async dispatch => {
-  const fechaInicial = moment(fecha.fechaInicial).format("MM-DD-YYYY")
-  const fechaFinal = moment(fecha.fechaFinal).format("MM-DD-YYYY")
+  const fechaInicial = moment(fechas.fechaInicial).format("MM-DD-YYYY")
+  const fechaFinal = moment(fechas.fechaFinal).format("MM-DD-YYYY")
 
   setLoading()(dispatch)
   try {

@@ -1,4 +1,8 @@
-import { ERROR_REPORTE, LOADING_REPORTE } from "./reporteTypes"
+import {
+  ERROR_REPORTE,
+  LOADING_REPORTE,
+  OBTENER_REPORTE_1,
+} from "./reporteTypes"
 
 const initialState = { loading: false, error: null }
 

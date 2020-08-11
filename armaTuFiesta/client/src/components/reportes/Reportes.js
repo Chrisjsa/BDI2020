@@ -1,26 +1,65 @@
-import React from "react"
+import React, { useState } from "react"
 
 import ReporteItem from "./ReporteItem"
 
-import { Container } from "react-bootstrap"
+import { connect } from "react-redux"
+
+// import { obtenterReporte1 } from "../../state/reporte/reporteActions"
 
 const Reportes = () => {
-  const nums = [1, 2, 3, 4, 5]
+  const [fechaInicial, setFechaInicial] = useState(new Date())
+  const [fechaFinal, setFechaFinal] = useState(new Date())
+
   return (
     <>
-      {nums.map(num => (
-        <ReporteItem
-          title={`Yada ${num}`}
-          subtitle={`Reporte ${num}`}
-          handler={() => alert(`hello ${num}`)}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
-          quisquam cum alias sunt ipsam velit suscipit nobis doloremque nulla
-          est non esse enim, accusamus, eos harum id! Vitae, assumenda nulla.
-        </ReporteItem>
-      ))}
+      {/* Fechas */}
+      <Form>
+        {/* Fecha inicial */}
+        <Form.Group as={Col}>
+          <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
+          <DatePicker
+            selected={fechaInicial}
+            onChange={date => setFechaInicial(date)}
+            peekNextMonth
+            showMonthDropdown
+            showYearDropdown
+            className="form-control"
+            dropdownMode="select"
+          />
+        </Form.Group>
+
+        {/* Fecha final */}
+        <Form.Group as={Col}>
+          <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
+          <DatePicker
+            selected={fechaFinal}
+            onChange={date => setFechaFinal(date)}
+            peekNextMonth
+            showMonthDropdown
+            showYearDropdown
+            className="form-control"
+            dropdownMode="select"
+          />
+        </Form.Group>
+      </Form>
+
+      {/* Reportes */}
+      <ReporteItem
+        title="Reporte 1"
+        subtitle={`Reporte ${num}`}
+        handler={() => alert(`hello ${num}`)}
+        fechas={{ fechaInicial, fechaFinal }}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
+        quisquam cum alias sunt ipsam velit suscipit nobis doloremque nulla est
+        non esse enim, accusamus, eos harum id! Vitae, assumenda nulla.
+      </ReporteItem>
     </>
   )
 }
 
-export default Reportes
+const mapStateToProps = state => ({})
+
+const mapStateToActions = {}
+
+export default connect(mapStateToProps, mapStateToActions)(Reportes)
