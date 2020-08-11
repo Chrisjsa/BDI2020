@@ -55,6 +55,9 @@ const Navigation = ({ user, logout, history }) => {
           </NavDropdown.Item>
           <NavDropdown.Item>{link("/permisos", "Permisos")}</NavDropdown.Item>
           <NavDropdown.Item>{link("/crud_tip", "Tips")}</NavDropdown.Item>
+          <NavDropdown.Item>
+            {link("/metodos_pago", "Métodos de Pago")}
+          </NavDropdown.Item>
         </NavDropdown>
         <Nav.Link onClick={handleLogout}>Cerrar sesión</Nav.Link>
       </Nav>
