@@ -2,8 +2,12 @@
 
 SET lc_time_names = 'es_ES';
 
+SET @fecha_a = '2020-07-01';
+SET @fecha_b = '2020-08-01';
+
 SELECT COUNT(*) as Cantidad_Fiestas, MONTHNAME(fecha_realizacion) as Mes
 FROM arma_tu_fiesta.orden_evento
+WHERE fecha_realizacion BETWEEN @fecha_a AND @fecha_b
 GROUP BY (fecha_realizacion);
 
 -- REPORTE 2 DETALLES DE SERVICIOS POR RANGO DE FECHAS
