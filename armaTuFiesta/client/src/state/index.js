@@ -9,6 +9,7 @@ import lugarReducer from "./lugar/lugarReducer"
 import clienteReducer from "./cliente/clienteReducer"
 import alertReducer from "./alert/alertReducer"
 import tipReducer from "./tip/tipReducer"
+import reporteReducer from "./reporte/reporteReducer"
 
 export default combineReducers({
   auth: authReducer,
@@ -20,4 +21,5 @@ export default combineReducers({
   form: formReducer,
   alerts: alertReducer,
   tips: tipReducer,
+  reportes: reporteReducer,
 })

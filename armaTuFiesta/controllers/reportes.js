@@ -10,7 +10,9 @@ const {
 exports.obtenerReporte1 = (req, res) => {
   const { fechaInicial, fechaFinal } = req.query
 
-  connection.query(REPORTE_1, (error, rows) => {
+  const data = [fechaInicial, fechaFinal]
+
+  connection.query(REPORTE_1, data, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
