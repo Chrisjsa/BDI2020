@@ -2,9 +2,15 @@
 
 SELECT * FROM arma_tu_fiesta.rol;
 
--- CREATE ROL
+-- CREATE ROL Y ASIGNAR PERMISO
 
-INSERT INTO arma_tu_fiesta.rol (nombre) VALUES ('NOMBRE');
+INSERT INTO arma_tu_fiesta.rol (nombre) VALUES ('NOMBRE_ROL');
+
+SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'NOMBRE_ROL') as tablaRol);
+
+INSERT INTO arma_tu_fiesta.rol_permiso (fk_rol, fk_permiso, habilitado) VALUES (@rol, ID_PERMISO, true); -- ESTA LINEA SE REPITEN POR CADA PERMISO SELECCIONADO
+#INSERT INTO arma_tu_fiesta.rol_permiso (fk_rol, fk_permiso, habilitado) VALUES (@rol, 2, true);
+#INSERT INTO arma_tu_fiesta.rol_permiso (fk_rol, fk_permiso, habilitado) VALUES (@rol, 3, true);
 
 -- DELETE ROL
 
@@ -35,3 +41,4 @@ SET @usurol = 'ID_USUARIO';
 SELECT usu.id_usuario, per.descripcion as permiso
 FROM arma_tu_fiesta.usuario as usu, arma_tu_fiesta.permiso as per, arma_tu_fiesta.rol_permiso as rolper
 WHERE usu.id_usuario = @usurol AND usu.fk_rol = rolper.fk_rol AND rolper.fk_permiso = per.id_permiso;
+
