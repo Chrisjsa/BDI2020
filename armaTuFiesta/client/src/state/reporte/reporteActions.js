@@ -7,19 +7,18 @@ import {
   OBTENER_REPORTE_4,
 } from "./reporteTypes"
 import axios from "axios"
-import setAuthToken from "../../utils/setAuthToken"
 
 import moment from "moment"
 
 const config = { headers: { "Content-Type": "application/json" } }
 
-export const setLoading = () => (dispatch) => {
+export const setLoading = () => dispatch => {
   return dispatch({ type: LOADING_REPORTE })
 }
 
-export const obtenerReporte1 = (fechas) => async (dispatch) => {
-  const fechaInicial = moment(fechas.fechaInicial).format("MM-DD-YYYY")
-  const fechaFinal = moment(fechas.fechaFinal).format("MM-DD-YYYY")
+export const obtenerReporte1 = fechas => async dispatch => {
+  const fechaInicial = moment(fechas.fechaInicial).format("YYYY-MM-DD")
+  const fechaFinal = moment(fechas.fechaFinal).format("YYYY-MM-DD")
 
   setLoading()(dispatch)
   try {
@@ -32,9 +31,9 @@ export const obtenerReporte1 = (fechas) => async (dispatch) => {
   }
 }
 
-export const obtenerReporte2 = (fechas) => async (dispatch) => {
-  const fechaInicial = moment(fechas.fechaInicial).format("MM-DD-YYYY")
-  const fechaFinal = moment(fechas.fechaFinal).format("MM-DD-YYYY")
+export const obtenerReporte2 = fechas => async dispatch => {
+  const fechaInicial = moment(fechas.fechaInicial).format("YYYY-MM-DD")
+  const fechaFinal = moment(fechas.fechaFinal).format("YYYY-MM-DD")
   setLoading()(dispatch)
   try {
     const res = await axios.get(
@@ -46,9 +45,9 @@ export const obtenerReporte2 = (fechas) => async (dispatch) => {
   }
 }
 
-export const obtenerReporte3 = (fechas) => async (dispatch) => {
-  const fechaInicial = moment(fechas.fechaInicial).format("MM-DD-YYYY")
-  const fechaFinal = moment(fechas.fechaFinal).format("MM-DD-YYYY")
+export const obtenerReporte3 = fechas => async dispatch => {
+  const fechaInicial = moment(fechas.fechaInicial).format("YYYY-MM-DD")
+  const fechaFinal = moment(fechas.fechaFinal).format("YYYY-MM-DD")
   setLoading()(dispatch)
   try {
     const res = await axios.get(
@@ -60,9 +59,9 @@ export const obtenerReporte3 = (fechas) => async (dispatch) => {
   }
 }
 
-export const obtenerReporte4 = (fechas) => async (dispatch) => {
-  const fechaInicial = moment(fechas.fechaInicial).format("MM-DD-YYYY")
-  const fechaFinal = moment(fechas.fechaFinal).format("MM-DD-YYYY")
+export const obtenerReporte4 = fechas => async dispatch => {
+  const fechaInicial = moment(fechas.fechaInicial).format("YYYY-MM-DD")
+  const fechaFinal = moment(fechas.fechaFinal).format("YYYY-MM-DD")
   setLoading()(dispatch)
   try {
     const res = await axios.get(
