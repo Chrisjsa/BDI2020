@@ -41,6 +41,18 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="costo_unitario" id="6471670E-9AFD-BBF3-F9A1-41A6FA39D4FA">
+<createdBy>ccross</createdBy>
+<createdTime>2020-06-13 23:40:36 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<domain>DOM10005</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="cantidad" id="206A2339-B892-3816-5BF2-58DB226D2B5A">
 <createdBy>ccross</createdBy>
 <createdTime>2020-06-13 23:40:24 UTC</createdTime>
@@ -53,16 +65,28 @@
 <domain>DOM2025000</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="precio_unitario" id="6471670E-9AFD-BBF3-F9A1-41A6FA39D4FA">
+<Attribute name="costo" id="393302C1-C3F5-B73C-1EC7-F874CE875D21">
 <createdBy>ccross</createdBy>
-<createdTime>2020-06-13 23:40:36 UTC</createdTime>
+<createdTime>2020-08-09 19:58:08 UTC</createdTime>
 <ownerDesignName>arma_tu_fiesta</ownerDesignName>
 <engineerTo>
 <item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
 </engineerTo>
 <use>0</use>
-<logicalDatatype>LOGDT021</logicalDatatype>
-<domain>DOM10005</domain>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio" id="32B5EE9A-CADC-BDD7-670C-FCBECD2009CE">
+<createdBy>ccross</createdBy>
+<createdTime>2020-08-09 19:58:11 UTC</createdTime>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="id_usuario" id="F22473E6-357A-7E0C-9AAF-AF1662408F92">
