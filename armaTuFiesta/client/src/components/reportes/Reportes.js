@@ -2,7 +2,12 @@ import React, { useState } from "react"
 
 import ReporteItem from "./ReporteItem"
 
+import { Form, Col } from "react-bootstrap"
+
 import { connect } from "react-redux"
+
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 
 // import { obtenterReporte1 } from "../../state/reporte/reporteActions"
 
@@ -46,8 +51,8 @@ const Reportes = () => {
       {/* Reportes */}
       <ReporteItem
         title="Reporte 1"
-        subtitle={`Reporte ${num}`}
-        handler={() => alert(`hello ${num}`)}
+        subtitle="Reporte 1"
+        handler={() => alert(`hello reporte`)}
         fechas={{ fechaInicial, fechaFinal }}
       >
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
