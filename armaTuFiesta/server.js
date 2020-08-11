@@ -36,6 +36,7 @@ routes = [
   "cartas",
   "roles",
   "status",
+  "reportes",
 ]
 routes.forEach(route => useRoute(route))
 
