@@ -30,6 +30,8 @@ const Reportes = () => {
     console.log("reporte 4", fechas)
   }
 
+  // eliminar hasta aca
+
   return (
     <>
       {/* Fechas */}
@@ -67,6 +69,7 @@ const Reportes = () => {
       </Form>
 
       {/* Reportes */}
+      <h2>Reportes</h2>
       <ReporteItem
         title="Reporte 1"
         handler={e => obtenerReporte1({ fechaInicial, fechaFinal })}
