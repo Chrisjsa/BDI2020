@@ -5,12 +5,25 @@ import {
   CREAR_ROL,
   ELIMINAR_ROL,
   LEER_PERMISO,
+  ASIGNAR_ROL_PERMISO,
+  LEER_ROL_PERMISOS,
 } from "./rolTypes"
 
-const initialState = { loading: false, error: null }
+const initialState = {
+  loading: false,
+  error: null,
+  rolesPermisos: [],
+  permisos: [],
+}
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case LEER_ROL_PERMISOS:
+      return { ...state, loading: false, rolesPermisos: action.payload }
+
+    case ASIGNAR_ROL_PERMISO:
+      return { ...state, loading: false }
+
     case LEER_PERMISO:
       return { ...state, loading: false, permisos: action.payload }
 

@@ -13,13 +13,7 @@ const RolItem = ({ rol }) => {
         </Accordion.Toggle>
       </Card.Header>
       <Accordion.Collapse eventKey={rol.id}>
-        <Card.Body>
-          <ul>
-            {permisos.map(permiso => (
-              <li>{permiso}</li>
-            ))}
-          </ul>
-        </Card.Body>
+        <Card.Body>culo</Card.Body>
       </Accordion.Collapse>
     </Card>
   )

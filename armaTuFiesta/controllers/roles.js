@@ -4,10 +4,10 @@ const {
   LEER_PERMISOS,
   ACTUALIZAR_ROLES,
   ELIMINAR_ROLES,
-  CREAR_ROLES,
+  CREAR_ROL,
+  ASIGNAR_ROL_PERMISO,
+  LEER_ROL_PERMISOS,
 } = require("../sql/rolesQueries")
-
-const { LISTAR_ROL_PERMISO } = require("../sql/authQueries")
 
 exports.leerRoles = (req, res) => {
   connection.query(LEER_ROLES, (error, rows) => {
@@ -30,7 +30,7 @@ exports.leerPermisos = (req, res) => {
 }
 
 exports.leerRolesPermisos = (req, res) => {
-  connection.query(LISTAR_ROL_PERMISO, (error, rows) => {
+  connection.query(LEER_ROL_PERMISOS, (error, rows) => {
     if (error) {
       return res.status(400).send({ message: error.message })
     }
@@ -39,8 +39,29 @@ exports.leerRolesPermisos = (req, res) => {
   })
 }
 
+exports.asignarRolPermisos = (req, res) => {
+  const { nombre, permisos } = req.body
+
+  // Se crea el rol por nombre
+  connection.query(CREAR_ROL, [nombre], (error, rows) => {
+    if (error) return res.status(400).send({ message: error.message })
+
+    permisos.map(permiso => {
+      connection.query(
+        ASIGNAR_ROL_PERMISO,
+        [nombre, permiso],
+        (error, rows) => {
+          if (error) return res.status(400).send({ message: error.message })
+        }
+      )
+    })
+
+    return res.send("Success")
+  })
+}
+
 exports.crearRol = (req, res) => {
-  connection.query(CREAR_ROLES, (error, rows) => {
+  connection.query(CREAR_ROL, (error, rows) => {
     if (error) {
       return res.status(400).send({ message: error.message })
     }

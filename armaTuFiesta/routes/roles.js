@@ -8,6 +8,7 @@ const {
   leerRoles,
   leerPermisos,
   leerRolesPermisos,
+  asignarRolPermisos,
   crearRol,
   actualizarRol,
   eliminarRol,
@@ -22,6 +23,8 @@ router.get("/leerRolesPermisos", auth, leerRolesPermisos)
 
 // // Create
 router.post("/nueva", middleware, crearRol)
+
+router.post("/asignarRolPermisos", middleware, asignarRolPermisos)
 
 // // Update
 router.put("/actualizar", middleware, actualizarRol)

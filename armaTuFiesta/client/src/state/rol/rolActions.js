@@ -5,6 +5,8 @@ import {
   CREAR_ROL,
   ELIMINAR_ROL,
   LEER_PERMISO,
+  ASIGNAR_ROL_PERMISO,
+  LEER_ROL_PERMISOS,
 } from "./rolTypes"
 import axios from "axios"
 import setAuthToken from "../../utils/setAuthToken"
@@ -50,6 +52,26 @@ export const leerPermisos = () => async dispatch => {
   try {
     const res = await axios.get(`api/roles/leerPermiso`)
     dispatch({ type: LEER_PERMISO, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_ROL, payload: error.response.data.message })
+  }
+}
+
+export const asignarRolPermisos = data => async dispatch => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.post(`api/roles/asignarRolPermisos`, data, config)
+    dispatch({ type: ASIGNAR_ROL_PERMISO, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_ROL, payload: error.response.data.message })
+  }
+}
+
+export const leerRolPermisos = () => async dispatch => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.get(`api/roles/leerRolesPermisos`)
+    dispatch({ type: LEER_ROL_PERMISOS, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_ROL, payload: error.response.data.message })
   }

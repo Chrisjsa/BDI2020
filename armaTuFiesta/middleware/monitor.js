@@ -8,6 +8,9 @@ exports.monitor = (req, res, next) => {
   console.log("body is:")
   console.table(body)
 
+  console.log("body is:")
+  console.log(body)
+
   console.log("params are:")
   console.table(params)
 
