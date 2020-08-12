@@ -7,6 +7,12 @@ const {
   OBTENER_ROL_USUARIO,
   OBTENER_PERMISO_USUARIO,
 } = require("../sql/authQueries")
+
+const {
+  LEER_ROL_USUARIO,
+  LEER_PERMISOS_USUARIO,
+} = require("../sql/rolesQueries")
+
 const jwt = require("jsonwebtoken")
 
 exports.signUp = async (req, res) => {
@@ -70,38 +76,31 @@ exports.signOut = (req, res) => {
 }
 
 exports.loadUser = (req, res) => {
+  var user = undefined
   connection.query(LOAD_USER, [req.userId], async (error, rows) => {
     if (error) {
       return res.status(400).send(error)
     }
 
-    let user = rows.pop()
+    user = rows.pop()
     user.password = undefined
+    console.log("query 1", user)
   })
 
-  // se agrego este select adicional
-  connection.query("PERMISOS_USUARIO", [req.userId], async (error, rows) => {
+  connection.query(LEER_PERMISOS_USUARIO, [req.userId], async (error, rows) => {
     if (error) {
       return res.status(400).send(error)
     }
 
-    // esta operacion asigna un nuevo campo al user, una lista de permisos
-    user.permisos = rows
+    user.permisos = rows[1].map(row => row.permiso)
   })
 
-  connection.query("ROL_USUARIO", [req.userId], async (error, rows) => {
+  connection.query(LEER_ROL_USUARIO, [req.userId], async (error, rows) => {
     if (error) {
       return res.status(400).send(error)
     }
 
-    // esta operacion asigna un nuevo campo al user, el nombre de su rol
-    user.rol = rows.pop()
-    // usamos rol.pop() para obtener el unico elemento de esta lista
-    // los rows son listas de objetos [{ obj1 }, ... , {objn}]
-    // el .pop() saca el ultimo objeto de la lista, en este caso el único
-    // que es el nombre del rol
+    user = { ...user, ...rows.pop().pop() }
+    return res.json(user)
   })
-
-  // finalmente se manda el usuario con roles y permisos al front
-  return res.json(user)
 }

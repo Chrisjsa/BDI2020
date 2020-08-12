@@ -26,4 +26,4 @@ exports.LEER_ROL_USUARIO =
   "SET @usurol = ?; SELECT rol.nombre as rol FROM arma_tu_fiesta.usuario as usu, arma_tu_fiesta.rol as rol WHERE usu.fk_rol = rol.id_rol AND usu.id_usuario = @usurol;"
 
 exports.LEER_PERMISOS_USUARIO =
-  "SET @usurol = ?; SELECT usu.id_usuario, per.nombre as permiso FROM arma_tu_fiesta.usuario as usu, arma_tu_fiesta.permiso as per, arma_tu_fiesta.rol_permiso as rolper WHERE usu.id_usuario = @usurol AND usu.fk_rol = rolper.fk_rol AND rolper.fk_permiso = per.id_permiso;"
+  "SET @usurol = ?; SELECT per.nombre as permiso FROM arma_tu_fiesta.usuario as usu, arma_tu_fiesta.permiso as per, arma_tu_fiesta.rol_permiso as rolper WHERE usu.id_usuario = @usurol AND usu.fk_rol = rolper.fk_rol AND rolper.fk_permiso = per.id_permiso;"
