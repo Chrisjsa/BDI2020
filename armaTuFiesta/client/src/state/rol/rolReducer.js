@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
       return { ...state, loading: false, rolesPermisos: action.payload }
 
     case ASIGNAR_ROL_PERMISO:
-      return { ...state, loading: false }
+      return { ...state }
 
     case LEER_PERMISO:
       return { ...state, loading: false, permisos: action.payload }

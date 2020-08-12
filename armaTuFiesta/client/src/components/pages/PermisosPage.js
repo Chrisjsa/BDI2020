@@ -9,7 +9,8 @@ import {
   Col,
   Button,
   Row,
-  Accordion,
+  ListGroup,
+  ListGroupItem,
 } from "react-bootstrap"
 
 import { connect } from "react-redux"
@@ -76,8 +77,10 @@ const PermisosPage = ({
     setCurrentPermisos([])
     setNuevoRol("")
     setAlert("Rol creado satisfactoriamente", "success")
-    leerRolPermisos()
-    leerPermisos()
+    setTimeout(() => {
+      leerRolPermisos()
+      leerPermisos()
+    }, 1000)
   }
 
   const roles = _.uniq(arrayOfValues(rolesPermisos, "rol"))
@@ -122,18 +125,23 @@ const PermisosPage = ({
           </Form>
 
           <h2>Roles</h2>
-          <Accordion>
-            {roles.map(rol => (
-              <Button
-                block
-                variant="link"
-                size="sm"
-                onClick={e => clickRol(rol)}
-              >
-                {rol}
-              </Button>
-            ))}
-          </Accordion>
+          <ListGroup>
+            {loadingPermisos ? (
+              <Loading />
+            ) : (
+              roles.map(rol => (
+                <ListGroup.Item
+                  action
+                  block
+                  variant="link"
+                  size="sm"
+                  onClick={e => clickRol(rol)}
+                >
+                  {rol}
+                </ListGroup.Item>
+              ))
+            )}
+          </ListGroup>
         </Col>
         <Col>
           <h2 className={nuevoRolValidation}>Permisos</h2>
