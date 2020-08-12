@@ -1,20 +1,32 @@
 -- LISTAR ROLES
 
-SELECT * FROM arma_tu_fiesta.rol;
+SELECT *
+FROM arma_tu_fiesta.rol;
 
 -- LISTAR PERMISOS
 
-SELECT * FROM arma_tu_fiesta.permiso;
+SELECT *
+FROM arma_tu_fiesta.permiso;
 
 -- CREATE ROL Y ASIGNAR PERMISO
 
-INSERT INTO arma_tu_fiesta.rol (nombre) VALUES ('NOMBRE_ROL');
+INSERT INTO arma_tu_fiesta.rol
+    (nombre)
+VALUES
+    ('NOMBRE_ROL');
 
-SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'NOMBRE_ROL') as tablaRol);
+SET @rol = (SELECT pkRol
+FROM (SELECT id_rol as pkRol
+    FROM arma_tu_fiesta.rol
+    WHERE nombre = 'NOMBRE_ROL') as tablaRol);
 
-INSERT INTO arma_tu_fiesta.rol_permiso (fk_rol, fk_permiso, habilitado) VALUES (@rol, ID_PERMISO, true); -- ESTA LINEA SE REPITEN POR CADA PERMISO SELECCIONADO
-#INSERT INTO arma_tu_fiesta.rol_permiso (fk_rol, fk_permiso, habilitado) VALUES (@rol, 2, true);
-#INSERT INTO arma_tu_fiesta.rol_permiso (fk_rol, fk_permiso, habilitado) VALUES (@rol, 3, true);
+INSERT INTO arma_tu_fiesta.rol_permiso
+    (fk_rol, fk_permiso, habilitado)
+VALUES
+    (@rol, ID_PERMISO, true);
+-- ESTA LINEA SE REPITEN POR CADA PERMISO SELECCIONADO
+--INSERT INTO arma_tu_fiesta.rol_permiso (fk_rol, fk_permiso, habilitado) VALUES (@rol, 2, true);
+--INSERT INTO arma_tu_fiesta.rol_permiso (fk_rol, fk_permiso, habilitado) VALUES (@rol, 3, true);
 
 -- DELETE ROL
 
@@ -36,7 +48,9 @@ WHERE rol.id_rol = rolper.fk_rol AND per.id_permiso = rolper.fk_permiso;
 
 SET @usurol = 'USUARIO';
 
-SELECT rol.nombre as rol FROM arma_tu_fiesta.usuario as usu, arma_tu_fiesta.rol as rol WHERE usu.fk_rol = rol.id_rol AND usu.id_usuario = @usurol;
+SELECT rol.nombre as rol
+FROM arma_tu_fiesta.usuario as usu, arma_tu_fiesta.rol as rol
+WHERE usu.fk_rol = rol.id_rol AND usu.id_usuario = @usurol;
 
 -- OBTENER PERMISOS DE UN USUARIO EN ESPECIFICO
 

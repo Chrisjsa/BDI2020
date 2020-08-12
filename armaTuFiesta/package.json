@@ -37,6 +37,7 @@
     "named-placeholders": "^1.1.2",
     "node-gyp": "^7.0.0",
     "npx": "^10.2.2",
+    "react-credit-cards": "^0.8.3",
     "redux-form": "^8.3.6",
     "redux-forms": "^1.0.0-3",
     "request": "^2.88.2",
