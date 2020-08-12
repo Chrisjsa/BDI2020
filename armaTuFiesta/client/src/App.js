@@ -16,6 +16,7 @@ import Register from "./components/auth/Register"
 import LoginPage from "./components/auth/Login"
 import PermisosPage from "./components/pages/PermisosPage"
 import ReportesPage from "./components/pages/ReportesPage"
+import MetodosPage from "./components/pages/MetodosPage"
 
 // Cruds
 import CrudNotaria from "./components/notarias/CrudNotaria"
@@ -64,6 +65,8 @@ const App = () => {
             <PrivateRoute exact path="/crud_cliente" component={CrudCliente} />
             <PrivateRoute exact path="/crud_tip" component={CrudTip} />
             <PrivateRoute exact path="/permisos" component={PermisosPage} />
+            <PrivateRoute exact path="/metodos_pago" component={MetodosPage} />
+
             <PrivateRoute
               exact
               path="/carta_solteria"
