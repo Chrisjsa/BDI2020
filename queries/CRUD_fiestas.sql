@@ -1,3 +1,13 @@
+-- LISTAR TIPO DE EVENTO (De aqui se obtiene el nombre del evento para ver los temas que tiene)
+
+SELECT eve.nombre FROM arma_tu_fiesta.evento as eve GROUP BY eve.nombre;
+
+-- LISTAR TEMAS DEL EVENTO SELECCIONADO
+
+SELECT eve.id_evento, eve.nombre, eve.cortejo, tem.nombre
+FROM arma_tu_fiesta.evento as eve, arma_tu_fiesta.tema as tem
+WHERE eve.nombre = 'NOMBRE_EVENTO' AND eve.fk_tema = tem.id_tema;
+
 -- PARAMETRIZAR
 
 SET @freserva = '2020-07-25';
