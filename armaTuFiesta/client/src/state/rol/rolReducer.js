@@ -4,12 +4,16 @@ import {
   LEER_ROL,
   CREAR_ROL,
   ELIMINAR_ROL,
+  LEER_PERMISO,
 } from "./rolTypes"
 
 const initialState = { loading: false, error: null }
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case LEER_PERMISO:
+      return { ...state, loading: false, permisos: action.payload }
+
     case LOADING_ROL:
       return { ...state, loading: true }
 

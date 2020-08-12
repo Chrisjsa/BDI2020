@@ -15,13 +15,22 @@ import { connect } from "react-redux"
 
 import { leerRolesPermisos } from "../../state/auth/authActions"
 
+import { leerPermisos } from "../../state/rol/rolActions"
+
 import Hero from "../layout/Hero"
+import Loading from "../layout/Loading"
 
 import RolItem from "../roles/RolItem"
 
-const PermisosPage = ({ leerRolesPermisos }) => {
+const PermisosPage = ({
+  loadingPermisos,
+  leerRolesPermisos,
+  permisos,
+  leerPermisos,
+}) => {
   useEffect(() => {
     leerRolesPermisos()
+    leerPermisos()
   }, [])
 
   const onChange = e => {
@@ -41,8 +50,6 @@ const PermisosPage = ({ leerRolesPermisos }) => {
     "leerNotaria",
   ]
 
-  // <Form.Check inline label="1" type={type} id={`inline-${type}-1`} />
-
   const [roles, setRoles] = useState([
     { id: 1, nombre: "superuser", permisos: initialPermisos },
     {
@@ -54,29 +61,6 @@ const PermisosPage = ({ leerRolesPermisos }) => {
   ])
 
   const [nuevoRol, setNuevoRol] = useState("")
-
-  const permisos = [
-    "insertarNotaria",
-    "eliminarNotaria",
-    "actualizarNotaria",
-    "leerNotaria",
-    "insertarCliente",
-    "eliminarCliente",
-    "actualizarCliente",
-    "leerCliente",
-    "insertarEvento",
-    "eliminarEvento",
-    "actualizarEvento",
-    "leerEvento",
-    "insertarServicioTercerizado",
-    "eliminarServicioTercerizado",
-    "actualizarServicioTercerizado",
-    "leerServicioTercerizado",
-    "insertarProveedor",
-    "eliminarProveedor",
-    "actualizarProveedor",
-    "leerProveedor",
-  ]
 
   const [currentPermisos, setCurrentPermisos] = useState([
     "insertarNotaria",
@@ -132,6 +116,8 @@ const PermisosPage = ({ leerRolesPermisos }) => {
               <br />
               (Debe ser mayor a tres caracteres)
             </div>
+          ) : loadingPermisos ? (
+            <Loading />
           ) : (
             <Card>
               <Card.Body className="permisos">
@@ -139,9 +125,9 @@ const PermisosPage = ({ leerRolesPermisos }) => {
                   <div className="permiso">
                     <Form.Check
                       type="checkbox"
-                      label={permiso}
-                      value={permiso}
-                      checked={currentPermisos.includes(permiso)}
+                      label={permiso.nombre}
+                      value={permiso.nombre}
+                      checked={currentPermisos.includes(permiso.nombre)}
                       onChange={onChange}
                     />
                   </div>
@@ -155,11 +141,12 @@ const PermisosPage = ({ leerRolesPermisos }) => {
   )
 }
 
-const mapStateToActions = { leerRolesPermisos }
+const mapStateToActions = { leerPermisos, leerRolesPermisos }
 
 const mapStateToProps = state => ({
   roles: state.auth.roles,
-  permisos: state.auth.permisos,
+  permisos: state.rols.permisos,
+  loadingPermisos: state.rols.loading,
 })
 
 export default connect(mapStateToProps, mapStateToActions)(PermisosPage)

@@ -15,7 +15,7 @@ export const leerEventosPorUsuario = usuario => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get(
-      `api/eventos/leerEventosPorUsuario?correo=${usuario.correo}`
+      `api/eventos/leerEventosPorUsuario?correo=${usuario.username}`
     )
 
     dispatch({ type: LEER_EVENTOS_POR_USUARIO, payload: res.data })

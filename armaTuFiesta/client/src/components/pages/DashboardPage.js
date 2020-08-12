@@ -45,11 +45,15 @@ const DashboardPage = ({
           <div className="display-2 mb-4">Hola, {user.p_nombre}</div>
           <h1 className="mt-4">Tus eventos</h1>
 
-          <CardColumns>
-            {eventos.map(evento => (
-              <EventoItem evento={evento} />
-            ))}
-          </CardColumns>
+          {eventos.length >= 0 ? (
+            <CardColumns>
+              {eventos.map(evento => (
+                <EventoItem evento={evento} />
+              ))}
+            </CardColumns>
+          ) : (
+            <div>No tienes eventos aún...</div>
+          )}
 
           <h1 className="mt-4 mb-3">Tus trámites</h1>
 

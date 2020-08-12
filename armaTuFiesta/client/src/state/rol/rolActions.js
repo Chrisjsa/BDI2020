@@ -4,6 +4,7 @@ import {
   LEER_ROL,
   CREAR_ROL,
   ELIMINAR_ROL,
+  LEER_PERMISO,
 } from "./rolTypes"
 import axios from "axios"
 import setAuthToken from "../../utils/setAuthToken"
@@ -39,6 +40,16 @@ export const eliminarRol = idRoll => async dispatch => {
   try {
     const res = await axios.delete(`api/roles/eliminar/${idRoll}`, config)
     dispatch({ type: ELIMINAR_ROL, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_ROL, payload: error.response.data.message })
+  }
+}
+
+export const leerPermisos = () => async dispatch => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.get(`api/roles/leerPermiso`)
+    dispatch({ type: LEER_PERMISO, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_ROL, payload: error.response.data.message })
   }
