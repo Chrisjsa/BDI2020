@@ -14,18 +14,18 @@ import { errorTimeOut } from "../../utils/"
 
 const config = { headers: { "Content-Type": "application/json" } }
 
-export const setLoading = () => dispatch => {
+export const setLoading = () => (dispatch) => {
   return dispatch({ type: LOADING_CLIENTE })
 }
 
-export const setCurrentCliente = cliente => dispatch => {
+export const setCurrentCliente = (cliente) => (dispatch) => {
   dispatch({
     type: SET_CURRENT_CLIENTE,
     payload: cliente,
   })
 }
 
-export const leerClientes = () => async dispatch => {
+export const leerClientes = () => async (dispatch) => {
   setLoading()(dispatch)
   try {
     const res = await axios.get(`api/clientes/`, config)
@@ -37,7 +37,7 @@ export const leerClientes = () => async dispatch => {
   }
 }
 
-export const insertarCliente = cliente => async dispatch => {
+export const insertarCliente = (cliente) => async (dispatch) => {
   setLoading()(dispatch)
   try {
     const res = await axios.post(`api/clientes/nuevo`, cliente, config)
@@ -50,7 +50,7 @@ export const insertarCliente = cliente => async dispatch => {
   }
 }
 
-export const actualizarCliente = cliente => async dispatch => {
+export const actualizarCliente = (cliente) => async (dispatch) => {
   setLoading()(dispatch)
   try {
     const res = await axios.put(`api/clientes/actualizar`, cliente, config)
@@ -62,7 +62,7 @@ export const actualizarCliente = cliente => async dispatch => {
   }
 }
 
-export const eliminarCliente = idCliente => async dispatch => {
+export const eliminarCliente = (idCliente) => async (dispatch) => {
   setLoading()(dispatch)
   try {
     const res = await axios.delete(`api/clientes/eliminar/${idCliente}`, config)

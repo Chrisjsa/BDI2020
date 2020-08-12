@@ -1,0 +1,5 @@
+export const ERROR_ROL = "ERROR_ROL"
+export const LOADING_ROL = "LOADING_ROL"
+export const LEER_ROL = "LEER_ROL"
+export const CREAR_ROL = "CREAR_ROL"
+export const ELIMINAR_ROL = "ELIMINAR_ROL"
