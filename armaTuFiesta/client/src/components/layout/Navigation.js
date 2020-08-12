@@ -8,7 +8,9 @@ import logo from "../../img/logo.png"
 import { connect } from "react-redux"
 import { logout } from "../../state/auth/authActions"
 
-const Navigation = ({ user, logout, history }) => {
+const Navigation = ({ user, logout, history, isAuthenticated }) => {
+  const permisos = user && user.permisos
+
   const handleLogin = () => {
     history.push("/login")
   }
@@ -71,14 +73,15 @@ const Navigation = ({ user, logout, history }) => {
           <img src={logo} className="mr-2" alt="Arma Tu Fiesta" />
           <h4>ArmaTuFiesta</h4>
         </Navbar.Brand>
-        {user.isAuthenticated ? <AuthLinks /> : <GuestLinks />}
+        {isAuthenticated ? <AuthLinks /> : <GuestLinks />}
       </Navbar>
     </div>
   )
 }
 
 const mapStateToProps = state => ({
-  user: state.auth,
+  user: state.auth.user,
+  isAuthenticated: state.auth.isAuthenticated,
 })
 
 export default withRouter(connect(mapStateToProps, { logout })(Navigation))

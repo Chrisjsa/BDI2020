@@ -46,11 +46,13 @@ const DashboardPage = ({
           <h1 className="mt-4">Tus eventos</h1>
 
           {eventos.length >= 0 ? (
-            <CardColumns>
-              {eventos.map(evento => (
-                <EventoItem evento={evento} />
-              ))}
-            </CardColumns>
+            <div className="scrollable" style={{ maxHeight: "50vh" }}>
+              <CardColumns>
+                {eventos.map(evento => (
+                  <EventoItem evento={evento} />
+                ))}
+              </CardColumns>
+            </div>
           ) : (
             <div>No tienes eventos aún...</div>
           )}

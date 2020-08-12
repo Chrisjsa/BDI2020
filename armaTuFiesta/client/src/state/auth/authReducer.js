@@ -17,7 +17,7 @@ const initialState = {
   error: undefined,
   isAuthenticated: false,
   token: localStorage.getItem("token"),
-  user: null,
+  user: undefined,
   roles: [],
 }
 

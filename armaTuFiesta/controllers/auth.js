@@ -38,7 +38,7 @@ exports.signIn = (req, res) => {
 
   connection.query(SIGN_IN, [username, password], async (error, rows) => {
     if (error) {
-      return res.status(400).send(error)
+      return res.status(400).send({ message: error })
     }
 
     const user = rows.pop()
@@ -84,7 +84,6 @@ exports.loadUser = (req, res) => {
 
     user = rows.pop()
     user.password = undefined
-    console.log("query 1", user)
   })
 
   connection.query(LEER_PERMISOS_USUARIO, [req.userId], async (error, rows) => {
@@ -93,6 +92,7 @@ exports.loadUser = (req, res) => {
     }
 
     user.permisos = rows[1].map(row => row.permiso)
+    console.log("query2", user)
   })
 
   connection.query(LEER_ROL_USUARIO, [req.userId], async (error, rows) => {
@@ -101,6 +101,8 @@ exports.loadUser = (req, res) => {
     }
 
     user = { ...user, ...rows.pop().pop() }
+
+    console.log("query3", user)
     return res.json(user)
   })
 }
