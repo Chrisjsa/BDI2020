@@ -7,6 +7,8 @@ const {
   CREAR_ROL,
   ASIGNAR_ROL_PERMISO,
   LEER_ROL_PERMISOS,
+  LEER_ROL_USUARIO,
+  LEER_PERMISOS_USUARIO,
 } = require("../sql/rolesQueries")
 
 exports.leerRoles = (req, res) => {
@@ -46,7 +48,7 @@ exports.asignarRolPermisos = (req, res) => {
   connection.query(CREAR_ROL, [nombre], (error, rows) => {
     if (error) return res.status(400).send({ message: error.message })
 
-    permisos.map(permiso => {
+    permisos.map((permiso) => {
       connection.query(
         ASIGNAR_ROL_PERMISO,
         [nombre, permiso],
@@ -83,6 +85,26 @@ exports.eliminarRol = (req, res) => {
     if (error) {
       return res.status(400).send({ message: error.message })
     }
+    return res.json(rows)
+  })
+}
+
+exports.leerRolesUsuario = (req, res) => {
+  connection.query(LEER_ROL_USUARIO, (error, rows) => {
+    if (error) {
+      return res.status(400).send({ message: error.message })
+    }
+
+    return res.json(rows)
+  })
+}
+
+exports.leerPermisosUsuario = (req, res) => {
+  connection.query(LEER_PERMISOS_USUARIO, (error, rows) => {
+    if (error) {
+      return res.status(400).send({ message: error.message })
+    }
+
     return res.json(rows)
   })
 }

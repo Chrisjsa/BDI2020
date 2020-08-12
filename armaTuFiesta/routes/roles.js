@@ -12,6 +12,8 @@ const {
   crearRol,
   actualizarRol,
   eliminarRol,
+  leerPermisosUsuario,
+  leerRolesUsuario,
 } = require("../controllers/roles")
 
 // Read
@@ -20,6 +22,10 @@ router.get("/leer", auth, leerRoles)
 router.get("/leerPermiso", auth, leerPermisos)
 
 router.get("/leerRolesPermisos", auth, leerRolesPermisos)
+
+router.get("/leerRolesUsuario", auth, leerRolesUsuario)
+
+router.get("/leerPermisosUsuario", auth, leerPermisosUsuario)
 
 // // Create
 router.post("/nueva", middleware, crearRol)
