@@ -2,8 +2,6 @@ import React from "react"
 import { withRouter, Link } from "react-router-dom"
 import { connect } from "react-redux"
 
-import Events from "../events/Events"
-
 import { Container, Button } from "react-bootstrap"
 
 import ballons from "../../img/ballons.png"
@@ -32,8 +30,7 @@ const DashboardPage = ({ user, events, history, loading }) => {
         <>
           <div className="display-2 mb-4">Hola, {user.p_nombre}</div>
           <h1 className="mt-4">Tus eventos</h1>
-          {events.events.length > 0 ? <Events /> : <NoEvents />}
-
+          <code className="text-center">En construcción</code>
           <h1 className="mt-4 mb-3">Tus trámites</h1>
           <Button as={Link} to="/carta_solteria">
             Carta de soltería

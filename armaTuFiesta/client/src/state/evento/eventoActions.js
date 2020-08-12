@@ -1,30 +1,26 @@
 import {
-  SET_CURRENT_SERVICE,
-  SET_CURRENT_EVENT,
-  UPDATE_STATUS,
-  CLEAR_ERROR_EVENTO,
-} from "./eventoTypes";
-import { errorTimeOut } from "../../utils/";
-export const setCurrentService = (serviceId) => (dispatch) => {
-  console.log("eventAct, serviceId =", serviceId);
-  dispatch({
-    type: SET_CURRENT_SERVICE,
-    payload: serviceId,
-  });
-};
+  ERROR_EVENTO,
+  LOADING_EVENTO,
+  LEER_EVENTOS_POR_USUARIO,
+} from "./eventoTypes"
+import axios from "axios"
+import setAuthToken from "../../utils/setAuthToken"
 
-export const setCurrentEvent = (eventId) => (dispatch) => {
-  console.log("eventAct, eventId =", eventId);
-  dispatch({
-    type: SET_CURRENT_EVENT,
-    payload: eventId,
-  });
-};
+const config = { headers: { "Content-Type": "application/json" } }
 
-export const updateStatus = (status) => (dispatch) => {
-  dispatch({
-    type: UPDATE_STATUS,
-    payload: status,
-  });
-  errorTimeOut(dispatch, CLEAR_ERROR_EVENTO);
-};
+export const setLoading = () => dispatch => {
+  return dispatch({ type: LOADING_EVENTO })
+}
+
+export const leerEventosPorUsuario = usuario => async dispatch => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.get(
+      `api/eventos/leerEventosPorUsuario?correo=${usuario.correo}`
+    )
+
+    dispatch({ type: LEER_EVENTOS_POR_USUARIO, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_EVENTO, payload: error.response.data.message })
+  }
+}
