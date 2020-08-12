@@ -5,7 +5,6 @@ import _ from "underscore"
 import {
   Container,
   Card,
-  CardDeck,
   Form,
   Col,
   Button,
@@ -44,11 +43,20 @@ const PermisosPage = ({
     leerPermisos()
   }, [])
 
+  const [isConsulta, setIsConsulta] = useState(false)
+
   const permisosId = arrayOfValues(permisos, "id_permiso")
 
   const clickRol = rol => {
+    setIsConsulta(true)
     setCurrentPermisos(permisosPorRol(rol))
     setNuevoRol(rol)
+  }
+
+  const reset = () => {
+    setIsConsulta(false)
+    setCurrentPermisos([])
+    setNuevoRol("")
   }
 
   const onChange = e => {
@@ -62,7 +70,7 @@ const PermisosPage = ({
     console.log(permisosId)
   }
 
-  const onClick = e => {
+  const agregarRolPermisos = e => {
     console.log({ nombre: nuevoRol, permisos: currentPermisos })
     asignarRolPermisos({ nombre: nuevoRol, permisos: currentPermisos })
     setCurrentPermisos([])
@@ -105,17 +113,11 @@ const PermisosPage = ({
               </Form.Label>
               <Form.Control
                 type="text"
+                disabled={isConsulta}
                 placeholder="Nuevo rol"
                 value={nuevoRol}
                 onChange={e => setNuevoRol(e.target.value)}
               />
-              <Button
-                onClick={onClick}
-                className="my-4"
-                disabled={nuevoRolValidation}
-              >
-                Añadir
-              </Button>
             </Form.Group>
           </Form>
 
@@ -145,18 +147,45 @@ const PermisosPage = ({
             <Loading />
           ) : (
             <Card>
-              <Card.Body className="permisos">
-                {permisos.map(permiso => (
-                  <div className="permiso">
-                    <Form.Check
-                      type="checkbox"
-                      label={permiso.nombre}
-                      value={permiso.id_permiso}
-                      checked={currentPermisos.includes(permiso.id_permiso)}
-                      onChange={onChange}
-                    />
-                  </div>
-                ))}
+              <Card.Body>
+                <div className="text-center mb-3">
+                  {isConsulta ? (
+                    <>
+                      <Button
+                        variant="primary"
+                        className="mr-2"
+                        onClick={e => reset()}
+                      >
+                        Aceptar
+                      </Button>
+                      <Button variant="outline-danger">Eliminar</Button>
+                    </>
+                  ) : (
+                    <Button
+                      variant="primary"
+                      onClick={agregarRolPermisos}
+                      disabled={currentPermisos.length === 0}
+                    >
+                      {currentPermisos.length !== 0
+                        ? "Agregar"
+                        : "Selecciona al menos un permiso"}
+                    </Button>
+                  )}
+                </div>
+                <div className="permisos">
+                  {permisos.map(permiso => (
+                    <div className="permiso">
+                      <Form.Check
+                        type="checkbox"
+                        disabled={isConsulta}
+                        label={permiso.nombre}
+                        value={permiso.id_permiso}
+                        checked={currentPermisos.includes(permiso.id_permiso)}
+                        onChange={onChange}
+                      />
+                    </div>
+                  ))}
+                </div>
               </Card.Body>
             </Card>
           )}
