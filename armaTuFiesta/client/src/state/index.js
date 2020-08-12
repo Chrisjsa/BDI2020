@@ -10,6 +10,7 @@ import clienteReducer from "./cliente/clienteReducer"
 import alertReducer from "./alert/alertReducer"
 import tipReducer from "./tip/tipReducer"
 import reporteReducer from "./reporte/reporteReducer"
+import rolReducer from "./rol/rolReducer"
 
 export default combineReducers({
   auth: authReducer,
@@ -22,4 +23,5 @@ export default combineReducers({
   alerts: alertReducer,
   tips: tipReducer,
   reportes: reporteReducer,
+  rols: rolReducer,
 })
