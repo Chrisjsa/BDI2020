@@ -25,9 +25,13 @@ const PermisosPage = ({ leerRolesPermisos }) => {
   }, [])
 
   const onChange = e => {
-    if (permisos.includes(e.target.value))
-      setPermisos(permisos.filter(permiso => permiso !== e.target.value))
-    else setPermisos([...permisos, e.target.value])
+    if (currentPermisos.includes(e.target.value))
+      setCurrentPermisos(
+        currentPermisos.filter(permiso => permiso !== e.target.value)
+      )
+    else setCurrentPermisos([...currentPermisos, e.target.value])
+
+    console.log(currentPermisos)
   }
 
   const initialPermisos = [
@@ -51,7 +55,7 @@ const PermisosPage = ({ leerRolesPermisos }) => {
 
   const [nuevoRol, setNuevoRol] = useState("")
 
-  const [permisos, setPermisos] = useState([
+  const permisos = [
     "insertarNotaria",
     "eliminarNotaria",
     "actualizarNotaria",
@@ -72,9 +76,18 @@ const PermisosPage = ({ leerRolesPermisos }) => {
     "eliminarProveedor",
     "actualizarProveedor",
     "leerProveedor",
-  ])
+  ]
 
-  const nPermisos = () => Math.floor(permisos.length())
+  const [currentPermisos, setCurrentPermisos] = useState([
+    "insertarNotaria",
+    "eliminarNotaria",
+    "actualizarNotaria",
+    "insertarCliente",
+    "leerCliente",
+    "insertarEvento",
+    "leerServicioTercerizado",
+    "insertarProveedor",
+  ])
 
   const nuevoRolValidation =
     (nuevoRol === "" || nuevoRol.length < 3) &&
@@ -124,7 +137,13 @@ const PermisosPage = ({ leerRolesPermisos }) => {
               <Card.Body className="permisos">
                 {permisos.map(permiso => (
                   <div className="permiso">
-                    <Form.Check type="checkbox" label={permiso} />
+                    <Form.Check
+                      type="checkbox"
+                      label={permiso}
+                      value={permiso}
+                      checked={currentPermisos.includes(permiso)}
+                      onChange={onChange}
+                    />
                   </div>
                 ))}
               </Card.Body>
