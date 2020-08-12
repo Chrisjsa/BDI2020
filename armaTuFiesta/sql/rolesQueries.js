@@ -1,5 +1,7 @@
 exports.LEER_ROLES = "SELECT * FROM arma_tu_fiesta.rol;"
 
+exports.LEER_PERMISOS = "SELECT * FROM arma_tu_fiesta.permiso;"
+
 exports.CREAR_ROLES = "INSERT INTO arma_tu_fiesta.rol (nombre) VALUES (?);"
 
 //[nombre]

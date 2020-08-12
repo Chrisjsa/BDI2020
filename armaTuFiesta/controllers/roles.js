@@ -1,6 +1,7 @@
 const { connection } = require("../database")
 const {
   LEER_ROLES,
+  LEER_PERMISOS,
   ACTUALIZAR_ROLES,
   ELIMINAR_ROLES,
   CREAR_ROLES,
@@ -10,6 +11,16 @@ const { LISTAR_ROL_PERMISO } = require("../sql/authQueries")
 
 exports.leerRoles = (req, res) => {
   connection.query(LEER_ROLES, (error, rows) => {
+    if (error) {
+      return res.status(400).send({ message: error.message })
+    }
+
+    return res.json(rows)
+  })
+}
+
+exports.leerPermisos = (req, res) => {
+  connection.query(LEER_PERMISOS, (error, rows) => {
     if (error) {
       return res.status(400).send({ message: error.message })
     }
