@@ -73,14 +73,9 @@ exports.loadUser = (req, res) => {
       return res.status(400).send(error)
     }
 
-    const user = rows.pop()
+    let user = rows.pop()
     user.password = undefined
-
-    try {
-      return res.json(user)
-      //
-    } catch (error) {
-      return res.status(400).json({ error: "Server error" })
-    }
   })
+
+  // otro query para los permisos
 }
