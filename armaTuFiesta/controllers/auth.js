@@ -47,7 +47,9 @@ exports.signIn = (req, res) => {
     try {
       // Check if req.body.password matches database password
       if (!(password === user.password)) {
-        return res.status(400).json({ msg: "Email and password don't match" })
+        return res
+          .status(400)
+          .json({ message: "Email and password don't match" })
       }
       user.password = undefined
 
@@ -77,5 +79,29 @@ exports.loadUser = (req, res) => {
     user.password = undefined
   })
 
-  // otro query para los permisos
+  // se agrego este select adicional
+  connection.query("PERMISOS_USUARIO", [req.userId], async (error, rows) => {
+    if (error) {
+      return res.status(400).send(error)
+    }
+
+    // esta operacion asigna un nuevo campo al user, una lista de permisos
+    user.permisos = rows
+  })
+
+  connection.query("ROL_USUARIO", [req.userId], async (error, rows) => {
+    if (error) {
+      return res.status(400).send(error)
+    }
+
+    // esta operacion asigna un nuevo campo al user, el nombre de su rol
+    user.rol = rows.pop()
+    // usamos rol.pop() para obtener el unico elemento de esta lista
+    // los rows son listas de objetos [{ obj1 }, ... , {objn}]
+    // el .pop() saca el ultimo objeto de la lista, en este caso el único
+    // que es el nombre del rol
+  })
+
+  // finalmente se manda el usuario con roles y permisos al front
+  return res.json(user)
 }
