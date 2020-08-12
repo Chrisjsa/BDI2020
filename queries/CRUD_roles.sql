@@ -1,6 +1,10 @@
--- READ ROL
+-- LISTAR ROLES
 
 SELECT * FROM arma_tu_fiesta.rol;
+
+-- LISTAR PERMISOS
+
+SELECT * FROM arma_tu_fiesta.permiso;
 
 -- CREATE ROL Y ASIGNAR PERMISO
 
