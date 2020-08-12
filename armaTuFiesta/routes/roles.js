@@ -16,7 +16,7 @@ const {
 // Read
 router.get("/leer", auth, leerRoles)
 
-router.get("/leer", auth, leerPermisos)
+router.get("/leerPermiso", auth, leerPermisos)
 
 router.get("/leerRolesPermisos", auth, leerRolesPermisos)
 
