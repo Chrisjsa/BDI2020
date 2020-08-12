@@ -8,11 +8,11 @@ import axios from "axios"
 
 const config = { headers: { "Content-Type": "application/json" } }
 
-export const setLoading = () => (dispatch) => {
+export const setLoading = () => dispatch => {
   return dispatch({ type: LOADING_EVENTO })
 }
 
-export const leerEventosPorUsuario = (usuario) => async (dispatch) => {
+export const leerEventosPorUsuario = usuario => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get(
@@ -25,7 +25,7 @@ export const leerEventosPorUsuario = (usuario) => async (dispatch) => {
   }
 }
 
-export const setCurrentEvento = (evento) => (dispatch) => {
+export const setCurrentEvento = evento => dispatch => {
   dispatch({
     type: SET_CURRENT_EVENTO,
     payload: evento,

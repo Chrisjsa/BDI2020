@@ -77,13 +77,13 @@ exports.signOut = (req, res) => {
 
 exports.loadUser = (req, res) => {
   var user = undefined
+
   connection.query(LOAD_USER, [req.userId], async (error, rows) => {
     if (error) {
       return res.status(400).send(error)
     }
 
     user = rows.pop()
-    user.password = undefined
   })
 
   connection.query(LEER_PERMISOS_USUARIO, [req.userId], async (error, rows) => {
@@ -92,15 +92,12 @@ exports.loadUser = (req, res) => {
     }
 
     user.permisos = rows[1].map(row => row.permiso)
-    console.log("query2", user)
   })
 
   connection.query(LEER_ROL_USUARIO, [req.userId], async (error, rows) => {
     if (error) {
       return res.status(400).send(error)
     }
-
-    user = { ...user, ...rows.pop().pop() }
 
     console.log("query3", user)
     return res.json(user)

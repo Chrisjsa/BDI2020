@@ -23,11 +23,13 @@ import CrudCliente from "./components/clientes/CrudCliente"
 import CrudTip from "./components/tips/CrudTip"
 
 import Navigation from "./components/layout/Navigation"
-import CartaSolteria from "./components/events/CartaSolteria"
+import CartaSolteria from "./components/eventos/CartaSolteria"
 
 import PrivateRoute from "./components/routing/PrivateRoute"
 
 import setAuthToken from "./utils/setAuthToken"
+
+import EventoProfile from "./components/eventos/EventoProfile"
 
 import Test from "./components/Test"
 
@@ -61,6 +63,7 @@ const App = () => {
             <PrivateRoute exact path="/crud_tip" component={CrudTip} />
             <PrivateRoute exact path="/permisos" component={PermisosPage} />
             <PrivateRoute exact path="/metodos_pago" component={MetodosPage} />
+            <PrivateRoute exact path="/evento" component={EventoProfile} />
 
             <PrivateRoute
               exact
