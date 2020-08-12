@@ -63,6 +63,7 @@ const Reportes = ({
 
       {/* Reportes */}
       <h2>Reportes</h2>
+
       <ReporteItem
         title="Reporte 1"
         handler={e => obtenerReporte1({ fechaInicial, fechaFinal })}
