@@ -2,9 +2,15 @@ import {
   ERROR_EVENTO,
   LOADING_EVENTO,
   LEER_EVENTOS_POR_USUARIO,
+  SET_CURRENT_EVENTO,
 } from "./eventoTypes"
 
-const initialState = { loading: false, error: null, eventos: [] }
+const initialState = {
+  loading: false,
+  error: null,
+  eventos: [],
+  currentEvento: undefined,
+}
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -13,6 +19,13 @@ export default (state = initialState, action) => {
 
     case LOADING_EVENTO:
       return { ...state, loading: true }
+
+    case SET_CURRENT_EVENTO:
+      return {
+        ...state,
+        loading: false,
+        currentEvento: action.payload,
+      }
 
     case ERROR_EVENTO:
       return { ...state, loading: false, error: action.payload }
