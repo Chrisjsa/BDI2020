@@ -4,7 +4,6 @@ import {
   LEER_EVENTOS_POR_USUARIO,
 } from "./eventoTypes"
 import axios from "axios"
-import setAuthToken from "../../utils/setAuthToken"
 
 const config = { headers: { "Content-Type": "application/json" } }
 

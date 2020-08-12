@@ -1,16 +1,31 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { withRouter, Link } from "react-router-dom"
 import { connect } from "react-redux"
 
-import { Container, Button } from "react-bootstrap"
+import { Container, Button, Card, CardColumns } from "react-bootstrap"
 
 import ballons from "../../img/ballons.png"
 
 import Loading from "../layout/Loading"
 
-import Test from "../Test"
+import { leerEventosPorUsuario } from "../../state/evento/eventoActions"
 
-const DashboardPage = ({ user, events, history, loading }) => {
+import moment from "moment"
+
+import EventoItem from "../events/EventoItem"
+
+const DashboardPage = ({
+  user,
+  eventos,
+  history,
+  loading,
+  leerEventosPorUsuario,
+}) => {
+  useEffect(() => {
+    leerEventosPorUsuario(user)
+    // eslint-disable-nextline
+  }, [])
+
   const NoEvents = () => (
     <div className="text-center mt-5">
       <div>
@@ -23,15 +38,21 @@ const DashboardPage = ({ user, events, history, loading }) => {
 
   return (
     <Container>
-      <Test />
       {loading ? (
         <Loading />
       ) : (
         <>
           <div className="display-2 mb-4">Hola, {user.p_nombre}</div>
           <h1 className="mt-4">Tus eventos</h1>
-          <code className="text-center">En construcción</code>
+
+          <CardColumns>
+            {eventos.map(evento => (
+              <EventoItem evento={evento} />
+            ))}
+          </CardColumns>
+
           <h1 className="mt-4 mb-3">Tus trámites</h1>
+
           <Button as={Link} to="/carta_solteria">
             Carta de soltería
           </Button>
@@ -44,7 +65,9 @@ const DashboardPage = ({ user, events, history, loading }) => {
 const mapStateToProps = state => ({
   user: state.auth.user,
   loading: state.auth.loading,
-  events: state.events,
+  eventos: state.eventos.eventos,
 })
 
-export default withRouter(connect(mapStateToProps)(DashboardPage))
+export default withRouter(
+  connect(mapStateToProps, { leerEventosPorUsuario })(DashboardPage)
+)

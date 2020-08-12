@@ -14,7 +14,7 @@ import rolReducer from "./rol/rolReducer"
 
 export default combineReducers({
   auth: authReducer,
-  events: eventoReducer,
+  eventos: eventoReducer,
   notarias: notariaReducer,
   cartas: cartaReducer,
   lugares: lugarReducer,
