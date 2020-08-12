@@ -19,8 +19,8 @@ const Login = ({ history, login, isAuthenticated, error }) => {
   }, [isAuthenticated, history])
 
   const [fields, bindFields] = useForm({
-    username: "tguzmani@gmail.com",
-    password: "V26150008",
+    username: "amandasuarez@gmail.com",
+    password: "V20000007",
   })
 
   const onSubmit = e => {
