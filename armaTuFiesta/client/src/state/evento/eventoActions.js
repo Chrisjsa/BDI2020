@@ -63,13 +63,3 @@ export const leerCategoria = () => async dispatch => {
     dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
   }
 }
-
-export const leerProducto = producto => async dispatch => {
-  setLoading()(dispatch)
-  try {
-    const res = await axios.get("api/productos/leerProducto")
-    dispatch({ type: LEER_PRODUCTO, payload: res.data })
-  } catch (error) {
-    dispatch({ type: ERROR_PRODUCTO, payload: error.response.msg })
-  }
-}

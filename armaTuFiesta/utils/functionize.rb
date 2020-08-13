@@ -126,6 +126,7 @@ if $option == "-h"
     puts "-f\t frontend only"
     puts "-r\t connect to redux"
     puts "-rf\t connect to redux form"
+    puts "-f\t create redux-form fields"
     puts
     puts "* full mode is front + back"
     exit
@@ -159,11 +160,12 @@ if $option == "-f"
 elsif $option == "-b"
     backend
     exit
-elsif $option == ""
+elsif !$option
     backend
     frontend
     exit
 end
+
 
 
 
