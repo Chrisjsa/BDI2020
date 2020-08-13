@@ -34,6 +34,7 @@ let ClienteForm = ({
   const [fechaNacimiento, setFechaNacimiento] = useState(new Date())
   const [sexo, setSexo] = useState("Masculino")
   const [estadoCivil, setEstadoCivil] = useState("")
+  const [rol, setRol] = useState("")
 
   useEffect(() => {
     console.log("use efffect:", currentCliente)
@@ -42,11 +43,13 @@ let ClienteForm = ({
       setSexo("Masculino")
       setFechaNacimiento(new Date())
       setEstadoCivil("")
+      setRol("")
     } else {
       changeFormByObject(currentCliente, change)
       setFechaNacimiento(new Date(currentCliente.fecha_nacimiento))
       setSexo(currentCliente.sexo)
       setEstadoCivil(currentCliente.estado_civil)
+      setRol(currentCliente.rol)
     }
     // eslint-disable-next-line
   }, [currentCliente])
@@ -59,6 +62,7 @@ let ClienteForm = ({
     estado: currentEstado,
     municipio: currentMunicipio,
     parroquia: currentParroquia,
+    rol,
   })
 
   const cleanUp = () => {
@@ -150,7 +154,7 @@ let ClienteForm = ({
             <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
             <DatePicker
               selected={fechaNacimiento}
-              onChange={date => setFechaNacimiento(date)}
+              onChange={(date) => setFechaNacimiento(date)}
               peekNextMonth
               showMonthDropdown
               showYearDropdown
@@ -168,7 +172,7 @@ let ClienteForm = ({
               name="estadoCivil"
               value={estadoCivil}
               disabled={currentCliente}
-              onChange={e => setEstadoCivil(e.target.value)}
+              onChange={(e) => setEstadoCivil(e.target.value)}
             >
               <option>Seleccionar...</option>
               <option value="Soltero">Soltero</option>
@@ -198,6 +202,25 @@ let ClienteForm = ({
               type="text"
             />
           </Form.Group>
+
+          <Form.Group as={Col}>
+            <Form.Label>Rol</Form.Label>
+            <Form.Control
+              as="select"
+              defaultValue="Seleccionar..."
+              name="estadoCivil"
+              value={rol}
+              disabled={currentCliente}
+              onChange={(e) => setRol(e.target.value)}
+            >
+              <option>Seleccionar...</option>
+              <option value="Soltero">SuperUser</option>
+              <option value="Casado">Administrador</option>
+              <option value="Divorciado">Supervisor</option>
+              <option value="Viudo">Empleado</option>
+              <option value="Viudo">Cliente</option>
+            </Form.Control>
+          </Form.Group>
         </Form.Row>
 
         <fieldset>
@@ -210,7 +233,7 @@ let ClienteForm = ({
               name="sexo"
               disabled={currentCliente}
               value="Masculino"
-              onChange={e => setSexo(e.target.value)}
+              onChange={(e) => setSexo(e.target.value)}
               checked={sexo === "Masculino"}
             />
             <Form.Check
@@ -220,7 +243,7 @@ let ClienteForm = ({
               label="F"
               name="sexo"
               value="Femenino"
-              onChange={e => setSexo(e.target.value)}
+              onChange={(e) => setSexo(e.target.value)}
               checked={sexo === "Femenino"}
             />
           </Form.Group>
@@ -261,7 +284,7 @@ const mapActionsToProps = {
   reset,
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   formValues: getFormValues("cliente")(state),
   clientes: state.clientes.clientes,
   currentCliente: state.clientes.currentCliente,
