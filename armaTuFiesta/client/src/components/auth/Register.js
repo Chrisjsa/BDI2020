@@ -2,26 +2,14 @@ import React from "react"
 
 import { Form, Button, Card } from "react-bootstrap"
 
-<<<<<<< HEAD
-import { Link } from "react-router-dom"
-
-import useForm from "../../hooks/useForm"
-import { conenct } from "react-redux"
-import { Field, reduxForm } from "redux-form"
-let Register = () => {
-  const onSubmit = (e) => {
-    e.preventDefault()
-
-=======
 import { connect } from "react-redux"
 import { Field, reduxForm } from "redux-form"
 
 import { Link } from "react-router-dom"
 
 let Register = () => {
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault()
->>>>>>> a4a65482e2ac5234e3cd1e9ae2fd27bb00f6185a
     console.log("Register.onClick()")
   }
 
@@ -38,10 +26,6 @@ let Register = () => {
                 name="username"
                 component="input"
                 type="text"
-<<<<<<< HEAD
-                placeholder="Tu usuario"
-=======
->>>>>>> a4a65482e2ac5234e3cd1e9ae2fd27bb00f6185a
               />
 
               <Form.Text className="text-muted">
@@ -66,10 +50,23 @@ let Register = () => {
                 name="password2"
                 component="input"
                 type="password"
-<<<<<<< HEAD
-                placeholder="Tu contraseña"
-=======
->>>>>>> a4a65482e2ac5234e3cd1e9ae2fd27bb00f6185a
+              />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Label>Primer Nombre</Form.Label>
+              <Field
+                className="form-control"
+                name="p_nombre"
+                component="input"
+                type="text"
+              />
+              <Form.Label>Segundo Nombre</Form.Label>
+              <Field
+                className="form-control"
+                name="s_nombre"
+                component="input"
+                type="text"
               />
             </Form.Group>
 
@@ -93,12 +90,6 @@ Register = reduxForm({
 
 const mapActionsToProps = {}
 
-<<<<<<< HEAD
 const mapStateToProps = (state) => ({})
 
-export default Register
-=======
-const mapStateToProps = state => ({})
-
 export default connect(mapStateToProps, mapActionsToProps)(Register)
->>>>>>> a4a65482e2ac5234e3cd1e9ae2fd27bb00f6185a
