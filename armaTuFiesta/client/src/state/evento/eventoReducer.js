@@ -8,6 +8,8 @@ import {
   LEER_CATEGORIA,
 } from "./eventoTypes"
 
+import { arrayOfValues } from "../../utils/"
+
 const initialState = {
   loading: false,
   error: null,
@@ -28,7 +30,11 @@ export default (state = initialState, action) => {
       }
 
     case LEER_CATEGORIA:
-      return { ...state, loading: false }
+      return {
+        ...state,
+        loading: false,
+        categorias: arrayOfValues(action.payload, "nombre"),
+      }
 
     case LOADING_EVENTO:
       return { ...state, loading: true }
