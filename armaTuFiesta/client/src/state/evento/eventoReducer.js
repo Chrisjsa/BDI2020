@@ -5,6 +5,7 @@ import {
   SET_CURRENT_EVENTO,
   LEER_SERVICIO_EVENTO,
   CLEAR_EVENTOS,
+  LEER_CATEGORIA,
 } from "./eventoTypes"
 
 const initialState = {
@@ -25,6 +26,9 @@ export default (state = initialState, action) => {
         loading: false,
         currentEventoServicios: action.payload,
       }
+
+    case LEER_CATEGORIA:
+      return { ...state, loading: false }
 
     case LOADING_EVENTO:
       return { ...state, loading: true }

@@ -3,6 +3,7 @@ const { connection } = require("../database")
 const {
   LEER_EVENTOS_POR_USUARIO,
   LEER_SERVICIOS_EVENTOS,
+  LEER_CATEGORIA,
 } = require("../sql/eventosQueries")
 
 exports.leerEventosPorUsuario = (req, res) => {
@@ -30,4 +31,13 @@ exports.leerServiciosEvento = (req, res) => {
       return res.json(rows.pop())
     }
   )
+}
+
+exports.leerCategoria = (req, res) => {
+  connection.query(LEER_CATEGORIA, (error, rows) => {
+    if (error) {
+      return res.status(400).send(error.message)
+    }
+    return res.json(rows)
+  })
 }

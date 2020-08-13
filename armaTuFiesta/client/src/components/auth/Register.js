@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Form, Button, Card } from "react-bootstrap"
+import { Form, Button, Card, Col } from "react-bootstrap"
 
 import { connect } from "react-redux"
 import { Field, reduxForm } from "redux-form"
@@ -8,7 +8,7 @@ import { Field, reduxForm } from "redux-form"
 import { Link } from "react-router-dom"
 
 let Register = () => {
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault()
     console.log("Register.onClick()")
   }
@@ -44,7 +44,7 @@ let Register = () => {
             </Form.Group>
 
             <Form.Group>
-              <Form.Label>Contraseña</Form.Label>
+              <Form.Label>Repetir Contraseña</Form.Label>
               <Field
                 className="form-control"
                 name="password2"
@@ -52,6 +52,72 @@ let Register = () => {
                 type="password"
               />
             </Form.Group>
+
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Primer Nombre</Form.Label>
+                <Field
+                  className="form-control"
+                  name="p_nombre"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label>Segundo Nombre</Form.Label>
+                <Field
+                  className="form-control"
+                  name="s_nombre"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+            </Form.Row>
+
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Primer Apellido</Form.Label>
+                <Field
+                  className="form-control"
+                  name="p_apellido"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label>Segundo Apellido</Form.Label>
+                <Field
+                  className="form-control"
+                  name="s_apellido"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+            </Form.Row>
+
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Correo Electronico</Form.Label>
+                <Field
+                  className="form-control"
+                  name="correo"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label>Telefono</Form.Label>
+                <Field
+                  className="form-control"
+                  name="telefono"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+            </Form.Row>
 
             <Button variant="primary" type="submit" className="mb-3" block>
               Registrarse
@@ -73,6 +139,6 @@ Register = reduxForm({
 
 const mapActionsToProps = {}
 
-const mapStateToProps = state => ({})
+const mapStateToProps = (state) => ({})
 
 export default connect(mapStateToProps, mapActionsToProps)(Register)
