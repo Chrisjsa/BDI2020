@@ -19,6 +19,7 @@ const initialState = {
   token: localStorage.getItem("token"),
   user: undefined,
   roles: [],
+  SIGN_UP,
 }
 
 export default (state = initialState, action) => {
@@ -28,6 +29,9 @@ export default (state = initialState, action) => {
         ...state,
         error: undefined,
       }
+
+    case SIGN_UP:
+      return { ...state, loading: false, edit: this }
 
     case LOADING_AUTH:
       return {
