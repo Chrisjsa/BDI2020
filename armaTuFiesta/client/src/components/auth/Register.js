@@ -1,13 +1,17 @@
-import React from "react"
-
+import React, { useState, useEffect } from "react"
 import { Form, Button, Card, Col } from "react-bootstrap"
 
 import { connect } from "react-redux"
 import { Field, reduxForm } from "redux-form"
-
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 import { Link } from "react-router-dom"
-
+import LugarFields from "../lugares/LugarFields"
 let Register = () => {
+  const [fechaNacimiento, setFechaNacimiento] = useState(new Date())
+  const [sexo, setSexo] = useState("Masculino")
+  const [estadoCivil, setEstadoCivil] = useState("")
+
   const onSubmit = (e) => {
     e.preventDefault()
     console.log("Register.onClick()")
@@ -118,7 +122,74 @@ let Register = () => {
                 />
               </Form.Group>
             </Form.Row>
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Cedula</Form.Label>
+                <Field
+                  className="form-control"
+                  name="cedula"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
 
+              <Form.Group as={Col}>
+                <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
+                <DatePicker
+                  selected={fechaNacimiento}
+                  onChange={(date) => setFechaNacimiento(date)}
+                  peekNextMonth
+                  showMonthDropdown
+                  showYearDropdown
+                  className="form-control"
+                  dropdownMode="select"
+                />
+              </Form.Group>
+            </Form.Row>
+
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Estado civil</Form.Label>
+                <Form.Control
+                  as="select"
+                  defaultValue="Seleccionar..."
+                  name="estadoCivil"
+                  value={estadoCivil}
+                  onChange={(e) => setEstadoCivil(e.target.value)}
+                >
+                  <option>Seleccionar...</option>
+                  <option value="Soltero">Soltero</option>
+                  <option value="Casado">Casado</option>
+                  <option value="Divorciado">Divorciado</option>
+                  <option value="Viudo">Viudo</option>
+                </Form.Control>
+              </Form.Group>
+
+              <fieldset>
+                <Form.Group>
+                  <Form.Label className="mr-3">Sex</Form.Label>
+                  <Form.Check
+                    inline
+                    type="radio"
+                    label="M"
+                    name="sexo"
+                    value="Masculino"
+                    onChange={(e) => setSexo(e.target.value)}
+                    checked={sexo === "Masculino"}
+                  />
+                  <Form.Check
+                    inline
+                    type="radio"
+                    label="F"
+                    name="sexo"
+                    value="Femenino"
+                    onChange={(e) => setSexo(e.target.value)}
+                    checked={sexo === "Femenino"}
+                  />
+                </Form.Group>
+              </fieldset>
+            </Form.Row>
+            <LugarFields />
             <Button variant="primary" type="submit" className="mb-3" block>
               Registrarse
             </Button>
