@@ -4,9 +4,13 @@ const { monitor } = require("../middleware/monitor")
 const { auth } = require("../middleware/auth")
 const middleware = [auth, monitor]
 
-const { leerEventosPorUsuario } = require("../controllers/eventos")
+const {
+  leerEventosPorUsuario,
+  leerServiciosEvento,
+} = require("../controllers/eventos")
 
 // Read
 router.get("/leerEventosPorUsuario", middleware, leerEventosPorUsuario)
 
+router.get("/leerServiciosEventos", auth, leerServiciosEvento)
 module.exports = router

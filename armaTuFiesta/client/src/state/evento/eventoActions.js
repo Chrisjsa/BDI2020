@@ -3,6 +3,7 @@ import {
   LOADING_EVENTO,
   LEER_EVENTOS_POR_USUARIO,
   SET_CURRENT_EVENTO,
+  LEER_SERVICIO_EVENTO,
 } from "./eventoTypes"
 import axios from "axios"
 
@@ -22,6 +23,16 @@ export const leerEventosPorUsuario = (usuario) => async (dispatch) => {
     dispatch({ type: LEER_EVENTOS_POR_USUARIO, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_EVENTO, payload: error.response.data.message })
+  }
+}
+
+export const leerServiciosEvento = () => async (dispatch) => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.get(`api/eventos/leerServiciosEventos`, config)
+    dispatch({ type: LEER_SERVICIO_EVENTO, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
   }
 }
 

@@ -43,7 +43,7 @@ const NotariaForm = ({
 
   const [notaria, setNotaria] = useState(initialState)
 
-  const isNotariaEmpty = Object.values(notaria).some(value => value === "")
+  const isNotariaEmpty = Object.values(notaria).some((value) => value === "")
 
   useEffect(() => {
     if (!currentNotaria) setNotaria(initialState)
@@ -54,7 +54,7 @@ const NotariaForm = ({
 
   const { nombre, notario, telefono, latitud, longitud } = notaria
 
-  const onChange = event => {
+  const onChange = (event) => {
     setNotaria({
       ...notaria,
       estado: lugares.currentEstado,
@@ -177,7 +177,7 @@ const NotariaForm = ({
   )
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   currentNotaria: state.notarias.currentNotaria,
   lugares: state.lugares,
 })

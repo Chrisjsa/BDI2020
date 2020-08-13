@@ -3,6 +3,7 @@ import {
   LOADING_EVENTO,
   LEER_EVENTOS_POR_USUARIO,
   SET_CURRENT_EVENTO,
+  LEER_SERVICIO_EVENTO,
 } from "./eventoTypes"
 
 const initialState = {
@@ -16,6 +17,9 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case LEER_EVENTOS_POR_USUARIO:
       return { ...state, loading: false, eventos: action.payload }
+
+    case LEER_SERVICIO_EVENTO:
+      return { ...state, loading: false }
 
     case LOADING_EVENTO:
       return { ...state, loading: true }
