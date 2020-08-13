@@ -8,6 +8,7 @@ import {
   LOAD_USER,
   LOADING_AUTH,
   CLEAR_ERROR_AUTH,
+  SIGN_UP,
 } from "./authTypes"
 
 import _ from "underscore"
@@ -19,7 +20,6 @@ const initialState = {
   token: localStorage.getItem("token"),
   user: undefined,
   roles: [],
-  SIGN_UP,
 }
 
 export default (state = initialState, action) => {

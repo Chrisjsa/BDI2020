@@ -1,7 +1,10 @@
 exports.SIGN_IN =
   "SELECT * FROM usuario, persona WHERE username = ? AND persona.id_persona = usuario.fk_persona"
 exports.SIGN_UP =
-  "INSERT INTO users (username, email, password) VALUES (?, ?, ?)"
+  "SET @usurol = ?;  SELECT usu.id_usuario, per.descripcion as permiso FROM arma_tu_fiesta.usuario as usu, arma_tu_fiesta.permiso as per, arma_tu_fiesta.rol_permiso as rolper WHERE usu.id_usuario = @usurol AND usu.fk_rol = rolper.fk_rol AND rolper.fk_permiso = per.id_permiso;"
+
+//[parroquia, cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, nombre_rol, username, password]
+
 exports.LOAD_USER =
   "SELECT * FROM usuario, persona WHERE id_persona = ? AND persona.id_persona = usuario.fk_persona"
 
