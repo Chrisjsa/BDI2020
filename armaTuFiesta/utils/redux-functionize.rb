@@ -6,7 +6,7 @@ def input(msg = ">> ")
 end
 
 def step(instructions, to_clipboard)
-  puts "-" * 80
+  puts "-" * 50
   puts instructions
   puts
   puts to_clipboard
