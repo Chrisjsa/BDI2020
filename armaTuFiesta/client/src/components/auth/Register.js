@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Form, Button, Card } from "react-bootstrap"
+import { Form, Button, Card, Col } from "react-bootstrap"
 
 import { connect } from "react-redux"
 import { Field, reduxForm } from "redux-form"
@@ -53,18 +53,40 @@ let Register = () => {
               />
             </Form.Group>
 
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Primer Nombre</Form.Label>
+                <Field
+                  className="form-control"
+                  name="p_nombre"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label>Segundo Nombre</Form.Label>
+                <Field
+                  className="form-control"
+                  name="s_nombre"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+            </Form.Row>
+
             <Form.Group>
-              <Form.Label>Primer Nombre</Form.Label>
+              <Form.Label>Primer Apellido</Form.Label>
               <Field
                 className="form-control"
-                name="p_nombre"
+                name="p_apellido"
                 component="input"
                 type="text"
               />
-              <Form.Label>Segundo Nombre</Form.Label>
+              <Form.Label>Segundo Apellido</Form.Label>
               <Field
                 className="form-control"
-                name="s_nombre"
+                name="s_apellido"
                 component="input"
                 type="text"
               />
