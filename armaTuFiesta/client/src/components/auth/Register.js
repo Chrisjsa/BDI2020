@@ -44,7 +44,7 @@ let Register = () => {
             </Form.Group>
 
             <Form.Group>
-              <Form.Label>Contraseña</Form.Label>
+              <Form.Label>Repetir Contraseña</Form.Label>
               <Field
                 className="form-control"
                 name="password2"
@@ -75,22 +75,49 @@ let Register = () => {
               </Form.Group>
             </Form.Row>
 
-            <Form.Group>
-              <Form.Label>Primer Apellido</Form.Label>
-              <Field
-                className="form-control"
-                name="p_apellido"
-                component="input"
-                type="text"
-              />
-              <Form.Label>Segundo Apellido</Form.Label>
-              <Field
-                className="form-control"
-                name="s_apellido"
-                component="input"
-                type="text"
-              />
-            </Form.Group>
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Primer Apellido</Form.Label>
+                <Field
+                  className="form-control"
+                  name="p_apellido"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label>Segundo Apellido</Form.Label>
+                <Field
+                  className="form-control"
+                  name="s_apellido"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+            </Form.Row>
+
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Correo Electronico</Form.Label>
+                <Field
+                  className="form-control"
+                  name="correo"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+
+              <Form.Group as={Col}>
+                <Form.Label>Telefono</Form.Label>
+                <Field
+                  className="form-control"
+                  name="telefono"
+                  component="input"
+                  type="text"
+                />
+              </Form.Group>
+            </Form.Row>
 
             <Button variant="primary" type="submit" className="mb-3" block>
               Registrarse
