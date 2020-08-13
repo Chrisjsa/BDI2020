@@ -17,14 +17,10 @@ const Alerts = props => {
 
   // return <div>{alerts && alerts.map(alert => <AlertItem alert={alert} />)}</div>
   return (
-    <div>
-      <Fade top when={alerts}>
-        <div>
-          {alerts.map(alert => (
-            <AlertItem alert={alert} />
-          ))}
-        </div>
-      </Fade>
+    <div style={{ maxWidth: "480px" }}>
+      {alerts.map(alert => (
+        <AlertItem alert={alert} />
+      ))}
     </div>
   )
 }

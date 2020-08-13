@@ -20,8 +20,14 @@ export const canCrud = (entity, entityList) => {
     `insertar${capitalizedEntity}`,
     `eliminar${capitalizedEntity}`,
     `leer${capitalizedEntity}`,
-    `eliminar${capitalizedEntity}`,
+    `actualizar${capitalizedEntity}`,
   ]
+
+  console.log("operations", operations)
+
+  operations.forEach(op => console.log(op))
+
+  console.log("entityList", entityList)
 
   return operations.every(element => entityList.includes(element))
 }

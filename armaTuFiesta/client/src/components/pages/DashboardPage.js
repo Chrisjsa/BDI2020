@@ -22,9 +22,9 @@ const DashboardPage = ({
   leerEventosPorUsuario,
 }) => {
   useEffect(() => {
-    leerEventosPorUsuario(user)
+    if (user) leerEventosPorUsuario(user)
     // eslint-disable-nextline
-  }, [])
+  }, [user])
 
   const NoEvents = () => (
     <div className="text-center mt-5">
@@ -49,12 +49,12 @@ const DashboardPage = ({
             <div className="scrollable" style={{ maxHeight: "50vh" }}>
               <CardColumns>
                 {eventos.map(evento => (
-                  <EventoItem evento={evento} />
+                  <EventoItem key={evento.id_evento} evento={evento} />
                 ))}
               </CardColumns>
             </div>
           ) : (
-            <div>No tienes eventos aún...</div>
+            <NoEvents />
           )}
 
           <h1 className="mt-4 mb-3">Tus trámites</h1>

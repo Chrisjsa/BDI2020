@@ -49,7 +49,7 @@ const Navigation = ({ user, logout, history, isAuthenticated }) => {
     <>
       <Nav className="mr-auto">{link("/dashboard", "Dashboard")}</Nav>
       <Nav>
-        {user && canCrud("cliente", ["insertarCliente"]) && (
+        {user && canCrud("cliente", permisos) && (
           <>
             {link("/reportes", "Reportes")}
             <NavDropdown title="Administrar" id="basic-nav-dropdown">
