@@ -5,16 +5,12 @@ import { Form, Button, Card } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 import useForm from "../../hooks/useForm"
-
-const Register = () => {
-  const [fields, bindFields] = useForm({
-    username: "",
-    password: "",
-  })
-
-  const onSubmit = e => {
+import { conenct } from "react-redux"
+import { Field, reduxForm } from "redux-form"
+let Register = () => {
+  const onSubmit = (e) => {
     e.preventDefault()
-    console.log(fields)
+
     console.log("Register.onClick()")
   }
 
@@ -26,12 +22,14 @@ const Register = () => {
           <Form onSubmit={onSubmit}>
             <Form.Group>
               <Form.Label>Usuario</Form.Label>
-              <Form.Control
+              <Field
+                className="form-control"
                 name="username"
+                component="input"
                 type="text"
-                placeholder="Tu nombre de usuario"
-                {...bindFields}
+                placeholder="Tu usuario"
               />
+
               <Form.Text className="text-muted">
                 No compartimos tu información con nadie.
               </Form.Text>
@@ -43,7 +41,6 @@ const Register = () => {
                 name="password"
                 type="password"
                 placeholder="Tu contraseña"
-                {...bindFields}
               />
             </Form.Group>
 
@@ -60,5 +57,13 @@ const Register = () => {
     </div>
   )
 }
+
+Register = reduxForm({
+  form: "registro",
+})(Register)
+
+const mapActionsToProps = {}
+
+const mapStateToProps = (state) => ({})
 
 export default Register
