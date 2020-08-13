@@ -6,6 +6,8 @@ import { connect } from "react-redux"
 
 import { leerServiciosEvento } from "../../state/evento/eventoActions"
 
+import Loading from "../layout/Loading"
+
 const ServiciosEvento = ({
   currentEvento,
   currentEventoServicios,
@@ -15,11 +17,23 @@ const ServiciosEvento = ({
     leerServiciosEvento(currentEvento)
   }, [])
 
+  if (!currentEventoServicios) return <Loading />
+
+  const servicioPorCategoria = categoria =>
+    currentEventoServicios.filter(servicio => servicio.categoria === categoria)
+
   return (
     <Card>
       <Card.Body>
         <h3>Servicios y productos</h3>
-        <code>{JSON.stringify(currentEventoServicios)}</code>
+        {["Personal de Festejo", "Transporte"].map(categoria => (
+          <>
+            <h5>{categoria}</h5>
+            {servicioPorCategoria(categoria).map(servicio => (
+              <div>{servicio.nombre_servicio}</div>
+            ))}
+          </>
+        ))}
       </Card.Body>
     </Card>
   )
