@@ -4,8 +4,8 @@ SET @usuario = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Amazonas') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('130',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('130',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -194,8 +194,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Anzoátegui') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('120',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('120',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -384,8 +384,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Apure') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('150',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('150',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -574,8 +574,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Aragua') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -764,8 +764,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Barinas') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('170',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('170',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -954,8 +954,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Bolívar') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -1144,8 +1144,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Carabobo') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -1334,8 +1334,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Cojedes') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -1524,8 +1524,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Delta Amacuro') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('120',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('120',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -1714,8 +1714,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Distrito Capital') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('130',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('130',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -1904,8 +1904,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Falcón') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -2094,8 +2094,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Guárico') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('110',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('110',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -2284,8 +2284,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'La Guaira') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -2474,8 +2474,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Lara') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('190',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('190',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -2664,8 +2664,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Mérida') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -2854,8 +2854,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Miranda') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('200',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -3044,8 +3044,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Monagas') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('100',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('100',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -3234,8 +3234,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Nueva Esparta') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('160',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('160',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -3424,8 +3424,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Portuguesa') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('140',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('140',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -3614,8 +3614,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Sucre') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -3804,8 +3804,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Táchira') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('170',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('170',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -3994,8 +3994,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Trujillo') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -4184,8 +4184,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Yaracuy') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('170',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('170',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
@@ -4374,8 +4374,8 @@ INSERT INTO arma_tu_fiesta.presupuesto_pago (fecha, monto, fk_presupuesto, fk_pa
 
 SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Zulia') as tablaSalon);
 
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
-SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_locacion) VALUES ('180',@freserva,'2020-07-30', @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);

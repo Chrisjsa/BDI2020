@@ -318,11 +318,11 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.orden_evento (
     fecha_realizacion      DATE NOT NULL,
     fk_usuario             INT NOT NULL,
     fk_evento              INT NOT NULL,
-    fk_salon               INT NOT NULL,
+    fk_locacion               INT NOT NULL,
     CONSTRAINT pk_orden_evento PRIMARY KEY (id_orden_evento),
         CONSTRAINT fk_orden_evento_usuario FOREIGN KEY (fk_usuario) REFERENCES arma_tu_fiesta.usuario (id_usuario) ON DELETE CASCADE,
         CONSTRAINT fk_orden_evento_evento FOREIGN KEY (fk_evento) REFERENCES arma_tu_fiesta.evento (id_evento) ON DELETE CASCADE,
-        CONSTRAINT fk_orden_evento_salon FOREIGN KEY (fk_salon) REFERENCES arma_tu_fiesta.salon_de_fiesta (fk_salon) ON DELETE CASCADE
+        CONSTRAINT fk_orden_evento_salon FOREIGN KEY (fk_locacion) REFERENCES arma_tu_fiesta.locacion (id_locacion) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.presupuesto (
