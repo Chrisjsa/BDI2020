@@ -1,3 +1,28 @@
+INSERT INTO arma_tu_fiesta.permiso
+    (nombre)
+VALUES
+    ("insertarNotaria"),
+    ("eliminarNotaria"),
+    ("actualizarNotaria"),
+    ("leerNotaria"),
+    ("insertarCliente"),
+    ("eliminarCliente"),
+    ("actualizarCliente"),
+    ("leerCliente"),
+    ("insertarEvento"),
+    ("eliminarEvento"),
+    ("actualizarEvento"),
+    ("leerEvento"),
+    ("insertarServicioTercerizado"),
+    ("eliminarServicioTercerizado"),
+    ("actualizarServicioTercerizado"),
+    ("leerServicioTercerizado"),
+    ("insertarProveedor"),
+    ("eliminarProveedor"),
+    ("actualizarProveedor"),
+    ("leerProveedor")
+;
+
 SET @superuser_id = (SELECT id_rol
 FROM rol
 WHERE nombre = "Superuser");
