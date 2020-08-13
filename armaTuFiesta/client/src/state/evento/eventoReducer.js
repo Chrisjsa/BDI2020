@@ -36,6 +36,8 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
+        currentEvento: undefined,
+        eventos: [],
       }
 
     case ERROR_EVENTO:
