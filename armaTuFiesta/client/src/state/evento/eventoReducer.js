@@ -4,6 +4,7 @@ import {
   LEER_EVENTOS_POR_USUARIO,
   SET_CURRENT_EVENTO,
   LEER_SERVICIO_EVENTO,
+  CLEAR_EVENTOS,
 } from "./eventoTypes"
 
 const initialState = {
@@ -29,6 +30,14 @@ export default (state = initialState, action) => {
         ...state,
         loading: false,
         currentEvento: action.payload,
+      }
+
+    case CLEAR_EVENTOS:
+      return {
+        ...state,
+        loading: false,
+        currentEvento: undefined,
+        eventos: [],
       }
 
     case ERROR_EVENTO:
