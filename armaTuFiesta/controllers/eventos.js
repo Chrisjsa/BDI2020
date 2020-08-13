@@ -21,11 +21,13 @@ exports.leerEventosPorUsuario = (req, res) => {
 exports.leerServiciosEvento = (req, res) => {
   connection.query(
     LEER_SERVICIOS_EVENTOS,
-    [req.query.id_evento],
+    [req.query.id_evento, 25],
     (error, rows) => {
       if (error) {
         return res.status(400).send(error.message)
       }
+
+      console.log(rows)
       return res.json(rows)
     }
   )
