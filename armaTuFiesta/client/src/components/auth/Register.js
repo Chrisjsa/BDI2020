@@ -30,7 +30,7 @@ let Register = ({
     parroquia: currentParroquia,
   })
 
-  const onSubmit = e => {
+  const onSubmit = (e) => {
     e.preventDefault()
     console.log(packData())
   }
@@ -42,7 +42,7 @@ let Register = ({
         <Card.Body>
           <Form onSubmit={onSubmit}>
             <Form.Group>
-              <Form.Label>Usuario</Form.Label>
+              <Form.Label>Usuario (Correo Electronico)</Form.Label>
               <Field
                 className="form-control"
                 name="username"
@@ -117,13 +117,20 @@ let Register = ({
 
             <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Correo Electronico</Form.Label>
-                <Field
-                  className="form-control"
-                  name="correo"
-                  component="input"
-                  type="text"
-                />
+                <Form.Label>Estado civil</Form.Label>
+                <Form.Control
+                  as="select"
+                  defaultValue="Seleccionar..."
+                  name="estadoCivil"
+                  value={estadoCivil}
+                  onChange={(e) => setEstadoCivil(e.target.value)}
+                >
+                  <option>Seleccionar...</option>
+                  <option value="Soltero">Soltero</option>
+                  <option value="Casado">Casado</option>
+                  <option value="Divorciado">Divorciado</option>
+                  <option value="Viudo">Viudo</option>
+                </Form.Control>
               </Form.Group>
 
               <Form.Group as={Col}>
@@ -151,7 +158,7 @@ let Register = ({
                 <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
                 <DatePicker
                   selected={fechaNacimiento}
-                  onChange={date => setFechaNacimiento(date)}
+                  onChange={(date) => setFechaNacimiento(date)}
                   peekNextMonth
                   showMonthDropdown
                   showYearDropdown
@@ -162,23 +169,6 @@ let Register = ({
             </Form.Row>
 
             <Form.Row>
-              <Form.Group as={Col}>
-                <Form.Label>Estado civil</Form.Label>
-                <Form.Control
-                  as="select"
-                  defaultValue="Seleccionar..."
-                  name="estadoCivil"
-                  value={estadoCivil}
-                  onChange={e => setEstadoCivil(e.target.value)}
-                >
-                  <option>Seleccionar...</option>
-                  <option value="Soltero">Soltero</option>
-                  <option value="Casado">Casado</option>
-                  <option value="Divorciado">Divorciado</option>
-                  <option value="Viudo">Viudo</option>
-                </Form.Control>
-              </Form.Group>
-
               <fieldset>
                 <Form.Group>
                   <Form.Label className="mr-3">Sex</Form.Label>
@@ -188,7 +178,7 @@ let Register = ({
                     label="M"
                     name="sexo"
                     value="Masculino"
-                    onChange={e => setSexo(e.target.value)}
+                    onChange={(e) => setSexo(e.target.value)}
                     checked={sexo === "Masculino"}
                   />
                   <Form.Check
@@ -197,7 +187,7 @@ let Register = ({
                     label="F"
                     name="sexo"
                     value="Femenino"
-                    onChange={e => setSexo(e.target.value)}
+                    onChange={(e) => setSexo(e.target.value)}
                     checked={sexo === "Femenino"}
                   />
                 </Form.Group>
@@ -224,7 +214,7 @@ Register = reduxForm({
 
 const mapActionsToProps = {}
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   formValues: getFormValues("registro")(state),
   currentEstado: state.lugares.currentEstado,
   currentMunicipio: state.lugares.currentMunicipio,
