@@ -1,14 +1,7 @@
 const moment = require("moment")
 
 const { connection } = require("../database")
-const {
-  SIGN_UP,
-  SIGN_IN,
-  LOAD_USER,
-  LISTAR_ROL_PERMISO,
-  OBTENER_ROL_USUARIO,
-  OBTENER_PERMISO_USUARIO,
-} = require("../sql/authQueries")
+const { SIGN_UP, SIGN_IN, LOAD_USER } = require("../sql/authQueries")
 
 const {
   LEER_ROL_USUARIO,
