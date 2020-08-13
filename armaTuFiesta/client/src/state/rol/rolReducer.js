@@ -14,6 +14,7 @@ const initialState = {
   error: null,
   rolesPermisos: [],
   permisos: [],
+  roles: [],
 }
 
 export default (state = initialState, action) => {

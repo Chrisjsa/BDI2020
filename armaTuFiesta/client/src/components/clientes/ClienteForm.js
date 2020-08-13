@@ -17,6 +17,8 @@ import {
   setCurrentCliente,
 } from "../../state/cliente/clienteActions"
 
+import { leerRoles } from "../../state/rol/rolActions"
+
 let ClienteForm = ({
   leerClientes,
   insertarCliente,
@@ -30,11 +32,18 @@ let ClienteForm = ({
   formValues,
   change,
   reset,
+  leerRoles,
+  roles,
 }) => {
   const [fechaNacimiento, setFechaNacimiento] = useState(new Date())
   const [sexo, setSexo] = useState("Masculino")
   const [estadoCivil, setEstadoCivil] = useState("")
   const [rol, setRol] = useState("")
+
+  useEffect(() => {
+    leerRoles()
+    // eslint-disable-next-line
+  }, [])
 
   useEffect(() => {
     console.log("use efffect:", currentCliente)
@@ -49,7 +58,7 @@ let ClienteForm = ({
       setFechaNacimiento(new Date(currentCliente.fecha_nacimiento))
       setSexo(currentCliente.sexo)
       setEstadoCivil(currentCliente.estado_civil)
-      setRol(currentCliente.rol)
+      setRol(currentCliente.id_rol)
     }
     // eslint-disable-next-line
   }, [currentCliente])
@@ -62,7 +71,7 @@ let ClienteForm = ({
     estado: currentEstado,
     municipio: currentMunicipio,
     parroquia: currentParroquia,
-    rol,
+    id_rol: rol,
   })
 
   const cleanUp = () => {
@@ -154,7 +163,7 @@ let ClienteForm = ({
             <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
             <DatePicker
               selected={fechaNacimiento}
-              onChange={(date) => setFechaNacimiento(date)}
+              onChange={date => setFechaNacimiento(date)}
               peekNextMonth
               showMonthDropdown
               showYearDropdown
@@ -172,7 +181,7 @@ let ClienteForm = ({
               name="estadoCivil"
               value={estadoCivil}
               disabled={currentCliente}
-              onChange={(e) => setEstadoCivil(e.target.value)}
+              onChange={e => setEstadoCivil(e.target.value)}
             >
               <option>Seleccionar...</option>
               <option value="Soltero">Soltero</option>
@@ -210,15 +219,12 @@ let ClienteForm = ({
               defaultValue="Seleccionar..."
               name="estadoCivil"
               value={rol}
-              disabled={currentCliente}
-              onChange={(e) => setRol(e.target.value)}
+              onChange={e => setRol(e.target.value)}
             >
               <option>Seleccionar...</option>
-              <option value="Soltero">SuperUser</option>
-              <option value="Casado">Administrador</option>
-              <option value="Divorciado">Supervisor</option>
-              <option value="Viudo">Empleado</option>
-              <option value="Viudo">Cliente</option>
+              {roles.map(rol => (
+                <option value={rol.id_rol}>{rol.nombre}</option>
+              ))}
             </Form.Control>
           </Form.Group>
         </Form.Row>
@@ -233,7 +239,7 @@ let ClienteForm = ({
               name="sexo"
               disabled={currentCliente}
               value="Masculino"
-              onChange={(e) => setSexo(e.target.value)}
+              onChange={e => setSexo(e.target.value)}
               checked={sexo === "Masculino"}
             />
             <Form.Check
@@ -243,7 +249,7 @@ let ClienteForm = ({
               label="F"
               name="sexo"
               value="Femenino"
-              onChange={(e) => setSexo(e.target.value)}
+              onChange={e => setSexo(e.target.value)}
               checked={sexo === "Femenino"}
             />
           </Form.Group>
@@ -282,15 +288,17 @@ const mapActionsToProps = {
   leerClientes,
   change,
   reset,
+  leerRoles,
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   formValues: getFormValues("cliente")(state),
   clientes: state.clientes.clientes,
   currentCliente: state.clientes.currentCliente,
   currentEstado: state.lugares.currentEstado,
   currentMunicipio: state.lugares.currentMunicipio,
   currentParroquia: state.lugares.currentParroquia,
+  roles: state.rols.roles,
 })
 
 export default connect(mapStateToProps, mapActionsToProps)(ClienteForm)

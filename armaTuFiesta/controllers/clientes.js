@@ -5,6 +5,7 @@ const {
   CREAR_CLIENTES,
   ELIMINAR_CLIENTES,
   CREAR_OTROS_USUARIOS,
+  ASIGNAR_ROL_USUARIO,
 } = require("../sql/clientesQueries")
 
 const moment = require("moment")
@@ -37,6 +38,7 @@ exports.crearCliente = (req, res) => {
     estadoCivil: estado_civil,
     fecha_nacimiento,
     parroquia,
+    id_rol,
   } = req.body
 
   const password = "gibberish"
@@ -56,13 +58,11 @@ exports.crearCliente = (req, res) => {
     correo,
     correo,
     password,
+    id_rol,
   ]
 
-  connection.query(CREAR_CLIENTES, [...data], (error, rows) => {
-    if (error) {
-      return res.status(400).send({ message: error.message })
-    }
-    return res.json(rows)
+  connection.query(CREAR_CLIENTES, data, (error, rows) => {
+    if (error) return res.status(400).send({ message: error.message })
   })
 }
 
@@ -77,16 +77,18 @@ exports.crearOtroUsuario = (req, res) => {
 }
 
 exports.actualizarCliente = (req, res) => {
-  const { id_persona, telefono, correo } = req.body
+  const { id_persona, telefono, correo, id_rol } = req.body
 
   password = "gibberish"
 
   const data = [id_persona, telefono, correo, correo, password]
 
   connection.query(ACTUALIZAR_CLIENTES, data, (error, rows) => {
-    if (error) {
-      return res.status(400).send({ message: error.message })
-    }
+    if (error) return res.status(400).send({ message: error.message })
+  })
+
+  connection.query(ASIGNAR_ROL_USUARIO, [id_rol, id_persona], (error, rows) => {
+    if (error) return res.status(400).send({ message: error.message })
 
     return res.json(rows)
   })
