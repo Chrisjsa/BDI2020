@@ -1,90 +1,31 @@
-* Arma Tu Fiesta
+*Listo*
+1. Modelo Entidad Relación corregido.
+3. Registro de Rol.
+4. Asociación de Rol con privilegios.
+13. Alertas.
+6. Inicio de sesión con validación de permisos.
 
-** TODO JSReports
+*Bien, pero le falta*
+2. CRUD de cliente.
 
-** Lugar
-*** DONE Leer parroquias [2020-8-2 Sun]
-*** DONE Leer estados [2020-8-2 Sun]
-*** DONE Leer municipios [2020-8-2 Sun]
+*En proceso*
+10. Registro de métodos de pago.
 
-** Notaria
-*** DONE Leer notarias [2020-8-2 Sun]
-*** DONE Actualizar notaria [2020-8-2 Sun]
-*** DONE Crear notaria [2020-8-2 Sun]
-*** DONE Eliminar notaria [2020-8-2 Sun]
+*No se ha comenzado*
+5. Asignación Roles a usuarios.
+9. COntratos.
+11. Pagar contratos y generar el recibo.
+12. Validaciones correspondientes para los contratos.
+14. CRUD de recomendaciones incluyendo las fotos.
+15. Las secciones solicitadas deben mostrarse en la página con sus fotos.
+16. Inscripción en curso matrimonial y recibos de pago.
+7. Armar presupuestos tomando en cuenta todo lo que está en el enunciado del proyecto (salones, temas, decoración, floristería, música, comida, fotografía, protocolo, animación, colores, decoración, entre otros).
+8. Citas con floristerías y diseñadores.
+21. Reporte 5: Descuentos ofrecidos y aplicados en los productos y servicios contratados por período de tiempo.
 
-** Carta
-*** TODO Crear carta
-*** TODO Consultar carta
+*Fallando*
+17. Reporte 1: Total de fiestas por mes.
+18. Reporte 2: Detalle de todas las contrataciones a terceros por período de tiempo, indicando fecha y costo.
+19. Reporte 3: Total de ingresos y egresos por periodo de tiempo.
+20. Reporte 4: Top 10 de servicios tercerizados contratados por periodo de tiempo.
 
-** Categoria
-*** TODO Crear categoria
-*** TODO Leer categorias
-*** TODO Actualizar categoria
-*** TODO Eliminar categoria
-
-** Cliente
-*** TODO Crear cliente
-*** TODO Leer clientes
-*** TODO Actualizar cliente
-*** TODO Eliminar cliente
-
-** Curso
-*** TODO Crear curso
-*** TODO Leer cursos
-*** TODO Actualizar curso
-*** TODO Eliminar curso
-
-** Horario
-*** TODO Crear horario
-*** TODO Leer horarios
-*** TODO Actualizar horario
-*** TODO Eliminar horario
-
-** Jefatura
-*** TODO Crear jefatura
-*** TODO Leer jefaturas
-*** TODO Actualizar jefatura
-*** TODO Eliminar jefatura
-
-** Producto
-*** TODO Crear producto
-*** TODO Leer productos
-*** TODO Actualizar producto
-*** TODO Eliminar producto
-
-** Rol
-*** TODO Crear rol
-*** TODO Leer rol
-*** TODO Actualizar rol
-*** TODO Eliminar rol
-
-** Religion
-*** TODO Crear religion
-*** TODO Leer religion
-*** TODO Actualizar religion
-*** TODO Eliminar religion
-
-** Restaurant
-*** TODO Crear restaurant
-*** TODO Leer restaurant
-*** TODO Actualizar restaurant
-*** TODO Eliminar restaurant
-
-** Status
-*** TODO Crear status
-*** TODO Leer status
-*** TODO Actualizar status
-*** TODO Eliminar status
-
-** Templo
-*** TODO Crear templo
-*** TODO Leer templo
-*** TODO Actualizar templo
-*** TODO Eliminar templo
-
-** Tip
-*** TODO Crear tip
-*** TODO Leer tip
-*** TODO Actualizar tip
-*** TODO Eliminar tip
