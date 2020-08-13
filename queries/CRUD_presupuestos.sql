@@ -22,13 +22,13 @@ WHERE eve.fk_tema = tem.id_tema AND ordeve.fk_evento = eve.id_evento AND ordeve.
 
 -- OBTENER DETALLES DE UN PRESUPUESTO (Productos o Servicios)
 
-SET @orden_evento = 25;
+SET @orden_evento = 1;
 
-SELECT pre.fk_orden_evento as id_orden_evento, det.fk_presupuesto as Num_Presupuesto, ser.nombre as 'Servicio/Producto', det.costo_unitario, det.cantidad, det.costo, det.precio as a_cobrar
-FROM arma_tu_fiesta.presupuesto as pre, arma_tu_fiesta.detalle as det, arma_tu_fiesta.servicio_tercerizado as ser
-WHERE pre.fk_orden_evento = @orden_evento AND det.fk_presupuesto = @presupuesto and det.fk_servicio = ser.id_servicio
+SELECT pre.fk_orden_evento as id_orden_evento, det.fk_presupuesto as Num_Presupuesto, ser.nombre as 'Servicio/Producto', cat.nombre as categoria, det.costo_unitario, det.cantidad, det.costo, det.precio as a_cobrar
+FROM arma_tu_fiesta.presupuesto as pre, arma_tu_fiesta.detalle as det, arma_tu_fiesta.servicio_tercerizado as ser, arma_tu_fiesta.categoria as cat
+WHERE pre.fk_orden_evento = @orden_evento AND det.fk_presupuesto = @presupuesto AND det.fk_servicio = ser.id_servicio AND ser.fk_categoria = cat.id_categoria
 UNION
-SELECT pre.fk_orden_evento as id_orden_evento, det.fk_presupuesto as Num_Presupuesto, pro.nombre as 'Servicio/Producto', det.costo_unitario, det.cantidad, det.costo, det.precio as a_cobrar
-FROM arma_tu_fiesta.presupuesto as pre, arma_tu_fiesta.detalle as det, arma_tu_fiesta.producto as pro
-WHERE pre.fk_orden_evento = @orden_evento AND det.fk_presupuesto = @presupuesto and det.fk_producto = pro.id_producto;
+SELECT pre.fk_orden_evento as id_orden_evento, det.fk_presupuesto as Num_Presupuesto, pro.nombre as 'Servicio/Producto', cat.nombre as categoria, det.costo_unitario, det.cantidad, det.costo, det.precio as a_cobrar
+FROM arma_tu_fiesta.presupuesto as pre, arma_tu_fiesta.detalle as det, arma_tu_fiesta.producto as pro, arma_tu_fiesta.categoria as cat
+WHERE pre.fk_orden_evento = @orden_evento AND det.fk_presupuesto = @presupuesto AND det.fk_producto = pro.id_producto AND pro.fk_categoria = cat.id_categoria;
 
