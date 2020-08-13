@@ -4,6 +4,7 @@ import {
   LEER_EVENTOS_POR_USUARIO,
   SET_CURRENT_EVENTO,
   LEER_SERVICIO_EVENTO,
+  CLEAR_EVENTOS,
 } from "./eventoTypes"
 import axios from "axios"
 
@@ -39,6 +40,13 @@ export const leerServiciosEvento = () => async (dispatch) => {
 export const setCurrentEvento = (evento) => (dispatch) => {
   dispatch({
     type: SET_CURRENT_EVENTO,
+    payload: evento,
+  })
+}
+
+export const clearEventos = (evento) => (dispatch) => {
+  dispatch({
+    type: CLEAR_EVENTOS,
     payload: evento,
   })
 }
