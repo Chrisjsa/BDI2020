@@ -12,5 +12,5 @@ const {
 // Read
 router.get("/leerEventosPorUsuario", middleware, leerEventosPorUsuario)
 
-router.get("/leerServiciosEventos", auth, leerServiciosEvento)
+router.get("/leerServiciosEventos", middleware, leerServiciosEvento)
 module.exports = router

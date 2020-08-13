@@ -2,6 +2,7 @@ import React from "react"
 
 import { Form, Button, Card } from "react-bootstrap"
 
+<<<<<<< HEAD
 import { Link } from "react-router-dom"
 
 import useForm from "../../hooks/useForm"
@@ -11,11 +12,21 @@ let Register = () => {
   const onSubmit = (e) => {
     e.preventDefault()
 
+=======
+import { connect } from "react-redux"
+import { Field, reduxForm } from "redux-form"
+
+import { Link } from "react-router-dom"
+
+let Register = () => {
+  const onSubmit = e => {
+    e.preventDefault()
+>>>>>>> a4a65482e2ac5234e3cd1e9ae2fd27bb00f6185a
     console.log("Register.onClick()")
   }
 
   return (
-    <div className="form-container">
+    <div className="register-container">
       <h1 className="text-center my-5">Registro</h1>
       <Card className="bg-light">
         <Card.Body>
@@ -27,7 +38,10 @@ let Register = () => {
                 name="username"
                 component="input"
                 type="text"
+<<<<<<< HEAD
                 placeholder="Tu usuario"
+=======
+>>>>>>> a4a65482e2ac5234e3cd1e9ae2fd27bb00f6185a
               />
 
               <Form.Text className="text-muted">
@@ -37,10 +51,25 @@ let Register = () => {
 
             <Form.Group>
               <Form.Label>Contraseña</Form.Label>
-              <Form.Control
+              <Field
+                className="form-control"
                 name="password"
+                component="input"
                 type="password"
+              />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Label>Contraseña</Form.Label>
+              <Field
+                className="form-control"
+                name="password2"
+                component="input"
+                type="password"
+<<<<<<< HEAD
                 placeholder="Tu contraseña"
+=======
+>>>>>>> a4a65482e2ac5234e3cd1e9ae2fd27bb00f6185a
               />
             </Form.Group>
 
@@ -64,6 +93,12 @@ Register = reduxForm({
 
 const mapActionsToProps = {}
 
+<<<<<<< HEAD
 const mapStateToProps = (state) => ({})
 
 export default Register
+=======
+const mapStateToProps = state => ({})
+
+export default connect(mapStateToProps, mapActionsToProps)(Register)
+>>>>>>> a4a65482e2ac5234e3cd1e9ae2fd27bb00f6185a

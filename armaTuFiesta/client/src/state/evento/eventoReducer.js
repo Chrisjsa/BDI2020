@@ -20,7 +20,11 @@ export default (state = initialState, action) => {
       return { ...state, loading: false, eventos: action.payload }
 
     case LEER_SERVICIO_EVENTO:
-      return { ...state, loading: false }
+      return {
+        ...state,
+        loading: false,
+        currentEventoServicios: action.payload,
+      }
 
     case LOADING_EVENTO:
       return { ...state, loading: true }
