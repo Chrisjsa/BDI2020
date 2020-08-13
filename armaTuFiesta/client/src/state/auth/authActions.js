@@ -46,6 +46,7 @@ export const loadUser = () => async dispatch => {
     const res = await axios.get("/api/auth/")
     dispatch({ type: LOAD_USER, payload: res.data })
   } catch (error) {
+    console.log("ERROR DE CANONYMOUS:", error.message)
     dispatch({ type: ERROR_AUTH, payload: error.response.data.message })
     errorTimeOut(dispatch, CLEAR_ERROR_AUTH)
   }

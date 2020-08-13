@@ -1,3 +1,7 @@
+String.prototype.capitalize = function () {
+  return this.charAt(0).toUpperCase() + this.slice(1)
+}
+
 export const filterById = (list, object, object_id) =>
   list.filter(element => element[object_id] === object[object_id])
 
