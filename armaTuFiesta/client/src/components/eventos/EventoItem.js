@@ -11,7 +11,7 @@ import moment from "moment"
 import { setCurrentEvento } from "../../state/evento/eventoActions"
 
 const EventoItem = ({ evento, history, setCurrentEvento }) => {
-  const { nombre, descripcion, fecha_realizacion } = evento
+  const { id_evento, descripcion, fecha_realizacion } = evento
 
   const onClick = e => {
     setCurrentEvento(evento)
@@ -22,7 +22,7 @@ const EventoItem = ({ evento, history, setCurrentEvento }) => {
     <Card>
       <Card.Body>
         <Card.Title className="clickable" onClick={onClick}>
-          {nombre}
+          {`Evento #${id_evento}`}
         </Card.Title>
         <Card.Text>{descripcion}</Card.Text>
       </Card.Body>

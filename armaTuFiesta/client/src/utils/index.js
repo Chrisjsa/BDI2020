@@ -12,3 +12,16 @@ export const errorTimeOut = (dispatch, type) => {
     dispatch({ type })
   }, 3000)
 }
+
+export const canCrud = (entity, entityList) => {
+  const capitalizedEntity = entity.capitalize()
+
+  const operations = [
+    `insertar${capitalizedEntity}`,
+    `eliminar${capitalizedEntity}`,
+    `leer${capitalizedEntity}`,
+    `eliminar${capitalizedEntity}`,
+  ]
+
+  return operations.every(element => entityList.includes(element))
+}

@@ -14,6 +14,10 @@ import axios from "axios"
 
 import setAuthToken from "../../utils/setAuthToken"
 
+String.prototype.capitalize = function () {
+  return this.charAt(0).toUpperCase() + this.slice(1)
+}
+
 const config = { headers: { "Content-Type": "application/json" } }
 
 export const login = credentials => async dispatch => {

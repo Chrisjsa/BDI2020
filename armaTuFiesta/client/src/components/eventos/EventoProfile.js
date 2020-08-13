@@ -9,6 +9,7 @@ import { connect } from "react-redux"
 import { setAlert } from "../../state/alert/alertActions"
 
 import EventoSidebar from "./EventoSidebar"
+import ServiciosEvento from "./ServiciosEvento"
 
 const EventoProfile = ({ currentEvento, history }) => {
   useEffect(() => {
@@ -17,15 +18,19 @@ const EventoProfile = ({ currentEvento, history }) => {
     }
   }, [currentEvento])
 
+  const { tipo_evento, id_evento } = currentEvento
+
   return (
     <Container>
-      <Hero firstLine={} secondLine={} />
+      <Hero firstLine={tipo_evento} secondLine={`Evento# ${id_evento}`} />
       <Row>
         <Col xs={3}>
           <EventoSidebar evento={currentEvento} />
           <br />
         </Col>
-        <Col></Col>
+        <Col>
+          <ServiciosEvento />
+        </Col>
       </Row>
     </Container>
   )

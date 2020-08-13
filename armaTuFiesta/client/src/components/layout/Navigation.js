@@ -8,6 +8,8 @@ import logo from "../../img/logo.png"
 import { connect } from "react-redux"
 import { logout } from "../../state/auth/authActions"
 
+import { canCrud } from "../../utils"
+
 const Navigation = ({ user, logout, history, isAuthenticated }) => {
   const permisos = user && user.permisos
 
@@ -47,20 +49,26 @@ const Navigation = ({ user, logout, history, isAuthenticated }) => {
     <>
       <Nav className="mr-auto">{link("/dashboard", "Dashboard")}</Nav>
       <Nav>
-        {link("/reportes", "Reportes")}
-        <NavDropdown title="Administrar" id="basic-nav-dropdown">
-          <NavDropdown.Item>
-            {link("/crud_notaria", "Notarias")}
-          </NavDropdown.Item>
-          <NavDropdown.Item>
-            {link("/crud_cliente", "Clientes")}
-          </NavDropdown.Item>
-          <NavDropdown.Item>{link("/permisos", "Permisos")}</NavDropdown.Item>
-          <NavDropdown.Item>{link("/crud_tip", "Tips")}</NavDropdown.Item>
-          <NavDropdown.Item>
-            {link("/metodos_pago", "Métodos de Pago")}
-          </NavDropdown.Item>
-        </NavDropdown>
+        {user && canCrud("cliente", ["insertarCliente"]) && (
+          <>
+            {link("/reportes", "Reportes")}
+            <NavDropdown title="Administrar" id="basic-nav-dropdown">
+              <NavDropdown.Item>
+                {link("/crud_notaria", "Notarias")}
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                {link("/crud_cliente", "Clientes")}
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                {link("/permisos", "Permisos")}
+              </NavDropdown.Item>
+              <NavDropdown.Item>{link("/crud_tip", "Tips")}</NavDropdown.Item>
+              <NavDropdown.Item>
+                {link("/metodos_pago", "Métodos de Pago")}
+              </NavDropdown.Item>
+            </NavDropdown>
+          </>
+        )}
         <Nav.Link onClick={handleLogout}>Cerrar sesión</Nav.Link>
       </Nav>
     </>
