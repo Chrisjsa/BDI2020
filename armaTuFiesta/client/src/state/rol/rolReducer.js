@@ -31,7 +31,7 @@ export default (state = initialState, action) => {
       return { ...state, loading: true }
 
     case LEER_ROL:
-      return { ...state, loading: false }
+      return { ...state, loading: false, roles: action.payload }
 
     case CREAR_ROL:
       return { ...state, loading: false }
