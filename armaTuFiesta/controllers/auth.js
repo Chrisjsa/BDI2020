@@ -30,7 +30,6 @@ exports.signUp = async (req, res) => {
     estadoCivil: estado_civil,
     fecha_nacimiento,
     parroquia,
-    nombre_rol,
   } = req.body
 
   const data = [
@@ -43,7 +42,6 @@ exports.signUp = async (req, res) => {
     moment(fecha_nacimiento).format("YYYY-MM-DD"),
     sexo,
     estado_civil,
-    nombre_rol,
     username,
     password,
   ]
