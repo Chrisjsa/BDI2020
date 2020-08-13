@@ -10,11 +10,14 @@ import "react-datepicker/dist/react-datepicker.css"
 import { Link } from "react-router-dom"
 import LugarFields from "../lugares/LugarFields"
 
+import { signup } from "../../state/auth/authActions"
+
 let Register = ({
   formValues,
   currentEstado,
   currentMunicipio,
   currentParroquia,
+  signup,
 }) => {
   const [fechaNacimiento, setFechaNacimiento] = useState(new Date())
   const [sexo, setSexo] = useState("Masculino")
@@ -32,7 +35,7 @@ let Register = ({
 
   const onSubmit = e => {
     e.preventDefault()
-    console.log(packData())
+    signup(packData())
   }
 
   return (
@@ -222,7 +225,7 @@ Register = reduxForm({
   form: "registro",
 })(Register)
 
-const mapActionsToProps = {}
+const mapActionsToProps = { signup }
 
 const mapStateToProps = state => ({
   formValues: getFormValues("registro")(state),

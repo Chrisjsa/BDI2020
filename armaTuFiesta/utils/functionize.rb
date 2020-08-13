@@ -31,25 +31,25 @@ def frontend
 
     step("(types) add $type to types", "export const #{$type} = '#{$type}'")
 
-    step("(actions) import $type to actions", "#{$type},")
+    step("(actions) import type to actions", "#{$type},")
 
     end_point = "api/#{$plural_entity}/#{$fn}"
 
     if $html_request == "get"
         step("(action) add action function", 
-    "export const #{$fn} = (#{$entity}) => async dispatch => { setLoading()(dispatch); try { const res = await axios.get('#{end_point}'); dispatch({ $type: #{$type}, payload: res.data, }) } catch (error) { dispatch({ $type: ERROR_#{$entity.upcase}, payload: error.response.msg, }) } }" )
+    "export const #{$fn} = (#{$entity}) => async dispatch => { setLoading()(dispatch); try { const res = await axios.get('#{end_point}'); dispatch({ $type: #{$type}, payload: res.data, }) } catch (error) { dispatch({ type: ERROR_#{$entity.upcase}, payload: error.response.msg, }) } }" )
 
     elsif $html_request == "post"
         step("(action) add action function", 
-    "export const #{$fn} = (#{$entity}) => async dispatch => { setLoading()(dispatch); try { const res = await axios.post('#{end_point}', #{$entity}, config); dispatch({ $type: #{$type}, payload: res.data, }) } catch (error) { dispatch({ $type: ERROR_#{$entity.upcase}, payload: error.response.msg, }) } }" )
+    "export const #{$fn} = (#{$entity}) => async dispatch => { setLoading()(dispatch); try { const res = await axios.post('#{end_point}', #{$entity}, config); dispatch({ $type: #{$type}, payload: res.data, }) } catch (error) { dispatch({ type: ERROR_#{$entity.upcase}, payload: error.response.msg, }) } }" )
 
     elsif $html_request == "put"
         step("(action) add action function", 
-    "export const #{$fn} = (#{$entity}) => async dispatch => { setLoading()(dispatch); try { const res = await axios.put('#{end_point}', #{$entity}, config); dispatch({ $type: #{$type}, payload: res.data, }) } catch (error) { dispatch({ $type: ERROR_#{$entity.upcase}, payload: error.response.msg, }) } }" )
+    "export const #{$fn} = (#{$entity}) => async dispatch => { setLoading()(dispatch); try { const res = await axios.put('#{end_point}', #{$entity}, config); dispatch({ $type: #{$type}, payload: res.data, }) } catch (error) { dispatch({ type: ERROR_#{$entity.upcase}, payload: error.response.msg, }) } }" )
 
     elsif $html_request == "delete"
         step("(action) add action function", 
-    "export const #{$fn} = (#{$entity}) => async dispatch => { setLoading()(dispatch); try { const res = await axios.delete(`#{end_point}/${id_#{$entity}}`); dispatch({ $type: #{$type} }) } catch (error) { dispatch({ $type: ERROR_#{$entity.upcase}, payload: error.response.msg, }) } }" )
+    "export const #{$fn} = (#{$entity}) => async dispatch => { setLoading()(dispatch); try { const res = await axios.delete(`#{end_point}/${id_#{$entity}}`); dispatch({ $type: #{$type} }) } catch (error) { dispatch({ type: ERROR_#{$entity.upcase}, payload: error.response.msg, }) } }" )
 
     else 
         puts "Request #{$html_request} is not get, post, put or delete"
@@ -146,7 +146,7 @@ end
 $fn = input("Function name: (camelCase)")
 $type = input("Type: (dashed-case)")
 $entity = input("Entity: (camelCase)")
-$plural_entity = input("Plural: (camelCase)") unless $option == "-f"
+$plural_entity = input("Plural: (camelCase)")
 $html_request = input("HTML Request (get/post/put/delete): ")
 $new_state = input("New state (key: value): ") unless $option == "-b"
 

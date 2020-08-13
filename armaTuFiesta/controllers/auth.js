@@ -16,18 +16,21 @@ const {
 const jwt = require("jsonwebtoken")
 
 exports.signUp = async (req, res) => {
-  const { username, email, password } = req.body
+  const { username, correo, password } = req.body
 
-  try {
-    connection.query(SIGN_UP, [username, email, password], error => {
-      if (error) {
-        return res.status(400).send(error)
-      }
-      return res.json({ message: "Usuario creado exitosamente" })
-    })
-  } catch (error) {
-    res.status(400).json({ error })
-  }
+  connection.query(SIGN_UP, [username, correo, password], error => {
+    if (error) return res.status(400).send(error)
+  })
+
+  connection.query(SIGN_IN, [username], (error, rows) => {
+    if (error) return res.status(400).send({ message: error })
+
+    const user = rows.pop()
+
+    const token = jwt.sign({ id: user.id_usuario }, process.env.JWT_SECRET)
+    res.cookie("t", token, { expire: new Date() + 9999 })
+    return res.json({ token, user })
+  })
 }
 
 exports.signIn = (req, res) => {
@@ -37,9 +40,7 @@ exports.signIn = (req, res) => {
     return res.status(500).send({ message: "Todos los campos son requeridos" })
 
   connection.query(SIGN_IN, [username], async (error, rows) => {
-    if (error) {
-      return res.status(400).send({ message: error })
-    }
+    if (error) return res.status(400).send({ message: error })
 
     const user = rows.pop()
 

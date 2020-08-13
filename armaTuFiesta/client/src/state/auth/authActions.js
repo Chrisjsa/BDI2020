@@ -4,7 +4,7 @@ import {
   ERROR_AUTH,
   LOAD_USER,
   LOADING_AUTH,
-  LEER_ROLES_PERMISOS,
+  // LEER_ROLES_PERMISOS,
   CLEAR_ERROR_AUTH,
   SIGN_UP,
 } from "./authTypes"
@@ -15,13 +15,9 @@ import axios from "axios"
 
 import setAuthToken from "../../utils/setAuthToken"
 
-String.prototype.capitalize = function () {
-  return this.charAt(0).toUpperCase() + this.slice(1)
-}
-
 const config = { headers: { "Content-Type": "application/json" } }
 
-export const login = (credentials) => async (dispatch) => {
+export const login = credentials => async dispatch => {
   setLoading()
   try {
     const res = await axios.post("api/auth/signin", credentials, config)
@@ -40,7 +36,7 @@ export const login = (credentials) => async (dispatch) => {
   }
 }
 
-export const loadUser = () => async (dispatch) => {
+export const loadUser = () => async dispatch => {
   setLoading()(dispatch)
   if (localStorage.token) {
     setAuthToken(localStorage.token)
@@ -61,29 +57,31 @@ export const logout = () => {
   }
 }
 
-export const setLoading = () => (dispatch) => {
+export const setLoading = () => dispatch => {
   return dispatch({
     type: LOADING_AUTH,
   })
 }
 
-export const leerRolesPermisos = () => async (dispatch) => {
+// export const leerRolesPermisos = () => async dispatch => {
+//   setLoading()(dispatch)
+//   try {
+//     const res = await axios.get(`api/roles/leerRolesPermisos`, config)
+//     dispatch({ type: LEER_ROLES_PERMISOS, payload: res.data })
+//   } catch (error) {
+//     dispatch({ type: ERROR_AUTH, payload: error.response.data.message })
+//     errorTimeOut(dispatch, CLEAR_ERROR_AUTH)
+//   }
+// }
+
+export const signup = auth => async dispatch => {
   setLoading()(dispatch)
   try {
-    const res = await axios.get(`api/roles/leerRolesPermisos`, config)
-    dispatch({ type: LEER_ROLES_PERMISOS, payload: res.data })
+    const res = await axios.post("api/auth/signup", auth, config)
+    dispatch({ type: SIGN_UP, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_AUTH, payload: error.response.data.message })
-    errorTimeOut(dispatch, CLEAR_ERROR_AUTH)
   }
-}
 
-export const signup = (auth) => async (dispatch) => {
-  setLoading()(dispatch)
-  try {
-    const res = await axios.post("api//signup", auth, config)
-    dispatch({ $type: SIGN_UP, payload: res.data })
-  } catch (error) {
-    dispatch({ $type: ERROR_AUTH, payload: error.response.msg })
-  }
+  loadUser()(dispatch)
 }
