@@ -16,10 +16,40 @@ const {
 const jwt = require("jsonwebtoken")
 
 exports.signUp = async (req, res) => {
-  const { username, email, password } = req.body
+  const {
+    username,
+    password,
+    p_nombre,
+    s_nombre,
+    p_apellido,
+    s_apellido,
+    correo,
+    telefono,
+    sexo,
+    cedula,
+    estadoCivil: estado_civil,
+    fecha_nacimiento,
+    parroquia,
+    nombre_rol,
+  } = req.body
+
+  const data = [
+    parroquia,
+    cedula,
+    p_nombre,
+    s_nombre,
+    p_apellido,
+    s_apellido,
+    moment(fecha_nacimiento).format("YYYY-MM-DD"),
+    sexo,
+    estado_civil,
+    nombre_rol,
+    username,
+    password,
+  ]
 
   try {
-    connection.query(SIGN_UP, [username, email, password], error => {
+    connection.query(SIGN_UP, [...data], (error) => {
       if (error) {
         return res.status(400).send(error)
       }
@@ -85,7 +115,7 @@ exports.loadUser = (req, res) => {
       return res.status(400).send(error)
     }
 
-    user.permisos = rows[1].map(row => row.permiso)
+    user.permisos = rows[1].map((row) => row.permiso)
   })
 
   connection.query(LEER_ROL_USUARIO, [req.userId], async (error, rows) => {
