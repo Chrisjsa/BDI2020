@@ -1,3 +1,5 @@
+const moment = require("moment")
+
 const { connection } = require("../database")
 const {
   SIGN_UP,
@@ -16,9 +18,39 @@ const {
 const jwt = require("jsonwebtoken")
 
 exports.signUp = async (req, res) => {
-  const { username, correo, password } = req.body
+  const {
+    username,
+    password,
+    p_nombre,
+    s_nombre,
+    p_apellido,
+    s_apellido,
+    correo,
+    telefono,
+    sexo,
+    cedula,
+    estadoCivil: estado_civil,
+    fecha_nacimiento,
+    parroquia,
+  } = req.body
 
-  connection.query(SIGN_UP, [username, correo, password], error => {
+  const data = [
+    parroquia,
+    cedula,
+    p_nombre,
+    s_nombre,
+    p_apellido,
+    s_apellido,
+    moment(fecha_nacimiento).format("YYYY-MM-DD"),
+    sexo,
+    estado_civil,
+    cedula,
+    username,
+    password,
+    telefono,
+  ]
+
+  connection.query(SIGN_UP, data, error => {
     if (error) return res.status(400).send(error)
   })
 
@@ -27,8 +59,9 @@ exports.signUp = async (req, res) => {
 
     const user = rows.pop()
 
+    console.table(user)
+
     const token = jwt.sign({ id: user.id_usuario }, process.env.JWT_SECRET)
-    res.cookie("t", token, { expire: new Date() + 9999 })
     return res.json({ token, user })
   })
 }
