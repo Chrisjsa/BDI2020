@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-import { Card } from "react-bootstrap"
+import { Card, CardColumns } from "react-bootstrap"
 
 import { connect } from "react-redux"
 
@@ -10,6 +10,8 @@ import {
 } from "../../state/evento/eventoActions"
 
 import Loading from "../layout/Loading"
+
+import ServicioCategoria from "./ServicioCategoria"
 
 const ServiciosEvento = ({
   currentEvento,
@@ -33,22 +35,20 @@ const ServiciosEvento = ({
       .length === 0
 
   return (
-    <Card>
-      <Card.Body>
-        <h3>Servicios y productos</h3>
+    <>
+      <h3>Servicios y productos</h3>
+      <CardColumns>
         {categorias.map(
           categoria =>
             !categoriaConServicios(categoria) && (
-              <>
-                <h5>{categoria}</h5>
-                {servicioPorCategoria(categoria).map(servicio => (
-                  <div>{servicio.nombre_servicio}</div>
-                ))}
-              </>
+              <ServicioCategoria
+                categoria={categoria}
+                servicios={servicioPorCategoria(categoria)}
+              />
             )
         )}
-      </Card.Body>
-    </Card>
+      </CardColumns>
+    </>
   )
 }
 

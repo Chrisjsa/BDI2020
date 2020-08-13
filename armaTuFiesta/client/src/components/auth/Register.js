@@ -2,23 +2,41 @@ import React, { useState, useEffect } from "react"
 import { Form, Button, Card, Col } from "react-bootstrap"
 
 import { connect } from "react-redux"
-import { Field, reduxForm } from "redux-form"
+import { Field, reduxForm, getFormValues } from "redux-form"
+
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
+
 import { Link } from "react-router-dom"
 import LugarFields from "../lugares/LugarFields"
-let Register = () => {
+
+let Register = ({
+  formValues,
+  currentEstado,
+  currentMunicipio,
+  currentParroquia,
+}) => {
   const [fechaNacimiento, setFechaNacimiento] = useState(new Date())
   const [sexo, setSexo] = useState("Masculino")
   const [estadoCivil, setEstadoCivil] = useState("")
 
-  const onSubmit = (e) => {
+  const packData = () => ({
+    ...formValues,
+    sexo,
+    estadoCivil,
+    fecha_nacimiento: fechaNacimiento,
+    estado: currentEstado,
+    municipio: currentMunicipio,
+    parroquia: currentParroquia,
+  })
+
+  const onSubmit = e => {
     e.preventDefault()
-    console.log("Register.onClick()")
+    console.log(packData())
   }
 
   return (
-    <div className="register-container">
+    <div className="register-container mb-5">
       <h1 className="text-center my-5">Registro</h1>
       <Card className="bg-light">
         <Card.Body>
@@ -31,10 +49,6 @@ let Register = () => {
                 component="input"
                 type="text"
               />
-
-              <Form.Text className="text-muted">
-                No compartimos tu información con nadie.
-              </Form.Text>
             </Form.Group>
 
             <Form.Group>
@@ -137,7 +151,7 @@ let Register = () => {
                 <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
                 <DatePicker
                   selected={fechaNacimiento}
-                  onChange={(date) => setFechaNacimiento(date)}
+                  onChange={date => setFechaNacimiento(date)}
                   peekNextMonth
                   showMonthDropdown
                   showYearDropdown
@@ -155,7 +169,7 @@ let Register = () => {
                   defaultValue="Seleccionar..."
                   name="estadoCivil"
                   value={estadoCivil}
-                  onChange={(e) => setEstadoCivil(e.target.value)}
+                  onChange={e => setEstadoCivil(e.target.value)}
                 >
                   <option>Seleccionar...</option>
                   <option value="Soltero">Soltero</option>
@@ -174,7 +188,7 @@ let Register = () => {
                     label="M"
                     name="sexo"
                     value="Masculino"
-                    onChange={(e) => setSexo(e.target.value)}
+                    onChange={e => setSexo(e.target.value)}
                     checked={sexo === "Masculino"}
                   />
                   <Form.Check
@@ -183,7 +197,7 @@ let Register = () => {
                     label="F"
                     name="sexo"
                     value="Femenino"
-                    onChange={(e) => setSexo(e.target.value)}
+                    onChange={e => setSexo(e.target.value)}
                     checked={sexo === "Femenino"}
                   />
                 </Form.Group>
@@ -210,6 +224,11 @@ Register = reduxForm({
 
 const mapActionsToProps = {}
 
-const mapStateToProps = (state) => ({})
+const mapStateToProps = state => ({
+  formValues: getFormValues("registro")(state),
+  currentEstado: state.lugares.currentEstado,
+  currentMunicipio: state.lugares.currentMunicipio,
+  currentParroquia: state.lugares.currentParroquia,
+})
 
 export default connect(mapStateToProps, mapActionsToProps)(Register)
