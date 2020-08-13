@@ -1,5 +1,5 @@
 exports.SIGN_IN =
-  "SELECT * FROM usuario, persona WHERE username = ? AND password = ? AND persona.id_persona = usuario.fk_persona"
+  "SELECT * FROM usuario, persona WHERE username = ? AND persona.id_persona = usuario.fk_persona"
 exports.SIGN_UP =
   "INSERT INTO users (username, email, password) VALUES (?, ?, ?)"
 exports.LOAD_USER =

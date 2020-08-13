@@ -12,7 +12,7 @@ import { leerEventosPorUsuario } from "../../state/evento/eventoActions"
 
 import moment from "moment"
 
-import EventoItem from "../events/EventoItem"
+import EventoItem from "../eventos/EventoItem"
 
 const DashboardPage = ({
   user,

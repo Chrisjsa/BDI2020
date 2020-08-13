@@ -36,7 +36,7 @@ exports.signIn = (req, res) => {
   if (!username || !password)
     return res.status(500).send({ message: "Todos los campos son requeridos" })
 
-  connection.query(SIGN_IN, [username, password], async (error, rows) => {
+  connection.query(SIGN_IN, [username], async (error, rows) => {
     if (error) {
       return res.status(400).send({ message: error })
     }
@@ -50,23 +50,17 @@ exports.signIn = (req, res) => {
       })
     }
 
-    try {
-      // Check if req.body.password matches database password
-      if (!(password === user.password)) {
-        return res
-          .status(400)
-          .json({ message: "Email and password don't match" })
-      }
-      user.password = undefined
-
-      // Generate sign token with secret
-      const token = jwt.sign({ id: user.id_usuario }, process.env.JWT_SECRET)
-      res.cookie("t", token, { expire: new Date() + 9999 })
-      return res.json({ token, user })
-      //
-    } catch (error) {
-      return res.status(400).json({ error: "Server error" })
+    if (!(password === user.password)) {
+      return res
+        .status(400)
+        .json({ message: "Usuario y/o contraseña incorrectos" })
     }
+    user.password = undefined
+
+    // Generate sign token with secret
+    const token = jwt.sign({ id: user.id_usuario }, process.env.JWT_SECRET)
+    res.cookie("t", token, { expire: new Date() + 9999 })
+    return res.json({ token, user })
   })
 }
 
@@ -77,13 +71,13 @@ exports.signOut = (req, res) => {
 
 exports.loadUser = (req, res) => {
   var user = undefined
+
   connection.query(LOAD_USER, [req.userId], async (error, rows) => {
     if (error) {
       return res.status(400).send(error)
     }
 
     user = rows.pop()
-    user.password = undefined
   })
 
   connection.query(LEER_PERMISOS_USUARIO, [req.userId], async (error, rows) => {
@@ -92,15 +86,12 @@ exports.loadUser = (req, res) => {
     }
 
     user.permisos = rows[1].map(row => row.permiso)
-    console.log("query2", user)
   })
 
   connection.query(LEER_ROL_USUARIO, [req.userId], async (error, rows) => {
     if (error) {
       return res.status(400).send(error)
     }
-
-    user = { ...user, ...rows.pop().pop() }
 
     console.log("query3", user)
     return res.json(user)
