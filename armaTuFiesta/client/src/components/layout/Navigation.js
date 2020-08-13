@@ -8,9 +8,17 @@ import logo from "../../img/logo.png"
 import { connect } from "react-redux"
 import { logout } from "../../state/auth/authActions"
 
+import { clearEventos } from "../../state/evento/eventoActions"
+
 import { canCrud } from "../../utils"
 
-const Navigation = ({ user, logout, history, isAuthenticated }) => {
+const Navigation = ({
+  user,
+  logout,
+  history,
+  isAuthenticated,
+  clearEventos,
+}) => {
   const permisos = user && user.permisos
 
   const handleLogin = () => {
@@ -18,6 +26,7 @@ const Navigation = ({ user, logout, history, isAuthenticated }) => {
   }
 
   const handleLogout = () => {
+    clearEventos()
     logout()
     history.push("/")
   }
@@ -87,9 +96,16 @@ const Navigation = ({ user, logout, history, isAuthenticated }) => {
   )
 }
 
+const mapActionsToProps = {
+  logout,
+  clearEventos,
+}
+
 const mapStateToProps = state => ({
   user: state.auth.user,
   isAuthenticated: state.auth.isAuthenticated,
 })
 
-export default withRouter(connect(mapStateToProps, { logout })(Navigation))
+export default withRouter(
+  connect(mapStateToProps, mapActionsToProps)(Navigation)
+)
