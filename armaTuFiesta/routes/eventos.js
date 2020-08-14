@@ -9,6 +9,7 @@ const {
   leerServiciosEvento,
   leerCategoria,
   leerEventos,
+  leerSalones,
 } = require("../controllers/eventos")
 
 // Read
@@ -19,4 +20,6 @@ router.get("/leerServiciosEventos", middleware, leerServiciosEvento)
 router.get("/leerCategoria", middleware, leerCategoria)
 
 router.get("/leerEventos", middleware, leerEventos)
+
+router.get("/leerSalones", middleware, leerSalones)
 module.exports = router

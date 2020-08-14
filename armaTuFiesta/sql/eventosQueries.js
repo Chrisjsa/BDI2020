@@ -11,3 +11,6 @@ exports.LEER_CATEGORIA = "SELECT nombre FROM categoria ORDER BY 1"
 
 exports.LEER_EVENTOS =
   "SELECT eve.nombre FROM arma_tu_fiesta.evento as eve GROUP BY eve.nombre;"
+
+exports.LEER_SALONES =
+  "SELECT * FROM locacion lo INNER JOIN lugar lu ON lo.fk_localizacion = lu.id_lugar WHERE lo.tipo = 'Restaurante'"

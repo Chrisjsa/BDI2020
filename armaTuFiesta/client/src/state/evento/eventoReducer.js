@@ -7,6 +7,7 @@ import {
   CLEAR_EVENTOS,
   LEER_CATEGORIA,
   LEER_EVENTOS,
+  LEER_SALONES,
 } from "./eventoTypes"
 
 import { arrayOfValues } from "../../utils/"
@@ -30,6 +31,9 @@ export default (state = initialState, action) => {
         loading: false,
         currentEventoServicios: action.payload,
       }
+
+    case LEER_SALONES:
+      return { ...state, loading: false, edit: this }
 
     case LEER_EVENTOS:
       return { ...state, loading: false, tiposEvento: action.payload }
