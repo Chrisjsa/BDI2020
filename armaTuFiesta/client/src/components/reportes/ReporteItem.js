@@ -10,9 +10,10 @@ import axios from "axios"
 const ReporteItem = ({ number, children, fechas }) => {
   const obtenerReporte = async e => {
     const numero = e.target.value
-    const fechaInicial = moment(fechas.fechaInicial).format("YYYY-MM-DD")
-    const fechaFinal = moment(fechas.fechaFinal).format("YYYY-MM-DD")
+    // const fechaInicial = moment(fechas.fechaInicial).format("YYYY-MM-DD")
+    // const fechaFinal = moment(fechas.fechaFinal).format("YYYY-MM-DD")
 
+    const { fechaInicial, fechaFinal } = fechas
     const config = {
       responseType: "blob",
       headers: {
