@@ -72,9 +72,9 @@ const Navigation = ({
                 {link("/permisos", "Permisos")}
               </NavDropdown.Item>
               <NavDropdown.Item>{link("/crud_tip", "Tips")}</NavDropdown.Item>
-              <NavDropdown.Item>
+              {/* <NavDropdown.Item>
                 {link("/metodos_pago", "Métodos de Pago")}
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
             </NavDropdown>
           </>
         )}

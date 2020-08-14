@@ -65,7 +65,7 @@ def connect_redux
     header("redux")
     component = input("Component name: (Capitalized)")    
     step("(import) redux", "import { connect } from 'react-redux'")
-    step("(connect) map actions to props", "const mapActionsToProps = state => {}\n\nconst mapStateToProps = state => ({})\n\nexport default connect(mapStateToProps, mapActionsToProps)(#{component})")
+    step("(connect) map actions to props", "const mapActionsToProps = {}\n\nconst mapStateToProps = state => ({})\n\nexport default connect(mapStateToProps, mapActionsToProps)(#{component})")
 end
 
 def connect_redux_form
