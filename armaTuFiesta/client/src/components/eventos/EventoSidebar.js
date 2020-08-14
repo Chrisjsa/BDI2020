@@ -2,11 +2,15 @@ import React from "react"
 
 import { ListGroup, Card } from "react-bootstrap"
 
+import { connect } from "react-redux"
+
 import moment from "moment"
 
 import { BsPersonFill, BsCalendarFill, BsMap } from "react-icons/bs"
 
-const EventoSidebar = ({ evento }) => {
+import { mostrarPresupuesto } from "../../state/evento/eventoActions"
+
+const EventoSidebar = ({ evento, mostrarPresupuesto }) => {
   const { fecha_realizacion, cantidad_invitados, salon_fiesta } = evento
 
   const Description = ({ Icon, nombre, description }) => (
@@ -35,7 +39,9 @@ const EventoSidebar = ({ evento }) => {
         <hr />
         <h5>Acciones</h5>
         <ListGroup>
-          <ListGroup.Item action>Presupuesto</ListGroup.Item>
+          <ListGroup.Item action onClick={e => mostrarPresupuesto(true)}>
+            Presupuesto
+          </ListGroup.Item>
           <ListGroup.Item action>Citas</ListGroup.Item>
         </ListGroup>
       </Card.Body>
@@ -43,4 +49,10 @@ const EventoSidebar = ({ evento }) => {
   )
 }
 
-export default EventoSidebar
+const mapActionsToProps = {
+  mostrarPresupuesto,
+}
+
+const mapStateToProps = state => ({})
+
+export default connect(mapStateToProps, mapActionsToProps)(EventoSidebar)

@@ -8,6 +8,7 @@ import {
   LEER_CATEGORIA,
   LEER_EVENTOS,
   LEER_SALONES,
+  MOSTRAR_PRESUPUESTO,
 } from "./eventoTypes"
 
 import { arrayOfValues } from "../../utils/"
@@ -18,12 +19,16 @@ const initialState = {
   tiposEvento: [],
   eventos: [],
   currentEvento: undefined,
+  presupuesto: false,
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case LEER_EVENTOS_POR_USUARIO:
       return { ...state, loading: false, eventos: action.payload }
+
+    case MOSTRAR_PRESUPUESTO:
+      return { ...state, loading: false, presupuesto: action.payload }
 
     case LEER_SERVICIO_EVENTO:
       return {

@@ -13,6 +13,7 @@ import Loading from "../layout/Loading"
 import {
   leerEventosPorUsuario,
   leerEventos,
+  mostrarPresupuesto,
 } from "../../state/evento/eventoActions"
 
 import EventoItem from "../eventos/EventoItem"
@@ -24,12 +25,17 @@ const DashboardPage = ({
   loading,
   leerEventos,
   leerEventosPorUsuario,
+  mostrarPresupuesto,
 }) => {
   useEffect(() => {
     if (user) leerEventosPorUsuario(user)
     leerEventos()
     // eslint-disable-nextline
   }, [user])
+
+  useEffect(() => {
+    mostrarPresupuesto(false)
+  }, [])
 
   const NoEvents = () => (
     <div className="text-center mt-5">
@@ -78,6 +84,7 @@ const DashboardPage = ({
 const mapActionsToProps = {
   leerEventos,
   leerEventosPorUsuario,
+  mostrarPresupuesto,
 }
 
 const mapStateToProps = state => ({
