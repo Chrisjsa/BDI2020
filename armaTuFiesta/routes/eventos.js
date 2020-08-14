@@ -8,6 +8,7 @@ const {
   leerEventosPorUsuario,
   leerServiciosEvento,
   leerCategoria,
+  leerEventos,
 } = require("../controllers/eventos")
 
 // Read
@@ -16,4 +17,6 @@ router.get("/leerEventosPorUsuario", middleware, leerEventosPorUsuario)
 router.get("/leerServiciosEventos", middleware, leerServiciosEvento)
 
 router.get("/leerCategoria", middleware, leerCategoria)
+
+router.get("/leerEventos", middleware, leerEventos)
 module.exports = router
