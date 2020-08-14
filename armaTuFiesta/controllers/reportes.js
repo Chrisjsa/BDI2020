@@ -4,6 +4,7 @@ const {
   REPORTE_2,
   REPORTE_3,
   REPORTE_4,
+  EVENTOS_POR_FECHA,
 } = require("../sql/reportesQueries")
 
 const fs = require("fs")
@@ -19,11 +20,18 @@ exports.obtenerReporte1 = (req, res) => {
   const queryData = [fechaInicial, fechaFinal]
 
   // MySQL
-  // connection.query(REPORTE_1, queryData, (error, rows) => {
-  //   if (error) return res.status(400).send(error.message)
+  connection.query(REPORTE_1, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
 
-  //   console.log(rows)
-  // })
+    console.log(rows)
+  })
+
+  connection.query(EVENTOS_POR_FECHA, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
+
+    console.log(rows)
+  })
+  return res.json({ rows: rows.pop() })
 
   // Carbone
   carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
@@ -44,6 +52,18 @@ exports.obtenerReporte2 = (req, res) => {
 
     return res.json(rows)
   })
+  connection.query(EVENTOS_POR_FECHA, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
+
+    console.log(rows)
+  })
+  return res.json({ rows: rows.pop() })
+  carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
+    if (error) return console.log(error)
+
+    fs.writeFileSync("./reports/reporte1.pdf", result)
+    return res.send(result)
+  })
 }
 
 exports.obtenerReporte3 = (req, res) => {
@@ -57,6 +77,20 @@ exports.obtenerReporte3 = (req, res) => {
     }
     return res.json(rows)
   })
+
+  connection.query(EVENTOS_POR_FECHA, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
+
+    console.log(rows)
+  })
+  return res.json({ rows: rows.pop() })
+
+  carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
+    if (error) return console.log(error)
+
+    fs.writeFileSync("./reports/reporte1.pdf", result)
+    return res.send(result)
+  })
 }
 
 exports.obtenerReporte4 = (req, res) => {
@@ -69,5 +103,19 @@ exports.obtenerReporte4 = (req, res) => {
       return res.status(400).send(error.message)
     }
     return res.json(rows)
+  })
+
+  connection.query(EVENTOS_POR_FECHA, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
+
+    console.log(rows)
+  })
+  return res.json({ rows: rows.pop() })
+
+  carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
+    if (error) return console.log(error)
+
+    fs.writeFileSync("./reports/reporte1.pdf", result)
+    return res.send(result)
   })
 }
