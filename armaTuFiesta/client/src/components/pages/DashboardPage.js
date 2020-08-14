@@ -29,7 +29,6 @@ const DashboardPage = ({
 }) => {
   useEffect(() => {
     if (user) leerEventosPorUsuario(user)
-    leerEventos()
     // eslint-disable-nextline
   }, [user])
 

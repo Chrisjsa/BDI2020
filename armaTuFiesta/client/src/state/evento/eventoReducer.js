@@ -12,6 +12,7 @@ import {
 } from "./eventoTypes"
 
 import { arrayOfValues } from "../../utils/"
+import { actionTypes } from "redux-form"
 
 const initialState = {
   loading: false,
@@ -20,6 +21,7 @@ const initialState = {
   eventos: [],
   currentEvento: undefined,
   presupuesto: false,
+  salones: [],
 }
 
 export default (state = initialState, action) => {
@@ -38,7 +40,7 @@ export default (state = initialState, action) => {
       }
 
     case LEER_SALONES:
-      return { ...state, loading: false, edit: this }
+      return { ...state, loading: false, salones: action.payload }
 
     case LEER_EVENTOS:
       return { ...state, loading: false, tiposEvento: action.payload }
