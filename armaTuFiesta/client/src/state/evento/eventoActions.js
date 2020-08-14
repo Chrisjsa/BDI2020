@@ -12,11 +12,11 @@ import axios from "axios"
 
 const config = { headers: { "Content-Type": "application/json" } }
 
-export const setLoading = () => (dispatch) => {
+export const setLoading = () => dispatch => {
   return dispatch({ type: LOADING_EVENTO })
 }
 
-export const leerEventosPorUsuario = (usuario) => async (dispatch) => {
+export const leerEventosPorUsuario = usuario => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get(
@@ -29,7 +29,7 @@ export const leerEventosPorUsuario = (usuario) => async (dispatch) => {
   }
 }
 
-export const leerServiciosEvento = (evento) => async (dispatch) => {
+export const leerServiciosEvento = evento => async dispatch => {
   const { id_evento } = evento
   setLoading()(dispatch)
   try {
@@ -42,20 +42,20 @@ export const leerServiciosEvento = (evento) => async (dispatch) => {
   }
 }
 
-export const setCurrentEvento = (evento) => (dispatch) => {
+export const setCurrentEvento = evento => dispatch => {
   dispatch({
     type: SET_CURRENT_EVENTO,
     payload: evento,
   })
 }
 
-export const clearEventos = () => (dispatch) => {
+export const clearEventos = () => dispatch => {
   dispatch({
     type: CLEAR_EVENTOS,
   })
 }
 
-export const leerCategoria = () => async (dispatch) => {
+export const leerCategoria = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get(`api/eventos/leerCategoria`)
@@ -65,12 +65,16 @@ export const leerCategoria = () => async (dispatch) => {
   }
 }
 
-export const leerEventos = () => async (dispatch) => {
+export const leerEventos = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get("api/eventos/leerEventos")
-    dispatch({ $type: LEER_EVENTOS, payload: res.data })
+    dispatch({ type: LEER_EVENTOS, payload: res.data })
   } catch (error) {
-    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
+    console.log(error.message)
+    dispatch({
+      type: ERROR_EVENTO,
+      payload: error.response.data.message,
+    })
   }
 }

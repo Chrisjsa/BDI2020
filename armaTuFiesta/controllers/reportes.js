@@ -15,8 +15,6 @@ var options = {
   convertTo: "pdf",
 }
 
-const toDate = date => moment(date).format("DD / MM / YYYY")
-
 exports.obtenerReporte1 = (req, res) => {
   const { fechaInicial, fechaFinal } = req.query
 
@@ -42,9 +40,7 @@ exports.obtenerReporte1 = (req, res) => {
 
     results = JSON.parse(JSON.stringify(rows[2]))
 
-    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
     reportData = { ...reportData, eventos: results }
-    console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 
     reportData = {
       ...reportData,

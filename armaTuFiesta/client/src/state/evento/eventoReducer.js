@@ -14,6 +14,7 @@ import { arrayOfValues } from "../../utils/"
 const initialState = {
   loading: false,
   error: null,
+  tiposEvento: [],
   eventos: [],
   currentEvento: undefined,
 }
@@ -31,7 +32,7 @@ export default (state = initialState, action) => {
       }
 
     case LEER_EVENTOS:
-      return { ...state, loading: false, edit: this }
+      return { ...state, loading: false, tiposEvento: action.payload }
 
     case LEER_CATEGORIA:
       return {

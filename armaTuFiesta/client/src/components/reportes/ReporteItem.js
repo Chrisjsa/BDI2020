@@ -4,7 +4,6 @@ import { Card, Button, Row, Col } from "react-bootstrap"
 
 import { BsFileText } from "react-icons/bs"
 
-import moment from "moment"
 import axios from "axios"
 
 const ReporteItem = ({ number, children, fechas }) => {
