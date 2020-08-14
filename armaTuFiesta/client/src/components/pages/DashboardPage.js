@@ -8,9 +8,10 @@ import ballons from "../../img/ballons.png"
 
 import Loading from "../layout/Loading"
 
-import { leerEventosPorUsuario } from "../../state/evento/eventoActions"
-
-import moment from "moment"
+import {
+  leerEventosPorUsuario,
+  leerEventos,
+} from "../../state/evento/eventoActions"
 
 import EventoItem from "../eventos/EventoItem"
 
@@ -19,10 +20,12 @@ const DashboardPage = ({
   eventos,
   history,
   loading,
+  leerEventos,
   leerEventosPorUsuario,
 }) => {
   useEffect(() => {
     if (user) leerEventosPorUsuario(user)
+    leerEventos()
     // eslint-disable-nextline
   }, [user])
 
@@ -68,12 +71,18 @@ const DashboardPage = ({
   )
 }
 
+const mapActionsToProps = {
+  leerEventos,
+  leerEventosPorUsuario,
+}
+
 const mapStateToProps = state => ({
   user: state.auth.user,
   loading: state.auth.loading,
   eventos: state.eventos.eventos,
+  tiposEvento: state.eventos.tiposEvento,
 })
 
 export default withRouter(
-  connect(mapStateToProps, { leerEventosPorUsuario })(DashboardPage)
+  connect(mapStateToProps, mapActionsToProps)(DashboardPage)
 )
