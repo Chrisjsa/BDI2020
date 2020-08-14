@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { withRouter, Link } from "react-router-dom"
 import { connect } from "react-redux"
 
-import { Container, Button, Card, CardColumns } from "react-bootstrap"
+import { Container, Button, CardColumns } from "react-bootstrap"
 
 import ballons from "../../img/ballons.png"
 
@@ -47,6 +47,8 @@ const DashboardPage = ({
         <>
           <div className="display-2 mb-4">Hola, {user.p_nombre}</div>
           <h1 className="mt-4">Tus eventos</h1>
+
+          <Button>Agregar evento</Button>
 
           {eventos.length >= 0 ? (
             <div className="scrollable" style={{ maxHeight: "50vh" }}>

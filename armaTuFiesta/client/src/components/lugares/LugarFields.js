@@ -16,6 +16,8 @@ import {
 import LugarDropdown from "./LugarDropdown"
 
 const LugarFields = ({
+  filter,
+  // state
   currentData,
   municipios,
   estados,
@@ -55,36 +57,46 @@ const LugarFields = ({
 
   return (
     <Form.Row>
-      <LugarDropdown
-        label={"Estado"}
-        value={currentEstado}
-        handler={setCurrentEstado}
-        list={estados}
-        name="estado"
-        currentData={currentData}
-      />
+      {filter.includes("estado") && (
+        <LugarDropdown
+          label={"Estado"}
+          value={currentEstado}
+          handler={setCurrentEstado}
+          list={estados}
+          name="estado"
+          currentData={currentData}
+        />
+      )}
 
-      <LugarDropdown
-        label={"Municipio"}
-        value={currentMunicipio}
-        handler={setCurrentMunicipio}
-        list={municipios}
-        name="municipio"
-        currentData={currentData}
-        disableIf={!currentEstado}
-      />
+      {filter.includes("municipio") && (
+        <LugarDropdown
+          label={"Municipio"}
+          value={currentMunicipio}
+          handler={setCurrentMunicipio}
+          list={municipios}
+          name="municipio"
+          currentData={currentData}
+          disableIf={!currentEstado}
+        />
+      )}
 
-      <LugarDropdown
-        label={"Parroquia"}
-        value={currentParroquia}
-        handler={setCurrentParroquia}
-        list={parroquias}
-        name="parroquia"
-        currentData={currentData}
-        disableIf={!currentEstado || !currentMunicipio}
-      />
+      {filter.includes("parroquia") && (
+        <LugarDropdown
+          label={"Parroquia"}
+          value={currentParroquia}
+          handler={setCurrentParroquia}
+          list={parroquias}
+          name="parroquia"
+          currentData={currentData}
+          disableIf={!currentEstado || !currentMunicipio}
+        />
+      )}
     </Form.Row>
   )
+}
+
+LugarFields.defaultProps = {
+  filter: ["estado", "municipio", "parroquia"],
 }
 
 const mapStateToProps = state => ({
