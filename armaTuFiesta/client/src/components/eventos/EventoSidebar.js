@@ -42,7 +42,7 @@ const EventoSidebar = ({ evento, mostrarPresupuesto }) => {
           <ListGroup.Item action onClick={e => mostrarPresupuesto(true)}>
             Presupuesto
           </ListGroup.Item>
-          <ListGroup.Item action>Citas</ListGroup.Item>
+          {/* <ListGroup.Item action>Citas</ListGroup.Item> */}
         </ListGroup>
       </Card.Body>
     </Card>

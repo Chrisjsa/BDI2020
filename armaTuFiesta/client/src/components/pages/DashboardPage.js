@@ -69,12 +69,6 @@ const DashboardPage = ({
           ) : (
             <NoEvents />
           )}
-
-          <h1 className="mt-4 mb-3">Tus trámites</h1>
-
-          <Button as={Link} to="/carta_solteria">
-            Carta de soltería
-          </Button>
         </>
       )}
     </Container>

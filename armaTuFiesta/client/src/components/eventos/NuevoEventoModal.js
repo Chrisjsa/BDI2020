@@ -15,7 +15,7 @@ const NuevoEventoModal = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" className="my-3" size="lg" onClick={handleShow}>
         Agregar evento
       </Button>
 

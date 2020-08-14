@@ -30,7 +30,7 @@ exports.obtenerReporte1 = (req, res) => {
   connection.query(REPORTE_1, queryData, (error, rows) => {
     if (error) return res.status(400).send(error.message)
 
-    const results = JSON.parse(JSON.stringify(rows[2])).pop()
+    let results = JSON.parse(JSON.stringify(rows[2])).pop()
 
     reportData = { ...reportData, ...results }
   })
