@@ -9,19 +9,7 @@ import { connect } from "react-redux"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 
-import {
-  obtenerReporte1,
-  obtenerReporte2,
-  obtenerReporte3,
-  obtenerReporte4,
-} from "../../state/reporte/reporteActions"
-
-const Reportes = ({
-  obtenerReporte1,
-  obtenerReporte2,
-  obtenerReporte3,
-  obtenerReporte4,
-}) => {
+const Reportes = () => {
   const [fechaInicial, setFechaInicial] = useState(new Date())
   const [fechaFinal, setFechaFinal] = useState(new Date())
 
@@ -64,42 +52,21 @@ const Reportes = ({
       {/* Reportes */}
       <h2>Reportes</h2>
 
-      <ReporteItem
-        title="Reporte 1"
-        handler={e => obtenerReporte1({ fechaInicial, fechaFinal })}
-      >
+      <ReporteItem number="1" fechas={{ fechaInicial, fechaFinal }}>
         Total de fiestas por mes
       </ReporteItem>
-      <ReporteItem
-        title="Reporte 2"
-        handler={e => obtenerReporte2({ fechaInicial, fechaFinal })}
-      >
+      <ReporteItem number="2" fechas={{ fechaInicial, fechaFinal }}>
         Detalle de todas las contrataciones a terceros por período de tiempo,
         indicando fecha y costo
       </ReporteItem>
-      <ReporteItem
-        title="Reporte 3"
-        handler={e => obtenerReporte3({ fechaInicial, fechaFinal })}
-      >
+      <ReporteItem number="3" fechas={{ fechaInicial, fechaFinal }}>
         Total de ingresos y egresos por periodo de tiempo
       </ReporteItem>
-      <ReporteItem
-        title="Reporte 4"
-        handler={e => obtenerReporte4({ fechaInicial, fechaFinal })}
-      >
+      <ReporteItem number="4" fechas={{ fechaInicial, fechaFinal }}>
         Top 10 de servicios tercerizados contratados por periodo de tiempo.
       </ReporteItem>
     </>
   )
 }
 
-const mapStateToProps = state => ({})
-
-const mapStateToActions = {
-  obtenerReporte1,
-  obtenerReporte2,
-  obtenerReporte3,
-  obtenerReporte4,
-}
-
-export default connect(mapStateToProps, mapStateToActions)(Reportes)
+export default Reportes

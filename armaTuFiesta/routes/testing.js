@@ -16,6 +16,7 @@ const renderReport = (req, res) => {
     if (err) {
       return console.log(err)
     }
+    fs.writeFileSync("./reports/result.pdf", result)
     return res.send(result)
   })
 }

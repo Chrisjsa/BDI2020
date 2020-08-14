@@ -1,1 +1,0 @@
-El papa es {d.dataPpc.p_nombre} y la mama es {d.dataMpc.s_nombre}

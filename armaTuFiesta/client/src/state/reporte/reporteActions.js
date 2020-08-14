@@ -10,7 +10,13 @@ import axios from "axios"
 
 import moment from "moment"
 
-const config = { headers: { "Content-Type": "application/json" } }
+const config = {
+  responseType: "blob",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/pdf",
+  },
+}
 
 export const setLoading = () => dispatch => {
   return dispatch({ type: LOADING_REPORTE })
@@ -23,9 +29,9 @@ export const obtenerReporte1 = fechas => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get(
-      `api/reportes/1?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`
+      `api/reportes/1?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`,
+      config
     )
-    dispatch({ type: OBTENER_REPORTE_1, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_REPORTE, payload: error.response.msg })
   }
@@ -39,6 +45,7 @@ export const obtenerReporte2 = fechas => async dispatch => {
     const res = await axios.get(
       `api/reportes/2?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`
     )
+
     dispatch({ type: OBTENER_REPORTE_2, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_REPORTE, payload: error.response.msg })
