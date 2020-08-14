@@ -21,7 +21,6 @@ const ReporteItem = ({ number, children, fechas }) => {
       },
     }
     try {
-      console.log("culo?")
       const res = await axios.get(
         `/api/reportes/${numero}?fechaInicial=${fechaInicial}&fechaFinal=${fechaFinal}`,
         config

@@ -9,8 +9,12 @@ import { connect } from "react-redux"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 
+import moment from "moment"
+
 const Reportes = () => {
-  const [fechaInicial, setFechaInicial] = useState(new Date())
+  const [fechaInicial, setFechaInicial] = useState(
+    new Date(Date.parse("2008-01-01"))
+  )
   const [fechaFinal, setFechaFinal] = useState(new Date())
 
   return (

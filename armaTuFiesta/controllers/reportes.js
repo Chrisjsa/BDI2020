@@ -31,7 +31,6 @@ exports.obtenerReporte1 = (req, res) => {
 
     console.log(rows)
   })
-  return res.json({ rows: rows.pop() })
 
   // Carbone
   carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
@@ -56,8 +55,9 @@ exports.obtenerReporte2 = (req, res) => {
     if (error) return res.status(400).send(error.message)
 
     console.log(rows)
+    // va aca -->
   })
-  return res.json({ rows: rows.pop() })
+  // (1) esto ---> return res.json({ rows: rows.pop() })
   carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
     if (error) return console.log(error)
 

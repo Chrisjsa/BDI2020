@@ -1,5 +1,6 @@
 exports.REPORTE_1 =
-  "SET @lc_time_names = ?; SET @fecha_a = ?; SET @fecha_b = ?; SELECT COUNT(*) as Cantidad_Fiestas, MONTHNAME(fecha_realizacion) as Mes FROM arma_tu_fiesta.orden_evento WHERE fecha_realizacion BETWEEN @fecha_a AND @fecha_b GROUP BY (fecha_realizacion);"
+  "SET @fecha_a = ?; SET @fecha_b = ?; SELECT COUNT(*) as Cantidad_Fiestas, MONTHNAME(fecha_realizacion) as Mes FROM arma_tu_fiesta.orden_evento WHERE fecha_realizacion BETWEEN @fecha_a AND @fecha_b GROUP BY (fecha_realizacion);"
+
 exports.REPORTE_2 =
   "SET @fecha_a = ?; SET @fecha_b = ?; SELECT presta.fk_presupuesto as presupuesto, ser.nombre as servicio_contratado, det.costo_unitario, det.cantidad, det.costo, det precio, presta.fecha as fecha_cancelado, est.nombre as estatus FROM arma_tu_fiesta.estatus as est, arma_tu_fiesta.presupuesto_estatus as presta, arma_tu_fiesta.detalle as det, arma_tu_fiesta servicio_tercerizado as ser WHERE est.nombre = 'Pagado' AND presta.fk_estatus = est.id_estatus AND presta.fecha BETWEEN @fecha_a AND @fecha_b AND presta fk_presupuesto = det.fk_presupuesto AND det.fk_servicio IS NOT NULL AND det.fk_servicio = ser.id_servicio;"
 

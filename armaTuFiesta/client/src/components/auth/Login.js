@@ -20,7 +20,7 @@ const Login = ({ history, login, isAuthenticated, error }) => {
 
   const [fields, bindFields] = useForm({
     username: "amandasuarez@gmail.com",
-    password: "V20000007",
+    password: "gibberish",
   })
 
   const onSubmit = e => {
