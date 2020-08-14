@@ -37,14 +37,18 @@ INSERT INTO arma_tu_fiesta.presupuesto_estatus (fk_presupuesto, fk_estatus, fech
 -- CAMBIAR ESTATUS DE ORDEN EVENTO A CONFIRMADO (ESTO CAMBIO SOLO SE DA AL APROBAR PRESUPUESTO)
 
 SET @orden_evento = ID_ORDEN_EVENTO;
+SET @fecha_actual = FECHA_ACTUAL;
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Confirmado') as tablaEstatus);
-INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, '2020-07-27');
+
+INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @fecha_actual);
 
 -- CAMBIAR ESTATUS A REALIZADO CUANDO LA FECHA DEL EVENTO PASE
 
-SET @orden_evento;
+SET @orden_evento = ID_ORDEN_EVENTO;
+SET @fecha_actual = FECHA_ACTUAL;
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Realizado') as tablaEstatus);
-INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, '2020-07-30');
+
+INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @fecha_actual);
 
 -- CAMBIAR ESTATUS DE PRESUPUESTO A PAGADO
 
@@ -54,14 +58,37 @@ SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_
 
 INSERT INTO arma_tu_fiesta.presupuesto_estatus (fk_presupuesto, fk_estatus, fecha) VALUES (@presupuesto, @estatus, @fecha_pago);
 
+-- AGREGAR SERVICIO A EVENTO
+
+SET @presupuesto = ID_PRESUPUESTO;
+
+SET @servicio = ID_SERVICIO;
+SET @costo_unit = COSTO_SERVICIO;
+SET @cantidad_ser = CANTIDAD;
+SET @costo = (@cantidad_ser * @precio_unit);
+SET @precio = @costo + @costo*0.30;
+
+INSERT INTO arma_tu_fiesta.detalle (costo_unitario, cantidad, costo, precio, fk_presupuesto, fk_servicio) VALUES (@costo_unit, @cantidad_ser, @costo, @precio,  @presupuesto, @servicio);
+
+SET @totalPres = (SELECT total FROM (SELECT sum(precio) as total FROM arma_tu_fiesta.detalle WHERE fk_presupuesto = @presupuesto) as tablaPre);
+
+UPDATE arma_tu_fiesta.presupuesto SET total = @totalPres WHERE id_presupuesto = @presupuesto;
+
+-- AGREGAR PRODUCTO A EVENTO
+
+SET @presupuesto = ID_PRESUPUESTO;
+
+SET @producto = ID_PRODUCTO;
+SET @costo_unit = COSTO_UNIDAD;
+SET @cantidad_pro = CANTIDAD;
+SET @costo = (@cantidad_pro * @costo_unit);
+SET @precio = @costo + @costo*0.30;
+INSERT INTO arma_tu_fiesta.detalle (costo_unitario, cantidad, costo, precio, fk_presupuesto, fk_producto) VALUES (@costo_unit, @cantidad_pro, @costo, @precio, @presupuesto, @producto);
+
+SET @totalPres = (SELECT total FROM (SELECT sum(precio) as total FROM arma_tu_fiesta.detalle WHERE fk_presupuesto = @presupuesto) as tablaPre);
+UPDATE arma_tu_fiesta.presupuesto SET total = @totalPres WHERE id_presupuesto = @presupuesto;
+
 -- PARAMETRIZAR
-
-
-SET @servicio = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio, precio as precioUnit FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Servicio Fotografía Plus') as tablaServicio);
-SET @precio_unit = (SELECT precioUnit FROM (SELECT id_servicio as pkServicio, precio as precioUnit FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Servicio Fotografía Plus') as tablaServicio);
-SET @cantidad_ser = 2;
-SET @precio = (@cantidad_ser * @precio_unit);
-INSERT INTO arma_tu_fiesta.detalle (precio_unitario, cantidad, precio, fk_presupuesto, fk_servicio) VALUES (@precio_unit, @cantidad_ser, @precio, @presupuesto, @servicio);
 
 SET @producto = (SELECT pkProducto FROM (SELECT id_producto as pkProducto, precio as precioUnit FROM arma_tu_fiesta.producto WHERE nombre = 'Mesa redonda') as tablaProducto);
 SET @precio_unit = (SELECT precioUnit FROM (SELECT id_producto as pkProducto, precio as precioUnit FROM arma_tu_fiesta.producto WHERE nombre = 'Mesa redonda') as tablaProducto);
