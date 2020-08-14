@@ -6,6 +6,8 @@ import { Container, Button, CardColumns } from "react-bootstrap"
 
 import ballons from "../../img/ballons.png"
 
+import NuevoEventoModal from "../eventos/NuevoEventoModal"
+
 import Loading from "../layout/Loading"
 
 import {
@@ -48,7 +50,7 @@ const DashboardPage = ({
           <div className="display-2 mb-4">Hola, {user.p_nombre}</div>
           <h1 className="mt-4">Tus eventos</h1>
 
-          <Button>Agregar evento</Button>
+          <NuevoEventoModal />
 
           {eventos.length >= 0 ? (
             <div className="scrollable" style={{ maxHeight: "50vh" }}>
