@@ -6,6 +6,7 @@ const {
   LEER_CATEGORIA,
   LEER_EVENTOS,
   LEER_SALONES,
+  CREAR_EVENTOS,
 } = require("../sql/eventosQueries")
 
 exports.leerEventosPorUsuario = (req, res) => {
@@ -57,6 +58,16 @@ exports.leerEventos = (req, res) => {
 exports.leerSalones = (req, res) => {
   const data = []
   connection.query(LEER_SALONES, [data], (error, rows) => {
+    if (error) {
+      return res.status(400).send(error.message)
+    }
+    return res.json(rows)
+  })
+}
+
+exports.crearEventos = (req, res) => {
+  const data = []
+  connection.query(CREAR_EVENTOS, [data], (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
