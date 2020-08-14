@@ -19,6 +19,18 @@ SELECT presta.fk_presupuesto as presupuesto, ser.nombre as servicio_contratado, 
 FROM arma_tu_fiesta.estatus as est, arma_tu_fiesta.presupuesto_estatus as presta, arma_tu_fiesta.detalle as det, arma_tu_fiesta.servicio_tercerizado as ser
 WHERE est.nombre = 'Pagado' AND presta.fk_estatus = est.id_estatus AND presta.fecha BETWEEN @fecha_a AND @fecha_b AND presta.fk_presupuesto = det.fk_presupuesto AND det.fk_servicio IS NOT NULL AND det.fk_servicio = ser.id_servicio;
 
+-- LISTAR DETALLES EVENTOS EN EL RANGO DE FECHAS
+
+SET @fecha_a = '2020-07-01';
+SET @fecha_b = '2020-08-01';
+
+
+SELECT ordeve.id_orden_evento, eve.nombre as tipo_evento, tem.nombre as tema_evento, ordeve.id_orden_evento as id_evento, ordeve.cantidad_invitados, ordeve.fecha_realizacion, sal.descripcion as nombre_salon, loc.nombre as nombre_localizacion
+FROM arma_tu_fiesta.orden_evento as ordeve, arma_tu_fiesta.evento as eve, arma_tu_fiesta.tema as tem, arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc
+WHERE  eve.id_evento = ordeve.fk_evento AND eve.fk_tema = tem.id_tema AND ordeve.fk_locacion = sal.fk_salon AND ordeve.fk_locacion = loc.id_locacion AND ordeve.fecha_realizacion BETWEEN @fecha_a AND @fecha_b
+ORDER BY ordeve.fecha_realizacion;
+
+
 -- REPORTE 3 INGRESOS Y EGRESOS POR RANGO DE FECHAS
 
 
