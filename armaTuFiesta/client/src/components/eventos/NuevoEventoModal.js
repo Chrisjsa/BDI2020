@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { connect } from "react-redux"
 import { Button, Modal, Form, Col } from "react-bootstrap"
 import LugarFields from "../lugares/LugarFields"
 
@@ -94,4 +94,8 @@ const NuevoEventoModal = () => {
   )
 }
 
-export default NuevoEventoModal
+const mapActionsToProps = {}
+
+const mapStateToProps = (state) => ({})
+
+export default connect(mapStateToProps, mapActionsToProps)(NuevoEventoModal)
