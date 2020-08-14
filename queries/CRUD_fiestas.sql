@@ -14,15 +14,20 @@ SELECT usu.username, eve.nombre as tipo_evento, tem.nombre as tema_evento, ordev
 FROM arma_tu_fiesta.usuario as usu, arma_tu_fiesta.orden_evento as ordeve, arma_tu_fiesta.evento as eve, arma_tu_fiesta.tema as tem, arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc
 WHERE usu.username = 'amandasuarez@gmail.com' AND usu.id_usuario = ordeve.fk_usuario AND eve.id_evento = ordeve.fk_evento AND eve.fk_tema = tem.id_tema AND ordeve.fk_locacion = sal.fk_salon AND ordeve.fk_locacion = loc.id_locacion;
 
+
+-- INSERTAR ORDEN EVENTO
+
+SET @freserva = FECHA_ACTUAL
+SET @frealizacion = FECHA_REALIZACION
+SET @id_evento = ID_EVENTO
+SET @id_usuario = ID_USUARIO
+SET @salon = ID_SALON
+SET @numero_invitados
+
+INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES (@numero_invitados,@freserva, @frealizacion, @usuario, @evento, @salon);
+
 -- PARAMETRIZAR
 
-SET @freserva = '2020-07-25';
-SET @evento = (SELECT pkEvento FROM (SELECT id_evento as pkEvento FROM arma_tu_fiesta.evento WHERE nombre = 'Celebracion' and fk_tema = 1) as tablaEvento);
-SET @usuario = (SELECT pkUsuario FROM (SELECT id_usuario as pkUsuario FROM arma_tu_fiesta.usuario WHERE username = 'amandasuarez@gmail.com') as tablaUsuario);
-
-SET @salon = (SELECT fkSalon FROM (SELECT sal.fk_salon as fkSalon FROM arma_tu_fiesta.salon_de_fiesta as sal, arma_tu_fiesta.locacion as loc, arma_tu_fiesta.lugar as muni, arma_tu_fiesta.lugar as esta WHERE sal.fk_salon = loc.id_locacion AND loc.fk_localizacion = muni.id_lugar AND muni.fk_pertenece = esta.id_lugar AND esta.nombre = 'Amazonas') as tablaSalon);
-
-INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES ('170',@freserva,'2020-07-30', @usuario, @evento, @salon);
 SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_salon = @salon) as tablaOrdenEvento);
 
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
