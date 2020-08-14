@@ -106,7 +106,7 @@ const PermisosPage = ({
 
   return (
     <Container>
-      <Hero firstLine={"Administración"} secondLine={"Roles y privilegios"} />
+      <Hero firstLine={"Administración"} secondLine={"Roles y permisos"} />
       <Row>
         <Col xs={3}>
           <Form>
@@ -166,7 +166,6 @@ const PermisosPage = ({
                       >
                         Aceptar
                       </Button>
-                      <Button variant="outline-danger">Eliminar</Button>
                     </>
                   ) : (
                     <Button
