@@ -17,12 +17,12 @@ WHERE usu.username = 'amandasuarez@gmail.com' AND usu.id_usuario = ordeve.fk_usu
 
 -- INSERTAR ORDEN EVENTO
 
-SET @freserva = FECHA_ACTUAL
-SET @frealizacion = FECHA_REALIZACION
-SET @id_evento = ID_EVENTO
-SET @id_usuario = ID_USUARIO
-SET @salon = ID_SALON
-SET @numero_invitados
+SET @freserva = FECHA_ACTUAL;
+SET @frealizacion = FECHA_REALIZACION;
+SET @id_evento = ID_EVENTO;
+SET @id_usuario = ID_USUARIO;
+SET @salon = ID_SALON;
+SET @numero_invitados = NUMERO_INVITADOS;
 
 INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES (@numero_invitados,@freserva, @frealizacion, @usuario, @evento, @salon);
 
@@ -34,21 +34,28 @@ INSERT INTO arma_tu_fiesta.presupuesto (fecha, total, fk_orden_evento) VALUES (@
 SET @estatus_presupuesto = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Solicitado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.presupuesto_estatus (fk_presupuesto, fk_estatus, fecha) VALUES (@presupuesto, @estatus_presupuesto,  @freserva);
 
--- PARAMETRIZAR
+-- CAMBIAR ESTATUS DE ORDEN EVENTO A CONFIRMADO (ESTO CAMBIO SOLO SE DA AL APROBAR PRESUPUESTO)
 
-INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, @freserva);
+SET @orden_evento = ID_ORDEN_EVENTO;
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Confirmado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, '2020-07-27');
+
+-- CAMBIAR ESTATUS A REALIZADO CUANDO LA FECHA DEL EVENTO PASE
+
+SET @orden_evento;
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Realizado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus, '2020-07-30');
 
-INSERT INTO arma_tu_fiesta.presupuesto (fecha, total, fk_orden_evento) VALUES (@freserva, '0', @orden_evento);
-SET @presupuesto = (SELECT pkPres FROM (SELECT id_presupuesto as pkPres FROM arma_tu_fiesta.presupuesto WHERE fk_orden_evento = @orden_evento) as tablaPres);
+-- CAMBIAR ESTATUS DE PRESUPUESTO A PAGADO
 
-SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Solicitado') as tablaEstatus);
-INSERT INTO arma_tu_fiesta.presupuesto_estatus (fk_presupuesto, fk_estatus, fecha) VALUES (@presupuesto, @estatus,  @freserva);
+SET @presupuesto = ID_PRESUPUESTO;
+SET @fecha_pago = FECHA_ACTUAL;
 SET @estatus = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Pagado') as tablaEstatus);
-INSERT INTO arma_tu_fiesta.presupuesto_estatus (fk_presupuesto, fk_estatus, fecha) VALUES (@presupuesto, @estatus, '2020-07-28');
+
+INSERT INTO arma_tu_fiesta.presupuesto_estatus (fk_presupuesto, fk_estatus, fecha) VALUES (@presupuesto, @estatus, @fecha_pago);
+
+-- PARAMETRIZAR
+
 
 SET @servicio = (SELECT pkServicio FROM (SELECT id_servicio as pkServicio, precio as precioUnit FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Servicio Fotografía Plus') as tablaServicio);
 SET @precio_unit = (SELECT precioUnit FROM (SELECT id_servicio as pkServicio, precio as precioUnit FROM arma_tu_fiesta.servicio_tercerizado WHERE nombre = 'Servicio Fotografía Plus') as tablaServicio);
