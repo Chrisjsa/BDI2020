@@ -9,35 +9,69 @@ const {
 
 const fs = require("fs")
 const carbone = require("carbone")
+const moment = require("moment")
 
 var options = {
   convertTo: "pdf",
 }
 
+const toDate = date => moment(date).format("DD / MM / YYYY")
+
 exports.obtenerReporte1 = (req, res) => {
   const { fechaInicial, fechaFinal } = req.query
 
-  const queryData = [fechaInicial, fechaFinal]
+  const queryData = [
+    moment(fechaInicial).format("YYYY-MM-DD"),
+    moment(fechaFinal).format("YYYY-MM-DD"),
+  ]
+
+  console.log(queryData)
+  let reportData = {}
 
   // MySQL
   connection.query(REPORTE_1, queryData, (error, rows) => {
     if (error) return res.status(400).send(error.message)
 
-    console.log(rows)
+    const results = JSON.parse(JSON.stringify(rows[2])).pop()
+
+    reportData = { ...reportData, ...results }
   })
 
   connection.query(EVENTOS_POR_FECHA, queryData, (error, rows) => {
     if (error) return res.status(400).send(error.message)
 
-    console.log(rows)
-  })
+    results = JSON.parse(JSON.stringify(rows[2]))
 
-  // Carbone
-  carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
-    if (error) return console.log(error)
+    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    reportData = { ...reportData, eventos: results }
+    console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 
-    fs.writeFileSync("./reports/reporte1.pdf", result)
-    return res.send(result)
+    reportData = {
+      ...reportData,
+      fechaInicial: moment(fechaInicial).format("DD/MM/YYYY"),
+      fechaFinal: moment(fechaFinal).format("DD/MM/YYYY"),
+      s: "s",
+    }
+
+    const json = JSON.stringify(reportData)
+
+    // reportData = {
+    //   ...reportData,
+    //   json,
+    // }
+
+    // Carbone
+    carbone.render(
+      "./reports/reporte1.docx",
+      reportData,
+      options,
+      (error, result) => {
+        if (error) return console.log(error)
+
+        fs.writeFileSync("./reports/reporte1.pdf", result)
+        return res.send(result)
+      }
+    )
   })
 }
 
