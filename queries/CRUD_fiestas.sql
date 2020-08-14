@@ -90,15 +90,6 @@ UPDATE arma_tu_fiesta.presupuesto SET total = @totalPres WHERE id_presupuesto = 
 
 -- PARAMETRIZAR
 
-SET @producto = (SELECT pkProducto FROM (SELECT id_producto as pkProducto, precio as precioUnit FROM arma_tu_fiesta.producto WHERE nombre = 'Mesa redonda') as tablaProducto);
-SET @precio_unit = (SELECT precioUnit FROM (SELECT id_producto as pkProducto, precio as precioUnit FROM arma_tu_fiesta.producto WHERE nombre = 'Mesa redonda') as tablaProducto);
-SET @cantidad_pro = 25;
-SET @precio = (@cantidad_pro * @precio_unit);
-INSERT INTO arma_tu_fiesta.detalle (precio_unitario, cantidad, precio, fk_presupuesto, fk_producto) VALUES (@precio_unit, @cantidad_pro, @precio, @presupuesto, @producto);
-
-SET @totalPres = (SELECT total FROM (SELECT sum(precio) as total FROM arma_tu_fiesta.detalle WHERE fk_presupuesto = @presupuesto) as tablaPre);
-UPDATE arma_tu_fiesta.presupuesto SET total = @totalPres WHERE id_presupuesto = @presupuesto;
-
 INSERT INTO arma_tu_fiesta.metodo_de_pago (numero_factura, razon, banco) VALUES ('90000', 'Pago de Evento', 'Banesco');
 SET @metodo = (SELECT pkPago FROM (SELECT id_metodo as pkPago from arma_tu_fiesta.metodo_de_pago WHERE numero_factura = '90000') as tablaPago);
 INSERT INTO arma_tu_fiesta.transferencia (fk_pago, numero_comprobante, fecha_realizacion, concepto) VALUES (@metodo, '91655525', '2020-07-28', 'Pago por servicios adquiridos');
