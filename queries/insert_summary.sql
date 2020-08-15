@@ -29104,7 +29104,6 @@ SET @categoria = (SELECT pkCategoria FROM (SELECT id_categoria as pkCategoria FR
 INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Matrimonial Basico: Nueva Etapa', 'Induccion para iniciar esta nueva etapa', '4000.0', @categoria, @proveedor);
 INSERT INTO arma_tu_fiesta.servicio_tercerizado (nombre, descripcion, precio, fk_categoria, fk_proveedor) VALUES ('Matrimonial Basico: Compromiso Duradero', 'Preparacion para asumir un gran compromiso', '5000.0', @categoria, @proveedor);
 
-
 -- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 INSERT INTO arma_tu_fiesta.permiso
@@ -29217,25 +29216,23 @@ SET @eliminarRol = (SELECT id_permiso
 FROM permiso
 WHERE nombre = "eliminarRol");
 
-SET @leerReporte = (SELECT id_permiso
+SET @obtenerReporte = (SELECT id_permiso
 FROM permiso
-WHERE nombre = "leerReporte");
+WHERE nombre = "obtenerReporte");
 
 -- (s.roles) ids de roles
-SET @rol_superuser_id = (SELECT id_rol
+SET @superuser_id = (SELECT id_rol
 FROM rol
 WHERE nombre = "Superuser");
 
 
-SET @rol_cliente_id = (SELECT id_rol
+SET @cliente_id = (SELECT id_rol
 FROM rol
 WHERE nombre = "Cliente");
 
-SET @rol_empleado_id = (SELECT id_rol
+SET @empleado_id = (SELECT id_rol
 FROM rol
 WHERE nombre = "Empleado");
-
--- empleado
 
 -- (s.insert) inicio del insert
 INSERT INTO rol_permiso
@@ -29270,22 +29267,4 @@ values
     (@cliente_id, @insertarEvento),
     (@cliente_id, @actualizarEvento),
     (@cliente_id, @leerEvento),
-    (@cliente_id, @leerTip),
-
-    -- empleado
-    (@empleado_id, @insertarCliente),
-    (@empleado_id, @eliminarCliente),
-    (@empleado_id, @actualizarCliente),
-    (@empleado_id, @leerCliente),
-    (@empleado_id, @insertarNotaria),
-    (@empleado_id, @eliminarNotaria),
-    (@empleado_id, @actualizarNotaria),
-    (@empleado_id, @leerNotaria),
-    (@empleado_id, @insertarTip),
-    (@empleado_id, @eliminarTip),
-    (@empleado_id, @actualizarTip),
-    (@empleado_id, @leerTip),
-    (@empleado_id, @obtenerReporte)
-
-;
-
+    (@cliente_id, @leerTip);
