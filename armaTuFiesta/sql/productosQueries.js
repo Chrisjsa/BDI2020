@@ -7,6 +7,6 @@ exports.AGREGAR_SERVICIOS =
 
 //[id_presupuesto, id_servicio, costo_servicio, cantidad]
 
-exports.LEER_PRODUCTOS = "SELECT * FROM arma_tu_fiesta.producto;"
+exports.LEER_PRODUCTOS = "SELECT pro.id_producto, pro.nombre as nombre_producto, pro.descripcion, pro.cantidad, pro.precio, cat.nombre as categoria  FROM arma_tu_fiesta.producto as pro, arma_tu_fiesta.categoria as cat WHERE pro.fk_categoria = cat.id_categoria;"
 
 exports.LEER_SERVICIOS = "SELECT * FROM arma_tu_fiesta.servicio_tercerizado;"
