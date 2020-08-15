@@ -184,19 +184,38 @@ exports.obtenerReporte3 = (req, res) => {
 exports.obtenerReporte4 = (req, res) => {
   const { fechaInicial, fechaFinal } = req.query
 
-  const data = [fechaInicial, fechaFinal]
+  const queryData = [
+    moment(fechaInicial).format("YYYY-MM-DD"),
+    moment(fechaFinal).format("YYYY-MM-DD"),
+  ]
 
-  connection.query(REPORTE_4, data, (error, rows) => {
-    if (error) {
-      return res.status(400).send(error.message)
+  console.log(queryData)
+  let reportData = {}
+
+  connection.query(REPORTE_4, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
+
+    results = JSON.parse(JSON.stringify(rows[2]))
+
+    reportData = { ...reportData, top: results }
+
+    reportData = {
+      ...reportData,
+      fechaInicial: moment(fechaInicial).format("DD/MM/YYYY"),
+      fechaFinal: moment(fechaFinal).format("DD/MM/YYYY"),
+      s: "s",
     }
-    return res.json(rows)
-  })
 
-  carbone.render("./reports/reporte4.docx", [], options, (error, result) => {
-    if (error) return console.log(error)
+    carbone.render(
+      "./reports/reporte2.docx",
+      reportData,
+      options,
+      (error, result) => {
+        if (error) return console.log(error)
 
-    fs.writeFileSync("./reports/reporte4.pdf", result)
-    return res.send(result)
+        fs.writeFileSync("./reports/reporte2.pdf", result)
+        return res.send(result)
+      }
+    )
   })
 }
