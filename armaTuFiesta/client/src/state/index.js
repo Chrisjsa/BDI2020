@@ -12,6 +12,7 @@ import tipReducer from "./tip/tipReducer"
 import reporteReducer from "./reporte/reporteReducer"
 import rolReducer from "./rol/rolReducer"
 import citaReducer from "./cita/citaReducer"
+import productoReducer from "./producto/productoReducer"
 
 export default combineReducers({
   auth: authReducer,
@@ -26,4 +27,5 @@ export default combineReducers({
   reportes: reporteReducer,
   rols: rolReducer,
   cita: citaReducer,
+  producto: productoReducer,
 })

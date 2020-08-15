@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 
 import { connect } from "react-redux"
-
 import {
   cambiarModo,
   consultarPresupuesto,
@@ -10,6 +9,8 @@ import {
 import { ButtonGroup, Button, ListGroup, Row } from "react-bootstrap"
 
 import { arrayOfValues } from "../../utils"
+
+import TarjetaForm from "../metodos/TarjetaForm"
 
 const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
   useEffect(() => {
@@ -37,7 +38,6 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
       >
         Regresar
       </Button>
-
       {currentEvento.presupuesto && (
         <>
           <div className="scrollable" style={{ maxHeight: "60vh" }}>
@@ -60,12 +60,13 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
           <div className="lead my-4 text-center">
             Monto total a cobrar:{" "}
             {arrayOfValues(currentEvento.presupuesto, "a_cobrar").reduce(
-              (acc, val) => acc + val
+              (acc, val) => acc + val,
+              0
             )}
           </div>
 
-          <div className="text-center">
-            <ButtonGroup classLabel="my-4">
+          <div className="text-center my-3">
+            <ButtonGroup>
               <ButtonMetodo formaDePago="tarjeta">Tarjeta</ButtonMetodo>
               <ButtonMetodo formaDePago="transferencia">
                 Transferencia
@@ -76,9 +77,7 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
       )}
 
       {metodo === "tarjeta" ? (
-        <div>
-          <code>Componente de pago con tarjeta (formulario + tarjeta)</code>
-        </div>
+        <TarjetaForm />
       ) : (
         <div>
           <code>Componente de pago con transferencia (formulario)</code>

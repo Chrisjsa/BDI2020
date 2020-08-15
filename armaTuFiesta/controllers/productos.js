@@ -42,6 +42,6 @@ exports.leerServicios = (req, res) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json(rows)
+    return res.json(rows[1])
   })
 }

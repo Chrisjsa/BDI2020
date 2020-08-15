@@ -1,12 +1,13 @@
 import React, { useEffect } from "react"
 
-import { Card, CardColumns } from "react-bootstrap"
+import { Button, CardColumns, Card } from "react-bootstrap"
 
 import { connect } from "react-redux"
 
 import {
   leerServiciosEvento,
   leerCategoria,
+  cambiarModo,
 } from "../../state/evento/eventoActions"
 
 import Loading from "../layout/Loading"
@@ -19,6 +20,8 @@ const ServiciosEvento = ({
   leerServiciosEvento,
   categorias,
   leerCategoria,
+  cambiarModo,
+  modo,
 }) => {
   useEffect(() => {
     leerServiciosEvento(currentEvento)
@@ -37,6 +40,14 @@ const ServiciosEvento = ({
   return (
     <>
       <h3>Servicios y productos</h3>
+      <Button
+        variant="primary"
+        className="my-3"
+        size="lg"
+        onClick={e => cambiarModo("nuevo-servicio")}
+      >
+        Agregar servicio o producto
+      </Button>
       <CardColumns>
         {categorias.map(
           categoria =>
@@ -52,12 +63,13 @@ const ServiciosEvento = ({
   )
 }
 
-const mapActionsToProps = { leerServiciosEvento, leerCategoria }
+const mapActionsToProps = { leerServiciosEvento, leerCategoria, cambiarModo }
 
 const mapStateToProps = state => ({
   currentEventoServicios: state.eventos.currentEventoServicios,
   currentEvento: state.eventos.currentEvento,
   categorias: state.eventos.categorias,
+  modo: state.eventos.modo,
 })
 
 export default connect(mapStateToProps, mapActionsToProps)(ServiciosEvento)

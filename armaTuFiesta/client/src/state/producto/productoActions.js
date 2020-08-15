@@ -4,12 +4,17 @@ import {
   AGREGAR_PRODUCTOS,
   LEER_PRODUCTOS,
   LEER_SERVICIOS,
+  LOADING_PRODUCTO,
 } from "./productoTypes"
 import axios from "axios"
 
 const config = { headers: { "Content-Type": "application/json" } }
 
-export const agregarServicios = () => async (dispatch) => {
+export const setLoading = () => dispatch => {
+  return dispatch({ type: LOADING_PRODUCTO })
+}
+
+export const agregarServicios = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.post("api/productos/agregarServicios", config)
@@ -19,7 +24,7 @@ export const agregarServicios = () => async (dispatch) => {
   }
 }
 
-export const agregarProductos = () => async (dispatch) => {
+export const agregarProductos = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.post("api/productos/agregarProductos", config)
@@ -29,7 +34,7 @@ export const agregarProductos = () => async (dispatch) => {
   }
 }
 
-export const leerProductos = () => async (dispatch) => {
+export const leerProductos = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get("api/productos/leerProductos")
@@ -39,7 +44,7 @@ export const leerProductos = () => async (dispatch) => {
   }
 }
 
-export const leerServicios = () => async (dispatch) => {
+export const leerServicios = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get("api/productos/leerServicios")

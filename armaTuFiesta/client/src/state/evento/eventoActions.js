@@ -18,11 +18,11 @@ import axios from "axios"
 
 const config = { headers: { "Content-Type": "application/json" } }
 
-export const setLoading = () => (dispatch) => {
+export const setLoading = () => dispatch => {
   return dispatch({ type: LOADING_EVENTO })
 }
 
-export const leerEventosPorUsuario = (usuario) => async (dispatch) => {
+export const leerEventosPorUsuario = usuario => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get(
@@ -35,7 +35,7 @@ export const leerEventosPorUsuario = (usuario) => async (dispatch) => {
   }
 }
 
-export const leerServiciosEvento = (evento) => async (dispatch) => {
+export const leerServiciosEvento = evento => async dispatch => {
   const { id_evento } = evento
   setLoading()(dispatch)
   try {
@@ -48,30 +48,30 @@ export const leerServiciosEvento = (evento) => async (dispatch) => {
   }
 }
 
-export const setCurrentEvento = (evento) => (dispatch) => {
+export const setCurrentEvento = evento => dispatch => {
   dispatch({
     type: SET_CURRENT_EVENTO,
     payload: evento,
   })
 }
 
-export const clearEventos = () => (dispatch) => {
+export const clearEventos = () => dispatch => {
   dispatch({
     type: CLEAR_EVENTOS,
   })
 }
 
-export const leerCategoria = () => async (dispatch) => {
+export const leerCategoria = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get(`api/eventos/leerCategoria`)
     dispatch({ type: LEER_CATEGORIA, payload: res.data })
   } catch (error) {
-    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
+    dispatch({ type: ERROR_EVENTO, payload: error.response.data.message })
   }
 }
 
-export const leerEventos = () => async (dispatch) => {
+export const leerEventos = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get("api/eventos/leerEventos")
@@ -85,7 +85,7 @@ export const leerEventos = () => async (dispatch) => {
   }
 }
 
-export const leerSalones = () => async (dispatch) => {
+export const leerSalones = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get("api/eventos/leerSalones")
@@ -95,12 +95,12 @@ export const leerSalones = () => async (dispatch) => {
   }
 }
 
-export const cambiarModo = (mostrar) => (dispatch) => {
+export const cambiarModo = mostrar => dispatch => {
   setLoading()(dispatch)
   dispatch({ type: CAMBIAR_MODO, payload: mostrar })
 }
 
-export const crearEventos = (evento) => async (dispatch) => {
+export const crearEventos = evento => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.post("api/eventos/crearEventos", evento, config)
@@ -110,27 +110,27 @@ export const crearEventos = (evento) => async (dispatch) => {
   }
 }
 
-export const agregarServicios = () => async (dispatch) => {
+export const agregarServicios = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.post("api/eventos/agregarServicios", config)
     dispatch({ type: AGREGAR_SERVICIOS, payload: res.data })
   } catch (error) {
-    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
+    dispatch({ type: ERROR_EVENTO, payload: error.response.data.message })
   }
 }
 
-export const agregarProductos = () => async (dispatch) => {
+export const agregarProductos = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.post("api/eventos/agregarProductos", config)
     dispatch({ type: AGREGAR_PRODUCTOS, payload: res.data })
   } catch (error) {
-    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
+    dispatch({ type: ERROR_EVENTO, payload: error.response.data.message })
   }
 }
 
-export const consultarPresupuesto = (evento) => async (dispatch) => {
+export const consultarPresupuesto = evento => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.get(
@@ -139,6 +139,6 @@ export const consultarPresupuesto = (evento) => async (dispatch) => {
     dispatch({ type: CONSULTAR_PRESUPUESTO, payload: res.data })
   } catch (error) {
     console.log(error.message)
-    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
+    dispatch({ type: ERROR_EVENTO, payload: error.response.data.message })
   }
 }

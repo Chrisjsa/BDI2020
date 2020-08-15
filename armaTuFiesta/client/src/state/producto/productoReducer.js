@@ -9,6 +9,8 @@ import {
 const initialState = {
   loading: false,
   error: null,
+  productosDisponibles: [],
+  serviciosDisponibles: [],
 }
 
 export default (state = initialState, action) => {
@@ -20,10 +22,10 @@ export default (state = initialState, action) => {
       return { ...state, loading: false, edit: this }
 
     case LEER_PRODUCTOS:
-      return { ...state, loading: false, edit: this }
+      return { ...state, loading: false, productosDisponibles: action.payload }
 
     case LEER_SERVICIOS:
-      return { ...state, loading: false, edit: this }
+      return { ...state, loading: false, serviciosDisponibles: action.payload }
 
     case ERROR_PRODUCTO:
       return { ...state, loading: false, error: action.payload }

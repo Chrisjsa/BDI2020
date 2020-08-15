@@ -13,6 +13,8 @@ import ServiciosEvento from "./ServiciosEvento"
 
 import Presupuesto from "./Presupuesto"
 
+import AgregarServicio from "./AgregarServicio"
+
 import Cita from "./Cita"
 
 const EventoProfile = ({ currentEvento, history, modo }) => {
@@ -37,8 +39,10 @@ const EventoProfile = ({ currentEvento, history, modo }) => {
             <Presupuesto />
           ) : modo === "cita" ? (
             <Cita />
-          ) : (
+          ) : modo === "servicio" ? (
             <ServiciosEvento />
+          ) : (
+            <AgregarServicio />
           )}
         </Col>
       </Row>
