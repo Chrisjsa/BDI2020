@@ -7,6 +7,8 @@ const {
   EVENTOS_POR_FECHA,
   EGRESOS,
   INGRESOS,
+  DETALLE_EGRESOS,
+  DETALLE_INGRESOS,
 } = require("../sql/reportesQueries")
 
 const fs = require("fs")
@@ -115,20 +117,67 @@ exports.obtenerReporte2 = (req, res) => {
 exports.obtenerReporte3 = (req, res) => {
   const { fechaInicial, fechaFinal } = req.query
 
-  const data = [fechaInicial, fechaFinal]
+  const queryData = [
+    moment(fechaInicial).format("YYYY-MM-DD"),
+    moment(fechaFinal).format("YYYY-MM-DD"),
+  ]
 
-  connection.query(REPORTE_3, data, (error, rows) => {
-    if (error) {
-      return res.status(400).send(error.message)
-    }
-    return res.json(rows)
+  console.log(queryData)
+  let reportData = {}
+
+  connection.query(EGRESOS, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
+
+    let results = JSON.parse(JSON.stringify(rows[2])).pop()
+
+    reportData = { ...reportData, ...results }
   })
 
-  carbone.render("./reports/reporte3.docx", [], options, (error, result) => {
-    if (error) return console.log(error)
+  connection.query(DETALLE_EGRESOS, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
 
-    fs.writeFileSync("./reports/reporte3.pdf", result)
-    return res.send(result)
+    results = JSON.parse(JSON.stringify(rows[2]))
+
+    reportData = { ...reportData, egresos: results }
+  })
+
+  connection.query(INGRESOS, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
+
+    let results = JSON.parse(JSON.stringify(rows[2])).pop()
+
+    reportData = { ...reportData, ...results }
+  })
+
+  connection.query(DETALLE_INGRESOS, queryData, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
+
+    results = JSON.parse(JSON.stringify(rows[2]))
+
+    reportData = { ...reportData, ingresos: results }
+
+    reportData = {
+      ...reportData,
+      fechaInicial: moment(fechaInicial).format("DD/MM/YYYY"),
+      fechaFinal: moment(fechaFinal).format("DD/MM/YYYY"),
+      s: "s",
+    }
+
+    const json = JSON.stringify(reportData)
+
+    reportData = { ...reportData, json }
+
+    carbone.render(
+      "./reports/reporte3.docx",
+      reportData,
+      options,
+      (error, result) => {
+        if (error) return console.log(error)
+
+        fs.writeFileSync("./reports/reporte3.pdf", result)
+        return res.send(result)
+      }
+    )
   })
 }
 
