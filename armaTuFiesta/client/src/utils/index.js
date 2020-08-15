@@ -29,13 +29,12 @@ export const canCrud = (entity, entityList) => {
     `actualizar${capitalizedEntity}`,
   ]
 
-  console.log("operations", operations)
-
   operations.forEach(op => console.log(op))
-
-  console.log("entityList", entityList)
 
   return operations.every(element => entityList.includes(element))
 }
 
 export const formatDate = date => moment(date).format("YYYY-MM-DD")
+
+export const checkPermisos = (restricciones, permisos) =>
+  restricciones.every(p => permisos.includes(p))

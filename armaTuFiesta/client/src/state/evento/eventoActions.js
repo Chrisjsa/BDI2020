@@ -12,6 +12,7 @@ import {
   CREAR_EVENTOS,
   AGREGAR_SERVICIOS,
   AGREGAR_PRODUCTOS,
+  CONSULTAR_PRESUPUESTO,
 } from "./eventoTypes"
 import axios from "axios"
 
@@ -109,7 +110,7 @@ export const crearEventos = evento => async dispatch => {
   }
 }
 
-export const agregarServicios = () => async (dispatch) => {
+export const agregarServicios = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.post("api/eventos/agregarServicios", config)
@@ -119,12 +120,25 @@ export const agregarServicios = () => async (dispatch) => {
   }
 }
 
-export const agregarProductos = () => async (dispatch) => {
+export const agregarProductos = () => async dispatch => {
   setLoading()(dispatch)
   try {
     const res = await axios.post("api/eventos/agregarProductos", config)
     dispatch({ type: AGREGAR_PRODUCTOS, payload: res.data })
   } catch (error) {
+    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
+  }
+}
+
+export const consultarPresupuesto = evento => async dispatch => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.get(
+      `api/eventos/consultarPresupuesto?id_evento=${evento.id_evento}`
+    )
+    dispatch({ type: CONSULTAR_PRESUPUESTO, payload: res.data })
+  } catch (error) {
+    console.log(error.message)
     dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
   }
 }

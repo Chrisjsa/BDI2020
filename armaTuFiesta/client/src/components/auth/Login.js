@@ -10,13 +10,14 @@ import useForm from "../../hooks/useForm"
 
 import { setAlert } from "../../state/alert/alertActions"
 
-const Login = ({ history, login, isAuthenticated, error }) => {
+const Login = ({ history, login, isAuthenticated, user }) => {
   useEffect(() => {
-    if (isAuthenticated)
-      setTimeout(() => {
-        history.push("/dashboard")
-      }, 250)
-  }, [isAuthenticated, history])
+    if (isAuthenticated && user) history.push("/dashboard")
+
+    // setTimeout(() => {
+    //   history.push("/dashboard")
+    // }, 250)
+  }, [isAuthenticated, user, history])
 
   const [fields, bindFields] = useForm({
     username: "amandasuarez@gmail.com",
@@ -117,6 +118,7 @@ const Login = ({ history, login, isAuthenticated, error }) => {
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated,
   error: state.auth.error,
+  user: state.auth.user,
 })
 
 export default withRouter(connect(mapStateToProps, { login, setAlert })(Login))

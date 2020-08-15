@@ -12,6 +12,7 @@ import {
   CREAR_EVENTOS,
   AGREGAR_SERVICIOS,
   AGREGAR_PRODUCTOS,
+  CONSULTAR_PRESUPUESTO,
 } from "./eventoTypes"
 
 import { arrayOfValues } from "../../utils/"
@@ -29,6 +30,13 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case CONSULTAR_PRESUPUESTO:
+      return {
+        ...state,
+        loading: false,
+        currentEvento: { ...state.currentEvento, presupuesto: action.payload },
+      }
+
     case LEER_EVENTOS_POR_USUARIO:
       return { ...state, loading: false, eventos: action.payload }
 

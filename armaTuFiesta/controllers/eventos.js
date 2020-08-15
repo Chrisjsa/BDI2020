@@ -9,6 +9,7 @@ const {
   CREAR_EVENTOS,
   AGREGAR_SERVICIOS,
   AGREGAR_PRODUCTOS,
+  CONSULTAR_PRESUPUESTO,
 } = require("../sql/eventosQueries")
 
 exports.leerEventosPorUsuario = (req, res) => {
@@ -112,4 +113,17 @@ exports.agregarProductos = (req, res) => {
     }
     return res.json(rows)
   })
+}
+
+exports.consultarPresupuesto = (req, res) => {
+  connection.query(
+    CONSULTAR_PRESUPUESTO,
+    [req.query.id_evento],
+    (error, rows) => {
+      if (error) {
+        return res.status(400).send(error.message)
+      }
+      return res.json(rows[1])
+    }
+  )
 }

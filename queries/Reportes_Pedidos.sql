@@ -42,7 +42,7 @@ FROM arma_tu_fiesta.estatus as est, arma_tu_fiesta.presupuesto_estatus as presta
 WHERE est.nombre = 'Pagado' AND presta.fk_estatus = est.id_estatus AND presta.fecha BETWEEN @fecha_a AND @fecha_b AND presta.fk_presupuesto = pre.id_presupuesto;
 
 --- DETALLE DE INGRESOS
-SELECT pre.fk_orden_evento as id_orden_evento, pre.id_presupuesto, met.numero_factura, met.razon, est.nombre as estatus, prepa.fecha as fecha_pago, pre.total as monto
+SELECT met.numero_factura, met.razon, est.nombre as estatus, prepa.fecha as fecha_pago, pre.total as monto
 FROM arma_tu_fiesta.estatus as est, arma_tu_fiesta.presupuesto_estatus as presta, arma_tu_fiesta.presupuesto as pre, arma_tu_fiesta.presupuesto_pago as prepa, arma_tu_fiesta.metodo_de_pago as met
 WHERE est.nombre = 'Pagado' AND presta.fk_estatus = est.id_estatus AND presta.fecha BETWEEN @fecha_a AND @fecha_b AND presta.fk_presupuesto = pre.id_presupuesto AND prepa.fk_presupuesto = pre.id_presupuesto AND prepa.fk_pago = met.id_metodo;
 

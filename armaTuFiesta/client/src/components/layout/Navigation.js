@@ -10,7 +10,7 @@ import { logout } from "../../state/auth/authActions"
 
 import { clearEventos } from "../../state/evento/eventoActions"
 
-import { canCrud } from "../../utils"
+import { checkPermisos } from "../../utils"
 
 const Navigation = ({
   user,
@@ -19,7 +19,12 @@ const Navigation = ({
   isAuthenticated,
   clearEventos,
 }) => {
-  const permisos = user && user.permisos
+  const restriccionesTips = [
+    "insertarTip",
+    "leerTip",
+    "actualizarTip",
+    "eliminarTip",
+  ]
 
   const handleLogin = () => {
     history.push("/login")
@@ -58,26 +63,26 @@ const Navigation = ({
     <>
       <Nav className="mr-auto">{link("/dashboard", "Dashboard")}</Nav>
       <Nav>
-        {user && canCrud("cliente", permisos) && (
-          <>
-            {link("/reportes", "Reportes")}
-            <NavDropdown title="Administrar" id="basic-nav-dropdown">
-              <NavDropdown.Item>
-                {link("/crud_notaria", "Notarias")}
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                {link("/crud_cliente", "Clientes")}
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                {link("/permisos", "Permisos")}
-              </NavDropdown.Item>
+        <>
+          {link("/reportes", "Reportes")}
+          <NavDropdown title="Administrar" id="basic-nav-dropdown">
+            <NavDropdown.Item>
+              {link("/crud_notaria", "Notarias")}
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              {link("/crud_cliente", "Clientes")}
+            </NavDropdown.Item>
+            <NavDropdown.Item>{link("/permisos", "Permisos")}</NavDropdown.Item>
+
+            {user && checkPermisos(restriccionesTips, user.permisos) && (
               <NavDropdown.Item>{link("/crud_tip", "Tips")}</NavDropdown.Item>
-              {/* <NavDropdown.Item>
+            )}
+
+            {/* <NavDropdown.Item>
                 {link("/metodos_pago", "Métodos de Pago")}
               </NavDropdown.Item> */}
-            </NavDropdown>
-          </>
-        )}
+          </NavDropdown>
+        </>
         <Nav.Link onClick={handleLogout}>Cerrar sesión</Nav.Link>
       </Nav>
     </>

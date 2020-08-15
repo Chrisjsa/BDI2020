@@ -27,6 +27,7 @@ export const login = credentials => async dispatch => {
     })
     loadUser()(dispatch)
   } catch (error) {
+    console.log(error)
     dispatch({
       type: ERROR_AUTH,
       payload: error.response.data.message,

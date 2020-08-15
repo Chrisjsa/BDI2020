@@ -1,12 +1,25 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
 import { connect } from "react-redux"
 
-import { mostrarPresupuesto } from "../../state/evento/eventoActions"
+import {
+  mostrarPresupuesto,
+  consultarPresupuesto,
+} from "../../state/evento/eventoActions"
 
-import { ButtonGroup, Button } from "react-bootstrap"
+import { ButtonGroup, Button, ListGroup, Row } from "react-bootstrap"
 
-const Presupuesto = ({ mostrarPresupuesto }) => {
+import { arrayOfValues } from "../../utils"
+
+const Presupuesto = ({
+  mostrarPresupuesto,
+  currentEvento,
+  consultarPresupuesto,
+}) => {
+  useEffect(() => {
+    consultarPresupuesto(currentEvento)
+  }, [])
+
   const [metodo, setMetodo] = useState("tarjeta")
 
   const ButtonMetodo = ({ formaDePago, children }) => (
@@ -27,17 +40,43 @@ const Presupuesto = ({ mostrarPresupuesto }) => {
       >
         Regresar
       </Button>
-      <div>
-        <code>Aquí va el presupuesto</code>
-      </div>
-      <div>
-        <code>Aquí va la lista con servicios/productos y es scrollable!</code>
-      </div>
 
-      <ButtonGroup aria-label="Basic example">
-        <ButtonMetodo formaDePago="tarjeta">Tarjeta</ButtonMetodo>
-        <ButtonMetodo formaDePago="transferencia">Transferencia</ButtonMetodo>
-      </ButtonGroup>
+      {currentEvento.presupuesto && (
+        <>
+          <div className="scrollable" style={{ maxHeight: "60vh" }}>
+            <ListGroup>
+              {currentEvento.presupuesto.map(detalle => (
+                <ListGroup.Item>
+                  <div>{detalle["Servicio/Producto"]}</div>
+                  <div>
+                    {detalle.costo_unitario} x {detalle.cantidad} unidades ={" "}
+                    {detalle.costo}
+                  </div>
+                  <div>
+                    A cobrar: <strong>{detalle.a_cobrar}</strong>
+                  </div>
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </div>
+
+          <div className="lead my-4 text-center">
+            Monto total a cobrar:{" "}
+            {arrayOfValues(currentEvento.presupuesto, "a_cobrar").reduce(
+              (acc, val) => acc + val
+            )}
+          </div>
+
+          <div className="text-center">
+            <ButtonGroup classLabel="my-4">
+              <ButtonMetodo formaDePago="tarjeta">Tarjeta</ButtonMetodo>
+              <ButtonMetodo formaDePago="transferencia">
+                Transferencia
+              </ButtonMetodo>
+            </ButtonGroup>
+          </div>
+        </>
+      )}
 
       {metodo === "tarjeta" ? (
         <div>
@@ -52,8 +91,10 @@ const Presupuesto = ({ mostrarPresupuesto }) => {
   )
 }
 
-const mapActionsToProps = { mostrarPresupuesto }
+const mapActionsToProps = { mostrarPresupuesto, consultarPresupuesto }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({
+  currentEvento: state.eventos.currentEvento,
+})
 
 export default connect(mapStateToProps, mapActionsToProps)(Presupuesto)
