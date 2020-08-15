@@ -59,7 +59,7 @@ const NuevoEventoModal = ({
     }
 
     handleClose()
-    leerEventosPorUsuario()
+    leerEventosPorUsuario(user)
     crearEventos(data)
   }
 

@@ -35,7 +35,7 @@ const Cita = ({
 
   useEffect(() => {
     leerServicios()
-    leerCitasUsuario()
+    leerCitasUsuario(user)
   }, [])
 
   const onClick = e => {
@@ -46,7 +46,7 @@ const Cita = ({
     })
 
     setAgregada(true)
-    leerCitasUsuario()
+    leerCitasUsuario(user)
 
     setTimeout(() => {
       setAgregada(false)
@@ -137,7 +137,12 @@ const Cita = ({
   )
 }
 
-const mapActionsToProps = { leerServicios, insertarCita, cambiarModo }
+const mapActionsToProps = {
+  leerServicios,
+  insertarCita,
+  cambiarModo,
+  leerCitasUsuario,
+}
 
 const mapStateToProps = state => ({
   serviciosCita: state.cita.serviciosCita,
