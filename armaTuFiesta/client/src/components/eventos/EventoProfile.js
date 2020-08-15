@@ -48,7 +48,7 @@ const EventoProfile = ({ currentEvento, history, modo }) => {
 
 const mapStateToActions = { setAlert }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   currentEvento: state.eventos.currentEvento,
   modo: state.eventos.modo,
 })

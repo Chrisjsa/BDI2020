@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 import { connect } from "react-redux"
-
+import TarjetaForm from "../metodos/TarjetaForm"
 import {
   cambiarModo,
   consultarPresupuesto,
@@ -11,7 +11,12 @@ import { ButtonGroup, Button, ListGroup, Row } from "react-bootstrap"
 
 import { arrayOfValues } from "../../utils"
 
-const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
+const Presupuesto = ({
+  cambiarModo,
+  currentEvento,
+  consultarPresupuesto,
+  TarjetaForm,
+}) => {
   useEffect(() => {
     consultarPresupuesto(currentEvento)
   }, [])
@@ -21,7 +26,7 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
   const ButtonMetodo = ({ formaDePago, children }) => (
     <Button
       variant={formaDePago === metodo ? "primary" : "outline-primary"}
-      onClick={e => setMetodo(formaDePago)}
+      onClick={(e) => setMetodo(formaDePago)}
     >
       {children}
     </Button>
@@ -32,17 +37,16 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
       <h2>Presupuesto</h2>
       <Button
         variant="outline-primary"
-        onClick={e => cambiarModo("servicio")}
+        onClick={(e) => cambiarModo("servicio")}
         variant="link"
       >
         Regresar
       </Button>
-
       {currentEvento.presupuesto && (
         <>
           <div className="scrollable" style={{ maxHeight: "60vh" }}>
             <ListGroup>
-              {currentEvento.presupuesto.map(detalle => (
+              {currentEvento.presupuesto.map((detalle) => (
                 <ListGroup.Item>
                   <div>{detalle["Servicio/Producto"]}</div>
                   <div>
@@ -74,8 +78,8 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
           </div>
         </>
       )}
-
-      {/* {metodo === "tarjeta" ? (
+      /*{" "}
+      {metodo === "tarjeta" ? (
         <div>
           <code>Componente de pago con tarjeta (formulario + tarjeta)</code>
         </div>
@@ -83,14 +87,15 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
         <div>
           <code>Componente de pago con transferencia (formulario)</code>
         </div>
-      )} */}
+      )}{" "}
+      */
     </div>
   )
 }
 
 const mapActionsToProps = { cambiarModo, consultarPresupuesto }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   currentEvento: state.eventos.currentEvento,
 })
 
