@@ -19,9 +19,9 @@ exports.EGRESOS =
 exports.INGRESOS =
   "SET @fecha_a = ?; SET @fecha_b = ?; SELECT sum(pre.total) as total_ingresos FROM arma_tu_fiesta.estatus as est, arma_tu_fiesta.presupuesto_estatus as presta, arma_tu_fiesta.presupuesto as pre WHERE est.nombre = 'Pagado' AND presta.fk_estatus = est.id_estatus AND presta.fecha BETWEEN @fecha_a AND @fecha_b AND presta.fk_presupuesto = pre.id_presupuesto;"
 
-exports.DETALLE_INGRESOS =
+exports.DETALLE_EGRESOS =
   "SET @fecha_a = ?; SET @fecha_b = ?; " +
   "SELECT met.numero_factura, met.razon, est.nombre as estatus, ordpro.fecha as fecha_pago, ordpro.total as monto FROM arma_tu_fiesta.orden_producto as ordpro, arma_tu_fiesta.orden_producto_estatus as ordest, arma_tu_fiesta.estatus as est, arma_tu_fiesta.orden_producto_pago as ordpag, arma_tu_fiesta.metodo_de_pago as met WHERE est.nombre = 'Recibido' AND ordest.fk_estatus = est.id_estatus AND ordest.fecha BETWEEN @fecha_a AND @fecha_b AND ordest.fk_orden_producto = ordpro.id_orden_producto AND ordpag.fk_orden_producto = ordpro.id_orden_producto AND met.id_metodo = ordpag.fk_pago ORDER BY ordpro.fecha;"
 
-exports.DETALLE_EGRESOS =
+exports.DETALLE_INGRESOS =
   "SET @fecha_a = ?; SET @fecha_b = ?; SELECT met.numero_factura, met.razon, est.nombre as estatus, prepa.fecha as fecha_pago, pre.total as monto FROM arma_tu_fiesta.estatus as est, arma_tu_fiesta.presupuesto_estatus as presta, arma_tu_fiesta.presupuesto as pre, arma_tu_fiesta.presupuesto_pago as prepa, arma_tu_fiesta.metodo_de_pago as met WHERE est.nombre = 'Pagado' AND presta.fk_estatus = est.id_estatus AND presta.fecha BETWEEN @fecha_a AND @fecha_b AND presta.fk_presupuesto = pre.id_presupuesto AND prepa.fk_presupuesto = pre.id_presupuesto AND prepa.fk_pago = met.id_metodo;"
