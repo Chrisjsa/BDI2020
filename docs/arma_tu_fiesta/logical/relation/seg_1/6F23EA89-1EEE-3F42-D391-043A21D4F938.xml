@@ -8,6 +8,7 @@
 </engineerTo>
 <sourcePk>95970ADA-2274-D814-F0A3-FC89B77B0A5F</sourcePk>
 <identifying>false</identifying>
+<nameOnTarget>descuenta</nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

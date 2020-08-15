@@ -10,6 +10,8 @@ import {
   LEER_SALONES,
   MOSTRAR_PRESUPUESTO,
   CREAR_EVENTOS,
+  AGREGAR_SERVICIOS,
+  AGREGAR_PRODUCTOS,
 } from "./eventoTypes"
 
 import { arrayOfValues } from "../../utils/"
@@ -39,6 +41,12 @@ export default (state = initialState, action) => {
         loading: false,
         currentEventoServicios: action.payload,
       }
+
+    case AGREGAR_SERVICIOS:
+      return { ...state, loading: false, edit: this }
+
+    case AGREGAR_PRODUCTOS:
+      return { ...state, loading: false, edit: this }
 
     case CREAR_EVENTOS:
       return { ...state, loading: false, edit: this }

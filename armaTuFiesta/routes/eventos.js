@@ -11,6 +11,8 @@ const {
   leerEventos,
   leerSalones,
   crearEventos,
+  agregarServicios,
+  agregarProductos,
 } = require("../controllers/eventos")
 
 // Read
@@ -25,4 +27,8 @@ router.get("/leerEventos", middleware, leerEventos)
 router.get("/leerSalones", middleware, leerSalones)
 
 router.post("/crearEventos", middleware, crearEventos)
+
+router.post("/agregarServicios", middleware, agregarServicios)
+
+router.post("/agregarProductos", middleware, agregarProductos)
 module.exports = router

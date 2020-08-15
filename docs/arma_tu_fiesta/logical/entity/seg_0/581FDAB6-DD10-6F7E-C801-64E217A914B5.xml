@@ -95,6 +95,20 @@
 <domain>DOM10006</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="id_tip" id="130D9DA9-367A-32CF-2382-B69920A56997">
+<createdBy>ccross</createdBy>
+<createdTime>2020-08-15 00:03:12 UTC</createdTime>
+<generatorID>53D11334-CC1C-7899-DE82-00E5DE968B0C</generatorID>
+<ownerDesignName>arma_tu_fiesta</ownerDesignName>
+<engineerTo>
+<item key="50C8E789-07A5-328A-3ADF-4AA390D6455D" value="true"/>
+</engineerTo>
+<referedAttribute>C2C00F33-AEC2-DA96-34D6-197D20ADE4A7</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>DOM10006</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="D08051C1-34E0-5BDC-3CDE-1A6760E2C764" name="imagen PK">
@@ -107,6 +121,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>C657C44F-BE3E-B018-7C68-1D03C64E3E08</attributeRef>
+<attributeRef>130D9DA9-367A-32CF-2382-B69920A56997</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

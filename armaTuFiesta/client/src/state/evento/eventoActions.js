@@ -10,6 +10,8 @@ import {
   LEER_SALONES,
   MOSTRAR_PRESUPUESTO,
   CREAR_EVENTOS,
+  AGREGAR_SERVICIOS,
+  AGREGAR_PRODUCTOS,
 } from "./eventoTypes"
 import axios from "axios"
 
@@ -104,5 +106,25 @@ export const crearEventos = evento => async dispatch => {
     dispatch({ type: CREAR_EVENTOS, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_EVENTO, payload: error.response.data.message })
+  }
+}
+
+export const agregarServicios = () => async (dispatch) => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.post("api/eventos/agregarServicios", config)
+    dispatch({ type: AGREGAR_SERVICIOS, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
+  }
+}
+
+export const agregarProductos = () => async (dispatch) => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.post("api/eventos/agregarProductos", config)
+    dispatch({ type: AGREGAR_PRODUCTOS, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
   }
 }
