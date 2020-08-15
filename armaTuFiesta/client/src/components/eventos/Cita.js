@@ -6,11 +6,17 @@ import { Button, ListGroup, Row, Col, Form } from "react-bootstrap"
 
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
-import { leerServicios, insertarCita } from "../../state/cita/citaActions"
+import {
+  leerServicios,
+  insertarCita,
+  leerCitasUsuario,
+} from "../../state/cita/citaActions"
 
 import { cambiarModo } from "../../state/evento/eventoActions"
 
 import Icon from "../layout/Icon"
+import Hero from "../layout/Hero"
+import Loading from "../layout/Loading"
 
 import { formatDate } from "../../utils/"
 const Cita = ({
@@ -19,6 +25,9 @@ const Cita = ({
   insertarCita,
   leerServicios,
   serviciosCita,
+  citasUsuario,
+  loading,
+  leerCitasUsuario,
 }) => {
   const [currentServicio, setCurrentServicio] = useState(undefined)
   const [fecha, setFecha] = useState(new Date())
@@ -26,6 +35,7 @@ const Cita = ({
 
   useEffect(() => {
     leerServicios()
+    leerCitasUsuario()
   }, [])
 
   const onClick = e => {
@@ -36,6 +46,7 @@ const Cita = ({
     })
 
     setAgregada(true)
+    leerCitasUsuario()
 
     setTimeout(() => {
       setAgregada(false)
@@ -45,14 +56,27 @@ const Cita = ({
 
   return (
     <div>
-      <h2>Citas</h2>
-      <Button
-        variant="outline-primary"
-        onClick={e => cambiarModo("servicio")}
-        variant="link"
-      >
-        Regresar
-      </Button>
+      <Hero firstLine="Consulta" secondLine="Citas"></Hero>
+
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <h2>Tus citas</h2>
+          <ListGroup className="mb-3">
+            {citasUsuario.map(cita => (
+              <ListGroup.Item>
+                <div>
+                  <strong>{cita.nombre}</strong>
+                </div>
+                <div>{formatDate(cita.fecha_cita)}</div>
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+        </>
+      )}
+
+      <h2>Agregar cita</h2>
 
       {serviciosCita.length > 0 && (
         <Row>
@@ -118,6 +142,8 @@ const mapActionsToProps = { leerServicios, insertarCita, cambiarModo }
 const mapStateToProps = state => ({
   serviciosCita: state.cita.serviciosCita,
   user: state.auth.user,
+  citasUsuario: state.cita.citasUsuario,
+  loading: state.cita.loading,
 })
 
 export default connect(mapStateToProps, mapActionsToProps)(Cita)

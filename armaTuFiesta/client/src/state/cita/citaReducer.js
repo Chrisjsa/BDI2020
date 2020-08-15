@@ -10,6 +10,7 @@ const initialState = {
   loading: false,
   error: null,
   serviciosCita: [],
+  citasUsuaria: [],
 }
 
 export default (state = initialState, action) => {
@@ -21,7 +22,7 @@ export default (state = initialState, action) => {
       return { ...state, loading: false, edit: this }
 
     case LEER_CITAS_USUARIO:
-      return { ...state, loading: false, edit: this }
+      return { ...state, loading: false, citasUsuario: action.payload }
 
     case LOADING_CITA:
       return { ...state, loading: true }

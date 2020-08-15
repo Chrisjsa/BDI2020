@@ -10,6 +10,8 @@ import NuevoEventoModal from "../eventos/NuevoEventoModal"
 
 import Loading from "../layout/Loading"
 
+import { leerCitasUsuario } from "../../state/cita/citaActions"
+
 import {
   leerEventosPorUsuario,
   leerEventos,
@@ -26,9 +28,13 @@ const DashboardPage = ({
   leerEventos,
   leerEventosPorUsuario,
   cambiarModo,
+  leerCitasUsuario,
 }) => {
   useEffect(() => {
-    if (user) leerEventosPorUsuario(user)
+    if (user) {
+      leerEventosPorUsuario(user)
+      leerCitasUsuario(user)
+    }
     // eslint-disable-nextline
   }, [user])
 
@@ -78,6 +84,7 @@ const mapActionsToProps = {
   leerEventos,
   leerEventosPorUsuario,
   cambiarModo,
+  leerCitasUsuario,
 }
 
 const mapStateToProps = state => ({

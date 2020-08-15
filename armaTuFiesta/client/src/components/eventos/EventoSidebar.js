@@ -42,9 +42,6 @@ const EventoSidebar = ({ evento, cambiarModo }) => {
           <ListGroup.Item action onClick={e => cambiarModo("presupuesto")}>
             Presupuesto
           </ListGroup.Item>
-          <ListGroup.Item action onClick={e => cambiarModo("cita")}>
-            Citas
-          </ListGroup.Item>
         </ListGroup>
       </Card.Body>
     </Card>

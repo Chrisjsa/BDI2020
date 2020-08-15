@@ -34,10 +34,12 @@ export const insertarCita = cita => async dispatch => {
   }
 }
 
-export const leerCitasUsuario = () => async dispatch => {
+export const leerCitasUsuario = usuario => async dispatch => {
   setLoading()(dispatch)
   try {
-    const res = await axios.get("api/citas/leerCitasUsuario")
+    const res = await axios.get(
+      `api/citas/leerCitasUsuario?id_usuario=${usuario.id_usuario}`
+    )
     dispatch({ type: LEER_CITAS_USUARIO, payload: res.data })
   } catch (error) {
     dispatch({ type: ERROR_CITA, payload: error.response.data.message })

@@ -12,6 +12,7 @@ import {
   crearEventos,
   leerEventos,
   leerSalones,
+  leerEventosPorUsuario,
 } from "../../state/evento/eventoActions"
 
 const NuevoEventoModal = ({
@@ -22,6 +23,7 @@ const NuevoEventoModal = ({
   leerSalones,
   user,
   crearEventos,
+  leerEventosPorUsuario,
 }) => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
@@ -56,7 +58,8 @@ const NuevoEventoModal = ({
       num_invitados: numInvitados,
     }
 
-    console.log(data)
+    handleClose()
+    leerEventosPorUsuario()
     crearEventos(data)
   }
 
@@ -140,7 +143,7 @@ const NuevoEventoModal = ({
 
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Cerrar
           </Button>
           <Button variant="primary" onClick={onClick}>
             Agregar evento
@@ -151,7 +154,12 @@ const NuevoEventoModal = ({
   )
 }
 
-const mapActionsToProps = { leerEventos, leerSalones, crearEventos }
+const mapActionsToProps = {
+  leerEventos,
+  leerSalones,
+  crearEventos,
+  leerEventosPorUsuario,
+}
 
 const mapStateToProps = state => ({
   tiposEvento: state.eventos.tiposEvento,

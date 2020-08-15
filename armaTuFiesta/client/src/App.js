@@ -36,6 +36,8 @@ import Test from "./components/Test"
 import Alerts from "./components/alerts/Alerts"
 import Reportes from "./components/reportes/Reportes"
 
+import Cita from "./components/eventos/Cita"
+
 if (localStorage.token) {
   setAuthToken(localStorage.token)
 }
@@ -64,6 +66,9 @@ const App = () => {
             <PrivateRoute exact path="/permisos" component={PermisosPage} />
             <PrivateRoute exact path="/metodos_pago" component={MetodosPage} />
             <PrivateRoute exact path="/evento" component={EventoProfile} />
+            <Container>
+              <PrivateRoute exact path="/citas" component={Cita} />
+            </Container>
 
             <PrivateRoute
               exact

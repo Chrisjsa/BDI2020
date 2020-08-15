@@ -91,7 +91,9 @@ const Navigation = ({
 
   const AuthLinks = () => (
     <>
-      <Nav className="mr-auto">{link("/dashboard", "Dashboard")}</Nav>
+      <Nav className="mr-auto">
+        {link("/dashboard", "Dashboard")} {link("/citas", "Citas")}
+      </Nav>
       <Nav>
         <>
           {user &&

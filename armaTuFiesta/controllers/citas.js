@@ -28,11 +28,14 @@ exports.insertarCita = (req, res) => {
 }
 
 exports.leerCitasUsuario = (req, res) => {
-  const data = []
-  connection.query(LEER_CITAS_USUARIO, [data], (error, rows) => {
-    if (error) {
-      return res.status(400).send(error.message)
+  connection.query(
+    LEER_CITAS_USUARIO,
+    [req.query.id_usuario],
+    (error, rows) => {
+      if (error) {
+        return res.status(400).send(error.message)
+      }
+      return res.json(rows[1])
     }
-    return res.json(rows)
-  })
+  )
 }
