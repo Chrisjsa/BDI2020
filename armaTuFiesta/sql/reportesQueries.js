@@ -25,3 +25,12 @@ exports.DETALLE_EGRESOS =
 
 exports.DETALLE_INGRESOS =
   "SET @fecha_a = ?; SET @fecha_b = ?; SELECT met.numero_factura, met.razon, est.nombre as estatus, prepa.fecha as fecha_pago, pre.total as monto FROM arma_tu_fiesta.estatus as est, arma_tu_fiesta.presupuesto_estatus as presta, arma_tu_fiesta.presupuesto as pre, arma_tu_fiesta.presupuesto_pago as prepa, arma_tu_fiesta.metodo_de_pago as met WHERE est.nombre = 'Pagado' AND presta.fk_estatus = est.id_estatus AND presta.fecha BETWEEN @fecha_a AND @fecha_b AND presta.fk_presupuesto = pre.id_presupuesto AND prepa.fk_presupuesto = pre.id_presupuesto AND prepa.fk_pago = met.id_metodo;"
+
+exports.CHRIS =
+  "SELECT usu.username as col1, ordeve.fecha_realizacion as col2 FROM arma_tu_fiesta.usuario as usu, arma_tu_fiesta.orden_evento as ordeve WHERE usu.id_usuario = ordeve.fk_usuario;"
+
+exports.TOMAS =
+  "SELECT o.cantidad_invitados as col1, l.nombre as col2 FROM arma_tu_fiesta.orden_evento as o, arma_tu_fiesta.locacion as l WHERE o.fk_locacion = l.id_locacion;"
+
+exports.WINKLER =
+  "SELECT orden.cantidad_invitados, pre.fecha as fecha_presupuesto FROM arma_tu_fiesta.orden_evento as orden, arma_tu_fiesta.presupuesto as presup WHERE orden.id_orden_evento = presup.fk_orden_evento;"

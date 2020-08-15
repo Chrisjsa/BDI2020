@@ -43,6 +43,7 @@ let TipForm = ({
   const packData = () => ({
     ...formValues,
     tipo,
+    descripcion,
   })
 
   const cleanUp = () => {
@@ -66,6 +67,7 @@ let TipForm = ({
   }
 
   const [tipo, setTipo] = useState("")
+  const [descripcion, setDescripcion] = useState("")
 
   return (
     <Form onSubmit={e => e.preventDefault()}>
@@ -90,11 +92,13 @@ let TipForm = ({
 
           <Form.Group as={Col}>
             <Form.Label>Descripcion</Form.Label>
-            <Field
+            <Form.Control
               className="form-control"
               name="descripcion"
               component="input"
               type="text"
+              value={descripcion}
+              onChange={e => setDescripcion(e.target.value)}
             />
           </Form.Group>
         </Form.Row>
