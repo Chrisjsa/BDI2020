@@ -20,8 +20,6 @@ var options = {
 exports.obtenerReporte1 = (req, res) => {
   const { fechaInicial, fechaFinal } = req.query
 
-  options = { ...options }
-
   const queryData = [
     moment(fechaInicial).format("YYYY-MM-DD"),
     moment(fechaFinal).format("YYYY-MM-DD"),
@@ -78,31 +76,39 @@ exports.obtenerReporte1 = (req, res) => {
 exports.obtenerReporte2 = (req, res) => {
   const { fechaInicial, fechaFinal } = req.query
 
-  const data = [fechaInicial, fechaFinal]
+  const queryData = [
+    moment(fechaInicial).format("YYYY-MM-DD"),
+    moment(fechaFinal).format("YYYY-MM-DD"),
+  ]
 
-  connection.query(REPORTE_2, data, (error, rows) => {
+  console.log(queryData)
+  let reportData = {}
+
+  connection.query(REPORTE_2, queryData, (error, rows) => {
     if (error) return res.status(400).send(error.message)
 
-    return res.json(rows)
-  })
+    results = JSON.parse(JSON.stringify(rows[2]))
 
-  connection.query(EGRESOS, data, (error, rows) => {
-    if (error) return res.status(400).send(error.message)
+    reportData = { ...reportData, servicios: results }
 
-    return res.json(rows)
-  })
+    reportData = {
+      ...reportData,
+      fechaInicial: moment(fechaInicial).format("DD/MM/YYYY"),
+      fechaFinal: moment(fechaFinal).format("DD/MM/YYYY"),
+      s: "s",
+    }
 
-  connection.query(INGRESOS, data, (error, rows) => {
-    if (error) return res.status(400).send(error.message)
+    carbone.render(
+      "./reports/reporte2.docx",
+      reportData,
+      options,
+      (error, result) => {
+        if (error) return console.log(error)
 
-    return res.json(rows)
-  })
-
-  carbone.render("./reports/reporte2.docx", [], options, (error, result) => {
-    if (error) return console.log(error)
-
-    fs.writeFileSync("./reports/reporte2.pdf", result)
-    return res.send(result)
+        fs.writeFileSync("./reports/reporte2.pdf", result)
+        return res.send(result)
+      }
+    )
   })
 }
 
