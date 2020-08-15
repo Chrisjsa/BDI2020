@@ -68,7 +68,7 @@ const NuevoEventoModal = ({
 
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Nuevo evento</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
