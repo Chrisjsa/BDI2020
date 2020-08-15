@@ -195,10 +195,6 @@ exports.obtenerReporte4 = (req, res) => {
   connection.query(REPORTE_4, queryData, (error, rows) => {
     if (error) return res.status(400).send(error.message)
 
-    results = JSON.parse(JSON.stringify(rows[2]))
-
-    reportData = { ...reportData, top: results }
-
     reportData = {
       ...reportData,
       fechaInicial: moment(fechaInicial).format("DD/MM/YYYY"),
@@ -206,14 +202,22 @@ exports.obtenerReporte4 = (req, res) => {
       s: "s",
     }
 
+    results = JSON.parse(JSON.stringify(rows[2]))
+
+    reportData = { ...reportData, top: results }
+
+    const json = JSON.stringify(reportData)
+
+    reportData = { ...reportData, json }
+
     carbone.render(
-      "./reports/reporte2.docx",
+      "./reports/reporte4.docx",
       reportData,
       options,
       (error, result) => {
         if (error) return console.log(error)
 
-        fs.writeFileSync("./reports/reporte2.pdf", result)
+        fs.writeFileSync("./reports/reporte4.pdf", result)
         return res.send(result)
       }
     )
