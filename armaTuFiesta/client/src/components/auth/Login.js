@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { Link, withRouter } from "react-router-dom"
 
 import { Form, Button, Card } from "react-bootstrap"
@@ -20,7 +20,7 @@ const Login = ({ history, login, isAuthenticated, error }) => {
 
   const [fields, bindFields] = useForm({
     username: "amandasuarez@gmail.com",
-    password: "gibberish",
+    password: "",
   })
 
   const onSubmit = e => {
@@ -59,6 +59,48 @@ const Login = ({ history, login, isAuthenticated, error }) => {
 
             <Button variant="primary" type="submit" className="mb-3" block>
               Login
+            </Button>
+
+            <Button
+              variant="primary"
+              type="submit"
+              className="mb-3"
+              block
+              onClick={e =>
+                login({ username: "tguzmani@gmail.com", password: "V26150008" })
+              }
+            >
+              Tomás
+            </Button>
+
+            <Button
+              variant="primary"
+              type="submit"
+              className="mb-3"
+              block
+              onClick={e =>
+                login({
+                  username: "winkler07@gmail.com",
+                  password: "V25253807",
+                })
+              }
+            >
+              Winkler
+            </Button>
+
+            <Button
+              variant="primary"
+              type="submit"
+              className="mb-3"
+              block
+              onClick={e =>
+                login({
+                  username: "amandasuarez@gmail.com",
+                  password: "V20000007",
+                })
+              }
+            >
+              Amanda
             </Button>
 
             <Form.Text className="text-muted text-center">

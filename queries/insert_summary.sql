@@ -15707,7 +15707,7 @@ INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_ap
 SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'V26150008') as tablaPersona);
 INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('04241181872', @usuario);
 INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('tguzmani@gmail.com', @usuario);
-INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('tguzmani@gmail.com', 'V26150008' , @usuario, @rol);
+INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('tguzmani@gmail.com', 'perros' , @usuario, @rol);
 
 SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Superuser') as tablaRol);
 SET @reside = (SELECT pkParroquia FROM (SELECT id_lugar as pkParroquia FROM arma_tu_fiesta.lugar WHERE nombre = 'La Pastora' AND fk_pertenece = (SELECT pkMuni FROM (SELECT id_lugar as pkMuni FROM arma_tu_fiesta.lugar WHERE tipo = 'Municipio' AND nombre = 'Libertador (Caracas)') as tablaMuni)) as tablaParroquia);
@@ -15716,7 +15716,7 @@ INSERT INTO arma_tu_fiesta.persona (cedula, p_nombre, s_nombre, p_apellido, s_ap
 SET @usuario = (SELECT pkPersona FROM (SELECT id_persona as pkPersona from arma_tu_fiesta.persona WHERE cedula = 'V25253807') as tablaPersona);
 INSERT INTO arma_tu_fiesta.telefono (numero, fk_persona) VALUES ('04127167168', @usuario);
 INSERT INTO arma_tu_fiesta.email (correo, fk_persona) VALUES ('winkler07@gmail.com', @usuario);
-INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('winkler07@gmail.com', 'V25253807' , @usuario, @rol);
+INSERT INTO arma_tu_fiesta.usuario (username, password, fk_persona, fk_rol) VALUES ('winkler', '123' , @usuario, @rol);
 
 
 SET @rol = (SELECT pkRol FROM (SELECT id_rol as pkRol FROM arma_tu_fiesta.rol WHERE nombre = 'Cliente') as tablaRol);
