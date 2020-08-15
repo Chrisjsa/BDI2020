@@ -25,6 +25,7 @@ SET @salon = ID_SALON;
 SET @numero_invitados = NUMERO_INVITADOS;
 
 INSERT INTO arma_tu_fiesta.orden_evento (cantidad_invitados, fecha_reserva, fecha_realizacion, fk_usuario, fk_evento, fk_salon) VALUES (@numero_invitados,@freserva, @frealizacion, @usuario, @evento, @salon);
+SET @orden_evento = (SELECT pkOE FROM (SELECT id_orden_evento as pkOE FROM arma_tu_fiesta.orden_evento WHERE fk_usuario = @usuario AND fk_evento = @evento AND fk_locacion = @salon) as tablaOrdenEvento);
 
 SET @estatus_evento = (SELECT pkEstatus FROM (SELECT id_estatus as pkEstatus FROM arma_tu_fiesta.estatus WHERE nombre = 'Reservado') as tablaEstatus);
 INSERT INTO arma_tu_fiesta.orden_evento_estatus (fk_orden_evento, fk_estatus, fecha) VALUES (@orden_evento, @estatus_evento, @freserva);
