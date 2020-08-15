@@ -10,7 +10,7 @@ exports.LEER_SERVICIOS_EVENTOS =
 exports.LEER_CATEGORIA = "SELECT nombre FROM categoria ORDER BY 1"
 
 exports.LEER_EVENTOS =
-  "SELECT * FROM arma_tu_fiesta.evento as eve GROUP BY eve.nombre;"
+  "SELECT eve.nombre FROM arma_tu_fiesta.evento as eve GROUP BY eve.nombre;"
 
 exports.LEER_SALONES =
   "SELECT lo.id_locacion, lo.fk_localizacion as fk_lugar, lo.nombre FROM locacion lo INNER JOIN lugar lu ON lo.fk_localizacion = lu.id_lugar WHERE lo.tipo = 'Restaurante'"
