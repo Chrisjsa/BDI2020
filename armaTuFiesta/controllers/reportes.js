@@ -9,6 +9,9 @@ const {
   INGRESOS,
   DETALLE_EGRESOS,
   DETALLE_INGRESOS,
+  WINKLER,
+  TOMAS,
+  CHRIS,
 } = require("../sql/reportesQueries")
 
 const fs = require("fs")
@@ -277,7 +280,7 @@ exports.obtenerReporte5 = (req, res) => {
   connection.query(CHRIS, queryData, (error, rows) => {
     if (error) return res.status(400).send(error.message)
 
-    results = JSON.parse(JSON.stringify(rows[2]))
+    results = JSON.parse(JSON.stringify(rows))
 
     reportData = { ...reportData, col: results }
 
@@ -285,7 +288,14 @@ exports.obtenerReporte5 = (req, res) => {
       ...reportData,
       fechaInicial: moment(fechaInicial).format("DD/MM/YYYY"),
       fechaFinal: moment(fechaFinal).format("DD/MM/YYYY"),
+      col1_nombre: "Username",
+      col2_nombre: "Fecha reserva",
+      nombre: "Christian",
     }
+
+    const json = JSON.stringify(reportData)
+
+    reportData = { ...reportData, json }
 
     carbone.render(
       "./reports/reporte5.docx",
@@ -312,19 +322,26 @@ exports.obtenerReporte6 = (req, res) => {
   console.log(queryData)
   let reportData = {}
 
-  connection.query(REPORTE_2, queryData, (error, rows) => {
+  connection.query(TOMAS, queryData, (error, rows) => {
     if (error) return res.status(400).send(error.message)
 
-    results = JSON.parse(JSON.stringify(rows[2]))
+    results = JSON.parse(JSON.stringify(rows))
 
-    reportData = { ...reportData, servicios: results }
+    reportData = { ...reportData, col: results }
 
     reportData = {
       ...reportData,
       fechaInicial: moment(fechaInicial).format("DD/MM/YYYY"),
       fechaFinal: moment(fechaFinal).format("DD/MM/YYYY"),
       s: "s",
+      col1_nombre: "Nombre locacion",
+      col2_nombre: "Cantidad invitados",
+      nombre: "Tomás",
     }
+
+    const json = JSON.stringify(reportData)
+
+    reportData = { ...reportData, json }
 
     carbone.render(
       "./reports/reporte5.docx",
@@ -351,19 +368,26 @@ exports.obtenerReporte7 = (req, res) => {
   console.log(queryData)
   let reportData = {}
 
-  connection.query(REPORTE_2, queryData, (error, rows) => {
+  connection.query(WINKLER, queryData, (error, rows) => {
     if (error) return res.status(400).send(error.message)
 
-    results = JSON.parse(JSON.stringify(rows[2]))
+    results = JSON.parse(JSON.stringify(rows))
 
-    reportData = { ...reportData, servicios: results }
+    reportData = { ...reportData, col: results }
 
     reportData = {
       ...reportData,
       fechaInicial: moment(fechaInicial).format("DD/MM/YYYY"),
       fechaFinal: moment(fechaFinal).format("DD/MM/YYYY"),
       s: "s",
+      col1_nombre: "Cantidad invitados",
+      col2_nombre: "Fecha presupuesto",
+      nombre: "Winkler",
     }
+
+    const json = JSON.stringify(reportData)
+
+    reportData = { ...reportData, json }
 
     carbone.render(
       "./reports/reporte5.docx",
@@ -372,7 +396,7 @@ exports.obtenerReporte7 = (req, res) => {
       (error, result) => {
         if (error) return console.log(error)
 
-        fs.writeFileSync("./reports/reporte6.pdf", result)
+        fs.writeFileSync("./reports/reporte7.pdf", result)
         return res.send(result)
       }
     )

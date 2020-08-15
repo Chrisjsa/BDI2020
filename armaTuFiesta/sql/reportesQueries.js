@@ -33,4 +33,4 @@ exports.TOMAS =
   "SELECT o.cantidad_invitados as col1, l.nombre as col2 FROM arma_tu_fiesta.orden_evento as o, arma_tu_fiesta.locacion as l WHERE o.fk_locacion = l.id_locacion;"
 
 exports.WINKLER =
-  "SELECT orden.cantidad_invitados, pre.fecha as fecha_presupuesto FROM arma_tu_fiesta.orden_evento as orden, arma_tu_fiesta.presupuesto as presup WHERE orden.id_orden_evento = presup.fk_orden_evento;"
+  "SELECT orden.cantidad_invitados as col1, presup.fecha as col2 FROM arma_tu_fiesta.orden_evento as orden, arma_tu_fiesta.presupuesto as presup WHERE orden.id_orden_evento = presup.fk_orden_evento;"

@@ -69,6 +69,15 @@ const Reportes = () => {
       <ReporteItem number="4" fechas={{ fechaInicial, fechaFinal }}>
         Top 10 de servicios tercerizados contratados por periodo de tiempo.
       </ReporteItem>
+      <ReporteItem number="5" fechas={{ fechaInicial, fechaFinal }}>
+        Reporte Christian
+      </ReporteItem>
+      <ReporteItem number="6" fechas={{ fechaInicial, fechaFinal }}>
+        Reporte Tomás
+      </ReporteItem>
+      <ReporteItem number="7" fechas={{ fechaInicial, fechaFinal }}>
+        Reporte Winkler
+      </ReporteItem>
     </>
   )
 }
