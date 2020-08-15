@@ -411,7 +411,7 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.imagen (
     fk_producto            INT NULL,
     fk_servicio            INT NULL,
     fk_evento              INT NULL,
-    fk_recomendacion                 INT NULL,
+    fk_recomendacion       INT NULL,
     CONSTRAINT pk_imagen PRIMARY KEY (id_imagen),
         CONSTRAINT fk_imagen_salon FOREIGN KEY (fk_salon) REFERENCES arma_tu_fiesta.locacion (id_locacion) ON DELETE CASCADE,
         CONSTRAINT fk_imagen_producto FOREIGN KEY (fk_producto) REFERENCES arma_tu_fiesta.producto (id_producto) ON DELETE CASCADE,
