@@ -407,15 +407,17 @@ CREATE TABLE IF NOT EXISTS arma_tu_fiesta.tip (
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.imagen (
     id_imagen              INT NOT NULL AUTO_INCREMENT,
     fuente                 VARCHAR(80) NOT NULL,
-    fk_salon               INT  NULL,
-    fk_producto            INT  NULL,
-    fk_servicio            INT  NULL,
-    fk_evento              INT  NULL,
+    fk_salon               INT NULL,
+    fk_producto            INT NULL,
+    fk_servicio            INT NULL,
+    fk_evento              INT NULL,
+    fk_recomendacion                 INT NULL,
     CONSTRAINT pk_imagen PRIMARY KEY (id_imagen),
         CONSTRAINT fk_imagen_salon FOREIGN KEY (fk_salon) REFERENCES arma_tu_fiesta.locacion (id_locacion) ON DELETE CASCADE,
         CONSTRAINT fk_imagen_producto FOREIGN KEY (fk_producto) REFERENCES arma_tu_fiesta.producto (id_producto) ON DELETE CASCADE,
         CONSTRAINT fk_imagen_servicio FOREIGN KEY (fk_servicio) REFERENCES arma_tu_fiesta.servicio_tercerizado (id_servicio) ON DELETE CASCADE,
-        CONSTRAINT fk_imagen_evento FOREIGN KEY (fk_evento) REFERENCES arma_tu_fiesta.evento (id_evento) ON DELETE CASCADE
+        CONSTRAINT fk_imagen_evento FOREIGN KEY (fk_evento) REFERENCES arma_tu_fiesta.evento (id_evento) ON DELETE CASCADE,
+        CONSTRAINT fk_imagen_recomendacion FOREIGN KEY (fk_recomendacion) REFERENCES arma_tu_fiesta.tip (id_tip) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS arma_tu_fiesta.estatus (
