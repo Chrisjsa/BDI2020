@@ -26,6 +26,29 @@ const Navigation = ({
     "eliminarTip",
   ]
 
+  const restriccionesPermisos = [
+    "leerRoles",
+
+    "asignarRolPermisos",
+    "actualizarRol",
+    "eliminarRol",
+  ]
+
+  const restriccionesNotarias = [
+    "insertarNotaria",
+    "leerNotaria",
+    "actualizarNotaria",
+    "eliminarNotaria",
+  ]
+
+  const restriccionesClientes = [
+    "insertarCliente",
+    "leerCliente",
+    "actualizarCliente",
+    "eliminarCliente",
+  ]
+
+  const restriccionesReportes = ["obtenerReporte"]
   const handleLogin = () => {
     history.push("/login")
   }
@@ -64,15 +87,25 @@ const Navigation = ({
       <Nav className="mr-auto">{link("/dashboard", "Dashboard")}</Nav>
       <Nav>
         <>
-          {link("/reportes", "Reportes")}
+          {user &&
+            checkPermisos(restriccionesReportes, user.permisos) &&
+            link("/reportes", "Reportes")}
           <NavDropdown title="Administrar" id="basic-nav-dropdown">
-            <NavDropdown.Item>
-              {link("/crud_notaria", "Notarias")}
-            </NavDropdown.Item>
-            <NavDropdown.Item>
-              {link("/crud_cliente", "Clientes")}
-            </NavDropdown.Item>
-            <NavDropdown.Item>{link("/permisos", "Permisos")}</NavDropdown.Item>
+            {user && checkPermisos(restriccionesNotarias, user.permisos) && (
+              <NavDropdown.Item>
+                {link("/crud_notaria", "Notarias")}
+              </NavDropdown.Item>
+            )}
+            {user && checkPermisos(restriccionesClientes, user.permisos) && (
+              <NavDropdown.Item>
+                {link("/crud_cliente", "Clientes")}
+              </NavDropdown.Item>
+            )}
+            {user && checkPermisos(restriccionesPermisos, user.permisos) && (
+              <NavDropdown.Item>
+                {link("/permisos", "Permisos")}
+              </NavDropdown.Item>
+            )}
 
             {user && checkPermisos(restriccionesTips, user.permisos) && (
               <NavDropdown.Item>{link("/crud_tip", "Tips")}</NavDropdown.Item>
@@ -106,7 +139,7 @@ const mapActionsToProps = {
   clearEventos,
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   user: state.auth.user,
   isAuthenticated: state.auth.isAuthenticated,
 })
