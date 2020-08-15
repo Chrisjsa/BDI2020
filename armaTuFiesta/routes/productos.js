@@ -1,21 +1,22 @@
 const express = require("express")
 const router = express.Router()
-const { monitor } = require("../middleware/monitor") 
+const { monitor } = require("../middleware/monitor")
 const { auth } = require("../middleware/auth")
-const middleware = [auth, monitor] 
+const middleware = [auth, monitor]
 
-const { leerProducto, crearProducto, actualizarProducto, eliminarProducto } = require("../controllers/productos")
+const {
+  agregarServicios,
+  agregarProductos,
+  leerProductos,
+  leerServicios,
+} = require("../controllers/productos")
 
-// Read
-router.get("/leer", auth, leerProducto)
+router.post("/agregarServicios", middleware, agregarServicios)
 
-// // Create
-router.post("/nueva", middleware, crearProducto)
+router.post("/agregarProductos", middleware, agregarProductos)
 
-// // Update
-router.put("/actualizar", middleware, actualizarProducto)
+router.get("/leerProductos", middleware, leerProductos)
 
-// // Delete
-router.delete("/eliminar/:id_producto", middleware, eliminarProducto)
+router.get("/leerServicios", middleware, leerServicios)
 
 module.exports = router
