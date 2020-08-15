@@ -8,7 +8,7 @@ import {
   LEER_CATEGORIA,
   LEER_EVENTOS,
   LEER_SALONES,
-  MOSTRAR_PRESUPUESTO,
+  CAMBIAR_MODO,
   CREAR_EVENTOS,
   AGREGAR_SERVICIOS,
   AGREGAR_PRODUCTOS,
@@ -95,9 +95,9 @@ export const leerSalones = () => async dispatch => {
   }
 }
 
-export const mostrarPresupuesto = mostrar => dispatch => {
+export const cambiarModo = mostrar => dispatch => {
   setLoading()(dispatch)
-  dispatch({ type: MOSTRAR_PRESUPUESTO, payload: mostrar })
+  dispatch({ type: CAMBIAR_MODO, payload: mostrar })
 }
 
 export const crearEventos = evento => async dispatch => {

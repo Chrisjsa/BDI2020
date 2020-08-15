@@ -98,6 +98,7 @@ exports.signOut = (req, res) => {
 
 exports.loadUser = (req, res) => {
   var user = undefined
+  var fk_persona = undefined
 
   connection.query(LOAD_USER, [req.userId], async (error, rows) => {
     if (error) {
@@ -105,6 +106,7 @@ exports.loadUser = (req, res) => {
     }
 
     user = rows.pop()
+    console.log("query3", user)
   })
 
   connection.query(LEER_PERMISOS_USUARIO, [req.userId], async (error, rows) => {
@@ -120,7 +122,6 @@ exports.loadUser = (req, res) => {
       return res.status(400).send(error)
     }
 
-    console.log("query3", user)
     return res.json(user)
   })
 }

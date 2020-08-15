@@ -8,7 +8,7 @@ import {
   LEER_CATEGORIA,
   LEER_EVENTOS,
   LEER_SALONES,
-  MOSTRAR_PRESUPUESTO,
+  CAMBIAR_MODO,
   CREAR_EVENTOS,
   AGREGAR_SERVICIOS,
   AGREGAR_PRODUCTOS,
@@ -16,7 +16,6 @@ import {
 } from "./eventoTypes"
 
 import { arrayOfValues } from "../../utils/"
-import { actionTypes } from "redux-form"
 
 const initialState = {
   loading: false,
@@ -24,7 +23,7 @@ const initialState = {
   tiposEvento: [],
   eventos: [],
   currentEvento: undefined,
-  presupuesto: false,
+  modo: "servicio",
   salones: [],
 }
 
@@ -40,8 +39,8 @@ export default (state = initialState, action) => {
     case LEER_EVENTOS_POR_USUARIO:
       return { ...state, loading: false, eventos: action.payload }
 
-    case MOSTRAR_PRESUPUESTO:
-      return { ...state, loading: false, presupuesto: action.payload }
+    case CAMBIAR_MODO:
+      return { ...state, loading: false, modo: action.payload }
 
     case LEER_SERVICIO_EVENTO:
       return {

@@ -8,9 +8,9 @@ import moment from "moment"
 
 import { BsPersonFill, BsCalendarFill, BsMap } from "react-icons/bs"
 
-import { mostrarPresupuesto } from "../../state/evento/eventoActions"
+import { cambiarModo } from "../../state/evento/eventoActions"
 
-const EventoSidebar = ({ evento, mostrarPresupuesto }) => {
+const EventoSidebar = ({ evento, cambiarModo }) => {
   const { fecha_realizacion, cantidad_invitados, salon_fiesta } = evento
 
   const Description = ({ Icon, nombre, description }) => (
@@ -39,10 +39,12 @@ const EventoSidebar = ({ evento, mostrarPresupuesto }) => {
         <hr />
         <h5>Acciones</h5>
         <ListGroup>
-          <ListGroup.Item action onClick={e => mostrarPresupuesto(true)}>
+          <ListGroup.Item action onClick={e => cambiarModo("presupuesto")}>
             Presupuesto
           </ListGroup.Item>
-          {/* <ListGroup.Item action>Citas</ListGroup.Item> */}
+          <ListGroup.Item action onClick={e => cambiarModo("cita")}>
+            Citas
+          </ListGroup.Item>
         </ListGroup>
       </Card.Body>
     </Card>
@@ -50,7 +52,7 @@ const EventoSidebar = ({ evento, mostrarPresupuesto }) => {
 }
 
 const mapActionsToProps = {
-  mostrarPresupuesto,
+  cambiarModo,
 }
 
 const mapStateToProps = state => ({})

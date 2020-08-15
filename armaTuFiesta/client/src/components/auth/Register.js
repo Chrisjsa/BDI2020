@@ -18,7 +18,17 @@ let Register = ({
   currentMunicipio,
   currentParroquia,
   signup,
+  isAuthenticated,
+  user,
+  history,
 }) => {
+  useEffect(() => {
+    if (isAuthenticated && user) history.push("/dashboard")
+
+    // setTimeout(() => {
+    //   history.push("/dashboard")
+    // }, 250)
+  }, [isAuthenticated, user, history])
   const [fechaNacimiento, setFechaNacimiento] = useState(new Date())
   const [sexo, setSexo] = useState("Masculino")
   const [estadoCivil, setEstadoCivil] = useState("")
@@ -33,7 +43,7 @@ let Register = ({
     parroquia: currentParroquia,
   })
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault()
     signup(packData())
   }
@@ -126,7 +136,7 @@ let Register = ({
                   defaultValue="Seleccionar..."
                   name="estadoCivil"
                   value={estadoCivil}
-                  onChange={(e) => setEstadoCivil(e.target.value)}
+                  onChange={e => setEstadoCivil(e.target.value)}
                 >
                   <option>Seleccionar...</option>
                   <option value="Soltero">Soltero</option>
@@ -161,7 +171,7 @@ let Register = ({
                 <p style={{ marginBottom: "0.5rem" }}>Fecha de nacimiento</p>
                 <DatePicker
                   selected={fechaNacimiento}
-                  onChange={(date) => setFechaNacimiento(date)}
+                  onChange={date => setFechaNacimiento(date)}
                   peekNextMonth
                   showMonthDropdown
                   showYearDropdown
@@ -181,7 +191,7 @@ let Register = ({
                     label="M"
                     name="sexo"
                     value="Masculino"
-                    onChange={(e) => setSexo(e.target.value)}
+                    onChange={e => setSexo(e.target.value)}
                     checked={sexo === "Masculino"}
                   />
                   <Form.Check
@@ -190,7 +200,7 @@ let Register = ({
                     label="F"
                     name="sexo"
                     value="Femenino"
-                    onChange={(e) => setSexo(e.target.value)}
+                    onChange={e => setSexo(e.target.value)}
                     checked={sexo === "Femenino"}
                   />
                 </Form.Group>
@@ -217,11 +227,14 @@ Register = reduxForm({
 
 const mapActionsToProps = { signup }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   formValues: getFormValues("registro")(state),
   currentEstado: state.lugares.currentEstado,
   currentMunicipio: state.lugares.currentMunicipio,
   currentParroquia: state.lugares.currentParroquia,
+  isAuthenticated: state.auth.isAuthenticated,
+  error: state.auth.error,
+  user: state.auth.user,
 })
 
 export default connect(mapStateToProps, mapActionsToProps)(Register)
