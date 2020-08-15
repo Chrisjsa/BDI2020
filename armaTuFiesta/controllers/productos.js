@@ -1,39 +1,47 @@
 const { connection } = require("../database")
-const {  } = require("../sql/productosQueries")
+const {
+  AGREGAR_SERVICIOS,
+  AGREGAR_PRODUCTOS,
+  LEER_PRODUCTOS,
+  LEER_SERVICIOS,
+} = require("../sql/productosQueries")
 
-exports.leerProducto = (req, res) => {
-  connection.query("", (error, rows) => {
+exports.agregarServicios = (req, res) => {
+  const data = []
+  connection.query(AGREGAR_SERVICIOS, [data], (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    return res.json(rows)
   })
 }
 
-exports.crearProducto = (req, res) => {
-  connection.query("", (error, rows) => {
+exports.agregarProductos = (req, res) => {
+  const data = []
+  connection.query(AGREGAR_PRODUCTOS, [data], (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    return res.json(rows)
   })
 }
 
-
-exports.actualizarProducto = (req, res) => {
-  connection.query("", (error, rows) => {
+exports.leerProductos = (req, res) => {
+  const data = []
+  connection.query(LEER_PRODUCTOS, [data], (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    return res.json(rows)
   })
 }
 
-exports.eliminarProducto = (req, res) => {
-  connection.query("", (error, rows) => {
+exports.leerServicios = (req, res) => {
+  const data = []
+  connection.query(LEER_SERVICIOS, [data], (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
-    return res.json( rows )
+    return res.json(rows)
   })
 }
