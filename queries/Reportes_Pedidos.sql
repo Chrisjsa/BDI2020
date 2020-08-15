@@ -33,7 +33,6 @@ ORDER BY ordeve.fecha_realizacion;
 
 -- REPORTE 3 INGRESOS Y EGRESOS POR RANGO DE FECHAS
 
-
 SET @fecha_a = '2020-07-01';
 SET @fecha_b = '2020-08-01';
 
@@ -45,7 +44,6 @@ WHERE est.nombre = 'Pagado' AND presta.fk_estatus = est.id_estatus AND presta.fe
 SELECT met.numero_factura, met.razon, est.nombre as estatus, prepa.fecha as fecha_pago, pre.total as monto
 FROM arma_tu_fiesta.estatus as est, arma_tu_fiesta.presupuesto_estatus as presta, arma_tu_fiesta.presupuesto as pre, arma_tu_fiesta.presupuesto_pago as prepa, arma_tu_fiesta.metodo_de_pago as met
 WHERE est.nombre = 'Pagado' AND presta.fk_estatus = est.id_estatus AND presta.fecha BETWEEN @fecha_a AND @fecha_b AND presta.fk_presupuesto = pre.id_presupuesto AND prepa.fk_presupuesto = pre.id_presupuesto AND prepa.fk_pago = met.id_metodo;
-
 
 -- TOTAL EGRESOS
 
