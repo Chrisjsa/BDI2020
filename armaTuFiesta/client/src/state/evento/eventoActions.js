@@ -9,6 +9,7 @@ import {
   LEER_EVENTOS,
   LEER_SALONES,
   MOSTRAR_PRESUPUESTO,
+  CREAR_EVENTOS,
 } from "./eventoTypes"
 import axios from "axios"
 
@@ -87,11 +88,21 @@ export const leerSalones = () => async dispatch => {
     const res = await axios.get("api/eventos/leerSalones")
     dispatch({ type: LEER_SALONES, payload: res.data })
   } catch (error) {
-    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
+    dispatch({ type: ERROR_EVENTO, payload: error.response.data.message })
   }
 }
 
 export const mostrarPresupuesto = mostrar => dispatch => {
   setLoading()(dispatch)
   dispatch({ type: MOSTRAR_PRESUPUESTO, payload: mostrar })
+}
+
+export const crearEventos = evento => async dispatch => {
+  setLoading()(dispatch)
+  try {
+    const res = await axios.post("api/eventos/crearEventos", evento, config)
+    dispatch({ type: CREAR_EVENTOS, payload: res.data })
+  } catch (error) {
+    dispatch({ type: ERROR_EVENTO, payload: error.response.data.message })
+  }
 }

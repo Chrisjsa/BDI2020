@@ -6,7 +6,13 @@ import LugarFields from "../lugares/LugarFields"
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 
-import { leerEventos, leerSalones } from "../../state/evento/eventoActions"
+import { formatDate } from "../../utils"
+
+import {
+  crearEventos,
+  leerEventos,
+  leerSalones,
+} from "../../state/evento/eventoActions"
 
 const NuevoEventoModal = ({
   leerEventos,
@@ -14,6 +20,8 @@ const NuevoEventoModal = ({
   salones,
   currentMunicipio,
   leerSalones,
+  user,
+  crearEventos,
 }) => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
@@ -27,7 +35,7 @@ const NuevoEventoModal = ({
   useEffect(() => {
     leerEventos()
     leerSalones()
-  }, [])
+  }, [show])
 
   useEffect(() => {
     setThisSalones(
@@ -36,6 +44,21 @@ const NuevoEventoModal = ({
 
     console.log(thisSalones)
   }, [currentMunicipio])
+
+  const onClick = e => {
+    //[fecha_actual, fecha_realizacion, id_evento, id_usuario, id_locacion, num_invitados]
+    const data = {
+      fecha_actual: formatDate(new Date()),
+      fecha_realizacion: formatDate(fecha),
+      id_evento: tipoFiesta,
+      id_usuario: user.id_usuario,
+      id_locacion: salon,
+      num_invitados: numInvitados,
+    }
+
+    console.log(data)
+    crearEventos(data)
+  }
 
   return (
     <>
@@ -119,8 +142,8 @@ const NuevoEventoModal = ({
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="primary" onClick={onClick}>
+            Agregar evento
           </Button>
         </Modal.Footer>
       </Modal>
@@ -128,12 +151,13 @@ const NuevoEventoModal = ({
   )
 }
 
-const mapActionsToProps = { leerEventos, leerSalones }
+const mapActionsToProps = { leerEventos, leerSalones, crearEventos }
 
 const mapStateToProps = state => ({
   tiposEvento: state.eventos.tiposEvento,
   salones: state.eventos.salones,
   currentMunicipio: state.lugares.currentMunicipio,
+  user: state.auth.user,
 })
 
 export default connect(mapStateToProps, mapActionsToProps)(NuevoEventoModal)

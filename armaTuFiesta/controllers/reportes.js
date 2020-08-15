@@ -18,6 +18,8 @@ var options = {
 exports.obtenerReporte1 = (req, res) => {
   const { fechaInicial, fechaFinal } = req.query
 
+  options = { ...options }
+
   const queryData = [
     moment(fechaInicial).format("YYYY-MM-DD"),
     moment(fechaFinal).format("YYYY-MM-DD"),

@@ -1,3 +1,5 @@
+import moment from "moment"
+
 String.prototype.capitalize = function () {
   return this.charAt(0).toUpperCase() + this.slice(1)
 }
@@ -35,3 +37,5 @@ export const canCrud = (entity, entityList) => {
 
   return operations.every(element => entityList.includes(element))
 }
+
+export const formatDate = date => moment(date).format("YYYY-MM-DD")

@@ -9,6 +9,7 @@ import {
   LEER_EVENTOS,
   LEER_SALONES,
   MOSTRAR_PRESUPUESTO,
+  CREAR_EVENTOS,
 } from "./eventoTypes"
 
 import { arrayOfValues } from "../../utils/"
@@ -39,10 +40,14 @@ export default (state = initialState, action) => {
         currentEventoServicios: action.payload,
       }
 
+    case CREAR_EVENTOS:
+      return { ...state, loading: false, edit: this }
+
     case LEER_SALONES:
       return { ...state, loading: false, salones: action.payload }
 
     case LEER_EVENTOS:
+      console.log(action.payload)
       return { ...state, loading: false, tiposEvento: action.payload }
 
     case LEER_CATEGORIA:

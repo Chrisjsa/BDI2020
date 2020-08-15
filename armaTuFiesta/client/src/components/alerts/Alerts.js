@@ -17,7 +17,7 @@ const Alerts = props => {
 
   // return <div>{alerts && alerts.map(alert => <AlertItem alert={alert} />)}</div>
   return (
-    <div style={{ maxWidth: "480px" }}>
+    <div>
       {alerts.map(alert => (
         <AlertItem alert={alert} />
       ))}
