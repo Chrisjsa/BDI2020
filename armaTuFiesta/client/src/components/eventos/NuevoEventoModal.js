@@ -50,7 +50,7 @@ const NuevoEventoModal = ({
     const data = {
       fecha_actual: formatDate(new Date()),
       fecha_realizacion: formatDate(fecha),
-      id_evento: tipoFiesta,
+      id_evento: 1,
       id_usuario: user.id_usuario,
       id_locacion: salon,
       num_invitados: numInvitados,
