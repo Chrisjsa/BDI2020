@@ -5,6 +5,8 @@ const {
   REPORTE_3,
   REPORTE_4,
   EVENTOS_POR_FECHA,
+  EGRESOS,
+  INGRESOS,
 } = require("../sql/reportesQueries")
 
 const fs = require("fs")
@@ -83,17 +85,23 @@ exports.obtenerReporte2 = (req, res) => {
 
     return res.json(rows)
   })
-  connection.query(EVENTOS_POR_FECHA, queryData, (error, rows) => {
+
+  connection.query(EGRESOS, data, (error, rows) => {
     if (error) return res.status(400).send(error.message)
 
-    console.log(rows)
-    // va aca -->
+    return res.json(rows)
   })
-  // (1) esto ---> return res.json({ rows: rows.pop() })
-  carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
+
+  connection.query(INGRESOS, data, (error, rows) => {
+    if (error) return res.status(400).send(error.message)
+
+    return res.json(rows)
+  })
+
+  carbone.render("./reports/reporte2.docx", [], options, (error, result) => {
     if (error) return console.log(error)
 
-    fs.writeFileSync("./reports/reporte1.pdf", result)
+    fs.writeFileSync("./reports/reporte2.pdf", result)
     return res.send(result)
   })
 }
@@ -110,17 +118,10 @@ exports.obtenerReporte3 = (req, res) => {
     return res.json(rows)
   })
 
-  connection.query(EVENTOS_POR_FECHA, queryData, (error, rows) => {
-    if (error) return res.status(400).send(error.message)
-
-    console.log(rows)
-  })
-  return res.json({ rows: rows.pop() })
-
-  carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
+  carbone.render("./reports/reporte3.docx", [], options, (error, result) => {
     if (error) return console.log(error)
 
-    fs.writeFileSync("./reports/reporte1.pdf", result)
+    fs.writeFileSync("./reports/reporte3.pdf", result)
     return res.send(result)
   })
 }
@@ -137,17 +138,10 @@ exports.obtenerReporte4 = (req, res) => {
     return res.json(rows)
   })
 
-  connection.query(EVENTOS_POR_FECHA, queryData, (error, rows) => {
-    if (error) return res.status(400).send(error.message)
-
-    console.log(rows)
-  })
-  return res.json({ rows: rows.pop() })
-
-  carbone.render("./reports/reporte1.docx", [], options, (error, result) => {
+  carbone.render("./reports/reporte4.docx", [], options, (error, result) => {
     if (error) return console.log(error)
 
-    fs.writeFileSync("./reports/reporte1.pdf", result)
+    fs.writeFileSync("./reports/reporte4.pdf", result)
     return res.send(result)
   })
 }
