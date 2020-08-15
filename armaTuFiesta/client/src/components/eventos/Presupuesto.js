@@ -29,6 +29,7 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
 
   return (
     <div>
+      <h2>Presupuesto</h2>
       <Button
         variant="outline-primary"
         onClick={e => cambiarModo("servicio")}

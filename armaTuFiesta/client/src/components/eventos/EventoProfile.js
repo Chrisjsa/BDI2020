@@ -13,6 +13,8 @@ import ServiciosEvento from "./ServiciosEvento"
 
 import Presupuesto from "./Presupuesto"
 
+import Cita from "./Cita"
+
 const EventoProfile = ({ currentEvento, history, modo }) => {
   useEffect(() => {
     if (!currentEvento) {
@@ -34,7 +36,7 @@ const EventoProfile = ({ currentEvento, history, modo }) => {
           {modo === "presupuesto" ? (
             <Presupuesto />
           ) : modo === "cita" ? (
-            <div>citas</div>
+            <Cita />
           ) : (
             <ServiciosEvento />
           )}

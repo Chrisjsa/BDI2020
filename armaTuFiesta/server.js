@@ -38,6 +38,7 @@ routes = [
   "status",
   "reportes",
   "eventos",
+  "citas",
 ]
 routes.forEach(route => useRoute(route))
 

@@ -11,6 +11,7 @@ import alertReducer from "./alert/alertReducer"
 import tipReducer from "./tip/tipReducer"
 import reporteReducer from "./reporte/reporteReducer"
 import rolReducer from "./rol/rolReducer"
+import citaReducer from "./cita/citaReducer"
 
 export default combineReducers({
   auth: authReducer,
@@ -24,4 +25,5 @@ export default combineReducers({
   tips: tipReducer,
   reportes: reporteReducer,
   rols: rolReducer,
+  cita: citaReducer,
 })

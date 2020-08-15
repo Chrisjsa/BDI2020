@@ -16,8 +16,10 @@ exports.leerServicios = (req, res) => {
 }
 
 exports.insertarCita = (req, res) => {
-  const data = []
-  connection.query(INSERTAR_CITA, [data], (error, rows) => {
+  const { id_usuario, id_servicio, fecha } = req.body
+  const data = [id_usuario, id_servicio, fecha]
+
+  connection.query(INSERTAR_CITA, data, (error, rows) => {
     if (error) {
       return res.status(400).send(error.message)
     }
