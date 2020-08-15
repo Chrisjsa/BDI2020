@@ -8,6 +8,8 @@ import "react-datepicker/dist/react-datepicker.css"
 
 import { formatDate } from "../../utils"
 
+import { setAlert } from "../../state/alert/alertActions"
+
 import {
   crearEventos,
   leerEventos,
@@ -17,6 +19,7 @@ import {
 
 const NuevoEventoModal = ({
   leerEventos,
+  setAlert,
   tiposEvento,
   salones,
   currentMunicipio,
@@ -48,16 +51,16 @@ const NuevoEventoModal = ({
   }, [currentMunicipio])
 
   const onClick = e => {
-    //[fecha_actual, fecha_realizacion, id_evento, id_usuario, id_locacion, num_invitados]
     const data = {
       fecha_actual: formatDate(new Date()),
       fecha_realizacion: formatDate(fecha),
-      id_evento: 1,
+      id_evento: 21,
       id_usuario: user.id_usuario,
       id_locacion: salon,
       num_invitados: numInvitados,
     }
 
+    setAlert("Evento agregado satisfactoriamente", "success")
     handleClose()
     leerEventosPorUsuario(user)
     crearEventos(data)
@@ -159,6 +162,7 @@ const mapActionsToProps = {
   leerSalones,
   crearEventos,
   leerEventosPorUsuario,
+  setAlert,
 }
 
 const mapStateToProps = state => ({

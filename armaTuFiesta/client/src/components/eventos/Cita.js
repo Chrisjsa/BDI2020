@@ -18,10 +18,13 @@ import Icon from "../layout/Icon"
 import Hero from "../layout/Hero"
 import Loading from "../layout/Loading"
 
+import { setAlert } from "../../state/alert/alertActions"
+
 import { formatDate } from "../../utils/"
 const Cita = ({
   cambiarModo,
   user,
+  setAlert,
   insertarCita,
   leerServicios,
   serviciosCita,
@@ -46,6 +49,7 @@ const Cita = ({
     })
 
     setAgregada(true)
+    setAlert("Cita agregada satisfactoriamente", "success")
     leerCitasUsuario(user)
 
     setTimeout(() => {
@@ -63,16 +67,18 @@ const Cita = ({
       ) : (
         <>
           <h2>Tus citas</h2>
-          <ListGroup className="mb-3">
-            {citasUsuario.map(cita => (
-              <ListGroup.Item>
-                <div>
-                  <strong>{cita.nombre}</strong>
-                </div>
-                <div>{formatDate(cita.fecha_cita)}</div>
-              </ListGroup.Item>
-            ))}
-          </ListGroup>
+          <div className="scrollable mb-3" style={{ maxHeight: "25vh" }}>
+            <ListGroup>
+              {citasUsuario.map(cita => (
+                <ListGroup.Item>
+                  <div>
+                    <strong>{cita.nombre}</strong>
+                  </div>
+                  <div>{formatDate(cita.fecha_cita)}</div>
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </div>
         </>
       )}
 
@@ -142,6 +148,7 @@ const mapActionsToProps = {
   insertarCita,
   cambiarModo,
   leerCitasUsuario,
+  setAlert,
 }
 
 const mapStateToProps = state => ({

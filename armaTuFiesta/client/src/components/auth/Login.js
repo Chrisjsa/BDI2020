@@ -11,16 +11,14 @@ import useForm from "../../hooks/useForm"
 import { setAlert } from "../../state/alert/alertActions"
 
 const Login = ({ history, login, isAuthenticated, user }) => {
+  const [showButtons, setShowButtons] = useState(false)
+
   useEffect(() => {
     if (isAuthenticated && user) history.push("/dashboard")
-
-    // setTimeout(() => {
-    //   history.push("/dashboard")
-    // }, 250)
   }, [isAuthenticated, user, history])
 
   const [fields, bindFields] = useForm({
-    username: "amandasuarez@gmail.com",
+    username: "",
     password: "",
   })
 
@@ -31,7 +29,12 @@ const Login = ({ history, login, isAuthenticated, user }) => {
 
   return (
     <div className="form-container">
-      <h1 className="text-center my-5">Login</h1>
+      <h1
+        className="text-center my-5"
+        onClick={e => setShowButtons(!showButtons)}
+      >
+        Login
+      </h1>
       <Card className="bg-light">
         <Card.Body>
           <Form onSubmit={onSubmit}>
@@ -62,47 +65,52 @@ const Login = ({ history, login, isAuthenticated, user }) => {
               Login
             </Button>
 
-            <Button
-              variant="primary"
-              type="submit"
-              className="mb-3"
-              block
-              onClick={e =>
-                login({ username: "tguzmani@gmail.com", password: "V26150008" })
-              }
-            >
-              Tomás
-            </Button>
-
-            <Button
-              variant="primary"
-              type="submit"
-              className="mb-3"
-              block
-              onClick={e =>
-                login({
-                  username: "winkler07@gmail.com",
-                  password: "V25253807",
-                })
-              }
-            >
-              Winkler
-            </Button>
-
-            <Button
-              variant="primary"
-              type="submit"
-              className="mb-3"
-              block
-              onClick={e =>
-                login({
-                  username: "amandasuarez@gmail.com",
-                  password: "V20000007",
-                })
-              }
-            >
-              Amanda
-            </Button>
+            {showButtons && (
+              <>
+                <Button
+                  variant="primary"
+                  type="submit"
+                  className="mb-3"
+                  block
+                  onClick={e =>
+                    login({
+                      username: "tguzmani@gmail.com",
+                      password: "V26150008",
+                    })
+                  }
+                >
+                  Tomás
+                </Button>
+                <Button
+                  variant="primary"
+                  type="submit"
+                  className="mb-3"
+                  block
+                  onClick={e =>
+                    login({
+                      username: "winkler07@gmail.com",
+                      password: "V25253807",
+                    })
+                  }
+                >
+                  Winkler
+                </Button>
+                <Button
+                  variant="primary"
+                  type="submit"
+                  className="mb-3"
+                  block
+                  onClick={e =>
+                    login({
+                      username: "amandasuarez@gmail.com",
+                      password: "V20000007",
+                    })
+                  }
+                >
+                  Amanda
+                </Button>{" "}
+              </>
+            )}
 
             <Form.Text className="text-muted text-center">
               ¿No tienes usuario aún?{" "}

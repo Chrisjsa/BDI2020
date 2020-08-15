@@ -75,7 +75,7 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
         </>
       )}
 
-      {/* {metodo === "tarjeta" ? (
+      {metodo === "tarjeta" ? (
         <div>
           <code>Componente de pago con tarjeta (formulario + tarjeta)</code>
         </div>
@@ -83,7 +83,7 @@ const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
         <div>
           <code>Componente de pago con transferencia (formulario)</code>
         </div>
-      )} */}
+      )}
     </div>
   )
 }

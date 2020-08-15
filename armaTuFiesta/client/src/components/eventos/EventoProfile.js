@@ -22,11 +22,11 @@ const EventoProfile = ({ currentEvento, history, modo }) => {
     }
   }, [currentEvento])
 
-  const { tipo_evento, id_evento } = currentEvento
+  const { tipo_evento, id_evento, salon_fiesta } = currentEvento
 
   return (
     <Container>
-      <Hero firstLine={tipo_evento} secondLine={`Evento# ${id_evento}`} />
+      <Hero firstLine={tipo_evento} secondLine={salon_fiesta} />
       <Row>
         <Col xs={3}>
           <EventoSidebar evento={currentEvento} />

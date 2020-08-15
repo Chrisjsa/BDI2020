@@ -7,11 +7,17 @@ import { connect } from "react-redux"
 import moment from "moment"
 
 import { BsPersonFill, BsCalendarFill, BsMap } from "react-icons/bs"
+import { FiType } from "react-icons/fi"
 
 import { cambiarModo } from "../../state/evento/eventoActions"
 
 const EventoSidebar = ({ evento, cambiarModo }) => {
-  const { fecha_realizacion, cantidad_invitados, salon_fiesta } = evento
+  const {
+    fecha_realizacion,
+    cantidad_invitados,
+    salon_fiesta,
+    tema_evento,
+  } = evento
 
   const Description = ({ Icon, nombre, description }) => (
     <div>
@@ -32,6 +38,12 @@ const EventoSidebar = ({ evento, cambiarModo }) => {
           Icon={BsCalendarFill}
           nombre="Fecha"
           description={moment(fecha_realizacion).format("DD/MM/YYYY")}
+        />
+
+        <Description
+          Icon={FiType}
+          nombre="Tema"
+          description={tema_evento}
         />
 
         <Description Icon={BsMap} nombre="Lugar" description={salon_fiesta} />
