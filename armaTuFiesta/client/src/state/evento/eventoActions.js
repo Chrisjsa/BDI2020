@@ -115,7 +115,7 @@ export const agregarServicios = () => async (dispatch) => {
     const res = await axios.post("api/eventos/agregarServicios", config)
     dispatch({ type: AGREGAR_SERVICIOS, payload: res.data })
   } catch (error) {
-    dispatch({ type: ERROR_EVENTOS, payload: error.response.msg })
+    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
   }
 }
 
@@ -125,6 +125,6 @@ export const agregarProductos = () => async (dispatch) => {
     const res = await axios.post("api/eventos/agregarProductos", config)
     dispatch({ type: AGREGAR_PRODUCTOS, payload: res.data })
   } catch (error) {
-    dispatch({ type: ERROR_EVENTOS, payload: error.response.msg })
+    dispatch({ type: ERROR_EVENTO, payload: error.response.msg })
   }
 }
