@@ -6,8 +6,11 @@ exports.SIGN_UP =
 
 //[parroquia, cedula, p_nombre, s_nombre, p_apellido, s_apellido, fecha_nacimiento, sexo, estado_civil, cedula, username, password]
 
+// exports.LOAD_USER =
+//   "SELECT * FROM usuario, persona WHERE id_persona = ? AND persona.id_persona = usuario.fk_persona"
+
 exports.LOAD_USER =
-  "SELECT * FROM usuario, persona WHERE id_persona = ? AND persona.id_persona = usuario.fk_persona"
+  "SELECT * FROM usuario u INNER JOIN persona p ON u.fk_persona = p.id_persona AND u.id_usuario = ?"
 
 exports.LISTAR_ROL_PERMISO =
   "SELECT rolper.id_rol_permiso, rol.nombre as rol, per.nombre as permiso FROM arma_tu_fiesta.rol_permiso as rolper, arma_tu_fiesta.rol as rol, arma_tu_fiesta.permiso as per WHERE rol.id_rol = rolper.fk_rol AND per.id_permiso = rolper.fk_permiso;"

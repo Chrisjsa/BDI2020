@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
 
 import {
-  mostrarPresupuesto,
+  cambiarModo,
   consultarPresupuesto,
 } from "../../state/evento/eventoActions"
 
@@ -11,11 +11,7 @@ import { ButtonGroup, Button, ListGroup, Row } from "react-bootstrap"
 
 import { arrayOfValues } from "../../utils"
 
-const Presupuesto = ({
-  mostrarPresupuesto,
-  currentEvento,
-  consultarPresupuesto,
-}) => {
+const Presupuesto = ({ cambiarModo, currentEvento, consultarPresupuesto }) => {
   useEffect(() => {
     consultarPresupuesto(currentEvento)
   }, [])
@@ -35,7 +31,7 @@ const Presupuesto = ({
     <div>
       <Button
         variant="outline-primary"
-        onClick={e => mostrarPresupuesto(false)}
+        onClick={e => cambiarModo("servicio")}
         variant="link"
       >
         Regresar
@@ -78,7 +74,7 @@ const Presupuesto = ({
         </>
       )}
 
-      {metodo === "tarjeta" ? (
+      {/* {metodo === "tarjeta" ? (
         <div>
           <code>Componente de pago con tarjeta (formulario + tarjeta)</code>
         </div>
@@ -86,12 +82,12 @@ const Presupuesto = ({
         <div>
           <code>Componente de pago con transferencia (formulario)</code>
         </div>
-      )}
+      )} */}
     </div>
   )
 }
 
-const mapActionsToProps = { mostrarPresupuesto, consultarPresupuesto }
+const mapActionsToProps = { cambiarModo, consultarPresupuesto }
 
 const mapStateToProps = state => ({
   currentEvento: state.eventos.currentEvento,

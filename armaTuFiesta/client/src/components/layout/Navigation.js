@@ -28,7 +28,6 @@ const Navigation = ({
 
   const restriccionesPermisos = [
     "leerRoles",
-
     "asignarRolPermisos",
     "actualizarRol",
     "eliminarRol",
@@ -49,6 +48,14 @@ const Navigation = ({
   ]
 
   const restriccionesReportes = ["obtenerReporte"]
+
+  const restriccionesAdmin = [
+    restriccionesNotarias,
+    restriccionesPermisos,
+    restriccionesReportes,
+    restriccionesTips,
+  ]
+
   const handleLogin = () => {
     history.push("/login")
   }
@@ -90,31 +97,39 @@ const Navigation = ({
           {user &&
             checkPermisos(restriccionesReportes, user.permisos) &&
             link("/reportes", "Reportes")}
-          <NavDropdown title="Administrar" id="basic-nav-dropdown">
-            {user && checkPermisos(restriccionesNotarias, user.permisos) && (
-              <NavDropdown.Item>
-                {link("/crud_notaria", "Notarias")}
-              </NavDropdown.Item>
-            )}
-            {user && checkPermisos(restriccionesClientes, user.permisos) && (
-              <NavDropdown.Item>
-                {link("/crud_cliente", "Clientes")}
-              </NavDropdown.Item>
-            )}
-            {user && checkPermisos(restriccionesPermisos, user.permisos) && (
-              <NavDropdown.Item>
-                {link("/permisos", "Permisos")}
-              </NavDropdown.Item>
-            )}
+          {user &&
+            restriccionesAdmin.some(r => checkPermisos(r, user.permisos)) && (
+              <NavDropdown title="Administrar" id="basic-nav-dropdown">
+                {user &&
+                  checkPermisos(restriccionesNotarias, user.permisos) && (
+                    <NavDropdown.Item>
+                      {link("/crud_notaria", "Notarias")}
+                    </NavDropdown.Item>
+                  )}
+                {user &&
+                  checkPermisos(restriccionesClientes, user.permisos) && (
+                    <NavDropdown.Item>
+                      {link("/crud_cliente", "Clientes")}
+                    </NavDropdown.Item>
+                  )}
+                {user &&
+                  checkPermisos(restriccionesPermisos, user.permisos) && (
+                    <NavDropdown.Item>
+                      {link("/permisos", "Permisos")}
+                    </NavDropdown.Item>
+                  )}
 
-            {user && checkPermisos(restriccionesTips, user.permisos) && (
-              <NavDropdown.Item>{link("/crud_tip", "Tips")}</NavDropdown.Item>
-            )}
+                {user && checkPermisos(restriccionesTips, user.permisos) && (
+                  <NavDropdown.Item>
+                    {link("/crud_tip", "Tips")}
+                  </NavDropdown.Item>
+                )}
 
-            {/* <NavDropdown.Item>
+                {/* <NavDropdown.Item>
                 {link("/metodos_pago", "Métodos de Pago")}
               </NavDropdown.Item> */}
-          </NavDropdown>
+              </NavDropdown>
+            )}
         </>
         <Nav.Link onClick={handleLogout}>Cerrar sesión</Nav.Link>
       </Nav>
@@ -139,7 +154,7 @@ const mapActionsToProps = {
   clearEventos,
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   user: state.auth.user,
   isAuthenticated: state.auth.isAuthenticated,
 })

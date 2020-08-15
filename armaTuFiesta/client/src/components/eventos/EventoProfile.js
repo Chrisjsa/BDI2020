@@ -13,7 +13,7 @@ import ServiciosEvento from "./ServiciosEvento"
 
 import Presupuesto from "./Presupuesto"
 
-const EventoProfile = ({ currentEvento, history, presupuesto }) => {
+const EventoProfile = ({ currentEvento, history, modo }) => {
   useEffect(() => {
     if (!currentEvento) {
       history.push("/dashboard")
@@ -30,7 +30,15 @@ const EventoProfile = ({ currentEvento, history, presupuesto }) => {
           <EventoSidebar evento={currentEvento} />
           <br />
         </Col>
-        <Col>{presupuesto ? <Presupuesto /> : <ServiciosEvento />}</Col>
+        <Col>
+          {modo === "presupuesto" ? (
+            <Presupuesto />
+          ) : modo === "cita" ? (
+            <div>citas</div>
+          ) : (
+            <ServiciosEvento />
+          )}
+        </Col>
       </Row>
     </Container>
   )
@@ -40,7 +48,7 @@ const mapStateToActions = { setAlert }
 
 const mapStateToProps = state => ({
   currentEvento: state.eventos.currentEvento,
-  presupuesto: state.eventos.presupuesto,
+  modo: state.eventos.modo,
 })
 
 export default connect(mapStateToProps, mapStateToActions)(EventoProfile)

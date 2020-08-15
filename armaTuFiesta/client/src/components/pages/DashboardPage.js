@@ -13,7 +13,7 @@ import Loading from "../layout/Loading"
 import {
   leerEventosPorUsuario,
   leerEventos,
-  mostrarPresupuesto,
+  cambiarModo,
 } from "../../state/evento/eventoActions"
 
 import EventoItem from "../eventos/EventoItem"
@@ -25,7 +25,7 @@ const DashboardPage = ({
   loading,
   leerEventos,
   leerEventosPorUsuario,
-  mostrarPresupuesto,
+  cambiarModo,
 }) => {
   useEffect(() => {
     if (user) leerEventosPorUsuario(user)
@@ -33,7 +33,7 @@ const DashboardPage = ({
   }, [user])
 
   useEffect(() => {
-    mostrarPresupuesto(false)
+    cambiarModo("servicio")
   }, [])
 
   const NoEvents = () => (
@@ -77,7 +77,7 @@ const DashboardPage = ({
 const mapActionsToProps = {
   leerEventos,
   leerEventosPorUsuario,
-  mostrarPresupuesto,
+  cambiarModo,
 }
 
 const mapStateToProps = state => ({
